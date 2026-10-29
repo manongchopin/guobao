@@ -30,11 +30,13 @@ python3 -m http.server 8000
 
 - 每张卡片右上角有一个圆点：`＋` 表示没去过，`✓` 表示去过；点一下切换。
 - 详情页顶部也有「标记为已去过」，旁边显示本清单已走多少。
+- 世界遗产：61 项清单显示 `已走 21/61`，卡片打钩标红；「我去过的世界遗产」按大洲 → 国家列出 96 项。
 - 计数会逐级汇总：
   - 区县页（如义乌）：`已走 1 / 7`
   - 金华（浙江页金华段）：`已走 1 / 38`，每个区县卡片显示 `1/7 已走`
   - 全国（国保入口）：`国保已走 1 / 5058`
 - 状态存在浏览器 localStorage；`visited.js` 里的 `VISITED_SEED` 是公开的“已走”种子（目前放了古月桥 5-289）。
+- 世界遗产同理：`visited-wh.js` 里 `WH_VISITED_SEED` 放了 21 个 UNESCO 编号；中国 61 项里打钩 21 项，详情页可切换。
 - 想永久点亮：把编号加进 `VISITED_SEED`，并把 `SEED_VERSION` 加 1，提交即可。
 - 换设备、清缓存或换域名后，本机记录会丢；种子里的记录不受影响。
 
@@ -79,7 +81,7 @@ web/
 ├── index.html          首页：我走过的世界
 ├── heritage.html       中国的世界遗产（61 项，按年份/省份）
 ├── heritage-place.html 世界遗产单页（?id=437）
-├── visited-heritage.html  我去过的世界遗产（全球，0 / 1,273）
+├── visited-heritage.html  我去过的世界遗产（96 项，按大洲/国家）
 ├── forbidden.html      195 件禁止出境文物（按批次/省份）
 ├── guobao.html         国保入口：34 个省级行政区
 ├── shanghai.html       上海清单页（批次 / 辖区）
@@ -98,6 +100,8 @@ web/
 ├── yiwu-data.js        义乌 7 处国保数据
 ├── yiwu-city-data.js   义乌市级文保 276 处 / 329 点位
 ├── heritage-data.js    中国世界遗产 61 项（含简介与标准）
+├── heritage-visited-data.js  中国以外 75 项已走世界遗产
+├── visited-wh.js       中国 21 项的打卡种子
 ├── forbidden-data.js   195 件禁止出境文物
 ├── jinhua-data.js      金华 7 个区县 31 处国保
 ├── visited.js          打卡种子 + localStorage 读写

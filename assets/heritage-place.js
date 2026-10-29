@@ -32,6 +32,27 @@
   document.getElementById("intro").textContent = site.intro;
   document.getElementById("footer-code").textContent = site.name + " · #" + site.uid;
 
+  var visitBtn = document.getElementById("visit-btn");
+  var walkHint = document.getElementById("walk-hint");
+
+  function syncVisit() {
+    var on = !!(window.WHVisited && WHVisited.has(site.uid));
+    visitBtn.textContent = on ? "已去过 · 点击取消" : "标记为已去过";
+    visitBtn.classList.toggle("is-on", on);
+    visitBtn.setAttribute("aria-pressed", String(on));
+    if (window.WHVisited) {
+      var got = sites.filter(function (s) { return WHVisited.has(s.uid); }).length;
+      walkHint.textContent = "中国已走 " + got + " / " + sites.length;
+    }
+  }
+
+  visitBtn.addEventListener("click", function () {
+    if (!window.WHVisited) return;
+    WHVisited.toggle(site.uid);
+    syncVisit();
+  });
+  syncVisit();
+
   var facts = [
     ["列入年份", site.year + " 年"],
     ["编号", "#" + site.uid],

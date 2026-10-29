@@ -18,6 +18,17 @@
   var VIEW_KEY = "wh-view";
   var currentView = null;
 
+  var toolbarInner = document.querySelector(".toolbar-inner");
+  var walkEl = document.createElement("span");
+  walkEl.className = "walk-count";
+  walkEl.id = "walk-count";
+  if (toolbarInner) toolbarInner.appendChild(walkEl);
+
+  function updateWalk() {
+    if (!walkEl || !window.WHVisited) return;
+    walkEl.innerHTML = "已走 <b>" + WHVisited.count(sites) + "</b>/" + sites.length;
+  }
+
   function typeClass(t) {
     return t === "文化" ? "t-culture" : t === "自然" ? "t-nature" : "t-mixed";
   }
@@ -29,17 +40,23 @@
     } else {
       meta = s.year + " 年 · " + s.provinces.join("、");
     }
+    var visited = !!(window.WHVisited && WHVisited.has(s.uid));
+
     return '' +
-      '<a class="wh-card" href="heritage-place.html?id=' + s.uid + '">' +
-        '<span class="wh-top">' +
-          '<span class="wh-uid">#' + s.uid + '</span>' +
-          '<span class="wh-badge ' + typeClass(s.type) + '">' + s.type + '</span>' +
-          (s.transnational ? '<span class="wh-badge t-trans">跨国</span>' : '') +
-          '<span class="wh-ext" aria-hidden="true">→</span>' +
-        '</span>' +
-        '<span class="wh-name">' + s.name + '</span>' +
-        '<span class="wh-meta">' + meta + '</span>' +
-      '</a>';
+      '<div class="wh-wrap' + (visited ? ' is-visited' : '') + '">' +
+        '<a class="wh-card" href="heritage-place.html?id=' + s.uid + '">' +
+          '<span class="wh-top">' +
+            '<span class="wh-uid">#' + s.uid + '</span>' +
+            '<span class="wh-badge ' + typeClass(s.type) + '">' + s.type + '</span>' +
+            (s.transnational ? '<span class="wh-badge t-trans">跨国</span>' : '') +
+          '</span>' +
+          '<span class="wh-name">' + s.name + '</span>' +
+          '<span class="wh-meta">' + meta + '</span>' +
+        '</a>' +
+        '<button type="button" class="visit-btn" data-id="' + s.uid + '" aria-pressed="' + visited + '" title="标记为已去过">' +
+          (visited ? '✓' : '＋') +
+        '</button>' +
+      '</div>';
   }
 
   function section(title, sub, items, view, province) {
@@ -83,6 +100,7 @@
     }
 
     listEl.innerHTML = html;
+    updateWalk();
     listEl.classList.remove("enter");
     void listEl.offsetWidth;
     listEl.classList.add("enter");
@@ -121,6 +139,22 @@
       }
     });
   });
+
+  if (listEl) {
+    listEl.addEventListener("click", function (e) {
+      var btn = e.target.closest(".visit-btn");
+      if (!btn) return;
+      e.preventDefault();
+      e.stopPropagation();
+      if (!window.WHVisited) return;
+      var on = WHVisited.toggle(btn.getAttribute("data-id"));
+      var wrap = btn.parentNode;
+      if (wrap) wrap.classList.toggle("is-visited", on);
+      btn.textContent = on ? "✓" : "＋";
+      btn.setAttribute("aria-pressed", String(on));
+      updateWalk();
+    });
+  }
 
   window.addEventListener("hashchange", function () {
     var h = (window.location.hash || "").replace("#", "");
