@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>兰溪市 · 全国重点文物保护单位</title>
+<meta name="description" content="兰溪市 8 处全国重点文物保护单位，可按批次或镇街切换。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="zhejiang.html#jinhua">← 浙江 · 金华</a>
+  <p class="kicker">Jinhua · 全国重点文物保护单位</p>
+  <h1>兰溪，八处</h1>
+  <p class="lede">
+    第四批 1 处、第六批 1 处、第七批 5 处、第八批 1 处，散在 6 个镇街。<br>
+    <span>诸葛村的八卦、芝堰的古道，一县八处。</span>
+  </p>
+  <div class="seal" aria-hidden="true">兰</div>
+</header>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="switch" role="group" aria-label="切换排列方式">
+      <button type="button" data-view="batch" aria-pressed="true">按批次</button>
+      <button type="button" data-view="district" aria-pressed="false">按镇街</button>
+    </div>
+    <p class="toolbar-note" id="toolbar-note">4 批 · 8 处</p>
+  </div>
+</div>
+
+<main>
+  <div id="list" aria-live="polite"></div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>兰溪市 · 全国重点文物保护单位 · 8 处</span>
+    <span>开放状态以各单位最新公告为准</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="jinhua-data.js"></script>
+<script>
+window.LIST_CONFIG = {
+  places: window.JINHUA_PLACES["lanxi"],
+  districts: window.JINHUA_META["lanxi"].towns,
+  detailBase: "place.html?set=lanxi&id=",
+  storageKey: "lanxi-view",
+  noteBatch: "4 批 · 8 处",
+  noteDistrict: "6 个镇街 · 8 处"
+};
+</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

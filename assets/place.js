@@ -4,9 +4,23 @@
   var params = new URLSearchParams(window.location.search);
   var set = params.get("set") || "shanghai";
 
-  var source = set === "yiwu"
-    ? (window.YIWU_PLACES || [])
-    : (window.PLACES || []);
+  var JH = window.JINHUA_PLACES || {};
+  var JHM = window.JINHUA_META || {};
+
+  var source, backHref, backLabel;
+  if (set === "yiwu") {
+    source = window.YIWU_PLACES || [];
+    backHref = "yiwu.html";
+    backLabel = "← 义乌清单";
+  } else if (JH[set]) {
+    source = JH[set];
+    backHref = JHM[set].page;
+    backLabel = "← " + JHM[set].name + "清单";
+  } else {
+    source = window.PLACES || [];
+    backHref = "shanghai.html";
+    backLabel = "← 上海清单";
+  }
 
   var places = source.slice().sort(function (a, b) { return a.order - b.order; });
   var batches = window.BATCHES || [];
@@ -14,8 +28,8 @@
   var id = params.get("id") || params.get("p") || "";
 
   var backEl = document.getElementById("back");
-  backEl.href = set === "yiwu" ? "yiwu.html" : "shanghai.html";
-  backEl.textContent = set === "yiwu" ? "← 义乌清单" : "← 上海清单";
+  backEl.href = backHref;
+  backEl.textContent = backLabel;
 
   var item = null;
   for (var i = 0; i < places.length; i++) {
@@ -39,13 +53,14 @@
   }
 
   var b = batchOf(item.batch);
+  var county = (JH[set] && JHM[set]) ? JHM[set].name : "";
 
-  document.title = item.name + " · " + item.district;
+  document.title = item.name + " · " + (county || item.district);
 
   document.getElementById("chips").innerHTML = '' +
     '<span class="chip solid">' + b.label + (b.year ? " · " + b.year : "") + '</span>' +
     '<span class="chip">' + item.code + '</span>' +
-    '<span class="chip">' + item.district + '</span>';
+    '<span class="chip">' + (county || item.district) + '</span>';
 
   document.getElementById("name").textContent = item.name;
   document.getElementById("sub").textContent = item.type + " · " + item.era;
@@ -64,7 +79,7 @@
   var facts = [
     ["批次", b.label + (b.year ? " · " + b.year : "")],
     ["编号", item.code],
-    ["所在", item.district + (item.district2 ? " / " + item.district2 : "")],
+    ["所在", (county ? county + " · " : "") + item.district + (item.district2 ? " / " + item.district2 : "")],
     ["类型", item.type],
     ["年代", item.era],
     ["状态", '<span class="dot ' + item.status + '" style="display:inline-block;margin-right:6px;vertical-align:1px;"></span>' + item.statusText],

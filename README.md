@@ -22,6 +22,7 @@ python3 -m http.server 8000
 - 浙江页（`zhejiang.html`）：11 个地级市，每个市下面列出所辖的区 / 县 / 县级市，共 90 个；义乌已点亮。
 - 义乌页（`yiwu.html`）：7 处国保，按「批次 / 镇街」切换，点进去是 `place.html?set=yiwu&id=…`。
 - 义乌市级文保（`yiwu-city.html`）：276 个公布名称、329 个点位，按 14 个镇街分组；左侧固定镇街索引（手机上是两列目录），点击即可筛选。
+- 金华各区县页（`wucheng/lanxi/dongyang/yongkang/wuyi/pujiang/panan.html`）：共 31 处国保，按「批次 / 镇街」切换，详情走 `place.html?set=区县&id=…`。金东区暂无国保，未建页。
 
 ## 加照片
 
@@ -66,10 +67,18 @@ web/
 ├── zhejiang.html       浙江骨架页（11 市 → 90 县区）
 ├── yiwu.html           义乌清单页（批次 / 镇街）
 ├── yiwu-city.html      义乌市级文保（按镇街）
+├── wucheng.html        婺城区国保（7 处）
+├── lanxi.html          兰溪市国保（8 处）
+├── dongyang.html       东阳市国保（6 处）
+├── yongkang.html       永康市国保（2 处）
+├── wuyi.html           武义县国保（3 处）
+├── pujiang.html        浦江县国保（3 处）
+├── panan.html          磐安县国保（2 处）
 ├── place.html          详情页模板（?set=shanghai|yiwu）
 ├── data.js             上海 40 处数据
 ├── yiwu-data.js        义乌 7 处国保数据
 ├── yiwu-city-data.js   义乌市级文保 276 处 / 329 点位
+├── jinhua-data.js      金华 7 个区县 31 处国保
 ├── files/
 │   └── yiwu-city-2019.pdf   市级名录整理版 PDF（15 页，脚本生成）
 ├── assets/

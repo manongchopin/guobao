@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>武义县 · 全国重点文物保护单位</title>
+<meta name="description" content="武义县 3 处全国重点文物保护单位，可按批次或镇街切换。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="zhejiang.html#jinhua">← 浙江 · 金华</a>
+  <p class="kicker">Jinhua · 全国重点文物保护单位</p>
+  <h1>武义，三处</h1>
+  <p class="lede">
+    第四批 1 处、第五批 1 处、第七批 1 处，散在 3 个镇街。<br>
+    <span>元代大殿、星象古村、明招山下的吕氏家族墓。</span>
+  </p>
+  <div class="seal" aria-hidden="true">武</div>
+</header>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="switch" role="group" aria-label="切换排列方式">
+      <button type="button" data-view="batch" aria-pressed="true">按批次</button>
+      <button type="button" data-view="district" aria-pressed="false">按镇街</button>
+    </div>
+    <p class="toolbar-note" id="toolbar-note">3 批 · 3 处</p>
+  </div>
+</div>
+
+<main>
+  <div id="list" aria-live="polite"></div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>武义县 · 全国重点文物保护单位 · 3 处</span>
+    <span>开放状态以各单位最新公告为准</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="jinhua-data.js"></script>
+<script>
+window.LIST_CONFIG = {
+  places: window.JINHUA_PLACES["wuyi"],
+  districts: window.JINHUA_META["wuyi"].towns,
+  detailBase: "place.html?set=wuyi&id=",
+  storageKey: "wuyi-view",
+  noteBatch: "3 批 · 3 处",
+  noteDistrict: "3 个镇街 · 3 处"
+};
+</script>
+<script src="assets/app.js"></script>
+</body>
+</html>
