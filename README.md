@@ -22,6 +22,7 @@ python3 -m http.server 8000
 - 详情页底部有「上一处 / 下一处」，按批次顺序走，不用退回清单。
 - 浙江页（`zhejiang.html`）：11 个地级市，每个市下面列出所辖的区 / 县 / 县级市，共 90 个；义乌已点亮。
 - 义乌页（`yiwu.html`）：7 处国保，按「批次 / 镇街」切换，点进去是 `place.html?set=yiwu&id=…`。
+- 世界遗产单页（`heritage-place.html?id=437`）：简介、入选信息、UNESCO 外链、照片与游记位。
 - 义乌市级文保（`yiwu-city.html`）：276 个公布名称、329 个点位，按 14 个镇街分组；左侧固定镇街索引（手机上是两列目录），点击即可筛选。
 - 金华各区县页（`wucheng/lanxi/dongyang/yongkang/wuyi/pujiang/panan.html`）：共 31 处国保，按「批次 / 镇街」切换，详情走 `place.html?set=区县&id=…`。金东区暂无国保，未建页。
 
@@ -77,7 +78,9 @@ images/1-11/2.jpg
 web/
 ├── index.html          首页：我走过的世界
 ├── heritage.html       中国的世界遗产（61 项，按年份/省份）
+├── heritage-place.html 世界遗产单页（?id=437）
 ├── visited-heritage.html  我去过的世界遗产（全球，0 / 1,273）
+├── forbidden.html      195 件禁止出境文物（按批次/省份）
 ├── guobao.html         国保入口：34 个省级行政区
 ├── shanghai.html       上海清单页（批次 / 辖区）
 ├── zhejiang.html       浙江骨架页（11 市 → 90 县区）
@@ -94,7 +97,8 @@ web/
 ├── data.js             上海 40 处数据
 ├── yiwu-data.js        义乌 7 处国保数据
 ├── yiwu-city-data.js   义乌市级文保 276 处 / 329 点位
-├── heritage-data.js    中国世界遗产 61 项
+├── heritage-data.js    中国世界遗产 61 项（含简介与标准）
+├── forbidden-data.js   195 件禁止出境文物
 ├── jinhua-data.js      金华 7 个区县 31 处国保
 ├── visited.js          打卡种子 + localStorage 读写
 ├── files/

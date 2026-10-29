@@ -1521,10 +1521,14 @@ main.enter .group {
   .ph-box { padding: 26px 20px 22px; }
 }
 
-/* 首页三卡 */
-.home-main { grid-template-columns: repeat(3, 1fr); }
+/* 首页四卡 */
+.home-main { grid-template-columns: repeat(4, 1fr); }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
+  .home-main { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 760px) {
   .home-main { grid-template-columns: 1fr; }
 }
 
@@ -1735,4 +1739,65 @@ main.enter .group {
   font-family: var(--serif);
   font-size: 15px;
   margin: 0 1px;
+}
+
+/* ---------- 禁止出境文物 ---------- */
+
+.fx-card {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-height: 132px;
+  padding: 16px 18px 15px;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+}
+
+.fx-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fx-batch {
+  font-size: 10px;
+  line-height: 1.6;
+  padding: 0 4px;
+  border: 1px solid var(--red);
+  border-radius: 2px;
+  color: var(--red);
+  letter-spacing: 0.06em;
+}
+
+.fx-era {
+  font-size: 10.5px;
+  color: var(--ink-3);
+  letter-spacing: 0.04em;
+}
+
+.fx-name {
+  font-family: var(--serif);
+  font-size: 17.5px;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+
+.fx-where {
+  margin: auto 0 0;
+  padding-top: 12px;
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+@media (max-width: 720px) {
+  .fx-card { min-height: 0; }
+}
+
+/* 首页四卡时的标题字号 */
+@media (min-width: 1101px) {
+  .home-card .hc-title { font-size: 24px; letter-spacing: 0; }
+}
+@media (max-width: 1100px) and (min-width: 761px) {
+  .home-card .hc-title { font-size: 28px; }
 }

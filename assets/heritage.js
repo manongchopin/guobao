@@ -30,12 +30,12 @@
       meta = s.year + " 年 · " + s.provinces.join("、");
     }
     return '' +
-      '<a class="wh-card" href="https://whc.unesco.org/en/list/' + s.uid + '" target="_blank" rel="noopener">' +
+      '<a class="wh-card" href="heritage-place.html?id=' + s.uid + '">' +
         '<span class="wh-top">' +
           '<span class="wh-uid">#' + s.uid + '</span>' +
           '<span class="wh-badge ' + typeClass(s.type) + '">' + s.type + '</span>' +
           (s.transnational ? '<span class="wh-badge t-trans">跨国</span>' : '') +
-          '<span class="wh-ext" aria-hidden="true">↗</span>' +
+          '<span class="wh-ext" aria-hidden="true">→</span>' +
         '</span>' +
         '<span class="wh-name">' + s.name + '</span>' +
         '<span class="wh-meta">' + meta + '</span>' +
