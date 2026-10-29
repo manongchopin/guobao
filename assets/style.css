@@ -2830,3 +2830,97 @@ a.sh-row:hover .sh-n { color: var(--red); }
 }
 
 .hg-c { white-space: nowrap; }
+
+/* ---------- 中国世界遗产 · 表格 ---------- */
+
+.wht-table { border-top: 1px solid var(--ink); }
+
+.wht-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1.6fr) 80px minmax(0, 1.4fr) 34px;
+  gap: 14px;
+  align-items: baseline;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.wht-head {
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  color: var(--ink-3);
+}
+
+.wht-c {
+  font-size: 10.5px;
+  letter-spacing: 0.05em;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.wht-n {
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.wht-t {
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+.wht-p {
+  font-size: 12px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+.wht-hit {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.wht-row:hover { background: rgba(255, 253, 247, 0.7); }
+.wht-row:hover .wht-n { color: var(--red); }
+
+.wht-visit {
+  position: static;
+  top: auto;
+  right: auto;
+  z-index: 2;
+  width: 22px;
+  height: 22px;
+  font-size: 11px;
+  justify-self: end;
+  align-self: center;
+}
+
+.wht-row.is-visited .wht-n::before {
+  content: "✓";
+  margin-right: 5px;
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--red);
+}
+
+@media (max-width: 760px) {
+  .wht-head { display: none; }
+  .wht-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "n v"
+      "t c"
+      "p p";
+    gap: 3px 12px;
+    padding: 12px 2px;
+    border-bottom: 1px solid var(--line);
+  }
+  .wht-n { grid-area: n; font-size: 15.5px; }
+  .wht-visit { grid-area: v; align-self: start; margin-top: 2px; }
+  .wht-t { grid-area: t; }
+  .wht-c { grid-area: c; text-align: right; }
+  .wht-p { grid-area: p; }
+}
