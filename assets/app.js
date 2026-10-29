@@ -32,6 +32,9 @@
   var districtTable = cfg.districtTable === true;
   var districtFilter = "all";
   var indexTitle = cfg.indexTitle || "辖区索引";
+  var col4Label = cfg.col4Label || "地址";
+  var hideStatus = cfg.hideStatus === true;
+  var countUnit = cfg.countUnit || "个点位";
 
   function pad(n) {
     return n < 10 ? "0" + n : String(n);
@@ -89,7 +92,7 @@
         '<div class="group-head">' +
           '<h2>' + title + '</h2>' +
           (sub ? '<span class="year">' + sub + '</span>' : '') +
-          '<span class="count">' + cards.length + ' 个点位</span>' +
+          '<span class="count">' + cards.length + ' ' + countUnit + '</span>' +
         '</div>' +
         '<div class="grid">' + cards.map(function (it) { return cardHTML(it, view); }).join('') + '</div>' +
       '</section>';
@@ -103,8 +106,8 @@
       '<span class="sh-c">' + b.label + '</span>' +
       '<span class="sh-n">' + it.name + '</span>' +
       '<span class="sh-a">' + it.type + '</span>' +
-      '<span class="sh-b">' + it.address + '</span>' +
-      '<span class="sh-e"><span class="dot ' + it.status + '"></span>' + it.statusText + '</span>' +
+      '<span class="sh-b">' + (it.address || it.era || "—") + '</span>' +
+      (hideStatus ? '' : '<span class="sh-e"><span class="dot ' + it.status + '"></span>' + it.statusText + '</span>') +
       '<button type="button" class="visit-btn sh-visit" data-id="' + it.id + '" aria-pressed="' + v + '" title="标记为已去过">' +
         (v ? '✓' : '＋') +
       '</button>' +
@@ -113,9 +116,11 @@
   }
 
   function shTable(list) {
-    var head = ["批次", "名称", "类型", "地址", "状态"];
+    var head = hideStatus
+      ? ["批次", "名称", "类型", col4Label]
+      : ["批次", "名称", "类型", col4Label, "状态"];
     var rows = list.slice().sort(function (a, b) { return a.order - b.order; });
-    return '<div class="sh-table" role="table">' +
+    return '<div class="sh-table' + (hideStatus ? ' no-status' : '') + '" role="table">' +
       '<div class="sh-row sh-head" role="row">' +
         head.map(function (h, i) {
           return '<span class="sh-' + ["c", "n", "a", "b", "e"][i] + '">' + h + '</span>';
@@ -143,7 +148,7 @@
       var list = places.filter(function (p) { return p.district === d; });
       if (!list.length) return;
       html += '<section class="district-block" data-d="' + d + '">' +
-        '<div class="group-head"><h2>' + d + '</h2><span class="count">' + list.length + ' 个点位</span></div>' +
+        '<div class="group-head"><h2>' + d + '</h2><span class="count">' + list.length + ' ' + countUnit + '</span></div>' +
         shTable(list) +
       '</section>';
     });

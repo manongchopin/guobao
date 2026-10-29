@@ -92,7 +92,8 @@ web/
 ├── hongkong.html       香港法定古迹（138 项，表格 + 辖区索引）
 ├── hk-place.html       香港法定古迹单页（?id=M0086）
 ├── hk-grade.html       一/二/三级历史建筑占位页（?g=1）
-├── shanghai.html       上海（批次卡片 / 辖区表格）       上海清单页（批次 / 辖区）
+├── shanghai.html       上海（批次卡片 / 辖区表格）
+├── beijing.html        北京（135 处，批次卡片 / 辖区表格）       上海清单页（批次 / 辖区）
 ├── zhejiang.html       浙江骨架页（11 市 → 90 县区）
 ├── yiwu.html           义乌清单页（批次 / 镇街）
 ├── yiwu-city.html      义乌市级文保（按镇街）
@@ -112,6 +113,7 @@ web/
 ├── visited-wh.js       中国 21 项的打卡种子
 ├── forbidden-data.js   195 件禁止出境文物（含 F0001–F0195）
 ├── forbidden-visited.js  禁止出境文物打卡
+├── beijing-data.js     北京 135 处国保
 ├── hongkong-data.js    香港法定古迹 138 项
 ├── jinhua-data.js      金华 7 个区县 31 处国保
 ├── visited.js          打卡种子 + localStorage 读写

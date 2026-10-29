@@ -2510,3 +2510,24 @@ a.sh-row:hover .sh-n { color: var(--red); }
 @media (max-width: 820px) {
   .hero-mark { width: 58px; top: 22px; right: 20px; }
 }
+
+/* 北京：无状态列 + 灰色未知点 */
+.dot.na { background: var(--ink-3); }
+
+.sh-table.no-status .sh-row {
+  grid-template-columns: 72px minmax(0, 1.6fr) 90px minmax(0, 1.4fr) 34px;
+}
+
+@media (max-width: 760px) {
+  .sh-table.no-status .sh-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "n v"
+      "a c"
+      "b b";
+  }
+  .sh-table.no-status .sh-c { grid-area: c; text-align: right; }
+  .sh-table.no-status .sh-a { grid-area: a; }
+  .sh-table.no-status .sh-b { grid-area: b; }
+  .sh-table.no-status .sh-visit { grid-area: v; }
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>北京 · 全国重点文物保护单位</title>
+<meta name="description" content="北京 135 处全国重点文物保护单位清单，可按纳入批次或行政辖区一键切换，每处附独立页面。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="guobao.html">← 全国 · 34 个省级行政区</a>
+  <p class="kicker">Beijing · 全国重点文物保护单位</p>
+  <h1>北京，一百三十五处</h1>
+  <p class="lede">
+    从 1961 年第一批到 2019 年第八批，8 批、14 个区。<br>
+    <span>按纳入时间读历史，按辖区排路线。</span>
+  </p>
+  <div class="seal" aria-hidden="true">京</div>
+</header>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="switch" role="group" aria-label="切换排列方式">
+      <button type="button" data-view="batch" aria-pressed="true">按批次</button>
+      <button type="button" data-view="district" aria-pressed="false">按辖区</button>
+    </div>
+    <p class="toolbar-note" id="toolbar-note">8 批 · 135 处</p>
+  </div>
+</div>
+
+<main id="list" aria-live="polite"></main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>北京 · 全国重点文物保护单位 · 135 处</span>
+    <span>开放状态以各单位最新公告为准</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="beijing-data.js"></script>
+<script src="visited.js"></script>
+<script>
+window.LIST_CONFIG = {
+  places: window.BEIJING_PLACES,
+  districts: window.BEIJING_DISTRICTS,
+  detailBase: "place.html?set=beijing&id=",
+  storageKey: "beijing-view",
+  noteBatch: "8 批 · 135 处",
+  noteDistrict: "14 个区 · 135 处",
+  districtTable: true,
+  indexTitle: "辖区索引",
+  col4Label: "时代",
+  hideStatus: true,
+  countUnit: "处"
+};
+</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

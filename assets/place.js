@@ -8,7 +8,11 @@
   var JHM = window.JINHUA_META || {};
 
   var source, backHref, backLabel;
-  if (set === "yiwu") {
+  if (set === "beijing") {
+    source = window.BEIJING_PLACES || [];
+    backHref = "beijing.html";
+    backLabel = "← 北京清单";
+  } else if (set === "yiwu") {
     source = window.YIWU_PLACES || [];
     backHref = "yiwu.html";
     backLabel = "← 义乌清单";
@@ -63,7 +67,7 @@
     '<span class="chip">' + (county || item.district) + '</span>';
 
   document.getElementById("name").textContent = item.name;
-  document.getElementById("sub").textContent = item.type + " · " + item.era;
+  document.getElementById("sub").textContent = item.type + (item.era && item.era !== "—" ? " · " + item.era : "");
 
   var noteEl = document.getElementById("note");
   if (item.note) {
@@ -73,18 +77,22 @@
 
   document.getElementById("intro").textContent = item.intro;
 
-  var mapUrl = "https://www.amap.com/search?query=" +
-    encodeURIComponent(item.name + " " + item.address);
-
   var facts = [
     ["批次", b.label + (b.year ? " · " + b.year : "")],
     ["编号", item.code],
     ["所在", (county ? county + " · " : "") + item.district + (item.district2 ? " / " + item.district2 : "")],
-    ["类型", item.type],
-    ["年代", item.era],
-    ["状态", '<span class="dot ' + item.status + '" style="display:inline-block;margin-right:6px;vertical-align:1px;"></span>' + item.statusText],
-    ["地址", '<a href="' + mapUrl + '" target="_blank" rel="noopener">' + item.address + ' ↗</a>']
+    ["类型", item.type]
   ];
+
+  if (item.era && item.era !== "—") facts.push(["年代", item.era]);
+
+  if (item.statusText) {
+    facts.push(["状态", '<span class="dot ' + item.status + '" style="display:inline-block;margin-right:6px;vertical-align:1px;"></span>' + item.statusText]);
+  }
+  if (item.address) {
+    var mapUrl = "https://www.amap.com/search?query=" + encodeURIComponent(item.name + " " + item.address);
+    facts.push(["地址", '<a href="' + mapUrl + '" target="_blank" rel="noopener">' + item.address + ' ↗</a>']);
+  }
 
   if (item.route) facts.push(["线路", item.route]);
 
