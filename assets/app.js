@@ -29,6 +29,8 @@
 
   var VIEW_KEY = cfg.storageKey || "sh-guobao-view";
   var currentView = null;
+  var districtTable = cfg.districtTable === true;
+  var districtFilter = "all";
 
   function pad(n) {
     return n < 10 ? "0" + n : String(n);
@@ -92,10 +94,62 @@
       '</section>';
   }
 
+  function shRow(it) {
+    var b = batchOf(it.batch);
+    var v = !!(window.Visited && Visited.has(it.id));
+    return '<a class="sh-row" href="' + detailBase + encodeURIComponent(it.id) + '">' +
+      '<span class="sh-c">' + b.label + '</span>' +
+      '<span class="sh-n">' + (v ? '<i class="sh-check">✓</i>' : '') + it.name + '</span>' +
+      '<span class="sh-a">' + it.type + '</span>' +
+      '<span class="sh-b">' + it.address + '</span>' +
+      '<span class="sh-e"><span class="dot ' + it.status + '"></span>' + it.statusText + '</span>' +
+    '</a>';
+  }
+
+  function shTable(list) {
+    var head = ["批次", "名称", "类型", "地址", "状态"];
+    var rows = list.slice().sort(function (a, b) { return a.order - b.order; });
+    return '<div class="sh-table" role="table">' +
+      '<div class="sh-row sh-head" role="row">' +
+        head.map(function (h, i) {
+          return '<span class="sh-' + ["c", "n", "a", "b", "e"][i] + '">' + h + '</span>';
+        }).join("") +
+      '</div>' +
+      rows.map(shRow).join("") +
+    '</div>';
+  }
+
+  function districtTableHTML() {
+    var idx = '<p class="ci-title">辖区索引</p>' +
+      '<button type="button" class="ci-item' + (districtFilter === "all" ? " is-active" : "") +
+      '" data-d="all" aria-pressed="' + (districtFilter === "all") + '"><span>全部</span><b>' + places.length + '</b></button>';
+    districts.forEach(function (d) {
+      var n = places.filter(function (p) { return p.district === d; }).length;
+      if (!n) return;
+      idx += '<button type="button" class="ci-item' + (districtFilter === d ? " is-active" : "") +
+        '" data-d="' + d + '" aria-pressed="' + (districtFilter === d) + '"><span>' + d + '</span><b>' + n + '</b></button>';
+    });
+
+    var html = '<div class="city-layout sh-layout"><aside class="city-index" aria-label="辖区索引">' + idx + '</aside><div class="city-content">';
+    var show = districtFilter === "all" ? districts : [districtFilter];
+    show.forEach(function (d) {
+      var list = places.filter(function (p) { return p.district === d; });
+      if (!list.length) return;
+      html += '<section class="district-block" data-d="' + d + '">' +
+        '<div class="group-head"><h2>' + d + '</h2><span class="count">' + list.length + ' 个点位</span></div>' +
+        shTable(list) +
+      '</section>';
+    });
+    return html + '</div></div>';
+  }
+
   function render(view) {
     var html = "";
 
-    if (view === "district") {
+    if (view === "district" && districtTable) {
+      html = districtTableHTML();
+      noteEl.textContent = noteDistrict;
+    } else if (view === "district") {
       districts.forEach(function (d) {
         var items = places.filter(function (p) { return p.district === d; });
         if (!items.length) return;
@@ -167,6 +221,14 @@
 
   if (listEl) {
     listEl.addEventListener("click", function (e) {
+      var item = e.target.closest(".ci-item");
+      if (item && districtTable) {
+        districtFilter = item.getAttribute("data-d");
+        render("district");
+        var y = listEl.getBoundingClientRect().top + window.scrollY - 70;
+        window.scrollTo({ top: y, behavior: "smooth" });
+        return;
+      }
       var btn = e.target.closest(".visit-btn");
       if (!btn) return;
       e.preventDefault();

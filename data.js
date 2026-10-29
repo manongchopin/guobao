@@ -311,3 +311,5 @@ window.DISTRICTS = [
   "黄浦区", "徐汇区", "虹口区", "静安区", "长宁区", "普陀区", "杨浦区",
   "松江区", "青浦区", "嘉定区", "闵行区", "浦东新区", "奉贤区"
 ];
+
+window.LIST_CONFIG = { districtTable: true };

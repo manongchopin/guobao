@@ -2279,3 +2279,89 @@ a.hk-row:hover .hk-n { color: var(--red); }
   .hk-more { padding: 0 20px 64px; }
   .hk-more-grid { grid-template-columns: 1fr; }
 }
+
+/* ---------- 上海 · 辖区表格 ---------- */
+
+.sh-layout .city-index { top: 78px; }
+
+.sh-table { border-top: 1px solid var(--ink); }
+
+.sh-row {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1.5fr) 76px minmax(0, 1.3fr) 132px;
+  gap: 14px;
+  align-items: baseline;
+  padding: 11px 4px;
+  border-bottom: 1px solid var(--line-soft);
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.16s ease;
+}
+
+a.sh-row:hover { background: rgba(255, 253, 247, 0.7); }
+a.sh-row:hover .sh-n { color: var(--red); }
+
+.sh-head {
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  color: var(--ink-3);
+}
+
+.sh-c {
+  font-size: 10.5px;
+  color: var(--ink-3);
+  letter-spacing: 0.04em;
+}
+
+.sh-n {
+  font-family: var(--serif);
+  font-size: 15.5px;
+  line-height: 1.45;
+}
+
+.sh-a {
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.sh-b {
+  font-size: 12px;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+
+.sh-e {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  line-height: 1.6;
+}
+
+.sh-check {
+  font-style: normal;
+  color: var(--red);
+  margin-right: 2px;
+}
+
+@media (max-width: 760px) {
+  .sh-head { display: none; }
+  .sh-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "n c"
+      "a e"
+      "b b";
+    gap: 3px 12px;
+    padding: 13px 2px;
+    border-bottom: 1px solid var(--line);
+  }
+  .sh-c { grid-area: c; text-align: right; }
+  .sh-n { grid-area: n; font-size: 16px; }
+  .sh-a { grid-area: a; }
+  .sh-e { grid-area: e; justify-self: end; }
+  .sh-b { grid-area: b; margin-top: 2px; }
+}
