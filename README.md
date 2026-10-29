@@ -86,7 +86,7 @@ web/
 ├── images/home/road.jpg   首页「行万里路」（地图 © OpenStreetMap contributors）
 ├── forbidden.html      195 件禁止出境文物（按批次/省份）
 ├── guobao.html         国保入口：34 个省级行政区
-├── hongkong.html       香港法定古迹（138 项，默认按辖区）
+├── hongkong.html       香港法定古迹（138 项，表格 + 辖区索引）
 ├── hk-place.html       香港法定古迹单页（?id=M0086）
 ├── shanghai.html       上海清单页（批次 / 辖区）
 ├── zhejiang.html       浙江骨架页（11 市 → 90 县区）

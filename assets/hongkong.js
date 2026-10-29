@@ -3,6 +3,7 @@
 
   var items = window.HK_PLACES || [];
   var listEl = document.getElementById("list");
+  var indexEl = document.getElementById("index");
   var noteEl = document.getElementById("hk-note");
   var toolbarNote = document.getElementById("toolbar-note");
   var buttons = Array.prototype.slice.call(document.querySelectorAll(".switch button"));
@@ -14,81 +15,137 @@
   ];
 
   var VIEW_KEY = "hk-view";
-  var currentView = null;
+  var state = { view: "district", district: "all" };
 
   function yearText(s) {
     if (!s) return "";
     return s.replace(/年至/g, "—").replace(/年$/, "");
   }
 
-  function card(it, view) {
-    var meta = view === "number"
-      ? [it.district, yearText(it.built)].filter(Boolean).join(" · ")
-      : [yearText(it.built), it.address].filter(Boolean).join(" · ");
-    return '' +
-      '<a class="card" href="hk-place.html?id=' + encodeURIComponent(it.id) + '">' +
-        '<div class="card-name">' + it.name + ' <span class="hk-id">' + it.id + '</span></div>' +
-        '<div class="card-meta">' + meta + '</div>' +
-        '<div class="card-foot">' +
-          '<span class="dot open"></span>' +
-          '<span>法定古迹</span>' +
-          '<span class="card-arrow" aria-hidden="true">→</span>' +
-        '</div>' +
-      '</a>';
-  }
-
-  function grid(list, view) {
-    return '<div class="grid">' + list.map(function (it) { return card(it, view); }).join("") + '</div>';
-  }
-
-  function districtView() {
-    var html = "";
-    REGIONS.forEach(function (r) {
-      html += '<section class="hk-region"><h2>' + r.name + '</h2>';
-      r.districts.forEach(function (d) {
-        var list = items.filter(function (it) { return it.district === d; });
-        html += '<div class="hk-district">' +
-          '<div class="hk-district-head"><h3>' + d + '</h3><span class="count">' + list.length + ' 项</span></div>' +
-          (list.length ? grid(list, "district") : '<p class="hk-empty">暂无法定古迹</p>') +
-        '</div>';
-      });
-      html += '</section>';
+  function byDistrict() {
+    var map = {};
+    items.forEach(function (it) {
+      if (!map[it.district]) map[it.district] = [];
+      map[it.district].push(it);
     });
-    return html;
+    return map;
   }
 
-  function numberView() {
-    return '<section class="group">' +
-      '<div class="group-head"><h2>法定古迹编号</h2><span class="count">' + items.length + ' 项</span></div>' +
-      grid(items, "number") +
-    '</section>';
+  var groups = byDistrict();
+
+  /* ---------- 侧栏 ---------- */
+
+  function renderIndex() {
+    var html = '<p class="ci-title">辖区索引</p>' +
+      '<button type="button" class="ci-item' + (state.district === "all" ? " is-active" : "") +
+      '" data-d="all" aria-pressed="' + (state.district === "all") + '"><span>全部</span><b>' + items.length + '</b></button>';
+    REGIONS.forEach(function (r) {
+      html += '<p class="ci-region">' + r.name + '</p>';
+      r.districts.forEach(function (d) {
+        var n = groups[d] ? groups[d].length : 0;
+        if (!n) return;
+        html += '<button type="button" class="ci-item' + (state.district === d ? " is-active" : "") +
+          '" data-d="' + d + '" aria-pressed="' + (state.district === d) + '"><span>' + d + '</span><b>' + n + '</b></button>';
+      });
+    });
+    indexEl.innerHTML = html;
   }
 
-  function render(view) {
-    listEl.innerHTML = view === "number" ? numberView() : districtView();
-    if (view === "number") {
+  /* ---------- 表格 ---------- */
+
+  function row(it, view) {
+    var cells = view === "number"
+      ? [it.id, it.name, it.district, yearText(it.built), it.address]
+      : [it.id, it.name, yearText(it.built), it.address, it.declared || "—"];
+    return '<a class="hk-row" href="hk-place.html?id=' + encodeURIComponent(it.id) + '">' +
+      cells.map(function (v, i) {
+        return '<span class="hk-' + ["c", "n", "a", "b", "e"][i] + '">' + (v || "—") + '</span>';
+      }).join("") +
+    '</a>';
+  }
+
+  function table(list, view) {
+    var head = view === "number"
+      ? ["编号", "名称", "辖区", "建筑年份", "地址"]
+      : ["编号", "名称", "建筑年份", "地址", "宣布"];
+    return '<div class="hk-table' + (view === "number" ? " is-number" : "") + '" role="table">' +
+      '<div class="hk-row hk-head" role="row">' +
+        head.map(function (h, i) {
+          return '<span class="hk-' + ["c", "n", "a", "b", "e"][i] + '">' + h + '</span>';
+        }).join("") +
+      '</div>' +
+      list.map(function (it) { return row(it, view); }).join("") +
+    '</div>';
+  }
+
+  function render() {
+    var html = "";
+    if (state.view === "number") {
+      var list = state.district === "all" ? items : (groups[state.district] || []);
+      var title = state.district === "all" ? "法定古迹编号" : state.district;
+      html = '<section class="district-block">' +
+        '<div class="group-head"><h2>' + title + '</h2><span class="count">' + list.length + ' 项</span></div>' +
+        table(list, "number") +
+      '</section>';
       toolbarNote.textContent = "编号 M0001—M0138";
       noteEl.textContent = "按法定古迹编号升序排列。";
     } else {
+      var show = state.district === "all" ? null : state.district;
+      REGIONS.forEach(function (r) {
+        r.districts.forEach(function (d) {
+          if (show && d !== show) return;
+          var list = groups[d] || [];
+          if (!list.length) return;
+          html += '<section class="district-block" data-d="' + d + '">' +
+            '<div class="group-head"><h2>' + d + '</h2><span class="count">' + list.length + ' 项</span></div>' +
+            table(list, "district") +
+          '</section>';
+        });
+      });
       toolbarNote.textContent = "138 项 · 17 个辖区";
       noteEl.textContent = "按香港岛、九龙、新界三个区域，再按辖区排列。";
     }
-    listEl.classList.remove("enter");
-    void listEl.offsetWidth;
-    listEl.classList.add("enter");
+    listEl.innerHTML = html;
   }
 
   function setView(view, push) {
     if (view !== "district" && view !== "number") view = "district";
-    var changed = currentView !== view;
-    currentView = view;
+    state.view = view;
     buttons.forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.getAttribute("data-view") === view));
     });
     try { localStorage.setItem(VIEW_KEY, view); } catch (e) {}
     if (push && ("#" + view) !== window.location.hash) window.location.hash = view;
-    if (changed) render(view);
+    render();
   }
+
+  function setDistrict(d) {
+    state.district = d;
+    renderIndex();
+    render();
+  }
+
+  indexEl.addEventListener("click", function (e) {
+    var btn = e.target.closest(".ci-item");
+    if (!btn) return;
+    setDistrict(btn.getAttribute("data-d"));
+    var y = listEl.getBoundingClientRect().top + window.scrollY - 76;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  });
+
+  buttons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      if (b.getAttribute("aria-pressed") === "true") return;
+      setView(b.getAttribute("data-view"), true);
+      var y = listEl.getBoundingClientRect().top + window.scrollY - 76;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    });
+  });
+
+  window.addEventListener("hashchange", function () {
+    var h = (window.location.hash || "").replace("#", "");
+    if (h === "district" || h === "number") setView(h, false);
+  });
 
   function initialView() {
     var h = (window.location.hash || "").replace("#", "");
@@ -100,21 +157,6 @@
     return "district";
   }
 
-  buttons.forEach(function (b) {
-    b.addEventListener("click", function () {
-      var changed = b.getAttribute("aria-pressed") !== "true";
-      setView(b.getAttribute("data-view"), true);
-      if (changed) {
-        var smooth = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        window.scrollTo({ top: 0, behavior: smooth ? "smooth" : "auto" });
-      }
-    });
-  });
-
-  window.addEventListener("hashchange", function () {
-    var h = (window.location.hash || "").replace("#", "");
-    if (h === "district" || h === "number") setView(h, false);
-  });
-
+  renderIndex();
   setView(initialView(), false);
 })();
