@@ -86,6 +86,8 @@ web/
 ├── images/home/road.jpg   首页「行万里路」（地图 © OpenStreetMap contributors）
 ├── forbidden.html      195 件禁止出境文物（按批次/省份）
 ├── guobao.html         国保入口：34 个省级行政区
+├── hongkong.html       香港法定古迹（138 项，默认按辖区）
+├── hk-place.html       香港法定古迹单页（?id=M0086）
 ├── shanghai.html       上海清单页（批次 / 辖区）
 ├── zhejiang.html       浙江骨架页（11 市 → 90 县区）
 ├── yiwu.html           义乌清单页（批次 / 镇街）
@@ -105,6 +107,7 @@ web/
 ├── heritage-visited-data.js  中国以外 75 项已走世界遗产
 ├── visited-wh.js       中国 21 项的打卡种子
 ├── forbidden-data.js   195 件禁止出境文物
+├── hongkong-data.js    香港法定古迹 138 项
 ├── jinhua-data.js      金华 7 个区县 31 处国保
 ├── visited.js          打卡种子 + localStorage 读写
 ├── files/
