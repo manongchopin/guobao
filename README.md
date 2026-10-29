@@ -117,6 +117,7 @@ web/
 ├── beijing-data.js     北京 135 处国保
 ├── macau-data.js       澳门不动产 165 项
 ├── macau-visited.js    澳门不动产打卡
+├── assets/yiwu-mark.png 义乌团扇标志
 ├── assets/flag-hk.svg  香港区旗
 ├── assets/flag-macau.svg 澳门区旗
 ├── hongkong-data.js    香港法定古迹 138 项
