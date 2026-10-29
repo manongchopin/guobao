@@ -65,7 +65,7 @@ images/1-11/2.jpg
 web/
 ├── index.html          首页：我走过的世界
 ├── heritage.html       中国的世界遗产（占位）
-├── visited-heritage.html  我去过的世界遗产（0 / 61）
+├── visited-heritage.html  我去过的世界遗产（全球，0 / 1,273）
 ├── guobao.html         国保入口：34 个省级行政区
 ├── shanghai.html       上海清单页（批次 / 辖区）
 ├── zhejiang.html       浙江骨架页（11 市 → 90 县区）
