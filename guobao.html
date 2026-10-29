@@ -27,7 +27,7 @@
     <span class="hp-label">已上线</span>
     <span class="hp-num">2</span><span class="hp-total">/ 34</span>
     <span class="hp-track" aria-hidden="true"><i style="width: 5.88%"></i></span>
-    <span class="hp-note">上海 40 处 · 浙江 11 市</span>
+    <span class="hp-note">国保已走 <b id="walk-total">1</b> / 5058</span>
   </div>
 </div>
 
@@ -247,5 +247,12 @@
   </div>
 </footer>
 
+<script src="visited.js"></script>
+<script>
+(function () {
+  var el = document.getElementById("walk-total");
+  if (el && window.Visited) el.textContent = Visited.all().length;
+})();
+</script>
 </body>
 </html>

@@ -13,6 +13,20 @@
   var noteEl = document.getElementById("toolbar-note");
   var buttons = Array.prototype.slice.call(document.querySelectorAll(".switch button"));
 
+  var toolbarInner = document.querySelector(".toolbar-inner");
+  var walkEl = document.createElement("span");
+  walkEl.className = "walk-count";
+  walkEl.id = "walk-count";
+  if (toolbarInner) toolbarInner.appendChild(walkEl);
+
+  function updateWalk() {
+    if (!walkEl) return;
+    var got = places.filter(function (p) {
+      return window.Visited && Visited.has(p.id);
+    }).length;
+    walkEl.innerHTML = "已走 <b>" + got + "</b>/" + places.length;
+  }
+
   var VIEW_KEY = cfg.storageKey || "sh-guobao-view";
   var currentView = null;
 
@@ -39,16 +53,23 @@
       ? ' <span class="card-sub">子项</span>'
       : "";
 
+    var visited = !!(window.Visited && Visited.has(item.id));
+
     return '' +
-      '<a class="card" href="' + detailBase + encodeURIComponent(item.id) + '">' +
-        '<div class="card-name">' + item.name + badge + '</div>' +
-        '<div class="card-meta">' + meta + ' · ' + item.type + '</div>' +
-        '<div class="card-foot">' +
-          '<span class="dot ' + item.status + '"></span>' +
-          '<span>' + item.statusText + '</span>' +
-          '<span class="card-arrow" aria-hidden="true">→</span>' +
-        '</div>' +
-      '</a>';
+      '<div class="card-wrap' + (visited ? ' is-visited' : '') + '">' +
+        '<a class="card" href="' + detailBase + encodeURIComponent(item.id) + '">' +
+          '<div class="card-name">' + item.name + badge + '</div>' +
+          '<div class="card-meta">' + meta + ' · ' + item.type + '</div>' +
+          '<div class="card-foot">' +
+            '<span class="dot ' + item.status + '"></span>' +
+            '<span>' + item.statusText + '</span>' +
+            '<span class="card-arrow" aria-hidden="true">→</span>' +
+          '</div>' +
+        '</a>' +
+        '<button type="button" class="visit-btn" data-id="' + item.id + '" aria-pressed="' + visited + '" title="标记为已去过">' +
+          (visited ? '✓' : '＋') +
+        '</button>' +
+      '</div>';
   }
 
   function groupHTML(title, sub, items, view) {
@@ -97,6 +118,7 @@
     }
 
     listEl.innerHTML = html;
+    updateWalk();
     listEl.classList.remove("enter");
     // 强制重排，让切换时有一次轻微的淡入
     void listEl.offsetWidth;
@@ -142,6 +164,22 @@
       }
     });
   });
+
+  if (listEl) {
+    listEl.addEventListener("click", function (e) {
+      var btn = e.target.closest(".visit-btn");
+      if (!btn) return;
+      e.preventDefault();
+      e.stopPropagation();
+      if (!window.Visited) return;
+      var on = Visited.toggle(btn.getAttribute("data-id"));
+      var wrap = btn.parentNode;
+      if (wrap) wrap.classList.toggle("is-visited", on);
+      btn.textContent = on ? "✓" : "＋";
+      btn.setAttribute("aria-pressed", String(on));
+      updateWalk();
+    });
+  }
 
   window.addEventListener("hashchange", function () {
     var h = (window.location.hash || "").replace("#", "");

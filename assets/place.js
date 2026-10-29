@@ -94,6 +94,27 @@
 
   document.getElementById("footer-code").textContent = item.name + " · " + item.code;
 
+  var visitBtn = document.getElementById("visit-btn");
+  var walkHint = document.getElementById("walk-hint");
+
+  function syncVisit() {
+    var on = !!(window.Visited && Visited.has(item.id));
+    visitBtn.textContent = on ? "已去过 · 点击取消" : "标记为已去过";
+    visitBtn.classList.toggle("is-on", on);
+    visitBtn.setAttribute("aria-pressed", String(on));
+    if (window.Visited) {
+      var got = places.filter(function (p) { return Visited.has(p.id); }).length;
+      walkHint.textContent = "本清单已走 " + got + " / " + places.length;
+    }
+  }
+
+  visitBtn.addEventListener("click", function () {
+    if (!window.Visited) return;
+    Visited.toggle(item.id);
+    syncVisit();
+  });
+  syncVisit();
+
   /* ---------- 照片 ---------- */
 
   var photosEl = document.getElementById("photos");

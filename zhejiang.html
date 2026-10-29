@@ -496,5 +496,36 @@
   </div>
 </footer>
 
+<script src="jinhua-data.js"></script>
+<script src="yiwu-data.js"></script>
+<script src="visited.js"></script>
+<script>
+(function () {
+  if (!window.Visited || !window.JINHUA_PLACES) return;
+  var sets = {
+    wucheng: JINHUA_PLACES.wucheng,
+    lanxi: JINHUA_PLACES.lanxi,
+    dongyang: JINHUA_PLACES.dongyang,
+    yongkang: JINHUA_PLACES.yongkang,
+    wuyi: JINHUA_PLACES.wuyi,
+    pujiang: JINHUA_PLACES.pujiang,
+    panan: JINHUA_PLACES.panan,
+    yiwu: window.YIWU_PLACES
+  };
+  var total = 0, got = 0;
+  Object.keys(sets).forEach(function (slug) {
+    var list = sets[slug] || [];
+    total += list.length;
+    var g = list.filter(function (p) { return Visited.has(p.id); }).length;
+    got += g;
+    var el = document.querySelector('.county[href="' + slug + '.html"] .county-type');
+    if (el) el.textContent = g + "/" + list.length + " 已走";
+  });
+  var rc = document.querySelector('#jinhua .region-count');
+  if (rc) rc.textContent = "9 个县级行政区 · 已走 " + got + " / " + total;
+  var note = document.querySelector('.hub-progress .hp-note');
+  if (note) note.textContent = "金华 " + total + " 处 · 已走 " + got;
+})();
+</script>
 </body>
 </html>
