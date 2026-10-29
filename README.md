@@ -88,6 +88,7 @@ web/
 ├── guobao.html         国保入口：34 个省级行政区
 ├── hongkong.html       香港法定古迹（138 项，表格 + 辖区索引）
 ├── hk-place.html       香港法定古迹单页（?id=M0086）
+├── hk-grade.html       一/二/三级历史建筑占位页（?g=1）
 ├── shanghai.html       上海清单页（批次 / 辖区）
 ├── zhejiang.html       浙江骨架页（11 市 → 90 县区）
 ├── yiwu.html           义乌清单页（批次 / 镇街）

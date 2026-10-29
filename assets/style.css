@@ -2190,3 +2190,92 @@ a.hk-row:hover .hk-n { color: var(--red); }
   }
   .hk-table.is-number .hk-e { text-align: left; }
 }
+
+/* ---------- 香港历史建筑分级入口 ---------- */
+
+.hk-more {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 28px 84px;
+}
+
+.hk-more-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-top: 22px;
+  border-top: 1px solid var(--ink);
+}
+
+.hk-more-head h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.hk-more-head span {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+}
+
+.hk-more-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.hk-more-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.hk-more-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.hm-grade {
+  font-family: var(--serif);
+  font-size: 34px;
+  line-height: 1;
+  color: var(--red);
+}
+
+.hm-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.hm-title {
+  font-family: var(--serif);
+  font-size: 17px;
+  letter-spacing: 0.03em;
+}
+
+.hm-meta {
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+}
+
+.hm-arrow { color: var(--ink-3); }
+
+@media (max-width: 760px) {
+  .hk-more { padding: 0 20px 64px; }
+  .hk-more-grid { grid-template-columns: 1fr; }
+}
