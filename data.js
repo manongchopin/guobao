@@ -312,4 +312,4 @@ window.DISTRICTS = [
   "松江区", "青浦区", "嘉定区", "闵行区", "浦东新区", "奉贤区"
 ];
 
-window.LIST_CONFIG = { districtTable: true };
+window.LIST_CONFIG = { districtTable: true, batchTable: true };
