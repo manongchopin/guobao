@@ -89,6 +89,7 @@ web/
 ├── images/home/road.jpg   首页「行万里路」（地图 © OpenStreetMap contributors）
 ├── forbidden.html      195 件禁止出境文物（按批次/省份）
 ├── guobao.html         国保入口：34 个省级行政区
+├── macau.html          澳门被评定的不动产（165 项，按编号 + 区域筛选）
 ├── hongkong.html       香港法定古迹（138 项，表格 + 辖区索引）
 ├── hk-place.html       香港法定古迹单页（?id=M0086）
 ├── hk-grade.html       一/二/三级历史建筑占位页（?g=1）
@@ -114,6 +115,10 @@ web/
 ├── forbidden-data.js   195 件禁止出境文物（含 F0001–F0195）
 ├── forbidden-visited.js  禁止出境文物打卡
 ├── beijing-data.js     北京 135 处国保
+├── macau-data.js       澳门不动产 165 项
+├── macau-visited.js    澳门不动产打卡
+├── assets/flag-hk.svg  香港区旗
+├── assets/flag-macau.svg 澳门区旗
 ├── hongkong-data.js    香港法定古迹 138 项
 ├── jinhua-data.js      金华 7 个区县 31 处国保
 ├── visited.js          打卡种子 + localStorage 读写

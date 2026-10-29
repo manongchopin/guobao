@@ -2531,3 +2531,102 @@ a.sh-row:hover .sh-n { color: var(--red); }
   .sh-table.no-status .sh-b { grid-area: b; }
   .sh-table.no-status .sh-visit { grid-area: v; }
 }
+
+/* ---------- 区域标志（区旗 / 照片） ---------- */
+
+.region-mark {
+  position: absolute;
+  top: 60px;
+  right: 28px;
+  width: 84px;
+  height: 56px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  box-shadow: 0 1px 0 rgba(43, 39, 36, 0.06);
+}
+
+@media (max-width: 820px) {
+  .region-mark { width: 64px; height: 43px; top: 38px; right: 20px; }
+}
+
+/* ---------- 澳门不动产表格 ---------- */
+
+.mo-wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 8px 28px 84px;
+}
+
+.mo-table { border-top: 1px solid var(--ink); }
+
+.mo-row {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1.6fr) 170px 96px 34px;
+  gap: 14px;
+  align-items: center;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.mo-head {
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  color: var(--ink-3);
+}
+
+.mo-c {
+  font-size: 10.5px;
+  letter-spacing: 0.05em;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.mo-n {
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.mo-a { font-size: 12px; color: var(--ink-2); line-height: 1.5; }
+.mo-b { font-size: 11.5px; color: var(--ink-3); }
+
+.mo-visit {
+  position: static;
+  top: auto;
+  right: auto;
+  width: 22px;
+  height: 22px;
+  font-size: 11px;
+  justify-self: end;
+}
+
+.mo-row.is-visited .mo-n::before {
+  content: "✓";
+  margin-right: 5px;
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--red);
+}
+
+@media (max-width: 760px) {
+  .mo-wrap { padding: 4px 20px 64px; }
+  .mo-head { display: none; }
+  .mo-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "n v"
+      "a b"
+      "c c";
+    gap: 3px 12px;
+    padding: 12px 2px;
+    border-bottom: 1px solid var(--line);
+  }
+  .mo-n { grid-area: n; font-size: 15.5px; }
+  .mo-a { grid-area: a; }
+  .mo-b { grid-area: b; text-align: right; }
+  .mo-c { grid-area: c; }
+  .mo-visit { grid-area: v; }
+}

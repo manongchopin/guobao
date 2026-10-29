@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>澳门 · 被评定的不动产</title>
+<meta name="description" content="澳门 165 项被评定的不动产，按编号排列，标注类别与区域。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="guobao.html">← 全国 · 34 个省级行政区</a>
+  <p class="kicker">Macau · 被评定的不动产</p>
+  <h1>澳门，一百六十五项</h1>
+  <p class="lede">
+    165 项不动产，分属澳门半岛、氹仔与路环。<br>
+    <span>按编号排列；纪念物、建筑、建筑群与地点，各自成章。</span>
+  </p>
+  <img class="region-mark" src="assets/flag-macau.svg" alt="澳门特别行政区区旗" width="84" height="56">
+</header>
+
+<div class="hub-progress">
+  <div class="hub-progress-inner">
+    <span class="hp-label">不动产</span>
+    <span class="hp-num">165</span><span class="hp-total">项</span>
+    <span class="hp-note">澳门半岛 132 · 氹仔 16 · 路环 17</span>
+  </div>
+</div>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="switch" role="group" aria-label="按区域筛选">
+      <button type="button" data-region="all" aria-pressed="true">全部</button>
+      <button type="button" data-region="澳门半岛" aria-pressed="false">澳门半岛</button>
+      <button type="button" data-region="氹仔" aria-pressed="false">氹仔</button>
+      <button type="button" data-region="路环" aria-pressed="false">路环</button>
+    </div>
+    <p class="toolbar-note" id="toolbar-note">165 项 · 3 个区域</p>
+  </div>
+</div>
+
+<p class="wh-note" id="mo-note">编号首字母 M/A/C/S 对应纪念物、建筑物、建筑群、地点；第二位 M/T/C 对应澳门半岛、氹仔、路环。</p>
+
+<main id="list" class="mo-wrap"></main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>澳门被评定的不动产 · 165 项</span>
+    <span>名录来源：澳门特别行政区政府文化局</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+  </div>
+</footer>
+
+<script src="macau-data.js"></script>
+<script src="macau-visited.js"></script>
+<script src="assets/macau.js"></script>
+</body>
+</html>
