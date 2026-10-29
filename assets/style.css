@@ -1932,3 +1932,78 @@ a.vwh-card:hover {
   width: 3px;
   background: var(--red);
 }
+
+/* ---------- 首页 · 书与路 ---------- */
+
+.home-coda {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 28px 84px;
+}
+
+.coda-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.coda-item { margin: 0; }
+
+.coda-img {
+  aspect-ratio: 1200 / 778;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper-3);
+}
+
+.coda-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coda-item:first-child .coda-img img {
+  filter: saturate(0.9) contrast(0.98) brightness(1.02);
+}
+
+.coda-item figcaption {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.coda-cn {
+  font-family: var(--serif);
+  font-size: 20px;
+  letter-spacing: 0.08em;
+}
+
+.coda-en {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.coda-note {
+  margin-left: auto;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  text-align: right;
+}
+
+.coda-credit {
+  margin: 16px 0 0;
+  text-align: right;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: var(--ink-3);
+}
+
+@media (max-width: 820px) {
+  .home-coda { padding: 0 20px 64px; }
+  .coda-grid { grid-template-columns: 1fr; gap: 26px; }
+  .coda-note { display: none; }
+}
