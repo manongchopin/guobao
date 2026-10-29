@@ -2735,3 +2735,33 @@ a.sh-row:hover .sh-n { color: var(--red); }
   .vh-e { grid-area: e; }
   .vh-p { grid-area: p; }
 }
+
+/* 批次表格：批次已在组头，行内不再重复 */
+.sh-table.no-batch .sh-row {
+  grid-template-columns: minmax(0, 1.7fr) 90px minmax(0, 1.4fr) 132px 34px;
+}
+
+.sh-table.no-batch.no-status .sh-row {
+  grid-template-columns: minmax(0, 1.7fr) 90px minmax(0, 1.4fr) 34px;
+}
+
+@media (max-width: 760px) {
+  .sh-table.no-batch .sh-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "n v"
+      "a b"
+      "e e";
+  }
+  .sh-table.no-batch .sh-c { display: none; }
+  .sh-table.no-batch.no-status .sh-row {
+    grid-template-areas:
+      "n v"
+      "a b";
+  }
+  .sh-table.no-batch .sh-e { grid-area: e; justify-self: start; }
+}
+
+@media (max-width: 760px) {
+  .sh-table.no-batch .sh-visit { align-self: start; margin-top: 3px; }
+}

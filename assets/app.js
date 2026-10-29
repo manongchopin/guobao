@@ -30,6 +30,7 @@
   var VIEW_KEY = cfg.storageKey || "sh-guobao-view";
   var currentView = null;
   var districtTable = cfg.districtTable === true;
+  var batchTable = cfg.batchTable === true;
   var districtFilter = "all";
   var indexTitle = cfg.indexTitle || "辖区索引";
   var col4Label = cfg.col4Label || "地址";
@@ -98,12 +99,13 @@
       '</section>';
   }
 
-  function shRow(it) {
+  function shRow(it, view) {
     var b = batchOf(it.batch);
     var v = !!(window.Visited && Visited.has(it.id));
     var href = detailBase + encodeURIComponent(it.id);
+    var showBatch = view !== "batchTable";
     return '<div class="sh-row' + (v ? ' is-visited' : '') + '">' +
-      '<span class="sh-c">' + b.label + '</span>' +
+      (showBatch ? '<span class="sh-c">' + b.label + '</span>' : '') +
       '<span class="sh-n">' + it.name + '</span>' +
       '<span class="sh-a">' + it.type + '</span>' +
       '<span class="sh-b">' + (it.address || it.era || "—") + '</span>' +
@@ -115,19 +117,30 @@
     '</div>';
   }
 
-  function shTable(list) {
-    var head = hideStatus
-      ? ["批次", "名称", "类型", col4Label]
-      : ["批次", "名称", "类型", col4Label, "状态"];
-    var rows = list.slice().sort(function (a, b) { return a.order - b.order; });
-    return '<div class="sh-table' + (hideStatus ? ' no-status' : '') + '" role="table">' +
+  function shTable(list, view) {
+    var showBatch = view !== "batchTable";
+    var cols = [];
+    if (showBatch) cols.push(["批次", "c"]);
+    cols.push(["名称", "n"], ["类型", "a"], [col4Label, "b"]);
+    if (!hideStatus) cols.push(["状态", "e"]);
+
+    var rows = list.slice().sort(function (a, b) {
+      if (view === "batchTable") {
+        var sa = a.note && a.note.indexOf("子项") === 0 ? 1 : 0;
+        var sb = b.note && b.note.indexOf("子项") === 0 ? 1 : 0;
+        if (sa !== sb) return sa - sb;
+      }
+      return a.order - b.order;
+    });
+
+    return '<div class="sh-table' + (hideStatus ? ' no-status' : '') + (showBatch ? '' : ' no-batch') + '" role="table">' +
       '<div class="sh-row sh-head" role="row">' +
-        head.map(function (h, i) {
-          return '<span class="sh-' + ["c", "n", "a", "b", "e"][i] + '">' + h + '</span>';
+        cols.map(function (c) {
+          return '<span class="sh-' + c[1] + '">' + c[0] + '</span>';
         }).join("") +
         '<span class="sh-v"></span>' +
       '</div>' +
-      rows.map(shRow).join("") +
+      rows.map(function (it) { return shRow(it, view); }).join("") +
     '</div>';
   }
 
@@ -149,7 +162,7 @@
       if (!list.length) return;
       html += '<section class="district-block" data-d="' + d + '">' +
         '<div class="group-head"><h2>' + d + '</h2><span class="count">' + list.length + ' ' + countUnit + '</span></div>' +
-        shTable(list) +
+        shTable(list, "district") +
       '</section>';
     });
     return html + '</div></div>';
@@ -161,6 +174,18 @@
     if (view === "district" && districtTable) {
       html = districtTableHTML();
       noteEl.textContent = noteDistrict;
+    } else if (view === "batch" && batchTable) {
+      batches.forEach(function (b) {
+        var items = places.filter(function (p) { return p.batch === b.n; });
+        if (!items.length) return;
+        html += '<section class="group">' +
+          '<div class="group-head"><h2>' + b.label + '</h2>' +
+            (b.year ? '<span class="year">' + b.year + '</span>' : '') +
+            '<span class="count">' + items.length + ' ' + countUnit + '</span></div>' +
+          shTable(items, "batchTable") +
+        '</section>';
+      });
+      noteEl.textContent = noteBatch;
     } else if (view === "district") {
       districts.forEach(function (d) {
         var items = places.filter(function (p) { return p.district === d; });
