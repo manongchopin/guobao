@@ -92,7 +92,8 @@ web/
 ├── macau.html          澳门被评定的不动产（165 项，按编号 + 区域筛选）
 ├── hongkong.html       香港法定古迹（138 项，表格 + 辖区索引）
 ├── hk-place.html       香港法定古迹单页（?id=M0086）
-├── hk-grade.html       一/二/三级历史建筑占位页（?g=1）
+├── hk-grade-1/2/3.html 香港一、二、三级历史建筑
+├── hk-grade-data.js    三档历史建筑 777 项
 ├── shanghai.html       上海（批次卡片 / 辖区表格）
 ├── beijing.html        北京（135 处，批次卡片 / 辖区表格）       上海清单页（批次 / 辖区）
 ├── zhejiang.html       浙江骨架页（11 市 → 90 县区）

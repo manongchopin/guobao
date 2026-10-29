@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>香港三级历史建筑</title>
+<meta name="description" content="香港三级历史建筑 275 项，可按辖区或编号切换浏览。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="hongkong.html">← 香港法定古迹</a>
+  <p class="kicker" id="kicker">Hong Kong · Grade III</p>
+  <h1 id="name">香港三级历史建筑</h1>
+  <p class="lede">
+    <span id="hg-count">275</span> 项，分布 <span id="hg-districts">9</span> 个辖区。<br>
+    <span>按辖区排路线，按编号查档案。</span>
+  </p>
+  <img class="region-mark" src="assets/flag-hk.svg" alt="香港特别行政区区旗" width="96" height="64">
+</header>
+
+<div class="hub-progress">
+  <div class="hub-progress-inner">
+    <span class="hp-label">历史建筑</span>
+    <span class="hp-num">275</span><span class="hp-total">项</span>
+    <span class="hp-note">9 个辖区 · 香港岛 / 九龙 / 新界</span>
+  </div>
+</div>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="switch" role="group" aria-label="切换排列方式">
+      <button type="button" data-view="district" aria-pressed="true">按辖区</button>
+      <button type="button" data-view="number" aria-pressed="false">按编号</button>
+    </div>
+    <p class="toolbar-note" id="toolbar-note">275 项 · 9 个辖区</p>
+  </div>
+</div>
+
+<p class="wh-note" id="hg-note">按香港岛、九龙、新界三个区域，再按辖区排列。</p>
+
+<main class="city-layout hk-layout">
+  <aside class="city-index" id="index" aria-label="辖区索引"></aside>
+  <div class="city-content" id="list"></div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>香港三级历史建筑 · 275 项</span>
+    <span>名录来源：香港古物咨询委员会</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+  </div>
+</footer>
+
+<script>window.HK_GRADE = 3;</script>
+<script src="hk-grade-data.js"></script>
+<script src="assets/hk-grade.js"></script>
+</body>
+</html>

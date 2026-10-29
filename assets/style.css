@@ -2765,3 +2765,68 @@ a.sh-row:hover .sh-n { color: var(--red); }
 @media (max-width: 760px) {
   .sh-table.no-batch .sh-visit { align-self: start; margin-top: 3px; }
 }
+
+/* ---------- 香港历史建筑分级 · 表格 ---------- */
+
+.hg-table { border-top: 1px solid var(--ink); }
+
+.hg-row {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1.7fr) 110px minmax(0, 1.5fr);
+  gap: 14px;
+  align-items: baseline;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.hg-head {
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  color: var(--ink-3);
+}
+
+.hg-c {
+  font-size: 10.5px;
+  letter-spacing: 0.05em;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.hg-n {
+  font-family: var(--serif);
+  font-size: 15.5px;
+  line-height: 1.45;
+}
+
+.hg-y {
+  font-size: 11.5px;
+  color: var(--ink-3);
+  line-height: 1.5;
+}
+
+.hg-a {
+  font-size: 12px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .hg-head { display: none; }
+  .hg-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "n c"
+      "y a";
+    gap: 3px 12px;
+    padding: 12px 2px;
+    border-bottom: 1px solid var(--line);
+  }
+  .hg-n { grid-area: n; font-size: 16px; }
+  .hg-c { grid-area: c; text-align: right; }
+  .hg-y { grid-area: y; }
+  .hg-a { grid-area: a; text-align: right; }
+}
+
+.hg-c { white-space: nowrap; }
