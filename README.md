@@ -83,7 +83,7 @@ web/
 ├── index.html          首页：我走过的世界
 ├── heritage.html       中国的世界遗产（61 项，按年份/省份）
 ├── heritage-place.html 世界遗产单页（?id=437）
-├── visited-heritage.html  我去过的世界遗产（96 项，按大洲/国家）
+├── visited-heritage.html  我去过的世界遗产（96 项，大洲/国家表格）
 ├── assets/guobao-mark.png 国保入口右上角标志
 ├── images/home/books.jpg  首页「读万卷书」
 ├── images/home/road.jpg   首页「行万里路」（地图 © OpenStreetMap contributors）

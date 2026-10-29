@@ -2645,3 +2645,93 @@ a.sh-row:hover .sh-n { color: var(--red); }
 @media (max-width: 820px) {
   .region-mark.is-square { height: 64px; top: 27px; }
 }
+
+/* ---------- 我去过的世界遗产 · 表格 ---------- */
+
+.vh-continent { margin-top: 46px; }
+.vh-continent:first-child { margin-top: 12px; }
+
+.vh-continent > h2 {
+  margin: 0 0 6px;
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.vh-head, .vh-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.4fr) 64px minmax(0, 1.2fr);
+  gap: 14px;
+  align-items: baseline;
+  padding: 9px 4px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.vh-head {
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  color: var(--ink-3);
+  border-bottom: 1px solid var(--ink);
+  padding-top: 8px;
+}
+
+.vh-n { font-family: var(--serif); font-size: 15px; line-height: 1.45; }
+.vh-n a { color: var(--ink); text-decoration: none; }
+.vh-n a:hover { color: var(--red); }
+.vh-e { font-size: 11px; color: var(--ink-3); line-height: 1.5; }
+.vh-y { font-size: 11px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.vh-p { font-size: 12px; color: var(--ink-2); line-height: 1.5; }
+
+.vh-country { margin-top: 24px; }
+
+.vh-country-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.vh-country-head h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.vh-country-head .en {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+}
+
+.vh-country-head .count {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+.vh-note {
+  margin: 36px 0 0;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+@media (max-width: 760px) {
+  .vh-head { display: none; }
+  .vh-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "n y"
+      "e e"
+      "p p";
+    gap: 3px 12px;
+    padding: 12px 2px;
+    border-bottom: 1px solid var(--line);
+  }
+  .vh-n { grid-area: n; font-size: 15.5px; }
+  .vh-y { grid-area: y; }
+  .vh-e { grid-area: e; }
+  .vh-p { grid-area: p; }
+}
