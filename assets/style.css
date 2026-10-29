@@ -755,9 +755,10 @@ main.enter .group {
 }
 
 .prov-sub {
-  font-size: 11px;
+  font-size: 10.5px;
   color: var(--ink-3);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .prov.is-active,
