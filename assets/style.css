@@ -2175,3 +2175,18 @@ a.hk-row:hover .hk-n { color: var(--red); }
 @media (max-width: 760px) {
   .hk-table:not(.is-number) .hk-e { display: none; }
 }
+
+/* 按编号时隐藏辖区索引，表格占满 */
+.hk-layout.is-number { grid-template-columns: 1fr; }
+.hk-layout.is-number .city-index { display: none; }
+
+@media (max-width: 760px) {
+  .hk-table.is-number .hk-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "n c"
+      "a b"
+      "e e";
+  }
+  .hk-table.is-number .hk-e { text-align: left; }
+}

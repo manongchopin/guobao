@@ -4,6 +4,7 @@
   var items = window.HK_PLACES || [];
   var listEl = document.getElementById("list");
   var indexEl = document.getElementById("index");
+  var layoutEl = document.querySelector(".hk-layout");
   var noteEl = document.getElementById("hk-note");
   var toolbarNote = document.getElementById("toolbar-note");
   var buttons = Array.prototype.slice.call(document.querySelectorAll(".switch button"));
@@ -111,6 +112,11 @@
   function setView(view, push) {
     if (view !== "district" && view !== "number") view = "district";
     state.view = view;
+    if (view === "number" && state.district !== "all") {
+      state.district = "all";
+      renderIndex();
+    }
+    if (layoutEl) layoutEl.classList.toggle("is-number", view === "number");
     buttons.forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.getAttribute("data-view") === view));
     });
