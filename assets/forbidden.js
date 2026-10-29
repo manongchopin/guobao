@@ -31,22 +31,21 @@
 
   function card(it, view, province) {
     var b = batchOf(it.batch);
-    var museums, where;
+    var museums, provs;
     if (view === "province") {
       museums = it.places.filter(function (p) { return p.province === province; })
         .map(function (p) { return p.museum; }).join(" / ");
-      where = museums;
+      provs = "";
     } else {
-      where = it.places.map(function (p) { return p.museum + " · " + p.province; }).join(" / ");
+      museums = it.places.map(function (p) { return p.museum; }).join(" / ");
+      provs = it.provinces.join(" / ");
     }
     return '' +
       '<article class="fx-card">' +
-        '<div class="fx-top">' +
-          (view === "province" ? '<span class="fx-batch">' + b.label + '</span>' : '') +
-          '<span class="fx-era">' + (it.era || "—") + '</span>' +
-        '</div>' +
+        (view === "province" ? '<span class="fx-kicker">' + b.label + '</span>' : '') +
         '<h3 class="fx-name">' + it.name + '</h3>' +
-        '<p class="fx-where">' + where + '</p>' +
+        '<p class="fx-meta">' + (it.era || "—") + ' · ' + museums + '</p>' +
+        (provs ? '<p class="fx-foot"><span class="fx-prov">' + provs + '</span></p>' : '') +
       '</article>';
   }
 
@@ -58,7 +57,7 @@
           (sub ? '<span class="year">' + sub + '</span>' : '') +
           '<span class="count">' + list.length + ' 件</span>' +
         '</div>' +
-        '<div class="grid">' + list.map(function (it) { return card(it, view, province); }).join('') + '</div>' +
+        '<div class="fx-grid">' + list.map(function (it) { return card(it, view, province); }).join('') + '</div>' +
       '</section>';
   }
 

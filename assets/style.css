@@ -1743,54 +1743,62 @@ main.enter .group {
 
 /* ---------- 禁止出境文物 ---------- */
 
+.fx-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
 .fx-card {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  min-height: 132px;
-  padding: 16px 18px 15px;
+  min-height: 128px;
+  padding: 18px 18px 14px;
   border: 1px solid var(--line);
   background: var(--paper-2);
 }
 
-.fx-top {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.fx-batch {
+.fx-kicker {
   font-size: 10px;
-  line-height: 1.6;
-  padding: 0 4px;
-  border: 1px solid var(--red);
-  border-radius: 2px;
+  letter-spacing: 0.14em;
   color: var(--red);
-  letter-spacing: 0.06em;
-}
-
-.fx-era {
-  font-size: 10.5px;
-  color: var(--ink-3);
-  letter-spacing: 0.04em;
 }
 
 .fx-name {
+  margin: 0;
   font-family: var(--serif);
-  font-size: 17.5px;
+  font-size: 19px;
   line-height: 1.45;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
 }
 
-.fx-where {
-  margin: auto 0 0;
-  padding-top: 12px;
-  font-size: 12px;
-  line-height: 1.65;
+.fx-meta {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.7;
   color: var(--ink-2);
 }
 
+.fx-foot {
+  margin: auto 0 0;
+  padding-top: 12px;
+}
+
+.fx-prov {
+  display: inline-block;
+  font-size: 10.5px;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 0 6px;
+}
+
 @media (max-width: 720px) {
+  .fx-grid { grid-template-columns: 1fr; }
   .fx-card { min-height: 0; }
 }
 
