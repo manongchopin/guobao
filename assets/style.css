@@ -2494,3 +2494,19 @@ a.sh-row:hover .sh-n { color: var(--red); }
   .fb-b { grid-area: b; margin-top: 2px; }
   .fb-visit { grid-area: v; }
 }
+
+/* 国保入口 · 右上角标志 */
+.hero-mark {
+  position: absolute;
+  top: 40px;
+  right: 28px;
+  width: 88px;
+  height: auto;
+  mix-blend-mode: multiply;
+  opacity: 0.96;
+  pointer-events: none;
+}
+
+@media (max-width: 820px) {
+  .hero-mark { width: 58px; top: 22px; right: 20px; }
+}
