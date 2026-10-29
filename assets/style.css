@@ -1520,3 +1520,10 @@ main.enter .group {
   .placeholder { padding: 10px 20px 72px; }
   .ph-box { padding: 26px 20px 22px; }
 }
+
+/* 首页三卡 */
+.home-main { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 1000px) {
+  .home-main { grid-template-columns: 1fr; }
+}
