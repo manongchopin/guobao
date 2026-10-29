@@ -6,6 +6,8 @@
 
   var JH = window.JINHUA_PLACES || {};
   var JHM = window.JINHUA_META || {};
+  var JC = window.JINCHENG_PLACES || {};
+  var JCM = window.JINCHENG_META || {};
 
   var source, backHref, backLabel;
   if (set === "beijing") {
@@ -20,6 +22,10 @@
     source = JH[set];
     backHref = JHM[set].page;
     backLabel = "← " + JHM[set].name + "清单";
+  } else if (JC[set]) {
+    source = JC[set];
+    backHref = JCM[set].page;
+    backLabel = "← " + JCM[set].name + "清单";
   } else {
     source = window.PLACES || [];
     backHref = "shanghai.html";
@@ -57,7 +63,7 @@
   }
 
   var b = batchOf(item.batch);
-  var county = (JH[set] && JHM[set]) ? JHM[set].name : "";
+  var county = (JH[set] && JHM[set]) ? JHM[set].name : ((JC[set] && JCM[set]) ? JCM[set].name : "");
 
   document.title = item.name + " · " + (county || item.district);
 
@@ -80,7 +86,7 @@
   var facts = [
     ["批次", b.label + (b.year ? " · " + b.year : "")],
     ["编号", item.code],
-    ["所在", (county ? county + " · " : "") + item.district + (item.district2 ? " / " + item.district2 : "")],
+    ["所在", (county ? (county === item.district ? county : county + " · " + item.district) : item.district) + (item.district2 ? " / " + item.district2 : "")],
     ["类型", item.type]
   ];
 

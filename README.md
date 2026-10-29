@@ -123,6 +123,7 @@ web/
 ├── assets/flag-hk.svg  香港区旗
 ├── assets/flag-macau.svg 澳门区旗
 ├── hongkong-data.js    香港法定古迹 138 项
+├── jincheng-data.js    晋城 6 个县区 72 处国保
 ├── jinhua-data.js      金华 7 个区县 31 处国保
 ├── visited.js          打卡种子 + localStorage 读写
 ├── files/
