@@ -31,6 +31,7 @@
   var currentView = null;
   var districtTable = cfg.districtTable === true;
   var districtFilter = "all";
+  var indexTitle = cfg.indexTitle || "辖区索引";
 
   function pad(n) {
     return n < 10 ? "0" + n : String(n);
@@ -97,13 +98,18 @@
   function shRow(it) {
     var b = batchOf(it.batch);
     var v = !!(window.Visited && Visited.has(it.id));
-    return '<a class="sh-row" href="' + detailBase + encodeURIComponent(it.id) + '">' +
+    var href = detailBase + encodeURIComponent(it.id);
+    return '<div class="sh-row' + (v ? ' is-visited' : '') + '">' +
       '<span class="sh-c">' + b.label + '</span>' +
-      '<span class="sh-n">' + (v ? '<i class="sh-check">✓</i>' : '') + it.name + '</span>' +
+      '<span class="sh-n">' + it.name + '</span>' +
       '<span class="sh-a">' + it.type + '</span>' +
       '<span class="sh-b">' + it.address + '</span>' +
       '<span class="sh-e"><span class="dot ' + it.status + '"></span>' + it.statusText + '</span>' +
-    '</a>';
+      '<button type="button" class="visit-btn sh-visit" data-id="' + it.id + '" aria-pressed="' + v + '" title="标记为已去过">' +
+        (v ? '✓' : '＋') +
+      '</button>' +
+      '<a class="sh-hit" href="' + href + '" aria-label="' + it.name + '"></a>' +
+    '</div>';
   }
 
   function shTable(list) {
@@ -114,13 +120,14 @@
         head.map(function (h, i) {
           return '<span class="sh-' + ["c", "n", "a", "b", "e"][i] + '">' + h + '</span>';
         }).join("") +
+        '<span class="sh-v"></span>' +
       '</div>' +
       rows.map(shRow).join("") +
     '</div>';
   }
 
   function districtTableHTML() {
-    var idx = '<p class="ci-title">辖区索引</p>' +
+    var idx = '<p class="ci-title">' + indexTitle + '</p>' +
       '<button type="button" class="ci-item' + (districtFilter === "all" ? " is-active" : "") +
       '" data-d="all" aria-pressed="' + (districtFilter === "all") + '"><span>全部</span><b>' + places.length + '</b></button>';
     districts.forEach(function (d) {
@@ -235,8 +242,10 @@
       e.stopPropagation();
       if (!window.Visited) return;
       var on = Visited.toggle(btn.getAttribute("data-id"));
-      var wrap = btn.parentNode;
+      var wrap = btn.closest(".card-wrap");
+      var row = btn.closest(".sh-row");
       if (wrap) wrap.classList.toggle("is-visited", on);
+      if (row) row.classList.toggle("is-visited", on);
       btn.textContent = on ? "✓" : "＋";
       btn.setAttribute("aria-pressed", String(on));
       updateWalk();

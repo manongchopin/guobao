@@ -15,7 +15,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0001"
  },
  {
   "batch": 1,
@@ -32,7 +33,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0002"
  },
  {
   "batch": 1,
@@ -49,7 +51,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0003"
  },
  {
   "batch": 1,
@@ -66,7 +69,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0004"
  },
  {
   "batch": 1,
@@ -83,7 +87,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0005"
  },
  {
   "batch": 1,
@@ -100,7 +105,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0006"
  },
  {
   "batch": 1,
@@ -122,7 +128,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0007"
  },
  {
   "batch": 1,
@@ -139,7 +146,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0008"
  },
  {
   "batch": 1,
@@ -162,7 +170,8 @@ window.FORBIDDEN = [
   "provinces": [
    "上海市",
    "山西省"
-  ]
+  ],
+  "fid": "F0009"
  },
  {
   "batch": 1,
@@ -179,7 +188,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "上海市"
-  ]
+  ],
+  "fid": "F0010"
  },
  {
   "batch": 1,
@@ -196,7 +206,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "天津市"
-  ]
+  ],
+  "fid": "F0011"
  },
  {
   "batch": 1,
@@ -213,7 +224,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "浙江省"
-  ]
+  ],
+  "fid": "F0012"
  },
  {
   "batch": 1,
@@ -230,7 +242,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "浙江省"
-  ]
+  ],
+  "fid": "F0013"
  },
  {
   "batch": 1,
@@ -247,7 +260,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "浙江省"
-  ]
+  ],
+  "fid": "F0014"
  },
  {
   "batch": 1,
@@ -264,7 +278,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "浙江省"
-  ]
+  ],
+  "fid": "F0015"
  },
  {
   "batch": 1,
@@ -281,7 +296,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "河南省"
-  ]
+  ],
+  "fid": "F0016"
  },
  {
   "batch": 1,
@@ -304,7 +320,8 @@ window.FORBIDDEN = [
   "provinces": [
    "北京市",
    "河南省"
-  ]
+  ],
+  "fid": "F0017"
  },
  {
   "batch": 1,
@@ -321,7 +338,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "山东省"
-  ]
+  ],
+  "fid": "F0018"
  },
  {
   "batch": 1,
@@ -338,7 +356,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "安徽省"
-  ]
+  ],
+  "fid": "F0019"
  },
  {
   "batch": 1,
@@ -355,7 +374,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "安徽省"
-  ]
+  ],
+  "fid": "F0020"
  },
  {
   "batch": 1,
@@ -372,7 +392,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "安徽省"
-  ]
+  ],
+  "fid": "F0021"
  },
  {
   "batch": 1,
@@ -389,7 +410,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "山西省"
-  ]
+  ],
+  "fid": "F0022"
  },
  {
   "batch": 1,
@@ -406,7 +428,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "山西省"
-  ]
+  ],
+  "fid": "F0023"
  },
  {
   "batch": 1,
@@ -423,7 +446,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "山西省"
-  ]
+  ],
+  "fid": "F0024"
  },
  {
   "batch": 1,
@@ -440,7 +464,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "山西省"
-  ]
+  ],
+  "fid": "F0025"
  },
  {
   "batch": 1,
@@ -457,7 +482,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖北省"
-  ]
+  ],
+  "fid": "F0026"
  },
  {
   "batch": 1,
@@ -474,7 +500,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖北省"
-  ]
+  ],
+  "fid": "F0027"
  },
  {
   "batch": 1,
@@ -491,7 +518,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖北省"
-  ]
+  ],
+  "fid": "F0028"
  },
  {
   "batch": 1,
@@ -508,7 +536,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖北省"
-  ]
+  ],
+  "fid": "F0029"
  },
  {
   "batch": 1,
@@ -525,7 +554,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖北省"
-  ]
+  ],
+  "fid": "F0030"
  },
  {
   "batch": 1,
@@ -542,7 +572,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "辽宁省"
-  ]
+  ],
+  "fid": "F0031"
  },
  {
   "batch": 1,
@@ -559,7 +590,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "辽宁省"
-  ]
+  ],
+  "fid": "F0032"
  },
  {
   "batch": 1,
@@ -576,7 +608,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "四川省"
-  ]
+  ],
+  "fid": "F0033"
  },
  {
   "batch": 1,
@@ -593,7 +626,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "四川省"
-  ]
+  ],
+  "fid": "F0034"
  },
  {
   "batch": 1,
@@ -610,7 +644,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "四川省"
-  ]
+  ],
+  "fid": "F0035"
  },
  {
   "batch": 1,
@@ -627,7 +662,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "甘肃省"
-  ]
+  ],
+  "fid": "F0036"
  },
  {
   "batch": 1,
@@ -644,7 +680,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0037"
  },
  {
   "batch": 1,
@@ -661,7 +698,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0038"
  },
  {
   "batch": 1,
@@ -678,7 +716,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0039"
  },
  {
   "batch": 1,
@@ -695,7 +734,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0040"
  },
  {
   "batch": 1,
@@ -712,7 +752,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0041"
  },
  {
   "batch": 1,
@@ -729,7 +770,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0042"
  },
  {
   "batch": 1,
@@ -746,7 +788,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0043"
  },
  {
   "batch": 1,
@@ -763,7 +806,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0044"
  },
  {
   "batch": 1,
@@ -780,7 +824,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0045"
  },
  {
   "batch": 1,
@@ -797,7 +842,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0046"
  },
  {
   "batch": 1,
@@ -814,7 +860,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0047"
  },
  {
   "batch": 1,
@@ -831,7 +878,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0048"
  },
  {
   "batch": 1,
@@ -848,7 +896,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "新疆维吾尔自治区"
-  ]
+  ],
+  "fid": "F0049"
  },
  {
   "batch": 1,
@@ -865,7 +914,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "河北省"
-  ]
+  ],
+  "fid": "F0050"
  },
  {
   "batch": 1,
@@ -882,7 +932,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "河北省"
-  ]
+  ],
+  "fid": "F0051"
  },
  {
   "batch": 1,
@@ -899,7 +950,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "河北省"
-  ]
+  ],
+  "fid": "F0052"
  },
  {
   "batch": 1,
@@ -916,7 +968,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "河北省"
-  ]
+  ],
+  "fid": "F0053"
  },
  {
   "batch": 1,
@@ -933,7 +986,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "广东省"
-  ]
+  ],
+  "fid": "F0054"
  },
  {
   "batch": 1,
@@ -950,7 +1004,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "广东省"
-  ]
+  ],
+  "fid": "F0055"
  },
  {
   "batch": 1,
@@ -967,7 +1022,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖南省"
-  ]
+  ],
+  "fid": "F0056"
  },
  {
   "batch": 1,
@@ -984,7 +1040,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖南省"
-  ]
+  ],
+  "fid": "F0057"
  },
  {
   "batch": 1,
@@ -1001,7 +1058,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖南省"
-  ]
+  ],
+  "fid": "F0058"
  },
  {
   "batch": 1,
@@ -1018,7 +1076,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖南省"
-  ]
+  ],
+  "fid": "F0059"
  },
  {
   "batch": 1,
@@ -1035,7 +1094,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖南省"
-  ]
+  ],
+  "fid": "F0060"
  },
  {
   "batch": 1,
@@ -1052,7 +1112,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "青海省"
-  ]
+  ],
+  "fid": "F0061"
  },
  {
   "batch": 1,
@@ -1069,7 +1130,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "宁夏回族自治区"
-  ]
+  ],
+  "fid": "F0062"
  },
  {
   "batch": 1,
@@ -1086,7 +1148,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "江西省"
-  ]
+  ],
+  "fid": "F0063"
  },
  {
   "batch": 1,
@@ -1103,7 +1166,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "江苏省"
-  ]
+  ],
+  "fid": "F0064"
  },
  {
   "batch": 2,
@@ -1120,7 +1184,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0065"
  },
  {
   "batch": 2,
@@ -1137,7 +1202,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0066"
  },
  {
   "batch": 2,
@@ -1154,7 +1220,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0067"
  },
  {
   "batch": 2,
@@ -1171,7 +1238,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "辽宁省"
-  ]
+  ],
+  "fid": "F0068"
  },
  {
   "batch": 2,
@@ -1188,7 +1256,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0069"
  },
  {
   "batch": 2,
@@ -1205,7 +1274,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "上海市"
-  ]
+  ],
+  "fid": "F0070"
  },
  {
   "batch": 2,
@@ -1222,7 +1292,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0071"
  },
  {
   "batch": 2,
@@ -1239,7 +1310,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "辽宁省"
-  ]
+  ],
+  "fid": "F0072"
  },
  {
   "batch": 2,
@@ -1256,7 +1328,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0073"
  },
  {
   "batch": 2,
@@ -1273,7 +1346,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0074"
  },
  {
   "batch": 2,
@@ -1290,7 +1364,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0075"
  },
  {
   "batch": 2,
@@ -1307,7 +1382,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0076"
  },
  {
   "batch": 2,
@@ -1324,7 +1400,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "贵州省"
-  ]
+  ],
+  "fid": "F0077"
  },
  {
   "batch": 2,
@@ -1341,7 +1418,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "上海市"
-  ]
+  ],
+  "fid": "F0078"
  },
  {
   "batch": 2,
@@ -1358,7 +1436,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0079"
  },
  {
   "batch": 2,
@@ -1375,7 +1454,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0080"
  },
  {
   "batch": 2,
@@ -1392,7 +1472,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "辽宁省"
-  ]
+  ],
+  "fid": "F0081"
  },
  {
   "batch": 2,
@@ -1409,7 +1490,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0082"
  },
  {
   "batch": 2,
@@ -1426,7 +1508,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0083"
  },
  {
   "batch": 2,
@@ -1443,7 +1526,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0084"
  },
  {
   "batch": 2,
@@ -1460,7 +1544,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "上海市"
-  ]
+  ],
+  "fid": "F0085"
  },
  {
   "batch": 2,
@@ -1477,7 +1562,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "江苏省"
-  ]
+  ],
+  "fid": "F0086"
  },
  {
   "batch": 2,
@@ -1494,7 +1580,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0087"
  },
  {
   "batch": 2,
@@ -1511,7 +1598,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0088"
  },
  {
   "batch": 2,
@@ -1528,7 +1616,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0089"
  },
  {
   "batch": 2,
@@ -1545,7 +1634,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0090"
  },
  {
   "batch": 2,
@@ -1562,7 +1652,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "辽宁省"
-  ]
+  ],
+  "fid": "F0091"
  },
  {
   "batch": 2,
@@ -1579,7 +1670,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0092"
  },
  {
   "batch": 2,
@@ -1596,7 +1688,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0093"
  },
  {
   "batch": 2,
@@ -1613,7 +1706,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0094"
  },
  {
   "batch": 2,
@@ -1630,7 +1724,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0095"
  },
  {
   "batch": 2,
@@ -1647,7 +1742,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0096"
  },
  {
   "batch": 2,
@@ -1664,7 +1760,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0097"
  },
  {
   "batch": 2,
@@ -1681,7 +1778,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0098"
  },
  {
   "batch": 2,
@@ -1698,7 +1796,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0099"
  },
  {
   "batch": 2,
@@ -1715,7 +1814,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0100"
  },
  {
   "batch": 2,
@@ -1732,7 +1832,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0101"
  },
  {
   "batch": 3,
@@ -1749,7 +1850,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0102"
  },
  {
   "batch": 3,
@@ -1766,7 +1868,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0103"
  },
  {
   "batch": 3,
@@ -1783,7 +1886,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "山西省"
-  ]
+  ],
+  "fid": "F0104"
  },
  {
   "batch": 3,
@@ -1800,7 +1904,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖南省"
-  ]
+  ],
+  "fid": "F0105"
  },
  {
   "batch": 3,
@@ -1817,7 +1922,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "四川省"
-  ]
+  ],
+  "fid": "F0106"
  },
  {
   "batch": 3,
@@ -1834,7 +1940,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0107"
  },
  {
   "batch": 3,
@@ -1851,7 +1958,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0108"
  },
  {
   "batch": 3,
@@ -1868,7 +1976,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "山西省"
-  ]
+  ],
+  "fid": "F0109"
  },
  {
   "batch": 3,
@@ -1885,7 +1994,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0110"
  },
  {
   "batch": 3,
@@ -1902,7 +2012,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0111"
  },
  {
   "batch": 3,
@@ -1919,7 +2030,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖北省"
-  ]
+  ],
+  "fid": "F0112"
  },
  {
   "batch": 3,
@@ -1936,7 +2048,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "上海市"
-  ]
+  ],
+  "fid": "F0113"
  },
  {
   "batch": 3,
@@ -1953,7 +2066,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "江苏省"
-  ]
+  ],
+  "fid": "F0114"
  },
  {
   "batch": 3,
@@ -1970,7 +2084,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0115"
  },
  {
   "batch": 3,
@@ -1987,7 +2102,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0116"
  },
  {
   "batch": 3,
@@ -2004,7 +2120,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "云南省"
-  ]
+  ],
+  "fid": "F0117"
  },
  {
   "batch": 3,
@@ -2021,7 +2138,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0118"
  },
  {
   "batch": 3,
@@ -2038,7 +2156,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0119"
  },
  {
   "batch": 3,
@@ -2055,7 +2174,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0120"
  },
  {
   "batch": 3,
@@ -2072,7 +2192,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0121"
  },
  {
   "batch": 3,
@@ -2089,7 +2210,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0122"
  },
  {
   "batch": 3,
@@ -2106,7 +2228,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "甘肃省"
-  ]
+  ],
+  "fid": "F0123"
  },
  {
   "batch": 3,
@@ -2123,7 +2246,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "山东省"
-  ]
+  ],
+  "fid": "F0124"
  },
  {
   "batch": 3,
@@ -2140,7 +2264,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0125"
  },
  {
   "batch": 3,
@@ -2157,7 +2282,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0126"
  },
  {
   "batch": 3,
@@ -2174,7 +2300,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "江苏省"
-  ]
+  ],
+  "fid": "F0127"
  },
  {
   "batch": 3,
@@ -2191,7 +2318,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "江苏省"
-  ]
+  ],
+  "fid": "F0128"
  },
  {
   "batch": 3,
@@ -2208,7 +2336,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0129"
  },
  {
   "batch": 3,
@@ -2225,7 +2354,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "河南省"
-  ]
+  ],
+  "fid": "F0130"
  },
  {
   "batch": 3,
@@ -2242,7 +2372,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "天津市"
-  ]
+  ],
+  "fid": "F0131"
  },
  {
   "batch": 3,
@@ -2259,7 +2390,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0132"
  },
  {
   "batch": 3,
@@ -2276,7 +2408,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0133"
  },
  {
   "batch": 3,
@@ -2293,7 +2426,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0134"
  },
  {
   "batch": 3,
@@ -2310,7 +2444,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "江苏省"
-  ]
+  ],
+  "fid": "F0135"
  },
  {
   "batch": 3,
@@ -2327,7 +2462,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "浙江省"
-  ]
+  ],
+  "fid": "F0136"
  },
  {
   "batch": 3,
@@ -2344,7 +2480,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖南省"
-  ]
+  ],
+  "fid": "F0137"
  },
  {
   "batch": 3,
@@ -2361,7 +2498,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0138"
  },
  {
   "batch": 3,
@@ -2378,7 +2516,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "辽宁省"
-  ]
+  ],
+  "fid": "F0139"
  },
  {
   "batch": 3,
@@ -2395,7 +2534,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "江苏省"
-  ]
+  ],
+  "fid": "F0140"
  },
  {
   "batch": 3,
@@ -2412,7 +2552,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0141"
  },
  {
   "batch": 3,
@@ -2429,7 +2570,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0142"
  },
  {
   "batch": 3,
@@ -2446,7 +2588,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0143"
  },
  {
   "batch": 3,
@@ -2463,7 +2606,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0144"
  },
  {
   "batch": 3,
@@ -2480,7 +2624,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "河北省"
-  ]
+  ],
+  "fid": "F0145"
  },
  {
   "batch": 3,
@@ -2497,7 +2642,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "吉林省"
-  ]
+  ],
+  "fid": "F0146"
  },
  {
   "batch": 3,
@@ -2514,7 +2660,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0147"
  },
  {
   "batch": 3,
@@ -2531,7 +2678,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "江苏省"
-  ]
+  ],
+  "fid": "F0148"
  },
  {
   "batch": 3,
@@ -2548,7 +2696,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "江苏省"
-  ]
+  ],
+  "fid": "F0149"
  },
  {
   "batch": 3,
@@ -2565,7 +2714,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0150"
  },
  {
   "batch": 3,
@@ -2582,7 +2732,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "浙江省"
-  ]
+  ],
+  "fid": "F0151"
  },
  {
   "batch": 3,
@@ -2599,7 +2750,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "河南省"
-  ]
+  ],
+  "fid": "F0152"
  },
  {
   "batch": 3,
@@ -2616,7 +2768,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "山西省"
-  ]
+  ],
+  "fid": "F0153"
  },
  {
   "batch": 3,
@@ -2633,7 +2786,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖北省"
-  ]
+  ],
+  "fid": "F0154"
  },
  {
   "batch": 3,
@@ -2650,7 +2804,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0155"
  },
  {
   "batch": 3,
@@ -2667,7 +2822,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "河北省"
-  ]
+  ],
+  "fid": "F0156"
  },
  {
   "batch": 3,
@@ -2684,7 +2840,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖南省"
-  ]
+  ],
+  "fid": "F0157"
  },
  {
   "batch": 3,
@@ -2701,7 +2858,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "西藏自治区"
-  ]
+  ],
+  "fid": "F0158"
  },
  {
   "batch": 3,
@@ -2718,7 +2876,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "四川省"
-  ]
+  ],
+  "fid": "F0159"
  },
  {
   "batch": 3,
@@ -2735,7 +2894,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "四川省"
-  ]
+  ],
+  "fid": "F0160"
  },
  {
   "batch": 3,
@@ -2752,7 +2912,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0161"
  },
  {
   "batch": 3,
@@ -2769,7 +2930,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0162"
  },
  {
   "batch": 3,
@@ -2786,7 +2948,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "河北省"
-  ]
+  ],
+  "fid": "F0163"
  },
  {
   "batch": 3,
@@ -2803,7 +2966,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "江苏省"
-  ]
+  ],
+  "fid": "F0164"
  },
  {
   "batch": 3,
@@ -2820,7 +2984,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖北省"
-  ]
+  ],
+  "fid": "F0165"
  },
  {
   "batch": 3,
@@ -2837,7 +3002,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖南省"
-  ]
+  ],
+  "fid": "F0166"
  },
  {
   "batch": 3,
@@ -2854,7 +3020,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖南省"
-  ]
+  ],
+  "fid": "F0167"
  },
  {
   "batch": 3,
@@ -2871,7 +3038,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "安徽省"
-  ]
+  ],
+  "fid": "F0168"
  },
  {
   "batch": 3,
@@ -2888,7 +3056,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "安徽省"
-  ]
+  ],
+  "fid": "F0169"
  },
  {
   "batch": 3,
@@ -2905,7 +3074,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "江苏省"
-  ]
+  ],
+  "fid": "F0170"
  },
  {
   "batch": 3,
@@ -2922,7 +3092,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0171"
  },
  {
   "batch": 3,
@@ -2939,7 +3110,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "浙江省"
-  ]
+  ],
+  "fid": "F0172"
  },
  {
   "batch": 3,
@@ -2956,7 +3128,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0173"
  },
  {
   "batch": 3,
@@ -2973,7 +3146,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0174"
  },
  {
   "batch": 3,
@@ -2990,7 +3164,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "新疆维吾尔自治区"
-  ]
+  ],
+  "fid": "F0175"
  },
  {
   "batch": 3,
@@ -3007,7 +3182,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "甘肃省"
-  ]
+  ],
+  "fid": "F0176"
  },
  {
   "batch": 3,
@@ -3024,7 +3200,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "新疆维吾尔自治区"
-  ]
+  ],
+  "fid": "F0177"
  },
  {
   "batch": 3,
@@ -3041,7 +3218,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0178"
  },
  {
   "batch": 3,
@@ -3058,7 +3236,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0179"
  },
  {
   "batch": 3,
@@ -3075,7 +3254,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0180"
  },
  {
   "batch": 3,
@@ -3092,7 +3272,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0181"
  },
  {
   "batch": 3,
@@ -3109,7 +3290,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "上海市"
-  ]
+  ],
+  "fid": "F0182"
  },
  {
   "batch": 3,
@@ -3126,7 +3308,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0183"
  },
  {
   "batch": 3,
@@ -3143,7 +3326,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0184"
  },
  {
   "batch": 3,
@@ -3160,7 +3344,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0185"
  },
  {
   "batch": 3,
@@ -3177,7 +3362,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0186"
  },
  {
   "batch": 3,
@@ -3194,7 +3380,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0187"
  },
  {
   "batch": 3,
@@ -3211,7 +3398,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0188"
  },
  {
   "batch": 3,
@@ -3228,7 +3416,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "陕西省"
-  ]
+  ],
+  "fid": "F0189"
  },
  {
   "batch": 3,
@@ -3245,7 +3434,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "北京市"
-  ]
+  ],
+  "fid": "F0190"
  },
  {
   "batch": 3,
@@ -3262,7 +3452,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖北省"
-  ]
+  ],
+  "fid": "F0191"
  },
  {
   "batch": 3,
@@ -3279,7 +3470,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "上海市"
-  ]
+  ],
+  "fid": "F0192"
  },
  {
   "batch": 3,
@@ -3296,7 +3488,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖北省"
-  ]
+  ],
+  "fid": "F0193"
  },
  {
   "batch": 3,
@@ -3313,7 +3506,8 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖南省"
-  ]
+  ],
+  "fid": "F0194"
  },
  {
   "batch": 3,
@@ -3330,6 +3524,7 @@ window.FORBIDDEN = [
   ],
   "provinces": [
    "湖南省"
-  ]
+  ],
+  "fid": "F0195"
  }
 ];

@@ -30,7 +30,8 @@ python3 -m http.server 8000
 
 - 每张卡片右上角有一个圆点：`＋` 表示没去过，`✓` 表示去过；点一下切换。
 - 详情页顶部也有「标记为已去过」，旁边显示本清单已走多少。
-- 上海：`data.js` 里 `LIST_CONFIG.districtTable = true`，批次视图保持卡片，辖区视图改成表格 + 辖区索引。
+- 上海、义乌：`LIST_CONFIG.districtTable = true`，批次/镇街视图：批次保持卡片，辖区改成表格 + 索引；表格行右侧有独立打卡按钮。
+- 禁止出境文物：按批次、按省份都是表格 + 索引，行右侧独立打卡（`forbidden-visited.js`）。
 - 世界遗产：61 项清单显示 `已走 21/61`，卡片打钩标红；「我去过的世界遗产」按大洲 → 国家列出 96 项。
 - 计数会逐级汇总：
   - 区县页（如义乌）：`已走 1 / 7`
@@ -108,7 +109,8 @@ web/
 ├── heritage-data.js    中国世界遗产 61 项（含简介与标准）
 ├── heritage-visited-data.js  中国以外 75 项已走世界遗产
 ├── visited-wh.js       中国 21 项的打卡种子
-├── forbidden-data.js   195 件禁止出境文物
+├── forbidden-data.js   195 件禁止出境文物（含 F0001–F0195）
+├── forbidden-visited.js  禁止出境文物打卡
 ├── hongkong-data.js    香港法定古迹 138 项
 ├── jinhua-data.js      金华 7 个区县 31 处国保
 ├── visited.js          打卡种子 + localStorage 读写
