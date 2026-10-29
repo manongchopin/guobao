@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>义乌 · 全国重点文物保护单位</title>
+<meta name="description" content="义乌 7 处全国重点文物保护单位清单，可按纳入批次或镇街一键切换，每处附独立页面。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="zhejiang.html#jinhua">← 浙江 · 金华</a>
+  <p class="kicker">Yiwu · 全国重点文物保护单位</p>
+  <h1>义乌，七处</h1>
+  <p class="lede">
+    第五批 2 处，第八批 5 处，散在 5 个镇街。<br>
+    <span>从南宋石桥到清末祠堂，一城之内七百年。</span>
+  </p>
+  <div class="seal" aria-hidden="true">义</div>
+</header>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="switch" role="group" aria-label="切换排列方式">
+      <button type="button" data-view="batch" aria-pressed="true">按批次</button>
+      <button type="button" data-view="district" aria-pressed="false">按镇街</button>
+    </div>
+    <p class="toolbar-note" id="toolbar-note">2 批 · 7 处</p>
+  </div>
+</div>
+
+<main>
+  <div id="list" aria-live="polite"></div>
+
+  <a class="city-link" href="yiwu-city.html">
+    <span class="cl-main">
+      <span class="cl-kicker">附 · 市级文物保护单位</span>
+      <span class="cl-title">义乌市级文保 <em>276 处 · 329 个点位</em></span>
+    </span>
+    <span class="cl-arrow">按镇街查看 →</span>
+  </a>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>义乌 · 全国重点文物保护单位 · 7 处</span>
+    <span>开放状态以各单位最新公告为准</span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="yiwu-data.js"></script>
+<script>
+window.LIST_CONFIG = {
+  places: window.YIWU_PLACES,
+  districts: window.YIWU_DISTRICTS,
+  detailBase: "place.html?set=yiwu&id=",
+  storageKey: "yiwu-view",
+  noteBatch: "2 批 · 7 处",
+  noteDistrict: "5 个镇街 · 7 处"
+};
+</script>
+<script src="assets/app.js"></script>
+</body>
+</html>
