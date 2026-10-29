@@ -64,7 +64,7 @@ images/1-11/2.jpg
 ```
 web/
 ├── index.html          首页：我走过的世界
-├── heritage.html       中国的世界遗产（占位）
+├── heritage.html       中国的世界遗产（61 项，按年份/省份）
 ├── visited-heritage.html  我去过的世界遗产（全球，0 / 1,273）
 ├── guobao.html         国保入口：34 个省级行政区
 ├── shanghai.html       上海清单页（批次 / 辖区）
@@ -82,6 +82,7 @@ web/
 ├── data.js             上海 40 处数据
 ├── yiwu-data.js        义乌 7 处国保数据
 ├── yiwu-city-data.js   义乌市级文保 276 处 / 329 点位
+├── heritage-data.js    中国世界遗产 61 项
 ├── jinhua-data.js      金华 7 个区县 31 处国保
 ├── files/
 │   └── yiwu-city-2019.pdf   市级名录整理版 PDF（15 页，脚本生成）

@@ -1527,3 +1527,89 @@ main.enter .group {
 @media (max-width: 1000px) {
   .home-main { grid-template-columns: 1fr; }
 }
+
+/* ---------- 世界遗产列表 ---------- */
+
+.wh-note {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 12px 28px 0;
+  font-size: 12px;
+  color: var(--ink-3);
+  letter-spacing: 0.02em;
+}
+
+.wh-card {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-height: 138px;
+  padding: 16px 18px 15px;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.wh-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.wh-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wh-uid {
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.wh-badge {
+  font-size: 10px;
+  line-height: 1.6;
+  padding: 0 4px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  letter-spacing: 0.06em;
+}
+
+.wh-ext {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--ink-3);
+  transition: color 0.18s ease;
+}
+
+.wh-card:hover .wh-ext { color: var(--red); }
+
+.t-culture { color: var(--red); }
+.t-nature { color: var(--green); }
+.t-mixed { color: var(--amber); }
+.t-trans { color: var(--blue); }
+
+.wh-name {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.42;
+  letter-spacing: 0.02em;
+}
+
+.wh-meta {
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ink-3);
+}
+
+@media (max-width: 720px) {
+  .wh-note { padding: 10px 20px 0; }
+  .wh-card { min-height: 0; }
+}

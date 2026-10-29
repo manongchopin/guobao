@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>中国的世界遗产 · 我走过的世界</title>
-<meta name="description" content="中国的世界遗产目录，共 61 项（截至 2026 年 7 月）。">
+<meta name="description" content="中国 61 项世界遗产，可按列入年份或省份切换浏览。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
@@ -16,8 +16,8 @@
   <p class="kicker">World Heritage · 中国</p>
   <h1>中国的世界遗产</h1>
   <p class="lede">
-    61 项（截至 2026 年 7 月），从长城、故宫到良渚、武夷山。<br>
-    <span>这一页还在整理。</span>
+    61 项：42 项文化遗产、15 项自然遗产、4 项复合遗产。<br>
+    <span>1987 年首批 6 处；最近一处是 2026 年的景德镇手工瓷业遗存。</span>
   </p>
   <div class="seal" aria-hidden="true">遗</div>
 </header>
@@ -26,21 +26,23 @@
   <div class="hub-progress-inner">
     <span class="hp-label">中国</span>
     <span class="hp-num">61</span><span class="hp-total">项世界遗产</span>
-    <span class="hp-note">目录整理中</span>
+    <span class="hp-note">42 文化 · 15 自然 · 4 复合</span>
   </div>
 </div>
 
-<main class="placeholder">
-  <div class="ph-box">
-    <p class="ph-title">目录正在整理</p>
-    <p>之后会像国保一样，按批次与地域做成可点的清单：每一处一个页面，放照片、简介和游记。</p>
-    <p>目前先把入口留在这里，等清单做好再补上。</p>
-    <p class="ph-actions">
-      <a href="guobao.html">先去看国保 →</a>
-      <a href="index.html">← 回首页</a>
-    </p>
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="switch" role="group" aria-label="切换排列方式">
+      <button type="button" data-view="year" aria-pressed="true">按年份</button>
+      <button type="button" data-view="province" aria-pressed="false">按省份</button>
+    </div>
+    <p class="toolbar-note" id="toolbar-note">61 项 · 1987—2026</p>
   </div>
-</main>
+</div>
+
+<p class="wh-note" id="wh-note">同年列入的，按世界遗产编号先后排列。</p>
+
+<main id="list"></main>
 
 <footer class="footer">
   <div class="footer-inner">
@@ -49,5 +51,7 @@
   </div>
 </footer>
 
+<script src="heritage-data.js"></script>
+<script src="assets/heritage.js"></script>
 </body>
 </html>
