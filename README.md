@@ -85,6 +85,7 @@ web/
 ├── heritage-place.html 世界遗产单页（?id=437）
 ├── visited-heritage.html  我去过的世界遗产（96 项，大洲/国家表格）
 ├── canal.html          大运河 31 个遗产区（资料页）
+├── jomon-irie-takasago.html 入江·高砂贝冢中文资料（含 PDF）
 ├── jomon.html          日本北部的绳纹史前遗址群 · 资料库
 ├── world-heritage.html  全世界的世界遗产（五大区域总表）
 ├── wh-asia.html 等      五大区域分页（国家索引 + 表格）
