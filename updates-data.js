@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-30",
     type: "档案",
+    title: "1981 年恢复忠王府国保资格",
+    note: "第一批相关档案",
+    href: "first-batch-1981-restoration.html"
+  },
+  {
+    date: "2026-10-30",
+    type: "档案",
     title: "1964 年撤销忠王府国保资格的批复",
     note: "第一批相关档案",
     href: "first-batch-1964-revocation.html"
