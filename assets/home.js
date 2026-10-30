@@ -1,5 +1,12 @@
 (function () {
   "use strict";
+  // 全站约定：文件链接不在当前页直接下载，而是在新标签页打开。
+  document.querySelectorAll('a[download]').forEach(function (link) {
+    link.removeAttribute('download');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener');
+  });
+
   var path = window.location.pathname;
   if (/\/$/.test(path) || /index\.html$/.test(path)) return;
   var back = document.querySelector(".back");
