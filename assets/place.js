@@ -11,6 +11,8 @@
   var HN = window.HAINAN_PLACES || [];
   var NX = window.NINGXIA_PLACES || [];
   var TJ = window.TIANJIN_PLACES || [];
+  var HLJ = window.HEILONGJIANG_PLACES || [];
+  var GZ = window.GUIZHOU_PLACES || [];
 
   var source, backHref, backLabel;
   if (set === "beijing") {
@@ -41,6 +43,14 @@
     source = TJ;
     backHref = "tianjin-guobao.html";
     backLabel = "← 天津清单";
+  } else if (set === "heilongjiang") {
+    source = HLJ;
+    backHref = "heilongjiang-guobao.html";
+    backLabel = "← 黑龙江清单";
+  } else if (set === "guizhou") {
+    source = GZ;
+    backHref = "guizhou-guobao.html";
+    backLabel = "← 贵州清单";
   } else {
     source = window.PLACES || [];
     backHref = "shanghai.html";

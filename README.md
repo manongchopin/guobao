@@ -99,6 +99,12 @@ web/
 ├── hk-grade-data.js    三档历史建筑 777 项
 ├── shanghai.html       上海（批次卡片 / 辖区表格）
 ├── beijing.html        北京（135 处，批次卡片 / 辖区表格）       上海清单页（批次 / 辖区）
+├── heilongjiang.html   黑龙江（13 地级 / 57 处，市级）
+├── heilongjiang-guobao.html 黑龙江国保
+├── heilongjiang-data.js 黑龙江 57 处
+├── guizhou.html        贵州（9 市州 / 81 处，市级）
+├── guizhou-guobao.html 贵州国保
+├── guizhou-data.js     贵州 81 处
 ├── tianjin.html        天津（16 区 / 34 处）
 ├── tianjin-guobao.html 天津国保（按批次 / 按辖区）
 ├── tianjin-data.js     天津 34 处国保
