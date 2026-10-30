@@ -6,7 +6,7 @@
 
   var items = window.SITE_UPDATES.slice().sort(function (a, b) {
     return String(b.date).localeCompare(String(a.date));
-  }).slice(0, 10);
+  }).slice(0, 6);
 
   var frag = document.createDocumentFragment();
 

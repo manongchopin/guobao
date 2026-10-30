@@ -3418,7 +3418,7 @@ a.wr-row:hover .wr-n { color: var(--red); }
 .updates-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(3, auto);
   grid-auto-flow: column;
   column-gap: 16px;
   margin: 0;
@@ -3427,15 +3427,15 @@ a.wr-row:hover .wr-n { color: var(--red); }
 }
 .update-item {
   display: block;
-  padding: 7px 0 6px;
+  padding: 9px 0 8px;
   border-bottom: 1px solid var(--line-soft);
   text-decoration: none;
   color: inherit;
 }
-.update-date { display: block; font-size: 8px; color: var(--ink-3); letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
+.update-date { display: block; font-size: 9.5px; color: var(--ink-3); letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
 .update-body { display: block; }
 .update-meta { display: none; }
-.update-title { display: block; margin-top: 2px; font-size: 10px; line-height: 1.45; color: var(--ink-2); transition: color 0.16s ease; }
+.update-title { display: block; margin-top: 3px; font-size: 12.5px; line-height: 1.55; color: var(--ink-2); transition: color 0.16s ease; }
 .update-arrow { display: none; }
 .update-item:hover .update-title { color: var(--red); }
 
