@@ -3405,8 +3405,8 @@ a.wr-row:hover .wr-n { color: var(--red); }
   align-items: start;
 }
 .hero-copy { grid-column: 1; grid-row: 1; min-width: 0; }
-.hero-map { grid-column: 2; grid-row: 1; margin: 30px 0 0; min-width: 0; }
-.hero-map img { display: block; width: 100%; height: 260px; object-fit: cover; object-position: center; border: 1px solid var(--line); }
+.hero-map { grid-column: 2; grid-row: 1; width: 320px; margin: 30px 0 0 -24px; min-width: 0; }
+.hero-map img { display: block; width: 100%; height: 250px; object-fit: cover; object-position: center; border: 1px solid var(--line); }
 .hero-map figcaption { margin-top: 7px; font-size: 9px; line-height: 1.6; letter-spacing: 0.08em; color: var(--ink-3); }
 .home-updates { grid-column: 3; grid-row: 1; margin-top: 38px; min-width: 0; }
 .updates-head {
