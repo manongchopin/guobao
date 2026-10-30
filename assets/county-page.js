@@ -20,7 +20,9 @@
     neimenggu: { places: window.NMG_PLACES || [], page: "neimenggu.html", name: "内蒙古", seal: "蒙" },
     liaoning: { places: window.LN_PLACES || [], page: "liaoning.html", name: "辽宁", seal: "辽" },
     jilin: { places: window.JL_PLACES || [], page: "jilin.html", name: "吉林", seal: "吉" },
-    anhui: { places: window.AH_PLACES || [], page: "anhui.html", name: "安徽", seal: "皖" }
+    anhui: { places: window.AH_PLACES || [], page: "anhui.html", name: "安徽", seal: "皖" },
+    jiangxi: { places: window.JX_PLACES || [], page: "jiangxi.html", name: "江西", seal: "赣" },
+    fujian: { places: window.FJ_PLACES || [], page: "fujian.html", name: "福建", seal: "闽" }
   };
   var conf = CONF[set];
   if (!conf || !county) { document.getElementById("list").innerHTML = '<p class="wh-note">没有找到这个县区。</p>'; return; }
