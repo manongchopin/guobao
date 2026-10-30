@@ -116,6 +116,10 @@ web/
 ├── jilin.html          吉林（9 市州 / 93 处）
 ├── jiangxi.html        江西（11 市 / 160 处）
 ├── shandong.html       山东（16 市 / 226 处）
+├── yunnan.html         云南（16 市州 / 170 处）
+├── xizang.html         西藏（7 市地 / 70 处）
+├── yunnan-guobao.html  云南国保总表
+├── xizang-guobao.html  西藏国保总表
 ├── chongqing.html      重庆（38 区县 / 64 处）
 ├── sichuan.html        四川（21 市州 / 261 处）
 ├── chongqing-guobao.html 重庆国保总表

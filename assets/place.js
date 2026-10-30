@@ -35,6 +35,8 @@
   var HN2 = window.HN2_PLACES || [];
   var CQ = window.CQ_PLACES || [];
   var SC = window.SC_PLACES || [];
+  var YN = window.YN_PLACES || [];
+  var XZ = window.XZ_PLACES || [];
 
   var source, backHref, backLabel;
   if (set === "beijing") {
@@ -101,6 +103,8 @@
   else if (set === "hunan") { source = HN2; backHref = "hunan-guobao.html"; backLabel = "← 湖南清单"; }
   else if (set === "chongqing") { source = CQ; backHref = "chongqing-guobao.html"; backLabel = "← 重庆清单"; }
   else if (set === "sichuan") { source = SC; backHref = "sichuan-guobao.html"; backLabel = "← 四川清单"; }
+  else if (set === "yunnan") { source = YN; backHref = "yunnan-guobao.html"; backLabel = "← 云南清单"; }
+  else if (set === "xizang") { source = XZ; backHref = "xizang-guobao.html"; backLabel = "← 西藏清单"; }
   else {
     source = window.PLACES || [];
     backHref = "shanghai.html";
