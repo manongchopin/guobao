@@ -32,9 +32,19 @@
   var districtTable = cfg.districtTable === true;
   var batchTable = cfg.batchTable === true;
   var districtFilter = "all";
+  var countyFilter = null;
+  var cityGroups = cfg.cityGroups || null;
   var urlCounty = null;
   try { urlCounty = new URLSearchParams(window.location.search).get("county"); } catch (e) {}
-  if (urlCounty && districts.indexOf(urlCounty) !== -1) districtFilter = urlCounty;
+  if (urlCounty) {
+    if (cityGroups) {
+      cityGroups.forEach(function (g) {
+        if (g.counties.indexOf(urlCounty) !== -1) { districtFilter = g.name; countyFilter = urlCounty; }
+      });
+    } else if (districts.indexOf(urlCounty) !== -1) {
+      districtFilter = urlCounty;
+    }
+  }
   var indexTitle = cfg.indexTitle || "辖区索引";
   var col4Label = cfg.col4Label || "地址";
   var hideStatus = cfg.hideStatus === true;
@@ -148,6 +158,35 @@
   }
 
   function districtTableHTML() {
+    if (cityGroups) {
+      var cidx = '<p class="ci-title">' + indexTitle + '</p>' +
+        '<button type="button" class="ci-item' + (districtFilter === "all" ? " is-active" : "") +
+        '" data-d="all" aria-pressed="' + (districtFilter === "all") + '"><span>全部</span><b>' + places.length + '</b></button>';
+      cityGroups.forEach(function (g) {
+        var n = places.filter(function (p) { return g.counties.indexOf(p.district) !== -1; }).length;
+        if (!n) return;
+        cidx += '<button type="button" class="ci-item' + (districtFilter === g.name ? " is-active" : "") +
+          '" data-d="' + g.name + '" aria-pressed="' + (districtFilter === g.name) + '"><span>' + g.name + '</span><b>' + n + '</b></button>';
+      });
+
+      var showGroups = districtFilter === "all" ? cityGroups : cityGroups.filter(function (g) { return g.name === districtFilter; });
+      var chtml = '<div class="city-layout sh-layout"><aside class="city-index" aria-label="地级市索引">' + cidx + '</aside><div class="city-content">';
+      showGroups.forEach(function (g) {
+        var cityItems = places.filter(function (p) { return g.counties.indexOf(p.district) !== -1; });
+        if (!cityItems.length) return;
+        chtml += '<section class="group"><div class="group-head"><h2>' + g.name + '</h2><span class="count">' + cityItems.length + ' ' + countUnit + '</span></div>';
+        g.counties.forEach(function (c) {
+          if (countyFilter && c !== countyFilter) return;
+          var list = places.filter(function (p) { return p.district === c; });
+          if (!list.length) return;
+          chtml += '<div class="hk-district"><div class="hk-district-head"><h3>' + c + '</h3><span class="count">' + list.length + ' ' + countUnit + '</span></div>' +
+            shTable(list, "district") + '</div>';
+        });
+        chtml += '</section>';
+      });
+      return chtml + '</div></div>';
+    }
+
     var idx = '<p class="ci-title">' + indexTitle + '</p>' +
       '<button type="button" class="ci-item' + (districtFilter === "all" ? " is-active" : "") +
       '" data-d="all" aria-pressed="' + (districtFilter === "all") + '"><span>全部</span><b>' + places.length + '</b></button>';
@@ -265,6 +304,7 @@
       var item = e.target.closest(".ci-item");
       if (item && districtTable) {
         districtFilter = item.getAttribute("data-d");
+        countyFilter = null;
         render("district");
         var y = listEl.getBoundingClientRect().top + window.scrollY - 70;
         window.scrollTo({ top: y, behavior: "smooth" });

@@ -16,8 +16,8 @@
   <p class="kicker">Ningxia · 全国重点文物保护单位</p>
   <h1>宁夏，三十七处</h1>
   <p class="lede">
-    7 个批次，22 个县区，37 处国保。<br>
-    <span>按批次读时间，按县区排路线。</span>
+    7 个批次，5 个地级市、22 个县区，37 处国保。<br>
+    <span>按批次读时间，按地级市排路线。</span>
   </p>
   <div class="seal" aria-hidden="true">宁</div>
 </header>
@@ -26,7 +26,7 @@
   <div class="toolbar-inner">
     <div class="switch" role="group" aria-label="切换排列方式">
       <button type="button" data-view="batch" aria-pressed="true">按批次</button>
-      <button type="button" data-view="district" aria-pressed="false">按县区</button>
+      <button type="button" data-view="district" aria-pressed="false">按地级市</button>
     </div>
     <p class="toolbar-note" id="toolbar-note">7 批 · 37 处</p>
   </div>
@@ -52,10 +52,17 @@ window.LIST_CONFIG = {
   detailBase: "place.html?set=ningxia&id=",
   storageKey: "ningxia-view",
   noteBatch: "7 批 · 37 处",
-  noteDistrict: "22 个县区 · 37 处",
+  noteDistrict: "5 个地级市 · 22 个县区 · 37 处",
   districtTable: true,
   batchTable: true,
-  indexTitle: "县区索引",
+  indexTitle: "地级市索引",
+  cityGroups: [
+    { name: "银川市", counties: ["兴庆区","西夏区","金凤区","永宁县","贺兰县","灵武市"] },
+    { name: "石嘴山市", counties: ["大武口区","惠农区","平罗县"] },
+    { name: "吴忠市", counties: ["利通区","红寺堡区","盐池县","同心县","青铜峡市"] },
+    { name: "固原市", counties: ["原州区","西吉县","隆德县","泾源县","彭阳县"] },
+    { name: "中卫市", counties: ["沙坡头区","中宁县","海原县"] }
+  ],
   col4Label: "时代",
   hideStatus: true,
   countUnit: "处"
