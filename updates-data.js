@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-31",
     type: "文件",
+    title: "晋城第二批市级重点文保名单（40 处）",
+    note: "原档 + 整理本",
+    href: "shanxi.html#jincheng"
+  },
+  {
+    date: "2026-10-31",
+    type: "文件",
     title: "苏州各级文保名录完整版（887 处 / 34 页）",
     note: "国保 / 省保 / 市保",
     href: "jiangsu.html#suzhou"
