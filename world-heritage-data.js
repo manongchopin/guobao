@@ -8957,3 +8957,15 @@ window.WH_REGIONS = [
   "countryCount": 38
  }
 ];
+
+/* UNESCO 2026 年 7 月公布口径（总表以此为准） */
+window.WH_OFFICIAL = {
+  total: 1273, cultural: 991, natural: 240, mixed: 42, countries: 173,
+  regions: {
+    asia:   { total: 314, cultural: 228, natural: 73, mixed: 13, countries: 36, pct: "24.67%" },
+    europe: { total: 588, cultural: 501, natural: 74, mixed: 13, countries: 50, pct: "46.19%" },
+    lac:    { total: 154, cultural: 106, natural: 40, mixed: 8,  countries: 28, pct: "12.10%" },
+    arab:   { total: 102, cultural: 91,  natural: 8,  mixed: 3,  countries: 18, pct: "8.01%" },
+    africa: { total: 115, cultural: 65,  natural: 45, mixed: 5,  countries: 41, pct: "9.03%" }
+  }
+};

@@ -52,7 +52,9 @@
     });
     listEl.innerHTML = html;
     if (toolbarNote) toolbarNote.textContent = (filter === "all" ? region.countryCount + " 国" : filter) + " · " + listed + " 条";
-    noteEl.textContent = "各国内按入选年份排列；跨境项目在各国下重复出现，共 " + listed + " 条，去重后 " + region.unique + " 项。";
+    var off = ((window.WH_OFFICIAL || {}).regions || {})[region.id];
+    var offTotal = off ? off.total : region.unique;
+    noteEl.textContent = "UNESCO 名录 " + offTotal + " 项；站内已列 " + region.unique + " 项（" + listed + " 条，含跨境重复），各国内按入选年份排列。";
   }
 
   indexEl.addEventListener("click", function (e) {

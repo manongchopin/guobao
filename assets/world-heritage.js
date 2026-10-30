@@ -3,11 +3,9 @@
 
   var regions = window.WH_REGIONS || [];
   var listEl = document.getElementById("list");
-  var total = 0, countries = 0, cult = 0, nat = 0, mix = 0;
-  regions.forEach(function (r) {
-    total += r.unique; countries += r.countryCount;
-    cult += r.cultural; nat += r.natural; mix += r.mixed;
-  });
+  var off = window.WH_OFFICIAL || {};
+  var total = off.total || 0, countries = off.countries || 0;
+  var cult = off.cultural || 0, nat = off.natural || 0, mix = off.mixed || 0;
 
   var t = document.getElementById("wh-total");
   if (t) t.textContent = total.toLocaleString("en-US");
@@ -28,15 +26,15 @@
     '</div>';
 
   regions.forEach(function (r) {
-    var pct = (r.unique / total * 100).toFixed(2) + "%";
+    var o = (off.regions || {})[r.id] || { total: r.unique, cultural: r.cultural, natural: r.natural, mixed: r.mixed, countries: r.countryCount, pct: "—" };
     html += '<a class="wr-row" href="wh-' + r.id + '.html">' +
       '<span class="wr-n">' + r.name + '<em>' + r.en + '</em></span>' +
-      '<span class="wr-c">' + r.cultural + '</span>' +
-      '<span class="wr-a">' + r.natural + '</span>' +
-      '<span class="wr-m">' + r.mixed + '</span>' +
-      '<span class="wr-t">' + r.unique + '</span>' +
-      '<span class="wr-p">' + pct + '</span>' +
-      '<span class="wr-k">' + r.countryCount + '</span>' +
+      '<span class="wr-c">' + o.cultural + '</span>' +
+      '<span class="wr-a">' + o.natural + '</span>' +
+      '<span class="wr-m">' + o.mixed + '</span>' +
+      '<span class="wr-t">' + o.total + '</span>' +
+      '<span class="wr-p">' + o.pct + '</span>' +
+      '<span class="wr-k">' + o.countries + '</span>' +
       '<span class="wr-arrow" aria-hidden="true">→</span>' +
     '</a>';
   });
@@ -48,7 +46,7 @@
     '<span class="wr-m">' + mix + '</span>' +
     '<span class="wr-t">' + total.toLocaleString("en-US") + '</span>' +
     '<span class="wr-p">100%</span>' +
-    '<span class="wr-k">170</span>' +
+    '<span class="wr-k">' + countries + '</span>' +
     '<span class="wr-arrow"></span>' +
   '</div></div>';
 
