@@ -113,6 +113,10 @@ web/
 ├── ningxia-guobao.html 宁夏国保（按批次 / 按县区）
 ├── ningxia-data.js     宁夏 37 处国保
 ├── neimenggu.html    内蒙古（12 盟市 / 149 处）
+├── jilin.html          吉林（9 市州 / 93 处）
+├── anhui.html          安徽（16 市 / 174 处）
+├── jilin-guobao.html   吉林国保总表
+├── anhui-guobao.html   安徽国保总表
 ├── liaoning.html      辽宁（16 市 / 144 处）
 ├── neimenggu-guobao.html 内蒙古国保总表
 ├── liaoning-guobao.html 辽宁国保总表

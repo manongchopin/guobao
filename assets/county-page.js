@@ -18,7 +18,9 @@
     hebei: { places: window.HEB_PLACES || [], page: "hebei.html", name: "河北", seal: "冀" },
     jiangsu: { places: window.JS_PLACES || [], page: "jiangsu.html", name: "江苏", seal: "苏" },
     neimenggu: { places: window.NMG_PLACES || [], page: "neimenggu.html", name: "内蒙古", seal: "蒙" },
-    liaoning: { places: window.LN_PLACES || [], page: "liaoning.html", name: "辽宁", seal: "辽" }
+    liaoning: { places: window.LN_PLACES || [], page: "liaoning.html", name: "辽宁", seal: "辽" },
+    jilin: { places: window.JL_PLACES || [], page: "jilin.html", name: "吉林", seal: "吉" },
+    anhui: { places: window.AH_PLACES || [], page: "anhui.html", name: "安徽", seal: "皖" }
   };
   var conf = CONF[set];
   if (!conf || !county) { document.getElementById("list").innerHTML = '<p class="wh-note">没有找到这个县区。</p>'; return; }
