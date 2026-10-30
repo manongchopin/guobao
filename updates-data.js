@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-31",
     type: "数据",
+    title: "苏州 61 处国保落到区县 + 名录 PDF",
+    note: "据苏州市文广旅局 2019 年表",
+    href: "jiangsu.html#suzhou"
+  },
+  {
+    date: "2026-10-31",
+    type: "数据",
     title: "河北 291 处国保全部落到县区",
     note: "据河北省文物局名录校订",
     href: "hebei.html"
