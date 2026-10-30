@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-30",
     type: "整理本",
+    title: "第二批国保名单整理本（6 页 / 62 条）",
+    note: "据维基文库转录",
+    href: "guobao-archives.html#batch-2"
+  },
+  {
+    date: "2026-10-30",
+    type: "整理本",
     title: "第五批国保名单整理本（16 页 / 518 条）",
     note: "原档长图 + OCR 排版",
     href: "guobao-archives.html#batch-5"

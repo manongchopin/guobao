@@ -198,6 +198,7 @@ web/
 │   ├── seventh-batch-2013.pdf 第七批名单整理本（50 页，OCR 校订）
 │   ├── seventh-batch-2013-scan.pdf 第七批名单原档（126 页扫描）
 │   ├── seventh-batch-2014-babaoshan-scan.pdf 2014 年增补八宝山革命公墓原档（1 页）
+│   ├── second-batch-1982.pdf 第二批名单整理本（6 页，据维基文库）
 │   ├── fifth-batch-2001.pdf 第五批名单整理本（16 页，OCR 校订）
 │   ├── fifth-batch-2001-list.jpg 第五批公报名单长图（516 × 12758）
 │   ├── fifth-batch-2002-liye.pdf 2002 年增补里耶古城遗址整理版（2 页）
