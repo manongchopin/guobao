@@ -41,7 +41,7 @@
     show.forEach(function (c) {
       html += '<section class="district-block"><div class="group-head"><h2>' + c.name + '</h2><span class="count">' + c.items.length + ' 项</span></div>';
       html += '<div class="whr-table">';
-      c.items.forEach(function (it) {
+      c.items.slice().sort(function (a, b) { return a.year - b.year || a.name.localeCompare(b.name, "zh"); }).forEach(function (it) {
         html += '<div class="whr-row">' +
           '<span class="whr-n">' + it.name + '</span>' +
           '<span class="whr-t ' + typeClass(it.type) + '">' + it.type + '</span>' +
@@ -52,7 +52,7 @@
     });
     listEl.innerHTML = html;
     if (toolbarNote) toolbarNote.textContent = (filter === "all" ? region.countryCount + " 国" : filter) + " · " + listed + " 条";
-    noteEl.textContent = "跨境项目在各国下重复出现；共 " + listed + " 条，去重后 " + region.unique + " 项。";
+    noteEl.textContent = "各国内按入选年份排列；跨境项目在各国下重复出现，共 " + listed + " 条，去重后 " + region.unique + " 项。";
   }
 
   indexEl.addEventListener("click", function (e) {

@@ -64,7 +64,6 @@
       '<span class="vh-n">名称</span>' +
       '<span class="vh-e">英文名</span>' +
       '<span class="vh-y">年份</span>' +
-      '<span class="vh-p">地点</span>' +
     '</div>';
   }
 
@@ -72,8 +71,7 @@
     return '<div class="vh-row">' +
       '<span class="vh-n">' + (isChina ? '<a href="heritage-place.html?id=' + item.uid + '">' + item.name + '</a>' : item.zh) + '</span>' +
       '<span class="vh-e">' + (isChina ? (CN_EN[item.uid] || "—") : item.en) + '</span>' +
-      '<span class="vh-y">' + (isChina ? item.year : "—") + '</span>' +
-      '<span class="vh-p">' + (isChina ? item.provinces.join("、") : item.country) + '</span>' +
+      '<span class="vh-y">' + (item.year || "—") + '</span>' +
     '</div>';
   }
 

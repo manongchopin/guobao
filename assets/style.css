@@ -3090,3 +3090,16 @@ a.wr-row:hover .wr-n { color: var(--red); }
   .wr-k::before { content: "国家 "; color: var(--ink-3); }
   .wr-p::before { content: "占比 "; color: var(--ink-3); }
 }
+
+/* 去过页去掉地点列后：三列 */
+.vh-head, .vh-row {
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.4fr) 64px;
+}
+
+@media (max-width: 760px) {
+  .vh-row {
+    grid-template-areas:
+      "n y"
+      "e e";
+  }
+}
