@@ -112,6 +112,9 @@ web/
 ├── ningxia.html        宁夏（5 市 / 22 县区 / 37 处）
 ├── ningxia-guobao.html 宁夏国保（按批次 / 按县区）
 ├── ningxia-data.js     宁夏 37 处国保
+├── guangdong.html      广东（21 市 / 124 县区 / 133 处）
+├── guangxi.html        广西（14 市 / 111 县区 / 81 处）
+├── guangdong-guobao.html 广东国保总表
 ├── hainan.html         海南（4 市 / 15 县区 / 35 处）
 ├── hainan-guobao.html  海南国保（按批次 / 按市县）
 ├── hainan-data.js      海南 35 处国保
