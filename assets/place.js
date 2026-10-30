@@ -10,6 +10,7 @@
   var JCM = window.JINCHENG_META || {};
   var HN = window.HAINAN_PLACES || [];
   var NX = window.NINGXIA_PLACES || [];
+  var TJ = window.TIANJIN_PLACES || [];
 
   var source, backHref, backLabel;
   if (set === "beijing") {
@@ -36,6 +37,10 @@
     source = NX;
     backHref = "ningxia-guobao.html";
     backLabel = "← 宁夏清单";
+  } else if (set === "tianjin") {
+    source = TJ;
+    backHref = "tianjin-guobao.html";
+    backLabel = "← 天津清单";
   } else {
     source = window.PLACES || [];
     backHref = "shanghai.html";
