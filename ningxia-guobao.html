@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>宁夏 · 全国重点文物保护单位</title>
+<meta name="description" content="宁夏 37 处全国重点文物保护单位，可按批次或县区切换浏览。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="ningxia.html">← 宁夏 · 五市二十二县</a>
+  <p class="kicker">Ningxia · 全国重点文物保护单位</p>
+  <h1>宁夏，三十七处</h1>
+  <p class="lede">
+    7 个批次，22 个县区，37 处国保。<br>
+    <span>按批次读时间，按县区排路线。</span>
+  </p>
+  <div class="seal" aria-hidden="true">宁</div>
+</header>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="switch" role="group" aria-label="切换排列方式">
+      <button type="button" data-view="batch" aria-pressed="true">按批次</button>
+      <button type="button" data-view="district" aria-pressed="false">按县区</button>
+    </div>
+    <p class="toolbar-note" id="toolbar-note">7 批 · 37 处</p>
+  </div>
+</div>
+
+<main id="list" aria-live="polite"></main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>宁夏 · 全国重点文物保护单位 · 37 处</span>
+    <span>名录来源：宁夏全国重点文物保护单位列表</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="ningxia-data.js"></script>
+<script src="visited.js"></script>
+<script>
+window.LIST_CONFIG = {
+  places: window.NINGXIA_PLACES,
+  districts: window.NINGXIA_UNITS,
+  detailBase: "place.html?set=ningxia&id=",
+  storageKey: "ningxia-view",
+  noteBatch: "7 批 · 37 处",
+  noteDistrict: "22 个县区 · 37 处",
+  districtTable: true,
+  batchTable: true,
+  indexTitle: "县区索引",
+  col4Label: "时代",
+  hideStatus: true,
+  countUnit: "处"
+};
+</script>
+<script src="assets/app.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>
