@@ -14,7 +14,9 @@
     qinghai: { places: window.QH_PLACES || [], page: "qinghai.html", name: "青海", seal: "青" },
     xinjiang: { places: window.XJ_PLACES || [], page: "xinjiang.html", name: "新疆", seal: "新" },
     guangdong: { places: window.GD_PLACES || [], page: "guangdong.html", name: "广东", seal: "粤" },
-    guangxi: { places: window.GX_PLACES || [], page: "guangxi.html", name: "广西", seal: "桂" }
+    guangxi: { places: window.GX_PLACES || [], page: "guangxi.html", name: "广西", seal: "桂" },
+    hebei: { places: window.HEB_PLACES || [], page: "hebei.html", name: "河北", seal: "冀" },
+    jiangsu: { places: window.JS_PLACES || [], page: "jiangsu.html", name: "江苏", seal: "苏" }
   };
   var conf = CONF[set];
   if (!conf || !county) { document.getElementById("list").innerHTML = '<p class="wh-note">没有找到这个县区。</p>'; return; }
