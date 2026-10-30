@@ -3391,3 +3391,8 @@ a.wr-row:hover .wr-n { color: var(--red); }
   .file-grid, .archive-rule { grid-template-columns: 1fr; }
   .file-card { min-height: 0; }
 }
+
+/* 档案原文 */
+.doc-quote { margin: 0; padding: 18px 22px; border-left: 2px solid var(--red); background: #faf7ef; }
+.doc-quote p { font-family: var(--serif); font-size: 15px; line-height: 2; color: var(--ink); margin: 0 0 10px; }
+.doc-quote cite { display: block; font-style: normal; font-size: 11px; color: var(--ink-3); line-height: 1.8; }
