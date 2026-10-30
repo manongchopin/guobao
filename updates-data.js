@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-30",
     type: "档案",
+    title: "2014 年增补八宝山革命公墓",
+    note: "第七批相关档案",
+    href: "seventh-batch-2014-babaoshan.html"
+  },
+  {
+    date: "2026-10-30",
+    type: "档案",
     title: "1981 年恢复忠王府国保资格",
     note: "第一批相关档案",
     href: "first-batch-1981-restoration.html"
