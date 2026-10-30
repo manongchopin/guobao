@@ -3103,3 +3103,21 @@ a.wr-row:hover .wr-n { color: var(--red); }
       "e e";
   }
 }
+
+/* 回到首页 */
+.home-link {
+  display: inline-block;
+  margin-right: 18px;
+  padding-bottom: 2px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--ink-3);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.home-link:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
