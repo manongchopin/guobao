@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-10-31",
+    type: "法规",
+    title: "《文物保护法》2024 修订版",
+    note: "国保档案 · 法规与制度",
+    href: "wenwu-baohufa.html"
+  },
+  {
+    date: "2026-10-31",
     type: "数据",
     title: "苏州 61 处国保落到区县 + 名录 PDF",
     note: "据苏州市文广旅局 2019 年表",

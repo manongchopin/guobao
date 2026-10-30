@@ -3482,3 +3482,19 @@ a.wr-row:hover .wr-n { color: var(--red); }
 }
 
 .batch-status.is-partial { color: #8a6d3b; border-color: #b99a62; }
+
+/* 国保档案 · 法规与制度 */
+.law-band { margin: 30px 0 14px; padding: 16px 0 22px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); }
+.law-band-head { display: flex; justify-content: space-between; font-size: 9px; letter-spacing: 0.16em; color: var(--ink-3); }
+.law-card { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 22px; margin-top: 14px; text-decoration: none; color: inherit; align-items: start; }
+.law-year { font-family: var(--serif); font-size: 30px; line-height: 1; color: var(--red); border-right: 1px solid var(--line); padding-right: 16px; }
+.law-body { display: flex; flex-direction: column; gap: 5px; }
+.law-body b { font-family: var(--serif); font-size: 24px; font-weight: 500; line-height: 1.45; }
+.law-body span { font-size: 12px; line-height: 1.8; color: var(--ink-2); }
+.law-body em { font-style: normal; font-size: 11px; color: var(--ink-3); margin-top: 3px; transition: color 0.16s ease; }
+.law-card:hover .law-body em { color: var(--red); }
+@media (max-width: 640px) {
+  .law-card { grid-template-columns: 1fr; gap: 10px; }
+  .law-year { border-right: 0; padding-right: 0; font-size: 24px; }
+  .law-body b { font-size: 20px; }
+}
