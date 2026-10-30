@@ -23,6 +23,8 @@
   var GX = window.GX_PLACES || [];
   var HEB = window.HEB_PLACES || [];
   var JS = window.JS_PLACES || [];
+  var NMG = window.NMG_PLACES || [];
+  var LN = window.LN_PLACES || [];
 
   var source, backHref, backLabel;
   if (set === "beijing") {
@@ -77,6 +79,8 @@
   else if (set === "guangxi") { source = GX; backHref = "guangxi-guobao.html"; backLabel = "← 广西清单"; }
   else if (set === "hebei") { source = HEB; backHref = "hebei-guobao.html"; backLabel = "← 河北清单"; }
   else if (set === "jiangsu") { source = JS; backHref = "jiangsu-guobao.html"; backLabel = "← 江苏清单"; }
+  else if (set === "neimenggu") { source = NMG; backHref = "neimenggu-guobao.html"; backLabel = "← 内蒙古清单"; }
+  else if (set === "liaoning") { source = LN; backHref = "liaoning-guobao.html"; backLabel = "← 辽宁清单"; }
   else {
     source = window.PLACES || [];
     backHref = "shanghai.html";
