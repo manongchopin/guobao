@@ -2453,7 +2453,7 @@ window.HB_PLACES = [
   "id": "hb-145",
   "code": "HB-145",
   "order": 145,
-  "name": "中共豫鄂边区委员会旧址",
+  "name": "中共鄂豫边区委员会旧址",
   "batch": 7,
   "district": "荆门市",
   "county": "京山市",
