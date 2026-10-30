@@ -1362,7 +1362,7 @@ main.enter .group {
 .home-hero h1 {
   margin: 20px 0 0;
   font-family: var(--serif);
-  font-size: 74px;
+  font-size: 60px;
   line-height: 1.16;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -3400,13 +3400,13 @@ a.wr-row:hover .wr-n { color: var(--red); }
 /* 首页右上角最近更新 */
 .home-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px 310px;
-  column-gap: 24px;
+  grid-template-columns: 320px 400px minmax(0, 1fr);
+  column-gap: 18px;
   align-items: start;
 }
 .hero-copy { grid-column: 1; grid-row: 1; min-width: 0; }
-.hero-map { grid-column: 2; grid-row: 1; width: 320px; margin: 30px 0 0 -32px; min-width: 0; }
-.hero-map img { display: block; width: 100%; height: 270px; object-fit: cover; object-position: center; border: 1px solid var(--line); }
+.hero-map { grid-column: 2; grid-row: 1; width: 400px; margin: 30px 0 0; min-width: 0; }
+.hero-map img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
 .home-updates { grid-column: 3; grid-row: 1; margin-top: 38px; min-width: 0; }
 .updates-head {
   display: flex;
