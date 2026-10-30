@@ -116,6 +116,10 @@ web/
 ├── jilin.html          吉林（9 市州 / 93 处）
 ├── jiangxi.html        江西（11 市 / 160 处）
 ├── shandong.html       山东（16 市 / 226 处）
+├── chongqing.html      重庆（38 区县 / 64 处）
+├── sichuan.html        四川（21 市州 / 261 处）
+├── chongqing-guobao.html 重庆国保总表
+├── sichuan-guobao.html 四川国保总表
 ├── hubei.html          湖北（14 市州 / 168 处）
 ├── hunan.html          湖南（14 市州 / 228 处）
 ├── hubei-guobao.html   湖北国保总表

@@ -26,7 +26,9 @@
     shandong: { places: window.SD_PLACES || [], page: "shandong.html", name: "山东", seal: "鲁" },
     henan: { places: window.HN_PLACES || [], page: "henan.html", name: "河南", seal: "豫" },
     hubei: { places: window.HB_PLACES || [], page: "hubei.html", name: "湖北", seal: "鄂" },
-    hunan: { places: window.HN2_PLACES || [], page: "hunan.html", name: "湖南", seal: "湘" }
+    hunan: { places: window.HN2_PLACES || [], page: "hunan.html", name: "湖南", seal: "湘" },
+    chongqing: { places: window.CQ_PLACES || [], page: "chongqing.html", name: "重庆", seal: "渝" },
+    sichuan: { places: window.SC_PLACES || [], page: "sichuan.html", name: "四川", seal: "川" }
   };
   var conf = CONF[set];
   if (!conf || !county) { document.getElementById("list").innerHTML = '<p class="wh-note">没有找到这个县区。</p>'; return; }
