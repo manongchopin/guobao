@@ -1,4 +1,4 @@
-window.HEILONGJIANG_UNITS = ["哈尔滨市", "齐齐哈尔市", "鸡西市", "鹤岗市", "双鸭山市", "大庆市", "伊春市", "佳木斯市", "七台河市", "牡丹江市", "黑河市", "绥化市", "大兴安岭地区", "其他"];
+window.HEILONGJIANG_UNITS = ["哈尔滨市", "齐齐哈尔市", "鸡西市", "鹤岗市", "双鸭山市", "大庆市", "伊春市", "佳木斯市", "七台河市", "牡丹江市", "黑河市", "绥化市", "大兴安岭地区"];
 
 window.HEILONGJIANG_PLACES = [
  {
@@ -28,7 +28,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古遗址",
   "era": "金",
   "address": "阿城市",
-  "county": "阿城市",
+  "county": "阿城区",
   "status": "na",
   "statusText": "1982 年公布",
   "intro": "位于黑龙江省其他（阿城市），金，古遗址。1982 年列入第二批全国重点文物保护单位。"
@@ -44,7 +44,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "石刻及其他",
   "era": "金",
   "address": "阿城市",
-  "county": "阿城市",
+  "county": "阿城区",
   "status": "na",
   "statusText": "1988 年公布",
   "intro": "位于黑龙江省其他（阿城市），金，石窟寺石刻。1988 年列入第三批全国重点文物保护单位。"
@@ -60,7 +60,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古遗址",
   "era": "新石器时代",
   "address": "齐齐哈尔市",
-  "county": "齐齐哈尔市",
+  "county": "市本级",
   "status": "na",
   "statusText": "1988 年公布",
   "intro": "位于黑龙江省齐齐哈尔市（齐齐哈尔市），新石器时代，古遗址。1988 年列入第三批全国重点文物保护单位。"
@@ -76,7 +76,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古遗址",
   "era": "金",
   "address": "齐齐哈尔市克东县",
-  "county": "齐齐哈尔市克东县",
+  "county": "克东县",
   "status": "na",
   "statusText": "1988 年公布",
   "intro": "位于黑龙江省齐齐哈尔市（齐齐哈尔市克东县），金，古遗址。1988 年列入第三批全国重点文物保护单位。"
@@ -108,7 +108,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1922年",
   "address": "哈尔滨市",
-  "county": "哈尔滨市",
+  "county": "市本级",
   "status": "na",
   "statusText": "1996 年公布",
   "intro": "位于黑龙江省哈尔滨市（哈尔滨市），1922年，近现代。1996 年列入第四批全国重点文物保护单位。"
@@ -124,7 +124,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1923—1932年",
   "address": "哈尔滨市",
-  "county": "哈尔滨市",
+  "county": "市本级",
   "status": "na",
   "statusText": "1996 年公布",
   "intro": "位于黑龙江省哈尔滨市（哈尔滨市），1923—1932年，近现代。1996 年列入第四批全国重点文物保护单位。"
@@ -140,7 +140,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1926—1929年",
   "address": "哈尔滨市",
-  "county": "哈尔滨市",
+  "county": "市本级",
   "status": "na",
   "statusText": "1996 年公布",
   "intro": "位于黑龙江省哈尔滨市（哈尔滨市），1926—1929年，近现代。1996 年列入第四批全国重点文物保护单位。"
@@ -156,7 +156,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古遗址",
   "era": "金",
   "address": "甘南县龙江县齐齐哈尔市[a]",
-  "county": "甘南县龙江县齐齐哈尔市[a]",
+  "county": "龙江县",
   "status": "na",
   "statusText": "2001 年公布",
   "intro": "位于黑龙江省齐齐哈尔市（甘南县龙江县齐齐哈尔市[a]），金，古遗址。2001 年列入第五批全国重点文物保护单位。"
@@ -172,7 +172,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古遗址",
   "era": "汉、魏",
   "address": "佳木斯市双鸭山市",
-  "county": "佳木斯市双鸭山市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2001 年公布",
   "intro": "位于黑龙江省双鸭山市（佳木斯市双鸭山市），汉、魏，古遗址。2001 年列入第五批全国重点文物保护单位。"
@@ -220,7 +220,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "清",
   "address": "黑河市爱辉区",
-  "county": "黑河市爱辉区",
+  "county": "爱辉区",
   "status": "na",
   "statusText": "2001 年公布",
   "intro": "位于黑龙江省黑河市（黑河市爱辉区），清，近现代。2001 年列入第五批全国重点文物保护单位。"
@@ -236,7 +236,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1959年",
   "address": "大庆市",
-  "county": "大庆市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2001 年公布",
   "intro": "位于黑龙江省大庆市（大庆市），1959年，近现代。2001 年列入第五批全国重点文物保护单位。"
@@ -252,7 +252,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古遗址",
   "era": "战国至汉",
   "address": "东宁县",
-  "county": "东宁县",
+  "county": "市本级",
   "status": "na",
   "statusText": "2006 年公布",
   "intro": "位于黑龙江省其他（东宁县），战国至汉，古遗址。2006 年列入第六批全国重点文物保护单位。"
@@ -284,7 +284,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古遗址",
   "era": "隋",
   "address": "双鸭山市宝清县",
-  "county": "双鸭山市宝清县",
+  "county": "宝清县",
   "status": "na",
   "statusText": "2006 年公布",
   "intro": "位于黑龙江省双鸭山市（双鸭山市宝清县），隋，古遗址。2006 年列入第六批全国重点文物保护单位。"
@@ -348,7 +348,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古遗址",
   "era": "明",
   "address": "抚远县",
-  "county": "抚远县",
+  "county": "市本级",
   "status": "na",
   "statusText": "2006 年公布",
   "intro": "位于黑龙江省其他（抚远县），明，古遗址。2006 年列入第六批全国重点文物保护单位。"
@@ -364,7 +364,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古墓葬",
   "era": "新石器时代",
   "address": "鸡西市",
-  "county": "鸡西市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2006 年公布",
   "intro": "位于黑龙江省鸡西市（鸡西市），新石器时代，古墓葬。2006 年列入第六批全国重点文物保护单位。"
@@ -380,7 +380,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古建筑",
   "era": "唐至金",
   "address": "牡丹江市",
-  "county": "牡丹江市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2006 年公布",
   "intro": "位于黑龙江省牡丹江市（牡丹江市），唐至金，古建筑。2006 年列入第六批全国重点文物保护单位。"
@@ -396,7 +396,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古建筑",
   "era": "清",
   "address": "齐齐哈尔市",
-  "county": "齐齐哈尔市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2006 年公布",
   "intro": "位于黑龙江省齐齐哈尔市（齐齐哈尔市），清，古建筑。2006 年列入第六批全国重点文物保护单位。"
@@ -412,7 +412,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "清",
   "address": "哈尔滨市",
-  "county": "哈尔滨市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2006 年公布",
   "intro": "位于黑龙江省哈尔滨市（哈尔滨市），清，近现代。2006 年列入第六批全国重点文物保护单位。"
@@ -428,7 +428,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "清",
   "address": "海林市绥芬河市哈尔滨市尚志市齐齐哈尔市[b]",
-  "county": "海林市绥芬河市哈尔滨市尚志市齐齐哈尔市[b]",
+  "county": "尚志市",
   "status": "na",
   "statusText": "2006 年公布",
   "intro": "位于黑龙江省哈尔滨市（海林市绥芬河市哈尔滨市尚志市齐齐哈尔市[b]），清，近现代。2006 年列入第六批全国重点文物保护单位。"
@@ -444,7 +444,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1936～1945年",
   "address": "哈尔滨市安达市",
-  "county": "哈尔滨市安达市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2006 年公布",
   "intro": "位于黑龙江省哈尔滨市（哈尔滨市安达市），1936～1945年，近现代。2006 年列入第六批全国重点文物保护单位。"
@@ -460,7 +460,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1934～1945年",
   "address": "东宁县",
-  "county": "东宁县",
+  "county": "市本级",
   "status": "na",
   "statusText": "2006 年公布",
   "intro": "位于黑龙江省其他（东宁县），1934～1945年，近现代。2006 年列入第六批全国重点文物保护单位。"
@@ -508,7 +508,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古遗址",
   "era": "西周至春秋",
   "address": "齐齐哈尔市",
-  "county": "齐齐哈尔市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2013 年公布",
   "intro": "位于黑龙江省齐齐哈尔市（齐齐哈尔市），西周至春秋，古遗址。2013 年列入第七批全国重点文物保护单位。"
@@ -540,7 +540,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古遗址",
   "era": "战国至唐",
   "address": "牡丹江市东宁县",
-  "county": "牡丹江市东宁县",
+  "county": "市本级",
   "status": "na",
   "statusText": "2013 年公布",
   "intro": "位于黑龙江省牡丹江市（牡丹江市东宁县），战国至唐，古遗址。2013 年列入第七批全国重点文物保护单位。"
@@ -572,7 +572,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古遗址",
   "era": "金",
   "address": "哈尔滨市依兰县",
-  "county": "哈尔滨市依兰县",
+  "county": "依兰县",
   "status": "na",
   "statusText": "2013 年公布",
   "intro": "位于黑龙江省哈尔滨市（哈尔滨市依兰县），金，古遗址。2013 年列入第七批全国重点文物保护单位。"
@@ -604,7 +604,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古遗址",
   "era": "清",
   "address": "呼玛县塔河县漠河县嫩江县",
-  "county": "呼玛县塔河县漠河县嫩江县",
+  "county": "嫩江市",
   "status": "na",
   "statusText": "2013 年公布",
   "intro": "位于黑龙江省黑河市（呼玛县塔河县漠河县嫩江县），清，古遗址。2013 年列入第七批全国重点文物保护单位。"
@@ -652,7 +652,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古建筑",
   "era": "清",
   "address": "哈尔滨市",
-  "county": "哈尔滨市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2013 年公布",
   "intro": "位于黑龙江省哈尔滨市（哈尔滨市），清，古建筑。2013 年列入第七批全国重点文物保护单位。"
@@ -668,7 +668,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1906年",
   "address": "哈尔滨市",
-  "county": "哈尔滨市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2013 年公布",
   "intro": "位于黑龙江省哈尔滨市（哈尔滨市），1906年，近现代。2013 年列入第七批全国重点文物保护单位。"
@@ -684,7 +684,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1909~1949年",
   "address": "哈尔滨市",
-  "county": "哈尔滨市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2013 年公布",
   "intro": "位于黑龙江省哈尔滨市（哈尔滨市），1909~1949年，近现代。2013 年列入第七批全国重点文物保护单位。"
@@ -700,7 +700,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1912年",
   "address": "齐齐哈尔市",
-  "county": "齐齐哈尔市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2013 年公布",
   "intro": "位于黑龙江省齐齐哈尔市（齐齐哈尔市），1912年，近现代。2013 年列入第七批全国重点文物保护单位。"
@@ -716,7 +716,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1930年",
   "address": "齐齐哈尔市",
-  "county": "齐齐哈尔市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2013 年公布",
   "intro": "位于黑龙江省齐齐哈尔市（齐齐哈尔市），1930年，近现代。2013 年列入第七批全国重点文物保护单位。"
@@ -732,7 +732,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1933年",
   "address": "哈尔滨市",
-  "county": "哈尔滨市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2013 年公布",
   "intro": "位于黑龙江省哈尔滨市（哈尔滨市），1933年，近现代。2013 年列入第七批全国重点文物保护单位。"
@@ -748,7 +748,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1946年",
   "address": "双城市",
-  "county": "双城市",
+  "county": "市本级",
   "status": "na",
   "statusText": "2013 年公布",
   "intro": "位于黑龙江省其他（双城市），1946年，近现代。2013 年列入第七批全国重点文物保护单位。"
@@ -764,7 +764,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1960年",
   "address": "大庆市红岗区",
-  "county": "大庆市红岗区",
+  "county": "红岗区",
   "status": "na",
   "statusText": "2013 年公布",
   "intro": "位于黑龙江省大庆市（大庆市红岗区），1960年，近现代。2013 年列入第七批全国重点文物保护单位。"
@@ -812,7 +812,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "古遗址",
   "era": "新石器时代",
   "address": "齐齐哈尔市富拉尔基区",
-  "county": "齐齐哈尔市富拉尔基区",
+  "county": "富拉尔基区",
   "status": "na",
   "statusText": "2019 年公布",
   "intro": "位于黑龙江省齐齐哈尔市（齐齐哈尔市富拉尔基区），新石器时代，古遗址。2019 年列入第八批全国重点文物保护单位。"
@@ -844,7 +844,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1934～1945年",
   "address": "鸡西市滴道区",
-  "county": "鸡西市滴道区",
+  "county": "滴道区",
   "status": "na",
   "statusText": "2019 年公布",
   "intro": "位于黑龙江省鸡西市（鸡西市滴道区），1934～1945年，近现代。2019 年列入第八批全国重点文物保护单位。"
@@ -876,7 +876,7 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1938～1945年",
   "address": "齐齐哈尔市铁峰区",
-  "county": "齐齐哈尔市铁峰区",
+  "county": "市本级",
   "status": "na",
   "statusText": "2019 年公布",
   "intro": "位于黑龙江省齐齐哈尔市（齐齐哈尔市铁峰区），1938～1945年，近现代。2019 年列入第八批全国重点文物保护单位。"
@@ -908,9 +908,199 @@ window.HEILONGJIANG_PLACES = [
   "typeFull": "近现代重要史迹及代表性建筑",
   "era": "1946～1955年",
   "address": "牡丹江市西安区",
-  "county": "牡丹江市西安区",
+  "county": "西安区",
   "status": "na",
   "statusText": "2019 年公布",
   "intro": "位于黑龙江省牡丹江市（牡丹江市西安区），1946～1955年，近现代。2019 年列入第八批全国重点文物保护单位。"
+ }
+];
+
+window.HEILONGJIANG_GROUPS = [
+ {
+  "name": "哈尔滨市",
+  "counties": [
+   "道里区",
+   "南岗区",
+   "道外区",
+   "平房区",
+   "松北区",
+   "香坊区",
+   "呼兰区",
+   "阿城区",
+   "双城区",
+   "依兰县",
+   "方正县",
+   "宾县",
+   "巴彦县",
+   "木兰县",
+   "通河县",
+   "延寿县",
+   "尚志市",
+   "五常市"
+  ]
+ },
+ {
+  "name": "齐齐哈尔市",
+  "counties": [
+   "龙沙区",
+   "建华区",
+   "铁锋区",
+   "昂昂溪区",
+   "富拉尔基区",
+   "碾子山区",
+   "梅里斯达斡尔族区",
+   "龙江县",
+   "依安县",
+   "泰来县",
+   "甘南县",
+   "富裕县",
+   "克山县",
+   "克东县",
+   "拜泉县",
+   "讷河市"
+  ]
+ },
+ {
+  "name": "鸡西市",
+  "counties": [
+   "鸡冠区",
+   "恒山区",
+   "滴道区",
+   "梨树区",
+   "城子河区",
+   "麻山区",
+   "鸡东县",
+   "虎林市",
+   "密山市"
+  ]
+ },
+ {
+  "name": "鹤岗市",
+  "counties": [
+   "向阳区",
+   "工农区",
+   "南山区",
+   "兴安区",
+   "东山区",
+   "兴山区",
+   "萝北县",
+   "绥滨县"
+  ]
+ },
+ {
+  "name": "双鸭山市",
+  "counties": [
+   "尖山区",
+   "岭东区",
+   "四方台区",
+   "宝山区",
+   "集贤县",
+   "友谊县",
+   "宝清县",
+   "饶河县"
+  ]
+ },
+ {
+  "name": "大庆市",
+  "counties": [
+   "龙凤区",
+   "让胡路区",
+   "红岗区",
+   "大同区",
+   "肇州县",
+   "肇源县",
+   "林甸县",
+   "杜尔伯特蒙古族自治县"
+  ]
+ },
+ {
+  "name": "伊春市",
+  "counties": [
+   "伊美区",
+   "乌翠区",
+   "友好区",
+   "金林区",
+   "铁力市",
+   "嘉荫县",
+   "汤旺县",
+   "丰林县",
+   "大箐山县",
+   "南岔县"
+  ]
+ },
+ {
+  "name": "佳木斯市",
+  "counties": [
+   "东风区",
+   "郊区",
+   "桦南县",
+   "桦川县",
+   "汤原县",
+   "同江市",
+   "富锦市",
+   "抚远市"
+  ]
+ },
+ {
+  "name": "七台河市",
+  "counties": [
+   "新兴区",
+   "桃山区",
+   "茄子河区",
+   "勃利县"
+  ]
+ },
+ {
+  "name": "牡丹江市",
+  "counties": [
+   "东安区",
+   "阳明区",
+   "爱民区",
+   "西安区",
+   "林口县",
+   "绥芬河市",
+   "海林市",
+   "宁安市",
+   "穆棱市",
+   "东宁市"
+  ]
+ },
+ {
+  "name": "黑河市",
+  "counties": [
+   "爱辉区",
+   "嫩江市",
+   "逊克县",
+   "孙吴县",
+   "北安市",
+   "五大连池市"
+  ]
+ },
+ {
+  "name": "绥化市",
+  "counties": [
+   "北林区",
+   "望奎县",
+   "兰西县",
+   "青冈县",
+   "庆安县",
+   "明水县",
+   "绥棱县",
+   "安达市",
+   "肇东市",
+   "海伦市"
+  ]
+ },
+ {
+  "name": "大兴安岭地区",
+  "counties": [
+   "加格达奇区",
+   "松岭区",
+   "新林区",
+   "呼中区",
+   "呼玛县",
+   "塔河县",
+   "漠河县"
+  ]
  }
 ];

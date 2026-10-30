@@ -3129,3 +3129,29 @@ a.wr-row:hover .wr-n { color: var(--red); }
   color: var(--ink-3);
   letter-spacing: 0.02em;
 }
+
+.ct-head, .ct-row {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 104px 92px 54px;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.ct-head { border-bottom: 1px solid var(--ink); font-size: 10.5px; letter-spacing: 0.12em; color: var(--ink-3); }
+.ct-b, .ct-y { font-size: 11px; color: var(--ink-3); }
+.ct-n { font-family: var(--serif); font-size: 15px; color: var(--ink); text-decoration: none; line-height: 1.5; }
+.ct-n:hover { color: var(--red); }
+.ct-t { font-size: 11.5px; color: var(--ink-2); }
+.ct-v { padding: 4px 8px; border: 1px solid var(--line); border-radius: 999px; background: transparent; font-family: var(--sans); font-size: 10.5px; color: var(--ink-3); cursor: pointer; }
+.ct-v.is-on { color: var(--red); border-color: var(--red); }
+
+@media (max-width: 760px) {
+  .ct-head { display: none; }
+  .ct-row { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "n v" "b b" "t y"; gap: 3px 10px; }
+  .ct-n { grid-area: n; }
+  .ct-v { grid-area: v; }
+  .ct-b { grid-area: b; }
+  .ct-t { grid-area: t; }
+  .ct-y { grid-area: y; text-align: right; }
+}
