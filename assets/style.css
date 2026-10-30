@@ -3480,3 +3480,5 @@ a.wr-row:hover .wr-n { color: var(--red); }
 @media (max-width: 820px) {
   .home-map { padding: 0 20px 64px; }
 }
+
+.batch-status.is-partial { color: #8a6d3b; border-color: #b99a62; }
