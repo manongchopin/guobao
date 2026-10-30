@@ -99,6 +99,9 @@ web/
 ├── hk-grade-data.js    三档历史建筑 777 项
 ├── shanghai.html       上海（批次卡片 / 辖区表格）
 ├── beijing.html        北京（135 处，批次卡片 / 辖区表格）       上海清单页（批次 / 辖区）
+├── hainan.html         海南（4 市 / 15 县区 / 35 处）
+├── hainan-guobao.html  海南国保（按批次 / 按市县）
+├── hainan-data.js      海南 35 处国保
 ├── shanxi.html         山西（11 市 / 117 县区骨架）
 ├── zhejiang.html       浙江骨架页（11 市 → 90 县区）
 ├── yiwu.html           义乌清单页（批次 / 镇街）

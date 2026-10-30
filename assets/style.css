@@ -3121,3 +3121,11 @@ a.wr-row:hover .wr-n { color: var(--red); }
   color: var(--red);
   border-color: var(--red);
 }
+
+.county-sub {
+  margin-top: 2px;
+  font-size: 10px;
+  line-height: 1.5;
+  color: var(--ink-3);
+  letter-spacing: 0.02em;
+}

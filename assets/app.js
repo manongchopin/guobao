@@ -32,6 +32,9 @@
   var districtTable = cfg.districtTable === true;
   var batchTable = cfg.batchTable === true;
   var districtFilter = "all";
+  var urlCounty = null;
+  try { urlCounty = new URLSearchParams(window.location.search).get("county"); } catch (e) {}
+  if (urlCounty && districts.indexOf(urlCounty) !== -1) districtFilter = urlCounty;
   var indexTitle = cfg.indexTitle || "辖区索引";
   var col4Label = cfg.col4Label || "地址";
   var hideStatus = cfg.hideStatus === true;
@@ -236,6 +239,7 @@
   }
 
   function initialView() {
+    if (urlCounty && districtTable) return "district";
     var h = (window.location.hash || "").replace("#", "");
     if (h === "district" || h === "batch") return h;
     try {

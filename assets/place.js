@@ -8,6 +8,7 @@
   var JHM = window.JINHUA_META || {};
   var JC = window.JINCHENG_PLACES || {};
   var JCM = window.JINCHENG_META || {};
+  var HN = window.HAINAN_PLACES || [];
 
   var source, backHref, backLabel;
   if (set === "beijing") {
@@ -26,6 +27,10 @@
     source = JC[set];
     backHref = JCM[set].page;
     backLabel = "← " + JCM[set].name + "清单";
+  } else if (set === "hainan") {
+    source = HN;
+    backHref = "hainan-guobao.html";
+    backLabel = "← 海南清单";
   } else {
     source = window.PLACES || [];
     backHref = "shanghai.html";
