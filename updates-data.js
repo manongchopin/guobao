@@ -2,9 +2,9 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-30",
     type: "档案",
-    title: "2003 年增补焦裕禄烈士墓",
-    note: "第五批相关档案",
-    href: "fifth-batch-2003-jiaoyulu.html"
+    title: "第五批增补档案：里耶 / 阿尔寨 / 焦裕禄",
+    note: "3 份增补文件",
+    href: "fifth-batch-supplements.html"
   },
   {
     date: "2026-10-30",
