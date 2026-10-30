@@ -13,6 +13,7 @@
   var TJ = window.TIANJIN_PLACES || [];
   var HLJ = window.HEILONGJIANG_PLACES || [];
   var GZ = window.GUIZHOU_PLACES || [];
+  var ZJ = window.ZHEJIANG_PLACES || [];
 
   var source, backHref, backLabel;
   if (set === "beijing") {
@@ -51,6 +52,10 @@
     source = GZ;
     backHref = "guizhou-guobao.html";
     backLabel = "← 贵州清单";
+  } else if (set === "zhejiang") {
+    source = ZJ;
+    backHref = "zhejiang.html";
+    backLabel = "← 浙江";
   } else {
     source = window.PLACES || [];
     backHref = "shanghai.html";
