@@ -2924,3 +2924,169 @@ a.sh-row:hover .sh-n { color: var(--red); }
   .wht-c { grid-area: c; text-align: right; }
   .wht-p { grid-area: p; }
 }
+
+/* ---------- 全世界的世界遗产 ---------- */
+
+.world-entry {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.18s ease;
+}
+
+.world-entry:hover { background: var(--paper-2); }
+
+.we-kicker {
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  color: var(--red);
+  white-space: nowrap;
+}
+
+.we-main { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.we-title { font-family: var(--serif); font-size: 20px; letter-spacing: 0.04em; }
+.we-meta { font-size: 11.5px; color: var(--ink-3); }
+.we-arrow { color: var(--ink-3); }
+
+.wr-table { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+
+.wr-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) 78px 78px 66px 78px 74px 58px 24px;
+  gap: 12px;
+  align-items: baseline;
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--line-soft);
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.16s ease;
+}
+
+a.wr-row:hover { background: rgba(255, 253, 247, 0.7); }
+a.wr-row:hover .wr-n { color: var(--red); }
+
+.wr-head {
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--ink);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  color: var(--ink-3);
+}
+
+.wr-n { font-family: var(--serif); font-size: 17px; line-height: 1.4; }
+.wr-n em { display: block; font-family: var(--sans); font-style: normal; font-size: 9.5px; letter-spacing: 0.08em; color: var(--ink-3); margin-top: 2px; }
+
+.wr-c, .wr-a, .wr-m, .wr-t, .wr-p, .wr-k {
+  font-size: 12px;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.wr-t { color: var(--ink); font-weight: 600; }
+.wr-p { color: var(--ink-3); }
+
+.wr-total { border-top: 1px solid var(--ink); font-weight: 600; }
+.wr-total .wr-n { font-size: 15px; }
+
+.wr-arrow { color: var(--ink-3); text-align: right; }
+
+/* 大区页 */
+.whr-head, .whr-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) 80px 64px;
+  gap: 14px;
+  align-items: baseline;
+  padding: 9px 4px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.whr-head {
+  border-bottom: 1px solid var(--ink);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  color: var(--ink-3);
+}
+
+.whr-n { font-family: var(--serif); font-size: 15px; line-height: 1.5; }
+.whr-t { font-size: 11.5px; }
+.whr-y { font-size: 11.5px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+
+@media (max-width: 760px) {
+  .world-entry { padding: 14px 20px; gap: 12px; }
+  .we-kicker { display: none; }
+  .we-title { font-size: 18px; }
+
+  .wr-table { padding: 0 20px; }
+  .wr-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "n t"
+      "c c"
+      "a m"
+      "p k";
+    gap: 4px 12px;
+    padding: 13px 2px;
+    border-bottom: 1px solid var(--line);
+  }
+  .wr-head { display: none; }
+  .wr-n { grid-area: n; }
+  .wr-t { grid-area: t; }
+  .wr-c { grid-area: c; text-align: left; }
+  .wr-a { grid-area: a; text-align: left; }
+  .wr-m { grid-area: m; text-align: left; }
+  .wr-p { grid-area: p; text-align: left; }
+  .wr-k { grid-area: k; text-align: left; }
+  .wr-arrow { display: none; }
+
+  .whr-head { display: none; }
+  .whr-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "n y"
+      "t t";
+    gap: 2px 12px;
+    padding: 11px 2px;
+    border-bottom: 1px solid var(--line);
+  }
+  .whr-n { grid-area: n; }
+  .whr-y { grid-area: y; text-align: right; }
+  .whr-t { grid-area: t; }
+}
+
+@media (min-width: 901px) {
+  .city-layout .city-index {
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .city-layout .city-index {
+    max-height: 36vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .wr-row {
+    grid-template-areas:
+      "n t"
+      "c c"
+      "a m"
+      "k p";
+  }
+  .wr-k { grid-area: k; text-align: left; }
+  .wr-p { grid-area: p; text-align: right; }
+  .wr-c::before { content: "文化 "; color: var(--ink-3); }
+  .wr-a::before { content: "自然 "; color: var(--ink-3); }
+  .wr-m::before { content: "复合 "; color: var(--ink-3); }
+  .wr-k::before { content: "国家 "; color: var(--ink-3); }
+  .wr-p::before { content: "占比 "; color: var(--ink-3); }
+}
