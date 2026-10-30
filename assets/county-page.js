@@ -7,7 +7,8 @@
   var CONF = {
     heilongjiang: { places: window.HEILONGJIANG_PLACES || [], page: "heilongjiang.html", name: "黑龙江", seal: "黑" },
     guizhou: { places: window.GUIZHOU_PLACES || [], page: "guizhou.html", name: "贵州", seal: "贵" },
-    zhejiang: { places: window.ZHEJIANG_PLACES || [], page: "zhejiang.html", name: "浙江", seal: "浙" }
+    zhejiang: { places: window.ZHEJIANG_PLACES || [], page: "zhejiang.html", name: "浙江", seal: "浙" },
+    shanxi: { places: window.SHANXI_PLACES || [], page: "shanxi.html", name: "山西", seal: "晋" }
   };
   var conf = CONF[set];
   if (!conf || !county) { document.getElementById("list").innerHTML = '<p class="wh-note">没有找到这个县区。</p>'; return; }

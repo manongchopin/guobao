@@ -115,7 +115,9 @@ web/
 ├── hainan.html         海南（4 市 / 15 县区 / 35 处）
 ├── hainan-guobao.html  海南国保（按批次 / 按市县）
 ├── hainan-data.js      海南 35 处国保
-├── shanxi.html         山西（11 市 / 117 县区骨架）
+├── shanxi.html         山西（11 市 / 121 县区 / 531 处）
+├── shanxi-guobao.html  山西国保总表（按批次 / 按地级市）
+├── shanxi-data.js      山西 531 处（市县归属）
 ├── zhejiang.html       浙江骨架页（11 市 → 90 县区）
 ├── yiwu.html           义乌清单页（批次 / 镇街）
 ├── yiwu-city.html      义乌市级文保（按镇街）

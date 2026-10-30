@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>山西 · 全国重点文物保护单位</title>
+<meta name="description" content="山西 531 处全国重点文物保护单位，可按批次或地级市切换浏览。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="hero">
+  <a class="back" href="shanxi.html">← 山西 · 十一市</a>
+  <p class="kicker">Shanxi · 全国重点文物保护单位</p>
+  <h1>山西，五百三十一处</h1>
+  <p class="lede">8 个批次，11 个地级市，531 处国保。<br><span>按批次读时间，按地级市排路线。</span></p>
+  <div class="seal" aria-hidden="true">晋</div>
+</header>
+<div class="toolbar"><div class="toolbar-inner"><div class="switch" role="group" aria-label="切换排列方式"><button type="button" data-view="batch" aria-pressed="true">按批次</button><button type="button" data-view="district" aria-pressed="false">按地级市</button></div><p class="toolbar-note" id="toolbar-note">8 批 · 531 处</p></div></div>
+<main id="list" aria-live="polite"></main>
+<footer class="footer"><div class="footer-inner"><span>山西 · 全国重点文物保护单位 · 531 处</span><span>县区归属据各条目所在地校订</span><span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span></div></footer>
+<script src="data.js"></script>
+<script src="shanxi-data.js"></script>
+<script src="visited.js"></script>
+<script>
+window.LIST_CONFIG = {
+  places: window.SHANXI_PLACES,
+  districts: window.SHANXI_UNITS,
+  detailBase: "place.html?set=shanxi&id=",
+  storageKey: "shanxi-view",
+  noteBatch: "8 批 · 531 处",
+  noteDistrict: "11 个地级市 · 531 处",
+  districtTable: true,
+  batchTable: true,
+  indexTitle: "地级市索引",
+  col4Label: "所在",
+  hideStatus: true,
+  countUnit: "处"
+};
+</script>
+<script src="assets/app.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>
