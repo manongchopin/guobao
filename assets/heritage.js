@@ -44,7 +44,7 @@
       '<button type="button" class="visit-btn wht-visit" data-id="' + s.uid + '" aria-pressed="' + v + '" title="标记为已去过">' +
         (v ? "✓" : "＋") +
       '</button>' +
-      '<a class="wht-hit" href="heritage-place.html?id=' + s.uid + '" aria-label="' + s.name + '"></a>' +
+      '<a class="wht-hit" href="' + (s.name === "大运河" ? "canal.html" : "heritage-place.html?id=" + s.uid) + '" aria-label="' + s.name + '"></a>' +
     '</div>';
   }
 

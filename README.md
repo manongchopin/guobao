@@ -84,6 +84,7 @@ web/
 ├── heritage.html       中国的世界遗产（61 项，按年份/省份）
 ├── heritage-place.html 世界遗产单页（?id=437）
 ├── visited-heritage.html  我去过的世界遗产（96 项，大洲/国家表格）
+├── canal.html          大运河 31 个遗产区（资料页）
 ├── jomon.html          日本北部的绳纹史前遗址群 · 资料库
 ├── world-heritage.html  全世界的世界遗产（五大区域总表）
 ├── wh-asia.html 等      五大区域分页（国家索引 + 表格）
