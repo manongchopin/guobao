@@ -258,7 +258,7 @@ web/
 
 ## 首页最近更新
 
-首页「最近更新」只显示最新 10 条，数据在 `updates-data.js`，渲染在 `assets/updates.js`。
+首页「最近更新」放在 hero 右上角，两列各 5 条，小字号；只显示最新 10 条。数据在 `updates-data.js`，渲染在 `assets/updates.js`。窄屏时自动移到标题下方并改为单列。
 以后每次更新，在 `window.SITE_UPDATES` 数组里加一条即可：
 
 ```js
