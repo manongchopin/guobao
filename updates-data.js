@@ -1,9 +1,9 @@
 window.SITE_UPDATES = [
   {
     date: "2026-10-30",
-    type: "整理本",
-    title: "第八批国保名单整理本（31 页 / 762 条）",
-    note: "据维基文库转录",
+    type: "原档",
+    title: "第八批国保原档 + 重校整理本",
+    note: "52 页公报刊本 PDF",
     href: "guobao-archives.html#batch-8"
   },
   {

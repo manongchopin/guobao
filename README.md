@@ -202,7 +202,8 @@ web/
 │   ├── third-batch-1988.pdf 第三批名单整理本（10 页，据维基文库）
 │   ├── fourth-batch-1996.pdf 第四批名单整理本（10 页，据维基文库）
 │   ├── sixth-batch-2006.pdf 第六批名单整理本（30 页，据维基文库）
-│   ├── eighth-batch-2019.pdf 第八批名单整理本（31 页，据维基文库）
+│   ├── eighth-batch-2019.pdf 第八批名单整理本（31 页，PDF 校订）
+│   ├── eighth-batch-2019-official.pdf 第八批公报刊本原档（52 页）
 │   ├── fifth-batch-2001.pdf 第五批名单整理本（16 页，OCR 校订）
 │   ├── fifth-batch-2001-list.jpg 第五批公报名单长图（516 × 12758）
 │   ├── fifth-batch-2002-liye.pdf 2002 年增补里耶古城遗址整理版（2 页）
