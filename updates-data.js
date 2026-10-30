@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-10-30",
+    type: "数据",
+    title: "湖北 168 处国保全部落到县区",
+    note: "据湖北省文旅厅名录校订",
+    href: "hubei.html"
+  },
+  {
+    date: "2026-10-30",
     type: "原档",
     title: "第八批国保原档 + 重校整理本",
     note: "52 页公报刊本 PDF",
