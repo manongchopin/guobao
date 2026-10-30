@@ -38,6 +38,9 @@
   var items = conf.places.filter(function (p) {
     return p.county === county && (!city || p.district === city);
   });
+  if (!items.length && city) {
+    items = conf.places.filter(function (p) { return p.county === county; });
+  }
   items.sort(function (a, b) { return (a.batch || 99) - (b.batch || 99) || (a.order || 0) - (b.order || 0); });
 
   var YEAR = { 1: "1961", 2: "1982", 3: "1988", 4: "1996", 5: "2001", 6: "2006", 7: "2013", 8: "2019" };
