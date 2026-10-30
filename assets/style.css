@@ -3179,3 +3179,76 @@ a.wr-row:hover .wr-n { color: var(--red); }
   .tw-t { grid-area: t; }
   .tw-y { grid-area: y; text-align: right; }
 }
+
+/* 世界遗产资料库 */
+.wh-detail { max-width: 1120px; margin: 0 auto; padding: 8px 28px 80px; }
+
+.wh-facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+.wh-facts div { padding: 16px 18px 18px 0; border-right: 1px solid var(--line-soft); }
+.wh-facts div:last-child { border-right: 0; }
+.wh-facts span { display: block; font-size: 10.5px; letter-spacing: 0.12em; color: var(--ink-3); }
+.wh-facts b { display: block; margin-top: 6px; font-family: var(--serif); font-size: 19px; font-weight: 500; color: var(--ink); }
+
+.wh-section { margin-top: 56px; }
+.wh-section h2 {
+  font-family: var(--serif); font-size: 24px; font-weight: 500; letter-spacing: 0.04em;
+  padding-bottom: 8px; border-bottom: 1px solid var(--ink); margin-bottom: 18px;
+}
+.wh-section p { font-size: 14px; line-height: 2; color: var(--ink-2); margin-bottom: 12px; }
+.wh-lead { font-size: 12.5px !important; color: var(--ink-3) !important; }
+
+.wh-pref {
+  font-family: var(--serif); font-size: 17px; font-weight: 500; margin: 26px 0 8px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.wh-pref span { font-family: var(--sans); font-size: 11px; color: var(--ink-3); }
+
+.wh-comp-head, .wh-comp-row {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) 96px 76px 50px;
+  gap: 12px; align-items: baseline; padding: 9px 4px; border-bottom: 1px solid var(--line-soft);
+}
+.wh-comp-head { border-bottom: 1px solid var(--ink); font-size: 10.5px; letter-spacing: 0.1em; color: var(--ink-3); }
+.wh-code, .wh-city, .wh-pref2 { font-size: 11px; color: var(--ink-3); }
+.wh-name { font-family: var(--serif); font-size: 15px; line-height: 1.5; }
+.wh-name em { display: block; font-family: var(--sans); font-style: normal; font-size: 9.5px; color: var(--ink-3); letter-spacing: 0.03em; }
+.wh-map { font-size: 10.5px; color: var(--ink-3); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 1px; }
+.wh-map:hover { color: var(--red); border-color: var(--red); }
+
+.wh-route { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.wh-route h3 { font-family: var(--serif); font-size: 16px; font-weight: 500; margin-bottom: 6px; }
+.wh-route p { font-size: 12.5px; line-height: 1.9; color: var(--ink-2); }
+.wh-note { margin-top: 14px; font-size: 11.5px; color: var(--ink-3); }
+
+.wh-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.wh-slot { border: 1px dashed var(--line); padding: 18px 20px; }
+.wh-slot h3 { font-family: var(--serif); font-size: 15px; font-weight: 500; margin-bottom: 6px; }
+.wh-slot p { font-size: 12px; line-height: 1.8; color: var(--ink-3); margin: 0; }
+
+.wh-links { list-style: none; padding: 0; margin: 0; }
+.wh-links li { padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
+.wh-links a { font-size: 13px; color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--line); }
+.wh-links a:hover { color: var(--red); border-color: var(--red); }
+
+.whr-link { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
+.whr-link:hover { color: var(--red); border-color: var(--red); }
+
+@media (max-width: 760px) {
+  .wh-detail { padding: 4px 20px 64px; }
+  .wh-facts { grid-template-columns: 1fr 1fr; }
+  .wh-facts div:nth-child(2) { border-right: 0; }
+  .wh-facts div:nth-child(3), .wh-facts div:nth-child(4) { border-top: 1px solid var(--line-soft); }
+  .wh-comp-head { display: none; }
+  .wh-comp-row { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "n m" "c p"; gap: 2px 10px; padding: 10px 2px; }
+  .wh-name { grid-area: n; }
+  .wh-map { grid-area: m; }
+  .wh-city { grid-area: c; }
+  .wh-pref2 { grid-area: p; text-align: right; }
+  .wh-code { display: none; }
+  .wh-route, .wh-shelf { grid-template-columns: 1fr; }
+}

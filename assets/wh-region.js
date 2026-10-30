@@ -12,6 +12,7 @@
   var noteEl = document.getElementById("whr-note");
   var toolbarNote = document.querySelector(".toolbar-note");
   var filter = "all";
+  var DETAIL = { "日本北部的绳纹史前遗址群": "jomon.html" };
 
   var listed = 0;
   countries.forEach(function (c) { listed += c.items.length; });
@@ -43,7 +44,7 @@
       html += '<div class="whr-table">';
       c.items.slice().sort(function (a, b) { return a.year - b.year || a.name.localeCompare(b.name, "zh"); }).forEach(function (it) {
         html += '<div class="whr-row">' +
-          '<span class="whr-n">' + it.name + '</span>' +
+          '<span class="whr-n">' + (DETAIL[it.name] ? '<a class="whr-link" href="' + DETAIL[it.name] + '">' + it.name + '</a>' : it.name) + '</span>' +
           '<span class="whr-t ' + typeClass(it.type) + '">' + it.type + '</span>' +
           '<span class="whr-y">' + it.year + '</span>' +
         '</div>';
