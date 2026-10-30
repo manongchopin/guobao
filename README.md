@@ -194,7 +194,9 @@ web/
 ├── files/
 │   ├── yiwu-city-2019.pdf   市级名录整理版 PDF（15 页，脚本生成）
 │   ├── first-batch-1961.pdf 第一批国保名单整理本（10 页，OCR 校订）
-│   └── first-batch-1961-scan.pdf 1961 年公报删节原档（11 页扫描）
+│   ├── first-batch-1961-scan.pdf 1961 年公报删节原档（11 页扫描）
+│   ├── seventh-batch-2013.pdf 第七批名单整理本（50 页，OCR 校订）
+│   └── seventh-batch-2013-scan.pdf 第七批名单原档（126 页扫描）
 ├── assets/
 │   ├── style.css
 │   ├── app.js          清单页逻辑
