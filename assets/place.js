@@ -15,6 +15,10 @@
   var GZ = window.GUIZHOU_PLACES || [];
   var ZJ = window.ZHEJIANG_PLACES || [];
   var SX = window.SHANXI_PLACES || [];
+  var SN = window.SN_PLACES || [];
+  var GS = window.GS_PLACES || [];
+  var QH = window.QH_PLACES || [];
+  var XJ = window.XJ_PLACES || [];
 
   var source, backHref, backLabel;
   if (set === "beijing") {
@@ -61,7 +65,11 @@
     source = SX;
     backHref = "shanxi-guobao.html";
     backLabel = "← 山西清单";
-  } else {
+  } else if (set === "shaanxi") { source = SN; backHref = "shaanxi-guobao.html"; backLabel = "← 陕西清单"; }
+  else if (set === "gansu") { source = GS; backHref = "gansu-guobao.html"; backLabel = "← 甘肃清单"; }
+  else if (set === "qinghai") { source = QH; backHref = "qinghai-guobao.html"; backLabel = "← 青海清单"; }
+  else if (set === "xinjiang") { source = XJ; backHref = "xinjiang-guobao.html"; backLabel = "← 新疆清单"; }
+  else {
     source = window.PLACES || [];
     backHref = "shanghai.html";
     backLabel = "← 上海清单";

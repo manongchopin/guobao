@@ -8,7 +8,11 @@
     heilongjiang: { places: window.HEILONGJIANG_PLACES || [], page: "heilongjiang.html", name: "黑龙江", seal: "黑" },
     guizhou: { places: window.GUIZHOU_PLACES || [], page: "guizhou.html", name: "贵州", seal: "贵" },
     zhejiang: { places: window.ZHEJIANG_PLACES || [], page: "zhejiang.html", name: "浙江", seal: "浙" },
-    shanxi: { places: window.SHANXI_PLACES || [], page: "shanxi.html", name: "山西", seal: "晋" }
+    shanxi: { places: window.SHANXI_PLACES || [], page: "shanxi.html", name: "山西", seal: "晋" },
+    shaanxi: { places: window.SN_PLACES || [], page: "shaanxi.html", name: "陕西", seal: "陕" },
+    gansu: { places: window.GS_PLACES || [], page: "gansu.html", name: "甘肃", seal: "甘" },
+    qinghai: { places: window.QH_PLACES || [], page: "qinghai.html", name: "青海", seal: "青" },
+    xinjiang: { places: window.XJ_PLACES || [], page: "xinjiang.html", name: "新疆", seal: "新" }
   };
   var conf = CONF[set];
   if (!conf || !county) { document.getElementById("list").innerHTML = '<p class="wh-note">没有找到这个县区。</p>'; return; }
