@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-10-30",
+    type: "整理本",
+    title: "第五批国保名单整理本（16 页 / 518 条）",
+    note: "原档长图 + OCR 排版",
+    href: "guobao-archives.html#batch-5"
+  },
+  {
+    date: "2026-10-30",
     type: "档案",
     title: "第五批增补档案：里耶 / 阿尔寨 / 焦裕禄",
     note: "3 份增补文件",
