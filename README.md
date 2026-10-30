@@ -192,7 +192,8 @@ web/
 ├── jinhua-data.js      金华 7 个区县 31 处国保
 ├── visited.js          打卡种子 + localStorage 读写
 ├── files/
-│   └── yiwu-city-2019.pdf   市级名录整理版 PDF（15 页，脚本生成）
+│   ├── yiwu-city-2019.pdf   市级名录整理版 PDF（15 页，脚本生成）
+│   └── first-batch-1961.pdf 第一批国保名单整理本（13 页，OCR 校订）
 ├── assets/
 │   ├── style.css
 │   ├── app.js          清单页逻辑
