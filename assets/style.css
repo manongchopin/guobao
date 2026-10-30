@@ -3155,3 +3155,27 @@ a.wr-row:hover .wr-n { color: var(--red); }
   .ct-t { grid-area: t; }
   .ct-y { grid-area: y; text-align: right; }
 }
+
+.tw-head, .tw-row {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr) 96px 88px 54px;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.tw-head { border-bottom: 1px solid var(--ink); font-size: 10.5px; letter-spacing: 0.12em; color: var(--ink-3); }
+.tw-d, .tw-y { font-size: 11px; color: var(--ink-3); }
+.tw-n { font-family: var(--serif); font-size: 15px; color: var(--ink); text-decoration: none; line-height: 1.5; }
+.tw-n:hover { color: var(--red); }
+.tw-t { font-size: 11.5px; color: var(--ink-2); }
+
+@media (max-width: 760px) {
+  .tw-head { display: none; }
+  .tw-row { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "n v" "d d" "t y"; gap: 3px 10px; }
+  .tw-n { grid-area: n; }
+  .ct-v { grid-area: v; }
+  .tw-d { grid-area: d; }
+  .tw-t { grid-area: t; }
+  .tw-y { grid-area: y; text-align: right; }
+}

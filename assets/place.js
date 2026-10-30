@@ -37,6 +37,7 @@
   var SC = window.SC_PLACES || [];
   var YN = window.YN_PLACES || [];
   var XZ = window.XZ_PLACES || [];
+  var TW = window.TW_PLACES || [];
 
   var source, backHref, backLabel;
   if (set === "beijing") {
@@ -105,6 +106,7 @@
   else if (set === "sichuan") { source = SC; backHref = "sichuan-guobao.html"; backLabel = "← 四川清单"; }
   else if (set === "yunnan") { source = YN; backHref = "yunnan-guobao.html"; backLabel = "← 云南清单"; }
   else if (set === "xizang") { source = XZ; backHref = "xizang-guobao.html"; backLabel = "← 西藏清单"; }
+  else if (set === "taiwan") { source = TW; backHref = "taiwan.html"; backLabel = "← 台湾"; }
   else {
     source = window.PLACES || [];
     backHref = "shanghai.html";
