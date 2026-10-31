@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-31",
     type: "档案",
+    title: "湖州市文物保护单位（186 条）",
+    note: "九批 · 含升级/撤销 · PDF",
+    href: "files/huzhou-municipal-list.pdf"
+  },
+  {
+    date: "2026-10-31",
+    type: "档案",
     title: "嘉兴市文物保护单位（32 条）",
     note: "五批 · 第五批待补 · PDF",
     href: "files/jiaxing-municipal-list.pdf"
