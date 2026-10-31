@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-01",
     type: "档案",
+    title: "安江农校纪念园增补第六批",
+    note: "2009 · 单点增补 · 原件待补",
+    href: "sixth-batch-anjiang.html"
+  },
+  {
+    date: "2026-11-01",
+    type: "档案",
     title: "第六批国保通知残件",
     note: "7 页 · 名单片段 · 官网全文补校",
     href: "files/sixth-batch-2006-official-fragment.pdf"
