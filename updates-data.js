@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-31",
     type: "档案",
+    title: "温州市文物保护单位（51 条）",
+    note: "六批 · 含调整与合并 · PDF",
+    href: "files/wenzhou-municipal-list.pdf"
+  },
+  {
+    date: "2026-10-31",
+    type: "档案",
     title: "宁波市文物保护单位（62 处）",
     note: "四批 · PDF",
     href: "files/ningbo-municipal-list.pdf"
