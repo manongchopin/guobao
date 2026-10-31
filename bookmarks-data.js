@@ -35,8 +35,16 @@ window.BOOKMARKS = [
     tags: ["遗产", "文保", "地图", "STELE"],
     developer: "Kejing Peng",
     developerPhoto: "images/people/kejing-peng.jpg"
+  },
+  {
+    title: "安娜的档案",
+    url: "https://zh.annas-archive.gd/",
+    desc: "开放数据图书馆，检索 LibGen、Sci-Hub、Z-Library 等镜像书目。",
+    cat: "资料",
+    tags: ["电子书", "图书馆", "检索", "Anna"]
   }
 ];
+
 
 
 
