@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-31",
     type: "档案",
+    title: "丽水市文物保护单位（24 条）",
+    note: "六批 · 莲都区 · PDF",
+    href: "files/lishui-municipal-list.pdf"
+  },
+  {
+    date: "2026-10-31",
+    type: "档案",
     title: "台州市文物保护单位（24 条）",
     note: "截至 2017 年 · PDF",
     href: "files/taizhou-municipal-list.pdf"
