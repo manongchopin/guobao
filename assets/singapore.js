@@ -8,8 +8,10 @@
   var toolbarNote = document.getElementById("toolbar-note");
   var buttons = Array.prototype.slice.call(document.querySelectorAll(".switch button"));
   var state = { view: "time", filter: "all" };
+
   var TYPES = ["宗教", "公共建筑", "文化场馆", "商业与酒店", "交通与桥梁", "纪念物", "住宅", "会馆"];
   var DECADES = ["2020", "2010", "2000", "1990", "1980", "1970"];
+  var REGIONS = ["中区", "东区", "北区", "东北区", "西区"];
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
@@ -28,6 +30,8 @@
   }
   var byDecade = counts(decade);
   var byType = counts(function (it) { return it.cat; });
+  var byRegion = counts(function (it) { return it.region; });
+
   var years = data.map(function (it) { return it.date ? Number(it.date.slice(0, 4)) : 0; }).filter(Boolean);
   var minYear = Math.min.apply(null, years);
   var maxYear = Math.max.apply(null, years);
@@ -36,7 +40,7 @@
   var hp = document.querySelector(".hp-num");
   if (hp) hp.textContent = data.length;
   var hnote = document.querySelector(".hp-note");
-  if (hnote) hnote.textContent = minYear + "—" + maxYear + " · " + TYPES.length + " 类";
+  if (hnote) hnote.textContent = minYear + "—" + maxYear + " · 5 个区域";
 
   function sorted(list) {
     return list.slice().sort(function (a, b) {
@@ -63,47 +67,83 @@
       '</div>' + rows + '</div>';
   }
 
+  function groupsFor(view) {
+    return view === "type" ? TYPES : view === "region" ? REGIONS : DECADES;
+  }
+
   function renderIndex() {
-    var isTime = state.view === "time";
-    var groups = isTime ? DECADES : TYPES;
-    var html = '<p class="ci-title">' + (isTime ? "年代索引" : "类型索引") + '</p>' +
+    var groups = groupsFor(state.view);
+    var title = state.view === "type" ? "类型索引" : state.view === "region" ? "区域索引" : "年代索引";
+    var html = '<p class="ci-title">' + title + '</p>' +
       '<button type="button" class="ci-item' + (state.filter === "all" ? " is-active" : "") +
       '" data-g="all" aria-pressed="' + (state.filter === "all") + '"><span>全部</span><b>' + data.length + '</b></button>';
     groups.forEach(function (g) {
-      var n = isTime ? (byDecade[g] || 0) : (byType[g] || 0);
+      var n = state.view === "type" ? (byType[g] || 0) : state.view === "region" ? (byRegion[g] || 0) : (byDecade[g] || 0);
       if (!n) return;
-      var label = isTime ? g + " 年代" : g;
+      var label = state.view === "time" ? g + " 年代" : g;
       html += '<button type="button" class="ci-item' + (state.filter === String(g) ? " is-active" : "") +
         '" data-g="' + esc(g) + '" aria-pressed="' + (state.filter === String(g)) + '"><span>' + esc(label) + '</span><b>' + n + '</b></button>';
     });
     indexEl.innerHTML = html;
   }
 
-  function render() {
-    var isTime = state.view === "time";
-    var groups = isTime ? DECADES : TYPES;
+  function renderFlat(groups) {
     var html = "";
     groups.forEach(function (g) {
       if (state.filter !== "all" && state.filter !== String(g)) return;
-      var list = isTime
-        ? data.filter(function (it) { return decade(it) === g; })
-        : data.filter(function (it) { return it.cat === g; });
+      var list = state.view === "type"
+        ? data.filter(function (it) { return it.cat === g; })
+        : data.filter(function (it) { return decade(it) === g; });
       if (!list.length) return;
-      var title = isTime ? g + " 年代" : g;
+      var title = state.view === "time" ? g + " 年代" : g;
       html += '<section class="district-block">' +
         '<div class="group-head"><h2>' + esc(title) + '</h2><span class="count">' + list.length + ' 项</span></div>' +
         table(list) +
       '</section>';
     });
-    listEl.innerHTML = html;
-    toolbarNote.textContent = isTime ? data.length + " 项 · 按刊宪时间" : data.length + " 项 · " + TYPES.length + " 类";
-    noteEl.textContent = isTime
-      ? "按刊宪时间倒序排列；同一年内按日期先后。"
-      : "按类型归档，同一类型内按刊宪时间倒序。";
+    return html;
+  }
+
+  function renderRegion() {
+    var html = "";
+    REGIONS.forEach(function (region) {
+      if (state.filter !== "all" && state.filter !== String(region)) return;
+      var list = data.filter(function (it) { return it.region === region; });
+      if (!list.length) return;
+      html += '<section class="district-block">' +
+        '<div class="group-head"><h2>' + esc(region) + '</h2><span class="count">' + list.length + ' 项</span></div>';
+      var planMap = {};
+      list.forEach(function (it) {
+        var p = it.planning || "未定";
+        (planMap[p] = planMap[p] || []).push(it);
+      });
+      Object.keys(planMap).sort(function (a, b) {
+        return planMap[b].length - planMap[a].length || a.localeCompare(b, "zh");
+      }).forEach(function (p) {
+        html += '<h3 class="sg-subhead">' + esc(p) + ' <span>' + planMap[p].length + ' 项</span></h3>' +
+          table(planMap[p]);
+      });
+      html += '</section>';
+    });
+    return html;
+  }
+
+  function render() {
+    if (state.view === "region") {
+      listEl.innerHTML = renderRegion();
+      toolbarNote.textContent = data.length + " 项 · 5 个区域";
+      noteEl.textContent = "按 5 个规划区域排列，规划区作二级小标题；同组内按刊宪时间倒序。";
+    } else {
+      listEl.innerHTML = renderFlat(groupsFor(state.view));
+      toolbarNote.textContent = state.view === "type" ? data.length + " 项 · " + TYPES.length + " 类" : data.length + " 项 · 按刊宪时间";
+      noteEl.textContent = state.view === "type"
+        ? "按类型归档，同一类型内按刊宪时间倒序。"
+        : "按刊宪时间倒序排列；同一年内按日期先后。";
+    }
   }
 
   function setView(view, push) {
-    if (view !== "time" && view !== "type") view = "time";
+    if (view !== "time" && view !== "type" && view !== "region") view = "time";
     state.view = view;
     state.filter = "all";
     buttons.forEach(function (b) {
@@ -135,11 +175,11 @@
 
   window.addEventListener("hashchange", function () {
     var h = (window.location.hash || "").replace("#", "");
-    if (h === "time" || h === "type") setView(h, false);
+    if (h === "time" || h === "type" || h === "region") setView(h, false);
   });
 
   var initial = "time";
   var hash = (window.location.hash || "").replace("#", "");
-  if (hash === "time" || hash === "type") initial = hash;
+  if (hash === "time" || hash === "type" || hash === "region") initial = hash;
   setView(initial, false);
 })();

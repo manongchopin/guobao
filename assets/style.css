@@ -3806,3 +3806,14 @@ a.wr-row:hover .wr-n { color: var(--red); }
 }
 
 .region-note { margin: 14px 0 0; font-size: 11.5px; line-height: 1.8; color: var(--ink-3); }
+
+/* 新加坡国家古迹 · 区域二级标题 */
+.sg-subhead {
+  margin: 26px 0 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--line);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.sg-subhead span { margin-left: 8px; font-size: 9px; font-weight: 400; color: var(--ink-3); }
