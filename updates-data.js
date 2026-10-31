@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-31",
     type: "档案",
+    title: "衢州市文物保护单位（56 条）",
+    note: "四批 · 第一、二批待补 · PDF",
+    href: "files/quzhou-municipal-list.pdf"
+  },
+  {
+    date: "2026-10-31",
+    type: "档案",
     title: "湖州市文物保护单位（186 条）",
     note: "九批 · 含升级/撤销 · PDF",
     href: "files/huzhou-municipal-list.pdf"
