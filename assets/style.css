@@ -3753,3 +3753,17 @@ a.wr-row:hover .wr-n { color: var(--red); }
 .bm-score { font-size: 8px; line-height: 1.2; color: var(--red); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
 
 .bm-people.is-wca .bm-name { max-width: 78px; }
+
+/* 收藏长条 · 非排名条目 */
+.bm-map-tag {
+  display: inline-flex; align-items: center;
+  padding: 7px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 10px; letter-spacing: 0.08em; color: var(--ink-3);
+  background: transparent;
+}
+.bm-side.is-plain { justify-content: flex-end; padding-right: 40px; }
+@media (max-width: 760px) {
+  .bm-side.is-plain { justify-content: flex-start; padding-right: 0; }
+}

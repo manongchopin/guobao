@@ -159,6 +159,7 @@
   function people(it) {
     if (it.dataKey === "go") return goPeople();
     if (it.dataKey === "wca") return wcaPeople();
+    if (it.dataKey === "rail") return '<span class="bm-map-tag">在线地图 · 全国路网</span>';
     return "";
   }
 
@@ -191,7 +192,7 @@
         '<span class="bm-no">' + n + '</span>' +
         '<span class="bm-text"><span class="bm-title">' + esc(it.title) + '</span>' +
         '<span class="bm-desc">' + esc(it.desc) + '</span></span>' +
-        '<span class="bm-side">' + people(it) +
+        '<span class="bm-side' + (it.dataKey === 'rail' ? ' is-plain' : '') + '">' + people(it) +
         '<span class="bm-arrow">↗</span></span>' +
       '</a>';
     }).join("");
