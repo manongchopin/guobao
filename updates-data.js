@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-01",
     type: "档案",
+    title: "第七批完整公文（128页）",
+    note: "1943处 + 47合并 · 附录10页",
+    href: "files/seventh-batch-2013-scan.pdf"
+  },
+  {
+    date: "2026-11-01",
+    type: "档案",
     title: "安江农校纪念园增补第六批",
     note: "国函〔2009〕97号 · 原件待核",
     href: "sixth-batch-anjiang.html"
