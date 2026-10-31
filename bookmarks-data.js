@@ -1,6 +1,12 @@
 /* 我的收藏：常用网站与资料库
-   目前为空，等待录入。
-   新增站点时，复制一条对象即可：
-   { title: "标题", url: "https://…", desc: "一句话说明", cat: "分类", tags: ["标签"] }
-   分类可先用：本站、官方、资料、工具，也可以按你的习惯新增。 */
-window.BOOKMARKS = [];
+   当前按加入顺序编号；新增站点时在数组末尾追加一条即可：
+   { title: "标题", url: "https://…", desc: "一句话说明", cat: "分类", tags: ["标签"] } */
+window.BOOKMARKS = [
+  {
+    title: "Go Ratings",
+    url: "https://www.goratings.org/en/",
+    desc: "围棋等级分与世界排名，按历史与当前榜单查询。",
+    cat: "围棋",
+    tags: ["围棋", "等级分", "排名", "Go"]
+  }
+];

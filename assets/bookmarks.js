@@ -58,13 +58,14 @@
 
   function render() {
     var list = data.filter(match);
-    grid.innerHTML = list.map(function (it) {
-      return '<a class="bm-card" href="' + esc(it.url) + '" target="_blank" rel="noopener">' +
-        '<span class="bm-top"><span class="bm-mark">' + esc(monogram(it)) + '</span>' +
-        '<span class="bm-cat">' + esc(it.cat) + '</span></span>' +
-        '<span class="bm-title">' + esc(it.title) + '</span>' +
-        '<span class="bm-desc">' + esc(it.desc) + '</span>' +
-        '<span class="bm-foot"><span class="bm-domain">' + esc(domain(it.url)) + '</span><span class="bm-arrow">↗</span></span>' +
+    grid.innerHTML = list.map(function (it, i) {
+      var n = String(data.indexOf(it) + 1).padStart(2, "0");
+      return '<a class="bm-row" href="' + esc(it.url) + '" target="_blank" rel="noopener">' +
+        '<span class="bm-no">' + n + '</span>' +
+        '<span class="bm-text"><span class="bm-title">' + esc(it.title) + '</span>' +
+        '<span class="bm-desc">' + esc(it.desc) + '</span></span>' +
+        '<span class="bm-side"><span class="bm-domain">' + esc(domain(it.url)) + '</span>' +
+        '<span class="bm-arrow">↗</span></span>' +
       '</a>';
     }).join("");
     if (!data.length) {
