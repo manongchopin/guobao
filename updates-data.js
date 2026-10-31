@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-31",
     type: "档案",
+    title: "第二批国保原档（部分）",
+    note: "4 页 · 前22处 · OCR 校读",
+    href: "files/second-batch-1982-official.pdf"
+  },
+  {
+    date: "2026-10-31",
+    type: "档案",
     title: "丽水市文物保护单位（24 条）",
     note: "六批 · 莲都区 · PDF",
     href: "files/lishui-municipal-list.pdf"
