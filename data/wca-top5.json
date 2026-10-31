@@ -1,0 +1,46 @@
+{
+  "updated": "2026-10-31T06:01:18.425Z",
+  "source": "https://www.worldcubeassociation.org/results/rankings/333/single?",
+  "players": [
+    {
+      "rank": 1,
+      "name": "Xuanyi Geng",
+      "nameZh": "耿暄一",
+      "result": "2.51",
+      "country": "cn",
+      "personId": "2023GENG02"
+    },
+    {
+      "rank": 2,
+      "name": "Yang Pin Xiu",
+      "nameZh": "杨品修",
+      "result": "2.74",
+      "country": "hk",
+      "personId": "2023XIUY01"
+    },
+    {
+      "rank": 3,
+      "name": "Teodor Zajder",
+      "nameZh": "Teodor Zajder",
+      "result": "2.76",
+      "country": "pl",
+      "personId": "2021ZAJD03"
+    },
+    {
+      "rank": 4,
+      "name": "Yiheng Wang",
+      "nameZh": "王艺衡",
+      "result": "2.77",
+      "country": "cn",
+      "personId": "2019WANY36"
+    },
+    {
+      "rank": 5,
+      "name": "Max Park",
+      "nameZh": "Max Park",
+      "result": "3.13",
+      "country": "us",
+      "personId": "2012PARK03"
+    }
+  ]
+}

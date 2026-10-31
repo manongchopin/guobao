@@ -26,7 +26,9 @@
   var WCA_FALLBACK = [
     { rank: 1, name: "Xuanyi Geng", nameZh: "耿暄一", result: "2.51", country: "cn" },
     { rank: 2, name: "Yang Pin Xiu", nameZh: "杨品修", result: "2.74", country: "hk" },
-    { rank: 3, name: "Teodor Zajder", nameZh: "Teodor Zajder", result: "2.76", country: "pl" }
+    { rank: 3, name: "Teodor Zajder", nameZh: "Teodor Zajder", result: "2.76", country: "pl" },
+    { rank: 4, name: "Yiheng Wang", nameZh: "王艺衡", result: "2.77", country: "cn" },
+    { rank: 5, name: "Max Park", nameZh: "Max Park", result: "3.13", country: "us" }
   ];
   var wcaPlayers = WCA_FALLBACK;
   var wcaPhotos = {};
@@ -51,14 +53,14 @@
     return {
       kr: "images/flags/kr.svg", cn: "images/flags/cn.svg",
       jp: "images/flags/jp.svg", hk: "images/flags/hk.svg",
-      pl: "images/flags/pl.svg"
+      pl: "images/flags/pl.svg", us: "images/flags/us.svg"
     }[code] || "";
   }
 
   function flagAlt(code) {
     return {
       kr: "韩国国旗", cn: "中国国旗", jp: "日本国旗",
-      hk: "香港特别行政区区旗", pl: "波兰国旗"
+      hk: "香港特别行政区区旗", pl: "波兰国旗", us: "美国国旗"
     }[code] || "国旗";
   }
 
@@ -104,7 +106,7 @@
     try {
       var stamp = "?t=" + Date.now();
       var results = await Promise.all([
-        fetch("data/wca-top3.json" + stamp, { cache: "no-store" }),
+        fetch("data/wca-top5.json" + stamp, { cache: "no-store" }),
         fetch("data/wca-players.json" + stamp, { cache: "no-store" })
       ]);
       var r = results[0], p = results[1];
@@ -151,7 +153,7 @@
   }
 
   function wcaPeople() {
-    return peopleBlock("TOP 3", wcaPlayers, wcaPhotos, wcaUpdated, "result");
+    return peopleBlock("TOP 5", wcaPlayers, wcaPhotos, wcaUpdated, "result");
   }
 
   function people(it) {
