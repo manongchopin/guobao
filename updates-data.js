@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-31",
     type: "档案",
+    title: "浙江省级文保 1981 年调整与增补",
+    note: "104 处 + 归并/撤销",
+    href: "zhejiang-provincial-archives.html#adjust-1981"
+  },
+  {
+    date: "2026-10-31",
+    type: "档案",
     title: "浙江省级文保第七批（286 处）",
     note: "原档 + 整理本",
     href: "zhejiang-provincial-archives.html#batch-7"

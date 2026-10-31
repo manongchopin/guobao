@@ -220,7 +220,9 @@ web/
 │   ├── zhejiang-provincial-3-1989-scan.pdf 浙江省级第三批文保原档（10 页）
 │   ├── zhejiang-provincial-3-1989-list.pdf 浙江省级第三批文保整理本（7 页）
 │   ├── zhejiang-provincial-7-2017-scan.pdf 浙江省级第七批文保原档（16 页）
-│   └── zhejiang-provincial-7-2017-list.pdf 浙江省级第七批文保整理本（11 页）
+│   ├── zhejiang-provincial-7-2017-list.pdf 浙江省级第七批文保整理本（11 页）
+│   ├── zhejiang-provincial-adjust-1981-scan.pdf 浙江省级文保 1981 年调整原档（10 页）
+│   └── zhejiang-provincial-adjust-1981-list.pdf 浙江省级文保 1981 年调整整理本（7 页）
 ├── assets/
 │   ├── style.css
 │   ├── app.js          清单页逻辑

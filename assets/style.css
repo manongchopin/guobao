@@ -3508,3 +3508,11 @@ a.wr-row:hover .wr-n { color: var(--red); }
   transition: border-color 0.16s ease, color 0.16s ease;
 }
 .prov-index a:hover { border-color: var(--red); color: var(--red); }
+
+/* 浙江省级文保档案 · 调整与增补 */
+.adjust-head {
+  display: flex; justify-content: space-between;
+  margin: 30px 0 0; padding-top: 16px;
+  border-top: 1px solid var(--ink);
+  font-size: 9px; letter-spacing: 0.16em; color: var(--ink-3);
+}
