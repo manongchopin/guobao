@@ -23,6 +23,15 @@
   var goPhotos = {};
   var goUpdated = "";
 
+  var WCA_FALLBACK = [
+    { rank: 1, name: "Xuanyi Geng", nameZh: "耿暄一", result: "2.51", country: "cn" },
+    { rank: 2, name: "Yang Pin Xiu", nameZh: "杨品修", result: "2.74", country: "hk" },
+    { rank: 3, name: "Teodor Zajder", nameZh: "Teodor Zajder", result: "2.76", country: "pl" }
+  ];
+  var wcaPlayers = WCA_FALLBACK;
+  var wcaPhotos = {};
+  var wcaUpdated = "";
+
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
@@ -39,11 +48,18 @@
   }
 
   function flagSrc(code) {
-    return { kr: "images/flags/kr.svg", cn: "images/flags/cn.svg", jp: "images/flags/jp.svg", tw: "images/flags/tw.svg" }[code] || "";
+    return {
+      kr: "images/flags/kr.svg", cn: "images/flags/cn.svg",
+      jp: "images/flags/jp.svg", hk: "images/flags/hk.svg",
+      pl: "images/flags/pl.svg"
+    }[code] || "";
   }
 
   function flagAlt(code) {
-    return { kr: "韩国国旗", cn: "中国国旗", jp: "日本国旗", tw: "中华台北旗" }[code] || "国旗";
+    return {
+      kr: "韩国国旗", cn: "中国国旗", jp: "日本国旗",
+      hk: "香港特别行政区区旗", pl: "波兰国旗"
+    }[code] || "国旗";
   }
 
   function flagFallback(code) {
@@ -84,31 +100,64 @@
     render();
   }
 
+  async function loadWca() {
+    try {
+      var stamp = "?t=" + Date.now();
+      var results = await Promise.all([
+        fetch("data/wca-top3.json" + stamp, { cache: "no-store" }),
+        fetch("data/wca-players.json" + stamp, { cache: "no-store" })
+      ]);
+      var r = results[0], p = results[1];
+      if (!r.ok) throw new Error("wca " + r.status);
+      var d = await r.json();
+      if (Array.isArray(d.players) && d.players.length) {
+        wcaPlayers = d.players;
+        wcaUpdated = d.updated || "";
+      }
+      if (p.ok) wcaPhotos = await p.json();
+    } catch (e) {
+      console.warn("WCA fallback:", e.message);
+    }
+    render();
+  }
+
+  function peopleBlock(topLabel, players, photos, updated, scoreKey) {
+    var label = players.map(function (p) { return p.rank + " " + (p.nameZh || p.name); }).join("、");
+    var date = updatedText(updated);
+    var items = players.map(function (p) {
+      var db = photos[p.name] || {};
+      var name = p.nameZh || db.nameZh || p.name;
+      var photo = db.photo || "";
+      var face = '<span class="bm-face">' + esc(name.charAt(0)) + '</span>' +
+        (photo ? '<img class="bm-photo" src="' + esc(photo) + '" alt="' + esc(name) + '" loading="lazy" onerror="this.remove()">' : '');
+      var fsrc = flagSrc(p.country);
+      var flag = fsrc
+        ? '<img class="bm-flag" src="' + fsrc + '" alt="' + esc(flagAlt(p.country)) + '" loading="lazy">'
+        : '<span class="bm-flag is-text">' + esc(flagFallback(p.country)) + '</span>';
+      var score = scoreKey && p[scoreKey] ? '<span class="bm-score">' + esc(p[scoreKey]) + '</span>' : '';
+      var title = '第 ' + p.rank + ' · ' + name + (p.elo ? ' · ' + p.elo : '') + (scoreKey && p[scoreKey] ? ' · ' + p[scoreKey] : '');
+      return '<span class="bm-person" title="' + esc(title) + '">' +
+        '<span class="bm-avatar">' + face + flag + '</span>' +
+        '<span class="bm-name">' + esc(name) + '</span>' + score +
+      '</span>';
+    }).join("");
+    return '<span class="bm-people' + (scoreKey ? ' is-wca' : '') + '" aria-label="' + esc(label) + '">' +
+      '<span class="bm-top5"><b>' + topLabel + '</b>' + (date ? '<em>' + esc(date) + '</em>' : '') + '</span>' +
+      items + '</span>';
+  }
+
   function goPeople() {
-    var label = goPlayers.map(function (p) { return p.rank + " " + (p.nameZh || p.name); }).join("、");
-    var date = updatedText(goUpdated);
-    return '<span class="bm-people" aria-label="当前等级分前五：' + esc(label) + '">' +
-      '<span class="bm-top5"><b>TOP 5</b>' + (date ? '<em>' + esc(date) + '</em>' : '') + '</span>' +
-      goPlayers.map(function (p) {
-        var db = goPhotos[p.name] || {};
-        var name = p.nameZh || db.nameZh || p.name;
-        var photo = db.photo || "";
-        var face = '<span class="bm-face">' + esc(name.charAt(0)) + '</span>' +
-          (photo ? '<img class="bm-photo" src="' + esc(photo) + '" alt="' + esc(name) + '" loading="lazy" onerror="this.remove()">' : '');
-        var fsrc = flagSrc(p.country);
-        var flag = fsrc
-          ? '<img class="bm-flag" src="' + fsrc + '" alt="' + esc(flagAlt(p.country)) + '" loading="lazy">'
-          : '<span class="bm-flag is-text">' + esc(flagFallback(p.country)) + '</span>';
-        return '<span class="bm-person" title="第 ' + p.rank + ' · ' + esc(name) + ' · ' + p.elo + '">' +
-          '<span class="bm-avatar">' + face + flag +
-          '</span>' +
-          '<span class="bm-name">' + esc(name) + '</span>' +
-        '</span>';
-      }).join("") + '</span>';
+    return peopleBlock("TOP 5", goPlayers, goPhotos, goUpdated, "");
+  }
+
+  function wcaPeople() {
+    return peopleBlock("TOP 3", wcaPlayers, wcaPhotos, wcaUpdated, "result");
   }
 
   function people(it) {
-    return it.dataKey === "go" ? goPeople() : "";
+    if (it.dataKey === "go") return goPeople();
+    if (it.dataKey === "wca") return wcaPeople();
+    return "";
   }
 
   var cats = ["全部"];
@@ -173,4 +222,5 @@
   renderChips();
   render();
   loadGo();
+  loadWca();
 })();

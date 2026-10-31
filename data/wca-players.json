@@ -1,0 +1,6 @@
+{
+  "_readme": "WCA 魔方选手资料库：key 为 WCA 英文名；nameZh 为中文名，photo 为头像路径（留空则显示姓氏）。",
+  "Xuanyi Geng": { "nameZh": "耿暄一", "photo": "" },
+  "Yang Pin Xiu": { "nameZh": "杨品修", "photo": "" },
+  "Teodor Zajder": { "nameZh": "Teodor Zajder", "photo": "" }
+}
