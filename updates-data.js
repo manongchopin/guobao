@@ -1,5 +1,12 @@
 window.SITE_UPDATES = [
   {
+    date: "2026-11-01",
+    type: "页面",
+    title: "1982 年文物保护法校订本",
+    note: "全文 · 草案说明 · 2024 对照",
+    href: "wenwu-baohufa-1982.html"
+  },
+  {
     date: "2026-10-31",
     type: "档案",
     title: "1982 年文物保护法公报原档",
