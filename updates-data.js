@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-31",
     type: "档案",
+    title: "浙江省级文保第七批（286 处）",
+    note: "原档 + 整理本",
+    href: "zhejiang-provincial-archives.html#batch-7"
+  },
+  {
+    date: "2026-10-31",
+    type: "档案",
     title: "浙江省级文保第三批（118 处）",
     note: "原档 + 整理本",
     href: "zhejiang-provincial-archives.html#batch-3"
