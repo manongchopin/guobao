@@ -3703,7 +3703,7 @@ a.wr-row:hover .wr-n { color: var(--red); }
 .bm-top5 { display: flex; flex-direction: column; gap: 2px; padding-top: 3px; margin-right: 2px; font-size: 8.5px; letter-spacing: 0.14em; color: var(--ink-3); white-space: nowrap; }
 .bm-top5 b { font-weight: 500; }
 .bm-top5 em { font-style: normal; font-size: 7.5px; letter-spacing: 0.04em; color: var(--ink-4); }
-.bm-person { display: flex; flex-direction: column; align-items: center; gap: 3px; width: 72px; }
+.bm-person { display: flex; flex-direction: column; align-items: center; gap: 3px; width: 52px; }
 .bm-avatar {
   position: relative;
   width: 40px; height: 40px;
@@ -3715,7 +3715,7 @@ a.wr-row:hover .wr-n { color: var(--red); }
 }
 .bm-face { font-family: var(--serif); font-size: 16px; line-height: 1; color: var(--ink); }
 .bm-photo { position: absolute; inset: -2px; width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
-.bm-name { max-width: 58px; overflow: hidden; text-overflow: ellipsis; font-size: 9px; line-height: 1.2; color: var(--ink-2); white-space: nowrap; }
+.bm-name { max-width: 58px; overflow: hidden; text-overflow: ellipsis; font-size: 8.5px; line-height: 1.2; color: var(--ink-2); white-space: nowrap; }
 .bm-flag {
   position: absolute; left: -4px; top: -4px;
   width: 19px; height: 13px;
@@ -3734,7 +3734,7 @@ a.wr-row:hover .wr-n { color: var(--red); }
 }
 @media (max-width: 1180px) {
   .bm-row { grid-template-columns: 54px minmax(0, 1fr) 410px; }
-  .bm-person { width: 60px; }
+  .bm-person { width: 52px; }
   .bm-people.is-wca .bm-name { max-width: 68px; }
 }
 @media (max-width: 760px) {
@@ -3750,9 +3750,9 @@ a.wr-row:hover .wr-n { color: var(--red); }
   .bm-top5 em { display: none; }
 }
 
-.bm-score { font-size: 8px; line-height: 1.2; color: var(--red); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+.bm-score { font-size: 7.5px; line-height: 1.2; color: var(--red); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
 
-.bm-people.is-wca .bm-name { max-width: 78px; }
+.bm-people.is-wca .bm-name { max-width: 58px; }
 
 /* 收藏长条 · 非排名条目 */
 .bm-map-tag {
