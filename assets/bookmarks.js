@@ -38,12 +38,16 @@
     }
   }
 
-  function flagChar(code) {
-    return { kr: "韩", cn: "中", jp: "日", tw: "台" }[code] || String(code || "").toUpperCase();
+  function flagSrc(code) {
+    return { kr: "images/flags/kr.svg", cn: "images/flags/cn.svg", jp: "images/flags/jp.svg", tw: "images/flags/tw.svg" }[code] || "";
   }
 
-  function flagClass(code) {
-    return code === "kr" ? "is-kr" : code === "cn" ? "is-cn" : code === "jp" ? "is-jp" : "";
+  function flagAlt(code) {
+    return { kr: "韩国国旗", cn: "中国国旗", jp: "日本国旗", tw: "中华台北旗" }[code] || "国旗";
+  }
+
+  function flagFallback(code) {
+    return String(code || "").toUpperCase();
   }
 
   function updatedText(iso) {
@@ -91,9 +95,12 @@
         var photo = db.photo || "";
         var face = '<span class="bm-face">' + esc(name.charAt(0)) + '</span>' +
           (photo ? '<img class="bm-photo" src="' + esc(photo) + '" alt="' + esc(name) + '" loading="lazy" onerror="this.remove()">' : '');
+        var fsrc = flagSrc(p.country);
+        var flag = fsrc
+          ? '<img class="bm-flag" src="' + fsrc + '" alt="' + esc(flagAlt(p.country)) + '" loading="lazy">'
+          : '<span class="bm-flag is-text">' + esc(flagFallback(p.country)) + '</span>';
         return '<span class="bm-person" title="第 ' + p.rank + ' · ' + esc(name) + ' · ' + p.elo + '">' +
-          '<span class="bm-avatar">' + face +
-            '<span class="bm-flag ' + flagClass(p.country) + '">' + esc(flagChar(p.country)) + '</span>' +
+          '<span class="bm-avatar">' + face + flag +
           '</span>' +
           '<span class="bm-name">' + esc(name) + '</span>' +
         '</span>';

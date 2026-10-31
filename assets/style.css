@@ -3718,16 +3718,21 @@ a.wr-row:hover .wr-n { color: var(--red); }
 .bm-photo { position: absolute; inset: -2px; width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
 .bm-name { font-size: 9px; line-height: 1.2; color: var(--ink-2); white-space: nowrap; }
 .bm-flag {
-  position: absolute; right: -3px; bottom: -3px;
-  width: 14px; height: 14px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: 50%;
-  color: #fff; font-size: 8px; line-height: 1;
+  position: absolute; left: -4px; top: -4px;
+  width: 19px; height: 13px;
+  border-radius: 2px;
+  object-fit: cover;
   border: 1.5px solid var(--paper-2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+  background: #fff;
 }
-.bm-flag.is-cn { background: var(--red); }
-.bm-flag.is-kr { background: #27509b; }
-.bm-flag.is-jp { background: #8a3b3b; }
+.bm-flag.is-text {
+  display: flex; align-items: center; justify-content: center;
+  width: 15px; height: 15px;
+  border-radius: 50%;
+  background: var(--ink); color: var(--paper);
+  font-size: 7px; line-height: 1;
+}
 @media (max-width: 1200px) {
   .bm-side .bm-domain { display: none; }
 }
