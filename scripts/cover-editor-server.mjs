@@ -12,6 +12,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const PORT = 8787;
 const OUT = path.join(ROOT, "data", "cover-design.json");
+const TEXTS = path.join(ROOT, "data", "cover-texts.json");
 const MIME = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
@@ -30,7 +31,7 @@ const clamp = (n, lo, hi, fallback) => {
   return Number.isFinite(n) ? Math.min(hi, Math.max(lo, n)) : fallback;
 };
 
-function clean(input) {
+function styleOf(input) {
   const s = input && typeof input === "object" ? input : {};
   return {
     fontFamily: ["PingFang SC", "Songti SC", "Noto Serif SC", "Hiragino Sans GB"].includes(s.fontFamily)
@@ -43,6 +44,22 @@ function clean(input) {
     bottomPadding: clamp(s.bottomPadding, 8, 40, 16),
     textColor: /^#[0-9a-f]{6}$/i.test(s.textColor || "") ? s.textColor : "#222222"
   };
+}
+
+function clean(input) {
+  const body = input && typeof input === "object" ? input : {};
+  const style = styleOf(body.style || body);
+  const documents = {};
+  if (body.documents && typeof body.documents === "object") {
+    for (const [id, doc] of Object.entries(body.documents)) {
+      if (!/^[a-zA-Z0-9-]+$/.test(id)) continue;
+      if (!doc || typeof doc !== "object") continue;
+      const heading = String(doc.heading ?? "").slice(0, 80);
+      const text = String(doc.text ?? "").slice(0, 6000);
+      if (heading || text) documents[id] = { heading, text };
+    }
+  }
+  return { style, documents };
 }
 
 const server = http.createServer(async (req, res) => {
@@ -60,6 +77,17 @@ const server = http.createServer(async (req, res) => {
       await writeFile(OUT, JSON.stringify(data, null, 2) + "\n", "utf8");
       res.writeHead(200, { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" });
       res.end(JSON.stringify({ ok: true, path: "data/cover-design.json", data }));
+      return;
+    }
+    if (req.method === "GET" && url.pathname === "/api/texts") {
+      try {
+        const data = await readFile(TEXTS, "utf8");
+        res.writeHead(200, { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" });
+        res.end(data);
+      } catch {
+        res.writeHead(404, { "content-type": "application/json; charset=utf-8" });
+        res.end(JSON.stringify({ ok: false }));
+      }
       return;
     }
     if (req.method === "GET" && url.pathname === "/api/latest") {
@@ -95,4 +123,5 @@ const server = http.createServer(async (req, res) => {
 server.listen(PORT, "127.0.0.1", () => {
   console.log(`Cover editor: http://127.0.0.1:${PORT}/cover-editor.html`);
   console.log(`Save file: data/cover-design.json`);
+  console.log(`Texts: data/cover-texts.json`);
 });

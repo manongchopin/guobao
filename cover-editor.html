@@ -46,6 +46,9 @@
   .status.ok{color:#2f6b3a}
   .status.err{color:#a8402f}
   .file{font-size:10px;color:#999;margin-top:8px;word-break:break-all}
+  select#document,input.text,textarea{width:100%;border:1px solid var(--line);background:#fff;color:var(--ink);padding:7px 8px;font:inherit;font-size:11px}
+  textarea{height:150px;resize:vertical;line-height:1.65}
+  .tip{font-size:10px;line-height:1.6;color:#999;margin:5px 0 0}
   @media(max-width:900px){.workspace{grid-template-columns:1fr}.panel{position:static}.frame{transform-origin:top center}}
 </style>
 </head>
@@ -63,9 +66,7 @@
         <p class="source">据《中华人民共和国国务院公报》1961 年第 4 号（总号 234）第 79—88 页扫描件整理</p>
         <div class="copyright" id="copyright">
           <h2 id="copyHeading">版权说明</h2>
-          <p>原始资料：中华人民共和国国务院公报 1961 年第 4 号（总号 234），国务院 1961 年 3 月 4 日《国务院关于公布第一批全国重点文物保护单位的通知》。</p>
-          <p>本整理版由 DeepSeek 与 chopinfisher 共同整理，DeepSeek 负责抓取、数据整理与版面生成；chopinfisher 负责核校、补充与发布。</p>
-          <p>整理版著作权归整理者共同所有；原始内容著作权归原公告单位。仅供个人学习、研究与旅行参考，转载或引用请注明来源。</p>
+          <div id="copyBody"></div>
         </div>
         <div class="paper-foot"><span>整理版 2026 年 10 月</span><span>原文 1961 年 3 月 4 日</span></div>
       </div>
@@ -73,7 +74,8 @@
   </div>
   <aside class="panel">
     <h2>版权块参数</h2>
-    <p class="hint">拖动参数，左边 A4 预览会实时变化。这里只保存版权块的样式，文字内容仍由各份文档自己决定。</p>
+    <p class="hint">拖动参数，左边 A4 预览会实时变化。封面标题为示例，只调版权块；每份文档的文字单独保存，样式共用。</p>
+    <div class="field"><label>编辑文档 <output id="docOut">—</output></label><select id="document"></select></div>
     <div class="field"><label>字体 <output id="fontOut">PingFang SC</output></label>
       <select id="fontFamily">
         <option>PingFang SC</option><option>Songti SC</option><option>Noto Serif SC</option><option>Hiragino Sans GB</option>
@@ -90,6 +92,8 @@
       <div class="field"><label>下边距 <output id="bottomOut">16 mm</output></label><input id="bottomPadding" type="range" min="8" max="40" step="0.5" value="16"></div>
     </div>
     <div class="field"><label>文字颜色 <output id="colorOut">#222222</output></label><input id="textColor" type="color" value="#222222"></div>
+    <div class="field"><label>版权标题</label><input class="text" id="headingText" value="版权说明"></div>
+    <div class="field"><label>版权正文 <output id="charCount">0 字</output></label><textarea id="bodyText"></textarea><p class="tip">段落之间空一行；只保存当前选中的文档，不会覆盖其他 PDF。</p></div>
     <div class="actions"><button id="save">保存到项目</button><button class="ghost" id="reset">恢复默认</button></div>
     <div class="status" id="status">尚未保存。</div>
     <div class="file">保存位置：data/cover-design.json</div>
@@ -98,13 +102,20 @@
 <script>
 (function(){
   var DEFAULTS={fontFamily:"PingFang SC",headingSize:9.5,bodySize:8.8,lineHeight:1.75,paragraphGap:2.2,topGap:7,bottomPadding:16,textColor:"#222222"};
-  var ids=["fontFamily","headingSize","bodySize","lineHeight","paragraphGap","topGap","bottomPadding","textColor"];
+  var styleIds=["fontFamily","headingSize","bodySize","lineHeight","paragraphGap","topGap","bottomPadding","textColor"];
   var paper=document.getElementById("paper"), copy=document.getElementById("copyright");
+  var copyHeading=document.getElementById("copyHeading"), copyBody=document.getElementById("copyBody");
+  var docSel=document.getElementById("document"), headingText=document.getElementById("headingText"), bodyText=document.getElementById("bodyText");
   var statusEl=document.getElementById("status");
+  var state={style:Object.assign({},DEFAULTS),docs:[],overrides:{},current:null};
+
   function val(id){var el=document.getElementById(id);return el.type==="range"?Number(el.value):el.value}
-  function apply(){
-    var s={fontFamily:val("fontFamily"),headingSize:val("headingSize"),bodySize:val("bodySize"),lineHeight:val("lineHeight"),paragraphGap:val("paragraphGap"),topGap:val("topGap"),bottomPadding:val("bottomPadding"),textColor:val("textColor")};
-    paper.style.fontFamily=s.fontFamily;
+  function esc(t){return String(t==null?"":t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  function currentStyle(){return {fontFamily:val("fontFamily"),headingSize:val("headingSize"),bodySize:val("bodySize"),lineHeight:val("lineHeight"),paragraphGap:val("paragraphGap"),topGap:val("topGap"),bottomPadding:val("bottomPadding"),textColor:val("textColor")}}
+
+  function applyStyle(){
+    var s=currentStyle();
+    copy.style.fontFamily=s.fontFamily;
     copy.style.setProperty("--copy-h",(s.headingSize*1.333)+"px");
     copy.style.setProperty("--copy-b",(s.bodySize*1.333)+"px");
     copy.style.setProperty("--copy-lh",s.lineHeight);
@@ -122,24 +133,82 @@
     document.getElementById("colorOut").textContent=s.textColor;
     return s;
   }
-  ids.forEach(function(id){document.getElementById(id).addEventListener("input",apply)});
-  function set(s){ids.forEach(function(id){document.getElementById(id).value=s[id]}) ; apply()}
-  document.getElementById("reset").addEventListener("click",function(){set(DEFAULTS);statusEl.textContent="已恢复默认值，尚未保存。";statusEl.className="status"});
+
+  function renderText(){
+    var heading=headingText.value.trim()||"版权说明";
+    var text=bodyText.value;
+    copyHeading.textContent=heading;
+    var parts=text.split(/\n{2,}/).map(function(x){return x.trim()}).filter(Boolean);
+    copyBody.innerHTML=parts.map(function(x){return "<p>"+esc(x).replace(/\n/g,"<br>")+"</p>"}).join("");
+    document.getElementById("charCount").textContent=text.replace(/\s/g,"").length+" 字";
+  }
+
+  function setControls(s){
+    styleIds.forEach(function(id){if(s[id]!==undefined)document.getElementById(id).value=s[id]});
+    applyStyle();
+  }
+  function docById(id){return state.docs.filter(function(d){return d.id===id})[0]}
+  function setDoc(id){
+    var d=docById(id); if(!d)return;
+    state.current=id;
+    var o=state.overrides[id];
+    headingText.value=(o&&o.heading)||d.heading||"版权说明";
+    bodyText.value=(o&&o.text)||d.text||"";
+    document.getElementById("docOut").textContent=d.title||id;
+    renderText();
+  }
+  function markDirty(){statusEl.textContent="有未保存修改。";statusEl.className="status"}
+
+  styleIds.forEach(function(id){document.getElementById(id).addEventListener("input",function(){applyStyle();markDirty()})});
+  headingText.addEventListener("input",function(){renderText();markDirty()});
+  bodyText.addEventListener("input",function(){renderText();markDirty()});
+  docSel.addEventListener("change",function(){setDoc(docSel.value);statusEl.textContent="已切换文档，尚未保存。";statusEl.className="status"});
+
+  document.getElementById("reset").addEventListener("click",function(){
+    setControls(DEFAULTS);
+    var d=docById(state.current);
+    if(d){headingText.value=d.heading||"版权说明";bodyText.value=d.text||"";renderText()}
+    statusEl.textContent="已恢复当前文档的默认值，尚未保存。";statusEl.className="status";
+  });
+
   document.getElementById("save").addEventListener("click",async function(){
-    var btn=this; btn.disabled=true; statusEl.textContent="正在写入项目…"; statusEl.className="status";
+    if(!state.current){statusEl.textContent="没有可保存的文档。";statusEl.className="status err";return}
+    var btn=this;btn.disabled=true;statusEl.textContent="正在写入项目…";statusEl.className="status";
+    state.overrides[state.current]={heading:headingText.value.trim()||"版权说明",text:bodyText.value};
     try{
-      var res=await fetch("/api/save",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(apply())});
-      var d=await res.json();
-      if(!res.ok||!d.ok) throw new Error(d.error||"HTTP "+res.status);
-      statusEl.textContent="已保存。可以告诉我“保存了”，我会读取参数并重新生成 PDF。";
+      var res=await fetch("/api/save",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({style:applyStyle(),documents:state.overrides})});
+      var d=await res.json();if(!res.ok||!d.ok)throw new Error(d.error||"HTTP "+res.status);
+      statusEl.textContent="已保存当前文档。可以告诉我“保存了”，我会读取并重新生成。";
       statusEl.className="status ok";
     }catch(e){
       statusEl.textContent="保存失败："+e.message+"（请确认本机服务已启动，并通过 http://127.0.0.1:8787 打开本页）";
       statusEl.className="status err";
     }finally{btn.disabled=false}
   });
-  fetch("/api/latest").then(function(r){return r.ok?r.json():null}).then(function(d){if(d) set(d)}).catch(function(){});
-  apply();
+
+  async function init(){
+    try{
+      var rs=await Promise.all([fetch("/api/texts"),fetch("/api/latest")]);
+      var texts=rs[0].ok?await rs[0].json():{docs:[]};
+      var latest=rs[1].ok?await rs[1].json():{};
+      state.docs=texts.docs||[];
+      if(latest.style)state.style=latest.style; else if(latest.fontFamily)state.style=latest;
+      state.overrides=latest.documents||{};
+      if(!state.docs.length)throw new Error("没有读到文档清单");
+      docSel.innerHTML="";
+      state.docs.forEach(function(d){
+        var o=document.createElement("option");o.value=d.id;o.textContent=d.title||d.id;docSel.appendChild(o);
+      });
+      setControls(state.style);
+      var startId=state.docs.some(function(d){return d.id==="first-batch-1961"})?"first-batch-1961":state.docs[0].id;
+      docSel.value=startId;
+      setDoc(startId);
+      statusEl.textContent="已载入 "+state.docs.length+" 份文档。修改后点保存。";statusEl.className="status";
+    }catch(e){
+      statusEl.textContent="载入失败："+e.message+"（请通过 http://127.0.0.1:8787 打开本页）";statusEl.className="status err";
+    }
+  }
+  init();
 })();
 </script>
 </body>
