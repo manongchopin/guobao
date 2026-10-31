@@ -56,6 +56,19 @@
     }).join("");
   }
 
+  function people(it) {
+    if (!it.people || !it.people.length) return "";
+    var label = it.people.map(function (p) { return p.rank + " " + p.name; }).join("、");
+    return '<span class="bm-people" aria-label="当前等级分前五：' + esc(label) + '">' +
+      '<span class="bm-top5">TOP 5</span>' +
+      it.people.map(function (p) {
+        return '<span class="bm-player" title="第 ' + p.rank + ' · ' + esc(p.name) + ' · ' + p.elo + '">' +
+          '<span class="bm-face">' + esc(p.name.charAt(0)) + '</span>' +
+          '<span class="bm-flag ' + (p.country === "韩" ? "is-kr" : "is-cn") + '">' + esc(p.country) + '</span>' +
+        '</span>';
+      }).join("") + '</span>';
+  }
+
   function render() {
     var list = data.filter(match);
     grid.innerHTML = list.map(function (it, i) {
@@ -64,7 +77,8 @@
         '<span class="bm-no">' + n + '</span>' +
         '<span class="bm-text"><span class="bm-title">' + esc(it.title) + '</span>' +
         '<span class="bm-desc">' + esc(it.desc) + '</span></span>' +
-        '<span class="bm-side"><span class="bm-domain">' + esc(domain(it.url)) + '</span>' +
+        '<span class="bm-side">' + people(it) +
+        '<span class="bm-domain">' + esc(domain(it.url)) + '</span>' +
         '<span class="bm-arrow">↗</span></span>' +
       '</a>';
     }).join("");

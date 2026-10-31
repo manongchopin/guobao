@@ -5,8 +5,15 @@ window.BOOKMARKS = [
   {
     title: "Go Ratings",
     url: "https://www.goratings.org/en/",
-    desc: "围棋等级分与世界排名，按历史与当前榜单查询。",
+    desc: "围棋等级分与世界排名。当前前五：申真谞、许嘉阳、丁浩、王星昊、柯洁。",
     cat: "围棋",
-    tags: ["围棋", "等级分", "排名", "Go"]
+    tags: ["围棋", "等级分", "排名", "Go"],
+    people: [
+      { name: "申真谞", rank: 1, elo: 3907, country: "韩" },
+      { name: "许嘉阳", rank: 2, elo: 3764, country: "中" },
+      { name: "丁浩", rank: 3, elo: 3737, country: "中" },
+      { name: "王星昊", rank: 4, elo: 3709, country: "中" },
+      { name: "柯洁", rank: 5, elo: 3705, country: "中" }
+    ]
   }
 ];

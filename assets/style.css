@@ -3698,3 +3698,32 @@ a.wr-row:hover .wr-n { color: var(--red); }
   .bm-side { grid-column: 2; justify-content: space-between; }
   .bm-text .bm-title { font-size: 19px; }
 }
+
+/* 收藏长条 · 前五头像组 */
+.bm-people { display: inline-flex; align-items: center; }
+.bm-top5 { font-size: 8.5px; letter-spacing: 0.14em; color: var(--ink-3); margin-right: 11px; white-space: nowrap; }
+.bm-player {
+  position: relative;
+  width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-left: -6px;
+  border-radius: 50%;
+  background: #faf7f0;
+  border: 2px solid var(--paper-2);
+  box-shadow: 0 0 0 1px var(--line);
+}
+.bm-player:first-of-type { margin-left: 0; }
+.bm-face { font-family: var(--serif); font-size: 16px; line-height: 1; color: var(--ink); }
+.bm-flag {
+  position: absolute; right: -3px; bottom: -3px;
+  width: 14px; height: 14px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  color: #fff; font-size: 8px; line-height: 1;
+  border: 1.5px solid var(--paper-2);
+}
+.bm-flag.is-cn { background: var(--red); }
+.bm-flag.is-kr { background: #27509b; }
+@media (max-width: 980px) {
+  .bm-side .bm-domain { display: none; }
+}
