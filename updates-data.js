@@ -3,7 +3,7 @@ window.SITE_UPDATES = [
     date: "2026-11-01",
     type: "档案",
     title: "第四批国保原档（完整）",
-    note: "11 页 · 250 处 · OCR 前6页",
+    note: "11 页 · 250 处 · OCR 全11页",
     href: "files/fourth-batch-1996-official.pdf"
   },
   {
