@@ -3754,3 +3754,12 @@ a.wr-row:hover .wr-n { color: var(--red); }
 
 .bm-people.is-wca .bm-name { max-width: 58px; }
 
+
+/* 收藏长条 · 开发者 */
+.bm-dev { margin-left: auto; display: flex; align-items: center; gap: 9px; padding-right: 4px; }
+.bm-dev-label { font-size: 10px; color: var(--ink-3); white-space: nowrap; }
+.bm-dev-label b { font-weight: 500; color: var(--ink-2); }
+.bm-dev-photo { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); }
+@media (max-width: 760px) {
+  .bm-dev { margin-left: 0; padding-right: 0; }
+}

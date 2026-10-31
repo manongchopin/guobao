@@ -156,6 +156,14 @@
     return peopleBlock("TOP 5", wcaPlayers, wcaPhotos, wcaUpdated, "result");
   }
 
+  function developer(it) {
+    if (!it.developer) return "";
+    return '<span class="bm-dev">' +
+      '<span class="bm-dev-label">开发者：<b>' + esc(it.developer) + '</b></span>' +
+      (it.developerPhoto ? '<img class="bm-dev-photo" src="' + esc(it.developerPhoto) + '" alt="' + esc(it.developer) + '" loading="lazy">' : '') +
+    '</span>';
+  }
+
   function people(it) {
     if (it.dataKey === "go") return goPeople();
     if (it.dataKey === "wca") return wcaPeople();
@@ -191,7 +199,7 @@
         '<span class="bm-no">' + n + '</span>' +
         '<span class="bm-text"><span class="bm-title">' + esc(it.title) + '</span>' +
         '<span class="bm-desc">' + esc(it.desc) + '</span></span>' +
-        '<span class="bm-side">' + people(it) +
+        '<span class="bm-side">' + people(it) + developer(it) +
         '<span class="bm-arrow">↗</span></span>' +
       '</a>';
     }).join("");
