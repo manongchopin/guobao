@@ -9,6 +9,11 @@
     "bottomPadding": 16,
     "textColor": "#222222"
   },
-  "documents": {},
-  "updatedAt": null
+  "documents": {
+    "first-batch-1961": {
+      "heading": "版权说明",
+      "text": "\n\n本整理版由 DeepSeek 与 chopinfisher 共同整理：\nDeepSeek 负责扫描件 OCR、数据整理与版面生成, chopinfisher 负责核校、补充与发布。\n整理版著作权归整理者共同所有；\n原始内容著作权归原公告单位。仅供个人学习、研究与旅行参考，转载或引用请注明来源。"
+    }
+  },
+  "updatedAt": "2026-10-31T14:00:33.051Z"
 }
