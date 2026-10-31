@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-01",
     type: "档案",
+    title: "第六批国保通知残件",
+    note: "7 页 · 名单片段 · 官网全文补校",
+    href: "files/sixth-batch-2006-official-fragment.pdf"
+  },
+  {
+    date: "2026-11-01",
+    type: "档案",
     title: "第五批国保通知原档",
     note: "2 页 · 无名单",
     href: "files/fifth-batch-2001-official.pdf"
