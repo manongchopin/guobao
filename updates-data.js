@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-31",
     type: "档案",
+    title: "1982 年文物保护法公报原档",
+    note: "12 页 · 法律全文 + 草案说明 · OCR",
+    href: "files/wenwu-baohufa-1982-gazette.pdf"
+  },
+  {
+    date: "2026-10-31",
+    type: "档案",
     title: "第三批国保原档（残段）",
     note: "4 页 · 1—8、48—59 · OCR",
     href: "files/third-batch-1988-official.pdf"
