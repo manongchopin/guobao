@@ -3,14 +3,14 @@ window.SITE_UPDATES = [
     date: "2026-11-01",
     type: "档案",
     title: "第五批国保通知原档",
-    note: "2 页 · 无名单 · OCR",
+    note: "2 页 · 无名单",
     href: "files/fifth-batch-2001-official.pdf"
   },
   {
     date: "2026-11-01",
     type: "档案",
     title: "第四批国保原档（完整）",
-    note: "11 页 · 250 处 · OCR 全11页",
+    note: "11 页 · 250 处 · 完整原档",
     href: "files/fourth-batch-1996-official.pdf"
   },
   {
@@ -24,21 +24,21 @@ window.SITE_UPDATES = [
     date: "2026-10-31",
     type: "档案",
     title: "1982 年文物保护法公报原档",
-    note: "12 页 · 法律全文 + 草案说明 · OCR",
+    note: "12 页 · 法律全文 + 草案说明",
     href: "files/wenwu-baohufa-1982-gazette.pdf"
   },
   {
     date: "2026-10-31",
     type: "档案",
     title: "第三批国保原档（完整）",
-    note: "13 页 · 258 处 · OCR",
+    note: "13 页 · 258 处 · 完整原档",
     href: "files/third-batch-1988-official.pdf"
   },
   {
     date: "2026-10-31",
     type: "档案",
     title: "第二批国保原档（完整）",
-    note: "5 页 · 62 处 · OCR 校读",
+    note: "5 页 · 62 处 · 完整原档",
     href: "files/second-batch-1982-official.pdf"
   },
   {
