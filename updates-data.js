@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-31",
     type: "档案",
+    title: "宁波市文物保护单位（62 处）",
+    note: "四批 · PDF",
+    href: "files/ningbo-municipal-list.pdf"
+  },
+  {
+    date: "2026-10-31",
+    type: "档案",
     title: "杭州市级文物相关档案",
     note: "历史建筑 414 · 市保 432 · 文保点 718",
     href: "hangzhou-archives.html"
