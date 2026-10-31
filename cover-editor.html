@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>封面版权块 · 本机排版器</title>
+<style>
+  :root{
+    --bg:#ece8de; --paper:#f5f1e8; --ink:#222; --muted:#777; --line:#d4cdbf; --red:#a8402f;
+    --copy-h:12.7px; --copy-b:11.7px; --copy-lh:1.75; --copy-gap:8.3px; --copy-top:26px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"PingFang SC","Hiragino Sans GB",sans-serif}
+  .top{display:flex;align-items:baseline;justify-content:space-between;padding:18px 28px;border-bottom:1px solid var(--line);background:#f7f4ec}
+  .top b{font-family:"Songti SC",serif;font-size:16px;letter-spacing:.04em}
+  .top span{font-size:11px;color:var(--muted)}
+  .workspace{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:26px;max-width:1280px;margin:0 auto;padding:26px}
+  .stage{min-height:820px;display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:8px 0}
+  .frame{width:540px;height:764px;position:relative;flex:0 0 auto;box-shadow:0 18px 50px rgba(60,48,35,.16)}
+  .paper{width:794px;height:1123px;position:absolute;top:0;left:0;transform:scale(.68);transform-origin:top left;background:var(--paper);padding:98px 91px 60px;display:flex;flex-direction:column;color:var(--ink)}
+  .kicker{font-size:10px;letter-spacing:.18em;color:var(--red);margin:0 0 36px}
+  .paper h1{font-family:"PingFang SC",sans-serif;font-size:36px;line-height:1.35;font-weight:700;margin:0 0 14px}
+  .sub{font-size:14.5px;color:#444;margin:0 0 7px}
+  .meta{font-size:12px;color:#666;margin:0 0 24px}
+  .rule{height:1px;background:#222;margin:0 0 17px}
+  .source{font-size:12px;color:#444;margin:0}
+  .copyright{margin-top:auto;padding-top:var(--copy-top);border-top:1px solid #c9c2b4;color:var(--ink)}
+  .copyright h2{font-size:var(--copy-h);font-weight:600;letter-spacing:.04em;margin:0 0 8px}
+  .copyright p{font-size:var(--copy-b);line-height:var(--copy-lh);margin:0;text-align:justify}
+  .copyright p + p{margin-top:var(--copy-gap)}
+  .paper-foot{position:absolute;left:91px;right:91px;bottom:38px;border-top:1px solid #d8d1c3;padding-top:10px;display:flex;justify-content:space-between;font-size:9px;color:#777}
+  .panel{background:#f7f4ec;border:1px solid var(--line);padding:20px 20px 18px;align-self:start;position:sticky;top:18px}
+  .panel h2{font-family:"Songti SC",serif;font-size:18px;margin:0 0 4px}
+  .panel .hint{font-size:11px;line-height:1.7;color:var(--muted);margin:0 0 18px}
+  .field{margin:0 0 14px}
+  .field label{display:flex;justify-content:space-between;font-size:11px;color:#555;margin:0 0 6px}
+  .field output{font-variant-numeric:tabular-nums;color:var(--ink)}
+  input[type=range]{width:100%;accent-color:var(--red)}
+  select,input[type=color]{width:100%;height:32px;border:1px solid var(--line);background:#fff;color:var(--ink);padding:0 8px;font:inherit;font-size:11px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .actions{display:flex;gap:8px;margin-top:20px}
+  button{flex:1;height:38px;border:1px solid #222;background:#222;color:#fff;font:inherit;font-size:12px;cursor:pointer}
+  button.ghost{background:transparent;color:#222}
+  button:disabled{opacity:.55;cursor:default}
+  .status{min-height:38px;margin-top:12px;font-size:10.5px;line-height:1.6;color:var(--muted)}
+  .status.ok{color:#2f6b3a}
+  .status.err{color:#a8402f}
+  .file{font-size:10px;color:#999;margin-top:8px;word-break:break-all}
+  @media(max-width:900px){.workspace{grid-template-columns:1fr}.panel{position:static}.frame{transform-origin:top center}}
+</style>
+</head>
+<body>
+<div class="top"><b>封面版权块 · 本机排版器</b><span>只调版权块样式 · 保存后写入 data/cover-design.json</span></div>
+<div class="workspace">
+  <div class="stage">
+    <div class="frame">
+      <div class="paper" id="paper">
+        <p class="kicker">STATE COUNCIL GAZETTE · 1961</p>
+        <h1>第一批全国重点<br>文物保护单位名单</h1>
+        <p class="sub">国务院关于公布第一批全国重点文物保护单位的通知</p>
+        <p class="meta">180 处 · 6 类 · 1961 年 3 月 4 日</p>
+        <div class="rule"></div>
+        <p class="source">据《中华人民共和国国务院公报》1961 年第 4 号（总号 234）第 79—88 页扫描件整理</p>
+        <div class="copyright" id="copyright">
+          <h2 id="copyHeading">版权说明</h2>
+          <p>原始资料：中华人民共和国国务院公报 1961 年第 4 号（总号 234），国务院 1961 年 3 月 4 日《国务院关于公布第一批全国重点文物保护单位的通知》。</p>
+          <p>本整理版由 DeepSeek 与 chopinfisher 共同整理，DeepSeek 负责抓取、数据整理与版面生成；chopinfisher 负责核校、补充与发布。</p>
+          <p>整理版著作权归整理者共同所有；原始内容著作权归原公告单位。仅供个人学习、研究与旅行参考，转载或引用请注明来源。</p>
+        </div>
+        <div class="paper-foot"><span>整理版 2026 年 10 月</span><span>原文 1961 年 3 月 4 日</span></div>
+      </div>
+    </div>
+  </div>
+  <aside class="panel">
+    <h2>版权块参数</h2>
+    <p class="hint">拖动参数，左边 A4 预览会实时变化。这里只保存版权块的样式，文字内容仍由各份文档自己决定。</p>
+    <div class="field"><label>字体 <output id="fontOut">PingFang SC</output></label>
+      <select id="fontFamily">
+        <option>PingFang SC</option><option>Songti SC</option><option>Noto Serif SC</option><option>Hiragino Sans GB</option>
+      </select>
+    </div>
+    <div class="row">
+      <div class="field"><label>标题字号 <output id="headingOut">9.5 pt</output></label><input id="headingSize" type="range" min="7" max="14" step="0.1" value="9.5"></div>
+      <div class="field"><label>正文字号 <output id="bodyOut">8.8 pt</output></label><input id="bodySize" type="range" min="6" max="12" step="0.1" value="8.8"></div>
+    </div>
+    <div class="field"><label>行距 <output id="lineOut">1.75</output></label><input id="lineHeight" type="range" min="1.3" max="2.4" step="0.05" value="1.75"></div>
+    <div class="field"><label>段间距 <output id="gapOut">2.2 pt</output></label><input id="paragraphGap" type="range" min="0" max="12" step="0.2" value="2.2"></div>
+    <div class="row">
+      <div class="field"><label>上间距 <output id="topOut">7 pt</output></label><input id="topGap" type="range" min="0" max="30" step="0.5" value="7"></div>
+      <div class="field"><label>下边距 <output id="bottomOut">16 mm</output></label><input id="bottomPadding" type="range" min="8" max="40" step="0.5" value="16"></div>
+    </div>
+    <div class="field"><label>文字颜色 <output id="colorOut">#222222</output></label><input id="textColor" type="color" value="#222222"></div>
+    <div class="actions"><button id="save">保存到项目</button><button class="ghost" id="reset">恢复默认</button></div>
+    <div class="status" id="status">尚未保存。</div>
+    <div class="file">保存位置：data/cover-design.json</div>
+  </aside>
+</div>
+<script>
+(function(){
+  var DEFAULTS={fontFamily:"PingFang SC",headingSize:9.5,bodySize:8.8,lineHeight:1.75,paragraphGap:2.2,topGap:7,bottomPadding:16,textColor:"#222222"};
+  var ids=["fontFamily","headingSize","bodySize","lineHeight","paragraphGap","topGap","bottomPadding","textColor"];
+  var paper=document.getElementById("paper"), copy=document.getElementById("copyright");
+  var statusEl=document.getElementById("status");
+  function val(id){var el=document.getElementById(id);return el.type==="range"?Number(el.value):el.value}
+  function apply(){
+    var s={fontFamily:val("fontFamily"),headingSize:val("headingSize"),bodySize:val("bodySize"),lineHeight:val("lineHeight"),paragraphGap:val("paragraphGap"),topGap:val("topGap"),bottomPadding:val("bottomPadding"),textColor:val("textColor")};
+    paper.style.fontFamily=s.fontFamily;
+    copy.style.setProperty("--copy-h",(s.headingSize*1.333)+"px");
+    copy.style.setProperty("--copy-b",(s.bodySize*1.333)+"px");
+    copy.style.setProperty("--copy-lh",s.lineHeight);
+    copy.style.setProperty("--copy-gap",(s.paragraphGap*1.333)+"px");
+    copy.style.setProperty("--copy-top",(s.topGap*3.7795)+"px");
+    paper.style.paddingBottom=(s.bottomPadding*3.7795)+"px";
+    copy.style.color=s.textColor;
+    document.getElementById("fontOut").textContent=s.fontFamily;
+    document.getElementById("headingOut").textContent=s.headingSize.toFixed(1)+" pt";
+    document.getElementById("bodyOut").textContent=s.bodySize.toFixed(1)+" pt";
+    document.getElementById("lineOut").textContent=s.lineHeight.toFixed(2);
+    document.getElementById("gapOut").textContent=s.paragraphGap.toFixed(1)+" pt";
+    document.getElementById("topOut").textContent=s.topGap.toFixed(1)+" pt";
+    document.getElementById("bottomOut").textContent=s.bottomPadding.toFixed(1)+" mm";
+    document.getElementById("colorOut").textContent=s.textColor;
+    return s;
+  }
+  ids.forEach(function(id){document.getElementById(id).addEventListener("input",apply)});
+  function set(s){ids.forEach(function(id){document.getElementById(id).value=s[id]}) ; apply()}
+  document.getElementById("reset").addEventListener("click",function(){set(DEFAULTS);statusEl.textContent="已恢复默认值，尚未保存。";statusEl.className="status"});
+  document.getElementById("save").addEventListener("click",async function(){
+    var btn=this; btn.disabled=true; statusEl.textContent="正在写入项目…"; statusEl.className="status";
+    try{
+      var res=await fetch("/api/save",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(apply())});
+      var d=await res.json();
+      if(!res.ok||!d.ok) throw new Error(d.error||"HTTP "+res.status);
+      statusEl.textContent="已保存。可以告诉我“保存了”，我会读取参数并重新生成 PDF。";
+      statusEl.className="status ok";
+    }catch(e){
+      statusEl.textContent="保存失败："+e.message+"（请确认本机服务已启动，并通过 http://127.0.0.1:8787 打开本页）";
+      statusEl.className="status err";
+    }finally{btn.disabled=false}
+  });
+  fetch("/api/latest").then(function(r){return r.ok?r.json():null}).then(function(d){if(d) set(d)}).catch(function(){});
+  apply();
+})();
+</script>
+</body>
+</html>
