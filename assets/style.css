@@ -3859,3 +3859,41 @@ a.wr-row:hover .wr-n { color: var(--red); }
   .pk-e { grid-area: e; }
   .pk-v { grid-area: v; text-align: right; }
 }
+
+/* 北京市市级文保 · 表格 */
+.bjm-layout .city-index { top: 78px; }
+.bjm-table { border-top: 1px solid var(--ink); }
+.bjm-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.1fr) 100px 86px;
+  gap: 14px;
+  align-items: baseline;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.bjm-head {
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  color: var(--ink-3);
+}
+.bjm-n { font-family: var(--serif); font-size: 15.5px; line-height: 1.45; }
+.bjm-d, .bjm-e, .bjm-b { font-size: 11.5px; color: var(--ink-3); line-height: 1.5; }
+@media (max-width: 760px) {
+  .bjm-head { display: none; }
+  .bjm-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "n b"
+      "d d"
+      "e e";
+    gap: 3px 12px;
+    padding: 12px 2px;
+    border-bottom: 1px solid var(--line);
+  }
+  .bjm-n { grid-area: n; font-size: 16px; }
+  .bjm-b { grid-area: b; text-align: right; }
+  .bjm-d { grid-area: d; }
+  .bjm-e { grid-area: e; }
+}
