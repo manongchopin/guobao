@@ -3655,3 +3655,6 @@ a.wr-row:hover .wr-n { color: var(--red); }
   .bm-toolbar-inner { padding: 16px 20px; }
   .bm-main { padding: 28px 20px 60px; }
 }
+
+.bm-empty b { display: block; font-family: var(--serif); font-size: 24px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+.bm-empty span { font-size: 12.5px; color: var(--ink-3); }

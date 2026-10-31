@@ -9,6 +9,8 @@
   var total = document.getElementById("bm-total");
   var note = document.getElementById("bm-note");
   var state = { cat: "全部", q: "" };
+  var toolbar = document.querySelector(".bm-toolbar");
+  if (!data.length && toolbar) toolbar.hidden = true;
 
   var cats = ["全部"];
   data.forEach(function (it) {
@@ -65,11 +67,16 @@
         '<span class="bm-foot"><span class="bm-domain">' + esc(domain(it.url)) + '</span><span class="bm-arrow">↗</span></span>' +
       '</a>';
     }).join("");
-    empty.hidden = list.length > 0;
+    if (!data.length) {
+      empty.hidden = false;
+      empty.innerHTML = '<b>收藏夹还是空的</b><span>把要放的网站发给我，我再逐条加进来。</span>';
+    } else {
+      empty.hidden = list.length > 0;
+    }
     total.textContent = data.length;
-    note.textContent = state.cat === "全部" && !state.q
-      ? "本站 / 官方 / 资料 / 工具"
-      : "筛出 " + list.length + " 个站点";
+    note.textContent = !data.length
+      ? "还没有添加站点"
+      : (state.cat === "全部" && !state.q ? "按分类筛选，或直接搜索" : "筛出 " + list.length + " 个站点");
   }
 
   chips.addEventListener("click", function (e) {
