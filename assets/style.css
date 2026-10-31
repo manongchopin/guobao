@@ -3817,3 +3817,43 @@ a.wr-row:hover .wr-n { color: var(--red); }
   letter-spacing: 0.04em;
 }
 .sg-subhead span { margin-left: 8px; font-size: 9px; font-weight: 400; color: var(--ink-3); }
+
+/* 美国国家公园 · 表格 */
+.pk-layout .city-index { top: 78px; }
+.pk-table { border-top: 1px solid var(--ink); }
+.pk-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1.15fr) 100px 130px 110px;
+  gap: 14px;
+  align-items: baseline;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.pk-head {
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  color: var(--ink-3);
+}
+.pk-n { font-family: var(--serif); font-size: 15.5px; line-height: 1.45; }
+.pk-s, .pk-e, .pk-u, .pk-v { font-size: 11.5px; color: var(--ink-3); line-height: 1.5; }
+.pk-e, .pk-v { font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) {
+  .pk-head { display: none; }
+  .pk-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "n n"
+      "s u"
+      "e v";
+    gap: 3px 12px;
+    padding: 12px 2px;
+    border-bottom: 1px solid var(--line);
+  }
+  .pk-n { grid-area: n; font-size: 16px; }
+  .pk-s { grid-area: s; }
+  .pk-u { grid-area: u; text-align: right; }
+  .pk-e { grid-area: e; }
+  .pk-v { grid-area: v; text-align: right; }
+}

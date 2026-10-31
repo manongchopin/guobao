@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-31",
     type: "页面",
+    title: "美国国家公园（64 座）",
+    note: "世界国家公园",
+    href: "parks.html"
+  },
+  {
+    date: "2026-10-31",
+    type: "页面",
     title: "新加坡国家古迹（84 项）",
     note: "境外文保 · 按刊宪 / 按类型",
     href: "singapore.html"

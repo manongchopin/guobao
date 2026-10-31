@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>美国 · 国家公园 · 64 座</title>
+<meta name="description" content="美国 64 座国家公园，可按州或按设立年份浏览。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="parks.html">← 世界国家公园</a>
+  <p class="kicker">United States · National Parks</p>
+  <h1>美国，国家公园</h1>
+  <p class="lede">
+    <span id="pk-count">64</span> 座，分布 32 个州与属地。<br>
+    <span>按州排路线，按设立年份读保护史。</span>
+  </p>
+  <div class="seal" aria-hidden="true">美</div>
+</header>
+
+<div class="hub-progress">
+  <div class="hub-progress-inner">
+    <span class="hp-label">国家公园</span>
+    <span class="hp-num">64</span><span class="hp-total">座</span>
+    <span class="hp-note">32 个州与属地 · 1872—2026</span>
+  </div>
+</div>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="switch" role="group" aria-label="切换排列方式">
+      <button type="button" data-view="state" aria-pressed="true">按州</button>
+      <button type="button" data-view="year" aria-pressed="false">按设立年份</button>
+    </div>
+    <p class="toolbar-note" id="toolbar-note">64 座 · 32 个州与属地</p>
+  </div>
+</div>
+
+<p class="wh-note" id="pk-note">按州分组；跨州公园会在每个所属州重复出现，因此分组计数之和大于 64。</p>
+
+<main class="city-layout hk-layout pk-layout">
+  <aside class="city-index" id="index" aria-label="州或年代索引"></aside>
+  <div class="city-content" id="list"></div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>美国 · 国家公园 · 64 座</span>
+    <span>数据来源：<a href="https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States" target="_blank" rel="noopener">维基百科</a></span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+  </div>
+</footer>
+
+<script src="usa-parks-data.js"></script>
+<script src="assets/usa-parks.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>
