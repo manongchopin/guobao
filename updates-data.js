@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-10-31",
+    type: "档案",
+    title: "杭州市级文物相关档案",
+    note: "历史建筑 414 处 · 九批 PDF",
+    href: "hangzhou-archives.html"
+  },
+  {
+    date: "2026-10-31",
     type: "页面",
     title: "北京市级文保（257 项）",
     note: "九批 · 按批次 / 按辖区",
