@@ -11,9 +11,9 @@ window.BOOKMARKS = [
     dataKey: "go"
   },
   {
-    title: "World Cube Association · 3×3 单次",
+    title: "World Cube Association",
     url: "https://www.worldcubeassociation.org/results/rankings/333/single?",
-    desc: "魔方 3×3 单次复原世界排名。当前前三：耿暄一、杨品修、Teodor Zajder。",
+    desc: "魔方 3×3 单次复原世界排名。",
     cat: "魔方",
     tags: ["魔方", "WCA", "3x3", "排名"],
     dataKey: "wca"
