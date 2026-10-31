@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="84" height="56" viewBox="0 0 84 56" role="img" aria-label="美国国旗">
+<rect width="84" height="56" fill="#fff"/>
+<g fill="#b22234">
+<rect y="0" width="84" height="4.3077"/>
+<rect y="8.6154" width="84" height="4.3077"/>
+<rect y="17.2308" width="84" height="4.3077"/>
+<rect y="25.8462" width="84" height="4.3077"/>
+<rect y="34.4615" width="84" height="4.3077"/>
+<rect y="43.0769" width="84" height="4.3077"/>
+<rect y="51.6923" width="84" height="4.3077"/>
+</g>
+<rect width="33.6" height="30.1538" fill="#3c3b6e"/>
+<g fill="#fff">
+<use href="#star" transform="translate(4.20 3.20)"/>
+<use href="#star" transform="translate(9.00 3.20)"/>
+<use href="#star" transform="translate(13.80 3.20)"/>
+<use href="#star" transform="translate(18.60 3.20)"/>
+<use href="#star" transform="translate(23.40 3.20)"/>
+<use href="#star" transform="translate(28.20 3.20)"/>
+<use href="#star" transform="translate(7.20 6.00)"/>
+<use href="#star" transform="translate(12.20 6.00)"/>
+<use href="#star" transform="translate(17.20 6.00)"/>
+<use href="#star" transform="translate(22.20 6.00)"/>
+<use href="#star" transform="translate(27.20 6.00)"/>
+<use href="#star" transform="translate(4.20 8.80)"/>
+<use href="#star" transform="translate(9.00 8.80)"/>
+<use href="#star" transform="translate(13.80 8.80)"/>
+<use href="#star" transform="translate(18.60 8.80)"/>
+<use href="#star" transform="translate(23.40 8.80)"/>
+<use href="#star" transform="translate(28.20 8.80)"/>
+<use href="#star" transform="translate(7.20 11.60)"/>
+<use href="#star" transform="translate(12.20 11.60)"/>
+<use href="#star" transform="translate(17.20 11.60)"/>
+<use href="#star" transform="translate(22.20 11.60)"/>
+<use href="#star" transform="translate(27.20 11.60)"/>
+<use href="#star" transform="translate(4.20 14.40)"/>
+<use href="#star" transform="translate(9.00 14.40)"/>
+<use href="#star" transform="translate(13.80 14.40)"/>
+<use href="#star" transform="translate(18.60 14.40)"/>
+<use href="#star" transform="translate(23.40 14.40)"/>
+<use href="#star" transform="translate(28.20 14.40)"/>
+<use href="#star" transform="translate(7.20 17.20)"/>
+<use href="#star" transform="translate(12.20 17.20)"/>
+<use href="#star" transform="translate(17.20 17.20)"/>
+<use href="#star" transform="translate(22.20 17.20)"/>
+<use href="#star" transform="translate(27.20 17.20)"/>
+<use href="#star" transform="translate(4.20 20.00)"/>
+<use href="#star" transform="translate(9.00 20.00)"/>
+<use href="#star" transform="translate(13.80 20.00)"/>
+<use href="#star" transform="translate(18.60 20.00)"/>
+<use href="#star" transform="translate(23.40 20.00)"/>
+<use href="#star" transform="translate(28.20 20.00)"/>
+<use href="#star" transform="translate(7.20 22.80)"/>
+<use href="#star" transform="translate(12.20 22.80)"/>
+<use href="#star" transform="translate(17.20 22.80)"/>
+<use href="#star" transform="translate(22.20 22.80)"/>
+<use href="#star" transform="translate(27.20 22.80)"/>
+<use href="#star" transform="translate(4.20 25.60)"/>
+<use href="#star" transform="translate(9.00 25.60)"/>
+<use href="#star" transform="translate(13.80 25.60)"/>
+<use href="#star" transform="translate(18.60 25.60)"/>
+<use href="#star" transform="translate(23.40 25.60)"/>
+<use href="#star" transform="translate(28.20 25.60)"/>
+<defs><polygon id="star" points="0,-1.7 0.5,-0.52 1.7,-0.52 0.81,0.2 1.0,1.38 0,0.65 -1.0,1.38 -0.81,0.2 -1.7,-0.52 -0.5,-0.52"/></defs>
+</g></svg>
