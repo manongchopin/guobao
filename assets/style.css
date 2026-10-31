@@ -3690,7 +3690,7 @@ a.wr-row:hover .wr-n { color: var(--red); }
 .bm-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
 .bm-text .bm-title { font-family: var(--serif); font-size: 21px; font-weight: 600; line-height: 1.35; }
 .bm-text .bm-desc { font-size: 12px; line-height: 1.65; color: var(--ink-3); }
-.bm-side { position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 14px; padding-right: 24px; white-space: nowrap; }
+.bm-side { position: relative; display: flex; align-items: flex-start; justify-content: flex-start; gap: 14px; padding-right: 24px; white-space: nowrap; }
 .bm-side .bm-arrow { position: absolute; right: 0; top: 50%; transform: translateY(-50%); color: var(--red); font-size: 16px; }
 @media (max-width: 720px) {
   .bm-row { grid-template-columns: 40px minmax(0, 1fr); gap: 12px; padding: 18px 20px; border-radius: 24px; }
@@ -3703,7 +3703,7 @@ a.wr-row:hover .wr-n { color: var(--red); }
 .bm-top5 { display: flex; flex-direction: column; gap: 2px; padding-top: 3px; margin-right: 2px; font-size: 8.5px; letter-spacing: 0.14em; color: var(--ink-3); white-space: nowrap; }
 .bm-top5 b { font-weight: 500; }
 .bm-top5 em { font-style: normal; font-size: 7.5px; letter-spacing: 0.04em; color: var(--ink-4); }
-.bm-person { display: flex; flex-direction: column; align-items: center; gap: 3px; width: 52px; }
+.bm-person { display: flex; flex-direction: column; align-items: center; gap: 3px; width: 72px; }
 .bm-avatar {
   position: relative;
   width: 40px; height: 40px;
@@ -3734,7 +3734,7 @@ a.wr-row:hover .wr-n { color: var(--red); }
 }
 @media (max-width: 1180px) {
   .bm-row { grid-template-columns: 54px minmax(0, 1fr) 410px; }
-  .bm-people.is-wca .bm-person { width: 62px; }
+  .bm-person { width: 60px; }
   .bm-people.is-wca .bm-name { max-width: 68px; }
 }
 @media (max-width: 760px) {
@@ -3742,7 +3742,7 @@ a.wr-row:hover .wr-n { color: var(--red); }
   .bm-side { grid-column: 2; justify-content: flex-start; padding-right: 0; }
   .bm-side .bm-arrow { position: static; transform: none; }
   .bm-people { gap: 7px; flex-wrap: wrap; }
-  .bm-person { width: 38px; }
+  .bm-person { width: 52px; }
   .bm-avatar { width: 34px; height: 34px; }
   .bm-photo { width: 34px; height: 34px; inset: -2px; }
   .bm-name { font-size: 8px; }
@@ -3752,5 +3752,4 @@ a.wr-row:hover .wr-n { color: var(--red); }
 
 .bm-score { font-size: 8px; line-height: 1.2; color: var(--red); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
 
-.bm-people.is-wca .bm-person { width: 72px; }
 .bm-people.is-wca .bm-name { max-width: 78px; }
