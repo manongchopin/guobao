@@ -1,0 +1,41 @@
+{
+  "updated": "2026-10-31T05:34:47.036Z",
+  "source": "https://www.goratings.org/en/",
+  "players": [
+    {
+      "rank": 1,
+      "name": "Shin Jinseo",
+      "country": "kr",
+      "elo": 3907,
+      "nameZh": "申真谞"
+    },
+    {
+      "rank": 2,
+      "name": "Xu Jiayang",
+      "country": "cn",
+      "elo": 3764,
+      "nameZh": "许嘉阳"
+    },
+    {
+      "rank": 3,
+      "name": "Ding Hao",
+      "country": "cn",
+      "elo": 3737,
+      "nameZh": "丁浩"
+    },
+    {
+      "rank": 4,
+      "name": "Wang Xinghao",
+      "country": "cn",
+      "elo": 3709,
+      "nameZh": "王星昊"
+    },
+    {
+      "rank": 5,
+      "name": "Ke Jie",
+      "country": "cn",
+      "elo": 3705,
+      "nameZh": "柯洁"
+    }
+  ]
+}

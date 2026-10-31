@@ -12,10 +12,16 @@
   var toolbar = document.querySelector(".bm-toolbar");
   if (!data.length && toolbar) toolbar.hidden = true;
 
-  var cats = ["全部"];
-  data.forEach(function (it) {
-    if (cats.indexOf(it.cat) < 0) cats.push(it.cat);
-  });
+  var GO_FALLBACK = [
+    { rank: 1, name: "Shin Jinseo", nameZh: "申真谞", elo: 3907, country: "kr" },
+    { rank: 2, name: "Xu Jiayang", nameZh: "许嘉阳", elo: 3764, country: "cn" },
+    { rank: 3, name: "Ding Hao", nameZh: "丁浩", elo: 3737, country: "cn" },
+    { rank: 4, name: "Wang Xinghao", nameZh: "王星昊", elo: 3709, country: "cn" },
+    { rank: 5, name: "Ke Jie", nameZh: "柯洁", elo: 3705, country: "cn" }
+  ];
+  var goPlayers = GO_FALLBACK;
+  var goPhotos = {};
+  var goUpdated = "";
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
@@ -32,13 +38,76 @@
     }
   }
 
-  function monogram(it) {
-    if (it.cat === "本站") return "站";
-    var m = String(it.title).match(/[\u4e00-\u9fa5]/);
-    if (m) return m[0];
-    var d = domain(it.url);
-    return (d.charAt(0) || "·").toUpperCase();
+  function flagChar(code) {
+    return { kr: "韩", cn: "中", jp: "日", tw: "台" }[code] || String(code || "").toUpperCase();
   }
+
+  function flagClass(code) {
+    return code === "kr" ? "is-kr" : code === "cn" ? "is-cn" : code === "jp" ? "is-jp" : "";
+  }
+
+  function updatedText(iso) {
+    if (!iso) return "";
+    var d = new Date(iso);
+    if (isNaN(d.getTime())) return "";
+    try {
+      return new Intl.DateTimeFormat("zh-CN", {
+        timeZone: "Asia/Shanghai", month: "2-digit", day: "2-digit"
+      }).format(d).replace("/", "-");
+    } catch (e) {
+      return "";
+    }
+  }
+
+  async function loadGo() {
+    try {
+      var stamp = "?t=" + Date.now();
+      var results = await Promise.all([
+        fetch("data/go-ratings-top5.json" + stamp, { cache: "no-store" }),
+        fetch("data/go-players.json" + stamp, { cache: "no-store" })
+      ]);
+      var r = results[0], p = results[1];
+      if (!r.ok) throw new Error("ratings " + r.status);
+      var d = await r.json();
+      if (Array.isArray(d.players) && d.players.length) {
+        goPlayers = d.players;
+        goUpdated = d.updated || "";
+      }
+      if (p.ok) goPhotos = await p.json();
+    } catch (e) {
+      console.warn("Go Ratings fallback:", e.message);
+    }
+    render();
+  }
+
+  function goPeople() {
+    var label = goPlayers.map(function (p) { return p.rank + " " + (p.nameZh || p.name); }).join("、");
+    var date = updatedText(goUpdated);
+    return '<span class="bm-people" aria-label="当前等级分前五：' + esc(label) + '">' +
+      '<span class="bm-top5"><b>TOP 5</b>' + (date ? '<em>' + esc(date) + '</em>' : '') + '</span>' +
+      goPlayers.map(function (p) {
+        var db = goPhotos[p.name] || {};
+        var name = p.nameZh || db.nameZh || p.name;
+        var photo = db.photo || "";
+        var face = '<span class="bm-face">' + esc(name.charAt(0)) + '</span>' +
+          (photo ? '<img class="bm-photo" src="' + esc(photo) + '" alt="' + esc(name) + '" loading="lazy" onerror="this.remove()">' : '');
+        return '<span class="bm-person" title="第 ' + p.rank + ' · ' + esc(name) + ' · ' + p.elo + '">' +
+          '<span class="bm-avatar">' + face +
+            '<span class="bm-flag ' + flagClass(p.country) + '">' + esc(flagChar(p.country)) + '</span>' +
+          '</span>' +
+          '<span class="bm-name">' + esc(name) + '</span>' +
+        '</span>';
+      }).join("") + '</span>';
+  }
+
+  function people(it) {
+    return it.dataKey === "go" ? goPeople() : "";
+  }
+
+  var cats = ["全部"];
+  data.forEach(function (it) {
+    if (cats.indexOf(it.cat) < 0) cats.push(it.cat);
+  });
 
   function match(it) {
     if (state.cat !== "全部" && it.cat !== state.cat) return false;
@@ -56,22 +125,9 @@
     }).join("");
   }
 
-  function people(it) {
-    if (!it.people || !it.people.length) return "";
-    var label = it.people.map(function (p) { return p.rank + " " + p.name; }).join("、");
-    return '<span class="bm-people" aria-label="当前等级分前五：' + esc(label) + '">' +
-      '<span class="bm-top5">TOP 5</span>' +
-      it.people.map(function (p) {
-        return '<span class="bm-player" title="第 ' + p.rank + ' · ' + esc(p.name) + ' · ' + p.elo + '">' +
-          '<span class="bm-face">' + esc(p.name.charAt(0)) + '</span>' +
-          '<span class="bm-flag ' + (p.country === "韩" ? "is-kr" : "is-cn") + '">' + esc(p.country) + '</span>' +
-        '</span>';
-      }).join("") + '</span>';
-  }
-
   function render() {
     var list = data.filter(match);
-    grid.innerHTML = list.map(function (it, i) {
+    grid.innerHTML = list.map(function (it) {
       var n = String(data.indexOf(it) + 1).padStart(2, "0");
       return '<a class="bm-row" href="' + esc(it.url) + '" target="_blank" rel="noopener">' +
         '<span class="bm-no">' + n + '</span>' +
@@ -109,4 +165,5 @@
 
   renderChips();
   render();
+  loadGo();
 })();
