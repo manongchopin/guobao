@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-31",
     type: "页面",
+    title: "新加坡国家古迹（84 项）",
+    note: "境外文保 · 按刊宪 / 按类型",
+    href: "singapore.html"
+  },
+  {
+    date: "2026-10-31",
+    type: "页面",
     title: "上海市优秀历史建筑（1058 处）",
     note: "按批次 / 按辖区",
     href: "shanghai-historic.html"
