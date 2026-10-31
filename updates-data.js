@@ -3,7 +3,7 @@ window.SITE_UPDATES = [
     date: "2026-10-31",
     type: "档案",
     title: "杭州市级文物相关档案",
-    note: "历史建筑 414 处 · 九批 PDF",
+    note: "历史建筑 414 · 市保 432",
     href: "hangzhou-archives.html"
   },
   {
