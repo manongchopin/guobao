@@ -3897,3 +3897,5 @@ a.wr-row:hover .wr-n { color: var(--red); }
   .bjm-d { grid-area: d; }
   .bjm-e { grid-area: e; }
 }
+
+.wh-note b { font-weight: 600; color: var(--ink-2); }
