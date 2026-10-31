@@ -16,8 +16,8 @@ window.SITE_UPDATES = [
   {
     date: "2026-10-31",
     type: "档案",
-    title: "第三批国保原档（残段）",
-    note: "4 页 · 1—8、48—59 · OCR",
+    title: "第三批国保原档（完整）",
+    note: "13 页 · 258 处 · OCR",
     href: "files/third-batch-1988-official.pdf"
   },
   {
