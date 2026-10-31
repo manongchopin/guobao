@@ -32,7 +32,9 @@ window.BOOKMARKS = [
     url: "http://stele.geogv.org/zhcn/about#map=7.00/35.0000/108.0000",
     desc: "全国重点文保与各级文保点的分布地图，可按类型、时代和地区浏览。",
     cat: "遗产",
-    tags: ["遗产", "文保", "地图", "STELE"]
+    tags: ["遗产", "文保", "地图", "STELE"],
+    developer: "Kejing Peng",
+    developerPhoto: "images/people/kejing-peng.jpg"
   }
 ];
 
