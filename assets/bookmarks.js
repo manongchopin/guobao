@@ -192,7 +192,6 @@
         '<span class="bm-text"><span class="bm-title">' + esc(it.title) + '</span>' +
         '<span class="bm-desc">' + esc(it.desc) + '</span></span>' +
         '<span class="bm-side">' + people(it) +
-        '<span class="bm-domain">' + esc(domain(it.url)) + '</span>' +
         '<span class="bm-arrow">↗</span></span>' +
       '</a>';
     }).join("");
