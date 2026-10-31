@@ -3498,3 +3498,13 @@ a.wr-row:hover .wr-n { color: var(--red); }
   .law-year { border-right: 0; padding-right: 0; font-size: 24px; }
   .law-body b { font-size: 20px; }
 }
+
+/* 浙江省级文保档案 */
+.prov-note { font-size: 12px; color: var(--ink-3); }
+.prov-index { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 6px; }
+.prov-index a {
+  font-size: 10.5px; line-height: 1; color: var(--ink-2);
+  border: 1px solid var(--line); padding: 8px 10px; text-decoration: none;
+  transition: border-color 0.16s ease, color 0.16s ease;
+}
+.prov-index a:hover { border-color: var(--red); color: var(--red); }
