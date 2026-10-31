@@ -3836,7 +3836,9 @@ a.wr-row:hover .wr-n { color: var(--red); }
   letter-spacing: 0.12em;
   color: var(--ink-3);
 }
-.pk-n { font-family: var(--serif); font-size: 15.5px; line-height: 1.45; }
+.pk-n { display: flex; flex-direction: column; gap: 2px; }
+.pk-zh { font-family: var(--serif); font-size: 16px; line-height: 1.35; }
+.pk-en { font-size: 10px; color: var(--ink-3); line-height: 1.3; letter-spacing: 0.01em; }
 .pk-s, .pk-e, .pk-u, .pk-v { font-size: 11.5px; color: var(--ink-3); line-height: 1.5; }
 .pk-e, .pk-v { font-variant-numeric: tabular-nums; }
 @media (max-width: 860px) {

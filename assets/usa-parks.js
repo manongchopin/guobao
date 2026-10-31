@@ -8,6 +8,8 @@
   var toolbarNote = document.getElementById("toolbar-note");
   var buttons = Array.prototype.slice.call(document.querySelectorAll(".switch button"));
   var state = { view: "state", filter: "all" };
+  var visitorsYear = 2025;
+  var visitorsMap = {};
 
   var STATE_ZH = {
     "Alaska": "阿拉斯加", "American Samoa": "美属萨摩亚", "Arizona": "亚利桑那",
@@ -62,17 +64,17 @@
   }
 
   function table(list, mode) {
-    var head = ["名称", "所在州", "设立", "UNESCO", "2025 访客"];
+    var head = ["名称", "所在州", "设立", "UNESCO", visitorsYear + " 访客"];
     var rows = list.slice().sort(mode === "year"
       ? function (a, b) { return (a.est || "").localeCompare(b.est || ""); }
       : function (a, b) { return a.name.localeCompare(b.name); }
     ).map(function (it) {
       return '<div class="pk-row" role="row">' +
-        '<span class="pk-n">' + esc(it.name) + '</span>' +
+        '<span class="pk-n"><span class="pk-zh">' + esc(it.nameZh || it.name) + '</span><span class="pk-en">' + esc(it.name) + '</span></span>' +
         '<span class="pk-s">' + esc(stateList(it)) + '</span>' +
         '<span class="pk-e" title="' + esc(it.est) + '">' + esc((it.est || "").slice(0, 4)) + '</span>' +
         '<span class="pk-u">' + esc(unesco(it.unseco)) + '</span>' +
-        '<span class="pk-v">' + (it.visitors ? Number(it.visitors).toLocaleString("en-US") : "—") + '</span>' +
+        '<span class="pk-v">' + ((visitorsMap[it.name] || it.visitors) ? Number(visitorsMap[it.name] || it.visitors).toLocaleString("en-US") : "—") + '</span>' +
       '</div>';
     }).join("");
     return '<div class="pk-table" role="table">' +
@@ -97,6 +99,21 @@
         '" data-g="' + esc(g) + '" aria-pressed="' + (state.filter === String(g)) + '"><span>' + esc(label) + '</span><b>' + n + '</b></button>';
     });
     indexEl.innerHTML = html;
+  }
+
+  async function loadVisitors() {
+    try {
+      var res = await fetch("data/usa-parks-visitors.json?t=" + Date.now(), { cache: "no-store" });
+      if (!res.ok) throw new Error("visitors " + res.status);
+      var d = await res.json();
+      if (d.visitors) visitorsMap = d.visitors;
+      if (d.year) visitorsYear = d.year;
+      var yEl = document.getElementById("pk-vis-year");
+      if (yEl) yEl.textContent = visitorsYear;
+      render();
+    } catch (e) {
+      console.warn("US parks visitors fallback:", e.message);
+    }
   }
 
   function render() {
@@ -162,4 +179,5 @@
   var hash = (window.location.hash || "").replace("#", "");
   if (hash === "state" || hash === "year") initial = hash;
   setView(initial, false);
+  loadVisitors();
 })();
