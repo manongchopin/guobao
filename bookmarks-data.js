@@ -19,12 +19,11 @@ window.BOOKMARKS = [
     dataKey: "wca"
   },
   {
-    title: "中国铁路地图",
+    title: "中国铁路在线地图",
     url: "http://cnrail.geogv.org/zhcn/about#map=4.41/33.4144/107.8521",
-    desc: "全国铁路线路、车站与运行路径，放在一张可缩放的地图上。",
+    desc: "中国及邻近地区的铁路在线地图，提供车站、线路、时刻等信息。",
     cat: "铁路",
-    tags: ["铁路", "地图", "车站", "线路"],
-    dataKey: "rail"
+    tags: ["铁路", "地图", "车站", "线路"]
   }
 ];
 
