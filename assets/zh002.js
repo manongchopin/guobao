@@ -85,7 +85,7 @@
     $("zh2-source").innerHTML =
       "<p>来源：" + esc(s.platform) + "问题「" + esc(s.question) + "」，答主 <b>" + esc(s.author) + "</b> · 抓取于 " + esc(D.captured) + "。</p>" +
       '<p><a href="' + esc(s.url) + '" target="_blank" rel="noopener">打开原始回答 ↗</a></p>' +
-      "<p>地图底图：<b>" + esc(D.image_credit) + "</b></p>" +
+      "<p>地图底图：<a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">© OpenStreetMap contributors</a>（ODbL）</p>" +
       "<p>" + D.notes.map(esc).join("</p><p>") + "</p>";
   }
 

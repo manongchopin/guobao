@@ -1,5 +1,18 @@
 (function () {
   "use strict";
+  // 全站页脚：统一「来源与权利」入口
+  (function () {
+    var footer = document.querySelector(".footer-inner");
+    if (!footer || footer.querySelector(".footer-rights")) return;
+    var span = document.createElement("span");
+    span.className = "footer-rights";
+    var a = document.createElement("a");
+    a.href = "rights.html";
+    a.textContent = "来源与权利";
+    span.appendChild(a);
+    footer.appendChild(span);
+  })();
+
   // 全站约定：文件链接不在当前页直接下载，而是在新标签页打开。
   document.querySelectorAll('a[download]').forEach(function (link) {
     link.removeAttribute('download');

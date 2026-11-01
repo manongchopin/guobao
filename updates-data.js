@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-01",
+    type: "页面",
+    title: "来源与权利入口 + ZH-002 权利页",
+    note: "全站页脚 · 8 份 PDF · OSM/ODbL",
+    href: "rights.html"
+  },
+  {
+    date: "2026-11-01",
     type: "档案",
     title: "24 份 PDF 批量加来源权利页",
     note: "C2 改为有限权利 · 扫描原件未动",

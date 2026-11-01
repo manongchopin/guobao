@@ -3913,3 +3913,7 @@ a.plan-shelf:hover { background: var(--paper-2); }
 }
 
 .wh-note b { font-weight: 600; color: var(--ink-2); }
+
+.footer-rights { font-size: 10.5px; }
+.footer-rights a { color: var(--ink-3); border-bottom-color: var(--line); }
+.footer-rights a:hover { color: var(--red); border-color: var(--red); }
