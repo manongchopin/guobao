@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-01",
     type: "页面",
+    title: "中国历史疆域四至计划页",
+    note: "四至框架 · 待填资料",
+    href: "territory-four-extremes.html"
+  },
+  {
+    date: "2026-11-01",
+    type: "页面",
     title: "云考古点位册 · ZH-003",
     note: "34处 · 33影像 · 数据接入",
     href: "zh003.html"

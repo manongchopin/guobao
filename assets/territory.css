@@ -1,0 +1,62 @@
+/* 中国历史疆域四至 */
+.territory-main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 28px 76px;
+}
+.territory-intro {
+  border-top: 1px solid var(--ink);
+  padding: 24px 0 12px;
+}
+.territory-intro p {
+  max-width: 800px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.95;
+  color: var(--ink-2);
+}
+.territory-note {
+  margin: 12px 0 22px;
+  padding: 13px 16px;
+  border-left: 3px solid #b45309;
+  background: #fbf4e7;
+  font-size: 11.5px;
+  line-height: 1.85;
+  color: var(--ink-2);
+}
+.four-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 30px;
+}
+.four-card {
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--ink);
+  background: var(--paper-2);
+  padding: 16px 14px 14px;
+}
+.four-card .four-dir {
+  margin: 0 0 5px;
+  font-size: 9.5px;
+  letter-spacing: .16em;
+  color: var(--red);
+}
+.four-card h3 {
+  margin: 0 0 9px;
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 600;
+}
+.four-card dl { margin: 0; font-size: 10.5px; line-height: 1.75; color: var(--ink-2); }
+.four-card dt { color: var(--ink-3); font-size: 9px; margin-top: 5px; }
+.four-card dd { margin: 0; }
+.four-empty { color: var(--ink-3); }
+
+@media (max-width: 800px) {
+  .four-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .territory-main { padding: 0 20px 56px; }
+  .four-grid { grid-template-columns: 1fr; }
+}
