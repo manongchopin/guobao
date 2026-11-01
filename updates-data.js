@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-01",
+    type: "档案",
+    title: "24 份 PDF 批量加来源权利页",
+    note: "C2 改为有限权利 · 扫描原件未动",
+    href: "rights.html"
+  },
+  {
+    date: "2026-11-01",
     type: "页面",
     title: "来源、权利与使用限制草案",
     note: "v0.1 · 非法律意见",
