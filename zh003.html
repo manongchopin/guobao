@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>云考古点位册 · 境外中式古城</title>
-<meta name="description" content="ZH-003 云考古点位册：34 处境外中式古城，33 处有坐标与卫星影像。非正式考古名录。">
+<meta name="description" content="ZH-003 云考古点位册：34 处境外中式古城，33 处有坐标，底图按 Sentinel / OSM / 文字坐标分级。非正式考古名录。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
@@ -18,7 +18,7 @@
   <h1>云考古点位册</h1>
   <p class="lede">
     <span id="zh-subtitle">境外中式古城 34 处</span><br>
-    <span>卫星影像上的城址、山城、障城与边墙。不是正式考古名录。</span>
+    <span>公开底图分 Sentinel 示意、OSM 位置图与文字坐标。不是正式考古名录。</span>
   </p>
   <div class="seal" aria-hidden="true">云</div>
 </header>
@@ -47,9 +47,10 @@
     <div class="zh-field"><label for="zh-era">朝代 / 时期</label><select id="zh-era"><option value="全部">全部</option></select></div>
     <div class="zh-field"><label for="zh-country">现代国家</label><select id="zh-country"><option value="全部">全部</option></select></div>
     <div class="zh-field"><label for="zh-stance">作者态度</label><select id="zh-stance"><option value="全部">全部</option></select></div>
+    <div class="zh-field"><label for="zh-tier">公开底图</label><select id="zh-tier"><option value="全部">全部</option><option value="A">A · Sentinel 示意</option><option value="B">B · OSM 位置图</option><option value="C">C · 文字 / 坐标</option></select></div>
     <span class="zh-count" id="zh-count"></span>
   </div>
-  <p class="zh-note">缩略图为 600 米见方、中心十字准星、100 米比例尺；影像拍摄时间不明，部分有积雪。</p>
+  <p class="zh-note">A：Sentinel-2 10m 示意；B：OSM 位置/范围图；C：公开版只留文字与坐标。Esri / Maxar 原图只在私人档案，不在公开页展示。</p>
 
   <div class="zh-grid" id="zh-grid"></div>
 
@@ -103,6 +104,7 @@
 </footer>
 
 <script src="zh003-data.js"></script>
+<script src="zh003-display.js"></script>
 <script src="assets/zh003.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/home.js"></script>

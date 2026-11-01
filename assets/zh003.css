@@ -105,8 +105,12 @@
 }
 .zh-no-image {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  gap: 3px;
+  padding: 18px;
   width: 100%;
   height: 100%;
   background: #e9e1d3;
@@ -253,3 +257,6 @@
   .zh-dialog-body { padding: 18px; }
   .zh-dialog h2 { font-size: 22px; }
 }
+
+.zh-tier { border: 1px solid #b8c9a8; color: #4c6b45; padding: 1px 5px; white-space: nowrap; }
+.zh-no-image small { display: block; margin-top: 3px; font-size: 9px; color: var(--ink-3); }
