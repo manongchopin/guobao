@@ -3616,6 +3616,7 @@ a.wr-row:hover .wr-n { color: var(--red); }
 .plan-list { margin-bottom: 72px; }
 .plan-shelf { grid-column: auto; cursor: default; }
 .plan-shelf:hover { background: transparent; }
+a.plan-shelf:hover { background: var(--paper-2); }
 .plan-status { font-size: 10.5px; letter-spacing: 0.08em; color: var(--ink-3); border: 1px solid var(--line); padding: 3px 9px; white-space: nowrap; }
 .plan-shelf .hs-title { font-size: 23px; }
 @media (max-width: 640px) {
