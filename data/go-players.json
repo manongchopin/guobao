@@ -2,7 +2,7 @@
   "_readme": "棋手资料库：key 为 Go Ratings 英文名；nameZh 为中文名，photo 为头像路径（留空则显示姓氏）。新增棋手时在这里补一条即可。",
   "Shin Jinseo": {
     "nameZh": "申真谞",
-    "photo": "images/go/shin-jinseo.jpg"
+    "photo": "images/go/shin-jinseo.jpg?v=2"
   },
   "Xu Jiayang": {
     "nameZh": "许嘉阳",
