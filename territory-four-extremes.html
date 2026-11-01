@@ -3,127 +3,146 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>中国历史疆域四至 · 旅行计划</title>
-<meta name="description" content="中国历史疆域四至：按时代、政权和出处整理四至资料，待补。">
+<title>中国历史疆域四至 · ZH-002</title>
+<meta name="description" content="ZH-002 中国历史疆域四至：107 个历史疆域极值点，按方位、朝代、类型和可探访度整理。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
-<link rel="stylesheet" href="assets/territory.css">
+<link rel="stylesheet" href="assets/zh002.css">
 </head>
 <body>
 
 <header class="hero">
   <a class="back" href="plans.html">← 旅行计划</a>
-  <p class="kicker">Plan 02 · Borders of China</p>
+  <p class="kicker">ZH-002 · 四至档案</p>
   <h1>中国历史疆域四至</h1>
   <p class="lede">
-    从最北、最南、最东、最西，看中国历史疆域的四至。<br>
-    <span>先分时代和政权，再谈四至；不把不同时期拼成一条现代边界。</span>
+    107 个历史疆域极值点。<br>
+    <span>按方位、朝代和口径整理，不是现代边界主张。</span>
   </p>
   <div class="seal" aria-hidden="true">域</div>
 </header>
 
 <div class="hub-progress">
   <div class="hub-progress-inner">
-    <span class="hp-label">四至</span>
-    <span class="hp-num">4</span><span class="hp-total">个方向</span>
-    <span class="hp-note">资料收集中 · 尚未填数</span>
+    <span class="hp-label">ZH-002</span>
+    <span class="hp-num" id="zh2-total">107</span><span class="hp-total">处</span>
+    <span class="hp-note"><span id="zh2-countries">17</span> 个国家 · v3</span>
   </div>
 </div>
 
-<main class="territory-main">
-  <section class="territory-intro">
-    <p>这个页面先把四至拆成四个方向，再把每个方向放回具体时代、政权和史料里。不同朝代的疆域范围和“四至”口径并不一样，不能合成一个跨时代的单一答案。</p>
-    <div class="territory-note">
-      目前只搭结构，不填估算值。等四至地点、时代、今地和出处资料齐了，再逐项补入。
-    </div>
+<main class="zh2-main">
+  <section class="zh2-intro">
+    <p>这套档案把“四至”拆成南、北、西、东四个方向，再把每个点放回朝代、今地、类型和可探访度里。它来自一个人的整理，不是现代边界测量。</p>
+    <p>南、北界原文多只给纬度，东、西界多只给经度；另一轴按今地补全，误差约 ±0.3°~0.8°。三条坐标据 ZH-003 改为秒级实测。</p>
+    <div class="zh2-note"><b>读法：</b>四至卡片按经纬度直接取极值，所以会混用实控、羁縻、谭图、军事等口径。看类型标签，不要把“谭图画到哪”当成“官派到哪”。</div>
   </section>
 
-  <section class="wh-section">
-    <h2>四至总览</h2>
-    <div class="four-grid">
-      <article class="four-card">
-        <p class="four-dir">NORTH · 北至</p>
-        <h3>待补</h3>
-        <dl>
-          <dt>时代 / 政权</dt><dd class="four-empty">待补</dd>
-          <dt>今地</dt><dd class="four-empty">待补</dd>
-          <dt>依据</dt><dd class="four-empty">待补</dd>
-        </dl>
-      </article>
-      <article class="four-card">
-        <p class="four-dir">SOUTH · 南至</p>
-        <h3>待补</h3>
-        <dl>
-          <dt>时代 / 政权</dt><dd class="four-empty">待补</dd>
-          <dt>今地</dt><dd class="four-empty">待补</dd>
-          <dt>依据</dt><dd class="four-empty">待补</dd>
-        </dl>
-      </article>
-      <article class="four-card">
-        <p class="four-dir">EAST · 东至</p>
-        <h3>待补</h3>
-        <dl>
-          <dt>时代 / 政权</dt><dd class="four-empty">待补</dd>
-          <dt>今地</dt><dd class="four-empty">待补</dd>
-          <dt>依据</dt><dd class="four-empty">待补</dd>
-        </dl>
-      </article>
-      <article class="four-card">
-        <p class="four-dir">WEST · 西至</p>
-        <h3>待补</h3>
-        <dl>
-          <dt>时代 / 政权</dt><dd class="four-empty">待补</dd>
-          <dt>今地</dt><dd class="four-empty">待补</dd>
-          <dt>依据</dt><dd class="four-empty">待补</dd>
-        </dl>
-      </article>
-    </div>
+  <div class="zh2-stats" id="zh2-stats"></div>
+
+  <section class="zh2-section" id="extremes">
+    <h2>四个极值点</h2>
+    <p class="section-sub">按数据中的经纬度取极值，展示的朝代、地点和类型都来自原始记录；同值点多时在卡片下方标出数量。</p>
+    <div class="zh2-extremes" id="zh2-extremes"></div>
   </section>
 
-  <section class="wh-section">
-    <h2>时间口径</h2>
-    <div class="info-table">
-      <div><span>分期方式</span><b>待补：按朝代 / 政权 / 时期分列</b></div>
-      <div><span>四至定义</span><b>待补：行政统辖、军事控制、羁縻或地理极限</b></div>
-      <div><span>现代位置</span><b>待补：古今地名对照</b></div>
-      <div><span>资料出处</span><b>待补：史书、地图、研究或考古报告</b></div>
-    </div>
-  </section>
-
-  <section class="wh-section">
-    <h2>资料清单</h2>
-    <div class="info-table">
-      <div><span>四至地点</span><b>待补</b></div>
-      <div><span>经纬度</span><b>待补</b></div>
-      <div><span>历史地名</span><b>待补</b></div>
-      <div><span>今天所属</span><b>待补</b></div>
-      <div><span>地图底图</span><b>待补：使用有审图号的底图</b></div>
-      <div><span>参考资料</span><b>待补</b></div>
-    </div>
-  </section>
-
-  <section class="wh-section">
-    <h2>地图与说明</h2>
-    <div class="ph-box">
-      <h3 class="ph-title">地图还没开始做</h3>
-      <p>等到四个方向都有明确地点和出处，再决定用点、线还是分时代的小图。不会先画一张把不同朝代拼在一起的“大边界”。</p>
-      <p>涉及地图时，使用有审图号的底图；历史地名和现代位置分开标注。</p>
-      <div class="ph-actions">
-        <a href="plans.html">返回旅行计划</a>
-        <a href="eclipse-2027.html">看看另一条计划</a>
+  <section class="zh2-section" id="map">
+    <h2>四至导览图</h2>
+    <p class="section-sub">主图把 107 个点放回地图，并单列越南中北部、西域中亚、河西陇右、东北亚四个密集区。</p>
+    <figure class="zh2-figure">
+      <img src="images/zh002/overview-v3.webp" alt="中国历代王朝四至点导览图" loading="lazy">
+      <figcaption><b>导览图 v3</b> · 底图 © OpenStreetMap contributors · 现代中国四至框仅用于对比，不代表边界主张。</figcaption>
+    </figure>
+    <div class="zh2-two-figures">
+      <figure class="zh2-figure">
+        <img src="images/zh002/six-dynasties.webp" alt="西汉、唐、北宋、元、明、清六朝疆域包络对比" loading="lazy">
+        <figcaption><b>六个王朝的疆域包络</b> · 实线为实控范围，虚线为《中国历史地图集》所绘范围，点线为现代中国四至。</figcaption>
+      </figure>
+      <div>
+        <figure class="zh2-figure">
+          <img src="images/zh002/grading-preview.webp" alt="可探访度分级预览" loading="lazy">
+          <figcaption><b>可探访度分级预览</b> · A 18 / B 23 / C 36 / D 30。</figcaption>
+        </figure>
+        <details class="zh2-gif">
+          <summary>展开疆域演变 GIF（六帧循环）</summary>
+          <img src="images/zh002/evolution.gif" alt="六朝疆域包络变化 GIF" loading="lazy">
+        </details>
       </div>
     </div>
   </section>
+
+  <section class="zh2-section" id="points">
+    <h2>107 个点</h2>
+    <p class="section-sub">点古地名打开详情。筛选只改变显示范围，不改变原始编号和顺序。</p>
+    <div class="zh2-toolbar">
+      <div class="zh2-field"><label for="zh2-dr">方位</label><select id="zh2-dr"><option value="全部">全部</option><option value="S">南至</option><option value="N">北至</option><option value="W">西至</option><option value="E">东至</option></select></div>
+      <div class="zh2-field"><label for="zh2-dyn">朝代</label><select id="zh2-dyn"><option value="全部">全部</option></select></div>
+      <div class="zh2-field"><label for="zh2-country">现代国家</label><select id="zh2-country"><option value="全部">全部</option></select></div>
+      <div class="zh2-field"><label for="zh2-kind">类型</label><select id="zh2-kind"><option value="全部">全部</option></select></div>
+      <div class="zh2-field"><label for="zh2-grade">可探访度</label><select id="zh2-grade"><option value="全部">全部</option></select></div>
+      <span class="zh2-count" id="zh2-count"></span>
+    </div>
+    <div class="zh2-table-wrap">
+      <table class="zh2-table">
+        <thead><tr><th>序号</th><th>方位</th><th>朝代</th><th>古地名</th><th>今地</th><th>类型</th><th>可探访</th><th>坐标</th></tr></thead>
+        <tbody id="zh2-tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="zh2-section" id="visit">
+    <h2>可探访度与档案下载</h2>
+    <p class="section-sub">A 可参观 / B 可寻访 / C 仅存文献 / D 难以到达。这里只给分级和提示，不把“地图上有点”说成“现场有遗址”。</p>
+    <div class="zh2-docs">
+      <a class="zh2-doc" href="files/zh002/zh002-grading.pdf" download><b>可探访度分级手册</b><span>PDF · 6 页 · 1.5 MB</span><em>下载</em></a>
+      <a class="zh2-doc" href="files/zh002/zh002-west.pdf" download><b>西行对照档案</b><span>PDF · 1.3 MB</span><em>下载</em></a>
+      <a class="zh2-doc" href="files/zh002/zh002-south.pdf" download><b>南行对照档案</b><span>PDF · 1.2 MB</span><em>下载</em></a>
+      <a class="zh2-doc" href="files/zh002/zh002-east.pdf" download><b>东行对照档案</b><span>PDF · 1.0 MB</span><em>下载</em></a>
+      <a class="zh2-doc" href="files/zh002/zh002-north.pdf" download><b>北行对照档案</b><span>PDF · 1.1 MB</span><em>下载</em></a>
+      <a class="zh2-doc" href="files/zh002/zh002-a-route.pdf" download><b>A 级探访路线图</b><span>PDF · 521 KB</span><em>下载</em></a>
+      <a class="zh2-doc" href="files/zh002/zh002-plain.pdf" download><b>纯文字双列 A4</b><span>PDF · 644 KB</span><em>下载</em></a>
+      <a class="zh2-doc" href="files/zh002/zh002-handbook.pdf" download><b>四至合成出行手册</b><span>PDF · 1.5 MB</span><em>下载</em></a>
+      <a class="zh2-doc" href="files/zh002/zh002-points-v3.csv" download><b>四至点位表 v3</b><span>CSV · 107 行</span><em>下载</em></a>
+    </div>
+  </section>
+
+  <section class="zh2-section" id="source">
+    <h2>来源与口径</h2>
+    <div class="zh2-source" id="zh2-source"></div>
+    <p class="zh2-version" id="zh2-version"></p>
+  </section>
 </main>
+
+<dialog class="zh2-dialog" id="zh2-dialog" aria-labelledby="zh2-dialog-title">
+  <button class="zh2-dialog-close" id="zh2-dialog-close" type="button" aria-label="关闭">×</button>
+  <div class="zh2-dialog-body">
+    <div class="zh2-dialog-top">
+      <span id="zh2-dialog-no"></span>
+      <span id="zh2-dialog-dir"></span>
+      <span class="zh2-kind" id="zh2-dialog-kind"></span>
+      <span class="zh2-grade" id="zh2-dialog-tier"></span>
+    </div>
+    <h2 id="zh2-dialog-title"></h2>
+    <p class="dl-place" id="zh2-dialog-place"></p>
+    <p class="dl-meta" id="zh2-dialog-meta"></p>
+    <dl class="dl-coords" id="zh2-dialog-coords"></dl>
+    <div class="dl-block"><b>备注</b><span id="zh2-dialog-note"></span></div>
+    <div class="dl-block"><b>探访提示</b><span id="zh2-dialog-visit"></span></div>
+    <p class="dl-src" id="zh2-dialog-src"></p>
+  </div>
+</dialog>
 
 <footer class="footer">
   <div class="footer-inner">
     <span>旅行计划 · 中国历史疆域四至</span>
-    <span>资料收集中 · 尚未填数</span>
+    <span id="zh2-footer-version"></span>
     <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
   </div>
 </footer>
 
+<script src="zh002-data.js"></script>
+<script src="assets/zh002.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/home.js"></script>
 </body>
 </html>

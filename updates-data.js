@@ -2,8 +2,8 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-01",
     type: "页面",
-    title: "中国历史疆域四至计划页",
-    note: "四至框架 · 待填资料",
+    title: "中国历史疆域四至 · ZH-002",
+    note: "107 点 · 四至图 · 档案下载",
     href: "territory-four-extremes.html"
   },
   {
