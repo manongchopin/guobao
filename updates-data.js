@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-01",
     type: "页面",
+    title: "来源、权利与使用限制草案",
+    note: "v0.1 · 非法律意见",
+    href: "rights.html"
+  },
+  {
+    date: "2026-11-01",
+    type: "页面",
     title: "中国历史疆域四至 · ZH-002",
     note: "107 点 · 四至图 · 档案下载",
     href: "territory-four-extremes.html"
