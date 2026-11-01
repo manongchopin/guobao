@@ -1,0 +1,229 @@
+/* 2027 日食追踪规划页 */
+.eclipse-hero .lede .eclipse-path {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.8;
+}
+.eclipse-hero .eclipse-flag {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  margin: 8px 0 14px;
+  padding: 4px 9px;
+  border: 1px solid #b45309;
+  color: #92400e;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+}
+.eclipse-hero h1 { max-width: 900px; }
+
+.eclipse-countdown {
+  max-width: 1120px;
+  margin: 0 auto 0;
+  padding: 0 28px 44px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: end;
+}
+.eclipse-countdown-box {
+  border-top: 2px solid #b45309;
+  padding-top: 16px;
+}
+.eclipse-countdown-label {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: #92400e;
+  margin: 0 0 6px;
+}
+.eclipse-countdown-value {
+  font-family: var(--serif);
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.eclipse-countdown-sub {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--ink-3);
+}
+.eclipse-countdown-meta {
+  text-align: right;
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--ink-3);
+}
+.eclipse-countdown-meta b { color: var(--ink-2); font-weight: 500; }
+
+.eclipse-main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 28px 76px;
+}
+.eclipse-section {
+  border-top: 1px solid var(--ink);
+  padding: 28px 0 36px;
+}
+.eclipse-section h2 {
+  font-family: var(--serif);
+  font-size: 26px;
+  line-height: 1.4;
+  margin: 0 0 6px;
+}
+.eclipse-section .section-sub {
+  margin: 0 0 22px;
+  font-size: 12.5px;
+  line-height: 1.85;
+  color: var(--ink-3);
+  max-width: 760px;
+}
+.eclipse-subhead {
+  margin: 30px 0 6px;
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.eclipse-event-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.eclipse-event {
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--ink);
+  background: var(--paper-2);
+  padding: 18px 18px 16px;
+}
+.eclipse-event.is-past { opacity: 0.72; }
+.eclipse-event.is-primary { border-top-color: #b45309; background: #fbf4e7; }
+.eclipse-event-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+}
+.eclipse-event-date { font-size: 11px; letter-spacing: 0.08em; color: var(--red); }
+.eclipse-event-type { font-size: 10px; color: var(--ink-3); border: 1px solid var(--line); padding: 2px 7px; white-space: nowrap; }
+.eclipse-event h3 { font-family: var(--serif); font-size: 20px; margin: 8px 0 4px; }
+.eclipse-event p { margin: 0; font-size: 11.5px; line-height: 1.75; color: var(--ink-2); }
+.eclipse-event .event-meta { margin-top: 8px; color: var(--ink-3); font-size: 10.5px; line-height: 1.7; }
+
+.eclipse-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 16px;
+}
+.eclipse-toolbar label { font-size: 11px; color: var(--ink-3); }
+.eclipse-toolbar select {
+  font: inherit;
+  font-size: 12px;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 6px 9px;
+}
+.eclipse-toolbar .count { font-size: 11px; color: var(--ink-3); margin-left: auto; }
+
+.eclipse-city-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.eclipse-city {
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  padding: 0;
+}
+.eclipse-city summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px 11px 9px;
+  display: block;
+}
+.eclipse-city summary::-webkit-details-marker { display: none; }
+.eclipse-city summary:hover { background: #f8f2e7; }
+.eclipse-city-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  align-items: baseline;
+  margin-bottom: 3px;
+}
+.eclipse-city-rank { font-size: 9px; color: var(--ink-4); letter-spacing: 0.08em; }
+.eclipse-city-duration { font-size: 12px; color: #92400e; font-weight: 600; font-variant-numeric: tabular-nums; }
+.eclipse-city-name { font-family: var(--serif); font-size: 16px; line-height: 1.35; }
+.eclipse-city-country { margin-left: 5px; font-family: var(--sans); font-size: 9.5px; color: var(--ink-3); }
+.eclipse-city-time { margin-top: 3px; font-size: 10px; color: var(--ink-3); line-height: 1.5; }
+.eclipse-city-bar { height: 3px; background: var(--line-soft); margin-top: 8px; }
+.eclipse-city-bar i { display: block; height: 100%; background: #d97706; }
+.eclipse-city-detail { padding: 0 11px 11px; border-top: 1px solid var(--line-soft); font-size: 10.5px; line-height: 1.8; color: var(--ink-2); }
+.eclipse-city-detail p { margin: 8px 0 0; }
+.eclipse-city-detail b { font-weight: 500; color: var(--ink); }
+
+.eclipse-partial-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 8px;
+}
+.eclipse-partial {
+  border: 1px solid var(--line-soft);
+  padding: 8px 9px;
+  background: var(--paper);
+}
+.eclipse-partial b { display: block; font-family: var(--serif); font-size: 14px; font-weight: 500; }
+.eclipse-partial span { display: block; margin-top: 2px; font-size: 10px; color: var(--ink-3); line-height: 1.5; }
+.eclipse-partial em { display: block; margin-top: 3px; font-style: normal; color: var(--red); font-size: 9.5px; }
+
+.eclipse-route-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.eclipse-route { border: 1px solid var(--line); padding: 18px; background: var(--paper-2); }
+.eclipse-route h3 { font-family: var(--serif); font-size: 21px; margin: 0 0 3px; }
+.eclipse-route .route-kicker { font-size: 9.5px; letter-spacing: 0.14em; color: #92400e; margin: 0 0 10px; }
+.eclipse-route p { margin: 0 0 8px; font-size: 11.5px; line-height: 1.8; color: var(--ink-2); }
+.eclipse-route p b { color: var(--ink); font-weight: 600; }
+.eclipse-route ul { margin: 8px 0 0; padding-left: 1.2em; font-size: 11px; line-height: 1.8; color: var(--ink-3); }
+
+.eclipse-sun-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+.eclipse-sun { border-left: 3px solid #d97706; padding: 4px 0 4px 14px; }
+.eclipse-sun h3 { font-family: var(--serif); font-size: 18px; margin: 0 0 4px; }
+.eclipse-sun p { margin: 0; font-size: 11.5px; line-height: 1.8; color: var(--ink-2); }
+.eclipse-sun .estimate { color: var(--red); font-size: 10px; margin-left: 6px; }
+
+.eclipse-safety { margin: 0 0 26px; padding: 16px 18px; background: #fbf4e7; border-left: 3px solid #b45309; }
+.eclipse-safety h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 18px; }
+.eclipse-safety ul { margin: 0; padding-left: 1.2em; }
+.eclipse-safety li { font-size: 11.5px; line-height: 1.85; color: var(--ink-2); }
+
+.eclipse-figures { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.eclipse-figure { margin: 0; border-top: 1px solid var(--line); padding-top: 12px; }
+.eclipse-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: var(--paper-2); }
+.eclipse-figure figcaption { margin-top: 8px; font-size: 11.5px; line-height: 1.75; color: var(--ink-2); }
+.eclipse-figure .fig-desc { display: block; color: var(--ink-3); }
+.eclipse-figure .fig-warning { display: block; margin-top: 3px; color: var(--red); font-size: 10.5px; }
+
+.eclipse-sources { margin: 0; padding-left: 1.2em; }
+.eclipse-sources li { font-size: 12px; line-height: 2; }
+.eclipse-sources a { color: var(--ink-2); }
+.eclipse-version { margin-top: 26px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 11px; color: var(--ink-3); }
+
+@media (max-width: 900px) {
+  .eclipse-city-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .eclipse-partial-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .eclipse-countdown { grid-template-columns: 1fr; padding: 0 20px 34px; gap: 14px; }
+  .eclipse-countdown-meta { text-align: left; }
+  .eclipse-main { padding: 0 20px 56px; }
+  .eclipse-event-grid, .eclipse-route-grid, .eclipse-sun-grid { grid-template-columns: 1fr; }
+  .eclipse-city-grid { grid-template-columns: 1fr; }
+  .eclipse-partial-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .eclipse-section h2 { font-size: 23px; }
+}

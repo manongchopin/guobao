@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-01",
+    type: "页面",
+    title: "2027 日食追踪规划",
+    note: "33 城 · 摩洛哥线 / 埃及线 · v1",
+    href: "eclipse-2027.html"
+  },
+  {
+    date: "2026-11-01",
     type: "档案",
     title: "第七批完整公文（128页）",
     note: "1943处 + 47合并 · 附录10页",

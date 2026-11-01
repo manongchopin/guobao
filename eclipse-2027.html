@@ -3,94 +3,97 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2027 追逐日食 · 旅行计划</title>
-<meta name="description" content="2027 年日全食追逐计划：观测点、路线、预算与资料，持续补充中。">
+<title>2027 追逐日食 · 日食追踪规划</title>
+<meta name="description" content="2027 年 8 月 2 日日全食：倒计时、33 个全食带城市、摩洛哥线与埃及线、选点与观测安全。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/eclipse.css">
 </head>
 <body>
 
-<header class="hero">
+<header class="hero eclipse-hero">
   <a class="back" href="plans.html">← 旅行计划</a>
-  <p class="kicker">Plan 01 · Eclipse 2027</p>
-  <h1>2027 追逐日食</h1>
+  <p class="eclipse-flag" id="eclipse-next">正在读取数据…</p>
+  <p class="kicker">Eclipse Watch · 2027</p>
+  <h1>追一场日全食</h1>
   <p class="lede">
-    去追一次日全食。<br>
-    <span>观测点、路线和预算，先留在这里慢慢补。</span>
+    <span id="eclipse-primary">正在读取日食数据…</span><br>
+    <span class="eclipse-path" id="eclipse-path">路径加载中</span>
   </p>
   <div class="seal" aria-hidden="true">食</div>
 </header>
 
-<div class="hub-progress">
-  <div class="hub-progress-inner">
-    <span class="hp-label">2027 日全食</span>
-    <span class="hp-num">1</span><span class="hp-total">次</span>
-    <span class="hp-note">资料收集中 · 日期待核</span>
+<section class="eclipse-countdown" aria-label="日食倒计时">
+  <div class="eclipse-countdown-box">
+    <p class="eclipse-countdown-label">下一场 · 全球最大食</p>
+    <div class="eclipse-countdown-value" id="eclipse-countdown">加载中</div>
+    <p class="eclipse-countdown-sub" id="eclipse-countdown-note">正在换算时间。</p>
   </div>
-</div>
+  <div class="eclipse-countdown-meta" id="eclipse-countdown-meta"></div>
+</section>
 
-<main class="wh-detail">
-  <section class="wh-section">
-    <p class="plan-intro">这一页先作为资料底稿：把观测点、交通、住宿、预算和资料链接分开记。等数据齐了，再排具体行程。</p>
+<main class="eclipse-main">
+  <section class="eclipse-section" id="events">
+    <h2>四场日食，先分清</h2>
+    <p class="section-sub">2026 那场已经过去；2027 是主目标；2028 在西班牙是日环食，2028 的全食在澳洲和新西兰。不要把三场地中海日食混成一句。</p>
+    <div class="eclipse-event-grid" id="eclipse-events"></div>
+  </section>
 
-    <div class="info-table">
-      <div><span>目标</span><b>2027 年日全食</b></div>
-      <div><span>日期</span><b>2027 年 8 月 2 日（待核）</b></div>
-      <div><span>观测地</span><b>待定</b></div>
-      <div><span>路线</span><b>待定</b></div>
-      <div><span>预算</span><b>待定</b></div>
-      <div><span>状态</span><b>资料收集中</b></div>
+  <section class="eclipse-section" id="cities">
+    <h2 id="eclipse-city-heading">带内城市：先选城市，再选国家</h2>
+    <p class="section-sub">按全食时长从长到短排序；并列时按国家分组。点开任一城市，可看当地、UTC 和北京时间的全食起止。带外城市只标“0 秒 / 仅偏食”，不参与排行。</p>
+    <div class="eclipse-toolbar">
+      <label for="eclipse-country">国家 / 地区</label>
+      <select id="eclipse-country"><option value="all">全部</option></select>
+      <span class="count" id="eclipse-city-count"></span>
     </div>
+    <div class="eclipse-city-grid" id="eclipse-city-grid"></div>
+
+    <h3 class="eclipse-subhead">差一点的城市</h3>
+    <p class="section-sub">它们在带外，只有偏食。即使掩食百分比很高，全食时长仍然是 0 秒。</p>
+    <div class="eclipse-partial-grid" id="eclipse-partial-grid"></div>
   </section>
 
-  <section class="wh-section">
-    <h2>为什么是这一天</h2>
-    <p>2027 年 8 月 2 日的日全食带经过西班牙、北非和阿拉伯半岛。具体去哪里看，不能只看日食带，还要比较天气、交通、住宿和停留时间。</p>
-    <p>现在先不锁定城市，等候选观测点、天气资料和预算放在一起再判断。</p>
+  <section class="eclipse-section" id="routes">
+    <h2>两条路线：摩洛哥线 vs 埃及线</h2>
+    <p class="section-sub">同国之内，城市差别很大：丹吉尔 4:51，乌季达 1:07；休达 4:49，马拉加 1:57。先选城市，再谈国家。</p>
+    <div class="eclipse-route-grid" id="eclipse-routes"></div>
+    <div class="eclipse-version" id="eclipse-rule"></div>
   </section>
 
-  <section class="wh-section">
-    <h2>候选观测区域</h2>
-    <div class="info-table">
-      <div><span>西班牙</span><b>待比较：天气、交通、住宿与日食带位置</b></div>
-      <div><span>北非</span><b>待比较：陆路衔接、天气与安全信息</b></div>
-      <div><span>阿拉伯半岛</span><b>待比较：航班、地面交通与观测条件</b></div>
+  <section class="eclipse-section" id="field">
+    <h2>站哪儿看，几点到场</h2>
+    <p class="section-sub">太阳方位和高度决定你要找什么样的开阔地；带“估算”标记的数据，不能当成实测。</p>
+    <div class="eclipse-sun-grid" id="eclipse-sun"></div>
+    <div class="eclipse-safety">
+      <h3>观测安全</h3>
+      <ul id="eclipse-safety-list"></ul>
     </div>
-    <p class="wh-note">这里只列方向，不代表已经选定。后续每个区域会补具体城市、观测点和备选方案。</p>
+
+    <h3 class="eclipse-subhead">三张示意图</h3>
+    <div class="eclipse-figures" id="eclipse-figures"></div>
   </section>
 
-  <section class="wh-section">
-    <h2>行程草案</h2>
-    <p>还没有排日期。等观测点确定后，再按“抵达—踩点—日食日—离开”的顺序安排，避免把日食日放在长途移动之后。</p>
-    <div class="info-table">
-      <div><span>抵达</span><b>待补</b></div>
-      <div><span>踩点</span><b>待补</b></div>
-      <div><span>日食日</span><b>待补</b></div>
-      <div><span>离开</span><b>待补</b></div>
-    </div>
+  <section class="eclipse-section" id="sources">
+    <h2>来源</h2>
+    <p class="section-sub">来源可点；城市时长以 <code>data/eclipses.json</code> 为准。</p>
+    <ul class="eclipse-sources" id="eclipse-sources"></ul>
+    <p class="eclipse-version" id="eclipse-version">数据版本加载中</p>
   </section>
 
-  <section class="wh-section">
-    <h2>资料与链接</h2>
-    <div class="info-table">
-      <div><span>日食路径</span><b>待补：官方路径图与食带数据</b></div>
-      <div><span>天气</span><b>待补：历史云量、当月天气</b></div>
-      <div><span>交通</span><b>待补：航班、铁路、租车</b></div>
-      <div><span>住宿</span><b>待补：观测点周边住宿</b></div>
-      <div><span>预算</span><b>待补：机票、住宿、地面交通、设备</b></div>
-    </div>
-    <p class="wh-note">这一页的数据会持续补。先留结构，不先写结论。</p>
-  </section>
+  <p class="eclipse-version" id="eclipse-error" hidden></p>
+  <noscript><p class="eclipse-version">这个页面需要 JavaScript 读取本地日食数据；请开启 JavaScript 后刷新。</p></noscript>
 </main>
 
 <footer class="footer">
   <div class="footer-inner">
     <span>旅行计划 · 2027 追逐日食</span>
-    <span>资料收集中 · 日期待核</span>
+    <span id="eclipse-footer-version">数据版本加载中</span>
     <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
   </div>
 </footer>
 
+<script src="assets/eclipse.js" defer></script>
 </body>
 </html>

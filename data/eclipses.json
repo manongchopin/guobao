@@ -1,0 +1,814 @@
+{
+  "meta": {
+    "project": "eclipse-watch",
+    "generated": "2026-11-01",
+    "primary_event": "2027-08-02",
+    "language": "zh-CN",
+    "note": "所有时刻为当地时间；totality_seconds 为全食持续时间（秒），带外城市无此字段。",
+    "version": 1,
+    "updated": "2026-11-01",
+    "source_of_truth": "eclipse-watch/data/eclipses.json",
+    "changelog": [
+      {
+        "version": 1,
+        "date": "2026-11-01",
+        "note": "首次生成：4 场日食、33 个带内城市、10 个带外城市、两条路线结论"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "2026-08-12",
+      "type": "total",
+      "status": "past",
+      "title": "日全食",
+      "path": "北冰洋 → 格陵兰东北 → 冰岛西缘 → 大西洋 → 伊比利亚半岛（自西向东）→ 巴利阿里群岛",
+      "greatest": {
+        "local": "19:46 CEST",
+        "utc": "17:46",
+        "where": "冰岛附近",
+        "duration_seconds": 138
+      },
+      "spain": {
+        "cities": [
+          "A Coruña 76s",
+          "Burgos 104s",
+          "Palma de Mallorca"
+        ],
+        "note": "发生在日落前，太阳高度仅 2°–12°"
+      }
+    },
+    {
+      "id": "2027-08-02",
+      "type": "total",
+      "status": "upcoming",
+      "title": "日全食（本档案主目标）",
+      "path": "大西洋 → 直布罗陀海峡 → 摩洛哥 → 阿尔及利亚 → 突尼斯 → 利比亚 → 埃及（尼罗河谷）→ 红海 → 沙特阿拉伯 → 也门 → 索马里东北角 → 印度洋",
+      "band_width_km": 258,
+      "greatest": {
+        "utc": "10:07:50",
+        "where": "埃及新河谷省东北部",
+        "duration_seconds": 383,
+        "duration_max_seconds": 384
+      },
+      "global_partial": {
+        "start_utc": "07:31:21",
+        "end_utc": "12:44:21"
+      },
+      "distance_note": "21 世纪陆地上最容易抵达的最长日全食；下一次更长的要等到 2114-06-03"
+    },
+    {
+      "id": "2028-01-26",
+      "type": "annular",
+      "status": "upcoming",
+      "title": "日环食",
+      "path": "太平洋 → 厄瓜多尔 → 秘鲁 → 哥伦比亚南部 → 巴西 → 苏里南 → 法属圭亚那 → 大西洋 → 亚速尔 → 葡萄牙 → 西班牙东南半部",
+      "greatest": {
+        "local": "16:07 CET",
+        "utc": "15:07",
+        "where": "巴西境内",
+        "duration_seconds": 627
+      },
+      "spain": {
+        "note": "环食阶段太阳仅 4°–7° 高，正值日落；塞维利亚/科尔多瓦/阿尔瓦塞特/瓦伦西亚可见约 7 分钟环食"
+      }
+    },
+    {
+      "id": "2028-07-22",
+      "type": "total",
+      "status": "upcoming",
+      "title": "日全食（澳洲 / 新西兰）",
+      "path": "西澳金伯利 → 北领地 → 昆士兰西南 → 新南威尔士（正过悉尼）→ 塔斯曼海 → 新西兰南岛",
+      "cities": [
+        {
+          "name": "金伯利",
+          "duration_seconds": 310
+        },
+        {
+          "name": "悉尼",
+          "duration_seconds": 225,
+          "local": "约 14:00 AEST"
+        },
+        {
+          "name": "邓尼丁",
+          "note": "新西兰自 1163 年以来首次日全食"
+        }
+      ]
+    }
+  ],
+  "cities_in_path": [
+    {
+      "name": "加的斯",
+      "name_en": "Cadiz",
+      "country_code": "ES",
+      "country": "西班牙",
+      "lat": 36.53,
+      "lon": -6.29,
+      "utc_offset": "+02:00",
+      "partial_start": "09:40:48",
+      "totality_start": "10:45:29",
+      "maximum": "10:46:57",
+      "totality_end": "10:48:25",
+      "partial_end": "11:59:43",
+      "totality_seconds": 176,
+      "magnitude": 1.0076
+    },
+    {
+      "name": "休达",
+      "name_en": "Ceuta",
+      "country_code": "ES",
+      "country": "西班牙",
+      "lat": 35.89,
+      "lon": -5.32,
+      "utc_offset": "+02:00",
+      "partial_start": "09:41:03",
+      "totality_start": "10:45:26",
+      "maximum": "10:47:50",
+      "totality_end": "10:50:15",
+      "partial_end": "12:01:22",
+      "totality_seconds": 289,
+      "magnitude": 1.0304
+    },
+    {
+      "name": "马贝拉",
+      "name_en": "Marbella",
+      "country_code": "ES",
+      "country": "西班牙",
+      "lat": 36.51,
+      "lon": -4.88,
+      "utc_offset": "+02:00",
+      "partial_start": "09:41:42",
+      "totality_start": "10:46:53",
+      "maximum": "10:48:33",
+      "totality_end": "10:50:14",
+      "partial_end": "12:02:02",
+      "totality_seconds": 201,
+      "magnitude": 1.0099
+    },
+    {
+      "name": "马拉加",
+      "name_en": "Malaga",
+      "country_code": "ES",
+      "country": "西班牙",
+      "lat": 36.72,
+      "lon": -4.42,
+      "utc_offset": "+02:00",
+      "partial_start": "09:42:09",
+      "totality_start": "10:48:12",
+      "maximum": "10:49:10",
+      "totality_end": "10:50:09",
+      "partial_end": "12:02:46",
+      "totality_seconds": 117,
+      "magnitude": 1.0031
+    },
+    {
+      "name": "梅利利亚",
+      "name_en": "Melilla",
+      "country_code": "ES",
+      "country": "西班牙",
+      "lat": 35.29,
+      "lon": -2.94,
+      "utc_offset": "+02:00",
+      "partial_start": "09:42:27",
+      "totality_start": "10:48:19",
+      "maximum": "10:50:36",
+      "totality_end": "10:52:53",
+      "partial_end": "12:05:31",
+      "totality_seconds": 274,
+      "magnitude": 1.0216
+    },
+    {
+      "name": "直布罗陀",
+      "name_en": "Gibraltar",
+      "country_code": "GI",
+      "country": "直布罗陀",
+      "lat": 36.14,
+      "lon": -5.35,
+      "utc_offset": "+02:00",
+      "partial_start": "09:41:10",
+      "totality_start": "10:45:39",
+      "maximum": "10:47:53",
+      "totality_end": "10:50:07",
+      "partial_end": "12:01:18",
+      "totality_seconds": 268,
+      "magnitude": 1.0218
+    },
+    {
+      "name": "丹吉尔",
+      "name_en": "Tangier",
+      "country_code": "MA",
+      "country": "摩洛哥",
+      "lat": 35.78,
+      "lon": -5.8,
+      "utc_offset": "+01:00",
+      "partial_start": "08:40:39",
+      "totality_start": "09:44:47",
+      "maximum": "09:47:12",
+      "totality_end": "09:49:38",
+      "partial_end": "11:00:32",
+      "totality_seconds": 291,
+      "magnitude": 1.0339
+    },
+    {
+      "name": "乌季达",
+      "name_en": "Oujda",
+      "country_code": "MA",
+      "country": "摩洛哥",
+      "lat": 34.68,
+      "lon": -1.91,
+      "utc_offset": "+01:00",
+      "partial_start": "08:43:01",
+      "totality_start": "09:51:15",
+      "maximum": "09:51:49",
+      "totality_end": "09:52:22",
+      "partial_end": "11:07:28",
+      "totality_seconds": 67,
+      "magnitude": 1.0014
+    },
+    {
+      "name": "奥兰",
+      "name_en": "Oran",
+      "country_code": "DZ",
+      "country": "阿尔及利亚",
+      "lat": 35.7,
+      "lon": -0.63,
+      "utc_offset": "+01:00",
+      "partial_start": "08:44:30",
+      "totality_start": "09:51:10",
+      "maximum": "09:53:44",
+      "totality_end": "09:56:18",
+      "partial_end": "11:09:33",
+      "totality_seconds": 308,
+      "magnitude": 1.0365
+    },
+    {
+      "name": "姆西拉",
+      "name_en": "M'Sila",
+      "country_code": "DZ",
+      "country": "阿尔及利亚",
+      "lat": 35.7,
+      "lon": 4.54,
+      "utc_offset": "+01:00",
+      "partial_start": "08:48:59",
+      "totality_start": "09:58:09",
+      "maximum": "10:00:50",
+      "totality_end": "10:03:32",
+      "partial_end": "11:18:50",
+      "totality_seconds": 323,
+      "magnitude": 1.0337
+    },
+    {
+      "name": "卡塞林",
+      "name_en": "Kasserine",
+      "country_code": "TN",
+      "country": "突尼斯",
+      "lat": 35.17,
+      "lon": 8.83,
+      "utc_offset": "+01:00",
+      "partial_start": "08:54:08",
+      "totality_start": "10:05:34",
+      "maximum": "10:08:18",
+      "totality_end": "10:11:02",
+      "partial_end": "11:27:47",
+      "totality_seconds": 328,
+      "magnitude": 1.0286
+    },
+    {
+      "name": "加夫萨",
+      "name_en": "Gafsa",
+      "country_code": "TN",
+      "country": "突尼斯",
+      "lat": 34.42,
+      "lon": 8.78,
+      "utc_offset": "+01:00",
+      "partial_start": "08:53:56",
+      "totality_start": "10:05:49",
+      "maximum": "10:08:23",
+      "totality_end": "10:10:58",
+      "partial_end": "11:28:18",
+      "totality_seconds": 309,
+      "magnitude": 1.0226
+    },
+    {
+      "name": "凯鲁万",
+      "name_en": "Kairouan",
+      "country_code": "TN",
+      "country": "突尼斯",
+      "lat": 35.68,
+      "lon": 10.1,
+      "utc_offset": "+01:00",
+      "partial_start": "08:55:50",
+      "totality_start": "10:08:57",
+      "maximum": "10:10:20",
+      "totality_end": "10:11:42",
+      "partial_end": "11:29:48",
+      "totality_seconds": 165,
+      "magnitude": 1.0049
+    },
+    {
+      "name": "加贝斯",
+      "name_en": "Gabes",
+      "country_code": "TN",
+      "country": "突尼斯",
+      "lat": 33.88,
+      "lon": 10.1,
+      "utc_offset": "+01:00",
+      "partial_start": "08:55:32",
+      "totality_start": "10:08:47",
+      "maximum": "10:10:51",
+      "totality_end": "10:12:55",
+      "partial_end": "11:31:22",
+      "totality_seconds": 248,
+      "magnitude": 1.0121
+    },
+    {
+      "name": "斯法克斯",
+      "name_en": "Sfax",
+      "country_code": "TN",
+      "country": "突尼斯",
+      "lat": 34.74,
+      "lon": 10.76,
+      "utc_offset": "+01:00",
+      "partial_start": "08:56:29",
+      "totality_start": "10:08:54",
+      "maximum": "10:11:44",
+      "totality_end": "10:14:35",
+      "partial_end": "11:31:56",
+      "totality_seconds": 341,
+      "magnitude": 1.0323
+    },
+    {
+      "name": "马赫迪耶",
+      "name_en": "Mahdia",
+      "country_code": "TN",
+      "country": "突尼斯",
+      "lat": 35.5,
+      "lon": 11.06,
+      "utc_offset": "+01:00",
+      "partial_start": "08:57:02",
+      "totality_start": "10:10:38",
+      "maximum": "10:12:02",
+      "totality_end": "10:13:27",
+      "partial_end": "11:31:49",
+      "totality_seconds": 169,
+      "magnitude": 1.005
+    },
+    {
+      "name": "杰尔巴岛",
+      "name_en": "Houmt Souk (Djerba)",
+      "country_code": "TN",
+      "country": "突尼斯",
+      "lat": 33.88,
+      "lon": 10.86,
+      "utc_offset": "+01:00",
+      "partial_start": "08:56:32",
+      "totality_start": "10:09:52",
+      "maximum": "10:12:13",
+      "totality_end": "10:14:35",
+      "partial_end": "11:32:55",
+      "totality_seconds": 283,
+      "magnitude": 1.0165
+    },
+    {
+      "name": "扎尔齐斯",
+      "name_en": "Zarzis",
+      "country_code": "TN",
+      "country": "突尼斯",
+      "lat": 33.5,
+      "lon": 11.11,
+      "utc_offset": "+01:00",
+      "partial_start": "08:56:51",
+      "totality_start": "10:11:21",
+      "maximum": "10:12:49",
+      "totality_end": "10:14:17",
+      "partial_end": "11:33:46",
+      "totality_seconds": 176,
+      "magnitude": 1.0057
+    },
+    {
+      "name": "班加西",
+      "name_en": "Benghazi",
+      "country_code": "LY",
+      "country": "利比亚",
+      "lat": 32.12,
+      "lon": 20.07,
+      "utc_offset": "+02:00",
+      "partial_start": "10:10:46",
+      "totality_start": "11:27:58",
+      "maximum": "11:31:03",
+      "totality_end": "11:34:09",
+      "partial_end": "12:53:26",
+      "totality_seconds": 371,
+      "magnitude": 1.0385
+    },
+    {
+      "name": "锡瓦绿洲",
+      "name_en": "Siwa Oasis",
+      "country_code": "EG",
+      "country": "埃及",
+      "lat": 29.2,
+      "lon": 25.52,
+      "utc_offset": "+03:00",
+      "partial_start": "11:22:18",
+      "totality_start": "12:42:42",
+      "maximum": "12:45:28",
+      "totality_end": "12:48:15",
+      "partial_end": "14:08:17",
+      "totality_seconds": 333,
+      "magnitude": 1.0206
+    },
+    {
+      "name": "明亚",
+      "name_en": "Minya",
+      "country_code": "EG",
+      "country": "埃及",
+      "lat": 28.09,
+      "lon": 30.75,
+      "utc_offset": "+03:00",
+      "partial_start": "11:33:43",
+      "totality_start": "12:55:36",
+      "maximum": "12:57:44",
+      "totality_end": "12:59:51",
+      "partial_end": "14:19:10",
+      "totality_seconds": 255,
+      "magnitude": 1.01
+    },
+    {
+      "name": "艾斯尤特",
+      "name_en": "Asyut",
+      "country_code": "EG",
+      "country": "埃及",
+      "lat": 27.18,
+      "lon": 31.19,
+      "utc_offset": "+03:00",
+      "partial_start": "11:35:37",
+      "totality_start": "12:57:03",
+      "maximum": "13:00:06",
+      "totality_end": "13:03:10",
+      "partial_end": "14:21:41",
+      "totality_seconds": 367,
+      "magnitude": 1.028
+    },
+    {
+      "name": "索哈杰",
+      "name_en": "Sohag",
+      "country_code": "EG",
+      "country": "埃及",
+      "lat": 26.56,
+      "lon": 31.7,
+      "utc_offset": "+03:00",
+      "partial_start": "11:37:14",
+      "totality_start": "12:58:46",
+      "maximum": "13:01:58",
+      "totality_end": "13:05:09",
+      "partial_end": "14:23:29",
+      "totality_seconds": 383,
+      "magnitude": 1.037
+    },
+    {
+      "name": "纳格哈马迪",
+      "name_en": "Nag Hammadi",
+      "country_code": "EG",
+      "country": "埃及",
+      "lat": 26.05,
+      "lon": 32.25,
+      "utc_offset": "+03:00",
+      "partial_start": "11:39:03",
+      "totality_start": "13:00:46",
+      "maximum": "13:03:58",
+      "totality_end": "13:07:10",
+      "partial_end": "14:25:20",
+      "totality_seconds": 384,
+      "magnitude": 1.038
+    },
+    {
+      "name": "基纳",
+      "name_en": "Qena",
+      "country_code": "EG",
+      "country": "埃及",
+      "lat": 26.16,
+      "lon": 32.72,
+      "utc_offset": "+03:00",
+      "partial_start": "11:39:52",
+      "totality_start": "13:01:34",
+      "maximum": "13:04:41",
+      "totality_end": "13:07:46",
+      "partial_end": "14:25:50",
+      "totality_seconds": 372,
+      "magnitude": 1.03
+    },
+    {
+      "name": "卢克索",
+      "name_en": "Luxor",
+      "country_code": "EG",
+      "country": "埃及",
+      "lat": 25.7,
+      "lon": 32.65,
+      "utc_offset": "+03:00",
+      "partial_start": "11:40:21",
+      "totality_start": "13:02:14",
+      "maximum": "13:05:26",
+      "totality_end": "13:08:36",
+      "partial_end": "14:26:44",
+      "totality_seconds": 382,
+      "magnitude": 1.0361
+    },
+    {
+      "name": "埃德夫",
+      "name_en": "Edfu",
+      "country_code": "EG",
+      "country": "埃及",
+      "lat": 24.98,
+      "lon": 32.87,
+      "utc_offset": "+03:00",
+      "partial_start": "11:41:37",
+      "totality_start": "13:04:08",
+      "maximum": "13:06:55",
+      "totality_end": "13:09:41",
+      "partial_end": "14:28:14",
+      "totality_seconds": 333,
+      "magnitude": 1.02
+    },
+    {
+      "name": "吉达",
+      "name_en": "Jeddah",
+      "country_code": "SA",
+      "country": "沙特阿拉伯",
+      "lat": 21.49,
+      "lon": 39.19,
+      "utc_offset": "+03:00",
+      "partial_start": "12:00:23",
+      "totality_start": "13:22:21",
+      "maximum": "13:25:18",
+      "totality_end": "13:28:14",
+      "partial_end": "14:43:47",
+      "totality_seconds": 353,
+      "magnitude": 1.0262
+    },
+    {
+      "name": "麦加",
+      "name_en": "Mecca",
+      "country_code": "SA",
+      "country": "沙特阿拉伯",
+      "lat": 21.42,
+      "lon": 39.83,
+      "utc_offset": "+03:00",
+      "partial_start": "12:01:58",
+      "totality_start": "13:24:06",
+      "maximum": "13:26:41",
+      "totality_end": "13:29:16",
+      "partial_end": "14:44:49",
+      "totality_seconds": 310,
+      "magnitude": 1.0176
+    },
+    {
+      "name": "塔伊夫",
+      "name_en": "Taif",
+      "country_code": "SA",
+      "country": "沙特阿拉伯",
+      "lat": 21.27,
+      "lon": 40.42,
+      "utc_offset": "+03:00",
+      "partial_start": "12:03:36",
+      "totality_start": "13:26:59",
+      "maximum": "13:28:01",
+      "totality_end": "13:29:03",
+      "partial_end": "14:45:43",
+      "totality_seconds": 124,
+      "magnitude": 1.0023
+    },
+    {
+      "name": "海米斯穆谢特",
+      "name_en": "Khamis Mushait",
+      "country_code": "SA",
+      "country": "沙特阿拉伯",
+      "lat": 18.31,
+      "lon": 42.73,
+      "utc_offset": "+03:00",
+      "partial_start": "12:13:38",
+      "totality_start": "13:34:41",
+      "maximum": "13:37:41",
+      "totality_end": "13:40:41",
+      "partial_end": "14:54:05",
+      "totality_seconds": 360,
+      "magnitude": 1.0333
+    },
+    {
+      "name": "萨那",
+      "name_en": "Sanaa",
+      "country_code": "YE",
+      "country": "也门",
+      "lat": 15.37,
+      "lon": 44.19,
+      "utc_offset": "+03:00",
+      "partial_start": "12:22:05",
+      "totality_start": "13:44:15",
+      "maximum": "13:45:35",
+      "totality_end": "13:46:54",
+      "partial_end": "15:00:50",
+      "totality_seconds": 159,
+      "magnitude": 1.0046
+    },
+    {
+      "name": "博萨索",
+      "name_en": "Bosaso",
+      "country_code": "SO",
+      "country": "索马里",
+      "lat": 11.28,
+      "lon": 49.18,
+      "utc_offset": "+03:00",
+      "partial_start": "12:39:49",
+      "totality_start": "13:58:18",
+      "maximum": "14:00:22",
+      "totality_end": "14:02:26",
+      "partial_end": "15:12:09",
+      "totality_seconds": 248,
+      "magnitude": 1.013
+    }
+  ],
+  "cities_partial": [
+    {
+      "name": "卡萨布兰卡",
+      "name_en": "Casablanca",
+      "country_code": "MA",
+      "lat": 33.57,
+      "lon": -7.59,
+      "partial_start": "08:38:29",
+      "maximum": "09:44:25",
+      "partial_end": "10:57:29",
+      "coverage_pct": 97.21
+    },
+    {
+      "name": "里斯本",
+      "name_en": "Lisbon",
+      "country_code": "PT",
+      "lat": 38.72,
+      "lon": -9.14,
+      "partial_start": "08:40:51",
+      "maximum": "09:44:57",
+      "partial_end": "10:55:12",
+      "coverage_pct": 92.54
+    },
+    {
+      "name": "马德里",
+      "name_en": "Madrid",
+      "country_code": "ES",
+      "lat": 40.42,
+      "lon": -3.7,
+      "partial_start": "09:45:32",
+      "maximum": "10:51:21",
+      "partial_end": "12:02:53",
+      "coverage_pct": 86.38
+    },
+    {
+      "name": "阿尔及尔",
+      "name_en": "Algiers",
+      "country_code": "DZ",
+      "lat": 36.75,
+      "lon": 3.06,
+      "partial_start": "08:48:23",
+      "maximum": "09:59:05",
+      "partial_end": "11:15:48",
+      "coverage_pct": 99.83
+    },
+    {
+      "name": "伦敦",
+      "name_en": "London",
+      "country_code": "GB",
+      "lat": 51.51,
+      "lon": -0.13,
+      "partial_start": "09:03:40",
+      "maximum": "10:00:15",
+      "partial_end": "10:59:38",
+      "coverage_pct": 41.92
+    },
+    {
+      "name": "巴黎",
+      "name_en": "Paris",
+      "country_code": "FR",
+      "lat": 48.86,
+      "lon": 2.35,
+      "partial_start": "10:00:46",
+      "maximum": "11:01:19",
+      "partial_end": "12:05:10",
+      "coverage_pct": 51.31
+    },
+    {
+      "name": "罗马",
+      "name_en": "Rome",
+      "country_code": "IT",
+      "lat": 41.9,
+      "lon": 12.5,
+      "partial_start": "10:02:15",
+      "maximum": "11:12:53",
+      "partial_end": "12:26:58",
+      "coverage_pct": 74.58
+    },
+    {
+      "name": "瓦莱塔",
+      "name_en": "Valletta",
+      "country_code": "MT",
+      "lat": 35.9,
+      "lon": 14.51,
+      "partial_start": "10:01:49",
+      "maximum": "11:17:58",
+      "partial_end": "12:37:54",
+      "coverage_pct": 97.31
+    },
+    {
+      "name": "的黎波里",
+      "name_en": "Tripoli",
+      "country_code": "LY",
+      "lat": 32.89,
+      "lon": 13.19,
+      "partial_start": "09:59:46",
+      "maximum": "11:16:57",
+      "partial_end": "12:38:36",
+      "coverage_pct": 100.0
+    },
+    {
+      "name": "开罗",
+      "name_en": "Cairo",
+      "country_code": "EG",
+      "lat": 30.04,
+      "lon": 31.24,
+      "partial_start": "11:33:15",
+      "maximum": "12:56:00",
+      "partial_end": "14:16:24",
+      "coverage_pct": 94.79
+    }
+  ],
+  "sun_geometry": {
+    "tangier": {
+      "azimuth_deg": 95.5,
+      "altitude_deg": 38.8,
+      "estimated": true,
+      "note": "太阳在正东略偏南，需朝东开阔；39° 高于常见建筑遮挡角"
+    },
+    "luxor": {
+      "azimuth_deg": 152.7,
+      "altitude_deg": 81.1,
+      "estimated": true,
+      "note": "接近天顶，不存在地平线遮挡问题；影子约为身高的 1/6"
+    }
+  },
+  "site_strategy": {
+    "morocco": {
+      "best": "丹吉尔（4:51）",
+      "second": "休达 4:49 / 梅利利亚 4:34",
+      "backup": "得土安（更内陆，云风险低）→ 舍夫沙万（山区）",
+      "risks": [
+        "8 月为摩洛哥旅游最旺季",
+        "海峡 Levante 东风带来低云",
+        "坡城建筑遮挡"
+      ]
+    },
+    "egypt": {
+      "best": "卢克索 6:22 / 索哈杰 6:23 / 纳格哈马迪 6:24",
+      "corridor": "艾斯尤特—埃德夫约 250 km，全食均超过 5 分半",
+      "risks": [
+        "8 月 40 °C 以上，全食在 13:06 最热时段",
+        "全球追食团集中，酒店需提前一年"
+      ]
+    },
+    "rule_of_thumb": "退到「楼高的 1.25 倍」以外，39° 的太阳即可露出",
+    "trap": "只看全食时长 > 0，不看掩食百分比；开罗 94.8%、阿尔及尔 99.8% 都是 0 秒"
+  },
+  "safety": [
+    "偏食与环食全程必须佩戴合格的日食眼镜或使用前置太阳滤镜",
+    "只有全食阶段（食既到生光之间）可以裸眼直视",
+    "摄影：镜头前置巴德膜，全食开始前再摘下，生光前务必装回"
+  ],
+  "figures": [
+    {
+      "file": "fig/morocco-2027.png",
+      "desc": "摩洛哥全食带、城市时长、丹吉尔朝哪看"
+    },
+    {
+      "file": "fig/egypt-2027.png",
+      "desc": "埃及全食带、6 分钟走廊、太阳近天顶"
+    },
+    {
+      "file": "fig/tangier-city.png",
+      "desc": "丹吉尔市区选点、当天时间表、遮挡规则"
+    }
+  ],
+  "sources": [
+    {
+      "name": "IGN 西班牙 2027 日全食官方页",
+      "url": "https://eclipses.ign.es/en/eclipse-total-sol-de-2-de-agosto-2027.html"
+    },
+    {
+      "name": "timeanddate 2027-08-02 日食",
+      "url": "https://www.timeanddate.com/eclipse/solar/2027-august-2"
+    },
+    {
+      "name": "Wikipedia: Solar eclipse of August 2, 2027",
+      "url": "https://en.wikipedia.org/wiki/Solar_eclipse_of_August_2,_2027"
+    },
+    {
+      "name": "NASA GSFC eclipse 目录",
+      "url": "https://eclipse.gsfc.nasa.gov/SEsearch/SEdata.php?Ecl=+20270802"
+    }
+  ]
+}
