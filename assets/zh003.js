@@ -21,10 +21,10 @@
   }
   function imagePath(site) {
     var d = displayFor(site);
-    return d.tier === "A" || d.tier === "B" ? (d.src || "") : "";
+    return d.tier !== "C" ? (d.src || "") : "";
   }
   function tierLabel(tier) {
-    return { A: "Sentinel 示意", B: "OSM 位置图", C: "文字 / 坐标" }[tier] || tier;
+    return { A: "Sentinel 示意", B: "OSM 位置图", C: "文字 / 坐标", E: "商业高清图" }[tier] || tier;
   }
   function noText(n) { return String(n).padStart(2, "0"); }
   function stanceClass(s) { return s === "存疑" ? " is-doubt" : ""; }
@@ -58,8 +58,8 @@
     document.getElementById("zh-source-body").innerHTML =
       '<p>来源：' + esc(s.platform) + "问题「" + esc(s.question) + "」，答主 <b>" + esc(s.author) + "</b> · 抓取于 " + esc(DATA.captured) + "。</p>" +
       '<p><a href="' + esc(s.url) + '" target="_blank" rel="noopener">打开原始回答 ↗</a></p>' +
-      "<p>公开底图分三档：A 用 Sentinel-2 10m 示意；B 用 OSM 位置/范围图；C 只保留文字与坐标。Esri / Maxar 原图只保存在私人档案，不在公开页展示。</p>" +
-      "<p>A 类需署名 <code>Contains modified Copernicus Sentinel data 2025</code>；B 类需署名 <code>© OpenStreetMap contributors</code>，底图按 ODbL 使用。</p>" +
+      "<p>公开页已恢复 Esri / Maxar / Earthstar 800px 商业影像，并提供 14 页 PDF 下载。影像与 PDF 未获公开再分发授权，属「未授权公开（风险已记录）」；权利人可联系下架。</p>" +
+      "<p>完整署名：<code>Esri / Maxar / Earthstar Geographics</code>。早先的 A/B/C 开放底图配置保留作备用，但当前默认不显示。</p>" +
       '<p>第 32 条疾陵城的国别按 <code>sites.json</code> 的 <code>country</code> 字段显示；若上游修改，本页随之变化，不在代码里写死。</p>';
   }
 
@@ -89,7 +89,7 @@
   function card(site) {
     var d = displayFor(site);
     var img = imagePath(site);
-    var alt = d.tier === "A" ? "Sentinel-2 10m 示意" : (d.tier === "B" ? "OSM 位置图" : "");
+    var alt = d.tier === "A" ? "Sentinel-2 10m 示意" : (d.tier === "B" ? "OSM 位置图" : (d.tier === "E" ? "商业卫星影像" : ""));
     var thumb;
     if (img) {
       thumb = '<div class="zh-thumb"><img src="' + esc(img) + '" alt="' + esc(site.name + alt) + '" loading="lazy"><span class="zh-no">No. ' + noText(site.no) + "</span></div>";
@@ -144,7 +144,7 @@
     var path = imagePath(site);
     if (path) {
       img.src = path;
-      img.alt = site.name + (d.tier === "A" ? "Sentinel-2 10m 示意" : "OSM 位置图");
+      img.alt = site.name + (d.tier === "A" ? "Sentinel-2 10m 示意" : (d.tier === "B" ? "OSM 位置图" : "商业卫星影像"));
       img.hidden = false;
       none.hidden = true;
     } else {
@@ -154,7 +154,7 @@
       none.innerHTML = "公开版无影像<br><small>仅保留文字与坐标</small>";
     }
     document.getElementById("zh-dialog-caption").textContent = path
-      ? (d.tier === "A" ? "Sentinel-2 10m 示意 · 600 米见方" : "OSM 位置/范围图 · 600 米见方")
+      ? (d.tier === "A" ? "Sentinel-2 10m 示意 · 600 米见方" : (d.tier === "B" ? "OSM 位置/范围图 · 600 米见方" : "Esri / Maxar 商业影像 · 800px"))
       : "公开版不提供影像";
     document.getElementById("zh-dialog-quote").textContent = site.quote;
 
@@ -175,7 +175,9 @@
     document.getElementById("zh-dialog-note").textContent = path
       ? (d.tier === "A"
         ? "Sentinel-2 10m 仅作位置/轮廓示意，不是高清遗址影像。底图数据：Contains modified Copernicus Sentinel data 2025。"
-        : "OSM 仅作位置/范围示意，不是遗址影像。底图：© OpenStreetMap contributors，ODbL。")
+        : (d.tier === "B"
+          ? "OSM 仅作位置/范围示意，不是遗址影像。底图：© OpenStreetMap contributors，ODbL。"
+          : "Esri / Maxar / Earthstar 商业影像；未获公开再分发授权，已记录风险。权利人可联系下架。"))
       : "公开版只保留文字与坐标；Esri / Maxar 原图保存在私人档案，不公开。";
 
     if (typeof dialog.showModal === "function") dialog.showModal();

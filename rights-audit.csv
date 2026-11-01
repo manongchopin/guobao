@@ -26,9 +26,9 @@ files/*-municipal-list.pdf (杭州/宁波/温州/嘉兴/湖州/衢州/台州/丽
 "images/zh002/overview-v3.webp, images/zh002/six-dynasties.webp, images/zh002/evolution.gif, images/zh002/grading-preview.webp",地图/图表,ZH-002 数据 + OSM 底图 + 本站制图,宁南左侯 / OSM contributors / 本站,https://www.openstreetmap.org/copyright,数据：作者版权；底图：ODbL；制图：本站有限权利,© OpenStreetMap contributors；原作宁南左侯,制图、压缩、重排,高,确认 ODbL 合规；补作者授权；勿将水印覆盖底图
 territory-four-extremes.html,网页文案/数据展示,ZH-002 数据 + OSM 图,宁南左侯 / OSM / 本站,https://www.zhihu.com/question/586347272/answer/3142708292,同 ZH-002,页面显著位置署名,选编、筛选、交互、说明,中,补作者/许可信息与权利页
 "zh003/sites.json, zh003-data.js, zh003.html",数据/页面/引文,知乎答主木人口,木人口 / 本站（编者注）,https://www.zhihu.com/question/56763164/answer/586721566,作者文字版权；事实可用；编者注为本站,必须署名木人口与原始链接,结构化、编者注、页面、筛选,高,联系作者授权；限制长篇逐字引用；保留 quote/editor 分离
-private-archive/zh003/cards/*.jpg（33 张）,卫星影像（私人档案）,Esri World Imagery / Maxar / Earthstar Geographics,Esri / Maxar / Earthstar,https://www.esri.com/,商业影像；ZH-003 公开页已移除；仅私人研究,必须署名 Esri / Maxar / Earthstar Geographics,按坐标抓取、裁切、配图,低,Esri 授权前不公开；保留私人备份
-private-archive/zh003/ZH-003_云考古点位册.pdf,专题 PDF（私人档案）,木人口 + Esri 影像 + 本站排版,木人口 / Esri 等 / 本站,https://www.zhihu.com/question/56763164/answer/586721566,商业影像；公开页已移除；仅私人研究,注明作者、影像署名,排版、编者注、封面,低,如公开，需 Esri 授权或改做无卫星图文本版
-private-archive/zh003/cards/*.jpg（33 张）,卫星影像（私人档案）,Esri World Imagery,Esri / Maxar / Earthstar,,商业影像；ZH-003 公开页已移除；仅私人研究,完整署名,裁切/复制,低,Esri 授权前不公开；保留私人备份
+images/zh003/*.jpg（33 张）,卫星影像（公开）,Esri World Imagery / Maxar / Earthstar Geographics,Esri / Maxar / Earthstar,https://www.esri.com/,商业影像；未授权公开（风险已记录）,必须署名 Esri / Maxar / Earthstar Geographics,按坐标抓取、裁切、配图,高,保留 Esri/Maxar 署名；联系授权；权利人要求时下架
+zh003/ZH-003_云考古点位册.pdf,专题 PDF（公开下载）,木人口 + Esri 影像 + 本站排版,木人口 / Esri 等 / 本站,https://www.zhihu.com/question/56763164/answer/586721566,商业影像；未授权公开（风险已记录）,注明作者、影像署名,排版、编者注、封面,高,联系 Esri/Maxar；保留署名；可下架；私人备份在 private-archive
+private-archive/zh003/cards/*.jpg（33 张）,卫星影像（私人档案）,Esri World Imagery,Esri / Maxar / Earthstar,,商业影像；私人备份；未公开,完整署名,裁切/复制,低,Esri 授权前不公开；保留私人备份
 "data/eclipses.json, assets/eclipse.js, eclipse-2027.html",数据/页面/计算,timeanddate、IGN、NASA 等,各数据机构 / 本站,https://www.timeanddate.com/eclipse/solar/2027-august-2,数据事实；各家条款待核；本站整理,注明 IGN、timeanddate、NASA,结构化、筛选、倒计时、排版,中,逐项补来源与条款；保留来源链接
 images/eclipse/*.png (3张),手绘示意图,日食数据 + 手绘轮廓,本站/制图代理,https://eclipse.ign.es/,本站制图；数据来源需署名；非实测地图,注明数据来源与“示意、不可导航”,重绘、排版、标注,中,保留示意图声明；图角可加“制图：chopinfisher”，不要覆盖数据标注
 images/go/*.jpg (5张),棋手头像,来源未逐张记录,未知/原摄影师,,未知，默认受版权保护,待补,裁切、压缩、缓存版本,高,逐张补来源与许可；无授权则替换或联系授权

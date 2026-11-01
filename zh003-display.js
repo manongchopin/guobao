@@ -1,154 +1,154 @@
-/* ZH-003 公开底图分级：A Sentinel / B OSM / C 文字坐标 */
+/* ZH-003 公开展示：E 商业高清图 / C 无影像。未授权公开，风险见 rights-audit.csv */
 window.ZH003_DISPLAY = {
   "1": {
-    "tier": "A",
-    "src": "images/zh003-sentinel/01.jpg",
-    "credit": "Contains modified Copernicus Sentinel data 2025"
+    "tier": "E",
+    "src": "images/zh003/01.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "2": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/02.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "3": {
-    "tier": "A",
-    "src": "images/zh003-sentinel/03.jpg",
-    "credit": "Contains modified Copernicus Sentinel data 2025"
+    "tier": "E",
+    "src": "images/zh003/03.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "4": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/04.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "5": {
-    "tier": "B",
-    "src": "images/zh003-osm/05.jpg",
-    "credit": "© OpenStreetMap contributors（ODbL）"
+    "tier": "E",
+    "src": "images/zh003/05.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "6": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/06.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "7": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/07.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "8": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/08.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "9": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/09.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "10": {
-    "tier": "A",
-    "src": "images/zh003-sentinel/10.jpg",
-    "credit": "Contains modified Copernicus Sentinel data 2025"
+    "tier": "E",
+    "src": "images/zh003/10.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "11": {
-    "tier": "A",
-    "src": "images/zh003-sentinel/11.jpg",
-    "credit": "Contains modified Copernicus Sentinel data 2025"
+    "tier": "E",
+    "src": "images/zh003/11.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "12": {
-    "tier": "A",
-    "src": "images/zh003-sentinel/12.jpg",
-    "credit": "Contains modified Copernicus Sentinel data 2025"
+    "tier": "E",
+    "src": "images/zh003/12.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "13": {
-    "tier": "A",
-    "src": "images/zh003-sentinel/13.jpg",
-    "credit": "Contains modified Copernicus Sentinel data 2025"
+    "tier": "E",
+    "src": "images/zh003/13.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "14": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/14.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "15": {
-    "tier": "A",
-    "src": "images/zh003-sentinel/15.jpg",
-    "credit": "Contains modified Copernicus Sentinel data 2025"
+    "tier": "E",
+    "src": "images/zh003/15.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "16": {
-    "tier": "A",
-    "src": "images/zh003-sentinel/16.jpg",
-    "credit": "Contains modified Copernicus Sentinel data 2025"
+    "tier": "E",
+    "src": "images/zh003/16.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "17": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/17.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "18": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/18.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "19": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/19.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "20": {
-    "tier": "A",
-    "src": "images/zh003-sentinel/20.jpg",
-    "credit": "Contains modified Copernicus Sentinel data 2025"
+    "tier": "E",
+    "src": "images/zh003/20.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "21": {
-    "tier": "A",
-    "src": "images/zh003-sentinel/21.jpg",
-    "credit": "Contains modified Copernicus Sentinel data 2025"
+    "tier": "E",
+    "src": "images/zh003/21.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "22": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/22.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "23": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/23.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "24": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/24.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "25": {
-    "tier": "A",
-    "src": "images/zh003-sentinel/25.jpg",
-    "credit": "Contains modified Copernicus Sentinel data 2025"
+    "tier": "E",
+    "src": "images/zh003/25.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "26": {
-    "tier": "A",
-    "src": "images/zh003-sentinel/26.jpg",
-    "credit": "Contains modified Copernicus Sentinel data 2025"
+    "tier": "E",
+    "src": "images/zh003/26.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "27": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/27.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "28": {
-    "tier": "A",
-    "src": "images/zh003-sentinel/28.jpg",
-    "credit": "Contains modified Copernicus Sentinel data 2025"
+    "tier": "E",
+    "src": "images/zh003/28.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "29": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/29.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "30": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/30.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "31": {
     "tier": "C",
@@ -156,18 +156,18 @@ window.ZH003_DISPLAY = {
     "credit": ""
   },
   "32": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/32.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "33": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/33.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   },
   "34": {
-    "tier": "C",
-    "src": "",
-    "credit": ""
+    "tier": "E",
+    "src": "images/zh003/34.jpg",
+    "credit": "Esri / Maxar / Earthstar Geographics"
   }
 };

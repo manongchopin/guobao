@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-01",
+    type: "专题",
+    title: "ZH-003 恢复商业影像与 PDF",
+    note: "800px 图 · 未授权公开",
+    href: "zh003.html"
+  },
+  {
+    date: "2026-11-01",
     type: "页面",
     title: "权利页 v0.2 · 审计更新",
     note: "ZH-003 转 A/B/C；41 组资产",

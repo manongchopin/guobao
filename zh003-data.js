@@ -2,7 +2,7 @@
 window.ZH003_SITES = {
   "archive": "ZH-003",
   "title": "云考古点位册 · 境外中式古城 34 处",
-  "subtitle": "坐标与分级底图",
+  "subtitle": "坐标与商业影像",
   "source": {
     "platform": "知乎",
     "question": "你在谷歌地球（Google Earth）有什么独特的发现？",
@@ -10,8 +10,8 @@ window.ZH003_SITES = {
     "url": "https://www.zhihu.com/question/56763164/answer/586721566"
   },
   "captured": "2026-11-01",
-  "image_credit": "A：Contains modified Copernicus Sentinel data 2025；B：© OpenStreetMap contributors（ODbL）；C：无公开影像",
-  "image_note": "Esri / Maxar / Earthstar 原图只保存在私人档案；公开页按 A/B/C 分级展示。",
+  "image_credit": "Esri / Maxar / Earthstar Geographics（未授权公开）",
+  "image_note": "公开页含 800px 商业影像与 PDF；未获公开再分发授权，已记录风险。",
   "caveats": [
     "原文配图为答主的谷歌地球截图，本项目未使用，仅按坐标重新抓取影像，二者构图不同。",
     "「stance」为作者态度：直陈 / 存疑（原话含疑、怀疑、或为、似乎、不知），不含本项目编者判断。",
