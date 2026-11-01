@@ -1,0 +1,255 @@
+/* ZH-003 云考古点位册 */
+.zh-dialog [hidden] { display: none !important; }
+.zh-main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 28px 76px;
+}
+.zh-intro {
+  border-top: 1px solid var(--ink);
+  padding: 24px 0 22px;
+}
+.zh-intro p {
+  max-width: 820px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--ink-2);
+}
+.zh-intro p:last-child { margin-bottom: 0; }
+.zh-caveats {
+  margin: 18px 0 0;
+  padding: 15px 18px;
+  background: #fbf4e7;
+  border-left: 3px solid #b45309;
+  font-size: 11.5px;
+  line-height: 1.85;
+  color: var(--ink-2);
+}
+.zh-caveats b { display: block; margin-bottom: 5px; color: #92400e; font-size: 10px; letter-spacing: .12em; }
+.zh-caveats ol { margin: 0; padding-left: 1.25em; }
+.zh-caveats li { margin: 0 0 3px; }
+
+.zh-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 11px;
+  color: var(--ink-3);
+}
+.zh-stats b { color: var(--ink); font-weight: 600; font-size: 13px; }
+.zh-stats .zh-era-stats { margin-left: auto; color: var(--ink-3); }
+
+.zh-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 14px;
+  padding: 22px 0 14px;
+}
+.zh-field { display: flex; flex-direction: column; gap: 4px; }
+.zh-field label { font-size: 9.5px; letter-spacing: .12em; color: var(--ink-3); }
+.zh-field select {
+  font: inherit;
+  font-size: 12px;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 6px 26px 6px 9px;
+}
+.zh-count { margin-left: auto; font-size: 11px; color: var(--ink-3); }
+.zh-note {
+  margin: 0 0 18px;
+  font-size: 10.5px;
+  line-height: 1.7;
+  color: var(--ink-3);
+}
+
+.zh-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.zh-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  color: var(--ink);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.zh-card:hover { transform: translateY(-3px); border-color: var(--ink); box-shadow: var(--shadow); }
+.zh-thumb {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #d8d0c1;
+}
+.zh-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.zh-thumb .zh-no {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 6px;
+  background: rgba(245, 241, 232, .9);
+  color: var(--red);
+  font-size: 9px;
+  letter-spacing: .08em;
+}
+.zh-no-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #e9e1d3;
+  color: var(--ink-3);
+  font-size: 11px;
+  letter-spacing: .05em;
+}
+.zh-card-body { padding: 11px 12px 12px; }
+.zh-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  font-size: 9.5px;
+  color: var(--ink-3);
+  line-height: 1.5;
+}
+.zh-stance {
+  border: 1px solid var(--line);
+  padding: 1px 5px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.zh-stance.is-doubt { border-color: #c98a5e; color: #92400e; background: #fff8ed; }
+.zh-card h3 {
+  margin: 5px 0 2px;
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+.zh-card .zh-place { font-size: 10.5px; color: var(--ink-3); line-height: 1.55; }
+
+.zh-source {
+  margin-top: 42px;
+  border-top: 1px solid var(--ink);
+  padding-top: 20px;
+  font-size: 11.5px;
+  line-height: 1.9;
+  color: var(--ink-2);
+}
+.zh-source h2 { margin: 0 0 8px; font-family: var(--serif); font-size: 23px; }
+.zh-source p { margin: 0 0 7px; }
+.zh-source a { color: var(--ink-2); }
+.zh-source .zh-credit { color: var(--ink); font-weight: 600; }
+.zh-download {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--red);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(168, 64, 47, .35);
+  padding-bottom: 1px;
+}
+
+/* 详情弹窗 */
+.zh-dialog {
+  width: min(980px, calc(100vw - 40px));
+  max-height: calc(100vh - 40px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 22px 60px rgba(30, 24, 18, .25);
+}
+.zh-dialog::backdrop { background: rgba(28, 24, 19, .55); }
+.zh-dialog-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 18px;
+  cursor: pointer;
+}
+.zh-dialog-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  gap: 0;
+}
+.zh-dialog-figure {
+  margin: 0;
+  padding: 18px;
+  border-right: 1px solid var(--line);
+  background: var(--paper-2);
+}
+.zh-dialog-figure img,
+.zh-dialog-figure .zh-no-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+.zh-dialog-figure figcaption {
+  margin-top: 8px;
+  font-size: 10px;
+  line-height: 1.65;
+  color: var(--ink-3);
+}
+.zh-dialog-body { padding: 22px 22px 24px; overflow-y: auto; }
+.zh-dialog-top { display: flex; gap: 8px; align-items: center; font-size: 10px; color: var(--ink-3); }
+.zh-dialog h2 { margin: 8px 0 4px; font-family: var(--serif); font-size: 26px; line-height: 1.35; }
+.zh-dialog-place { margin: 0 0 4px; font-size: 12px; color: var(--ink-2); }
+.zh-dialog-kind { margin: 0 0 16px; font-size: 10.5px; color: var(--ink-3); }
+.zh-quote, .zh-editor {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border-left: 2px solid var(--line);
+  background: var(--paper-2);
+}
+.zh-quote .zh-label, .zh-editor .zh-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 9px;
+  letter-spacing: .14em;
+  color: var(--ink-3);
+}
+.zh-quote blockquote { margin: 0; font-family: var(--serif); font-size: 14px; line-height: 1.9; color: var(--ink); }
+.zh-editor { border-left-color: #b45309; background: #fbf4e7; }
+.zh-editor p { margin: 0; font-size: 11.5px; line-height: 1.8; color: var(--ink-2); }
+.zh-coords { margin: 0; font-size: 11.5px; line-height: 1.9; color: var(--ink-2); }
+.zh-coords div { display: grid; grid-template-columns: 62px minmax(0, 1fr); gap: 6px; }
+.zh-coords dt { color: var(--ink-3); font-size: 10px; }
+.zh-coords dd { margin: 0; font-family: "SFMono-Regular", Consolas, monospace; font-size: 10.5px; }
+.zh-dialog-credit { margin: 16px 0 0; padding-top: 10px; border-top: 1px solid var(--line); font-size: 9.5px; line-height: 1.7; color: var(--ink-3); }
+.zh-dialog-note { margin: 5px 0 0; font-size: 10px; color: var(--ink-3); }
+
+@media (max-width: 900px) {
+  .zh-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .zh-dialog-grid { grid-template-columns: 1fr; }
+  .zh-dialog-figure { border-right: 0; border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 600px) {
+  .zh-main { padding: 0 20px 56px; }
+  .zh-grid { grid-template-columns: 1fr; }
+  .zh-stats .zh-era-stats { margin-left: 0; flex-basis: 100%; }
+  .zh-count { flex-basis: 100%; margin-left: 0; }
+  .zh-dialog { width: calc(100vw - 20px); max-height: calc(100vh - 20px); }
+  .zh-dialog-body { padding: 18px; }
+  .zh-dialog h2 { font-size: 22px; }
+}

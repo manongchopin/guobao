@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-01",
     type: "页面",
+    title: "云考古点位册 · ZH-003",
+    note: "34处 · 33影像 · 数据接入",
+    href: "zh003.html"
+  },
+  {
+    date: "2026-11-01",
+    type: "页面",
     title: "海外孤城资料存档",
     note: "新入口 · 待整理",
     href: "overseas.html"

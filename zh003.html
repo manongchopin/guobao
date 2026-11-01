@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>云考古点位册 · 境外中式古城</title>
+<meta name="description" content="ZH-003 云考古点位册：34 处境外中式古城，33 处有坐标与卫星影像。非正式考古名录。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/zh003.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="overseas.html">← 海外孤城</a>
+  <p class="kicker">ZH-003 · 云考古点位册</p>
+  <h1>云考古点位册</h1>
+  <p class="lede">
+    <span id="zh-subtitle">境外中式古城 34 处</span><br>
+    <span>卫星影像上的城址、山城、障城与边墙。不是正式考古名录。</span>
+  </p>
+  <div class="seal" aria-hidden="true">云</div>
+</header>
+
+<div class="hub-progress">
+  <div class="hub-progress-inner">
+    <span class="hp-label">ZH-003</span>
+    <span class="hp-num" id="zh-total">34</span><span class="hp-total">处</span>
+    <span class="hp-note"><span id="zh-coords">33</span> 处有坐标 · <span id="zh-countries">10</span> 个国家</span>
+  </div>
+</div>
+
+<main class="zh-main">
+  <section class="zh-intro">
+    <p>这是一份个人观察，不是正式的考古名录。作者用卫星影像在境外找出的一批中国式古城，其中有 <span id="zh-doubt-count">6</span> 处作者自己就存疑。页面只把原文、坐标和影像放在一起，方便继续核对。</p>
+    <p>编号按原文出现顺序保留，不重排；第 31 条原文没有坐标和影像，只做列表展示，不替它补一个位置。</p>
+    <div class="zh-caveats">
+      <b>阅读前</b>
+      <ol id="zh-caveats"></ol>
+    </div>
+  </section>
+
+  <div class="zh-stats" id="zh-stats"></div>
+
+  <div class="zh-toolbar">
+    <div class="zh-field"><label for="zh-era">朝代 / 时期</label><select id="zh-era"><option value="全部">全部</option></select></div>
+    <div class="zh-field"><label for="zh-country">现代国家</label><select id="zh-country"><option value="全部">全部</option></select></div>
+    <div class="zh-field"><label for="zh-stance">作者态度</label><select id="zh-stance"><option value="全部">全部</option></select></div>
+    <span class="zh-count" id="zh-count"></span>
+  </div>
+  <p class="zh-note">缩略图为 600 米见方、中心十字准星、100 米比例尺；影像拍摄时间不明，部分有积雪。</p>
+
+  <div class="zh-grid" id="zh-grid"></div>
+
+  <section class="zh-source">
+    <h2>来源与影像</h2>
+    <div id="zh-source-body"></div>
+    <a class="zh-download" href="zh003/ZH-003_云考古点位册.pdf" download>下载 14 页点位册 PDF ↓</a>
+  </section>
+</main>
+
+<dialog class="zh-dialog" id="zh-dialog" aria-labelledby="zh-dialog-title">
+  <button class="zh-dialog-close" id="zh-dialog-close" type="button" aria-label="关闭">×</button>
+  <div class="zh-dialog-grid">
+    <figure class="zh-dialog-figure">
+      <img id="zh-dialog-img" src="" alt="">
+      <div class="zh-no-image" id="zh-dialog-noimg" hidden></div>
+      <figcaption id="zh-dialog-caption"></figcaption>
+    </figure>
+    <div class="zh-dialog-body">
+      <div class="zh-dialog-top">
+        <span id="zh-dialog-no"></span>
+        <span class="zh-stance" id="zh-dialog-stance"></span>
+      </div>
+      <h2 id="zh-dialog-title"></h2>
+      <p class="zh-dialog-place" id="zh-dialog-place"></p>
+      <p class="zh-dialog-kind" id="zh-dialog-kind"></p>
+
+      <div class="zh-quote">
+        <span class="zh-label">作者原话</span>
+        <blockquote id="zh-dialog-quote"></blockquote>
+      </div>
+
+      <div class="zh-editor" id="zh-dialog-editor-wrap" hidden>
+        <span class="zh-label">编者注（本站补充，不是作者原话）</span>
+        <p id="zh-dialog-editor"></p>
+      </div>
+
+      <dl class="zh-coords" id="zh-dialog-coords"></dl>
+      <p class="zh-dialog-credit" id="zh-dialog-credit"></p>
+      <p class="zh-dialog-note" id="zh-dialog-note"></p>
+    </div>
+  </div>
+</dialog>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>海外孤城 · ZH-003 云考古点位册</span>
+    <span>资料收集中 · 非正式考古名录</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+  </div>
+</footer>
+
+<script src="zh003-data.js"></script>
+<script src="assets/zh003.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>
