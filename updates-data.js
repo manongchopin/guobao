@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-01",
     type: "页面",
+    title: "海外孤城资料存档",
+    note: "新入口 · 待整理",
+    href: "overseas.html"
+  },
+  {
+    date: "2026-11-01",
+    type: "页面",
     title: "2027 日食追踪规划",
     note: "33 城 · 摩洛哥线 / 埃及线 · v1",
     href: "eclipse-2027.html"

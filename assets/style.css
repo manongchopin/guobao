@@ -3610,6 +3610,7 @@ a.wr-row:hover .wr-n { color: var(--red); }
   transition: background 0.18s ease;
 }
 .home-shelf:hover { background: var(--paper-2); }
+.archive-shelf { margin: 8px 0 26px; }
 
 /* 旅行计划页 */
 .plan-intro { max-width: 760px; margin: 0 0 26px; font-size: 13.5px; line-height: 1.95; color: var(--ink-2); }
