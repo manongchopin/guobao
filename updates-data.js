@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-01",
+    type: "专题",
+    title: "ZH-003 公开底图分三档",
+    note: "A Sentinel · B OSM · C 文字",
+    href: "zh003.html"
+  },
+  {
+    date: "2026-11-01",
     type: "页面",
     title: "来源与权利入口 + ZH-002 权利页",
     note: "全站页脚 · 8 份 PDF · OSM/ODbL",
