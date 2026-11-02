@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日本小众景点 · 旅行计划 03</title>
+<meta name="description" content="日本小众景点：一个持续增补的入口页，收录路线、海报、地点笔记与相关档案。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/japan-places.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="plans.html">← 旅行计划</a>
+  <p class="kicker">PLAN 03 · JAPAN · SMALL PLACES</p>
+  <h1>日本小众景点</h1>
+  <p class="lede">
+    不追求一次列完。<br>
+    <span>先放已经整理好的，后面遇到新的再补；相关的、不相关的，都可以进来。</span>
+  </p>
+  <div class="seal" aria-hidden="true">日</div>
+</header>
+
+<main class="wh-detail">
+  <section class="wh-section">
+    <div class="wh-note">
+      <b>这是一个入口页，不是一条固定路线。</b> 下面每条内容各自独立：可能是一张海报、一条路线、一个地点笔记，也可能是以后补的铁路、岛屿或历史专题。先按主题收着，不强行串成一条线。
+    </div>
+    <p>目前的第 1 条是 <b>ZH-001 日本军事主题纵走</b>：45 个点位，从长崎一路到长冈。它和以后要加的内容不一定有直接关系，只是暂时放在这个入口下。</p>
+    <p>每条内容都保留自己的来源、日期和使用限制；这里只负责把它们列出来。</p>
+  </section>
+
+  <section class="wh-section">
+    <div class="jp-head">
+      <div>
+        <p class="jp-kicker">ENTRIES · 持续增补</p>
+        <h2>已收录</h2>
+      </div>
+      <div class="jp-tools">
+        <label for="jp-filter">筛选</label>
+        <select id="jp-filter"><option value="全部">全部</option></select>
+        <span id="jp-count"></span>
+      </div>
+    </div>
+    <div class="jp-grid" id="jp-grid"></div>
+    <p class="wh-note">新增内容时只需在 <code>japan-places-data.js</code> 里加一条；以后条目多了，再考虑按主题或地区分组。</p>
+  </section>
+
+  <section class="wh-section">
+    <h2>为什么这样放</h2>
+    <div class="info-table">
+      <div><span>入口</span><b>旅行计划 03 · 日本小众景点</b></div>
+      <div><span>形式</span><b>目录页 + 独立详情页；不把长海报塞进列表</b></div>
+      <div><span>增补</span><b>只加索引条目；相关与不相关内容都可以独立存在</b></div>
+      <div><span>边界</span><b>每条内容自己写来源、日期、许可与风险，不互相冒充</b></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>旅行计划 03 · 日本小众景点</span>
+    <span>持续增补 · 不追求一次列完</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+    <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
+  </div>
+</footer>
+
+<script src="japan-places-data.js"></script>
+<script src="assets/japan-places.js"></script>
+</body>
+</html>

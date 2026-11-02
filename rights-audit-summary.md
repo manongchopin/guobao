@@ -7,9 +7,9 @@
 
 ## 总数
 
-- 资产组：42
+- 资产组：43
 - 高风险：10
-- 中风险：16
+- 中风险：17
 - 低风险：16
 
 ## 高风险：先处理
@@ -62,6 +62,10 @@
 - ZH-002 的 OSM 底图：
   - 必须 `© OpenStreetMap contributors`
   - 衍生地图按 ODbL 处理
+- ZH-001 竖版路线海报 `images/zh001/zh001-poster.webp`：
+  - 路线与文字：知乎答主 spikenail，未授权公开
+  - 底图 OSM，海报内已署名；转 WebP 后仍保留原图页脚
+  - 风险：中；保留署名，权利人要求时下架
 - 日食轨迹叠加图 `images/eclipse/eclipse-2026-2028-tracks.jpg`：
   - 来源 `eclipse262728.com`，底图 GoogleMaps
   - 未授权公开（风险已记录）；保留水印与署名，权利人要求时下架

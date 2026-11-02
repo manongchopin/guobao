@@ -1,0 +1,19 @@
+/* ZH-001 日本军事纵走：竖版海报详情页 */
+.zh001-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 20px; }
+.zh001-stats div { padding: 13px 14px 12px; border-right: 1px solid var(--line); }
+.zh001-stats div:last-child { border-right: 0; }
+.zh001-stats b { display: block; font-family: var(--serif); font-size: 26px; line-height: 1.1; font-weight: 600; }
+.zh001-stats span { display: block; margin-top: 3px; font-size: 10px; color: var(--ink-3); line-height: 1.5; }
+.zh001-poster-section { padding-top: 24px; }
+.zh001-poster-head h2 { margin-bottom: 4px; }
+.zh001-figure { margin: 14px 0 0; padding: 10px; border: 1px solid var(--line); background: var(--paper-2); }
+.zh001-figure picture { display: block; }
+.zh001-figure img { display: block; width: 100%; height: auto; background: #dfe9ee; }
+.zh001-figure figcaption { margin-top: 9px; font-size: 11px; line-height: 1.8; color: var(--ink-3); }
+.zh001-warn { color: var(--red); }
+@media (max-width: 760px) {
+  .zh001-stats { grid-template-columns: 1fr 1fr; }
+  .zh001-stats div:nth-child(2) { border-right: 0; }
+  .zh001-stats div:nth-child(1), .zh001-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .zh001-figure { padding: 6px; }
+}

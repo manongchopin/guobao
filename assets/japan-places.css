@@ -1,0 +1,24 @@
+/* 03 · 日本小众景点：可持续增补的条目入口 */
+.jp-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 16px; }
+.jp-kicker { margin: 0 0 4px; font-size: 10px; letter-spacing: .16em; color: var(--red); }
+.jp-head h2 { margin: 0; }
+.jp-tools { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--ink-3); flex-wrap: wrap; }
+.jp-tools select { border: 1px solid var(--line); background: var(--paper); color: var(--ink); padding: 5px 7px; font: inherit; }
+.jp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 0 0 16px; }
+.jp-card { display: flex; flex-direction: column; border: 1px solid var(--ink); background: var(--paper); text-decoration: none; color: inherit; padding: 16px 17px 14px; min-height: 230px; transition: transform .18s ease, box-shadow .18s ease; }
+.jp-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.jp-card-top { display: flex; justify-content: space-between; gap: 10px; font-size: 9px; letter-spacing: .1em; color: var(--ink-3); }
+.jp-status { color: var(--red); border: 1px solid #d8b7a8; padding: 1px 5px; white-space: nowrap; }
+.jp-card-body { flex: 1; }
+.jp-card h3 { font-family: var(--serif); font-size: 24px; line-height: 1.35; margin: 14px 0 5px; font-weight: 600; }
+.jp-sub { font-size: 12px; color: var(--red); margin: 0 0 9px; }
+.jp-summary { font-size: 13px; line-height: 1.8; color: var(--ink-2); margin: 0 0 14px; }
+.jp-meta { display: flex; flex-wrap: wrap; gap: 5px; }
+.jp-meta span { font-size: 9px; color: var(--ink-3); border: 1px solid var(--line); padding: 2px 5px; }
+.jp-arrow { display: block; margin-top: 14px; padding-top: 9px; border-top: 1px solid var(--line-soft); font-size: 10px; color: var(--ink-3); text-align: right; }
+.jp-card:hover .jp-arrow { color: var(--red); }
+@media (max-width: 760px) {
+  .jp-head { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .jp-grid { grid-template-columns: 1fr; }
+  .jp-card { min-height: 0; }
+}

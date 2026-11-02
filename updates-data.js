@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-02",
+    type: "计划",
+    title: "日本小众景点入口 + ZH-001",
+    note: "03 号计划 · 45 点海报",
+    href: "japan-small-places.html"
+  },
+  {
+    date: "2026-11-02",
     type: "档案",
     title: "浙江省级第五、六、八批上线",
     note: "原档 + 整理本 · 657 条",
