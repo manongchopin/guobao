@@ -1,6 +1,6 @@
 (function () {
   "use strict";
-  var D = window.RAIL_NORTH_SOUTH;
+  var D = window.RAIL_NORTH_SOUTH || window.RAIL_EAST_WEST;
   if (!D) return;
 
   function esc(s) {

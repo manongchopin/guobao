@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-02",
     type: "计划",
+    title: "横贯铁路：从最东到最西",
+    note: "05 号计划 · 五段骨架",
+    href: "rail-east-west.html"
+  },
+  {
+    date: "2026-11-02",
+    type: "计划",
     title: "纵贯铁路：从最北到最南",
     note: "04 号计划 · 五段骨架",
     href: "rail-north-south.html"
