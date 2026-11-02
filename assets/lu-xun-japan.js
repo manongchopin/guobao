@@ -20,6 +20,11 @@
           '<h4>' + esc(s.name) + '</h4><p>' + esc(s.note) + '</p></article>';
       }).join("") + '</div></section>';
   }).join("");
+  document.getElementById("lx-afterstory").innerHTML = D.afterstory.map(function (t) {
+    return '<div class="lx-after"><span>' + esc(t.year) + '</span><p>' + esc(t.text) + '</p></div>';
+  }).join("");
+  document.getElementById("lx-access").innerHTML = '<h3>' + esc(D.access.title) + '</h3><ul>' +
+    D.access.lines.map(function (l) { return '<li>' + esc(l) + '</li>'; }).join("") + '</ul>';
   document.getElementById("lx-plan").innerHTML = D.plan.map(function (p) {
     return '<div class="lx-day"><span>' + esc(p.day) + '</span><div><h3>' + esc(p.title) + '</h3><p>' + esc(p.text) + '</p></div></div>';
   }).join("");

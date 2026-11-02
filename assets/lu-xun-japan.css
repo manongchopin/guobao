@@ -40,3 +40,18 @@
   .lx-time, .lx-day { grid-template-columns: 1fr; gap: 3px; }
   .lx-time > span, .lx-day > span { padding-top: 0; }
 }
+
+/* 藤野先生之后与芦原交通 */
+.lx-after { border-top: 1px solid var(--ink); margin: 0 0 10px; }
+.lx-after { display: block; }
+.lx-after > div { display: grid; grid-template-columns: 86px 1fr; gap: 14px; padding: 9px 0; border-bottom: 1px solid var(--line-soft); }
+.lx-after span { font-size: 10px; color: var(--red); letter-spacing: .05em; padding-top: 3px; }
+.lx-after p { margin: 0; font-size: 12px; line-height: 1.75; color: var(--ink-2); }
+.lx-access-box { border: 1px solid var(--line); background: var(--paper); padding: 14px 16px; }
+.lx-access-box h3 { font-family: var(--serif); font-size: 19px; margin: 0 0 7px; }
+.lx-access-box ul { padding-left: 18px; margin: 0; }
+.lx-access-box li { margin: 0 0 6px; font-size: 12px; line-height: 1.75; color: var(--ink-2); }
+@media (max-width: 760px) {
+  .lx-after > div { grid-template-columns: 1fr; gap: 2px; }
+  .lx-after span { padding-top: 0; }
+}
