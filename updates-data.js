@@ -3,7 +3,7 @@ window.SITE_UPDATES = [
     date: "2026-11-02",
     type: "档案",
     title: "义乌 2021 保护范围索引试点",
-    note: "前 30 条 · 对应 2019 名录",
+    note: "前 60 条 · 对应 2019 名录",
     href: "yiwu-city-2021.html"
   },
   {
