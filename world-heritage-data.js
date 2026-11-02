@@ -859,6 +859,12 @@ window.WH_REGIONS = [
       "type": "自然",
       "year": 2016,
       "country": "印度"
+     },
+     {
+      "name": "鹿野苑佛教遗址",
+      "type": "文化",
+      "year": 2026,
+      "country": "印度"
      }
     ]
    },
@@ -1103,6 +1109,12 @@ window.WH_REGIONS = [
       "type": "自然",
       "year": 2019,
       "country": "伊朗"
+     },
+     {
+      "name": "阿拉穆特城堡及相关防御工事",
+      "type": "文化",
+      "year": 2026,
+      "country": "伊朗"
      }
     ]
    },
@@ -1264,6 +1276,12 @@ window.WH_REGIONS = [
       "type": "自然",
       "year": 2021,
       "country": "日本"
+     },
+     {
+      "name": "飞鸟·藤原古都",
+      "type": "文化",
+      "year": 2026,
+      "country": "日本"
      }
     ]
    },
@@ -1298,6 +1316,12 @@ window.WH_REGIONS = [
       "name": "图兰的冷冬沙漠",
       "type": "自然",
       "year": 2023,
+      "country": "哈萨克斯坦"
+     },
+     {
+      "name": "曼格斯套半岛岩石清真寺",
+      "type": "文化",
+      "year": 2026,
       "country": "哈萨克斯坦"
      }
     ]
@@ -1589,6 +1613,12 @@ window.WH_REGIONS = [
       "name": "达斡里亚自然景观",
       "type": "自然",
       "year": 2017,
+      "country": "蒙古国"
+     },
+     {
+      "name": "匈奴贵族墓葬群",
+      "type": "文化",
+      "year": 2026,
       "country": "蒙古国"
      }
     ]
@@ -1915,6 +1945,12 @@ window.WH_REGIONS = [
       "type": "自然",
       "year": 2021,
       "country": "泰国"
+     },
+     {
+      "name": "那空是贪玛叻佛塔寺",
+      "type": "文化",
+      "year": 2026,
+      "country": "泰国"
      }
     ]
    },
@@ -1990,6 +2026,12 @@ window.WH_REGIONS = [
       "name": "图兰的冷冬沙漠",
       "type": "自然",
       "year": 2023,
+      "country": "乌兹别克斯坦"
+     },
+     {
+      "name": "塔什干现代主义建筑",
+      "type": "文化",
+      "year": 2026,
       "country": "乌兹别克斯坦"
      }
     ]
@@ -2076,9 +2118,9 @@ window.WH_REGIONS = [
     ]
    }
   ],
-  "unique": 308,
-  "cultural": 222,
-  "natural": 74,
+  "unique": 313,
+  "cultural": 234,
+  "natural": 76,
   "mixed": 12,
   "countryCount": 36
  },
@@ -2886,6 +2928,12 @@ window.WH_REGIONS = [
       "type": "自然",
       "year": 2025,
       "country": "丹麦"
+     },
+     {
+      "name": "西利姆峡湾的硬骨鱼化石——始新世早期的演化与气候适应",
+      "type": "自然",
+      "year": 2026,
+      "country": "丹麦"
      }
     ]
    },
@@ -3284,6 +3332,18 @@ window.WH_REGIONS = [
       "name": "人类之地——马克萨斯群岛",
       "type": "复合",
       "year": 2024,
+      "country": "法国"
+     },
+     {
+      "name": "诺曼底登陆海滩（1944）",
+      "type": "文化",
+      "year": 2026,
+      "country": "法国"
+     },
+     {
+      "name": "朗格多克王室卡佩王朝要塞",
+      "type": "文化",
+      "year": 2026,
       "country": "法国"
      }
     ]
@@ -3767,6 +3827,12 @@ window.WH_REGIONS = [
       "name": "迈泰奥拉",
       "type": "复合",
       "year": 1988,
+      "country": "希腊"
+     },
+     {
+      "name": "奥林匹斯山及其周边",
+      "type": "复合",
+      "year": 2026,
       "country": "希腊"
      }
     ]
@@ -4308,6 +4374,12 @@ window.WH_REGIONS = [
       "type": "自然",
       "year": 2023,
       "country": "意大利"
+     },
+     {
+      "name": "意大利中部18—19世纪意大利式公寓剧院体系",
+      "type": "文化",
+      "year": 2026,
+      "country": "意大利"
      }
     ]
    },
@@ -4693,6 +4765,12 @@ window.WH_REGIONS = [
       "name": "喀尔巴阡山脉及欧洲其他地区的原始山毛榉林",
       "type": "自然",
       "year": 2021,
+      "country": "波兰"
+     },
+     {
+      "name": "格丁尼亚现代主义市中心",
+      "type": "文化",
+      "year": 2026,
       "country": "波兰"
      }
     ]
@@ -6252,14 +6330,20 @@ window.WH_REGIONS = [
       "type": "复合",
       "year": 2010,
       "country": "美国"
+     },
+     {
+      "name": "奥克弗诺基国家野生动物保护区",
+      "type": "自然",
+      "year": 2026,
+      "country": "美国"
      }
     ]
    }
   ],
-  "unique": 593,
-  "cultural": 499,
-  "natural": 82,
-  "mixed": 12,
+  "unique": 596,
+  "cultural": 545,
+  "natural": 101,
+  "mixed": 14,
   "countryCount": 50
  },
  {
@@ -6564,6 +6648,12 @@ window.WH_REGIONS = [
       "name": "帕拉蒂和格兰德岛——文化与生物多样性",
       "type": "复合",
       "year": 2019,
+      "country": "巴西"
+     },
+     {
+      "name": "亚马孙剧院",
+      "type": "文化",
+      "year": 2026,
       "country": "巴西"
      }
     ]
@@ -7370,8 +7460,8 @@ window.WH_REGIONS = [
    }
   ],
   "unique": 154,
-  "cultural": 105,
-  "natural": 40,
+  "cultural": 112,
+  "natural": 41,
   "mixed": 9,
   "countryCount": 27
  },
@@ -7587,6 +7677,12 @@ window.WH_REGIONS = [
       "type": "复合",
       "year": 2011,
       "country": "约旦"
+     },
+     {
+      "name": "亚喀巴海洋保护区",
+      "type": "自然",
+      "year": 2026,
+      "country": "约旦"
      }
     ]
    },
@@ -7627,6 +7723,12 @@ window.WH_REGIONS = [
       "name": "拉希德·卡拉米国际会展中心",
       "type": "文化",
       "year": 2023,
+      "country": "黎巴嫩"
+     },
+     {
+      "name": "阿米勒山城堡群",
+      "type": "文化",
+      "year": 2026,
       "country": "黎巴嫩"
      }
     ]
@@ -7809,6 +7911,12 @@ window.WH_REGIONS = [
       "type": "文化",
       "year": 2024,
       "country": "巴勒斯坦"
+     },
+     {
+      "name": "塞巴斯提亚",
+      "type": "文化",
+      "year": 2026,
+      "country": "巴勒斯坦"
      }
     ]
    },
@@ -7978,6 +8086,12 @@ window.WH_REGIONS = [
       "type": "自然",
       "year": 1980,
       "country": "突尼斯"
+     },
+     {
+      "name": "西迪布赛义德村",
+      "type": "文化",
+      "year": 2026,
+      "country": "突尼斯"
      }
     ]
    },
@@ -8040,9 +8154,9 @@ window.WH_REGIONS = [
     ]
    }
   ],
-  "unique": 94,
-  "cultural": 85,
-  "natural": 7,
+  "unique": 98,
+  "cultural": 88,
+  "natural": 8,
   "mixed": 2,
   "countryCount": 19
  },
@@ -8948,13 +9062,46 @@ window.WH_REGIONS = [
       "country": "津巴布韦"
      }
     ]
+   },
+   {
+    "name": "科摩罗",
+    "items": [
+     {
+      "name": "科摩罗群岛历史苏丹国",
+      "type": "文化",
+      "year": 2026,
+      "country": "科摩罗"
+     }
+    ]
+   },
+   {
+    "name": "圣多美和普林西比",
+    "items": [
+     {
+      "name": "圣多美和普林西比罗萨斯种植园",
+      "type": "文化",
+      "year": 2026,
+      "country": "圣多美和普林西比"
+     }
+    ]
+   },
+   {
+    "name": "南苏丹",
+    "items": [
+     {
+      "name": "博马-巴丁吉洛迁徙景观",
+      "type": "自然",
+      "year": 2026,
+      "country": "南苏丹"
+     }
+    ]
    }
   ],
-  "unique": 110,
-  "cultural": 62,
-  "natural": 44,
-  "mixed": 4,
-  "countryCount": 38
+  "unique": 113,
+  "cultural": 65,
+  "natural": 51,
+  "mixed": 5,
+  "countryCount": 41
  }
 ];
 

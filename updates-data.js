@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-02",
     type: "专题",
+    title: "世界遗产名录补 2026 新增",
+    note: "22 项 + 3 国 · Wikipedia 核对",
+    href: "world-heritage.html"
+  },
+  {
+    date: "2026-11-02",
+    type: "专题",
     title: "ZH-003 第 01、02 条改用 Google Maps 图",
     note: "旧图删除 · 风险已记录",
     href: "zh003.html"
