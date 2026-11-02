@@ -1,0 +1,42 @@
+/* 06 · 富士山登山 */
+.fuji-stats-hero { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 22px; }
+.fuji-stats-hero div { padding: 12px 14px; border-right: 1px solid var(--line); }
+.fuji-stats-hero div:last-child { border-right: 0; }
+.fuji-stats-hero b { display: block; font-family: var(--serif); font-size: 24px; line-height: 1.15; }
+.fuji-stats-hero span { display: block; margin-top: 3px; font-size: 10px; color: var(--ink-3); line-height: 1.5; }
+.fuji-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 22px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
+.fuji-callout b { color: var(--ink); }
+.fuji-route-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 18px; }
+.fuji-route { border: 1px solid var(--line); background: var(--paper); padding: 14px 15px; }
+.fuji-route-head { display: flex; justify-content: space-between; gap: 8px; font-size: 9px; color: var(--ink-3); }
+.fuji-route-head em { font-style: normal; color: var(--red); text-align: right; }
+.fuji-route h3 { font-family: var(--serif); font-size: 25px; margin: 8px 0 2px; font-weight: 600; }
+.fuji-trailhead { margin: 0 0 10px; color: var(--red); font-size: 11px; }
+.fuji-route p { margin: 0 0 5px; font-size: 11.5px; line-height: 1.7; color: var(--ink-2); }
+.fuji-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); margin: 0 0 10px; }
+.fuji-stats div { padding: 7px 5px; border-right: 1px solid var(--line-soft); }
+.fuji-stats div:last-child { border-right: 0; }
+.fuji-stats b { display: block; font-size: 13px; font-weight: 500; }
+.fuji-stats span { display: block; margin-top: 1px; font-size: 9px; color: var(--ink-3); }
+.fuji-table-wrap { overflow-x: auto; margin: 0 0 16px; }
+.fuji-table { width: 100%; border-collapse: collapse; font-size: 11.5px; line-height: 1.65; min-width: 760px; }
+.fuji-table th { text-align: left; font-weight: 400; color: var(--ink-3); border-bottom: 1px solid var(--ink); padding: 7px 8px; white-space: nowrap; }
+.fuji-table td { border-bottom: 1px solid var(--line-soft); padding: 8px; vertical-align: top; }
+.fuji-plan { border-top: 1px solid var(--ink); }
+.fuji-day { display: grid; grid-template-columns: 105px 1fr; gap: 14px; padding: 13px 0; border-bottom: 1px solid var(--line-soft); }
+.fuji-day > span { font-size: 10px; letter-spacing: .1em; color: var(--red); padding-top: 4px; }
+.fuji-day h3 { font-family: var(--serif); font-size: 18px; margin: 0 0 4px; }
+.fuji-day p { margin: 0; font-size: 12px; line-height: 1.8; color: var(--ink-2); }
+.fuji-checklist { columns: 2; column-gap: 28px; padding-left: 18px; margin: 0 0 8px; }
+.fuji-checklist li { break-inside: avoid; margin: 0 0 7px; font-size: 12px; line-height: 1.7; color: var(--ink-2); }
+.fuji-warn { border: 1px solid #d8b7a8; background: #fff8ed; padding: 11px 14px; font-size: 12px; line-height: 1.8; color: #6b3b27; margin: 6px 0 18px; }
+.fuji-sources { padding-left: 18px; margin: 0; }
+.fuji-sources li { margin: 0 0 6px; font-size: 12px; line-height: 1.7; }
+@media (max-width: 760px) {
+  .fuji-stats-hero { grid-template-columns: 1fr 1fr; }
+  .fuji-stats-hero div:nth-child(2) { border-right: 0; }
+  .fuji-stats-hero div:nth-child(1), .fuji-stats-hero div:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .fuji-route-grid { grid-template-columns: 1fr; }
+  .fuji-checklist { columns: 1; }
+  .fuji-day { grid-template-columns: 1fr; gap: 4px; }
+}

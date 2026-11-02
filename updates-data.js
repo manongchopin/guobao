@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-02",
     type: "计划",
+    title: "富士山登山路线比较",
+    note: "06 号计划 · 2026 季参考",
+    href: "fuji-climb.html"
+  },
+  {
+    date: "2026-11-02",
+    type: "计划",
     title: "横贯铁路：从最东到最西",
     note: "05 号计划 · 五段骨架",
     href: "rail-east-west.html"
