@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-02",
     type: "专题",
+    title: "四至打印模板上线",
+    note: "四张分证 + 总状 + 封套 · 免费下载",
+    href: "territory-four-extremes.html#certificate-download"
+  },
+  {
+    date: "2026-11-02",
+    type: "专题",
     title: "中国现代四至：六种口径",
     note: "法理 / 实控 / 海南 / 本土 / 游客 / 声索",
     href: "territory-four-extremes.html#modern"
