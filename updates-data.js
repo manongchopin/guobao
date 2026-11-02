@@ -2,7 +2,7 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-02",
     type: "专题",
-    title: "ZH-003 第 01 条改用 Google Maps 图",
+    title: "ZH-003 第 01、02 条改用 Google Maps 图",
     note: "旧图删除 · 风险已记录",
     href: "zh003.html"
   },
