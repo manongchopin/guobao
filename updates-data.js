@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-02",
+    type: "专题",
+    title: "明朝有没有在东南亚经营？",
+    note: "海外孤城 · 四种存在方式",
+    href: "ming-southeast-asia.html"
+  },
+  {
+    date: "2026-11-02",
     type: "计划",
     title: "鲁迅路线补藤野先生史料",
     note: "09 号计划 · 芦原访问",
