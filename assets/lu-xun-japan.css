@@ -1,0 +1,42 @@
+/* 09 · 在日本寻找鲁迅的踪迹 */
+.lx-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 22px; }
+.lx-stats div { padding: 12px 14px; border-right: 1px solid var(--line); }
+.lx-stats div:last-child { border-right: 0; }
+.lx-stats b { display: block; font-family: var(--serif); font-size: 24px; line-height: 1.15; }
+.lx-stats span { display: block; margin-top: 3px; font-size: 10px; color: var(--ink-3); line-height: 1.5; }
+.lx-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 22px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
+.lx-callout b { color: var(--ink); }
+.lx-timeline { border-top: 1px solid var(--ink); margin: 0 0 8px; }
+.lx-time { display: grid; grid-template-columns: 92px 1fr; gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--line-soft); }
+.lx-time > span { font-size: 10px; letter-spacing: .08em; color: var(--red); padding-top: 3px; }
+.lx-time b { font-family: var(--serif); font-size: 17px; }
+.lx-time p { margin: 2px 0 0; font-size: 12px; line-height: 1.75; color: var(--ink-2); }
+.lx-city { margin: 0 0 22px; }
+.lx-city-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--ink); padding-bottom: 5px; margin-bottom: 9px; }
+.lx-city-head h3 { font-family: var(--serif); font-size: 24px; margin: 0; }
+.lx-city-head span { font-size: 10px; color: var(--ink-3); }
+.lx-site-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.lx-site { border: 1px solid var(--line); background: var(--paper); padding: 11px 12px; }
+.lx-site-top { display: flex; justify-content: space-between; gap: 8px; font-size: 9px; color: var(--ink-3); }
+.lx-site-top em { font-style: normal; color: var(--red); }
+.lx-site h4 { font-family: var(--serif); font-size: 17px; margin: 7px 0 4px; }
+.lx-site p { margin: 0; font-size: 11.5px; line-height: 1.7; color: var(--ink-2); }
+.lx-plan { border-top: 1px solid var(--ink); }
+.lx-day { display: grid; grid-template-columns: 46px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line-soft); }
+.lx-day > span { font-size: 10px; color: var(--red); letter-spacing: .1em; padding-top: 4px; }
+.lx-day h3 { font-family: var(--serif); font-size: 18px; margin: 0 0 4px; }
+.lx-day p { margin: 0; font-size: 12px; line-height: 1.8; color: var(--ink-2); }
+.lx-tips { columns: 2; column-gap: 28px; padding-left: 18px; margin: 0 0 8px; }
+.lx-tips li { break-inside: avoid; margin: 0 0 7px; font-size: 12px; line-height: 1.7; color: var(--ink-2); }
+.lx-warn { border: 1px solid #d8b7a8; background: #fff8ed; padding: 11px 14px; font-size: 12px; line-height: 1.8; color: #6b3b27; margin: 6px 0 18px; }
+.lx-sources { padding-left: 18px; margin: 0; }
+.lx-sources li { margin: 0 0 6px; font-size: 12px; line-height: 1.7; }
+@media (max-width: 760px) {
+  .lx-stats { grid-template-columns: 1fr 1fr; }
+  .lx-stats div:nth-child(2) { border-right: 0; }
+  .lx-stats div:nth-child(1), .lx-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .lx-site-grid { grid-template-columns: 1fr; }
+  .lx-tips { columns: 1; }
+  .lx-time, .lx-day { grid-template-columns: 1fr; gap: 3px; }
+  .lx-time > span, .lx-day > span { padding-top: 0; }
+}

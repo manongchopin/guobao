@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-02",
     type: "计划",
+    title: "在日本寻找鲁迅的踪迹",
+    note: "09 号计划 · 东京—仙台—芦原",
+    href: "lu-xun-japan.html"
+  },
+  {
+    date: "2026-11-02",
+    type: "计划",
     title: "小笠原群岛：父岛 + 母岛",
     note: "08 号计划 · 8–9 天骨架",
     href: "ogasawara.html"
