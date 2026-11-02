@@ -10,7 +10,7 @@ window.ZH003_SITES = {
     "url": "https://www.zhihu.com/question/56763164/answer/586721566"
   },
   "captured": "2026-11-01",
-  "image_credit": "Esri / Maxar / Earthstar Geographics（未授权公开）",
+  "image_credit": "第 01 条：Google Maps；其余：Esri / Maxar / Earthstar Geographics（未授权公开）",
   "image_note": "公开页含 800px 商业影像与 PDF；未获公开再分发授权，已记录风险。",
   "caveats": [
     "原文配图为答主的谷歌地球截图，本项目未使用，仅按坐标重新抓取影像，二者构图不同。",

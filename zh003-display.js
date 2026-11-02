@@ -2,8 +2,10 @@
 window.ZH003_DISPLAY = {
   "1": {
     "tier": "E",
-    "src": "images/zh003/01.jpg",
-    "credit": "Esri / Maxar / Earthstar Geographics"
+    "src": "images/zh003/01-google.webp",
+    "credit": "Google Maps",
+    "fit": "contain",
+    "ratio": "1204 / 944"
   },
   "2": {
     "tier": "E",

@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-02",
     type: "专题",
+    title: "ZH-003 第 01 条改用 Google Maps 图",
+    note: "旧图删除 · 风险已记录",
+    href: "zh003.html"
+  },
+  {
+    date: "2026-11-02",
+    type: "专题",
     title: "明朝有没有在东南亚经营？",
     note: "海外孤城 · 四种存在方式",
     href: "ming-southeast-asia.html"

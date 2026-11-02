@@ -7,14 +7,15 @@
 
 ## 总数
 
-- 资产组：45
-- 高风险：10
+- 资产组：46
+- 高风险：11
 - 中风险：19
 - 低风险：16
 
 ## 高风险：先处理
 
 1. **ZH-003 商业卫星影像与 PDF（未授权公开）**
+   - 第 01 条现为 Google Maps 截图 `images/zh003/01-google.webp`；Google Maps 条款与公开再分发许可待核
    - `images/zh003/*.jpg` 33 张 800px 影像
    - `zh003/ZH-003_云考古点位册.pdf` 完整 14 页
    - 使用 Esri / Maxar / Earthstar Geographics 商业影像

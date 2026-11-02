@@ -58,8 +58,8 @@
     document.getElementById("zh-source-body").innerHTML =
       '<p>来源：' + esc(s.platform) + "问题「" + esc(s.question) + "」，答主 <b>" + esc(s.author) + "</b> · 抓取于 " + esc(DATA.captured) + "。</p>" +
       '<p><a href="' + esc(s.url) + '" target="_blank" rel="noopener">打开原始回答 ↗</a></p>' +
-      "<p>公开页已恢复 Esri / Maxar / Earthstar 800px 商业影像，并提供 14 页 PDF 下载。影像与 PDF 未获公开再分发授权，属「未授权公开（风险已记录）」；权利人可联系下架。</p>" +
-      "<p>完整署名：<code>Esri / Maxar / Earthstar Geographics</code>。早先的 A/B/C 开放底图配置保留作备用，但当前默认不显示。</p>" +
+      "<p>第 01 条为 Google Maps 截图；其余点位为 Esri / Maxar / Earthstar 800px 商业影像。影像与 14 页 PDF 均未获公开再分发授权，属「未授权公开（风险已记录）」；权利人可联系下架。</p>" +
+      "<p>完整署名：第 01 条 <code>Google Maps</code>；其余 <code>Esri / Maxar / Earthstar Geographics</code>。早先的 A/B/C 开放底图配置保留作备用，但当前默认不显示。</p>" +
       '<p>第 32 条疾陵城的国别按 <code>sites.json</code> 的 <code>country</code> 字段显示；若上游修改，本页随之变化，不在代码里写死。</p>';
   }
 
@@ -146,10 +146,14 @@
       img.src = path;
       img.alt = site.name + (d.tier === "A" ? "Sentinel-2 10m 示意" : (d.tier === "B" ? "OSM 位置图" : "商业卫星影像"));
       img.hidden = false;
+      img.style.aspectRatio = d.ratio || "1 / 1";
+      img.style.objectFit = d.fit || "cover";
       none.hidden = true;
     } else {
       img.hidden = true;
       img.removeAttribute("src");
+      img.style.aspectRatio = "1 / 1";
+      img.style.objectFit = "cover";
       none.hidden = false;
       none.innerHTML = "公开版无影像<br><small>仅保留文字与坐标</small>";
     }
