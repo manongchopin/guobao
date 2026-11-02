@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-02",
+    type: "档案",
+    title: "浙江省级第五、六、八批上线",
+    note: "原档 + 整理本 · 657 条",
+    href: "zhejiang-provincial-archives.html"
+  },
+  {
+    date: "2026-11-02",
     type: "专题",
     title: "日食页加入 2026–2028 轨迹图",
     note: "移除已过去的 2026-08-12 事件",
