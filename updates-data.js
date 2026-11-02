@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-02",
     type: "计划",
+    title: "熊野古道路线比较",
+    note: "07 号计划 · 中边路 3–4 天",
+    href: "kumano-kodo.html"
+  },
+  {
+    date: "2026-11-02",
+    type: "计划",
     title: "富士山登山路线比较",
     note: "06 号计划 · 2026 季参考",
     href: "fuji-climb.html"
