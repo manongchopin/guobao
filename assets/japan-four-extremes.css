@@ -81,3 +81,42 @@
   .je-route-arrow { display: none; }
   .je-map-foot { flex-direction: column; gap: 3px; }
 }
+
+/* 证书与到访 */
+.je-progress { display: flex; align-items: baseline; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 10px; color: var(--ink-3); }
+.je-progress b { font-family: var(--serif); font-size: 17px; color: var(--ink); font-weight: 600; }
+.je-item { display: block; position: relative; width: 100%; padding: 0; border: 0; border-bottom: 1px solid var(--line-soft); background: transparent; text-align: left; }
+.je-item-main { display: block; width: calc(100% - 66px); padding: 9px 0; border: 0; background: transparent; text-align: left; font: inherit; color: var(--ink); cursor: pointer; }
+.je-item-main:hover, .je-item-main.is-active { background: var(--paper-2); }
+.je-item:has(.je-item-main.is-active) { background: var(--paper-2); }
+.je-item.is-visited { background: #f1eee5; }
+.je-visit { position: absolute; right: 0; top: 9px; border: 1px solid var(--line); background: transparent; color: var(--ink-3); font: inherit; font-size: 9px; padding: 2px 5px; cursor: pointer; white-space: nowrap; }
+.je-visit:hover { color: var(--red); border-color: #d8b7a8; }
+.je-visit.is-on { color: var(--red); border-color: #d8b7a8; background: var(--paper); }
+
+.je-cert-head { display: flex; align-items: end; justify-content: space-between; gap: 22px; border-top: 1px solid var(--ink); padding-top: 15px; margin-bottom: 12px; }
+.je-cert-head h2 { margin: 0; }
+.je-cert-head > p { max-width: 430px; margin: 0; font-size: 11px; line-height: 1.75; color: var(--ink-3); text-align: right; }
+.je-cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.je-cert-card { border: 1px solid var(--line); padding: 13px 14px 10px; background: var(--paper); }
+.je-cert-no { font-size: 9px; letter-spacing: .12em; color: var(--red); }
+.je-cert-card h3 { font-family: var(--serif); font-size: 22px; margin: 3px 0 8px; }
+.je-cert-list { margin: 0; border-top: 1px solid var(--line-soft); }
+.je-cert-list dt { font-size: 9px; letter-spacing: .08em; color: var(--ink-3); margin-top: 7px; }
+.je-cert-list dd { margin: 1px 0 0; font-size: 10.5px; line-height: 1.7; color: var(--ink-2); }
+.je-cert-note { margin: 8px 0 5px; border-top: 1px solid var(--line-soft); padding-top: 6px; font-size: 10px; line-height: 1.6; color: var(--ink-3); }
+.je-cert-src { font-size: 9px; color: var(--red); text-decoration: none; border-bottom: 1px solid #d8b7a8; }
+
+.je-trips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.je-trip { border: 1px solid var(--line); padding: 12px 13px; background: var(--paper); }
+.je-trip-no { display: block; font-size: 9px; letter-spacing: .12em; color: var(--red); }
+.je-trip h3 { margin: 4px 0 6px; font-family: var(--serif); font-size: 16px; line-height: 1.45; }
+.je-trip p { margin: 0; font-size: 10.5px; line-height: 1.75; color: var(--ink-3); }
+.je-route-note { margin-top: 10px; border-left: 2px solid var(--line); padding: 7px 10px; font-size: 10.5px; line-height: 1.7; color: var(--ink-3); }
+
+@media (max-width: 760px) {
+  .je-cert-head { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .je-cert-head > p { text-align: left; }
+  .je-cert-grid, .je-trips { grid-template-columns: 1fr; }
+  .je-item-main { width: calc(100% - 58px); }
+}
