@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-02",
+    type: "专题",
+    title: "中国现代四至：六种口径",
+    note: "法理 / 实控 / 海南 / 本土 / 游客 / 声索",
+    href: "territory-four-extremes.html#modern"
+  },
+  {
+    date: "2026-11-02",
     type: "计划",
     title: "新增旅行计划：日本四极",
     note: "国家 / 本土 / 四岛 / 证书 · 地图版",

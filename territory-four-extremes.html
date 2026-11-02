@@ -3,22 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>中国历史疆域四至 · ZH-002</title>
-<meta name="description" content="ZH-002 中国历史疆域四至：107 个历史疆域极值点，按方位、朝代、类型和可探访度整理。">
+<title>中国疆域四至 · 现代与历史 · ZH-002</title>
+<meta name="description" content="中国疆域四至：现代中国的法理、实控、大陆本土与游客四极，加上 ZH-002 的 107 个历史极值点。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/zh002.css">
+<link rel="stylesheet" href="assets/china-four-extremes.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
 
 <header class="hero">
   <a class="back" href="plans.html">← 旅行计划</a>
   <p class="kicker">ZH-002 · 四至档案</p>
-  <h1>中国历史疆域四至</h1>
+  <h1>中国疆域四至</h1>
   <p class="lede">
-    107 个历史疆域极值点。<br>
-    <span>按方位、朝代和口径整理，不是现代边界主张。</span>
+    现代六种口径，加上 107 个历史点。<br>
+    <span>先分清法理、实控、大陆本土和游客能到的，再往下看历史。</span>
   </p>
   <div class="seal" aria-hidden="true">域</div>
 </header>
@@ -37,6 +39,33 @@
     <p>南、北界原文多只给纬度，东、西界多只给经度；另一轴按今地补全，误差约 ±0.3°~0.8°。三条坐标据 ZH-003 改为秒级实测。</p>
     <div class="zh2-note"><b>读法：</b>四至卡片按经纬度直接取极值，所以会混用实控、羁縻、谭图、军事等口径。看类型标签，不要把“谭图画到哪”当成“官派到哪”。</div>
   </section>
+
+  <section class="zh2-section cnx-section" id="modern">
+    <div class="cnx-head">
+      <div><p class="cnx-kicker">MODERN · SIX FRAMES</p><h2>现代中国四至</h2></div>
+      <p>同一块国土，按“主张、实控、含海南、大陆本土、游客、声索现状”会得到不同的四至。先选口径，再看点。</p>
+    </div>
+    <div class="cnx-modes" id="cnx-modes" role="tablist" aria-label="选择现代中国四至口径"></div>
+    <div class="cnx-layout">
+      <div class="cnx-map-column">
+        <div id="cnx-map" class="cnx-map" aria-label="现代中国四至地图"></div>
+        <p class="cnx-map-foot">底图 <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>（ODbL）· 边界与争议点仅作地理示意，不代表本站对主权的判断。</p>
+      </div>
+      <aside class="cnx-panel" aria-label="现代四至条目">
+        <p class="cnx-panel-kicker" id="cnx-panel-kicker">FRAME 01</p>
+        <h3 id="cnx-panel-title">法理主张</h3>
+        <p id="cnx-panel-desc"></p>
+        <div class="cnx-list" id="cnx-list"></div>
+      </aside>
+    </div>
+    <div class="cnx-tourist-head"><h3>普通游客怎么到</h3><p>只列通常能到的四个“游客四极”，不是严格极值点。</p></div>
+    <div class="cnx-tourist" id="cnx-tourist"></div>
+    <div class="cnx-caution">
+      <b>读法：</b>“法理”只指中华人民共和国政府主张口径，不是国际司法裁决；“实际控制”按公开资料描述现状；“台湾、钓鱼岛、南沙”只作声索/现状点，不计入四至极值，也不提供登岛或争议海域旅行指引。历史 107 点见下方，二者不要混算。<br><span class="cnx-source">现代四至资料：<a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9C%B0%E7%90%86%E6%9E%81%E7%82%B9" target="_blank" rel="noopener">Wikipedia「中华人民共和国地理极点」</a> · 底图 © OpenStreetMap contributors（ODbL）。</span>
+    </div>
+  </section>
+
+  <div class="cnx-divider"><span>历史部分</span><b>ZH-002 · 107 个历史疆域极值点</b></div>
 
   <div class="zh2-stats" id="zh2-stats"></div>
 
@@ -141,6 +170,9 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="china-four-extremes-data.js"></script>
+<script src="assets/china-four-extremes.js"></script>
 <script src="zh002-data.js"></script>
 <script src="assets/zh002.js"></script>
 <script src="assets/app.js"></script>
