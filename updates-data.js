@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-02",
     type: "计划",
+    title: "在日本寻找北洋水师的痕迹",
+    note: "10 号计划 · 东京—冈山—广岛",
+    href: "beiyang-japan.html"
+  },
+  {
+    date: "2026-11-02",
+    type: "计划",
     title: "在日本寻找鲁迅的踪迹",
     note: "09 号计划 · 东京—仙台—芦原",
     href: "lu-xun-japan.html"

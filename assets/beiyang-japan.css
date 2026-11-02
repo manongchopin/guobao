@@ -1,0 +1,41 @@
+/* 10 · 在日本寻找北洋水师的痕迹 */
+.by-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 22px; }
+.by-stats div { padding: 12px 14px; border-right: 1px solid var(--line); }
+.by-stats div:last-child { border-right: 0; }
+.by-stats b { display: block; font-family: var(--serif); font-size: 24px; line-height: 1.15; }
+.by-stats span { display: block; margin-top: 3px; font-size: 10px; color: var(--ink-3); line-height: 1.5; }
+.by-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 22px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
+.by-callout b { color: var(--ink); }
+.by-timeline { border-top: 1px solid var(--ink); margin: 0 0 8px; }
+.by-time { display: grid; grid-template-columns: 88px 1fr; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
+.by-time > span { font-size: 10px; color: var(--red); letter-spacing: .06em; padding-top: 3px; }
+.by-time p { margin: 0; font-size: 12px; line-height: 1.75; color: var(--ink-2); }
+.by-city { margin: 0 0 22px; }
+.by-city-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--ink); padding-bottom: 5px; margin-bottom: 9px; }
+.by-city-head h3 { font-family: var(--serif); font-size: 24px; margin: 0; }
+.by-city-head span { font-size: 10px; color: var(--ink-3); }
+.by-site-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.by-site { border: 1px solid var(--line); background: var(--paper); padding: 11px 12px; }
+.by-site-top { display: flex; justify-content: space-between; gap: 8px; font-size: 9px; color: var(--ink-3); }
+.by-site-top em { font-style: normal; color: var(--red); }
+.by-site h4 { font-family: var(--serif); font-size: 17px; margin: 7px 0 4px; }
+.by-site p { margin: 0; font-size: 11.5px; line-height: 1.7; color: var(--ink-2); }
+.by-plan { border-top: 1px solid var(--ink); }
+.by-day { display: grid; grid-template-columns: 46px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line-soft); }
+.by-day > span { font-size: 10px; color: var(--red); letter-spacing: .1em; padding-top: 4px; }
+.by-day h3 { font-family: var(--serif); font-size: 18px; margin: 0 0 4px; }
+.by-day p { margin: 0; font-size: 12px; line-height: 1.8; color: var(--ink-2); }
+.by-tips { columns: 2; column-gap: 28px; padding-left: 18px; margin: 0 0 8px; }
+.by-tips li { break-inside: avoid; margin: 0 0 7px; font-size: 12px; line-height: 1.7; color: var(--ink-2); }
+.by-warn { border: 1px solid #d8b7a8; background: #fff8ed; padding: 11px 14px; font-size: 12px; line-height: 1.8; color: #6b3b27; margin: 6px 0 18px; }
+.by-sources { padding-left: 18px; margin: 0; }
+.by-sources li { margin: 0 0 6px; font-size: 12px; line-height: 1.7; }
+@media (max-width: 760px) {
+  .by-stats { grid-template-columns: 1fr 1fr; }
+  .by-stats div:nth-child(2) { border-right: 0; }
+  .by-stats div:nth-child(1), .by-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .by-site-grid { grid-template-columns: 1fr; }
+  .by-tips { columns: 1; }
+  .by-time, .by-day { grid-template-columns: 1fr; gap: 3px; }
+  .by-time > span, .by-day > span { padding-top: 0; }
+}
