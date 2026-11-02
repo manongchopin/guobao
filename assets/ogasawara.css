@@ -1,0 +1,41 @@
+/* 08 · 小笠原群岛 */
+.oga-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 22px; }
+.oga-stats div { padding: 12px 14px; border-right: 1px solid var(--line); }
+.oga-stats div:last-child { border-right: 0; }
+.oga-stats b { display: block; font-family: var(--serif); font-size: 24px; line-height: 1.15; }
+.oga-stats span { display: block; margin-top: 3px; font-size: 10px; color: var(--ink-3); line-height: 1.5; }
+.oga-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 22px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
+.oga-callout b { color: var(--ink); }
+.oga-island-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 18px; }
+.oga-island { border: 1px solid var(--line); background: var(--paper); padding: 15px 16px; }
+.oga-island-top { display: flex; justify-content: space-between; gap: 8px; font-size: 9px; color: var(--ink-3); }
+.oga-island-top em { font-style: normal; color: var(--red); }
+.oga-island h3 { font-family: var(--serif); font-size: 29px; margin: 8px 0 4px; font-weight: 600; }
+.oga-summary { margin: 0 0 10px; font-size: 12px; line-height: 1.8; color: var(--ink-2); }
+.oga-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 11px; }
+.oga-tags b { font-weight: 400; font-size: 9px; color: var(--ink-3); border: 1px solid var(--line); padding: 2px 5px; }
+.oga-note { margin: 0; padding-top: 9px; border-top: 1px solid var(--line-soft); font-size: 11px; line-height: 1.7; color: var(--red); }
+.oga-plan { border-top: 1px solid var(--ink); }
+.oga-day { display: grid; grid-template-columns: 48px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line-soft); }
+.oga-day > span { font-size: 10px; letter-spacing: .1em; color: var(--red); padding-top: 4px; }
+.oga-day h3 { font-family: var(--serif); font-size: 18px; margin: 0 0 4px; }
+.oga-day p { margin: 0; font-size: 12px; line-height: 1.8; color: var(--ink-2); }
+.oga-bookings { padding-left: 18px; margin: 0 0 8px; }
+.oga-bookings li { margin: 0 0 7px; font-size: 12px; line-height: 1.7; color: var(--ink-2); }
+.oga-table-wrap { overflow-x: auto; margin: 0 0 14px; }
+.oga-table { width: 100%; border-collapse: collapse; font-size: 11.5px; line-height: 1.65; min-width: 620px; }
+.oga-table th { text-align: left; font-weight: 400; color: var(--ink-3); border-bottom: 1px solid var(--ink); padding: 7px 8px; white-space: nowrap; }
+.oga-table td { border-bottom: 1px solid var(--line-soft); padding: 8px; vertical-align: top; }
+.oga-tips { columns: 2; column-gap: 28px; padding-left: 18px; margin: 0 0 8px; }
+.oga-tips li { break-inside: avoid; margin: 0 0 7px; font-size: 12px; line-height: 1.7; color: var(--ink-2); }
+.oga-warn { border: 1px solid #d8b7a8; background: #fff8ed; padding: 11px 14px; font-size: 12px; line-height: 1.8; color: #6b3b27; margin: 6px 0 18px; }
+.oga-sources { padding-left: 18px; margin: 0; }
+.oga-sources li { margin: 0 0 6px; font-size: 12px; line-height: 1.7; }
+@media (max-width: 760px) {
+  .oga-stats { grid-template-columns: 1fr 1fr; }
+  .oga-stats div:nth-child(2) { border-right: 0; }
+  .oga-stats div:nth-child(1), .oga-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .oga-island-grid { grid-template-columns: 1fr; }
+  .oga-tips { columns: 1; }
+  .oga-day { grid-template-columns: 1fr; gap: 4px; }
+}

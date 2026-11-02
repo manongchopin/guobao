@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-02",
     type: "计划",
+    title: "小笠原群岛：父岛 + 母岛",
+    note: "08 号计划 · 8–9 天骨架",
+    href: "ogasawara.html"
+  },
+  {
+    date: "2026-11-02",
+    type: "计划",
     title: "熊野古道路线比较",
     note: "07 号计划 · 中边路 3–4 天",
     href: "kumano-kodo.html"
