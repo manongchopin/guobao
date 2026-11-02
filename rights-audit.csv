@@ -40,3 +40,4 @@ images/home/road.jpg,首页地图图片,来源未记录,未知,,未知,待补,�
 "videos.html, plans.html, overseas.html",本站页面/占位,本站文案,本站,,本站原创文案,无,撰写、排版,低,无
 images/zh003-sentinel/*.jpg（13 张）,Sentinel-2 位置示意,Copernicus Sentinel-2 L2A（2025）,ESA / Copernicus,https://dataspace.copernicus.eu/,开放数据；需署名,Contains modified Copernicus Sentinel data 2025,裁切、压缩、分级,低,保留署名；不提供原图下载；标注 10m 示意
 images/zh003-osm/05.jpg,OSM 位置图,OpenStreetMap,OpenStreetMap contributors,https://www.openstreetmap.org/copyright,ODbL,© OpenStreetMap contributors,裁切、压缩,低,保留署名与 ODbL 链接
+images/eclipse/eclipse-2026-2028-tracks.jpg,日食带叠加图,eclipse262728.com / GoogleMaps,eclipse262728.com / GoogleMaps,https://www.eclipse262728.com/,未授权公开（风险已记录）,eclipse262728.com；底图 GoogleMaps,接收、转码、版面,中,联系原作者/Google Maps；保留水印与署名；权利人要求时下架

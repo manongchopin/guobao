@@ -5,39 +5,23 @@
     "primary_event": "2027-08-02",
     "language": "zh-CN",
     "note": "所有时刻为当地时间；totality_seconds 为全食持续时间（秒），带外城市无此字段。",
-    "version": 1,
-    "updated": "2026-11-01",
+    "version": 2,
+    "updated": "2026-11-02",
     "source_of_truth": "eclipse-watch/data/eclipses.json",
     "changelog": [
       {
         "version": 1,
         "date": "2026-11-01",
         "note": "首次生成：4 场日食、33 个带内城市、10 个带外城市、两条路线结论"
+      },
+      {
+        "version": 2,
+        "date": "2026-11-02",
+        "note": "移除已过去的 2026-08-12 事件；增加 2026–2028 西班牙日食带叠加图"
       }
     ]
   },
   "events": [
-    {
-      "id": "2026-08-12",
-      "type": "total",
-      "status": "past",
-      "title": "日全食",
-      "path": "北冰洋 → 格陵兰东北 → 冰岛西缘 → 大西洋 → 伊比利亚半岛（自西向东）→ 巴利阿里群岛",
-      "greatest": {
-        "local": "19:46 CEST",
-        "utc": "17:46",
-        "where": "冰岛附近",
-        "duration_seconds": 138
-      },
-      "spain": {
-        "cities": [
-          "A Coruña 76s",
-          "Burgos 104s",
-          "Palma de Mallorca"
-        ],
-        "note": "发生在日落前，太阳高度仅 2°–12°"
-      }
-    },
     {
       "id": "2027-08-02",
       "type": "total",
@@ -809,6 +793,10 @@
     {
       "name": "NASA GSFC eclipse 目录",
       "url": "https://eclipse.gsfc.nasa.gov/SEsearch/SEdata.php?Ecl=+20270802"
+    },
+    {
+      "name": "eclipse262728.com · 2026–2028 西班牙日食带叠加图",
+      "url": "https://www.eclipse262728.com/"
     }
   ]
 }

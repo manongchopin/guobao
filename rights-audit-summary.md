@@ -7,9 +7,9 @@
 
 ## 总数
 
-- 资产组：41
+- 资产组：42
 - 高风险：10
-- 中风险：15
+- 中风险：16
 - 低风险：16
 
 ## 高风险：先处理
@@ -61,6 +61,9 @@
 - ZH-002 的 OSM 底图：
   - 必须 `© OpenStreetMap contributors`
   - 衍生地图按 ODbL 处理
+- 日食轨迹叠加图 `images/eclipse/eclipse-2026-2028-tracks.jpg`：
+  - 来源 `eclipse262728.com`，底图 GoogleMaps
+  - 未授权公开（风险已记录）；保留水印与署名，权利人要求时下架
 - 日食数据和三张手绘图：
   - 数据来源：timeanddate、IGN、NASA 等
   - 图中保留“示意、不可导航”；图角可加“制图：chopinfisher”

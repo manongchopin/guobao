@@ -227,3 +227,49 @@
   .eclipse-partial-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .eclipse-section h2 { font-size: 23px; }
 }
+
+/* 2026–2028 三年日食带叠加图 */
+.eclipse-tracks { padding-top: 24px; }
+.eclipse-track-kicker {
+  margin: 0 0 8px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: #92400e;
+}
+.eclipse-tracks h2 { max-width: 900px; }
+.eclipse-tracks-figure {
+  margin: 4px 0 22px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+}
+.eclipse-tracks-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #dfe9ee;
+}
+.eclipse-tracks-figure figcaption {
+  margin-top: 8px;
+  font-size: 11.5px;
+  line-height: 1.75;
+  color: var(--ink-2);
+}
+.eclipse-tracks-figure a { color: var(--red); }
+.eclipse-tracks-copy {
+  max-width: 880px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 26px;
+}
+.eclipse-tracks-copy p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.95;
+  color: var(--ink-2);
+}
+.eclipse-tracks-copy p:last-child { grid-column: 1 / -1; }
+@media (max-width: 720px) {
+  .eclipse-tracks-copy { grid-template-columns: 1fr; }
+  .eclipse-tracks-copy p:last-child { grid-column: auto; }
+}

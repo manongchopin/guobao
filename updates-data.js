@@ -1,5 +1,12 @@
 window.SITE_UPDATES = [
   {
+    date: "2026-11-02",
+    type: "专题",
+    title: "日食页加入 2026–2028 轨迹图",
+    note: "移除已过去的 2026-08-12 事件",
+    href: "eclipse-2027.html"
+  },
+  {
     date: "2026-11-01",
     type: "专题",
     title: "ZH-003 恢复商业影像与 PDF",
