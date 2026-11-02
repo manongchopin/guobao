@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日本四极 · 不是四个点，是四套坐标</title>
+<meta name="description" content="日本四极旅行计划：国家尺度、本土四极、四岛各自、证书四极，用地图看不同意义上的最北、最东、最南、最西。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/japan-four-extremes.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="plans.html">← 旅行计划</a>
+  <p class="kicker">JAPAN · FOUR EXTREMES</p>
+  <h1>日本四极</h1>
+  <p class="lede">
+    不是四个点，是四套坐标。<br>
+    <span>国家尺度、本土四极、四岛各自、证书四极，分开看才不会混。</span>
+  </p>
+  <div class="seal" aria-hidden="true">极</div>
+</header>
+
+<main class="wh-detail">
+  <section class="wh-section">
+    <p class="je-intro">“日本最北端”这句话，至少有三层意思：日本主张的领土、日本实际管辖的极点、普通人买票能到的极点。再往下，还有“本土四极”和“北海道/本州/四国/九州各自四极”。这个页面把这几套坐标放在同一张地图上，用模式切换。</p>
+    <div class="je-modes" id="je-modes" role="tablist" aria-label="选择四极范围"></div>
+  </section>
+
+  <section class="wh-section je-map-section">
+    <div class="je-map-layout">
+      <div class="je-map-column">
+        <div id="je-map" class="je-map" aria-label="日本四极地图"></div>
+        <div class="je-map-foot">
+          <span>底图 <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>（ODbL）</span>
+          <span id="je-map-hint">点地图上的圆点，或右侧条目。</span>
+        </div>
+      </div>
+      <aside class="je-panel" aria-label="四极条目">
+        <div class="je-panel-head">
+          <p class="je-panel-kicker" id="je-panel-kicker">MODE 01</p>
+          <h2 id="je-panel-title">日本四极</h2>
+          <p id="je-panel-desc"></p>
+        </div>
+        <div class="je-list" id="je-list"></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="wh-section">
+    <div class="je-read">
+      <div><span>主张</span><b>日本政府主张，但未实际管辖。不能当作普通旅行目的地。</b></div>
+      <div><span>实控</span><b>日本实际管辖，但可能是无人岩礁、自卫队设施或需要许可。</b></div>
+      <div><span>可到</span><b>普通人通常能到达的极点；和“国家四极”不是同一件事。</b></div>
+    </div>
+    <div class="je-callout">
+      <b>证书要分清：</b>宗谷岬、納沙布岬、佐多岬、神崎鼻四张“日本本土四極踏破証明書”拼成一张，对应的是<strong>本土四极</strong>；它不包括南鸟岛、冲之鸟岛、波照间岛或与那国岛这些国家尺度的极点。
+    </div>
+  </section>
+
+  <section class="wh-section">
+    <h2>一条可走的“证书线”</h2>
+    <p class="section-sub">如果目标只是四张证书，可以按“北 → 东 → 南 → 西”串：宗谷岬 → 納沙布岬 → 佐多岬 → 神崎鼻。实际排线要按航班、铁路和季节拆，不要把这四个点当成一条直线。</p>
+    <div class="je-route">
+      <span><b>01</b> 宗谷岬<em>北海道稚内市</em></span>
+      <span class="je-route-arrow">→</span>
+      <span><b>02</b> 納沙布岬<em>北海道根室市</em></span>
+      <span class="je-route-arrow">→</span>
+      <span><b>03</b> 佐多岬<em>鹿児島県南大隅町</em></span>
+      <span class="je-route-arrow">→</span>
+      <span><b>04</b> 神崎鼻<em>長崎県佐世保市</em></span>
+    </div>
+  </section>
+
+  <section class="wh-section je-notes">
+    <h2>怎么读这张图</h2>
+    <ul>
+      <li><b>国家尺度</b>：択捉島カモイワッカ岬（主张）、弁天島（实控极北）、南鳥島（最东）、沖ノ鳥島（最南）、Tuishi（最西），以及普通人可到的宗谷岬、納沙布岬、波照間島高那崎、与那国島西崎。</li>
+      <li><b>本土四极</b>：宗谷岬、納沙布岬、佐多岬、神崎鼻；这是四座主岛整体的四极，不含离岛。</li>
+      <li><b>四岛各自</b>：北海道、本州、四国、九州各四个端点，共 16 个；同一个宗谷岬会同时出现在“本土”和“北海道”里，但含义不同。</li>
+      <li><b>坐标</b>：部分为近似值，地图只作方位示意；实际到访请以当地道路、航线和设施公告为准。</li>
+    </ul>
+    <p class="je-source">资料：<a href="https://zh.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E7%9A%84%E5%9C%B0%E7%90%86%E6%A5%B5%E9%BB%9E" target="_blank" rel="noopener">Wikipedia「日本的地理極點」</a>；证书信息参考<a href="https://www.city.nemuro.hokkaido.jp/lifeinfo/kakuka/suisankeizaibu/shoukoukankou/new/4639.html" target="_blank" rel="noopener">根室市「四極踏破証明書」</a>与<a href="https://minamiosumi-tourism.com/tag/%e5%9b%9b%e6%a5%b5%e7%ab%af%e8%a8%bc%e6%98%8e%e6%9b%b8/" target="_blank" rel="noopener">南大隅町观光网站</a>。</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>日本四极 · 旅行计划 11</span>
+    <span>地图底图 © OpenStreetMap contributors</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+    <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="japan-four-extremes-data.js"></script>
+<script src="assets/japan-four-extremes.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>

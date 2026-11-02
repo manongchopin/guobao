@@ -1,0 +1,83 @@
+/* 日本四极 · 地图页 */
+.je-intro { max-width: 760px; margin: 0 0 18px; font-size: 13px; line-height: 2; color: var(--ink-2); }
+.je-modes { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.je-mode { text-align: left; background: transparent; border: 0; border-right: 1px solid var(--line); padding: 12px 13px; cursor: pointer; font: inherit; color: var(--ink-2); }
+.je-mode:last-child { border-right: 0; }
+.je-mode:hover { background: var(--paper-2); }
+.je-mode.is-active { background: var(--ink); color: var(--paper); }
+.je-mode span { display: block; font-size: 9px; letter-spacing: .1em; color: var(--ink-3); }
+.je-mode.is-active span { color: #ddd0c2; }
+.je-mode b { display: block; margin: 4px 0 2px; font-family: var(--serif); font-size: 17px; font-weight: 600; }
+.je-mode em { display: block; font-style: normal; font-size: 9px; line-height: 1.5; color: var(--ink-3); }
+.je-mode.is-active em { color: #d8cbbd; }
+
+.je-map-section { padding-top: 8px; }
+.je-map-layout { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 20px; align-items: stretch; }
+.je-map-column { min-width: 0; }
+.je-map { height: 620px; background: #dfe8e5; border: 1px solid var(--line); z-index: 0; }
+.je-map-foot { display: flex; justify-content: space-between; gap: 10px; padding: 7px 1px 0; font-size: 9px; color: var(--ink-3); }
+.je-map-foot a { color: var(--ink-3); }
+.je-panel { border-top: 1px solid var(--ink); min-width: 0; max-height: 620px; display: flex; flex-direction: column; }
+.je-panel-head { padding: 12px 0 10px; border-bottom: 1px solid var(--line); }
+.je-panel-kicker { margin: 0 0 3px; font-size: 9px; letter-spacing: .12em; color: var(--red); }
+.je-panel-head h2 { margin: 0 0 5px; font-family: var(--serif); font-size: 22px; }
+.je-panel-head p:last-child { margin: 0; font-size: 10.5px; line-height: 1.7; color: var(--ink-3); }
+.je-list { overflow: auto; padding-right: 3px; }
+.je-item { display: block; width: 100%; text-align: left; background: transparent; border: 0; border-bottom: 1px solid var(--line-soft); padding: 9px 0; cursor: pointer; font: inherit; color: var(--ink); }
+.je-item:hover, .je-item.is-active { background: var(--paper-2); }
+.je-item-top { display: flex; align-items: center; gap: 6px; }
+.je-badge { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 21px; height: 21px; border: 1px solid currentColor; border-radius: 50%; font-size: 10px; color: var(--red); }
+.je-badge--ordinary { color: #3f6b5e; }
+.je-badge--remote, .je-badge--rock { color: #5c7a93; }
+.je-badge--restricted { color: #8a6a3f; }
+.je-badge--claimed { color: #9b3b32; }
+.je-item-name { font-family: var(--serif); font-size: 15px; line-height: 1.4; }
+.je-item-meta { display: block; margin: 2px 0 0 27px; font-size: 9px; color: var(--ink-3); }
+.je-cert { color: var(--red); border: 1px solid #d8b7a8; padding: 0 3px; }
+
+.je-read { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.je-read div { background: var(--paper); padding: 12px 14px; }
+.je-read span { display: block; font-size: 9px; letter-spacing: .12em; color: var(--red); margin-bottom: 4px; }
+.je-read b { display: block; font-size: 11px; line-height: 1.7; font-weight: 400; color: var(--ink-2); }
+.je-callout { margin-top: 14px; border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
+
+.je-route { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 14px 0; }
+.je-route span:not(.je-route-arrow) { display: flex; flex-direction: column; min-width: 96px; font-family: var(--serif); font-size: 16px; }
+.je-route span b { font-family: var(--sans); font-size: 9px; color: var(--red); font-weight: 400; letter-spacing: .1em; }
+.je-route span em { font-style: normal; font-family: var(--sans); font-size: 9px; color: var(--ink-3); margin-top: 2px; }
+.je-route-arrow { color: var(--red); font-size: 13px; }
+.je-notes ul { margin: 0; padding-left: 1.1em; }
+.je-notes li { margin: 0 0 8px; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
+.je-notes li b { color: var(--ink); }
+.je-source { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 10px; font-size: 10px; line-height: 1.8; color: var(--ink-3); }
+.je-source a { color: var(--red); }
+
+.je-pin-wrap { background: transparent; border: 0; }
+.je-pin { display: flex; align-items: center; justify-content: center; width: 27px; height: 27px; border-radius: 50%; background: #f5f1e8; border: 2px solid var(--red); color: var(--red); font-size: 11px; font-weight: 600; box-shadow: 0 1px 5px rgba(0,0,0,.2); }
+.je-pin--ordinary { border-color: #3f6b5e; color: #3f6b5e; }
+.je-pin--remote, .je-pin--rock { border-color: #5c7a93; color: #5c7a93; }
+.je-pin--restricted { border-color: #8a6a3f; color: #8a6a3f; }
+.je-pin--claimed { border-color: #9b3b32; color: #9b3b32; }
+.je-pin::after { content: ""; position: absolute; left: 50%; bottom: -5px; width: 1px; height: 5px; background: currentColor; }
+.leaflet-popup-content { font: 12px/1.65 var(--sans); }
+.leaflet-popup-content b { font-family: var(--serif); font-size: 15px; }
+.leaflet-popup-content .je-pop-meta { color: #6b6258; font-size: 10px; margin: 3px 0 6px; }
+.leaflet-popup-content .je-pop-note { margin: 0; }
+.leaflet-container a { color: var(--red); }
+
+@media (max-width: 980px) {
+  .je-map-layout { grid-template-columns: 1fr; }
+  .je-panel { max-height: none; }
+  .je-list { max-height: 360px; }
+}
+@media (max-width: 760px) {
+  .je-modes { grid-template-columns: 1fr 1fr; }
+  .je-mode:nth-child(2) { border-right: 0; }
+  .je-mode:nth-child(1), .je-mode:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .je-map { height: 430px; }
+  .je-read { grid-template-columns: 1fr; }
+  .je-route { gap: 5px; }
+  .je-route span:not(.je-route-arrow) { min-width: 42%; }
+  .je-route-arrow { display: none; }
+  .je-map-foot { flex-direction: column; gap: 3px; }
+}

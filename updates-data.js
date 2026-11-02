@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-02",
+    type: "计划",
+    title: "新增旅行计划：日本四极",
+    note: "国家 / 本土 / 四岛 / 证书 · 地图版",
+    href: "japan-four-extremes.html"
+  },
+  {
+    date: "2026-11-02",
     type: "档案",
     title: "义乌 2021 保护范围索引试点",
     note: "136 条 + 合并调整 8 处",
