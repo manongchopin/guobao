@@ -120,3 +120,37 @@
   .je-cert-grid, .je-trips { grid-template-columns: 1fr; }
   .je-item-main { width: calc(100% - 58px); }
 }
+
+/* 两段日程 */
+.je-itinerary-head { display: flex; align-items: end; justify-content: space-between; gap: 22px; border-top: 1px solid var(--ink); padding-top: 15px; margin-bottom: 13px; }
+.je-itinerary-head h2 { margin: 0; }
+.je-itinerary-head > p { max-width: 460px; margin: 0; font-size: 11px; line-height: 1.75; color: var(--ink-3); text-align: right; }
+.je-itinerary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.je-plan { border: 1px solid var(--line); background: var(--paper); padding: 13px 14px; }
+.je-plan header { display: flex; gap: 9px; align-items: flex-start; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+.je-plan-tag { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; flex: 0 0 auto; border: 1px solid var(--red); color: var(--red); font-size: 11px; border-radius: 50%; }
+.je-plan header h3 { margin: 0; font-family: var(--serif); font-size: 21px; }
+.je-plan header p { margin: 2px 0 0; font-size: 10px; color: var(--ink-3); }
+.je-days { list-style: none; margin: 0; padding: 0; }
+.je-days li { display: grid; grid-template-columns: 44px 1fr; gap: 9px; padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
+.je-days li:last-child { border-bottom: 0; padding-bottom: 2px; }
+.je-days > li > span { font-size: 9px; letter-spacing: .08em; color: var(--red); padding-top: 3px; }
+.je-days h4 { margin: 0 0 3px; font-family: var(--serif); font-size: 15.5px; line-height: 1.45; }
+.je-days p { margin: 0; font-size: 11px; line-height: 1.75; color: var(--ink-2); }
+.je-days em { display: block; margin-top: 3px; font-style: normal; font-size: 9.5px; line-height: 1.6; color: var(--ink-3); }
+
+.je-transport { margin-top: 20px; border-top: 1px solid var(--ink); padding-top: 10px; }
+.je-transport h3 { margin: 0 0 5px; font-family: var(--serif); font-size: 19px; }
+.je-transport-row { display: grid; grid-template-columns: 1.35fr 1fr .65fr 1.3fr; gap: 8px; padding: 5px 0; border-bottom: 1px solid var(--line-soft); font-size: 10px; line-height: 1.6; color: var(--ink-2); }
+.je-transport-head { border-bottom: 1px solid var(--line); color: var(--ink-3); font-size: 9px; letter-spacing: .06em; }
+.je-transport-row span:nth-child(3) { color: var(--red); white-space: nowrap; }
+.je-transport-row span:last-child { color: var(--ink-3); }
+.je-check { margin-top: 10px; border-left: 2px solid var(--red); background: var(--paper-2); padding: 8px 11px; font-size: 10.5px; line-height: 1.75; color: var(--ink-2); }
+
+@media (max-width: 760px) {
+  .je-itinerary-head { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .je-itinerary-head > p { text-align: left; }
+  .je-itinerary-grid { grid-template-columns: 1fr; }
+  .je-transport-row { grid-template-columns: 1.4fr 1fr .7fr; }
+  .je-transport-row span:last-child { display: none; }
+}
