@@ -1,0 +1,33 @@
+/* 义乌 2021 保护范围索引 · 试点 */
+.yw21-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 22px; }
+.yw21-stats div { padding: 12px 14px; border-right: 1px solid var(--line); }
+.yw21-stats div:last-child { border-right: 0; }
+.yw21-stats b { display: block; font-family: var(--serif); font-size: 24px; line-height: 1.15; }
+.yw21-stats span { display: block; margin-top: 3px; font-size: 10px; color: var(--ink-3); line-height: 1.5; }
+.yw21-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 22px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
+.yw21-list { border-top: 1px solid var(--ink); }
+.yw21-card { border-bottom: 1px solid var(--line); padding: 0; }
+.yw21-card summary { cursor: pointer; list-style: none; padding: 13px 0; display: flex; align-items: baseline; gap: 12px; }
+.yw21-card summary::-webkit-details-marker { display: none; }
+.yw21-card summary::before { content: "+"; color: var(--red); font-size: 17px; width: 14px; flex: 0 0 auto; }
+.yw21-card[open] summary::before { content: "−"; }
+.yw21-card summary h3 { font-family: var(--serif); font-size: 21px; margin: 0; font-weight: 600; }
+.yw21-card summary .yw21-id { margin-left: auto; font-size: 10px; color: var(--ink-3); white-space: nowrap; }
+.yw21-inner { padding: 0 0 18px 26px; }
+.yw21-meta { display: flex; flex-wrap: wrap; gap: 5px 8px; margin: 0 0 10px; font-size: 10px; color: var(--ink-3); }
+.yw21-meta b { font-weight: 400; color: var(--red); border: 1px solid #d8b7a8; padding: 1px 5px; }
+.yw21-block { border-top: 1px solid var(--line-soft); padding: 8px 0; }
+.yw21-block dt { font-size: 10px; letter-spacing: .08em; color: var(--ink-3); margin: 0 0 3px; }
+.yw21-block dd { margin: 0; font-size: 12px; line-height: 1.8; color: var(--ink-2); }
+.yw21-block dd.body { color: var(--ink); }
+.yw21-back { display: inline-block; margin: 0 0 18px; font-size: 11px; color: var(--red); text-decoration: none; border-bottom: 1px solid #d8b7a8; }
+.yw21-src { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 22px; font-size: 11px; line-height: 1.8; color: var(--ink-3); }
+.yw21-src a { color: var(--red); }
+@media (max-width: 760px) {
+  .yw21-stats { grid-template-columns: 1fr 1fr; }
+  .yw21-stats div:nth-child(2) { border-right: 0; }
+  .yw21-stats div:nth-child(1), .yw21-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .yw21-card summary { gap: 8px; }
+  .yw21-card summary h3 { font-size: 18px; }
+  .yw21-inner { padding-left: 20px; }
+}
