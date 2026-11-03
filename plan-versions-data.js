@@ -225,10 +225,10 @@ window.PLAN_VERSIONS = {
     },
     "panamerican": {
       "title": "泛美公路自驾",
-      "version": "0.3",
-      "status": "已提取全程",
+      "version": "0.4",
+      "status": "已提取全程 · 路线修订",
       "date": "2026-11-03",
-      "note": "美国—巴塔哥尼亚路线、每国小地图、景点与经验；实际止于 Puerto Williams",
+      "note": "Puerto Williams 改为航段；补 Puyuhuapi、El Calafate、Santa Cruz 与单次签原因",
       "history": [
         {
           "v": "0.1",
@@ -244,6 +244,11 @@ window.PLAN_VERSIONS = {
           "v": "0.3",
           "date": "2026-11-03",
           "note": "每国一张小路线图；明确 14 个停留国 + 尼加拉瓜过境"
+        },
+        {
+          "v": "0.4",
+          "date": "2026-11-03",
+          "note": "Puerto Williams 为卖车后航段；巴塔哥尼亚单列；补 Puyuhuapi、El Calafate、Santa Cruz、San Isidro；写明单次签导致未到乌斯怀亚"
         }
       ]
     }

@@ -10,7 +10,12 @@ window.PANAMERICAN = {
     "extractedCountries": 14,
     "transitCountries": 1
   },
-  "coverageNote": "三个 PDF 已提取：美国 → 墨西哥 → 中美洲 → 哥伦比亚 → 厄瓜多尔 → 秘鲁 → 玻利维亚 → 智利 → 巴塔哥尼亚。原文标题写“乌斯怀亚”，但终篇实际在智利 Puerto Williams 结束；没有到乌斯怀亚、布宜诺斯艾利斯或里约。",
+  "coverageNote": "三个 PDF 已提取：美国 → 墨西哥 → 中美洲 → 哥伦比亚 → 厄瓜多尔 → 秘鲁 → 玻利维亚 → 智利 → 巴塔哥尼亚。原文标题写“乌斯怀亚”，但车在智利 Punta Arenas 卖出，人再飞往 Puerto Williams 打卡，行程在那里结束；没有到乌斯怀亚、布宜诺斯艾利斯或里约。",
+  "ending": {
+    "title": "为什么没到乌斯怀亚",
+    "text": "原因是签证，不是路线。两人持美国绿卡，阿根廷 AVE 电子签要求美签必须是 B2 类型，他们不符合；在智利 Puerto Montt 的阿根廷使馆只能申请纸质签，拿到的是“与行程单起始日吻合的 12 天单次签”。单次入境在巴塔哥尼亚段已经用掉（El Chaltén、El Calafate、Río Gallegos），再从 Río Gallegos 经 San Sebastián 出境进智利，就无法再次入境阿根廷去乌斯怀亚。所以最后一段是：Punta Arenas 卖车 → 飞 Puerto Williams → 4 段航班回芝加哥。",
+    "note": "原文自述：做行程单时只写了一次入境、一次出境，导致拿到单次签。"
+  },
   "stages": [
     {
       "id": "us",
@@ -73,21 +78,21 @@ window.PANAMERICAN = {
       "name": "第九段 · 智利",
       "days": "10 月 23 日–11 月 16 日",
       "km": "4,612 km",
-      "text": "Ollagüe → Calama → Antofagasta → Valparaíso → Santiago → 复活节岛 → Concepción → Quellón → Puerto Montt。"
+      "text": "Ollagüe → Calama → Antofagasta → Valparaíso → Santiago → 复活节岛（飞）→ Santa Cruz（Colchagua 酒谷）→ Concepción → Quellón（奇洛埃岛）→ Puerto Montt。"
     },
     {
       "id": "pat",
       "name": "第十段 · 巴塔哥尼亚",
       "days": "11 月 14 日–12 月 12 日",
       "km": "4,120 km",
-      "text": "Puerto Montt → Hornopirén → Chaitén → Coyhaique → Chile Chico → El Chaltén → Río Gallegos → Punta Arenas → Torres del Paine → Puerto Williams。"
+      "text": "Puerto Montt → Hornopirén → Chaitén → Puyuhuapi（Queulat 悬空冰川）→ Coyhaique → Chile Chico → El Chaltén → El Calafate → Río Gallegos → San Sebastián 出境 → Punta Arenas → Torres del Paine（往返）→ 卖车 → 飞 Puerto Williams。"
     },
     {
       "id": "end",
       "name": "终篇 · 返程",
       "days": "12 月 12 日",
       "km": "—",
-      "text": "在 Puerto Williams 结束，卖车后经 4 段航班返回芝加哥。没有去乌斯怀亚、布宜诺斯艾利斯或里约。"
+      "text": "Punta Arenas 把车卖给 dealer → 行李精简 → 飞 Puerto Williams（每天 1 班，约 1.5 小时；也可坐 32 小时轮渡，每周两趟）→ 4 段航班 25 小时回芝加哥。没有去乌斯怀亚、布宜诺斯艾利斯或里约。"
     }
   ],
   "countries": [
@@ -804,6 +809,11 @@ window.PANAMERICAN = {
           "lng": -70.67
         },
         {
+          "name": "Santa Cruz",
+          "lat": -34.639,
+          "lng": -71.365
+        },
+        {
           "name": "Concepción",
           "lat": -36.83,
           "lng": -73.05
@@ -817,19 +827,9 @@ window.PANAMERICAN = {
           "name": "Puerto Montt",
           "lat": -41.47,
           "lng": -72.94
-        },
-        {
-          "name": "Punta Arenas",
-          "lat": -53.16,
-          "lng": -70.91
-        },
-        {
-          "name": "Puerto Williams",
-          "lat": -54.93,
-          "lng": -67.61
         }
       ],
-      "routeText": "Ollagüe → Calama → Antofagasta → Valparaíso → Santiago → 复活节岛（飞）→ Concepción → Quellón → Puerto Montt → Punta Arenas → Puerto Williams",
+      "routeText": "Ollagüe → Calama → Antofagasta → Valparaíso → Santiago → 复活节岛（飞）→ Santa Cruz → Concepción → Quellón → Puerto Montt",
       "highlights": [
         {
           "name": "阿塔卡马 / Calama",
@@ -844,18 +844,19 @@ window.PANAMERICAN = {
           "note": "从智利本土飞去的支线，不是自驾可达。"
         },
         {
-          "name": "Chiloé / Puerto Montt",
-          "note": "湖区与岛屿，之后进入巴塔哥尼亚。"
+          "name": "Santa Cruz / Colchagua",
+          "note": "智利中部酒谷，原文路线里的一站。"
         },
         {
-          "name": "Punta Arenas / Puerto Williams",
-          "note": "麦哲伦海峡与比格尔海峡；车在这里卖掉，行程结束。"
+          "name": "Chiloé / Quellón / Puerto Montt",
+          "note": "湖区与奇洛埃岛，之后从蒙特港进巴塔哥尼亚。"
         }
       ],
       "tips": [
         "智利南北跨度极大，别用“一天几百公里”估算",
         "复活节岛需单独机票和岛上门票",
-        "巴塔哥尼亚风大，露营/轮渡都要留备选"
+        "巴塔哥尼亚风大，露营/轮渡都要留备选",
+        "卖车在 Punta Arenas，属于下一段的事，不在智利中段"
       ]
     },
     {
@@ -872,26 +873,150 @@ window.PANAMERICAN = {
           "lng": -72.89
         },
         {
+          "name": "El Calafate",
+          "lat": -50.337,
+          "lng": -72.28
+        },
+        {
           "name": "Río Gallegos",
           "lat": -51.62,
           "lng": -69.22
         }
       ],
-      "routeText": "El Chaltén → Río Gallegos →（巴塔哥尼亚边境）",
+      "routeText": "El Chaltén → El Calafate（莫雷诺冰川）→ Río Gallegos → San Sebastián 出境，回智利 Punta Arenas",
       "highlights": [
         {
           "name": "El Chaltén / Fitz Roy",
           "note": "巴塔哥尼亚徒步重镇；他们从这里进入阿根廷段。"
         },
         {
+          "name": "El Calafate / 莫雷诺冰川",
+          "note": "从 El Chaltén 沿 40 号公路南下约 4 小时到 El Calafate；冰川观景设施完善，车可开到游客中心。"
+        },
+        {
           "name": "Río Gallegos",
-          "note": "前往麦哲伦海峡/火地岛方向的过境城市。"
+          "note": "原计划在这里住一晚、第二天一天内穿过智利直奔乌斯怀亚；因为没有多次签，改为从这里出境。"
         }
       ],
       "tips": [
-        "原文没有到乌斯怀亚、布宜诺斯艾利斯或伊瓜苏",
-        "阿根廷卖外国车限制多，他们最终在智利 Punta Arenas 卖车",
+        "只到巴塔哥尼亚，不是走遍阿根廷；没有去乌斯怀亚、布宜诺斯艾利斯或伊瓜苏",
+        "阿根廷只拿到 12 天单次签（见上面“为什么没到乌斯怀亚”），过境前必须先算清入境次数",
+        "原文卖车是在智利 Punta Arenas，不在这里",
         "过境智利/阿根廷要预留时间，风大时轮渡可能停"
+      ]
+    },
+    {
+      "id": "pat",
+      "name": "巴塔哥尼亚",
+      "en": "Patagonia · Chile & Argentina",
+      "status": "extracted",
+      "dates": "11 月 14 日–12 月 12 日",
+      "km": "4,120 km",
+      "route": [
+        {
+          "name": "Puerto Montt",
+          "lat": -41.47,
+          "lng": -72.94
+        },
+        {
+          "name": "Hornopirén",
+          "lat": -41.607,
+          "lng": -72.43
+        },
+        {
+          "name": "Chaitén",
+          "lat": -42.917,
+          "lng": -72.708
+        },
+        {
+          "name": "Puyuhuapi",
+          "lat": -44.324,
+          "lng": -72.557
+        },
+        {
+          "name": "Coyhaique",
+          "lat": -45.575,
+          "lng": -72.066
+        },
+        {
+          "name": "Chile Chico",
+          "lat": -46.541,
+          "lng": -71.729
+        },
+        {
+          "name": "El Chaltén",
+          "lat": -49.33,
+          "lng": -72.89
+        },
+        {
+          "name": "El Calafate",
+          "lat": -50.337,
+          "lng": -72.28
+        },
+        {
+          "name": "Río Gallegos",
+          "lat": -51.62,
+          "lng": -69.22
+        },
+        {
+          "name": "Punta Arenas",
+          "lat": -53.163,
+          "lng": -70.917
+        },
+        {
+          "name": "Torres del Paine",
+          "lat": -50.942,
+          "lng": -73.406
+        },
+        {
+          "name": "Punta Arenas（卖车）",
+          "lat": -53.163,
+          "lng": -70.917
+        },
+        {
+          "name": "Puerto Williams（飞）",
+          "lat": -54.933,
+          "lng": -67.61,
+          "mode": "air"
+        }
+      ],
+      "routeText": "Puerto Montt → Hornopirén → Chaitén → Puyuhuapi → Coyhaique → Chile Chico → El Chaltén → El Calafate → Río Gallegos → Punta Arenas → Torres del Paine → Punta Arenas（卖车）→ 飞 Puerto Williams",
+      "highlights": [
+        {
+          "name": "卡雷特拉奥斯特拉尔",
+          "note": "Puerto Montt 以南的智利南部公路，含 Hornopirén 轮渡段；峡湾、雨林、连续碎石路。"
+        },
+        {
+          "name": "Queulat / 悬空冰川",
+          "note": "在 Puyuhuapi 南约半小时；他们出发后遇到山体滑坡封路，折返多住一晚。"
+        },
+        {
+          "name": "Chile Chico / 布宜诺斯艾利斯湖",
+          "note": "从智利侧过境进阿根廷前的小镇，General Carrera 湖区。"
+        },
+        {
+          "name": "El Chaltén / Fitz Roy",
+          "note": "徒步重镇；原文在这里停留数日走 Fitz Roy 线。"
+        },
+        {
+          "name": "Torres del Paine",
+          "note": "百内国家公园，三塔徒步；之后回 Punta Arenas 办卖车手续。"
+        },
+        {
+          "name": "San Isidro 灯塔 / Cape Froward",
+          "note": "智利 9 号公路的尽头，麦哲伦海峡边；原文专门去看，并讨论“美洲大陆最南端”其实不是乌斯怀亚。"
+        },
+        {
+          "name": "Puerto Williams（飞抵）",
+          "note": "卖车后从 Punta Arenas 飞过去，每天 1 班、约 1.5 小时；也可坐 32 小时轮渡。没有公路连接，地图上是航段。"
+        }
+      ],
+      "tips": [
+        "这一段跨智利、阿根廷两次往返，签证的入境次数要先算清",
+        "Hornopirén—Caleta Gonzalo 是轮渡，班次少，旺季要提前",
+        "南部天气变化快，滑坡、封路、轮渡停航都遇到过；行程要留缓冲",
+        "卖车在 Punta Arenas 城区办，和 dealer 约好时间；卖掉后才能飞 Puerto Williams",
+        "地图上 Punta Arenas → Puerto Williams 的虚线是航段，不是公路"
       ]
     }
   ],

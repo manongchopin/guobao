@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-03",
+    type: "计划",
+    title: "泛美公路：路线修订",
+    note: "Puerto Williams 改为航段 · 补 Puyuhuapi / El Calafate / Santa Cruz · 写明单次签原因",
+    href: "panamerican.html"
+  },
+  {
+    date: "2026-11-03",
     type: "名录",
     title: "越南国家宝物 13 批 327 件",
     note: "按批次列名单 · 越南文原表 · 搜索",
