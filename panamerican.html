@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>泛美公路自驾 · 洛杉矶到乌斯怀亚</title>
+<meta name="description" content="从穷游帖子两个 PDF 提取的泛美公路自驾：美国、墨西哥、中美洲、哥伦比亚、厄瓜多尔、秘鲁路线；国家分段、景点、经验与总图。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/panamerican.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="plans.html">← 旅行计划</a>
+  <p class="kicker">PLAN 14 · PAN-AMERICAN HIGHWAY · 14 COUNTRIES</p>
+  <h1>泛美公路自驾</h1>
+  <p class="lede">
+    洛杉矶 → 乌斯怀亚，1 辆车，2 个人，165 天。<br>
+    <span>从两个 PDF 里提取：路线、国家、景点、经验，以及他们没走完的那一段。</span>
+  </p>
+  <div class="seal" aria-hidden="true">泛</div>
+</header>
+
+<main class="wh-detail">
+  <section class="wh-section">
+    <div class="pa-stats">
+      <div><b>165 天</b><span>原文记录</span></div>
+      <div><b>28,852 km</b><span>原文里程</span></div>
+      <div><b>14 国</b><span>计划国家</span></div>
+      <div><b>11 国</b><span>PDF 已提取</span></div>
+    </div>
+    <p class="pa-callout"><b>来源说明：</b>两个 PDF 已提取到秘鲁章（并写到从秘鲁进入玻利维亚的 Copacabana）。<b>玻利维亚、智利、阿根廷的章节不在这两个 PDF 里</b>，所以这三国只做“待补”，没有编造景点和经验。</p>
+    <p class="pa-intro">原文是穷游帖子《泛美公路自驾行（洛杉矶 - 乌斯怀亚，1 辆车，2 个人，14 个国家，165 天，28852 公里）》。下面把原文按国家重新组织；景点和“经验”是编辑摘要，不是逐字转载。</p>
+  </section>
+
+  <section class="wh-section" id="stages">
+    <div class="pa-head">
+      <div><p class="pa-kicker">STAGES · 8 SEGMENTS</p><h2>先把全程切成八段</h2></div>
+      <p>按原文的章节和里程。<br>第八段以后目前待补。</p>
+    </div>
+    <div class="pa-stage-grid" id="pa-stages"></div>
+  </section>
+
+  <section class="wh-section" id="map">
+    <div class="pa-head">
+      <div><p class="pa-kicker">THE ROUTE · TOTAL & COUNTRY</p><h2>总路线，和国家路线</h2></div>
+      <p>点国家切换该段；点“总路线”回到全程。<br>路线为城市间示意，不是 GPS 轨迹。</p>
+    </div>
+    <div class="pa-filter" id="pa-filter"></div>
+    <div class="pa-map-wrap">
+      <div id="pa-map" class="pa-map" aria-label="泛美公路自驾路线地图"></div>
+      <div class="pa-map-note" id="pa-map-note">全部已提取路段 · 洛杉矶 → Copacabana</div>
+    </div>
+    <p class="pa-map-foot">底图 © OpenStreetMap contributors（ODbL）· 坐标为近似值；Darién Gap 为海运段，地图上不画连续公路。</p>
+  </section>
+
+  <section class="wh-section" id="countries">
+    <div class="pa-head">
+      <div><p class="pa-kicker">BY COUNTRY · WHAT THEY DID</p><h2>按国家看：路线、景点、经验</h2></div>
+      <p>每个国家一张路线条 + 景点 + 原文经验摘要。<br>“待补”国家没有内容。</p>
+    </div>
+    <div id="pa-countries"></div>
+  </section>
+
+  <section class="wh-section" id="darien">
+    <div class="pa-head">
+      <div><p class="pa-kicker">THE GAP · SHIP THE CAR</p><h2>Darién Gap：车不能开过去</h2></div>
+      <p>巴拿马 Colón → 哥伦比亚 Cartagena。<br>这一段不是公路，是海运+清关。</p>
+    </div>
+    <div class="pa-gap">
+      <div class="pa-gap-text" id="pa-gap-text"></div>
+      <ol class="pa-gap-steps" id="pa-gap-steps"></ol>
+    </div>
+  </section>
+
+  <section class="wh-section">
+    <h2>来源、缺口与下一步</h2>
+    <ul class="pa-notes">
+      <li><b>已提取：</b>美国、墨西哥、伯利兹、危地马拉、萨尔瓦多、洪都拉斯、哥斯达黎加、巴拿马、哥伦比亚、厄瓜多尔、秘鲁。</li>
+      <li><b>缺：</b>玻利维亚、智利、阿根廷；两个 PDF 到秘鲁章结束。</li>
+      <li><b>下一步：</b>补齐后三国 PDF 后，再把乌斯怀亚终点段补上，并把全程里程/日期对齐。</li>
+      <li><b>性质：</b>这是对原帖的编辑整理，不是逐字转载；具体签证、车辆手续和路况以出发前官方信息为准。</li>
+    </ul>
+    <ul class="pa-sources" id="pa-sources"></ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>旅行计划 14 · 泛美公路自驾</span>
+    <span>v0.1 · 已提取至秘鲁</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+    <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="panamerican-data.js"></script>
+<script src="assets/panamerican.js"></script>
+<script src="plan-versions-data.js"></script>
+<script src="assets/plan-version.js"></script>
+</body>
+</html>

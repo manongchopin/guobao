@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-03",
+    type: "计划",
+    title: "泛美公路自驾：已提取至秘鲁",
+    note: "洛杉矶→乌斯怀亚 · 11国路线 · 后三国待补",
+    href: "panamerican.html"
+  },
+  {
+    date: "2026-11-03",
     type: "站点",
     title: "旅行计划启用版本号",
     note: "0.x 骨架 · 1.0 可执行 · 2.0 重构",
