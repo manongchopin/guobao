@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-03",
     type: "计划",
+    title: "熊野古道 Dual Pilgrim 说明",
+    note: "五选一条件 · 三处登记点 · 证书/徽章",
+    href: "kumano-kodo.html#dual-pilgrim"
+  },
+  {
+    date: "2026-11-03",
+    type: "计划",
     title: "熊野古道前三个章与双照片押印册",
     note: "分两天建议 · 地点+章两张图",
     href: "kumano-stamps.html#first3"
