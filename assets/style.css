@@ -3673,6 +3673,33 @@ a.plan-shelf:hover { background: var(--paper-2); }
 .bm-empty b { display: block; font-family: var(--serif); font-size: 24px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
 .bm-empty span { font-size: 12.5px; color: var(--ink-3); }
 
+/* 收藏页 · 体育排名横栏 */
+.bm-shelf-wrap { border-top: 1px solid var(--ink); }
+.bm-shelf-wrap:hover { background: var(--paper-2); }
+.bm-shelf {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 22px 28px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.bm-shelf-no { font-family: var(--serif); font-size: 28px; line-height: 1; color: var(--red); letter-spacing: 0.08em; }
+.bm-shelf-main { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.bm-shelf-kicker { font-size: 9.5px; letter-spacing: 0.18em; color: var(--red); }
+.bm-shelf-title { font-family: var(--serif); font-size: 25px; font-weight: 600; line-height: 1.3; letter-spacing: 0.04em; }
+.bm-shelf-desc { font-size: 12.5px; line-height: 1.6; color: var(--ink-3); }
+.bm-shelf-arrow { font-size: 11.5px; color: var(--ink-3); white-space: nowrap; }
+.bm-shelf-arrow i { font-style: normal; margin-left: 8px; color: var(--red); }
+@media (max-width: 640px) {
+  .bm-shelf { grid-template-columns: 1fr; gap: 10px; padding: 20px; }
+  .bm-shelf-arrow { justify-self: start; }
+  .bm-shelf-no { display: none; }
+}
+
 /* 收藏页 · 长条气泡列表 */
 .bm-list { display: flex; flex-direction: column; gap: 12px; }
 .bm-row {

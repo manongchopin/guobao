@@ -1,0 +1,113 @@
+/* ---------- 体育排名页 ---------- */
+
+/* style.css 里 --ink-4 只被引用、没有定义，这里就地补上，只作用于本页，不动其他页面 */
+:root { --ink-4: #a9b0aa; }
+
+/* 数据更新条 */
+.sr-meta { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--paper-2); }
+.sr-meta-inner {
+  max-width: 1120px; margin: 0 auto; padding: 12px 28px;
+  display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  font-size: 11.5px; letter-spacing: 0.04em; color: var(--ink-3);
+}
+.sr-updated { color: var(--ink); font-family: var(--serif); font-size: 13px; letter-spacing: 0.06em; }
+.sr-meta-note { font-size: 11px; color: var(--ink-4); }
+
+/* 一级标签：斯诺克 / 网球 */
+.sr-tabs {
+  max-width: 1120px; margin: 0 auto; padding: 26px 28px 0;
+  display: flex; gap: 0; border-bottom: 1px solid var(--line);
+}
+.sr-tab {
+  position: relative; border: 0; background: transparent; cursor: pointer;
+  padding: 10px 22px 12px; margin-bottom: -1px;
+  font-family: var(--serif); font-size: 19px; font-weight: 600;
+  letter-spacing: 0.08em; color: var(--ink-3);
+  border-bottom: 2px solid transparent;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+.sr-tab:hover { color: var(--ink); }
+.sr-tab.is-active { color: var(--ink); border-bottom-color: var(--red); }
+
+/* 二级标签：ATP / WTA */
+.sr-subtabs {
+  display: flex; gap: 6px; margin-bottom: 18px;
+}
+.sr-subtab {
+  border: 1px solid var(--line); background: transparent; cursor: pointer;
+  padding: 6px 14px; font-family: inherit; font-size: 10.5px;
+  letter-spacing: 0.14em; color: var(--ink-2);
+  transition: border-color 0.18s ease, background 0.18s ease, color 0.18s ease;
+}
+.sr-subtab:hover { border-color: var(--ink); }
+.sr-subtab.is-active { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+
+/* 主体 */
+.sr-main { max-width: 1120px; margin: 0 auto; padding: 26px 28px 84px; }
+
+.sr-head {
+  display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+  padding-bottom: 12px; border-bottom: 1px solid var(--ink);
+}
+.sr-title { margin: 0; font-family: var(--serif); font-size: 26px; font-weight: 600; letter-spacing: 0.04em; }
+.sr-sub { font-size: 11.5px; letter-spacing: 0.1em; color: var(--ink-3); }
+.sr-count { margin-left: auto; font-size: 10.5px; letter-spacing: 0.1em; color: var(--ink-4); }
+
+/* 榜单表格 */
+.sr-table-wrap { overflow-x: auto; }
+.sr-table { width: 100%; border-collapse: collapse; margin-top: 2px; }
+.sr-table thead th {
+  padding: 10px 8px; text-align: left; font-weight: 400;
+  font-size: 10px; letter-spacing: 0.16em; color: var(--ink-3);
+  border-bottom: 1px solid var(--line);
+}
+.sr-table tbody td {
+  padding: 13px 8px; border-bottom: 1px solid var(--line-soft);
+  font-size: 13.5px; vertical-align: baseline;
+}
+.sr-table tbody tr:hover { background: var(--paper-2); }
+.sr-rank { width: 58px; font-family: var(--serif); font-size: 15px; color: var(--red); font-variant-numeric: tabular-nums; }
+.sr-table thead .sr-rank { color: var(--ink-3); font-size: 10px; }
+.sr-player { font-size: 14px; }
+.sr-name { color: var(--ink); }
+.sr-name-en { display: block; font-size: 10.5px; color: var(--ink-4); letter-spacing: 0.02em; }
+.sr-inline-country { display: none; }
+.sr-country { width: 170px; color: var(--ink-2); font-size: 12.5px; }
+.sr-code { margin-left: 8px; font-size: 9.5px; letter-spacing: 0.1em; color: var(--ink-4); }
+.sr-points { width: 110px; text-align: right; font-variant-numeric: tabular-nums; color: var(--ink); font-size: 13px; }
+.sr-table thead .sr-points { text-align: right; }
+
+/* 来源说明 */
+.sr-src { margin: 18px 0 0; font-size: 11px; color: var(--ink-3); letter-spacing: 0.02em; }
+.sr-src a { color: var(--green); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+.sr-src a:hover { color: var(--red); }
+.sr-src-note { display: block; margin-top: 6px; color: var(--ink-4); font-size: 10.5px; line-height: 1.7; }
+
+/* 待接入 */
+.sr-pending {
+  margin-top: 20px; padding: 34px 28px;
+  border: 1px dashed var(--line); background: var(--paper-2);
+}
+.sr-pending-title { margin: 0 0 12px; font-family: var(--serif); font-size: 20px; font-weight: 600; letter-spacing: 0.04em; }
+.sr-pending-note { margin: 0 0 14px; font-size: 12.5px; line-height: 1.9; color: var(--ink-2); max-width: 40em; }
+.sr-pending-src { margin: 0; font-size: 11px; color: var(--ink-3); }
+.sr-pending-src a { color: var(--green); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+.sr-pending-src a:hover { color: var(--red); }
+.sr-missing { margin: 24px 0; font-size: 13px; color: var(--ink-3); }
+
+@media (max-width: 720px) {
+  .sr-meta-inner { padding: 11px 20px; }
+  .sr-tabs { padding: 20px 20px 0; }
+  .sr-tab { padding: 9px 16px 11px; font-size: 17px; }
+  .sr-main { padding: 20px 20px 60px; }
+  .sr-title { font-size: 22px; }
+  .sr-table tbody td { padding: 11px 5px; font-size: 12.5px; }
+  .sr-table { table-layout: fixed; }
+  .sr-table thead th { padding: 9px 5px; font-size: 9.5px; letter-spacing: 0.08em; white-space: nowrap; }
+  /* 窄屏：国家列整列收起，改在球员名下显示，把宽度让给积分 */
+  .sr-country { display: none; }
+  .sr-inline-country { display: block; margin-top: 2px; font-size: 10.5px; color: var(--ink-3); letter-spacing: 0.02em; }
+  .sr-points { width: 74px; font-size: 12px; }
+  .sr-rank { width: 46px; font-size: 14px; }
+  .sr-pending { padding: 26px 20px; }
+}

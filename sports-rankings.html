@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>体育排名 · 斯诺克与网球</title>
+<meta name="description" content="斯诺克世界排名与网球 ATP / WTA 单打排名，标注数据更新日期，附官方来源。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/sports-rankings.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="bookmarks.html">← 我的收藏</a>
+  <p class="kicker">Sports · 榜单</p>
+  <h1>体育排名</h1>
+  <p class="lede">
+    斯诺克世界排名与网球单打排名，一页对照。<br>
+    <span>标日期、附官方来源；抓不到的数据宁可留空，也不填旧数。</span>
+  </p>
+  <div class="seal" aria-hidden="true">榜</div>
+</header>
+
+<div class="sr-meta">
+  <div class="sr-meta-inner">
+    <span class="sr-updated" id="sr-updated"></span>
+    <span class="sr-meta-note">排名每周更新；本页显示的是最近一次成功抓取的快照。</span>
+  </div>
+</div>
+
+<nav class="sr-tabs" id="sr-tabs" role="tablist" aria-label="选择榜单"></nav>
+
+<main class="sr-main">
+  <div class="sr-subtabs" id="sr-subtabs" role="tablist" aria-label="选择巡回赛" hidden></div>
+  <section class="sr-panel" id="sr-panel" aria-live="polite"></section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>体育排名 · 数据来自各官方榜单</span>
+    <span>仅供个人查阅</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+  </div>
+</footer>
+
+<script src="sports-rankings-data.js"></script>
+<script src="assets/sports-rankings.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>
