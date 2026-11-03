@@ -1,0 +1,242 @@
+{
+  "_说明": "中文名映射。新球员没有译名时，抓取脚本会回落到外文原名，并在运行日志里列出来；补名字就加在 zh 里。",
+  "zh": {
+    "Zhao Xintong": "赵心童",
+    "Wu Yize": "吴宜泽",
+    "Neil Robertson": "尼尔·罗伯逊",
+    "Mark Selby": "马克·塞尔比",
+    "Judd Trump": "贾德·特鲁姆普",
+    "John Higgins": "约翰·希金斯",
+    "Shaun Murphy": "肖恩·墨菲",
+    "Mark J Williams": "马克·威廉姆斯",
+    "Kyren Wilson": "凯伦·威尔逊",
+    "Barry Hawkins": "巴里·霍金斯",
+    "Chris Wakelin": "克里斯·沃克林",
+    "Mark Allen": "马克·艾伦",
+    "Ronnie O'Sullivan": "罗尼·奥沙利文",
+    "Xiao Guodong": "肖国栋",
+    "Ding Junhui": "丁俊晖",
+    "Ali Carter": "阿里·卡特",
+    "Stephen Hendry": "斯蒂芬·亨德利",
+    "Stuart Bingham": "斯图尔特·宾汉姆",
+    "Marco Fu": "傅家俊",
+    "Stephen Maguire": "斯蒂芬·马奎尔",
+    "Ryan Day": "瑞恩·戴",
+    "Thepchaiya Un-Nooh": "塔猜亚·乌诺",
+    "Gary Wilson": "加里·威尔逊",
+    "Tom Ford": "汤姆·福德",
+    "Zhang Anda": "张安达",
+    "Steve Davis": "史蒂夫·戴维斯",
+    "Jimmy White": "吉米·怀特",
+    "Peter Ebdon": "彼得·艾伯顿",
+    "John Parrott": "约翰·帕罗特",
+    "Allister Carter": "阿里·卡特",
+    "Alexander Zverev": "亚历山大·兹维列夫",
+    "Jannik Sinner": "扬尼克·辛纳",
+    "Carlos Alcaraz": "卡洛斯·阿尔卡拉斯",
+    "Ben Shelton": "本·谢尔顿",
+    "Daniil Medvedev": "丹尼尔·梅德韦杰夫",
+    "Flavio Cobolli": "弗拉维奥·科博利",
+    "Arthur Fils": "阿蒂尔·菲斯",
+    "Frances Tiafoe": "弗朗西斯·蒂亚福",
+    "Alex De Minaur": "亚历克斯·德米纳尔",
+    "Rafael Jodar": "拉斐尔·霍达尔",
+    "Elena Rybakina": "莱巴金娜",
+    "Aryna Sabalenka": "萨巴伦卡",
+    "Mirra Andreeva": "安德烈耶娃",
+    "Coco Gauff": "高芙",
+    "Jessica Pegula": "佩古拉",
+    "Elina Svitolina": "斯维托丽娜",
+    "Karolina Muchova": "穆霍娃",
+    "Linda Noskova": "诺斯科娃",
+    "Iga Swiatek": "斯瓦泰克",
+    "Marta Kostyuk": "科斯秋克",
+    "Yunchaokete Bu": "布云朝克特",
+    "Wu Yibing": "吴易昺",
+    "Zhang Zhizhen": "张之臻",
+    "Shang Juncheng": "商竣程",
+    "Zhou Yi": "周意",
+    "Sun Fajing": "孙发京",
+    "Cui Jie": "崔杰",
+    "Te Rigele": "特日格乐",
+    "Zhang Tianhui": "张天汇",
+    "Liu Hanyi": "刘汉屹",
+    "Zeng Yaojie": "曾耀杰",
+    "Meng Fanming": "孟凡明",
+    "Mo Ye Cong": "莫业聪",
+    "Xiao Linang": "肖霖昂",
+    "Qinwen Zheng": "郑钦文",
+    "Zheng Qinwen": "郑钦文",
+    "Xinyu Wang": "王欣瑜",
+    "Wang Xinyu": "王欣瑜",
+    "Xiyu Wang": "王曦雨",
+    "Wang Xiyu": "王曦雨",
+    "Shuai Zhang": "张帅",
+    "Zhang Shuai": "张帅",
+    "Yuan Yue": "袁悦",
+    "Yexin Ma": "马烨欣",
+    "Ma Yexin": "马烨欣",
+    "Hanyu Guo": "郭涵煜",
+    "Guo Hanyu": "郭涵煜",
+    "Xiaodi You": "尤晓迪",
+    "You Xiaodi": "尤晓迪",
+    "Zhuoxuan Bai": "白卓璇",
+    "Bai Zhuoxuan": "白卓璇",
+    "Xinyu Gao": "高馨妤",
+    "Gao Xinyu": "高馨妤",
+    "Lin Zhu": "朱琳",
+    "Zhu Lin": "朱琳",
+    "Fangran Tian": "田方然",
+    "Tian Fangran": "田方然",
+    "Fan Zhengyi": "范争一",
+    "Lei Peifan": "雷佩凡",
+    "Liang Wenbo": "梁文博",
+    "Yan Bingtao": "颜丙涛"
+  },
+  "cnPlayers": [
+    "Bai Zhuoxuan",
+    "Bu Yunchaokete",
+    "Ding Junhui",
+    "Fan Zhengyi",
+    "Gao Xinyu",
+    "Guo Hanyu",
+    "Lei Peifan",
+    "Liang Wenbo",
+    "Ma Yexin",
+    "Marco Fu",
+    "Shang Juncheng",
+    "Tian Fangran",
+    "Wang Xinyu",
+    "Wang Xiyu",
+    "Wu Yibing",
+    "Wu Yize",
+    "Xiao Guodong",
+    "Yan Bingtao",
+    "You Xiaodi",
+    "Yuan Yue",
+    "Zhang Anda",
+    "Zhang Shuai",
+    "Zhang Zhizhen",
+    "Zhao Xintong",
+    "Zheng Qinwen",
+    "Zhu Lin"
+  ],
+  "wikiTitles": {
+    "Ding Junhui": "Ding_Junhui",
+    "Zhao Xintong": "Zhao_Xintong",
+    "Wu Yize": "Wu_Yize",
+    "Xiao Guodong": "Xiao_Guodong",
+    "Fan Zhengyi": "Fan_Zhengyi",
+    "Lei Peifan": "Lei_Peifan",
+    "Liang Wenbo": "Liang_Wenbo",
+    "Yan Bingtao": "Yan_Bingtao",
+    "Zhang Anda": "Zhang_Anda",
+    "Marco Fu": "Marco_Fu"
+  },
+  "career": [
+    {
+      "zh": "李娜",
+      "wiki": "Li_Na"
+    },
+    {
+      "zh": "张帅",
+      "wiki": "Zhang_Shuai"
+    },
+    {
+      "zh": "郑钦文",
+      "wiki": "Zheng_Qinwen"
+    },
+    {
+      "zh": "彭帅",
+      "wiki": "Peng_Shuai"
+    },
+    {
+      "zh": "郑洁",
+      "wiki": "Zheng_Jie"
+    },
+    {
+      "zh": "王欣瑜",
+      "wiki": "Wang_Xinyu"
+    },
+    {
+      "zh": "王蔷",
+      "wiki": "Wang_Qiang_(tennis)"
+    },
+    {
+      "zh": "郑赛赛",
+      "wiki": "Zheng_Saisai"
+    },
+    {
+      "zh": "朱琳",
+      "wiki": "Zhu_Lin_(tennis)"
+    },
+    {
+      "zh": "徐一璠",
+      "wiki": "Xu_Yifan"
+    },
+    {
+      "zh": "张之臻",
+      "wiki": "Zhang_Zhizhen"
+    },
+    {
+      "zh": "王雅繁",
+      "wiki": "Wang_Yafan"
+    },
+    {
+      "zh": "王曦雨",
+      "wiki": "Wang_Xiyu"
+    },
+    {
+      "zh": "袁悦",
+      "wiki": "Yuan_Yue"
+    },
+    {
+      "zh": "商竣程",
+      "wiki": "Shang_Juncheng"
+    },
+    {
+      "zh": "吴易昺",
+      "wiki": "Wu_Yibing"
+    },
+    {
+      "zh": "段莹莹",
+      "wiki": "Duan_Yingying"
+    },
+    {
+      "zh": "布云朝克特",
+      "wiki": "Bu_Yunchaokete"
+    },
+    {
+      "zh": "张择",
+      "wiki": "Zhang_Ze"
+    },
+    {
+      "zh": "孙甜甜",
+      "wiki": "Sun_Tiantian"
+    },
+    {
+      "zh": "吴迪",
+      "wiki": "Wu_Di_(tennis)"
+    }
+  ],
+  "season": {
+    "ZHENG, QINWEN": "郑钦文",
+    "ZHANG, SHUAI": "张帅",
+    "WANG, XINYU": "王欣瑜",
+    "GUO, HANYU": "郭涵煜",
+    "WANG, XIYU": "王曦雨",
+    "JIANG, XINYU": "蒋欣玗",
+    "XU, YIFAN": "徐一璠",
+    "YUAN, YUE": "袁悦",
+    "ZHU, LIN": "朱琳",
+    "BAI, ZHUOXUAN": "白卓璇",
+    "MA, YEXIN": "马烨欣",
+    "JIANG, XINYU ": "蒋欣玗",
+    "WEI, SIJIA": "韦思佳",
+    "YOU, XIAODI": "尤晓迪",
+    "GAO, XINYU": "高馨妤",
+    "YANG, ZHAOXUAN": "杨钊煊",
+    "SHI, HAN": "Shi Han",
+    "TANG, QIANHUI": "Tang Qianhui"
+  }
+}

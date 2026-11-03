@@ -19,7 +19,7 @@
 
    fetchedAt 是本地抓取时间；榜单"截至"时点写在各自 section.note 里。 */
 window.SPORTS_RANKINGS = {
-  "fetchedAt": "2026-11-03T19:24:00+08:00",
+  "fetchedAt": "2026-11-03T11:41:35.105Z",
   "panels": {
     "snooker": {
       "id": "snooker",
@@ -31,9 +31,6 @@ window.SPORTS_RANKINGS = {
           "title": "世界排名",
           "sub": "2026/27 赛季 · 前 16",
           "wide": false,
-          "source": "https://www.snooker.org/res/index.asp?template=31&season=2026",
-          "sourceLabel": "snooker.org · 世界排名",
-          "note": "官方积分表，截至北爱尔兰公开赛后。",
           "columns": [
             {
               "k": "rank",
@@ -56,6 +53,9 @@ window.SPORTS_RANKINGS = {
               "c": "points"
             }
           ],
+          "source": "https://www.snooker.org/res/index.asp?template=31&season=2026",
+          "sourceLabel": "snooker.org · 世界排名",
+          "note": "官方积分表，截至北爱尔兰公开赛后。",
           "rows": [
             {
               "rank": 1,
@@ -176,9 +176,6 @@ window.SPORTS_RANKINGS = {
           "title": "历史单杆过百",
           "sub": "累计杆数 · 前 16",
           "wide": false,
-          "source": "https://snookerinfo.co.uk/",
-          "sourceLabel": "SnookerInfo · 100+ Centuries",
-          "note": "收录职业生涯过百数达 100 杆以上的球员。",
           "columns": [
             {
               "k": "rank",
@@ -196,6 +193,9 @@ window.SPORTS_RANKINGS = {
               "c": "points"
             }
           ],
+          "source": "https://snookerinfo.co.uk/",
+          "sourceLabel": "SnookerInfo · 100+ Centuries",
+          "note": "收录职业生涯过百数达 100 杆以上的球员。",
           "rows": [
             {
               "rank": 1,
@@ -300,9 +300,6 @@ window.SPORTS_RANKINGS = {
           "title": "147 满分杆",
           "sub": "累计杆数 · 前 16",
           "wide": false,
-          "source": "https://snookerinfo.co.uk/",
-          "sourceLabel": "SnookerInfo · 过百榜 147 列",
-          "note": "取自同一张过百榜的 147 列，因此只覆盖过百 100 杆以上的球员；过百不足 100 杆的球员不在其内。",
           "columns": [
             {
               "k": "rank",
@@ -320,6 +317,9 @@ window.SPORTS_RANKINGS = {
               "c": "points"
             }
           ],
+          "source": "https://snookerinfo.co.uk/",
+          "sourceLabel": "SnookerInfo · 过百榜 147 列",
+          "note": "取自同一张过百榜的 147 列，因此只覆盖过百 100 杆以上的球员；过百不足 100 杆的球员不在其内。",
           "rows": [
             {
               "rank": 1,
@@ -424,9 +424,6 @@ window.SPORTS_RANKINGS = {
           "title": "排名赛冠军 · 世界",
           "sub": "历史累计 · 前 16",
           "wide": false,
-          "source": "https://snookerinfo.co.uk/ranking-winners/",
-          "sourceLabel": "SnookerInfo · Ranking Winners",
-          "note": "按排名赛冠军总数排序，含现役与退役球员。",
           "columns": [
             {
               "k": "rank",
@@ -449,118 +446,121 @@ window.SPORTS_RANKINGS = {
               "c": "points"
             }
           ],
+          "source": "https://snookerinfo.co.uk/ranking-winners/",
+          "sourceLabel": "SnookerInfo · Ranking Winners",
+          "note": "按排名赛冠军总数排序，含现役与退役球员。",
           "rows": [
             {
               "rank": 1,
               "name": "罗尼·奥沙利文",
               "en": "Ronnie O'Sullivan",
               "span": "1993-2024",
-              "wins": "41"
+              "wins": 41
             },
             {
               "rank": 2,
               "name": "斯蒂芬·亨德利",
               "en": "Stephen Hendry",
               "span": "1987-2005",
-              "wins": "36"
+              "wins": 36
             },
             {
               "rank": 3,
               "name": "约翰·希金斯",
               "en": "John Higgins",
               "span": "1994-2025",
-              "wins": "33"
+              "wins": 33
             },
             {
               "rank": 4,
               "name": "贾德·特鲁姆普",
               "en": "Judd Trump",
               "span": "2011-2026",
-              "wins": "31"
+              "wins": 31
             },
             {
               "rank": 5,
               "name": "史蒂夫·戴维斯",
               "en": "Steve Davis",
               "span": "1981-1995",
-              "wins": "28"
+              "wins": 28
             },
             {
               "rank": 6,
               "name": "马克·威廉姆斯",
               "en": "Mark J Williams",
               "span": "1996-2025",
-              "wins": "27"
+              "wins": 27
             },
             {
               "rank": 7,
               "name": "尼尔·罗伯逊",
               "en": "Neil Robertson",
               "span": "2006-2025",
-              "wins": "26"
+              "wins": 26
             },
             {
               "rank": 8,
               "name": "马克·塞尔比",
               "en": "Mark Selby",
               "span": "2008-2026",
-              "wins": "26"
+              "wins": 26
             },
             {
               "rank": 9,
               "name": "丁俊晖",
               "en": "Ding Junhui",
               "span": "2005-2024",
-              "wins": "15"
+              "wins": 15
             },
             {
               "rank": 10,
               "name": "肖恩·墨菲",
               "en": "Shaun Murphy",
               "span": "2005-2025",
-              "wins": "13"
+              "wins": 13
             },
             {
               "rank": 11,
               "name": "马克·艾伦",
               "en": "Mark Allen",
               "span": "2012-2025",
-              "wins": "12"
+              "wins": 12
             },
             {
               "rank": 12,
               "name": "凯伦·威尔逊",
               "en": "Kyren Wilson",
               "span": "2015-2026",
-              "wins": "11"
+              "wins": 11
             },
             {
               "rank": 13,
               "name": "吉米·怀特",
               "en": "Jimmy White",
               "span": "1986-2004",
-              "wins": "10"
+              "wins": 10
             },
             {
               "rank": 14,
               "name": "彼得·艾伯顿",
               "en": "Peter Ebdon",
               "span": "1993-2012",
-              "wins": "9"
+              "wins": 9
             },
             {
               "rank": 15,
               "name": "约翰·帕罗特",
               "en": "John Parrott",
               "span": "1989-1996",
-              "wins": "9"
+              "wins": 9
             },
             {
               "rank": 16,
               "name": "阿里·卡特",
               "en": "Allister Carter",
               "span": "2009-2026",
-              "wins": "7"
+              "wins": 7
             }
           ]
         },
@@ -569,9 +569,6 @@ window.SPORTS_RANKINGS = {
           "title": "中国球员 · 排名赛冠军",
           "sub": "全部球员 · 点名字看明细",
           "wide": true,
-          "source": "https://snookerinfo.co.uk/ranking-winners/",
-          "sourceLabel": "SnookerInfo · Ranking Winners",
-          "note": "合计 34 个排名赛冠军。点击球员名可展开其全部冠军（年份 + 赛事）。",
           "columns": [
             {
               "k": "rank",
@@ -594,13 +591,15 @@ window.SPORTS_RANKINGS = {
               "c": "points"
             }
           ],
+          "source": "https://snookerinfo.co.uk/ranking-winners/",
+          "sourceLabel": "SnookerInfo · Ranking Winners",
+          "note": "合计 34 个排名赛冠军。点击球员名可展开其全部冠军（年份 + 赛事）。",
           "rows": [
             {
               "rank": 1,
               "name": "丁俊晖",
               "span": "2005-2024",
               "wins": 15,
-              "region": "",
               "titles": [
                 {
                   "y": "2005",
@@ -669,7 +668,6 @@ window.SPORTS_RANKINGS = {
               "name": "赵心童",
               "span": "2021-2026",
               "wins": 6,
-              "region": "",
               "titles": [
                 {
                   "y": "2021",
@@ -700,9 +698,9 @@ window.SPORTS_RANKINGS = {
             {
               "rank": 3,
               "name": "傅家俊",
+              "region": "中国香港",
               "span": "2007-2016",
               "wins": 3,
-              "region": "中国香港",
               "titles": [
                 {
                   "y": "2007",
@@ -723,7 +721,6 @@ window.SPORTS_RANKINGS = {
               "name": "吴宜泽",
               "span": "2025-2026",
               "wins": 3,
-              "region": "",
               "titles": [
                 {
                   "y": "2025",
@@ -744,7 +741,6 @@ window.SPORTS_RANKINGS = {
               "name": "肖国栋",
               "span": "2024-2025",
               "wins": 2,
-              "region": "",
               "titles": [
                 {
                   "y": "2024",
@@ -761,7 +757,6 @@ window.SPORTS_RANKINGS = {
               "name": "范争一",
               "span": "2022",
               "wins": 1,
-              "region": "",
               "titles": [
                 {
                   "y": "2022",
@@ -774,7 +769,6 @@ window.SPORTS_RANKINGS = {
               "name": "雷佩凡",
               "span": "2024",
               "wins": 1,
-              "region": "",
               "titles": [
                 {
                   "y": "2024",
@@ -787,7 +781,6 @@ window.SPORTS_RANKINGS = {
               "name": "梁文博",
               "span": "2016",
               "wins": 1,
-              "region": "",
               "titles": [
                 {
                   "y": "2016",
@@ -800,7 +793,6 @@ window.SPORTS_RANKINGS = {
               "name": "颜丙涛",
               "span": "2019",
               "wins": 1,
-              "region": "",
               "titles": [
                 {
                   "y": "2019",
@@ -813,7 +805,6 @@ window.SPORTS_RANKINGS = {
               "name": "张安达",
               "span": "2023",
               "wins": 1,
-              "region": "",
               "titles": [
                 {
                   "y": "2023",
@@ -835,9 +826,6 @@ window.SPORTS_RANKINGS = {
           "title": "ATP 单打",
           "sub": "前 10",
           "wide": false,
-          "source": "https://www.tennisexplorer.com/ranking/atp-men/",
-          "sourceLabel": "tennisexplorer · ATP 排名",
-          "note": "ATP 官网对抓取返回 403，这里用 tennisexplorer 的排名镜像，积分口径与 ATP 一致。",
           "columns": [
             {
               "k": "rank",
@@ -860,6 +848,9 @@ window.SPORTS_RANKINGS = {
               "c": "points"
             }
           ],
+          "source": "https://www.tennisexplorer.com/ranking/atp-men/",
+          "sourceLabel": "tennisexplorer · ATP 排名",
+          "note": "ATP 官网对抓取返回 403，这里用 tennisexplorer 的排名镜像，积分口径与 ATP 一致。",
           "rows": [
             {
               "rank": 1,
@@ -938,9 +929,6 @@ window.SPORTS_RANKINGS = {
           "title": "WTA 单打",
           "sub": "前 10",
           "wide": false,
-          "source": "https://www.wtatennis.com/rankings/singles",
-          "sourceLabel": "WTA 官方单打排名",
-          "note": "直接取自 WTA 官网榜单。",
           "columns": [
             {
               "k": "rank",
@@ -963,72 +951,75 @@ window.SPORTS_RANKINGS = {
               "c": "points"
             }
           ],
+          "source": "https://www.wtatennis.com/rankings/singles",
+          "sourceLabel": "WTA 官方单打排名",
+          "note": "直接取自 WTA 官网榜单。",
           "rows": [
             {
-              "rank": "1",
+              "rank": 1,
               "name": "莱巴金娜",
               "en": "Elena Rybakina",
               "country": "哈萨克斯坦",
               "points": "8,099"
             },
             {
-              "rank": "2",
+              "rank": 2,
               "name": "萨巴伦卡",
               "en": "Aryna Sabalenka",
               "country": "白俄罗斯",
               "points": "6,485"
             },
             {
-              "rank": "3",
+              "rank": 3,
               "name": "安德烈耶娃",
               "en": "Mirra Andreeva",
               "country": "俄罗斯",
               "points": "6,306"
             },
             {
-              "rank": "4",
+              "rank": 4,
               "name": "高芙",
               "en": "Coco Gauff",
               "country": "美国",
               "points": "5,763"
             },
             {
-              "rank": "5",
+              "rank": 5,
               "name": "佩古拉",
               "en": "Jessica Pegula",
               "country": "美国",
               "points": "5,760"
             },
             {
-              "rank": "6",
+              "rank": 6,
               "name": "斯维托丽娜",
               "en": "Elina Svitolina",
               "country": "乌克兰",
               "points": "5,121"
             },
             {
-              "rank": "7",
+              "rank": 7,
               "name": "穆霍娃",
               "en": "Karolina Muchova",
               "country": "捷克",
               "points": "4,665"
             },
             {
-              "rank": "8",
+              "rank": 8,
               "name": "诺斯科娃",
               "en": "Linda Noskova",
               "country": "捷克",
               "points": "4,343"
             },
             {
-              "rank": "9",
+              "rank": 9,
               "name": "斯瓦泰克",
               "en": "Iga Swiatek",
               "country": "波兰",
               "points": "4,188"
             },
             {
-              "rank": "10",
+              "rank": 10,
               "name": "科斯秋克",
               "en": "Marta Kostyuk",
               "country": "乌克兰",
@@ -1041,9 +1032,6 @@ window.SPORTS_RANKINGS = {
           "title": "中国男子 · ATP 排名",
           "sub": "世界排名前 10 位中国球员",
           "wide": false,
-          "source": "https://www.tennisexplorer.com/ranking/atp-men/?country=china",
-          "sourceLabel": "tennisexplorer · ATP 中国球员",
-          "note": "按世界排名取中国球员前 10 位。ATP 官网对抓取返回 403，此处用 tennisexplorer 镜像。",
           "columns": [
             {
               "k": "rank",
@@ -1061,6 +1049,9 @@ window.SPORTS_RANKINGS = {
               "c": "points"
             }
           ],
+          "source": "https://www.tennisexplorer.com/ranking/atp-men/?country=china",
+          "sourceLabel": "tennisexplorer · ATP 中国球员",
+          "note": "按世界排名取中国球员前 10 位。ATP 官网对抓取返回 403，此处用 tennisexplorer 镜像。",
           "rows": [
             {
               "rank": 93,
@@ -1119,9 +1110,6 @@ window.SPORTS_RANKINGS = {
           "title": "中国女子 · WTA 排名",
           "sub": "世界排名前 10 位中国球员",
           "wide": false,
-          "source": "https://www.tennisexplorer.com/ranking/wta-women/?country=china",
-          "sourceLabel": "tennisexplorer · WTA 中国球员",
-          "note": "按世界排名取中国球员前 10 位。部分低排名球员暂无可靠中文译名，暂用拼音。",
           "columns": [
             {
               "k": "rank",
@@ -1139,16 +1127,19 @@ window.SPORTS_RANKINGS = {
               "c": "points"
             }
           ],
+          "source": "https://www.tennisexplorer.com/ranking/wta-women/?country=china",
+          "sourceLabel": "tennisexplorer · WTA 中国球员",
+          "note": "按世界排名取中国球员前 10 位。部分低排名球员暂无可靠中文译名，暂用拼音。",
           "rows": [
             {
               "rank": 21,
               "name": "郑钦文",
-              "points": "2017"
+              "points": "2,017"
             },
             {
               "rank": 38,
               "name": "王欣瑜",
-              "points": "1288"
+              "points": "1,288"
             },
             {
               "rank": 80,
@@ -1197,9 +1188,6 @@ window.SPORTS_RANKINGS = {
           "title": "中国球员 · 生涯奖金",
           "sub": "男女合并 · 前 10",
           "wide": false,
-          "source": "https://en.wikipedia.org/wiki/Li_Na",
-          "sourceLabel": "维基百科各球员页信息框",
-          "note": "生涯总奖金，含现役与退役球员。数字由维基编辑手动维护，可能略滞后于官方；晏紫、李婷无维基条目，未收入。",
           "columns": [
             {
               "k": "rank",
@@ -1217,6 +1205,9 @@ window.SPORTS_RANKINGS = {
               "c": "points"
             }
           ],
+          "source": "https://en.wikipedia.org/wiki/Li_Na",
+          "sourceLabel": "维基百科各球员页信息框",
+          "note": "生涯总奖金，含现役与退役球员。数字由维基编辑手动维护，可能略滞后于官方；晏紫、李婷无维基条目，未收入。",
           "rows": [
             {
               "rank": 1,
@@ -1275,9 +1266,6 @@ window.SPORTS_RANKINGS = {
           "title": "中国球员 · 赛季奖金",
           "sub": "女子 · 2026 · 前 10",
           "wide": false,
-          "source": "https://wtafiles.wtatennis.com/pdf/rankings/All_YTD_Prize_Money.pdf",
-          "sourceLabel": "WTA · All YTD Prize Money",
-          "note": "截至 2026-11-02 的赛季累计奖金，单打+双打+混双合计。男子部分因 ATP 官网封锁、无可用来源，本表只列女子。部分球员暂无可靠中文译名，暂用拼音。",
           "columns": [
             {
               "k": "rank",
@@ -1295,6 +1283,9 @@ window.SPORTS_RANKINGS = {
               "c": "points"
             }
           ],
+          "source": "https://wtafiles.wtatennis.com/pdf/rankings/All_YTD_Prize_Money.pdf",
+          "sourceLabel": "WTA · All YTD Prize Money",
+          "note": "赛季累计奖金，单打+双打+混双合计。男子部分因 ATP 官网封锁、无可用来源，本表只列女子。部分球员暂无可靠中文译名，暂用拼音。",
           "rows": [
             {
               "rank": 1,

@@ -106,6 +106,7 @@
       '<div class="sr-head">' +
         '<h2 class="sr-title">' + esc(s.title) + "</h2>" +
         (s.sub ? '<span class="sr-sub">' + esc(s.sub) + "</span>" : "") +
+        (s.stale ? '<span class="sr-stale">未更新</span>' : "") +
         '<span class="sr-count">' + s.rows.length + " 条</span>" +
       "</div>" +
       '<div class="sr-table-wrap"><table class="sr-table">' +

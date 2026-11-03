@@ -48,6 +48,10 @@
 }
 .sr-title { margin: 0; font-family: var(--serif); font-size: 20px; font-weight: 600; letter-spacing: 0.04em; }
 .sr-sub { font-size: 10.5px; letter-spacing: 0.08em; color: var(--ink-3); }
+.sr-stale {
+  font-size: 9.5px; letter-spacing: 0.08em; color: var(--red);
+  border: 1px solid currentColor; padding: 1px 6px; white-space: nowrap;
+}
 .sr-count { margin-left: auto; font-size: 10px; letter-spacing: 0.08em; color: var(--ink-4); }
 
 /* 榜单表格 */

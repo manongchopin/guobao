@@ -1,0 +1,55 @@
+name: Update Sports Rankings
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"   # 北京时间 每周一 08:00
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pypdf
+        run: pip install --quiet pypdf
+
+      # 下载交给 curl，Python 只解析本地文件：各跑各的 TLS 链，互不影响
+      - name: Download WTA prize money PDF
+        continue-on-error: true
+        run: |
+          curl -sS -L -m 90 \
+            -A "Mozilla/5.0 (compatible; guobao-site/1.0; +https://manongchopin.github.io/guobao/)" \
+            -o /tmp/wta-prize.pdf \
+            "https://wtafiles.wtatennis.com/pdf/rankings/All_YTD_Prize_Money.pdf"
+          ls -la /tmp/wta-prize.pdf
+
+      - name: Parse WTA prize money
+        continue-on-error: true
+        run: python scripts/fetch-wta-prize.py /tmp/wta-prize.pdf
+
+      - name: Fetch and merge rankings
+        run: node scripts/update-sports-rankings.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- sports-rankings-data.js; then
+            echo "No change"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sports-rankings-data.js
+          git commit -m "Update sports rankings"
+          git push
