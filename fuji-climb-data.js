@@ -137,6 +137,22 @@ window.FUJI_CLIMB = {
     {
       "name": "参考记录：吉田口烧印 19 处（2018 年价格与时间，非官方）",
       "url": "https://www.yamareco.com/modules/yamareco/print.php?did=1538740"
+    },
+    {
+      "name": "2025 烧印费用记录（参考，非官方）",
+      "url": "https://happygoout.com/%e5%af%8c%e5%a3%ab%e5%b1%b1%e7%87%92%e5%8d%b0%e7%b8%bd%e8%8a%b1%e8%b2%bb/"
+    },
+    {
+      "name": "本八合目トモエ館：官网",
+      "url": "https://tomoekan.com/8tomoekan/"
+    },
+    {
+      "name": "本八合目トモエ館：预约与空房",
+      "url": "https://tomoekan.com/calendar/"
+    },
+    {
+      "name": "本八合目トモエ館：价格与取消",
+      "url": "https://tomoekan.com/price/"
     }
   ],
   "stampSummary": {
