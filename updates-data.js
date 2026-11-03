@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-03",
     type: "计划",
+    title: "旅行计划新增马克思伦敦漫步",
+    note: "v0.1 · 候选点 · 待确认",
+    href: "marx-london.html"
+  },
+  {
+    date: "2026-11-03",
+    type: "计划",
     title: "旅行计划新增法国自驾骨架",
     note: "v0.1 · 路线/主题/季节待定",
     href: "france-roadtrip.html"
