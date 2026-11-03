@@ -97,10 +97,10 @@ window.PLAN_VERSIONS = {
     },
     "kumano-kodo": {
       "title": "熊野古道",
-      "version": "0.4",
+      "version": "0.5",
       "status": "路线比较",
       "date": "2026-11-03",
-      "note": "41 章、前 3 方案、双照片、Dual Pilgrim、世界遗产拆分",
+      "note": "41 章、前 3 方案、双照片、Dual Pilgrim、世界遗产拆分；坐标复核到剩 5 个 ≈",
       "history": [
         {
           "v": "0.1",
@@ -121,6 +121,11 @@ window.PLAN_VERSIONS = {
           "v": "0.4",
           "date": "2026-11-03",
           "note": "世界遗产总论拆到 1142 专题页"
+        },
+        {
+          "v": "0.5",
+          "date": "2026-11-03",
+          "note": "复核 6 个近似点：市野々改精确，其余保留 5 个 ≈"
         }
       ]
     },

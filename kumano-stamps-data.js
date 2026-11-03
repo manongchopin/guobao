@@ -1,60 +1,431 @@
-/* 熊野古道中边路 41 处押印点
- * 编号按和歌山県官方「熊野古道中辺路押印帳」1–41。
- * 坐标为地图用近似值；现场以官方地图、路标和押印台为准。
- */
 window.KUMANO_STAMPS = {
   "updated": "2026-11-03",
   "total": 41,
   "source": "和歌山県公式観光サイト「熊野古道中辺路押印帳」41 処一覧 / 田辺市熊野ツーリズムビューロー",
   "stages": [
-    { "id": "a", "no": "A", "name": "田边 · 泷尻之前", "days": "D1 上午", "range": "1–5", "note": "1–3 在泷尻王子之前，坐公共交通到泷尻的人最容易漏掉。" },
-    { "id": "b", "no": "B", "name": "高原 · 近露", "days": "D1–D2", "range": "6–11", "note": "石阶、村落和杉林；第一晚住高原或近露。" },
-    { "id": "c", "no": "C", "name": "近露 · 本宫", "days": "D2–D3", "range": "12–21", "note": "中边路最长的一段；发心门之后下行到本宫。" },
-    { "id": "d", "no": "D", "name": "本宫 · 新宫", "days": "D4", "range": "22–27", "note": "大斋原、汤峰、川舟中心、速玉大社、神仓、阿须贺。" },
-    { "id": "e", "no": "E", "name": "新宫 · 那智", "days": "D5", "range": "28–36", "note": "高野坂、小狗子峠、滨之宫、补陀洛山寺、大门坂、那智三社。" },
-    { "id": "f", "no": "F", "name": "那智 · 请川", "days": "D6", "range": "37–41", "note": "大云取越、小云取越方向；小口之后回请川，公交很少。" }
+    {
+      "id": "a",
+      "no": "A",
+      "name": "田边 · 泷尻之前",
+      "days": "D1 上午",
+      "range": "1–5",
+      "note": "1–3 在泷尻王子之前，坐公共交通到泷尻的人最容易漏掉。"
+    },
+    {
+      "id": "b",
+      "no": "B",
+      "name": "高原 · 近露",
+      "days": "D1–D2",
+      "range": "6–11",
+      "note": "石阶、村落和杉林；第一晚住高原或近露。"
+    },
+    {
+      "id": "c",
+      "no": "C",
+      "name": "近露 · 本宫",
+      "days": "D2–D3",
+      "range": "12–21",
+      "note": "中边路最长的一段；发心门之后下行到本宫。"
+    },
+    {
+      "id": "d",
+      "no": "D",
+      "name": "本宫 · 新宫",
+      "days": "D4",
+      "range": "22–27",
+      "note": "大斋原、汤峰、川舟中心、速玉大社、神仓、阿须贺。"
+    },
+    {
+      "id": "e",
+      "no": "E",
+      "name": "新宫 · 那智",
+      "days": "D5",
+      "range": "28–36",
+      "note": "高野坂、小狗子峠、滨之宫、补陀洛山寺、大门坂、那智三社。"
+    },
+    {
+      "id": "f",
+      "no": "F",
+      "name": "那智 · 请川",
+      "days": "D6",
+      "range": "37–41",
+      "note": "大云取越、小云取越方向；小口之后回请川，公交很少。"
+    }
   ],
   "points": [
-    {"no":1,"name":"稲葉根王子","en":"Inabane-oji","stage":"a","lat":33.71291,"lng":135.45407,"note":"泷尻之前的第 1 章；从田边方向另排交通。"},
-    {"no":2,"name":"北郡越","en":"Hokusogi-goe","stage":"a","lat":33.7544,"lng":135.4990,"note":"北郡集落上方；与 1 同属稲葉根—滝尻线，3 在另一条潮見峠越线上。","approx":true},
-    {"no":3,"name":"潮見峠越","en":"Shiomitoge-goe","stage":"a","lat":33.78289,"lng":135.48069,"note":"潮见峠；1–3 是“前三个章”的核心。"},
-    {"no":4,"name":"滝尻王子","en":"Takijiri-oji","stage":"a","lat":33.77553,"lng":135.50369,"note":"多数人的起点；押印帐第 4 号，不是第 1 号。"},
-    {"no":5,"name":"不寝王子","en":"Nezu-oji","stage":"a","lat":33.77695,"lng":135.50605,"note":"从泷尻上来约 10 分钟。"},
-    {"no":6,"name":"高原熊野神社","en":"Takahara Kumano-jinja","stage":"b","lat":33.79427,"lng":135.52933,"note":"高原村落；第一晚常住这里。"},
-    {"no":7,"name":"大門王子","en":"Daimon-oji","stage":"b","lat":33.79736,"lng":135.54705,"note":"古道石阶段。"},
-    {"no":8,"name":"十丈王子","en":"Jujo-oji","stage":"b","lat":33.80059,"lng":135.55968,"note":"重点王子。"},
-    {"no":9,"name":"大坂本王子","en":"Osakamoto-oji","stage":"b","lat":33.81440,"lng":135.58851,"note":"近露前的高点之一。"},
-    {"no":10,"name":"牛馬童子","en":"Gyuba-doji","stage":"b","lat":33.81096,"lng":135.60130,"note":"牛马童子像；不是王子社，但有章。"},
-    {"no":11,"name":"近露王子","en":"Chikatsuyu-oji","stage":"b","lat":33.81436,"lng":135.60572,"note":"近露村落；住宿和补给点。"},
-    {"no":12,"name":"継桜王子","en":"Tsugizakura-oji","stage":"c","lat":33.82850,"lng":135.63414,"note":"野中方向；秀衡樱就在附近。"},
-    {"no":13,"name":"秀衡桜","en":"Hidehira-zakura","stage":"c","lat":33.82858,"lng":135.63530,"note":"与继樱王子相邻，容易和别处的“秀衡樱”混淆。"},
-    {"no":14,"name":"蛇形地蔵","en":"Jagata Jizo","stage":"c","lat":33.84329,"lng":135.68774,"note":"地藏；山路转弯处。"},
-    {"no":15,"name":"湯川王子","en":"Yukawa-oji","stage":"c","lat":33.8500,"lng":135.7050,"note":"汤川；靠近发心门方向。","approx":true},
-    {"no":16,"name":"猪鼻王子","en":"Inohana-oji","stage":"c","lat":33.85721,"lng":135.72143,"note":"猪鼻王子；接近发心门。"},
-    {"no":17,"name":"発心門王子","en":"Hosshinmon-oji","stage":"c","lat":33.86175,"lng":135.72060,"note":"中边路名段；从这里下本宫。"},
-    {"no":18,"name":"水呑王子","en":"Mizunomi-oji","stage":"c","lat":33.85843,"lng":135.73698,"note":"水呑王子跡；OSM 节点核对。"},
-    {"no":19,"name":"伏拝王子","en":"Fushiogami-oji","stage":"c","lat":33.86020,"lng":135.75682,"note":"可远望本宫大社。"},
-    {"no":20,"name":"祓殿王子","en":"Haraido-oji","stage":"c","lat":33.84010,"lng":135.77331,"note":"祓殿王子社；OSM 节点核对，紧邻本宫大社。"},
-    {"no":21,"name":"熊野本宮大社","en":"Kumano Hongu Taisha","stage":"c","lat":33.84035,"lng":135.77363,"note":"熊野三山之一；本宫馆可买押印帐、查验证书。"},
-    {"no":22,"name":"旧社地大斎原","en":"Oyunohara","stage":"d","lat":33.83418,"lng":135.77401,"note":"日本最大鸟居；本宫大社旧社地。"},
-    {"no":23,"name":"湯峯王子","en":"Yunomine-oji","stage":"d","lat":33.82933,"lng":135.75808,"note":"汤峰温泉；壶汤所在。"},
-    {"no":24,"name":"川の古道（川舟センター）","en":"Kumano-gawa River Boat Center","stage":"d","lat":33.79051,"lng":135.89671,"note":"熊野川川舟中心；川之古道。"},
-    {"no":25,"name":"熊野速玉大社","en":"Kumano Hayatama Taisha","stage":"d","lat":33.73230,"lng":135.98368,"note":"熊野三山之一；新宫市区。"},
-    {"no":26,"name":"神倉神社","en":"Kamikura-jinja Shrine","stage":"d","lat":33.72425,"lng":135.98411,"note":"权现山；石阶很陡。"},
-    {"no":27,"name":"阿須賀神社","en":"Asuka-jinja Shrine","stage":"d","lat":33.72784,"lng":135.99745,"note":"新宫市区东侧。"},
-    {"no":28,"name":"高野坂","en":"Koya-zaka Slope","stage":"e","lat":33.70165,"lng":135.99145,"note":"新宫—那智方向的海岸古道。"},
-    {"no":29,"name":"小狗子峠","en":"Kokuji-toge Pass","stage":"e","lat":33.6570,"lng":135.9628,"note":"小狗子峠；位置按 GSI/官方图核对。"},
-    {"no":30,"name":"浜の宮王子","en":"Hamanomiya-oji","stage":"e","lat":33.6484,"lng":135.9403,"note":"滨之宫；补陀洛山寺前；GSI/官方图核对。"},
-    {"no":31,"name":"補陀洛山寺","en":"Fudarakusan-ji","stage":"e","lat":33.64474,"lng":135.93442,"note":"那智胜浦海岸。"},
-    {"no":32,"name":"市野々王子","en":"Ichinono-oji","stage":"e","lat":33.6686,"lng":135.9051,"note":"市野々村落；按 OSM 聚落与官方 41 处图定位，具体押印台需现场确认。","approx":true},
-    {"no":33,"name":"多富気王子（大門坂）","en":"Tafuke-oji (Daimonzaka)","stage":"e","lat":33.66909,"lng":135.89044,"note":"多富気王子神社；OSM 节点核对，就在那智大社参道旁。"},
-    {"no":34,"name":"飛瀧神社（那智御瀧）","en":"Hirou-jinja (Nachi-no-Otaki)","stage":"e","lat":33.67419,"lng":135.88767,"note":"那智瀑布；飞泷神社。"},
-    {"no":35,"name":"熊野那智大社","en":"Kumano Nachi Taisha","stage":"e","lat":33.66843,"lng":135.89044,"note":"熊野三山之一；那智山。"},
-    {"no":36,"name":"青岸渡寺","en":"Seiganto-ji","stage":"e","lat":33.66931,"lng":135.88992,"note":"那智大社旁；三重塔与瀑布同框。"},
-    {"no":37,"name":"地蔵茶屋跡","en":"Jizo-jaya Teahouse Remains","stage":"f","lat":33.7000,"lng":135.8650,"note":"大云取越方向；位置按官方图近似。","approx":true},
-    {"no":38,"name":"小口（大雲取登り口）","en":"Koguchi (Ogumotori-goe trailhead)","stage":"f","lat":33.75444,"lng":135.84346,"note":"小口；大云取越/小云取越的分岔点。"},
-    {"no":39,"name":"小和瀬渡し場跡","en":"Kowaze Ferry Remains","stage":"f","lat":33.7750,"lng":135.8420,"note":"熊野川渡口；位置按官方图近似。","approx":true},
-    {"no":40,"name":"石堂茶屋跡","en":"Ishido-jaya Teahouse Remains","stage":"f","lat":33.7950,"lng":135.8150,"note":"小云取越方向；位置按官方图近似。","approx":true},
-    {"no":41,"name":"請川","en":"Ukegawa","stage":"f","lat":33.82152,"lng":135.78869,"note":"请川；回到本宫方向的终点。"}
+    {
+      "no": 1,
+      "name": "稲葉根王子",
+      "en": "Inabane-oji",
+      "stage": "a",
+      "lat": 33.71291,
+      "lng": 135.45407,
+      "note": "泷尻之前的第 1 章；从田边方向另排交通。"
+    },
+    {
+      "no": 2,
+      "name": "北郡越",
+      "en": "Hokusogi-goe",
+      "stage": "a",
+      "lat": 33.7392,
+      "lng": 135.4991,
+      "note": "北郡越古道段；按中边路官方街景/路线点定位，具体押印台现场确认。",
+      "approx": true
+    },
+    {
+      "no": 3,
+      "name": "潮見峠越",
+      "en": "Shiomitoge-goe",
+      "stage": "a",
+      "lat": 33.78289,
+      "lng": 135.48069,
+      "note": "潮见峠；1–3 是“前三个章”的核心。"
+    },
+    {
+      "no": 4,
+      "name": "滝尻王子",
+      "en": "Takijiri-oji",
+      "stage": "a",
+      "lat": 33.77553,
+      "lng": 135.50369,
+      "note": "多数人的起点；押印帐第 4 号，不是第 1 号。"
+    },
+    {
+      "no": 5,
+      "name": "不寝王子",
+      "en": "Nezu-oji",
+      "stage": "a",
+      "lat": 33.77695,
+      "lng": 135.50605,
+      "note": "从泷尻上来约 10 分钟。"
+    },
+    {
+      "no": 6,
+      "name": "高原熊野神社",
+      "en": "Takahara Kumano-jinja",
+      "stage": "b",
+      "lat": 33.79427,
+      "lng": 135.52933,
+      "note": "高原村落；第一晚常住这里。"
+    },
+    {
+      "no": 7,
+      "name": "大門王子",
+      "en": "Daimon-oji",
+      "stage": "b",
+      "lat": 33.79736,
+      "lng": 135.54705,
+      "note": "古道石阶段。"
+    },
+    {
+      "no": 8,
+      "name": "十丈王子",
+      "en": "Jujo-oji",
+      "stage": "b",
+      "lat": 33.80059,
+      "lng": 135.55968,
+      "note": "重点王子。"
+    },
+    {
+      "no": 9,
+      "name": "大坂本王子",
+      "en": "Osakamoto-oji",
+      "stage": "b",
+      "lat": 33.8144,
+      "lng": 135.58851,
+      "note": "近露前的高点之一。"
+    },
+    {
+      "no": 10,
+      "name": "牛馬童子",
+      "en": "Gyuba-doji",
+      "stage": "b",
+      "lat": 33.81096,
+      "lng": 135.6013,
+      "note": "牛马童子像；不是王子社，但有章。"
+    },
+    {
+      "no": 11,
+      "name": "近露王子",
+      "en": "Chikatsuyu-oji",
+      "stage": "b",
+      "lat": 33.81436,
+      "lng": 135.60572,
+      "note": "近露村落；住宿和补给点。"
+    },
+    {
+      "no": 12,
+      "name": "継桜王子",
+      "en": "Tsugizakura-oji",
+      "stage": "c",
+      "lat": 33.8285,
+      "lng": 135.63414,
+      "note": "野中方向；秀衡樱就在附近。"
+    },
+    {
+      "no": 13,
+      "name": "秀衡桜",
+      "en": "Hidehira-zakura",
+      "stage": "c",
+      "lat": 33.82858,
+      "lng": 135.6353,
+      "note": "与继樱王子相邻，容易和别处的“秀衡樱”混淆。"
+    },
+    {
+      "no": 14,
+      "name": "蛇形地蔵",
+      "en": "Jagata Jizo",
+      "stage": "c",
+      "lat": 33.84329,
+      "lng": 135.68774,
+      "note": "地藏；山路转弯处。"
+    },
+    {
+      "no": 15,
+      "name": "湯川王子",
+      "en": "Yukawa-oji",
+      "stage": "c",
+      "lat": 33.8391,
+      "lng": 135.6766,
+      "note": "道湯川/王地谷一带；按 GSI 地址定位，具体社殿/押印台现场确认。",
+      "approx": true
+    },
+    {
+      "no": 16,
+      "name": "猪鼻王子",
+      "en": "Inohana-oji",
+      "stage": "c",
+      "lat": 33.85721,
+      "lng": 135.72143,
+      "note": "猪鼻王子；接近发心门。"
+    },
+    {
+      "no": 17,
+      "name": "発心門王子",
+      "en": "Hosshinmon-oji",
+      "stage": "c",
+      "lat": 33.86175,
+      "lng": 135.7206,
+      "note": "中边路名段；从这里下本宫。"
+    },
+    {
+      "no": 18,
+      "name": "水呑王子",
+      "en": "Mizunomi-oji",
+      "stage": "c",
+      "lat": 33.85843,
+      "lng": 135.73698,
+      "note": "水呑王子跡；OSM 节点核对。"
+    },
+    {
+      "no": 19,
+      "name": "伏拝王子",
+      "en": "Fushiogami-oji",
+      "stage": "c",
+      "lat": 33.8602,
+      "lng": 135.75682,
+      "note": "可远望本宫大社。"
+    },
+    {
+      "no": 20,
+      "name": "祓殿王子",
+      "en": "Haraido-oji",
+      "stage": "c",
+      "lat": 33.8401,
+      "lng": 135.77331,
+      "note": "祓殿王子社；OSM 节点核对，紧邻本宫大社。"
+    },
+    {
+      "no": 21,
+      "name": "熊野本宮大社",
+      "en": "Kumano Hongu Taisha",
+      "stage": "c",
+      "lat": 33.84035,
+      "lng": 135.77363,
+      "note": "熊野三山之一；本宫馆可买押印帐、查验证书。"
+    },
+    {
+      "no": 22,
+      "name": "旧社地大斎原",
+      "en": "Oyunohara",
+      "stage": "d",
+      "lat": 33.83418,
+      "lng": 135.77401,
+      "note": "日本最大鸟居；本宫大社旧社地。"
+    },
+    {
+      "no": 23,
+      "name": "湯峯王子",
+      "en": "Yunomine-oji",
+      "stage": "d",
+      "lat": 33.82933,
+      "lng": 135.75808,
+      "note": "汤峰温泉；壶汤所在。"
+    },
+    {
+      "no": 24,
+      "name": "川の古道（川舟センター）",
+      "en": "Kumano-gawa River Boat Center",
+      "stage": "d",
+      "lat": 33.79051,
+      "lng": 135.89671,
+      "note": "熊野川川舟中心；川之古道。"
+    },
+    {
+      "no": 25,
+      "name": "熊野速玉大社",
+      "en": "Kumano Hayatama Taisha",
+      "stage": "d",
+      "lat": 33.7323,
+      "lng": 135.98368,
+      "note": "熊野三山之一；新宫市区。"
+    },
+    {
+      "no": 26,
+      "name": "神倉神社",
+      "en": "Kamikura-jinja Shrine",
+      "stage": "d",
+      "lat": 33.72425,
+      "lng": 135.98411,
+      "note": "权现山；石阶很陡。"
+    },
+    {
+      "no": 27,
+      "name": "阿須賀神社",
+      "en": "Asuka-jinja Shrine",
+      "stage": "d",
+      "lat": 33.72784,
+      "lng": 135.99745,
+      "note": "新宫市区东侧。"
+    },
+    {
+      "no": 28,
+      "name": "高野坂",
+      "en": "Koya-zaka Slope",
+      "stage": "e",
+      "lat": 33.70165,
+      "lng": 135.99145,
+      "note": "新宫—那智方向的海岸古道。"
+    },
+    {
+      "no": 29,
+      "name": "小狗子峠",
+      "en": "Kokuji-toge Pass",
+      "stage": "e",
+      "lat": 33.657,
+      "lng": 135.9628,
+      "note": "小狗子峠；位置按 GSI/官方图核对。"
+    },
+    {
+      "no": 30,
+      "name": "浜の宮王子",
+      "en": "Hamanomiya-oji",
+      "stage": "e",
+      "lat": 33.6484,
+      "lng": 135.9403,
+      "note": "滨之宫；补陀洛山寺前；GSI/官方图核对。"
+    },
+    {
+      "no": 31,
+      "name": "補陀洛山寺",
+      "en": "Fudarakusan-ji",
+      "stage": "e",
+      "lat": 33.64474,
+      "lng": 135.93442,
+      "note": "那智胜浦海岸。"
+    },
+    {
+      "no": 32,
+      "name": "市野々王子",
+      "en": "Ichinono-oji",
+      "stage": "e",
+      "lat": 33.6629389,
+      "lng": 135.9117306,
+      "note": "市野々王子社；Wikipedia/国史迹坐标。"
+    },
+    {
+      "no": 33,
+      "name": "多富気王子（大門坂）",
+      "en": "Tafuke-oji (Daimonzaka)",
+      "stage": "e",
+      "lat": 33.66909,
+      "lng": 135.89044,
+      "note": "多富気王子神社；OSM 节点核对，就在那智大社参道旁。"
+    },
+    {
+      "no": 34,
+      "name": "飛瀧神社（那智御瀧）",
+      "en": "Hirou-jinja (Nachi-no-Otaki)",
+      "stage": "e",
+      "lat": 33.67419,
+      "lng": 135.88767,
+      "note": "那智瀑布；飞泷神社。"
+    },
+    {
+      "no": 35,
+      "name": "熊野那智大社",
+      "en": "Kumano Nachi Taisha",
+      "stage": "e",
+      "lat": 33.66843,
+      "lng": 135.89044,
+      "note": "熊野三山之一；那智山。"
+    },
+    {
+      "no": 36,
+      "name": "青岸渡寺",
+      "en": "Seiganto-ji",
+      "stage": "e",
+      "lat": 33.66931,
+      "lng": 135.88992,
+      "note": "那智大社旁；三重塔与瀑布同框。"
+    },
+    {
+      "no": 37,
+      "name": "地蔵茶屋跡",
+      "en": "Jizo-jaya Teahouse Remains",
+      "stage": "f",
+      "lat": 33.7,
+      "lng": 135.865,
+      "note": "大云取越方向；位置按官方图近似。",
+      "approx": true
+    },
+    {
+      "no": 38,
+      "name": "小口（大雲取登り口）",
+      "en": "Koguchi (Ogumotori-goe trailhead)",
+      "stage": "f",
+      "lat": 33.75444,
+      "lng": 135.84346,
+      "note": "小口；大云取越/小云取越的分岔点。"
+    },
+    {
+      "no": 39,
+      "name": "小和瀬渡し場跡",
+      "en": "Kowaze Ferry Remains",
+      "stage": "f",
+      "lat": 33.779,
+      "lng": 135.825,
+      "note": "小雲取越中段、熊野川渡口方向；按路线估计，现场确认。",
+      "approx": true
+    },
+    {
+      "no": 40,
+      "name": "石堂茶屋跡",
+      "en": "Ishido-jaya Teahouse Remains",
+      "stage": "f",
+      "lat": 33.795,
+      "lng": 135.815,
+      "note": "小雲取越/石堂茶屋跡；按官方路线图估计，现场确认。",
+      "approx": true
+    },
+    {
+      "no": 41,
+      "name": "請川",
+      "en": "Ukegawa",
+      "stage": "f",
+      "lat": 33.82152,
+      "lng": 135.78869,
+      "note": "请川；回到本宫方向的终点。"
+    }
   ]
 };
