@@ -7,6 +7,7 @@
 <meta name="description" content="按年份记录实际走过的路：飞行、火车、徒步，以及 2002–2024 年的旅行年表。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/trips.css">
 </head>
@@ -86,7 +87,7 @@
   <section class="wh-section" id="hikes">
     <div class="tp-head">
       <div><p class="tp-kicker">HIKE LOG · GPX</p><h2>徒步记录</h2></div>
-      <p>轨迹来自两步路 GPX，抽稀后按实际比例重绘。<br>无底图。</p>
+      <p>轨迹来自两步路 GPX，抽稀后绘在浅色底图上。<br>可缩放。</p>
     </div>
     <div id="tp-hike-list"></div>
   </section>
@@ -131,6 +132,7 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
 <script src="trips-data.js"></script>
 <script src="assets/trips.js"></script>

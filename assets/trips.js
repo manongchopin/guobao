@@ -93,51 +93,13 @@
     totalLine.textContent = "合计 " + list.length + " 段 · " + fmt(kmTotal(list)) + " km";
   }
 
-  function hikeFigure(h) {
-    var pts = h.path || [];
-    if (pts.length < 2) return "";
-    var kx = Math.cos(pts[0][0] * Math.PI / 180) * 111320;
-    var ky = 110540;
-    var xs = pts.map(function (p) { return p[1] * kx; });
-    var ys = pts.map(function (p) { return p[0] * ky; });
-    var minx = Math.min.apply(null, xs), maxx = Math.max.apply(null, xs);
-    var miny = Math.min.apply(null, ys), maxy = Math.max.apply(null, ys);
-    var spanX = Math.max(maxx - minx, 1), spanY = Math.max(maxy - miny, 1);
-    var W = 1000, H = 520;
-    var pad = 44;
-    var scale = Math.min((W - 2 * pad) / spanX, (H - 2 * pad) / spanY);
-    var ox = (W - spanX * scale) / 2, oy = (H - spanY * scale) / 2;
-    function sx(m) { return ox + (m - minx) * scale; }
-    function sy(m) { return H - oy - (m - miny) * scale; }
-    var d = pts.map(function (p, i) {
-      return (i ? "L" : "M") + sx(p[1] * kx).toFixed(1) + "," + sy(p[0] * ky).toFixed(1);
-    }).join(" ");
-    var sx0 = sx(pts[0][1] * kx), sy0 = sy(pts[0][0] * ky);
-    var km = 5, bar = km * 1000 * scale;
-    if (bar > W * 0.38) { km = 2; bar = km * 1000 * scale; }
-    if (bar > W * 0.38) { km = 1; bar = km * 1000 * scale; }
-    var bx = pad, by = H - 26;
-    return '<figure class="tp-hike-figure">' +
-      '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(h.name || "轨迹") + '轨迹示意">' +
-        '<path d="' + d + '" fill="none" stroke="#4a6b52" stroke-width="2.4" stroke-linejoin="round"/>' +
-        '<circle cx="' + sx0.toFixed(1) + '" cy="' + sy0.toFixed(1) + '" r="5" fill="#a8402f"/>' +
-        '<text x="' + (sx0 + 10).toFixed(1) + '" y="' + (sy0 - 8).toFixed(1) + '" class="tp-fig-label">起终点</text>' +
-        '<line x1="' + bx + '" y1="' + by + '" x2="' + (bx + bar).toFixed(1) + '" y2="' + by + '" stroke="#8a938c" stroke-width="1.2"/>' +
-        '<line x1="' + bx + '" y1="' + (by - 4) + '" x2="' + bx + '" y2="' + (by + 4) + '" stroke="#8a938c" stroke-width="1.2"/>' +
-        '<line x1="' + (bx + bar).toFixed(1) + '" y1="' + (by - 4) + '" x2="' + (bx + bar).toFixed(1) + '" y2="' + (by + 4) + '" stroke="#8a938c" stroke-width="1.2"/>' +
-        '<text x="' + (bx + bar + 8).toFixed(1) + '" y="' + (by + 4) + '" class="tp-fig-label">' + km + ' km</text>' +
-      '</svg>' +
-      '<figcaption>按实际比例重绘，无底图</figcaption>' +
-    '</figure>';
-  }
-
   function renderHikes() {
     var box = document.getElementById("tp-hike-list");
     if (!hikes.length) {
       box.innerHTML = '<p class="tp-nothing">还没有徒步记录。</p>';
       return;
     }
-    box.innerHTML = hikes.map(function (h) {
+    box.innerHTML = hikes.map(function (h, i) {
       return '<article class="tp-hike">' +
         '<div class="tp-hike-head"><div>' +
           '<h3>' + esc(h.name || "未命名线路") + '</h3>' +
@@ -147,9 +109,25 @@
             (h.high != null ? ' · 最高 ' + h.high + ' m' : "") +
           '</p>' +
         '</div><p class="tp-hike-points">' + (h.points || (h.path || []).length) + ' 点</p></div>' +
-        hikeFigure(h) +
+        '<div class="tp-hike-map" id="tp-hike-map-' + i + '"></div>' +
+        '<p class="tp-map-note">GPS 抽稀轨迹 · 底图 © OpenStreetMap contributors</p>' +
       '</article>';
     }).join("");
+
+    if (!window.L) return;
+    hikes.forEach(function (h, i) {
+      var el = document.getElementById("tp-hike-map-" + i);
+      if (!el || !h.path || h.path.length < 2) return;
+      var map = L.map(el, { scrollWheelZoom: false });
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
+      }).addTo(map);
+      var line = L.polyline(h.path, { color: "#4a6b52", weight: 3, opacity: 0.95, lineJoin: "round" }).addTo(map);
+      L.circleMarker(h.path[0], { radius: 4, color: "#a8402f", weight: 2, fillColor: "#fffdf7", fillOpacity: 1 }).addTo(map).bindTooltip("起终点");
+      map.fitBounds(line.getBounds(), { padding: [24, 24] });
+      L.control.scale({ imperial: false, position: "bottomleft" }).addTo(map);
+    });
   }
 
   function placeYears() { return Object.keys(placesByYear).sort(); }
