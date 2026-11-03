@@ -1,22 +1,23 @@
 window.PANAMERICAN = {
   "updated": "2026-11-03",
   "title": "泛美公路自驾",
-  "subtitle": "洛杉矶 → 乌斯怀亚",
-  "source": "穷游帖子《泛美公路自驾行（洛杉矶 - 乌斯怀亚，1 辆车，2 个人，14 个国家，165 天，28852 公里）》；两个 PDF，共 185 页",
+  "subtitle": "洛杉矶 → 巴塔哥尼亚（实际止于 Puerto Williams）",
+  "source": "穷游帖子《泛美公路自驾行（洛杉矶 - 乌斯怀亚，1 辆车，2 个人，14 个国家，165 天，28852 公里）》；三个 PDF，共 295 页",
   "stats": {
     "days": 165,
     "km": 28852,
     "countries": 14,
-    "extractedCountries": 11
+    "extractedCountries": 14,
+    "transitCountries": 1
   },
-  "coverageNote": "已提取到秘鲁章（含从秘鲁进入玻利维亚的 Copacabana）。PDF 在秘鲁章结束，玻利维亚、智利、阿根廷的章节未包含；这三国只做“待补”标记，不编造行程。",
+  "coverageNote": "三个 PDF 已提取：美国 → 墨西哥 → 中美洲 → 哥伦比亚 → 厄瓜多尔 → 秘鲁 → 玻利维亚 → 智利 → 巴塔哥尼亚。原文标题写“乌斯怀亚”，但终篇实际在智利 Puerto Williams 结束；没有到乌斯怀亚、布宜诺斯艾利斯或里约。",
   "stages": [
     {
       "id": "us",
       "name": "第一段 · 美国横穿",
       "days": "7 月 1–7 日",
       "km": "3,509 km",
-      "text": "洛杉矶 → 凤凰城 → El Paso → Marfa → 圣安东尼奥 → 休斯敦 → Laredo。建筑、沙漠、艺术小镇，最后在 Laredo 准备过境。"
+      "text": "洛杉矶 → 凤凰城 → El Paso → Marfa → 圣安东尼奥 → 休斯敦 → Laredo。"
     },
     {
       "id": "mx",
@@ -30,7 +31,7 @@ window.PANAMERICAN = {
       "name": "第三段 · 中美洲",
       "days": "7 月 27 日–8 月 22 日",
       "km": "4,368 km",
-      "text": "伯利兹 → 危地马拉 → 萨尔瓦多 → 洪都拉斯 → 哥斯达黎加 → 巴拿马。边境手续和治安是这一段的主线。"
+      "text": "伯利兹 → 危地马拉 → 萨尔瓦多 → 洪都拉斯 → 哥斯达黎加 → 巴拿马。尼加拉瓜为过境段。"
     },
     {
       "id": "gap",
@@ -58,14 +59,35 @@ window.PANAMERICAN = {
       "name": "第七段 · 秘鲁",
       "days": "10 月 1–14 日",
       "km": "3,078 km",
-      "text": "Macará → Piura → Trujillo → Lima → Ica → Nazca → Abancay → Ollantaytambo → Cusco → Sicuani → Copacabana（玻利维亚）。"
+      "text": "Macará → Piura → Trujillo → Lima → Ica → Nazca → Abancay → Ollantaytambo → Cusco → Sicuani → Copacabana。"
     },
     {
-      "id": "missing",
-      "name": "第八段以后 · 待补",
-      "days": "PDF 未包含",
+      "id": "bo",
+      "name": "第八段 · 玻利维亚",
+      "days": "10 月 14–23 日",
+      "km": "962 km",
+      "text": "Copacabana → La Paz → Uyuni → Ollagüe（智利边境）。"
+    },
+    {
+      "id": "cl",
+      "name": "第九段 · 智利",
+      "days": "10 月 23 日–11 月 16 日",
+      "km": "4,612 km",
+      "text": "Ollagüe → Calama → Antofagasta → Valparaíso → Santiago → 复活节岛 → Concepción → Quellón → Puerto Montt。"
+    },
+    {
+      "id": "pat",
+      "name": "第十段 · 巴塔哥尼亚",
+      "days": "11 月 14 日–12 月 12 日",
+      "km": "4,120 km",
+      "text": "Puerto Montt → Hornopirén → Chaitén → Coyhaique → Chile Chico → El Chaltén → Río Gallegos → Punta Arenas → Torres del Paine → Puerto Williams。"
+    },
+    {
+      "id": "end",
+      "name": "终篇 · 返程",
+      "days": "12 月 12 日",
       "km": "—",
-      "text": "玻利维亚、智利、阿根廷章节目前不在两个 PDF 内。等补齐后再做乌斯怀亚终点段。"
+      "text": "在 Puerto Williams 结束，卖车后经 4 段航班返回芝加哥。没有去乌斯怀亚、布宜诺斯艾利斯或里约。"
     }
   ],
   "countries": [
@@ -338,6 +360,20 @@ window.PANAMERICAN = {
       "tips": [
         "这一段以过境为主，别把景点排太满",
         "边境官员可能收“手续费”，坚持要收据"
+      ]
+    },
+    {
+      "id": "ni",
+      "name": "尼加拉瓜",
+      "en": "Nicaragua",
+      "status": "transit",
+      "dates": "8 月初过境",
+      "km": "—",
+      "route": [],
+      "routeText": "Chototeca（洪都拉斯）→ Liberia（哥斯达黎加），原文未单列停留",
+      "highlights": [],
+      "tips": [
+        "只过境，没有单独写景点；这段以边境手续和赶路为主"
       ]
     },
     {
@@ -688,48 +724,174 @@ window.PANAMERICAN = {
       "id": "bo",
       "name": "玻利维亚",
       "en": "Bolivia",
-      "status": "missing",
-      "dates": "PDF 未包含",
-      "km": "—",
+      "status": "extracted",
+      "dates": "10 月 14–23 日",
+      "km": "962 km",
       "route": [
         {
           "name": "Copacabana",
           "lat": -16.167,
           "lng": -69.085
+        },
+        {
+          "name": "La Paz",
+          "lat": -16.5,
+          "lng": -68.15
+        },
+        {
+          "name": "Uyuni",
+          "lat": -20.46,
+          "lng": -66.83
+        },
+        {
+          "name": "Ollagüe",
+          "lat": -21.22,
+          "lng": -68.25
         }
       ],
-      "routeText": "秘鲁章只写到 Copacabana（玻利维亚）",
-      "highlights": [],
+      "routeText": "Copacabana → La Paz → Uyuni → Ollagüe（智利边境）",
+      "highlights": [
+        {
+          "name": "Copacabana / 的喀喀湖",
+          "note": "从秘鲁过境后的第一站；湖边与太阳岛。"
+        },
+        {
+          "name": "La Paz",
+          "note": "高原首都，缆车、市场和去乌尤尼的起点。"
+        },
+        {
+          "name": "Uyuni 盐湖",
+          "note": "天空之镜；他们从这里继续向智利边境。"
+        }
+      ],
       "tips": [
-        "后续章节未包含在这两个 PDF 中"
+        "拉巴斯和乌尤尼海拔高，给身体留适应时间",
+        "乌尤尼到智利边境路况差，白天走",
+        "玻利维亚签证/车辆手续提前确认"
       ]
     },
     {
       "id": "cl",
       "name": "智利",
       "en": "Chile",
-      "status": "missing",
-      "dates": "PDF 未包含",
-      "km": "—",
-      "route": [],
-      "routeText": "待补",
-      "highlights": [],
+      "status": "extracted",
+      "dates": "10 月 23 日–11 月 16 日",
+      "km": "4,612 km",
+      "route": [
+        {
+          "name": "Ollagüe",
+          "lat": -21.22,
+          "lng": -68.25
+        },
+        {
+          "name": "Calama",
+          "lat": -22.45,
+          "lng": -68.93
+        },
+        {
+          "name": "Antofagasta",
+          "lat": -23.65,
+          "lng": -70.4
+        },
+        {
+          "name": "Valparaíso",
+          "lat": -33.05,
+          "lng": -71.62
+        },
+        {
+          "name": "Santiago",
+          "lat": -33.45,
+          "lng": -70.67
+        },
+        {
+          "name": "Concepción",
+          "lat": -36.83,
+          "lng": -73.05
+        },
+        {
+          "name": "Quellón",
+          "lat": -43.12,
+          "lng": -73.62
+        },
+        {
+          "name": "Puerto Montt",
+          "lat": -41.47,
+          "lng": -72.94
+        },
+        {
+          "name": "Punta Arenas",
+          "lat": -53.16,
+          "lng": -70.91
+        },
+        {
+          "name": "Puerto Williams",
+          "lat": -54.93,
+          "lng": -67.61
+        }
+      ],
+      "routeText": "Ollagüe → Calama → Antofagasta → Valparaíso → Santiago → 复活节岛（飞）→ Concepción → Quellón → Puerto Montt → Punta Arenas → Puerto Williams",
+      "highlights": [
+        {
+          "name": "阿塔卡马 / Calama",
+          "note": "从玻利维亚高原下到智利北部的沙漠段。"
+        },
+        {
+          "name": "Valparaíso / Santiago",
+          "note": "太平洋港口与首都；他们在这里休整。"
+        },
+        {
+          "name": "复活节岛",
+          "note": "从智利本土飞去的支线，不是自驾可达。"
+        },
+        {
+          "name": "Chiloé / Puerto Montt",
+          "note": "湖区与岛屿，之后进入巴塔哥尼亚。"
+        },
+        {
+          "name": "Punta Arenas / Puerto Williams",
+          "note": "麦哲伦海峡与比格尔海峡；车在这里卖掉，行程结束。"
+        }
+      ],
       "tips": [
-        "后续章节未包含在这两个 PDF 中"
+        "智利南北跨度极大，别用“一天几百公里”估算",
+        "复活节岛需单独机票和岛上门票",
+        "巴塔哥尼亚风大，露营/轮渡都要留备选"
       ]
     },
     {
       "id": "ar",
       "name": "阿根廷",
       "en": "Argentina",
-      "status": "missing",
-      "dates": "PDF 未包含",
-      "km": "—",
-      "route": [],
-      "routeText": "待补（终点乌斯怀亚）",
-      "highlights": [],
+      "status": "extracted",
+      "dates": "11 月中–12 月初",
+      "km": "巴塔哥尼亚段",
+      "route": [
+        {
+          "name": "El Chaltén",
+          "lat": -49.33,
+          "lng": -72.89
+        },
+        {
+          "name": "Río Gallegos",
+          "lat": -51.62,
+          "lng": -69.22
+        }
+      ],
+      "routeText": "El Chaltén → Río Gallegos →（巴塔哥尼亚边境）",
+      "highlights": [
+        {
+          "name": "El Chaltén / Fitz Roy",
+          "note": "巴塔哥尼亚徒步重镇；他们从这里进入阿根廷段。"
+        },
+        {
+          "name": "Río Gallegos",
+          "note": "前往麦哲伦海峡/火地岛方向的过境城市。"
+        }
+      ],
       "tips": [
-        "后续章节未包含在这两个 PDF 中"
+        "原文没有到乌斯怀亚、布宜诺斯艾利斯或伊瓜苏",
+        "阿根廷卖外国车限制多，他们最终在智利 Punta Arenas 卖车",
+        "过境智利/阿根廷要预留时间，风大时轮渡可能停"
       ]
     }
   ],
@@ -756,6 +918,14 @@ window.PANAMERICAN = {
     {
       "name": "本地 PDF：泛美自驾2.pdf（已提取，不公开）",
       "url": ""
+    },
+    {
+      "name": "本地 PDF：泛美自驾3.pdf（已提取，不公开）",
+      "url": ""
+    },
+    {
+      "name": "穷游原帖第 3 页（需通过网站安全验证）",
+      "url": "https://bbs.qyer.com/thread-3144759-3.html"
     }
   ]
 };

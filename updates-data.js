@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-03",
     type: "计划",
+    title: "泛美自驾补齐玻利维亚—巴塔哥尼亚",
+    note: "PDF3 · 实际终点 Puerto Williams · 图片路线核对",
+    href: "panamerican.html"
+  },
+  {
+    date: "2026-11-03",
+    type: "计划",
     title: "泛美公路自驾：已提取至秘鲁",
     note: "洛杉矶→乌斯怀亚 · 11国路线 · 后三国待补",
     href: "panamerican.html"

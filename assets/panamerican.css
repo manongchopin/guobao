@@ -63,3 +63,11 @@
   .pa-stage-grid, .pa-highlights { grid-template-columns: 1fr; }
   .pa-map { height: 400px; }
 }
+
+.pa-image-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.pa-image-grid > div { border: 1px solid var(--line); background: var(--paper); padding: 9px 11px; }
+.pa-image-grid span { display: block; font-family: var(--sans); font-size: 8px; color: var(--red); }
+.pa-image-grid b { display: block; margin: 2px 0 3px; font-family: var(--serif); font-size: 14px; }
+.pa-image-grid p { margin: 0; font-size: 9px; line-height: 1.6; color: var(--ink-3); }
+.pa-image-note { margin: 7px 0 0; font-size: 8.5px; line-height: 1.6; color: var(--ink-3); }
+@media (max-width: 760px) { .pa-image-grid { grid-template-columns: 1fr; } }
