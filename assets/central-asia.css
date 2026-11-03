@@ -78,3 +78,11 @@
   .ca-border-row { grid-template-columns: 1fr 1fr; }
   .ca-border-row span:nth-child(3), .ca-border-row em { display: none; }
 }
+
+.ca-zh-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+.ca-zh-card { border: 1px solid var(--line); background: var(--paper); padding: 8px 10px; }
+.ca-zh-card span { display: block; font-family: var(--sans); font-size: 8px; color: var(--ink-3); }
+.ca-zh-card h3 { margin: 2px 0; font-family: var(--serif); font-size: 14px; }
+.ca-zh-card p { margin: 0; font-size: 8.5px; line-height: 1.55; color: var(--ink-3); }
+@media (max-width: 900px) { .ca-zh-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 760px) { .ca-zh-grid { grid-template-columns: 1fr; } }

@@ -107,6 +107,11 @@
       '<h3>★ ' + esc(x.name) + '</h3><p class="where">' + esc(x.en) + '</p><p>' + esc(x.why) + '</p><p class="access"><b>到达：</b>' + esc(x.access) + '</p></article>';
   }).join("");
 
+  var zh = document.getElementById("ca-zh003");
+  if (zh && D.zh003) zh.innerHTML = D.zh003.map(function (x) {
+    return '<article class="ca-zh-card"><span>ZH-003 · ' + esc(x.country) + '</span><h3>' + esc(x.name) + '</h3><p>' + esc(x.note) + '</p></article>';
+  }).join("");
+
   document.getElementById("ca-sources").innerHTML = D.sources.map(function (s) {
     return '<li><a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.name) + '</a></li>';
   }).join("");

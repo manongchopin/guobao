@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-03",
     type: "计划",
+    title: "自驾到新加坡路线与世界遗产",
+    note: "磨憨出境 · 五国25项遗产 · 明朝回声",
+    href: "overland-singapore.html"
+  },
+  {
+    date: "2026-11-03",
+    type: "计划",
     title: "中亚五斯坦路线与世界遗产",
     note: "霍尔果斯出境 · 五国28条遗产 · 中国关联点",
     href: "central-asia.html"

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自驾到新加坡 · 世界遗产与明朝回声</title>
+<meta name="description" content="从云南磨憨出发，自驾老挝、柬埔寨、泰国、马来西亚到新加坡：五国世界遗产地图、总图、明朝经营方式与中国关联遗存。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/sea-drive.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="plans.html">← 旅行计划</a>
+  <p class="kicker">PLAN 13 · OVERLAND · CHINA—SINGAPORE</p>
+  <h1>自驾到新加坡</h1>
+  <p class="lede">
+    从磨憨出境，穿过老挝、柬埔寨、泰国、马来西亚。<br>
+    <span>一条陆路骨架，五国世界遗产，以及明朝在东南亚留下的回声。</span>
+  </p>
+  <div class="seal" aria-hidden="true">南</div>
+</header>
+
+<main class="wh-detail">
+  <section class="wh-section">
+    <div class="sd-stats">
+      <div><b>5</b><span>国家</span></div>
+      <div><b>25</b><span>世界遗产记录</span></div>
+      <div><b>25</b><span>独立遗产</span></div>
+      <div><b>5</b><span>待落实口岸</span></div>
+    </div>
+    <p class="sd-callout"><b>这是 v0.1 骨架：</b>国家顺序已定，具体口岸、签证、车辆通关、季节和每天落点都还没落实。世界遗产名单截至 2026 年，含 2024–2026 新列入项目。</p>
+    <p class="sd-intro">顺序：中国磨憨 → 老挝 → 柬埔寨 → 泰国 → 马来西亚 → 新加坡。路线会为世界遗产绕开最短路径；后面再按口岸、路况和右舵左行规则收紧。</p>
+  </section>
+
+  <section class="wh-section" id="route">
+    <div class="sd-head">
+      <div><p class="sd-kicker">THE ROUTE · OVERLAND</p><h2>路线骨架与总图</h2></div>
+      <p>虚线为路线示意，不是 GPS 轨迹。<br>点开标记看遗产；★ 是中国关联点。</p>
+    </div>
+    <div class="sd-map-wrap">
+      <div id="sd-all-map" class="sd-all-map" aria-label="中国到新加坡路线与世界遗产总图"></div>
+      <div class="sd-legend">
+        <span><i class="sd-dot sd-dot--culture"></i>文化遗产</span>
+        <span><i class="sd-dot sd-dot--nature"></i>自然遗产</span>
+        <span><i class="sd-dot sd-dot--star">★</i>中国关联</span>
+        <span><i class="sd-line"></i>自驾路线</span>
+      </div>
+    </div>
+    <div class="sd-route-strip" id="sd-route-strip"></div>
+    <p class="sd-map-note">底图 © OpenStreetMap contributors（ODbL）。坐标为近似值；路线不是 GPS 轨迹，口岸与道路以出发前官方信息为准。</p>
+  </section>
+
+  <section class="wh-section" id="borders">
+    <div class="sd-head">
+      <div><p class="sd-kicker">BORDERS · TO CONFIRM</p><h2>口岸先列出来，不急着定</h2></div>
+      <p>每一段至少准备一个主口岸 + 一个备选。<br>车辆手续、签证和右舵左行后面单独做。</p>
+    </div>
+    <div class="sd-border-table" id="sd-borders"></div>
+  </section>
+
+  <section class="wh-section" id="countries">
+    <div class="sd-head">
+      <div><p class="sd-kicker">FIVE COUNTRIES · UNESCO</p><h2>五国世界遗产，一国有图</h2></div>
+      <p>截至 2026 年。<br>欣南诺与越南共享，在总图按一处记录。</p>
+    </div>
+    <div id="sd-countries"></div>
+  </section>
+
+  <section class="wh-section" id="ming">
+    <div class="sd-head">
+      <div><p class="sd-kicker">MING · FOUR MODES</p><h2>明朝在东南亚：这条线能看到什么</h2></div>
+      <p>摘自已有的「明朝有没有在东南亚经营？」<br>只取和这条路线相关的部分，不重复整篇。</p>
+    </div>
+    <p class="sd-ming-lede">明朝在这条线上没有“殖民帝国”。它留下的是四种不同强度的存在：羁縻名号、册封朝贡、郑和船队的官厂/据点，以及更持久的华人贸易网络。</p>
+    <div class="sd-ming-grid" id="sd-ming"></div>
+    <div class="sd-ming-route">
+      <div><span>老挝</span><b>老挝军民宣慰使司</b><p>羁縻/册封，不是交趾式的直辖；不要把它画成明朝行省。</p></div>
+      <div><span>柬埔寨</span><b>真腊朝贡 · 周达观记录</b><p>元朝周达观《真腊风土记》是对吴哥最著名的中国记录；不是明朝。</p></div>
+      <div><span>泰国</span><b>暹罗朝贡 · 大城华人</b><p>明朝与暹罗长期册封/朝贡；大城有华人社区与中国记忆。</p></div>
+      <div><span>马来西亚</span><b>满剌加 · 官厂/册封</b><p>郑和船队的重要节点；三宝山、宝山亭、青云亭是后来的华人记忆景观。</p></div>
+      <div><span>新加坡</span><b>华人移民社会</b><p>与明代没有直接行政关系；是更晚的华人移民层。</p></div>
+    </div>
+    <a class="sd-link" href="ming-southeast-asia.html">读完整专题：明朝有没有在东南亚经营？ ↗</a>
+  </section>
+
+  <section class="wh-section" id="china-links">
+    <div class="sd-head">
+      <div><p class="sd-kicker">CHINESE ECHOES · SOUTHEAST ASIA</p><h2>沿途的中国历史关联</h2></div>
+      <p>不是“境外中国领土”，是历史联系。<br>A/B/C 表示关联强度，不是政治判断。</p>
+    </div>
+    <p class="sd-china-lede">这条路能实际到达的中国关联，主要分三类：明朝的册封/羁縻/官厂、更早的中国文献记录（如《真腊风土记》），以及近代华人移民留下的庙宇、义山和社区。</p>
+    <div class="sd-china-grid" id="sd-china-links"></div>
+  </section>
+
+  <section class="wh-section" id="zh003">
+    <div class="sd-head">
+      <div><p class="sd-kicker">ZH-003 · CLOUD ARCHAEOLOGY</p><h2>云考古点位册里，能接上哪些</h2></div>
+      <p>ZH-003 的 34 处里，<br>中亚有 5 处可接；东南亚段没有直接对应点。</p>
+    </div>
+    <p class="sd-zh-lede">《云考古点位册》里的古城遗址，和这条东南亚路线直接相关的很少。能接上的是中亚段：碎叶、虎思斡耳朵、赤石、讹答剌、贰师城；另有一处越南山西，与明朝交趾有关，但在本路线之外。它们都不是“自驾到新加坡”的必经点，放在这里作为互见。</p>
+    <div class="sd-zh-grid" id="sd-zh003"></div>
+    <p class="sd-zh-note">另：ZH-003 第 20 条“越南山西省省城”与明朝交趾有关，但在本路线之外（越南不在老挝—柬埔寨—泰国—马来西亚—新加坡序列里）。完整 34 处见 <a href="zh003.html">云考古点位册</a>。</p>
+  </section>
+
+  <section class="wh-section">
+    <h2>口径与下一步</h2>
+    <ul class="sd-notes">
+      <li><b>遗产数量：</b>五国共 25 条记录；老挝欣南诺与越南共享，但在五国范围内只算一条。</li>
+      <li><b>新列入：</b>柬埔寨纪念地 2025、老挝欣南诺 2025、马来西亚 FRIM 2025、泰国玛哈泰寺 2026。</li>
+      <li><b>路线：</b>当前只定国家顺序和大致城市；口岸、签证、车辆通关、季节和每日里程后面逐段落实。</li>
+      <li><b>明朝：</b>老挝宣慰司是羁縻，暹罗/真腊是朝贡，满剌加是官厂/册封节点；不要把朝贡画成行省。</li>
+      <li><b>云考古：</b>ZH-003 中亚 5 点可与中亚页互见；东南亚段没有直接对应点，越南山西在路线外。</li>
+    </ul>
+    <ul class="sd-sources" id="sd-sources"></ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>旅行计划 13 · 自驾到新加坡</span>
+    <span>v0.1 骨架 · 口岸待落实</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+    <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="sea-drive-data.js"></script>
+<script src="assets/sea-drive.js"></script>
+</body>
+</html>
