@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>195 件禁止出境文物 · 我走过的世界</title>
-<meta name="description" content="195 件禁止出境展览文物，按批次或省份浏览，标注收藏博物馆与所在省份。">
+<meta name="description" content="195 件禁止出境展览文物，按批次或省份浏览，标注收藏单位与所在省份。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
@@ -16,8 +16,8 @@
   <p class="kicker">Forbidden · 195</p>
   <h1>禁止出境文物</h1>
   <p class="lede">
-    195 件（组），分三批公布：2002 年 64 件、2012 年 37 件、2013 年 94 件。<br>
-    <span>它们不出国门，只能去它们所在的博物馆看。</span>
+    195 件（组），分三批公布：2002 年 64 件（组）、2012 年 37 件（组）、2013 年 94 件（组）。<br>
+    <span>它们不出国门，只能去它们所在的收藏单位看。</span>
   </p>
   <div class="seal" aria-hidden="true">禁</div>
 </header>
@@ -25,8 +25,8 @@
 <div class="hub-progress">
   <div class="hub-progress-inner">
     <span class="hp-label">清单</span>
-    <span class="hp-num">195</span><span class="hp-total">件（组）</span>
-    <span class="hp-note">61 家博物馆 · 25 个省级行政区</span>
+    <span class="hp-num" id="hub-count">195</span><span class="hp-total">件（组）</span>
+    <span class="hp-note" id="hub-note">61 家收藏单位 · 25 个省级行政区</span>
   </div>
 </div>
 
@@ -47,9 +47,36 @@
   <div class="city-content" id="list"></div>
 </main>
 
+<section class="fb-source" id="sources" aria-labelledby="fb-source-title">
+  <div class="fb-source-inner">
+    <h2 id="fb-source-title">来源与校注</h2>
+    <p class="fb-source-lead">
+      按国家文物局 2002、2012、2013 年三批目录整理：64 + 37 + 94 = 195 件（组）。
+      馆藏以现藏或现展单位为主；与公布时名称不同者，列在下方校注。
+    </p>
+    <ul class="fb-source-list">
+      <li><b>2002 年首批 64 件（组）</b>：《首批禁止出国（境）展览文物目录》，文物办发〔2002〕5号，2002-01-18。<a href="https://zh.wikisource.org/wiki/国家文物局关于印发《首批禁止出国（境）展览文物目录》的通知" target="_blank" rel="noopener">原文</a></li>
+      <li><b>2012 年第二批 37 件（组）</b>：《第二批禁止出国（境）展览文物目录（书画类）》，文物博函〔2012〕1345号，2012-06-11。<a href="https://zh.wikisource.org/wiki/关于发布《第二批禁止出国（境）展览文物目录（书画类）》的通知" target="_blank" rel="noopener">原文</a></li>
+      <li><b>2013 年第三批 94 件（组）</b>：《第三批禁止出境展览文物目录》，文物博函〔2013〕1320号，2013-07-31。<a href="https://zh.wikisource.org/wiki/关于发布《第三批禁止出境展览文物目录》的通知" target="_blank" rel="noopener">原文</a></li>
+    </ul>
+    <h3>校注</h3>
+    <ul class="fb-notes">
+      <li><b>晋侯稣钟</b>：官方目录作“一套14件”，仅列上海博物馆；山西博物院另藏 2 件，本表按 16 件分藏处理。</li>
+      <li><b>凤冠</b>：定陵出土 4 顶。本表按目录条目记中国国家博物馆九龙九凤冠；另 3 顶分藏故宫博物院、明十三陵博物馆。</li>
+      <li><b>“五星出东方”护膊</b>：官方目录作新疆区考古研究所；现展于新疆维吾尔自治区博物馆。</li>
+      <li><b>新石器时代大汶口文化象牙梳</b>：官方目录作山东省博物馆，即今山东博物馆；中国国家博物馆的镂雕旋纹象牙梳不是本条。</li>
+      <li><b>西周㝬簋</b>：官方目录作周原博物馆；现藏宝鸡青铜器博物院。</li>
+      <li><b>夏七孔玉刀</b>：官方目录作洛阳博物馆；现陈列于二里头夏都遗址博物馆。</li>
+      <li><b>淳化大鼎</b>：官方目录作淳化县博物馆；现藏地有陕西历史博物馆、淳化县博物馆两说，待核。</li>
+      <li><b>卫贤《高士图》</b>：官方目录作“轴”，故宫博物院官网作“卷”，本表从馆方作“卷”。</li>
+    </ul>
+    <p class="fb-source-meta">最后核对：2026-11-03。页面不含文物图片。</p>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="footer-inner">
-    <span>195 件禁止出境文物</span>
+    <span>195 件（组）禁止出境文物</span>
     <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
   </div>
 </footer>

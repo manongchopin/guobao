@@ -9,6 +9,8 @@
   var buttons = Array.prototype.slice.call(document.querySelectorAll(".switch button"));
 
   var toolbarInner = document.querySelector(".toolbar-inner");
+  var hubCount = document.getElementById("hub-count");
+  var hubNote = document.getElementById("hub-note");
   var walkEl = document.createElement("span");
   walkEl.className = "walk-count";
   walkEl.id = "walk-count";
@@ -42,8 +44,44 @@
     return n;
   }
 
+  function provinceCount() {
+    var seen = {};
+    items.forEach(function (it) {
+      it.provinces.forEach(function (p) { seen[p] = 1; });
+    });
+    return Object.keys(seen).length;
+  }
+
+  function museumCount() {
+    var seen = {};
+    items.forEach(function (it) {
+      it.museums.forEach(function (m) { seen[m] = 1; });
+    });
+    return Object.keys(seen).length;
+  }
+
+  function splitItems() {
+    return items.filter(function (it) { return it.provinces.length > 1; });
+  }
+
+  function sameProvinceMuseums() {
+    return items.filter(function (it) {
+      return it.provinces.length === 1 && it.museums.length > 1;
+    });
+  }
+
+  function shortName(it) {
+    return it.name.replace(/（[^）]*）$/, "");
+  }
+
+  function updateHub() {
+    if (hubCount) hubCount.textContent = items.length;
+    if (hubNote) hubNote.textContent = museumCount() + " 家收藏单位 · " + provinceCount() + " 个省级行政区";
+  }
+
   function updateWalk() {
     var got = items.filter(function (it) { return window.FBVisited && FBVisited.has(it.fid); }).length;
+    walkEl.title = "按文物计；分藏两省只算一件。";
     walkEl.innerHTML = "已走 <b>" + got + "</b>/" + items.length;
   }
 
@@ -94,8 +132,8 @@
 
   function table(list, view, province) {
     var head = view === "province"
-      ? ["名称", "时代", "博物馆", "批次"]
-      : ["名称", "时代", "博物馆", "省份"];
+      ? ["名称", "时代", "收藏单位", "批次"]
+      : ["名称", "时代", "收藏单位", "省份"];
     return '<div class="fb-table" role="table">' +
       '<div class="fb-row fb-head" role="row">' +
         head.map(function (h, i) {
@@ -111,7 +149,7 @@
     return '<section class="district-block">' +
       '<div class="group-head"><h2>' + title + '</h2>' +
         (sub ? '<span class="year">' + sub + '</span>' : '') +
-        '<span class="count">' + list.length + ' 件</span></div>' +
+        '<span class="count">' + list.length + ' 件（组）</span></div>' +
       table(list, view, province) +
     '</section>';
   }
@@ -125,8 +163,15 @@
         if (!list.length) return;
         html += section(b.label, b.year, list, "batch", null);
       });
-      toolbarNote.textContent = "195 件 · 三批";
-      noteEl.textContent = "按公布批次排列，批次内保持原名单顺序。";
+      if (state.filter === "all") {
+        toolbarNote.textContent = items.length + " 件（组） · 三批";
+        noteEl.textContent = "按公布批次排列，批次内保持原名单顺序。";
+      } else {
+        var b = batchOf(Number(state.filter));
+        var batchCount = items.filter(function (it) { return it.batch === b.n; }).length;
+        toolbarNote.textContent = b.label + " · " + batchCount + " 件（组）";
+        noteEl.textContent = "只显示" + b.label + (b.year ? "（" + b.year + " 年公布）" : "") + "。";
+      }
     } else {
       var provs = state.filter === "all" ? PROVINCES : PROVINCES.filter(function (p) { return p === state.filter; });
       provs.forEach(function (p) {
@@ -134,8 +179,30 @@
         if (!list.length) return;
         html += section(p, "", list, "province", p);
       });
-      toolbarNote.textContent = "197 条 · 25 个省级行政区";
-      noteEl.textContent = "同一件文物若分藏两省，会在两边各出现一次，所以 197 条大于 195 件。";
+      if (state.filter === "all") {
+        var rows = placements();
+        toolbarNote.textContent = rows + " 行 · " + provinceCount() + " 个省级行政区";
+        var split = splitItems();
+        var text = "省份视图 " + rows + " 行：" + items.length + " 件中";
+        if (split.length) {
+          text += "，" + split.map(function (it) {
+            return shortName(it) + "（" + it.provinces.join("/") + "）";
+          }).join("、") + " 各分藏两省，所以多出 " + (rows - items.length) + " 行。";
+        } else {
+          text += "。";
+        }
+        var same = sameProvinceMuseums();
+        if (same.length) {
+          text += " " + same.map(function (it) {
+            return shortName(it) + "（" + it.museums.join("、") + "）";
+          }).join("、") + " 多馆同省，仍只算 1 行。";
+        }
+        noteEl.textContent = text;
+      } else {
+        var provinceItems = items.filter(function (it) { return it.provinces.indexOf(state.filter) !== -1; }).length;
+        toolbarNote.textContent = state.filter + " · " + provinceItems + " 件（组）";
+        noteEl.textContent = "按收藏省份显示；同一件文物若分藏两省，会在两省各出现一次。";
+      }
     }
     listEl.innerHTML = html;
     updateWalk();
@@ -168,11 +235,16 @@
     var btn = e.target.closest(".fb-visit");
     if (!btn) return;
     if (!window.FBVisited) return;
-    var on = FBVisited.toggle(btn.getAttribute("data-id"));
-    var row = btn.closest(".fb-row");
-    if (row) row.classList.toggle("is-visited", on);
-    btn.textContent = on ? "✓" : "＋";
-    btn.setAttribute("aria-pressed", String(on));
+    var id = btn.getAttribute("data-id");
+    var on = FBVisited.toggle(id);
+    /* 分藏两省的条目在两个省区各有一行，两个按钮要一起更新 */
+    var same = listEl.querySelectorAll('.fb-visit[data-id="' + id + '"]');
+    Array.prototype.forEach.call(same, function (b) {
+      b.textContent = on ? "✓" : "＋";
+      b.setAttribute("aria-pressed", String(on));
+      var row = b.closest(".fb-row");
+      if (row) row.classList.toggle("is-visited", on);
+    });
     updateWalk();
   });
 
@@ -200,5 +272,6 @@
     return "batch";
   }
 
+  updateHub();
   setView(initialView(), false);
 })();

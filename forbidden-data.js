@@ -113,16 +113,11 @@ window.FORBIDDEN = [
   "name": "凤冠",
   "era": "明",
   "museums": [
-   "中国国家博物馆",
-   "故宫博物院"
+   "中国国家博物馆"
   ],
   "places": [
    {
     "museum": "中国国家博物馆",
-    "province": "北京市"
-   },
-   {
-    "museum": "故宫博物院",
     "province": "北京市"
    }
   ],
@@ -151,7 +146,7 @@ window.FORBIDDEN = [
  },
  {
   "batch": 1,
-  "name": "晋侯稣钟（一套14件）",
+  "name": "晋侯稣钟（一套16件）",
   "era": "西周",
   "museums": [
    "上海博物馆",
@@ -362,13 +357,13 @@ window.FORBIDDEN = [
  {
   "batch": 1,
   "name": "朱然墓出土漆木屐",
-  "era": "三国（吴）",
+  "era": "三国吴",
   "museums": [
-   "朱然家族墓地博物馆"
+   "马鞍山市朱然家族墓地博物馆"
   ],
   "places": [
    {
-    "museum": "朱然家族墓地博物馆",
+    "museum": "马鞍山市朱然家族墓地博物馆",
     "province": "安徽省"
    }
   ],
@@ -380,13 +375,13 @@ window.FORBIDDEN = [
  {
   "batch": 1,
   "name": "朱然墓出土贵族生活图漆盘",
-  "era": "三国（吴）",
+  "era": "三国吴",
   "museums": [
-   "朱然家族墓地博物馆"
+   "马鞍山市朱然家族墓地博物馆"
   ],
   "places": [
    {
-    "museum": "朱然家族墓地博物馆",
+    "museum": "马鞍山市朱然家族墓地博物馆",
     "province": "安徽省"
    }
   ],
@@ -418,11 +413,11 @@ window.FORBIDDEN = [
   "name": "娄睿墓鞍马出行图壁画",
   "era": "北齐",
   "museums": [
-   "山西省考古研究所"
+   "山西省考古研究院"
   ],
   "places": [
    {
-    "museum": "山西省考古研究所",
+    "museum": "山西省考古研究院",
     "province": "山西省"
    }
   ],
@@ -436,11 +431,11 @@ window.FORBIDDEN = [
   "name": "涅槃变相碑",
   "era": "唐",
   "museums": [
-   "山西省艺术博物馆（纯阳宫）"
+   "山西古建筑博物馆（纯阳宫）"
   ],
   "places": [
    {
-    "museum": "山西省艺术博物馆（纯阳宫）",
+    "museum": "山西古建筑博物馆（纯阳宫）",
     "province": "山西省"
    }
   ],
@@ -454,11 +449,11 @@ window.FORBIDDEN = [
   "name": "常阳太尊石像",
   "era": "唐",
   "museums": [
-   "山西省艺术博物馆（纯阳宫）"
+   "山西古建筑博物馆（纯阳宫）"
   ],
   "places": [
    {
-    "museum": "山西省艺术博物馆（纯阳宫）",
+    "museum": "山西古建筑博物馆（纯阳宫）",
     "province": "山西省"
    }
   ],
@@ -562,11 +557,11 @@ window.FORBIDDEN = [
   "name": "红山文化女神像",
   "era": "新石器时代晚期",
   "museums": [
-   "辽宁省考古研究所"
+   "辽宁省文物考古研究院"
   ],
   "places": [
    {
-    "museum": "辽宁省考古研究所",
+    "museum": "辽宁省文物考古研究院",
     "province": "辽宁省"
    }
   ],
@@ -670,11 +665,11 @@ window.FORBIDDEN = [
   "name": "铜车马",
   "era": "秦",
   "museums": [
-   "秦始皇兵马俑博物馆"
+   "秦始皇帝陵博物院"
   ],
   "places": [
    {
-    "museum": "秦始皇兵马俑博物馆",
+    "museum": "秦始皇帝陵博物院",
     "province": "陕西省"
    }
   ],
@@ -886,11 +881,11 @@ window.FORBIDDEN = [
   "name": "“五星出东方”护膊",
   "era": "东汉至魏、晋",
   "museums": [
-   "新疆考古研究所"
+   "新疆维吾尔自治区博物馆"
   ],
   "places": [
    {
-    "museum": "新疆考古研究所",
+    "museum": "新疆维吾尔自治区博物馆",
     "province": "新疆维吾尔自治区"
    }
   ],
@@ -922,11 +917,11 @@ window.FORBIDDEN = [
   "name": "中山王𰯼铁足铜鼎",
   "era": "战国",
   "museums": [
-   "河北省文物研究所"
+   "河北省文物考古研究院"
   ],
   "places": [
    {
-    "museum": "河北省文物研究所",
+    "museum": "河北省文物考古研究院",
     "province": "河北省"
    }
   ],
@@ -1012,11 +1007,11 @@ window.FORBIDDEN = [
   "name": "人物御龙帛画",
   "era": "战国中晚期",
   "museums": [
-   "湖南省博物馆"
+   "湖南博物院"
   ],
   "places": [
    {
-    "museum": "湖南省博物馆",
+    "museum": "湖南博物院",
     "province": "湖南省"
    }
   ],
@@ -1030,11 +1025,11 @@ window.FORBIDDEN = [
   "name": "龙凤帛画",
   "era": "战国中晚期",
   "museums": [
-   "湖南省博物馆"
+   "湖南博物院"
   ],
   "places": [
    {
-    "museum": "湖南省博物馆",
+    "museum": "湖南博物院",
     "province": "湖南省"
    }
   ],
@@ -1048,11 +1043,11 @@ window.FORBIDDEN = [
   "name": "直裾素纱襌衣",
   "era": "西汉",
   "museums": [
-   "湖南省博物馆"
+   "湖南博物院"
   ],
   "places": [
    {
-    "museum": "湖南省博物馆",
+    "museum": "湖南博物院",
     "province": "湖南省"
    }
   ],
@@ -1066,11 +1061,11 @@ window.FORBIDDEN = [
   "name": "马王堆一号墓木棺椁",
   "era": "西汉",
   "museums": [
-   "湖南省博物馆"
+   "湖南博物院"
   ],
   "places": [
    {
-    "museum": "湖南省博物馆",
+    "museum": "湖南博物院",
     "province": "湖南省"
    }
   ],
@@ -1084,11 +1079,11 @@ window.FORBIDDEN = [
   "name": "马王堆一号墓T型帛画",
   "era": "西汉",
   "museums": [
-   "湖南省博物馆"
+   "湖南博物院"
   ],
   "places": [
    {
-    "museum": "湖南省博物馆",
+    "museum": "湖南博物院",
     "province": "湖南省"
    }
   ],
@@ -1102,11 +1097,11 @@ window.FORBIDDEN = [
   "name": "红地云珠日天锦",
   "era": "北朝",
   "museums": [
-   "青海省文物考古研究所"
+   "青海省文物考古研究院"
   ],
   "places": [
    {
-    "museum": "青海省文物考古研究所",
+    "museum": "青海省文物考古研究院",
     "province": "青海省"
    }
   ],
@@ -1120,11 +1115,11 @@ window.FORBIDDEN = [
   "name": "西夏文佛经《吉祥遍至口和本续》纸本",
   "era": "西夏",
   "museums": [
-   "宁夏文物考古研究所"
+   "宁夏回族自治区文物考古研究所"
   ],
   "places": [
    {
-    "museum": "宁夏文物考古研究所",
+    "museum": "宁夏回族自治区文物考古研究所",
     "province": "宁夏回族自治区"
    }
   ],
@@ -1208,7 +1203,7 @@ window.FORBIDDEN = [
  {
   "batch": 2,
   "name": "冯承素摹王羲之《兰亭序》卷",
-  "era": "唐朝",
+  "era": "唐",
   "museums": [
    "故宫博物院"
   ],
@@ -1226,7 +1221,7 @@ window.FORBIDDEN = [
  {
   "batch": 2,
   "name": "欧阳询《梦奠帖》卷",
-  "era": "唐朝",
+  "era": "唐",
   "museums": [
    "辽宁省博物馆"
   ],
@@ -1244,7 +1239,7 @@ window.FORBIDDEN = [
  {
   "batch": 2,
   "name": "国诠《善见律》卷",
-  "era": "唐朝",
+  "era": "唐",
   "museums": [
    "故宫博物院"
   ],
@@ -1262,7 +1257,7 @@ window.FORBIDDEN = [
  {
   "batch": 2,
   "name": "怀素《苦笋帖》卷",
-  "era": "唐朝",
+  "era": "唐",
   "museums": [
    "上海博物馆"
   ],
@@ -1280,7 +1275,7 @@ window.FORBIDDEN = [
  {
   "batch": 2,
   "name": "杜牧《张好好诗》卷",
-  "era": "唐朝",
+  "era": "唐",
   "museums": [
    "故宫博物院"
   ],
@@ -1298,7 +1293,7 @@ window.FORBIDDEN = [
  {
   "batch": 2,
   "name": "唐人《摹王羲之一门书翰》卷",
-  "era": "唐朝",
+  "era": "唐",
   "museums": [
    "辽宁省博物馆"
   ],
@@ -1387,7 +1382,7 @@ window.FORBIDDEN = [
  },
  {
   "batch": 2,
-  "name": "韩琦《行楷信札卷》卷",
+  "name": "韩琦《行楷信札卷》",
   "era": "北宋",
   "museums": [
    "贵州省博物馆"
@@ -1478,7 +1473,7 @@ window.FORBIDDEN = [
  {
   "batch": 2,
   "name": "展子虔《游春图》卷",
-  "era": "隋朝",
+  "era": "隋",
   "museums": [
    "故宫博物院"
   ],
@@ -1496,7 +1491,7 @@ window.FORBIDDEN = [
  {
   "batch": 2,
   "name": "韩滉《五牛图》卷",
-  "era": "唐朝",
+  "era": "唐",
   "museums": [
    "故宫博物院"
   ],
@@ -1514,7 +1509,7 @@ window.FORBIDDEN = [
  {
   "batch": 2,
   "name": "周昉《挥扇仕女图》卷",
-  "era": "唐朝",
+  "era": "唐",
   "museums": [
    "故宫博物院"
   ],
@@ -1532,7 +1527,7 @@ window.FORBIDDEN = [
  {
   "batch": 2,
   "name": "孙位《高逸图》卷",
-  "era": "唐朝",
+  "era": "唐",
   "museums": [
    "上海博物馆"
   ],
@@ -1711,24 +1706,6 @@ window.FORBIDDEN = [
  },
  {
   "batch": 2,
-  "name": "李公麟《摹韦偃牧放图》卷",
-  "era": "北宋",
-  "museums": [
-   "故宫博物院"
-  ],
-  "places": [
-   {
-    "museum": "故宫博物院",
-    "province": "北京市"
-   }
-  ],
-  "provinces": [
-   "北京市"
-  ],
-  "fid": "F0095"
- },
- {
-  "batch": 2,
   "name": "祁序《江山牧放图》卷",
   "era": "北宋",
   "museums": [
@@ -1744,6 +1721,24 @@ window.FORBIDDEN = [
    "北京市"
   ],
   "fid": "F0096"
+ },
+ {
+  "batch": 2,
+  "name": "李公麟《摹韦偃牧放图》卷",
+  "era": "北宋",
+  "museums": [
+   "故宫博物院"
+  ],
+  "places": [
+   {
+    "museum": "故宫博物院",
+    "province": "北京市"
+   }
+  ],
+  "provinces": [
+   "北京市"
+  ],
+  "fid": "F0095"
  },
  {
   "batch": 2,
@@ -1820,7 +1815,7 @@ window.FORBIDDEN = [
  {
   "batch": 2,
   "name": "宋人摹阎立本《步辇图》卷",
-  "era": "宋代",
+  "era": "宋",
   "museums": [
    "故宫博物院"
   ],
@@ -1894,11 +1889,11 @@ window.FORBIDDEN = [
   "name": "商大禾方鼎",
   "era": "商",
   "museums": [
-   "湖南省博物馆"
+   "湖南博物院"
   ],
   "places": [
    {
-    "museum": "湖南省博物馆",
+    "museum": "湖南博物院",
     "province": "湖南省"
    }
   ],
@@ -2236,11 +2231,11 @@ window.FORBIDDEN = [
   "name": "新石器时代大汶口文化彩陶八角星纹豆",
   "era": "新石器时代",
   "museums": [
-   "山东省文物考古研究所"
+   "山东省文物考古研究院"
   ],
   "places": [
    {
-    "museum": "山东省文物考古研究所",
+    "museum": "山东省文物考古研究院",
     "province": "山东省"
    }
   ],
@@ -2470,11 +2465,11 @@ window.FORBIDDEN = [
   "name": "唐长沙窑青釉褐彩贴花人物纹壶",
   "era": "唐",
   "museums": [
-   "湖南省博物馆"
+   "湖南博物院"
   ],
   "places": [
    {
-    "museum": "湖南省博物馆",
+    "museum": "湖南博物院",
     "province": "湖南省"
    }
   ],
@@ -2614,11 +2609,11 @@ window.FORBIDDEN = [
   "name": "北宋定窑白釉刻莲花瓣纹龙首净瓶",
   "era": "北宋",
   "museums": [
-   "定州市博物馆"
+   "定州博物馆"
   ],
   "places": [
    {
-    "museum": "定州市博物馆",
+    "museum": "定州博物馆",
     "province": "河北省"
    }
   ],
@@ -2812,11 +2807,11 @@ window.FORBIDDEN = [
   "name": "东汉镂雕东王公西王母纹玉座屏",
   "era": "东汉",
   "museums": [
-   "定州市博物馆"
+   "定州博物馆"
   ],
   "places": [
    {
-    "museum": "定州市博物馆",
+    "museum": "定州博物馆",
     "province": "河北省"
    }
   ],
@@ -2830,11 +2825,11 @@ window.FORBIDDEN = [
   "name": "西晋神兽纹玉樽",
   "era": "西晋",
   "museums": [
-   "湖南省博物馆"
+   "湖南博物院"
   ],
   "places": [
    {
-    "museum": "湖南省博物馆",
+    "museum": "湖南博物院",
     "province": "湖南省"
    }
   ],
@@ -2882,7 +2877,7 @@ window.FORBIDDEN = [
  {
   "batch": 3,
   "name": "商金杖",
-  "era": "",
+  "era": "商",
   "museums": [
    "广汉三星堆博物馆"
   ],
@@ -2938,11 +2933,11 @@ window.FORBIDDEN = [
   "name": "西汉错金银镶松石狩猎纹铜伞铤",
   "era": "西汉",
   "museums": [
-   "河北省文物研究所"
+   "河北省文物考古研究院"
   ],
   "places": [
    {
-    "museum": "河北省文物研究所",
+    "museum": "河北省文物考古研究院",
     "province": "河北省"
    }
   ],
@@ -2992,11 +2987,11 @@ window.FORBIDDEN = [
   "name": "西汉识文彩绘盝顶长方形漆奁",
   "era": "西汉",
   "museums": [
-   "湖南省博物馆"
+   "湖南博物院"
   ],
   "places": [
    {
-    "museum": "湖南省博物馆",
+    "museum": "湖南博物院",
     "province": "湖南省"
    }
   ],
@@ -3010,11 +3005,11 @@ window.FORBIDDEN = [
   "name": "西汉黑漆朱绘六博具",
   "era": "西汉",
   "museums": [
-   "湖南省博物馆"
+   "湖南博物院"
   ],
   "places": [
    {
-    "museum": "湖南省博物馆",
+    "museum": "湖南博物院",
     "province": "湖南省"
    }
   ],
@@ -3082,16 +3077,16 @@ window.FORBIDDEN = [
   "name": "新石器时代大汶口文化象牙梳",
   "era": "新石器时代",
   "museums": [
-   "中国国家博物馆"
+   "山东博物馆"
   ],
   "places": [
    {
-    "museum": "中国国家博物馆",
-    "province": "北京市"
+    "museum": "山东博物馆",
+    "province": "山东省"
    }
   ],
   "provinces": [
-   "北京市"
+   "山东省"
   ],
   "fid": "F0171"
  },
@@ -3514,11 +3509,11 @@ window.FORBIDDEN = [
   "name": "西汉马王堆汉墓帛书《周易》",
   "era": "西汉",
   "museums": [
-   "湖南省博物馆"
+   "湖南博物院"
   ],
   "places": [
    {
-    "museum": "湖南省博物馆",
+    "museum": "湖南博物院",
     "province": "湖南省"
    }
   ],

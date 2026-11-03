@@ -2477,6 +2477,81 @@ a.sh-row:hover .sh-n { color: var(--red); }
   color: var(--red);
 }
 
+.fb-source {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 28px 64px;
+}
+
+.fb-source-inner {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+
+.fb-source h2 {
+  margin: 0 0 10px;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.fb-source h3 {
+  margin: 22px 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--red);
+}
+
+.fb-source-lead,
+.fb-source-list,
+.fb-notes {
+  font-size: 12.5px;
+  line-height: 1.85;
+  color: var(--ink-2);
+}
+
+.fb-source-lead {
+  margin: 0 0 10px;
+  max-width: 78ch;
+}
+
+.fb-source-list,
+.fb-notes {
+  margin: 0;
+  padding-left: 1.15em;
+}
+
+.fb-source-list li,
+.fb-notes li {
+  margin: 0 0 5px;
+  padding-left: 2px;
+}
+
+.fb-source-list b,
+.fb-notes b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.fb-source a {
+  color: var(--red);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(168, 64, 47, 0.35);
+}
+
+.fb-source a:hover {
+  border-bottom-color: var(--red);
+}
+
+.fb-source-meta {
+  margin: 16px 0 0;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  letter-spacing: 0.03em;
+}
+
 @media (max-width: 760px) {
   .fb-head { display: none; }
   .fb-row, .fb-row.is-province {
@@ -2494,6 +2569,9 @@ a.sh-row:hover .sh-n { color: var(--red); }
   .fb-c { grid-area: c; text-align: right; }
   .fb-b { grid-area: b; margin-top: 2px; }
   .fb-visit { grid-area: v; }
+  .fb-source { padding: 0 20px 48px; }
+  .fb-source h2 { font-size: 19px; }
+  .fb-source-lead, .fb-source-list, .fb-notes { font-size: 12px; }
 }
 
 /* 国保入口 · 右上角标志 */
