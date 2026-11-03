@@ -40,3 +40,47 @@
   .fuji-checklist { columns: 1; }
   .fuji-day { grid-template-columns: 1fr; gap: 4px; }
 }
+
+/* 吉田主路线与烧印 */
+.fuji-main-route { border: 1px solid var(--ink); background: var(--paper-2); padding: 15px 17px; margin: 0 0 14px; }
+.fuji-main-top { display: flex; justify-content: space-between; gap: 10px; font-family: var(--sans); font-size: 9px; color: var(--ink-3); }
+.fuji-main-top em { font-style: normal; color: var(--red); text-align: right; }
+.fuji-main-route h3 { margin: 7px 0 2px; font-family: var(--serif); font-size: 28px; }
+.fuji-main-route p { margin: 0 0 8px; font-size: 12px; line-height: 1.8; color: var(--ink-2); }
+.fuji-main-route .fuji-stats { grid-template-columns: repeat(3, 1fr); }
+.fuji-other-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; border-top: 1px solid var(--line); padding-top: 8px; margin: 4px 0 7px; }
+.fuji-other-head span { font-family: var(--sans); font-size: 9px; letter-spacing: .12em; color: var(--red); }
+.fuji-other-head b { font-family: var(--serif); font-size: 14px; font-weight: 400; color: var(--ink-3); }
+.fuji-route-grid--small { grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.fuji-route--small { border: 0; padding: 10px 12px; }
+.fuji-route--small h3 { font-size: 19px; margin: 5px 0 2px; }
+.fuji-route--small .fuji-trailhead { font-size: 9px; margin-bottom: 5px; }
+.fuji-route--small p:last-child { font-size: 10px; line-height: 1.65; color: var(--ink-3); }
+
+.fuji-stamp-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; border-top: 1px solid var(--ink); padding-top: 14px; margin-bottom: 7px; }
+.fuji-stamp-head h2 { margin: 0; }
+.fuji-stamp-kicker { margin: 0 0 4px; font-family: var(--sans); font-size: 9px; letter-spacing: .14em; color: var(--red); }
+.fuji-stamp-count { display: flex; align-items: baseline; gap: 6px; flex: 0 0 auto; }
+.fuji-stamp-count b { font-family: var(--serif); font-size: 36px; line-height: 1; color: var(--red); }
+.fuji-stamp-count span { font-size: 9px; line-height: 1.5; color: var(--ink-3); }
+.fuji-stamp-lede { max-width: 850px; margin: 0 0 10px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
+.fuji-stamp-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 0 0 8px; }
+.fuji-stamp-summary div { background: var(--paper); padding: 8px 11px; }
+.fuji-stamp-summary span { display: block; font-family: var(--serif); font-size: 19px; color: var(--red); }
+.fuji-stamp-summary b { display: block; margin-top: 2px; font-family: var(--sans); font-size: 9px; line-height: 1.5; font-weight: 400; color: var(--ink-3); }
+.fuji-stamp-note { border-left: 2px solid var(--line); padding: 7px 10px; margin: 0 0 10px; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
+.fuji-stamp-list { border-top: 1px solid var(--ink); }
+.fuji-stamp-row { display: grid; grid-template-columns: 24px 1.3fr 68px 62px 28px 86px 1.4fr; gap: 7px; padding: 6px 0; border-bottom: 1px solid var(--line-soft); font-size: 10px; line-height: 1.55; color: var(--ink-2); align-items: baseline; }
+.fuji-stamp-row--head { border-bottom: 1px solid var(--line); color: var(--ink-3); font-size: 8px; letter-spacing: .06em; }
+.fuji-stamp-row .n { font-family: var(--mono); color: var(--red); font-size: 8px; }
+.fuji-stamp-row .nm { font-family: var(--serif); font-size: 12px; color: var(--ink); }
+.fuji-stamp-row .el, .fuji-stamp-row .ar, .fuji-stamp-row .ct, .fuji-stamp-row .tm { color: var(--ink-3); font-size: 9px; }
+.fuji-stamp-row .ct { color: var(--red); font-family: var(--mono); }
+.fuji-stamp-row .nt { color: var(--ink-3); font-size: 9px; }
+@media (max-width: 760px) {
+  .fuji-route-grid--small { grid-template-columns: 1fr; gap: 0; }
+  .fuji-stamp-summary { grid-template-columns: 1fr; }
+  .fuji-stamp-row { grid-template-columns: 22px 1.2fr 46px 24px; }
+  .fuji-stamp-row .ar, .fuji-stamp-row .tm, .fuji-stamp-row .nt { display: none; }
+  .fuji-stamp-head { align-items: flex-start; }
+}

@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-03",
+    type: "计划",
+    title: "富士山吉田路线烧印",
+    note: "15 家山小屋 · 到山顶 18 枚 · 下山 19 枚",
+    href: "fuji-climb.html#stamps"
+  },
+  {
+    date: "2026-11-03",
     type: "足迹",
     title: "34 个省会足迹地图",
     note: "填色中国地图 · 本机保存 · 可导出",
