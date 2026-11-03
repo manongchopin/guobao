@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-03",
     type: "计划",
+    title: "法国自驾：56 项世界遗产分区",
+    note: "50 项本土地图 · 六次自驾 · 海外 6 项单列",
+    href: "france-roadtrip.html"
+  },
+  {
+    date: "2026-11-03",
+    type: "计划",
     title: "旅行计划新增马克思伦敦漫步",
     note: "v0.1 · 候选点 · 待确认",
     href: "marx-london.html"

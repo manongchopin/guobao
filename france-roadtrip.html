@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>法国自驾 · 旅行计划 15</title>
-<meta name="description" content="法国自驾旅行计划：路线、主题、住宿与预算的骨架页，等待进一步设计。">
+<title>法国自驾 · 56 项世界遗产 · 旅行计划 15</title>
+<meta name="description" content="法国 56 项世界遗产地图与六次自驾分区：巴黎与勃艮第、东北、东南、阿基坦、朗格多克、西北。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/france-roadtrip.css">
 </head>
@@ -14,11 +15,11 @@
 
 <header class="hero">
   <a class="back" href="plans.html">← 旅行计划</a>
-  <p class="kicker">PLAN 15 · FRANCE · ROADTRIP · v0.1</p>
+  <p class="kicker">PLAN 15 · FRANCE · 56 WORLD HERITAGE · v0.2</p>
   <h1>法国自驾</h1>
   <p class="lede">
-    路线还没定，先把这个计划留出来。<br>
-    <span>这一页目前只是骨架，等主题、季节和进出城市确定后再展开。</span>
+    56 项世界遗产，50 项在法国本土。<br>
+    <span>分六次走完：巴黎与勃艮第、东北、东南、阿基坦、朗格多克、西北。</span>
   </p>
   <div class="seal" aria-hidden="true">法</div>
 </header>
@@ -26,49 +27,88 @@
 <main class="wh-detail">
   <section class="wh-section">
     <div class="fr-stats">
-      <div><b>法国</b><span>自驾范围</span></div>
-      <div><b>v0.1</b><span>骨架版本</span></div>
-      <div><b>待定</b><span>路线 / 天数 / 季节</span></div>
-      <div><b>待定</b><span>主题</span></div>
+      <div><b>56</b><span>世界遗产（2026）</span></div>
+      <div><b>50</b><span>本土，可自驾</span></div>
+      <div><b>6</b><span>次自驾</span></div>
+      <div><b>6</b><span>海外，需飞机</span></div>
     </div>
-    <p class="fr-callout"><b>这是占位页，不是成品路线。</b>目前只有“法国自驾”这个方向；具体去哪些区域、看什么、开多久，都还没有定，页面不先编。</p>
-    <p class="fr-intro">后续可以把这条计划做成几种完全不同的走法：巴黎—诺曼底—布列塔尼的文化海岸线，普罗旺斯—蔚蓝海岸的南方线，阿尔萨斯—勃艮第的酒乡线，或者卢瓦尔河城堡线。先确定主题，再排路线。</p>
+    <p class="fr-callout"><b>v0.2 只做到分区。</b>这一版把 56 项标在一张图上，按六次自驾分好区域，并给出每段的天数和季节。还没做：每日里程、住宿落点、预算、租车与驾照手续——那些是 v0.3。</p>
+    <p class="fr-intro">口径说明：一项遗产只要到访一个组成点就算「走到」，串行遗产（沃邦、钟楼、一战遗址、湖岸木桩等）只标主入口，顺路能多看几处就多看几处。卡尔卡松在 1997 年和 2026 年各被列一次，是本表里唯一重复的遗产。</p>
   </section>
 
   <section class="wh-section">
-    <h2>这个页面准备放什么</h2>
-    <div class="fr-grid">
-      <div><span>ROUTE</span><b>路线骨架</b><p>进出城市、每天里程、停留点、是否跨国（法国—瑞士/意大利/西班牙）。</p></div>
-      <div><span>THEME</span><b>主题</b><p>世界遗产、葡萄酒、城堡、海岸、山地，还是一条线串几个主题。</p></div>
-      <div><span>STAY</span><b>住宿与补给</b><p>城市公寓、乡间民宿、露营地；停车、油价、过路费。</p></div>
-      <div><span>BUDGET</span><b>预算</b><p>租车、油费、过路费、停车、住宿、门票和餐饮。</p></div>
-      <div><span>SEASON</span><b>季节</b><p>薰衣草、秋色、滑雪、海岸旺季；避开法国暑假和罢工高峰。</p></div>
-      <div><span>LICENCE</span><b>驾驶手续</b><p>中国驾照翻译/认证、租车公司要求、保险和高速规则。</p></div>
+    <h2>56 项在一张图上</h2>
+    <div class="fr-legend" id="fr-legend"></div>
+    <div class="fr-map-wrap"><div id="fr-map"></div></div>
+    <p class="fr-map-note">
+      点颜色对应第几次自驾；点「第 N 次」按钮或点下面的卡片可以只看一段。
+      图上 50 个点只画本土，6 项海外在下一节单列。
+      标 <span style="color:var(--red)">≈</span> 的是代表点或近似点：串行遗产只取一处主入口，走廊型遗产（卢瓦尔、米迪运河）取一个落脚城市，不是遗产本体坐标。
+    </p>
+  </section>
+
+  <section class="wh-section">
+    <h2>六次怎么分</h2>
+    <p class="fr-intro">排序按季节走：每年两次，三年走完。第一年巴黎与勃艮第（5 月）+ 东北（9 月香槟采收），第二年东南（6 月山口开放）+ 阿基坦（9–10 月葡萄采收），第三年朗格多克（5 月）+ 西北（9 月）。点卡片可以在地图上只看这一段。</p>
+    <div class="fr-trips" id="fr-trips"></div>
+  </section>
+
+  <section class="wh-section">
+    <h2>海外 6 项：自驾到不了</h2>
+    <p class="fr-intro">这 6 项不在法国本土，自驾完全覆盖不到。要「全收集」得另外安排 4 趟飞机：留尼汪、马提尼克、新喀里多尼亚 + 法属波利尼西亚（塔普塔普阿泰、马克萨斯），法属南部领地基本只能靠科考船。</p>
+    <div class="fr-table-wrap">
+      <table class="fr-table">
+        <thead><tr><th>编号</th><th>名称</th><th>正式名</th><th>类型</th><th>年份</th><th>属地</th><th>怎么去</th></tr></thead>
+        <tbody id="fr-overseas-body"></tbody>
+      </table>
     </div>
   </section>
 
   <section class="wh-section">
-    <h2>下一步要先定的事</h2>
-    <ol class="fr-questions">
-      <li>这次是几次？7–10 天，还是两周以上？</li>
-      <li>从巴黎进出，还是南法/其他城市进出？</li>
-      <li>最想要的是世界遗产、酒乡、城堡、海岸，还是纯风景自驾？</li>
-      <li>只走法国，还是顺路带一点瑞士/意大利/西班牙？</li>
-      <li>什么季节？是否要避开薰衣草/暑期高峰？</li>
+    <h2>全部 56 项</h2>
+    <p class="fr-intro">按编号排列，编号即地图上的点号。第 51–56 项为海外。</p>
+    <div class="fr-table-wrap">
+      <table class="fr-table">
+        <thead><tr><th>编号</th><th>名称</th><th>正式名</th><th>类型</th><th>年份</th><th>大区</th><th>最近城市</th><th>第几次</th></tr></thead>
+        <tbody id="fr-table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="wh-section">
+    <h2>还没定的事</h2>
+    <ol class="fr-list" style="border-top:0">
+      <li><span class="n">01</span><span class="zh">每日里程与停留时长：六段各自的逐日行程还没排，现在只有区域和总天数。</span></li>
+      <li><span class="n">02</span><span class="zh">住宿落点：每段选 2–4 个基地，还是每晚换地方，要看具体路线。</span></li>
+      <li><span class="n">03</span><span class="zh">预算：租车、油费、过路费、停车、门票、住宿、餐饮，全是空的。</span></li>
+      <li><span class="n">04</span><span class="zh">租车与驾照：中国驾照在法国的翻译/认证要求、自动挡车源、异地还车费。</span></li>
+      <li><span class="n">05</span><span class="zh">科西嘉轮渡：马赛/尼斯/土伦出发的车渡要提前订，旺季很紧。</span></li>
+      <li><span class="n">06</span><span class="zh">部分坐标待核：标 ≈ 的几处是大区近似点，v0.3 排具体路线时会替换成遗产本体坐标。</span></li>
     </ol>
-    <p class="fr-note">这些确定后，再把路线、地图、住宿和预算填进来。版本会从 v0.1 开始往上升。</p>
+  </section>
+
+  <section class="wh-section">
+    <h2>来源</h2>
+    <p class="fr-intro">
+      名录与年份：<a href="https://whc.unesco.org/en/statesparties/fr/" target="_blank" rel="noopener">UNESCO World Heritage Centre · France</a>，条目结构参照 <a href="https://en.wikipedia.org/wiki/List_of_World_Heritage_Sites_in_France" target="_blank" rel="noopener">Wikipedia: List of World Heritage Sites in France</a>（CC BY-SA 4.0）。<br>
+      坐标：Wikipedia / Wikidata 条目坐标，取代表点；标 ≈ 的为近似点。<br>
+      地图：<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> 贡献者（ODbL）+ <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a>（BSD-2-Clause）。<br>
+      本页不使用任何遗产官方图片或原帖图片。
+    </p>
   </section>
 </main>
 
 <footer class="footer">
   <div class="footer-inner">
     <span>旅行计划 15 · 法国自驾</span>
-    <span>v0.1 · 骨架</span>
     <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
     <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="france-wh-data.js"></script>
+<script src="assets/france-roadtrip.js"></script>
 <script src="plan-versions-data.js"></script>
 <script src="assets/plan-version.js"></script>
 </body>

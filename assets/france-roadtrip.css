@@ -1,22 +1,69 @@
+/* 法国自驾 · 世界遗产分区 */
 .fr-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 20px; }
 .fr-stats div { padding: 12px 14px; border-right: 1px solid var(--line); }
 .fr-stats div:last-child { border-right: 0; }
 .fr-stats b { display: block; font-family: var(--serif); font-size: 22px; line-height: 1.15; }
 .fr-stats span { display: block; margin-top: 3px; font-size: 10px; color: var(--ink-3); }
+
 .fr-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 12px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
 .fr-callout b { color: var(--ink); }
 .fr-intro { margin: 0; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
-.fr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
-.fr-grid > div { background: var(--paper); padding: 11px 13px; }
-.fr-grid span { display: block; font-family: var(--sans); font-size: 8px; letter-spacing: .12em; color: var(--red); }
-.fr-grid b { display: block; margin: 3px 0 3px; font-family: var(--serif); font-size: 17px; }
-.fr-grid p { margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
-.fr-questions { margin: 0; padding-left: 20px; }
-.fr-questions li { margin: 0 0 6px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
-.fr-note { margin: 8px 0 0; font-size: 10px; color: var(--ink-3); }
+
+/* 地图 */
+.fr-map-wrap { border: 1px solid var(--ink); margin: 0 0 10px; background: var(--paper-2); }
+#fr-map { height: 540px; background: var(--paper-2); }
+.fr-legend { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 6px; }
+.fr-chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--paper-2); color: var(--ink-2); padding: 5px 9px; font-family: var(--sans); font-size: 10px; line-height: 1.4; cursor: pointer; transition: border-color .15s, color .15s; }
+.fr-chip:hover { border-color: var(--ink-2); color: var(--ink); }
+.fr-chip.on { border-color: var(--ink); color: var(--ink); background: var(--paper); }
+.fr-chip-n { font-style: normal; font-weight: 500; font-size: 9px; color: var(--ink-3); margin-left: 2px; }
+.fr-dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex: 0 0 auto; }
+.fr-map-note { margin: 0 0 20px; font-size: 10px; color: var(--ink-3); line-height: 1.7; }
+
+/* 六段卡片 */
+.fr-trips { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.fr-trip { background: var(--paper); padding: 14px 16px 16px; border-top: 3px solid transparent; cursor: pointer; }
+.fr-trip:hover { background: var(--paper-2); }
+.fr-trip.on { border-top-color: var(--c, var(--red)); background: var(--paper-2); }
+.fr-trip-kicker { margin: 0 0 3px; font-family: var(--sans); font-size: 8px; letter-spacing: .14em; color: var(--ink-3); }
+.fr-trip h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 18px; font-weight: 400; line-height: 1.35; display: flex; align-items: baseline; gap: 7px; }
+.fr-trip h3 .no { font-family: var(--sans); font-size: 10px; letter-spacing: .1em; color: var(--c, var(--red)); border: 1px solid currentColor; border-radius: 50%; width: 18px; height: 18px; line-height: 16px; text-align: center; flex: 0 0 auto; }
+.fr-trip dl { display: grid; grid-template-columns: 34px 1fr; gap: 3px 8px; margin: 0 0 9px; font-size: 10px; line-height: 1.6; }
+.fr-trip dt { color: var(--ink-3); }
+.fr-trip dd { margin: 0; color: var(--ink-2); }
+.fr-trip-focus { margin: 0 0 10px; font-size: 11px; line-height: 1.75; color: var(--ink-2); }
+.fr-list { list-style: none; margin: 0 0 10px; padding: 0; border-top: 1px solid var(--line-soft); }
+.fr-list li { display: flex; gap: 7px; align-items: baseline; border-bottom: 1px solid var(--line-soft); padding: 5px 0; font-size: 11px; line-height: 1.55; color: var(--ink); }
+.fr-list .n { font-family: var(--sans); font-size: 9px; color: var(--ink-3); min-width: 15px; flex: 0 0 auto; }
+.fr-list .zh { flex: 1 1 auto; }
+.fr-list .tag { font-size: 8.5px; color: var(--ink-3); white-space: nowrap; }
+.fr-trip-extra { margin: 0 0 6px; font-size: 10px; line-height: 1.7; color: var(--ink-2); }
+.fr-trip-note { margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
+
+/* 表格 */
+.fr-table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--paper-2); }
+.fr-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+.fr-table th { text-align: left; font-family: var(--sans); font-weight: 500; font-size: 9px; letter-spacing: .08em; color: var(--ink-3); border-bottom: 1px solid var(--ink); padding: 7px 9px; white-space: nowrap; }
+.fr-table td { border-bottom: 1px solid var(--line-soft); padding: 6px 9px; vertical-align: top; line-height: 1.55; }
+.fr-table tr:last-child td { border-bottom: 0; }
+.fr-table .num { font-family: var(--sans); font-size: 10px; white-space: nowrap; color: var(--ink-2); }
+.fr-table .dim { color: var(--ink-3); }
+.fr-table .approx { color: var(--red); }
+
+/* Leaflet 弹窗 */
+.fr-pop { font-family: var(--sans); }
+.fr-pop-no { display: block; font-size: 8px; letter-spacing: .12em; color: var(--red); margin-bottom: 2px; }
+.fr-pop b { display: block; font-family: var(--serif); font-size: 14px; font-weight: 400; line-height: 1.4; margin-bottom: 2px; }
+.fr-pop em { display: block; font-style: normal; font-size: 9.5px; color: var(--ink-3); line-height: 1.45; margin-bottom: 5px; }
+.fr-pop-meta { display: block; font-size: 10px; color: var(--ink-2); line-height: 1.6; }
+.fr-pop-note { display: block; margin-top: 5px; padding-top: 5px; border-top: 1px solid var(--line-soft); font-size: 9.5px; color: var(--ink-3); line-height: 1.6; }
+.leaflet-popup-content-wrapper { border-radius: 2px; }
+.leaflet-popup-content { margin: 10px 12px; }
+
 @media (max-width: 760px) {
   .fr-stats { grid-template-columns: 1fr 1fr; }
   .fr-stats div:nth-child(2) { border-right: 0; }
   .fr-stats div:nth-child(1), .fr-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
-  .fr-grid { grid-template-columns: 1fr; }
+  .fr-trips { grid-template-columns: 1fr; }
+  #fr-map { height: 420px; }
 }
