@@ -117,17 +117,26 @@
   </a>
 </main>
 
-<section class="home-map" aria-label="行万里路地图">
-  <figure class="home-map-figure">
-    <div class="home-map-img">
-      <img src="images/home/road.jpg" alt="一张走过的地图" width="1200" height="778" loading="lazy">
+<section class="home-footprint" id="home-footprint" aria-label="我的中国与世界足迹地图">
+  <div class="home-footprint-inner">
+    <div class="home-footprint-head">
+      <div><p class="hf-kicker">MY FOOTPRINT · LIVE FROM THIS BROWSER</p><h2>一图看完，去过哪里</h2></div>
+      <p>中国按省会，世界按联合国 193 个会员国。<br>这边的填色，和详情页是同一份本机记录。</p>
     </div>
-    <figcaption>
-      <span class="coda-cn">行万里路</span>
-      <span class="coda-en">The Road</span>
-      <span class="coda-note">一张走过的地图。</span>
-    </figcaption>
-  </figure>
+    <div class="home-footprint-grid">
+      <a class="hf-panel" href="province-capitals.html" aria-label="打开 34 个省会足迹">
+        <span class="hf-panel-head"><span>CHINA · 34 CAPITALS</span><b id="hf-cn-count">0 / 34</b></span>
+        <span class="hf-map" id="hf-china-map" aria-hidden="true"></span>
+        <span class="hf-panel-foot">去过省会，就算去过这个省 <i>打开 34 个省会 →</i></span>
+      </a>
+      <a class="hf-panel" href="world-countries.html" aria-label="打开世界 193 国足迹">
+        <span class="hf-panel-head"><span>THE WORLD · 193 COUNTRIES</span><b id="hf-world-count">0 / 193</b></span>
+        <span class="hf-map" id="hf-world-map" aria-hidden="true"></span>
+        <span class="hf-panel-foot">去过的国家，点亮一块 <i>打开世界地图 →</i></span>
+      </a>
+    </div>
+    <p class="home-footprint-note">地图随详情页的本机记录自动更新；换电脑或清浏览器数据会归零，详情页可导出 JSON。</p>
+  </div>
 </section>
 
 <footer class="footer">
@@ -156,5 +165,6 @@
   } catch (e) {}
 })();
 </script>
+<script src="assets/home-footprint.js"></script>
 </body>
 </html>
