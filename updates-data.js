@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-03",
+    type: "足迹",
+    title: "34 个省会足迹地图",
+    note: "填色中国地图 · 本机保存 · 可导出",
+    href: "province-capitals.html"
+  },
+  {
+    date: "2026-11-03",
     type: "计划",
     title: "熊野古道 Dual Pilgrim 说明",
     note: "五选一条件 · 三处登记点 · 证书/徽章",

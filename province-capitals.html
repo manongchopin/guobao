@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>34 个省会 · 我的中国足迹</title>
+<meta name="description" content="按 34 个省级行政区的省会/首府记录中国足迹：可填色中国地图、34 行清单、本机保存与导出。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/province-capitals.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="index.html">← 我走过的世界</a>
+  <p class="kicker">CHINA · 34 CAPITALS</p>
+  <h1>34 个省会</h1>
+  <p class="lede">
+    去过省会，就算去过这个省。<br>
+    <span>点表格或地图，把中国一省一省填满。</span>
+  </p>
+  <div class="seal" aria-hidden="true">省</div>
+</header>
+
+<main class="wh-detail">
+  <section class="wh-section">
+    <div class="pc-stats">
+      <div><b id="pc-count">0</b><span>/ 34 已到</span></div>
+      <div><b>34</b><span>省级行政区</span></div>
+      <div><b>8</b><span>区域</span></div>
+      <div><b>100%</b><span>走完时的目标</span></div>
+    </div>
+    <p class="pc-callout"><b>怎么算到过：</b>到过省会/首府<strong>主城区</strong>——住一晚，或在城区停留至少 3 小时并参观一处地点/吃饭，或从机场/车站进入城区。仅转机、站内换乘、高速服务区停留不算。</p>
+  </section>
+
+  <section class="wh-section" id="map">
+    <div class="pc-section-head">
+      <div><p class="pc-kicker">THE MAP · 34 PROVINCES</p><h2>把中国填满</h2></div>
+      <p>点击省份，或下面的清单。<br>右下角是南海诸岛小图。</p>
+    </div>
+    <div class="pc-map-layout">
+      <div class="pc-map-wrap">
+        <div id="pc-map" class="pc-map" aria-label="中国省级行政区足迹地图"></div>
+        <div class="pc-south-wrap"><div id="pc-south" class="pc-south" aria-label="南海诸岛小图"></div><span>南海诸岛</span></div>
+        <div class="pc-map-legend"><span><i class="pc-dot pc-dot--on"></i>已到</span><span><i class="pc-dot pc-dot--off"></i>未到</span><span class="pc-map-hint">点击省份切换</span></div>
+      </div>
+      <aside class="pc-side">
+        <div class="pc-progress">
+          <div class="pc-progress-top"><b id="pc-count2">0</b><span>/ 34</span></div>
+          <div class="pc-bar"><i id="pc-bar"></i></div>
+          <p>到过省会/首府主城区</p>
+        </div>
+        <div class="pc-region-list" id="pc-region-list"></div>
+        <div class="pc-controls">
+          <button type="button" id="pc-export">导出 JSON</button>
+          <label class="pc-import">导入<input type="file" id="pc-import" accept="application/json"></label>
+          <button type="button" id="pc-reset">清空</button>
+        </div>
+        <p class="pc-local">只保存在本机浏览器，不上传服务器。换电脑前先导出。</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="wh-section" id="list">
+    <div class="pc-section-head">
+      <div><p class="pc-kicker">THE LIST · 34 ROWS</p><h2>34 个省会 / 首府</h2></div>
+      <p>按区域分组；点一行即可切换。</p>
+    </div>
+    <div id="pc-table"></div>
+  </section>
+
+  <section class="wh-section">
+    <h2>口径与地图</h2>
+    <p class="section-sub">这是个人旅行记录，不是官方统计，也不是边界主张。</p>
+    <ul class="pc-notes">
+      <li><b>34 个省级行政区：</b>23 省、5 自治区、4 直辖市、2 特别行政区；直辖市和港澳按“到过该市”计算。</li>
+      <li><b>台湾：</b>按省级行政区名单列入，省会口径为台北；仅作个人足迹记录。</li>
+      <li><b>地图：</b>省级边界数据来自公开 GeoJSON；主图不含南海诸岛，右下角另设南海诸岛小图。底图只作个人足迹示意，不作为标准地图或边界依据。</li>
+      <li><b>隐私：</b>记录只存本机 <code>localStorage</code>；可以用 JSON 导出/导入。</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>我的中国 · 34 个省会</span>
+    <span>本机记录 · 可导出</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+    <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
+  </div>
+</footer>
+
+<script src="province-capitals-data.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script src="assets/province-capitals.js"></script>
+</body>
+</html>

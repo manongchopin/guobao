@@ -97,6 +97,15 @@
     </span>
     <span class="hs-arrow">进入资料库 <i>→</i></span>
   </a>
+  <a class="home-shelf" href="province-capitals.html">
+    <span class="hs-top"><span class="hs-no">10</span><span class="hs-kicker">34 CAPITALS</span></span>
+    <span class="hs-main">
+      <span class="hs-title">34 个省会</span>
+      <span class="hs-desc">去过省会，就算去过这个省。地图会一省一省填满。</span>
+    </span>
+    <span class="hs-arrow">打开足迹 <i>→</i></span>
+    <span class="plan-status" id="home-capitals-count">0 / 34</span>
+  </a>
 </main>
 
 <section class="home-map" aria-label="行万里路地图">
@@ -122,5 +131,15 @@
 
 <script src="updates-data.js"></script>
 <script src="assets/updates.js"></script>
+<script>
+(function () {
+  try {
+    var raw = JSON.parse(localStorage.getItem("china-capitals-v1") || "[]");
+    var arr = Array.isArray(raw) ? raw : (raw && raw.visited ? raw.visited : []);
+    var el = document.getElementById("home-capitals-count");
+    if (el) el.textContent = arr.length + " / 34";
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
