@@ -9,8 +9,8 @@
   var updatedEl = document.getElementById("sr-updated");
 
   var SPORTS = [
-    { id: "snooker", label: "斯诺克", panel: "snooker" },
-    { id: "tennis", label: "网球", panel: null }
+    { id: "snooker", label: "斯诺克" },
+    { id: "tennis", label: "网球" }
   ];
   var TOURS = [
     { id: "atp", label: "ATP" },
@@ -68,51 +68,47 @@
 
   function pendingBlock(p) {
     return '<div class="sr-pending">' +
-      '<p class="sr-pending-title">' + esc(p.sub) + "</p>" +
+      '<p class="sr-pending-title">' + esc(p.sub || p.title) + "</p>" +
       '<p class="sr-pending-note">' + esc(p.note || "数据源尚未接通。") + "</p>" +
       '<p class="sr-pending-src">来源：<a href="' + esc(p.source) + '" target="_blank" rel="noopener">' +
         esc(p.sourceLabel || p.source) + " ↗</a></p>" +
     "</div>";
   }
 
-  function tableBlock(p) {
-    var rows = p.rows.map(function (r) {
-      var name = r.nameZh || r.name;
-      var sub = r.nameZh ? '<span class="sr-name-en">' + esc(r.name) + "</span>" : "";
-      var cn = r.countryZh || "";
-      var code = r.country || "";
-      // 窄屏时 .sr-country 整列隐藏，国家信息从这里补回来
-      var inline = (cn || code)
-        ? '<span class="sr-inline-country">' + esc(cn) +
-          (cn && code ? " · " : "") + esc(code) + "</span>"
-        : "";
-      return "<tr>" +
-        '<td class="sr-rank">' + esc(r.rank) + "</td>" +
-        '<td class="sr-player"><span class="sr-name">' + esc(name) + "</span>" + sub + inline + "</td>" +
-        '<td class="sr-country">' + esc(cn) +
-          (code ? '<span class="sr-code">' + esc(code) + "</span>" : "") + "</td>" +
-        '<td class="sr-points">' + esc(r.points) + "</td>" +
-      "</tr>";
+  function sectionBlock(s) {
+    var cols = s.columns || [];
+
+    var head = cols.map(function (col) {
+      return '<th class="sr-' + esc(col.c || "player") + '">' + esc(col.label) + "</th>";
     }).join("");
 
-    return '<div class="sr-head">' +
-        '<h2 class="sr-title">' + esc(p.title) + "</h2>" +
-        '<span class="sr-sub">' + esc(p.sub) + "</span>" +
-        '<span class="sr-count">' + p.rows.length + " 条</span>" +
+    var body = s.rows.map(function (row) {
+      return "<tr>" + cols.map(function (col) {
+        var v = row[col.k] == null ? "" : row[col.k];
+        var inner = esc(v);
+        // 窄屏会把「国家」整列收起，这时把国家补到球员名下面
+        if (col.k === "name" && row.country) {
+          inner += '<span class="sr-inline-country">' + esc(row.country) + "</span>";
+        }
+        return '<td class="sr-' + esc(col.c || "player") + '">' + inner + "</td>";
+      }).join("") + "</tr>";
+    }).join("");
+
+    return '<section class="sr-section">' +
+      '<div class="sr-head">' +
+        '<h2 class="sr-title">' + esc(s.title) + "</h2>" +
+        (s.sub ? '<span class="sr-sub">' + esc(s.sub) + "</span>" : "") +
+        '<span class="sr-count">' + s.rows.length + " 条</span>" +
       "</div>" +
       '<div class="sr-table-wrap"><table class="sr-table">' +
-        "<thead><tr>" +
-          '<th class="sr-rank">名次</th>' +
-          "<th>球员</th>" +
-          '<th class="sr-country">国家</th>' +
-          '<th class="sr-points">积分</th>' +
-        "</tr></thead>" +
-        "<tbody>" + rows + "</tbody>" +
+        "<thead><tr>" + head + "</tr></thead>" +
+        "<tbody>" + body + "</tbody>" +
       "</table></div>" +
-      '<p class="sr-src">来源：<a href="' + esc(p.source) + '" target="_blank" rel="noopener">' +
-        esc(p.sourceLabel || p.source) + " ↗</a>" +
-        (p.note ? '<span class="sr-src-note">' + esc(p.note) + "</span>" : "") +
-      "</p>";
+      '<p class="sr-src">来源：<a href="' + esc(s.source) + '" target="_blank" rel="noopener">' +
+        esc(s.sourceLabel || s.source) + " ↗</a>" +
+        (s.note ? '<span class="sr-src-note">' + esc(s.note) + "</span>" : "") +
+      "</p>" +
+    "</section>";
   }
 
   function renderPanel() {
@@ -121,8 +117,8 @@
       panelEl.innerHTML = '<p class="sr-missing">这个榜单还没有数据。</p>';
       return;
     }
-    var ok = p.status === "ok" && p.rows && p.rows.length;
-    panelEl.innerHTML = ok ? tableBlock(p) : pendingBlock(p);
+    var ok = p.status === "ok" && p.sections && p.sections.length;
+    panelEl.innerHTML = ok ? p.sections.map(sectionBlock).join("") : pendingBlock(p);
   }
 
   function render() {
@@ -148,7 +144,7 @@
     render();
   });
 
-  // 支持直接打开 #wta / #atp / #snooker
+  // 支持直接打开 #snooker / #atp / #wta
   (function initFromHash() {
     var h = (location.hash || "").replace("#", "");
     if (h === "snooker") {
