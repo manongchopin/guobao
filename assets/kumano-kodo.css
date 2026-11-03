@@ -31,3 +31,63 @@
   .kumano-tips { columns: 1; }
   .kumano-day { grid-template-columns: 1fr; gap: 4px; }
 }
+
+/* 世界遗产与 41 章 */
+.kumano-kicker { margin: 0 0 4px; font-family: var(--sans); font-size: 9px; letter-spacing: .14em; color: var(--red); }
+.kumano-wh-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; border-top: 1px solid var(--ink); padding-top: 14px; margin-bottom: 8px; }
+.kumano-wh-head h2 { margin: 0; }
+.kumano-wh-mark { font-family: var(--serif); font-size: 22px; color: var(--line); letter-spacing: .15em; white-space: nowrap; }
+.kumano-wh-lede { max-width: 850px; margin: 0 0 12px; font-size: 13px; line-height: 1.9; color: var(--ink-2); }
+.kumano-wh-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 0 0 10px; }
+.kumano-wh-grid div { background: var(--paper); padding: 10px 13px; }
+.kumano-wh-grid span { display: block; font-family: var(--sans); font-size: 8px; letter-spacing: .1em; color: var(--ink-3); }
+.kumano-wh-grid b { display: block; margin: 3px 0 2px; font-family: var(--serif); font-size: 18px; }
+.kumano-wh-grid em { display: block; font-style: normal; font-size: 10px; color: var(--ink-3); }
+.kumano-wh-foot { margin: 0; padding-left: 10px; border-left: 2px solid var(--line); font-size: 11.5px; line-height: 1.8; color: var(--ink-3); }
+
+.kumano-main-card { border: 1px solid var(--ink); background: var(--paper-2); padding: 15px 17px; margin: 0 0 14px; }
+.kumano-main-top { display: flex; justify-content: space-between; gap: 10px; font-family: var(--sans); font-size: 9px; letter-spacing: .1em; color: var(--ink-3); }
+.kumano-main-top em { font-style: normal; color: var(--red); }
+.kumano-main-card h3 { margin: 7px 0 2px; font-family: var(--serif); font-size: 28px; }
+.kumano-main-days { margin: 0 0 9px; color: var(--red); font-size: 11px; }
+.kumano-main-card p { margin: 0 0 9px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
+.kumano-main-card dl { display: grid; grid-template-columns: 58px 1fr; gap: 3px 8px; margin: 0; border-top: 1px solid var(--line); padding-top: 8px; }
+.kumano-main-card dt { font-family: var(--sans); font-size: 9px; color: var(--ink-3); }
+.kumano-main-card dd { margin: 0; font-size: 11px; line-height: 1.65; color: var(--ink-2); }
+.kumano-other-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; border-top: 1px solid var(--line); padding-top: 8px; margin: 4px 0 7px; }
+.kumano-other-head span { font-family: var(--sans); font-size: 9px; letter-spacing: .12em; color: var(--red); }
+.kumano-other-head b { font-family: var(--serif); font-size: 14px; font-weight: 400; color: var(--ink-3); }
+.kumano-other-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.kumano-other-card { background: var(--paper); padding: 10px 12px; }
+.kumano-other-card h3 { margin: 0 0 3px; font-family: var(--serif); font-size: 17px; }
+.kumano-other-card h3 em { display: block; font-family: var(--sans); font-style: normal; font-size: 8px; letter-spacing: .1em; color: var(--ink-3); margin-top: 2px; }
+.kumano-other-card p { margin: 0 0 4px; font-size: 9.5px; color: var(--red); line-height: 1.5; }
+.kumano-other-card span { display: block; font-size: 10px; line-height: 1.65; color: var(--ink-3); }
+
+.kumano-stamp-section { padding-top: 8px; }
+.kumano-stamp-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; border-top: 1px solid var(--ink); padding-top: 14px; margin-bottom: 7px; }
+.kumano-stamp-head h2 { margin: 0; }
+.kumano-stamp-count { display: flex; align-items: baseline; gap: 6px; flex: 0 0 auto; }
+.kumano-stamp-count b { font-family: var(--serif); font-size: 36px; line-height: 1; color: var(--red); }
+.kumano-stamp-count span { font-size: 9px; line-height: 1.5; color: var(--ink-3); }
+.kumano-stamp-lede { max-width: 840px; margin: 0 0 12px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
+.kumano-stamp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 0 0 12px; }
+.kumano-stamp-grid div { background: var(--paper); padding: 11px 13px; }
+.kumano-stamp-grid span { display: block; font-family: var(--sans); font-size: 8px; letter-spacing: .1em; color: var(--red); }
+.kumano-stamp-grid b { display: block; margin: 3px 0 4px; font-family: var(--serif); font-size: 15px; line-height: 1.45; }
+.kumano-stamp-grid p { margin: 0; font-size: 10px; line-height: 1.65; color: var(--ink-3); }
+.kumano-cta { display: inline-block; padding: 9px 13px; background: var(--ink); color: var(--paper); text-decoration: none; font-size: 11px; }
+.kumano-cta:hover { background: #3c342c; }
+
+.kumano-cert { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.kumano-cert div { background: var(--paper); padding: 11px 13px; }
+.kumano-cert span { display: block; font-family: var(--sans); font-size: 8px; letter-spacing: .1em; color: var(--red); }
+.kumano-cert b { display: block; margin: 3px 0 4px; font-family: var(--serif); font-size: 15px; line-height: 1.45; }
+.kumano-cert p { margin: 0; font-size: 10px; line-height: 1.65; color: var(--ink-3); }
+
+@media (max-width: 760px) {
+  .kumano-wh-grid, .kumano-other-grid, .kumano-stamp-grid, .kumano-cert { grid-template-columns: 1fr; }
+  .kumano-wh-mark { display: none; }
+  .kumano-wh-head, .kumano-stamp-head { align-items: flex-start; }
+  .kumano-other-head { flex-direction: column; gap: 3px; }
+}

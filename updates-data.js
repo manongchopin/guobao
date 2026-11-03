@@ -1,5 +1,12 @@
 window.SITE_UPDATES = [
   {
+    date: "2026-11-03",
+    type: "计划",
+    title: "熊野古道 41 押印专题",
+    note: "世界遗产 / 中边路 / 41 章地图 / 本机押印册",
+    href: "kumano-stamps.html"
+  },
+  {
     date: "2026-11-02",
     type: "专题",
     title: "四至打印模板上线",

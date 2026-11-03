@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>熊野古道中边路 41 押印 · 地图与完全踏破</title>
+<meta name="description" content="熊野古道中边路 41 个押印点：地图、官方编号、分日顺序、近似坐标、完全踏破证明书和本地押印图片墙。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/kumano-stamps.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="kumano-kodo.html">← 熊野古道</a>
+  <p class="kicker">KUMANO KODO · NAKAHECHI · 41 STAMPS</p>
+  <h1>41 押印</h1>
+  <p class="lede">
+    从第 1 号到第 41 号，按顺序盖。<br>
+    <span>地图、坐标、分日排线和完全踏破证明书。</span>
+  </p>
+  <div class="seal" aria-hidden="true">印</div>
+</header>
+
+<main class="wh-detail">
+  <section class="wh-section">
+    <div class="ks-stats">
+      <div><b>41</b><span>官方押印点</span></div>
+      <div><b>6 段</b><span>田边 → 本宫 → 新宫 → 那智 → 请川</span></div>
+      <div><b>100 日元</b><span>中边路押印帐</span></div>
+      <div><b>6 天</b><span>全踏破建议</span></div>
+    </div>
+    <p class="ks-callout"><b>最重要的提醒：</b>多数人从第 4 号泷尻王子开始，但 41 章还包括 <b>1 稲葉根王子、2 北郡越、3 潮見峠越</b>。只走泷尻—本宫，最多拿到一段的章，不是完全踏破。</p>
+  </section>
+
+  <section class="wh-section" id="map">
+    <div class="ks-section-head">
+      <div><p class="ks-kicker">MAP · 41 POINTS</p><h2>41 个点，按顺序走</h2></div>
+      <p>坐标为地图用近似值；标“≈”的点请到现场按官方地图和路标复核。</p>
+    </div>
+    <div class="ks-filter" id="ks-filter"></div>
+    <div class="ks-map-layout">
+      <div class="ks-map-column">
+        <div id="ks-map" class="ks-map" aria-label="熊野古道中边路 41 押印点地图"></div>
+        <p class="ks-map-foot">底图 <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>（ODbL）· 虚线为按编号连接的示意，不是实际 GPS 轨迹。</p>
+      </div>
+      <aside class="ks-panel" aria-label="押印点列表">
+        <div class="ks-panel-head"><span id="ks-count">41 处</span><b>按编号</b></div>
+        <div class="ks-list" id="ks-list"></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="wh-section" id="table">
+    <h2>41 个点：编号、分日、坐标</h2>
+    <p class="section-sub">按官方编号排序；“≈”是近似坐标。实际走的时候，以押印台和现场路标为准。</p>
+    <div class="ks-table" id="ks-table"></div>
+  </section>
+
+  <section class="wh-section" id="certificate">
+    <h2>盖满之后：完全踏破证明书</h2>
+    <div class="ks-cert">
+      <div><span>押印帐</span><b>熊野古道中边路押印帐</b><p>100 日元。熊野古道馆、本宫馆、新宫站前、纪伊胜浦站、大门坂茶屋等地有售；不是免费的 Dual Pilgrim 手帐。</p></div>
+      <div><span>现场发证</span><b>四个窗口，当日可取</b><p>中边路町观光协会、熊野本宫观光协会、新宫市观光协会、那智胜浦观光机构。先填押印帐封底申请表。</p></div>
+      <div><span>邮寄</span><b>和歌山县厅观光振兴课</b><p>约 1 个月；海外约 2 个月。押印帐会和证书一起寄回，寄前拍照备份。</p></div>
+    </div>
+    <p class="ks-note"><b>不要和 Dual Pilgrim 混：</b>41 章全踏破是中边路押印帐；Dual Pilgrim 是熊野古道 + 圣地亚哥朝圣路的共同认证，不以盖满 41 章为必要条件。</p>
+  </section>
+
+  <section class="wh-section" id="my-stamps">
+    <div class="ks-section-head">
+      <div><p class="ks-kicker">MY STAMP BOOK · LOCAL ONLY</p><h2>我的 41 个章</h2></div>
+      <div class="ks-progress"><b id="ks-done">0</b><span>/ 41 已盖</span></div>
+    </div>
+    <p class="section-sub">点“上传照片”选择你拍的章；图片只压缩后存在本机浏览器，不上传服务器。换电脑或清浏览器数据会消失。</p>
+    <div class="ks-grid" id="ks-grid"></div>
+    <div class="ks-local-note"><b>说明：</b>这是本机预览，不是公开相册。等 41 张都上传后，可以再决定是否做正式的作品页；目前不会把你的照片发给任何人。</div>
+  </section>
+
+  <section class="wh-section">
+    <h2>来源与下载</h2>
+    <ul class="ks-sources" id="ks-sources"></ul>
+    <p class="wh-note">本页不是官方地图；押印点、证书窗口和交通会变，出发前以和歌山县、田边市熊野观光局和当地公告为准。</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>旅行计划 07 · 熊野古道 · 41 押印</span>
+    <span>中边路 · 6 段 · 本机押印册</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+    <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="kumano-kodo-data.js"></script>
+<script src="kumano-stamps-data.js"></script>
+<script src="assets/kumano-stamps.js"></script>
+</body>
+</html>

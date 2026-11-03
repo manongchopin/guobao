@@ -12,7 +12,7 @@
   var noteEl = document.getElementById("whr-note");
   var toolbarNote = document.querySelector(".toolbar-note");
   var filter = "all";
-  var DETAIL = { "日本北部的绳纹史前遗址群": "jomon.html", "大运河": "canal.html" };
+  var DETAIL = { "日本北部的绳纹史前遗址群": "jomon.html", "大运河": "canal.html", "纪伊山地的灵场和参拜道": "kumano-kodo.html" };
 
   var listed = 0;
   countries.forEach(function (c) { listed += c.items.length; });
