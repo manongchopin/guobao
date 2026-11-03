@@ -106,6 +106,15 @@
     <span class="hs-arrow">打开足迹 <i>→</i></span>
     <span class="plan-status" id="home-capitals-count">0 / 34</span>
   </a>
+  <a class="home-shelf" href="world-countries.html">
+    <span class="hs-top"><span class="hs-no">11</span><span class="hs-kicker">THE WORLD</span></span>
+    <span class="hs-main">
+      <span class="hs-title">我的世界</span>
+      <span class="hs-desc">去过哪些国家，就点亮世界地图。按联合国 193 个会员国记录。</span>
+    </span>
+    <span class="hs-arrow">打开世界 <i>→</i></span>
+    <span class="plan-status" id="home-world-count">0 / 193</span>
+  </a>
 </main>
 
 <section class="home-map" aria-label="行万里路地图">
@@ -138,6 +147,12 @@
     var arr = Array.isArray(raw) ? raw : (raw && raw.visited ? raw.visited : []);
     var el = document.getElementById("home-capitals-count");
     if (el) el.textContent = arr.length + " / 34";
+  } catch (e) {}
+  try {
+    var raw2 = JSON.parse(localStorage.getItem("world-countries-v1") || "[]");
+    var arr2 = Array.isArray(raw2) ? raw2 : (raw2 && raw2.visited ? raw2.visited : []);
+    var el2 = document.getElementById("home-world-count");
+    if (el2) el2.textContent = arr2.length + " / 193";
   } catch (e) {}
 })();
 </script>

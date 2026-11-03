@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-03",
+    type: "足迹",
+    title: "193 国世界足迹地图",
+    note: "联合国会员国 · 可填色 · 本机保存",
+    href: "world-countries.html"
+  },
+  {
+    date: "2026-11-03",
     type: "世界遗产",
     title: "纪伊山地 1142 专题",
     note: "三处灵场 · 17 点位 · 6 条参拜道",

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的世界 · 193 个国家足迹</title>
+<meta name="description" content="按联合国 193 个会员国记录世界足迹：可填色世界地图、193 国清单、本机保存与导出。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/world-countries.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="index.html">← 我走过的世界</a>
+  <p class="kicker">THE WORLD · 193 UN MEMBER STATES</p>
+  <h1>我的世界</h1>
+  <p class="lede">
+    去过的国家，点亮一块。<br>
+    <span>按联合国 193 个会员国记录；不按“地区”凑数。</span>
+  </p>
+  <div class="seal" aria-hidden="true">世</div>
+</header>
+
+<main class="wh-detail">
+  <section class="wh-section">
+    <div class="wc-stats">
+      <div><b id="wc-count">0</b><span>/ 193 已到</span></div>
+      <div><b>193</b><span>联合国会员国</span></div>
+      <div><b>6</b><span>大洲</span></div>
+      <div><b>100%</b><span>走完时的目标</span></div>
+    </div>
+    <p class="wc-callout"><b>怎么算到过：</b>进入该国并离开机场/口岸，实际停留至少 24 小时或过夜；仅转机、机场过境不算。记录只存本机，不上传服务器。</p>
+    <p class="wc-intro">国家名单按联合国 <b>193 个会员国</b> 计；梵蒂冈、巴勒斯坦是联合国观察员国，不混进这 193。底图含非会员地区，用灰色显示，不参与统计。</p>
+  </section>
+
+  <section class="wh-section" id="map">
+    <div class="wc-head">
+      <div><p class="wc-kicker">THE MAP · 193 COUNTRIES</p><h2>把世界点亮</h2></div>
+      <p>点国家或表格切换。<br>可滚轮缩放、拖动地图。</p>
+    </div>
+    <div class="wc-filter" id="wc-filter"></div>
+    <div class="wc-map-layout">
+      <div class="wc-map-wrap">
+        <div id="wc-map" class="wc-map" aria-label="世界国家足迹地图"></div>
+        <div class="wc-legend"><span><i class="wc-dot wc-dot--on"></i>已到</span><span><i class="wc-dot wc-dot--off"></i>未到</span><span><i class="wc-dot wc-dot--other"></i>非 193 会员</span></div>
+      </div>
+      <aside class="wc-side">
+        <div class="wc-progress">
+          <div class="wc-progress-top"><b id="wc-count2">0</b><span>/ 193</span></div>
+          <div class="wc-bar"><i id="wc-bar"></i></div>
+          <p>按联合国会员国计</p>
+        </div>
+        <div class="wc-region-list" id="wc-region-list"></div>
+        <div class="wc-controls">
+          <button type="button" id="wc-export">导出 JSON</button>
+          <label class="wc-import">导入<input type="file" id="wc-import" accept="application/json"></label>
+          <button type="button" id="wc-reset">清空</button>
+        </div>
+        <p class="wc-local">只保存在本机浏览器。换电脑前先导出。</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="wh-section" id="list">
+    <div class="wc-head">
+      <div><p class="wc-kicker">THE LIST · 193 ROWS</p><h2>193 个国家</h2></div>
+      <p>按大洲分组；点一行切换。<br>图瓦卢在底图中太小，只在表格里点。</p>
+    </div>
+    <div class="wc-search"><input type="search" id="wc-search" placeholder="搜索国家 / English" aria-label="搜索国家"></div>
+    <div id="wc-table"></div>
+  </section>
+
+  <section class="wh-section">
+    <h2>口径与地图</h2>
+    <p class="section-sub">这是个人旅行记录，不是官方统计，也不是边界主张。</p>
+    <ul class="wc-notes">
+      <li><b>国家标准：</b>联合国 193 个会员国；梵蒂冈、巴勒斯坦两个观察员国不计入。</li>
+      <li><b>“到过”：</b>进入该国并实际停留至少 24 小时或过夜；仅转机不算。</li>
+      <li><b>地图：</b>底图为 world-atlas/Natural Earth 50m 边界，仅作个人足迹示意；小岛国可能很小，以表格为准。</li>
+      <li><b>隐私：</b>记录只存本机 <code>localStorage</code>；可用 JSON 导出/导入。</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>我的世界 · 193 个国家</span>
+    <span>本机记录 · 可导出</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+    <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script src="world-countries-data.js"></script>
+<script src="assets/world-countries.js"></script>
+</body>
+</html>
