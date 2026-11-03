@@ -1,0 +1,80 @@
+.ca-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 20px; }
+.ca-stats div { padding: 12px 14px; border-right: 1px solid var(--line); }
+.ca-stats div:last-child { border-right: 0; }
+.ca-stats b { display: block; font-family: var(--serif); font-size: 26px; line-height: 1.1; }
+.ca-stats span { display: block; margin-top: 3px; font-size: 10px; line-height: 1.5; color: var(--ink-3); }
+.ca-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 12px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
+.ca-callout b { color: var(--ink); }
+.ca-intro { margin: 0; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
+.ca-kicker { margin: 0 0 4px; font-family: var(--sans); font-size: 9px; letter-spacing: .14em; color: var(--red); }
+.ca-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; border-top: 1px solid var(--ink); padding-top: 14px; margin-bottom: 9px; }
+.ca-head h2 { margin: 0; }
+.ca-head > p { max-width: 340px; margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); text-align: right; }
+.ca-map-wrap { position: relative; border: 1px solid var(--line); background: #e6eee9; }
+.ca-all-map { width: 100%; height: 560px; }
+.ca-legend { position: absolute; left: 12px; bottom: 12px; z-index: 500; display: flex; flex-wrap: wrap; align-items: center; gap: 9px; background: rgba(251,246,234,.94); padding: 4px 8px; font-family: var(--sans); font-size: 8px; color: var(--ink-3); }
+.ca-legend span { display: inline-flex; align-items: center; gap: 4px; }
+.ca-dot { width: 9px; height: 9px; display: inline-block; border-radius: 50%; }
+.ca-dot--culture { background: #8f3f31; }
+.ca-dot--nature { background: #3f6655; }
+.ca-dot--star { background: transparent; color: #a94738; font-size: 13px; line-height: 9px; width: auto; height: auto; }
+.ca-line { width: 18px; height: 0; border-top: 2px dashed #8a6338; display: inline-block; }
+.ca-map-note { margin: 6px 0 0; font-size: 9px; line-height: 1.6; color: var(--ink-3); }
+.ca-route-strip { display: flex; flex-wrap: wrap; gap: 3px 8px; margin: 9px 0 0; padding: 8px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.ca-route-strip span { font-size: 9px; line-height: 1.6; color: var(--ink-3); }
+.ca-route-strip b { color: var(--ink-2); font-weight: 400; }
+.ca-route-strip i { font-style: normal; color: var(--red); }
+.ca-border-table { border-top: 1px solid var(--ink); }
+.ca-border-row { display: grid; grid-template-columns: 1fr 1fr 1.3fr 50px; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--line-soft); font-size: 10px; color: var(--ink-2); }
+.ca-border-row.head { color: var(--ink-3); font-size: 8px; letter-spacing: .05em; }
+.ca-border-row b { font-weight: 400; color: var(--ink); }
+.ca-border-row em { font-style: normal; color: var(--red); font-size: 8px; }
+.ca-country-block { margin-bottom: 20px; border-top: 1px solid var(--ink); padding-top: 8px; }
+.ca-country-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 6px; }
+.ca-country-head h3 { margin: 0; font-family: var(--serif); font-size: 23px; }
+.ca-country-head span { font-size: 9px; color: var(--ink-3); }
+.ca-country-body { display: grid; grid-template-columns: 1.05fr .95fr; gap: 12px; align-items: stretch; }
+.ca-country-map { min-height: 260px; height: 100%; border: 1px solid var(--line); background: #e6eee9; z-index: 0; }
+.ca-country-sites { display: grid; grid-template-columns: 1fr; gap: 3px; align-content: start; }
+.ca-site { border-bottom: 1px solid var(--line-soft); padding: 4px 0 5px; }
+.ca-site-top { display: flex; justify-content: space-between; gap: 8px; font-family: var(--sans); font-size: 8px; color: var(--ink-3); }
+.ca-site-top b { font-weight: 400; color: var(--red); }
+.ca-site h4 { margin: 2px 0 1px; font-family: var(--serif); font-size: 13px; line-height: 1.4; }
+.ca-site p { margin: 0; font-size: 8.5px; line-height: 1.55; color: var(--ink-3); }
+.ca-site .en { color: var(--ink-3); font-size: 7.5px; }
+.ca-badge { display: inline-block; margin-left: 4px; padding: 0 3px; border: 1px solid var(--line); font-family: var(--sans); font-size: 7px; color: var(--ink-3); vertical-align: 1px; }
+.ca-china-lede { max-width: 880px; margin: 0 0 9px; font-size: 11.5px; line-height: 1.8; color: var(--ink-2); }
+.ca-china-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.ca-china-card { border: 1px solid var(--line); background: var(--paper); padding: 9px 11px; }
+.ca-china-card-top { display: flex; justify-content: space-between; gap: 8px; font-family: var(--sans); font-size: 8px; color: var(--ink-3); }
+.ca-china-card-top b { font-weight: 400; color: var(--red); }
+.ca-china-card h3 { margin: 3px 0 2px; font-family: var(--serif); font-size: 16px; line-height: 1.45; }
+.ca-china-card .where { margin: 0 0 4px; color: var(--red); font-size: 9px; }
+.ca-china-card p { margin: 0; font-size: 9.5px; line-height: 1.65; color: var(--ink-3); }
+.ca-china-card .access { margin-top: 4px; padding-top: 4px; border-top: 1px solid var(--line-soft); color: var(--ink-3); font-size: 8.5px; }
+.ca-notes { margin: 0; padding-left: 18px; }
+.ca-notes li { margin: 0 0 6px; font-size: 11px; line-height: 1.75; color: var(--ink-2); }
+.ca-sources { margin: 10px 0 0; padding-left: 18px; }
+.ca-sources li { margin: 0 0 5px; font-size: 10px; line-height: 1.7; }
+.ca-sources a { color: var(--red); }
+.ca-pin-wrap { background: transparent; border: 0; }
+.ca-pin { display: flex; align-items: center; justify-content: center; width: 23px; height: 23px; border-radius: 50%; border: 1.5px solid #fff; background: var(--pin, #8f3f31); color: #fff; font-family: var(--mono); font-size: 7px; box-shadow: 0 1px 4px rgba(0,0,0,.35); }
+.ca-star { font-size: 22px; color: #a94738; text-shadow: 0 1px 2px #fff, 0 0 4px #fff; line-height: 22px; }
+.leaflet-popup-content { font: 11px/1.65 var(--sans); }
+.leaflet-popup-content b { font-family: var(--serif); font-size: 15px; }
+.ca-pop-meta { color: #6b6258; font-size: 9px; margin: 2px 0 5px; }
+@media (max-width: 900px) {
+  .ca-country-body { grid-template-columns: 1fr; }
+  .ca-country-map { height: 300px; min-height: 0; }
+}
+@media (max-width: 760px) {
+  .ca-stats { grid-template-columns: 1fr 1fr; }
+  .ca-stats div:nth-child(2) { border-right: 0; }
+  .ca-stats div:nth-child(1), .ca-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .ca-head { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .ca-head > p { text-align: left; }
+  .ca-all-map { height: 420px; }
+  .ca-china-grid { grid-template-columns: 1fr; }
+  .ca-border-row { grid-template-columns: 1fr 1fr; }
+  .ca-border-row span:nth-child(3), .ca-border-row em { display: none; }
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中亚五斯坦 · 自驾路线与世界遗产</title>
+<meta name="description" content="从霍尔果斯出境，自驾哈萨克斯坦、吉尔吉斯斯坦、乌兹别克斯坦、土库曼斯坦、塔吉克斯坦：路线骨架、五国世界遗产地图与中国关联遗存。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/central-asia.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="plans.html">← 旅行计划</a>
+  <p class="kicker">PLAN 12 · CENTRAL ASIA · FIVE STANS</p>
+  <h1>中亚五斯坦</h1>
+  <p class="lede">
+    从霍尔果斯出境，穿过五个“斯坦”，再回到中国。<br>
+    <span>一条自驾骨架，五国世界遗产，以及沿途的中国历史回声。</span>
+  </p>
+  <div class="seal" aria-hidden="true">亚</div>
+</header>
+
+<main class="wh-detail">
+  <section class="wh-section">
+    <div class="ca-stats">
+      <div><b>5</b><span>国家</span></div>
+      <div><b>28</b><span>国家-遗产记录</span></div>
+      <div><b>21</b><span>独立世界遗产</span></div>
+      <div><b>7</b><span>待落实口岸</span></div>
+    </div>
+    <p class="ca-callout"><b>这是 v0.1 骨架：</b>路线顺序已定，但每个国家之间走哪个口岸、签证/车辆手续、季节和每天落点都还没落实。世界遗产名单截至 2026 年，含 2025/2026 新列入项目。</p>
+    <p class="ca-intro">顺序：中国 → 哈萨克斯坦 → 吉尔吉斯斯坦 → 乌兹别克斯坦 → 土库曼斯坦 → 乌兹别克斯坦 → 塔吉克斯坦 → 中国。为一个国家内的世界遗产，路线会绕开最短路径；后面再按口岸和路况收紧。</p>
+  </section>
+
+  <section class="wh-section" id="route">
+    <div class="ca-head">
+      <div><p class="ca-kicker">THE ROUTE · OVERLAND</p><h2>路线骨架与总图</h2></div>
+      <p>实线为路线示意，虚线为国境段。<br>点开标记看遗产；★ 是中国关联点。</p>
+    </div>
+    <div class="ca-map-wrap">
+      <div id="ca-all-map" class="ca-all-map" aria-label="中亚五国路线与世界遗产总图"></div>
+      <div class="ca-legend">
+        <span><i class="ca-dot ca-dot--culture"></i>文化遗产</span>
+        <span><i class="ca-dot ca-dot--nature"></i>自然遗产</span>
+        <span><i class="ca-dot ca-dot--star">★</i>中国关联</span>
+        <span><i class="ca-line"></i>自驾路线</span>
+      </div>
+    </div>
+    <div class="ca-route-strip" id="ca-route-strip"></div>
+    <p class="ca-map-note">底图 © OpenStreetMap contributors（ODbL）。坐标为近似值；路线不是 GPS 轨迹，口岸与道路以出发前官方信息为准。</p>
+  </section>
+
+  <section class="wh-section" id="borders">
+    <div class="ca-head">
+      <div><p class="ca-kicker">BORDERS · TO CONFIRM</p><h2>口岸先列出来，不急着定</h2></div>
+      <p>每一段至少准备一个主口岸 + 一个备选。<br>车辆手续和签证政策后面单独做。</p>
+    </div>
+    <div class="ca-border-table" id="ca-borders"></div>
+  </section>
+
+  <section class="wh-section" id="countries">
+    <div class="ca-head">
+      <div><p class="ca-kicker">FIVE COUNTRIES · UNESCO</p><h2>五国世界遗产，一国有图</h2></div>
+      <p>截至 2026 年。<br>跨国项目在各国分别列出；总图会重复出现。</p>
+    </div>
+    <div id="ca-countries"></div>
+  </section>
+
+  <section class="wh-section" id="china-links">
+    <div class="ca-head">
+      <div><p class="ca-kicker">CHINESE ECHOES · OUTSIDE CHINA</p><h2>沿途能到达的中国历史关联</h2></div>
+      <p>不是“境外中国领土”，是历史联系。<br>按关联强度分 A/B/C，不把丝路context硬说成中国遗迹。</p>
+    </div>
+    <p class="ca-china-lede">这条路最有意思的地方，是现代中国疆域之外仍能看到与中原王朝、汉地佛教、华人移民有关的痕迹。下面只列**这条路能实际到达**的点，并标明是直接关联、求法记录，还是华人移民建筑。</p>
+    <div class="ca-china-grid" id="ca-china-links"></div>
+    <p class="ca-map-note">A 级：与中原王朝/重大中国事件直接相关；B 级：中国求法记录或汉地佛教文化圈；C 级：近代华人移民建造/使用。历史解释仍有争议的地方，页面用“传统上/相关”而不是定论。</p>
+  </section>
+
+  <section class="wh-section">
+    <h2>口径与下一步</h2>
+    <ul class="ca-notes">
+      <li><b>遗产数量：</b>五国共 28 条“国家-遗产”记录；去掉跨国项目重复后约 21 个独立遗产。</li>
+      <li><b>新列入：</b>哈萨克斯坦“曼吉斯套岩石清真寺与圣地”2026；乌兹别克斯坦“塔什干现代主义建筑”2026；塔吉克斯坦“古代胡塔勒文化遗址”2025。</li>
+      <li><b>路线：</b>当前只定国家顺序和大致城市；口岸、签证、车辆通关、季节和每日里程后面逐段落实。</li>
+      <li><b>中国关联：</b>碎叶、怛罗斯、撒马尔罕、铁尔梅兹、阿吉纳泰佩、卡拉科尔东干清真寺，分别代表政治/战争、求法/佛教、移民建筑三类联系。</li>
+    </ul>
+    <ul class="ca-sources" id="ca-sources"></ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>旅行计划 12 · 中亚五斯坦</span>
+    <span>v0.1 骨架 · 口岸待落实</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+    <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="central-asia-data.js"></script>
+<script src="assets/central-asia.js"></script>
+</body>
+</html>
