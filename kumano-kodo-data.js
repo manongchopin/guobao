@@ -1,4 +1,3 @@
-/* 07 · 熊野古道：路线比较与第一次走法 */
 window.KUMANO_KODO = {
   "updated": "2026-11-03",
   "routes": [
@@ -112,29 +111,8 @@ window.KUMANO_KODO = {
     {
       "name": "田边市熊野观光局：熊野古道地图",
       "url": "https://www.tb-kumano.jp/cn/kumano-kodo/maps/"
-    },
-    {
-      "name": "UNESCO：纪伊山地的灵场和参拜道",
-      "url": "https://whc.unesco.org/en/list/1142/"
     }
   ],
-  "worldHeritage": {
-    "officialName": "纪伊山地的灵场和参拜道",
-    "en": "Sacred Sites and Pilgrimage Routes in the Kii Mountain Range",
-    "unesco": "1142",
-    "year": 2004,
-    "components": [
-      "吉野·大峰",
-      "熊野三山",
-      "高野山"
-    ],
-    "routes": [
-      "大峰奥驱道",
-      "熊野参诣道（中边路、小边路、大边路、伊势路）",
-      "高野山町石道"
-    ],
-    "summary": "“熊野古道”是通俗叫法；世界遗产正式名称是“纪伊山地的灵场和参拜道”。它由三处灵场和连接它们的参拜道组成，2004 年列入 UNESCO 世界文化遗产。"
-  },
   "certificate": {
     "name": "熊野古道中边路完全踏破证明书",
     "book": "熊野古道中边路押印帐",

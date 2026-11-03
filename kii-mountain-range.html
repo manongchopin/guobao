@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>纪伊山地的灵场和参拜道 · UNESCO 1142</title>
+<meta name="description" content="世界遗产「纪伊山地的灵场和参拜道」：吉野·大峰、熊野三山、高野山，17 个主要点位、6 条参拜道、9 天走法与熊野古道链接。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/kii-wh.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="wh-asia.html">← 亚洲世界遗产</a>
+  <p class="kicker">UNESCO 1142 · 2004 · KII MOUNTAIN RANGE</p>
+  <h1>纪伊山地的<br>灵场和参拜道</h1>
+  <p class="lede">
+    三处灵场，六条道路，一整座半岛。<br>
+    <span>吉野·大峰、熊野三山、高野山，以及把它们连起来的参拜道。</span>
+  </p>
+  <div class="seal" aria-hidden="true">紀</div>
+</header>
+
+<main class="wh-detail">
+  <section class="wh-section">
+    <div class="kw-stats">
+      <div><b>3</b><span>处灵场</span></div>
+      <div><b>17</b><span>本页主要点位</span></div>
+      <div><b>6</b><span>条参拜道</span></div>
+      <div><b>242</b><span>UNESCO 构成要素</span></div>
+    </div>
+    <p class="kw-callout"><b>先分清：</b>“熊野古道”只是这个世界遗产的一部分。1142 的主体是三处灵场，加上连接它们的参拜道；熊野参诣道又分中边路、小边路、大边路、伊势路。</p>
+    <p class="kw-intro">2004 年列入世界文化遗产。它不是一条“熊野古道”，而是纪伊半岛上三处灵场——吉野·大峰、熊野三山、高野山——以及连接它们的参拜道网络。UNESCO 从这些灵场和古道中选出 242 个构成要素；本页把其中最值得先认识的 17 个点位和 6 条道路拎出来。</p>
+  </section>
+
+  <section class="wh-section" id="map">
+    <div class="kw-head">
+      <div><p class="kw-kicker">THE MAP · KII PENINSULA</p><h2>三处灵场，六条路</h2></div>
+      <p>点为 17 个主要点位；虚线为 6 条参拜道示意。<br>路线不是 GPS 轨迹，实际走法以当地路标为准。</p>
+    </div>
+    <div class="kw-filter" id="kw-filter"></div>
+    <div class="kw-map-layout">
+      <div class="kw-map-column">
+        <div id="kw-map" class="kw-map" aria-label="纪伊山地灵场和参拜道地图"></div>
+        <p class="kw-map-foot">底图 <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>（ODbL）· 坐标为近似值；参拜道为示意线，不是完整走线。</p>
+      </div>
+      <aside class="kw-panel" aria-label="17 个主要点位">
+        <div class="kw-panel-head"><span id="kw-count">17 处</span><b>按本页编号</b></div>
+        <div class="kw-list" id="kw-list"></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="wh-section" id="assets">
+    <div class="kw-head">
+      <div><p class="kw-kicker">THE SITES · 3 AREAS</p><h2>17 个主要点位</h2></div>
+      <p>按三处灵场分组。<br>不是 242 个要素的全部，只是先认识的骨架。</p>
+    </div>
+    <div id="kw-assets"></div>
+  </section>
+
+  <section class="wh-section" id="routes">
+    <div class="kw-head">
+      <div><p class="kw-kicker">THE ROUTES · 6 PATHS</p><h2>可以走哪些道路</h2></div>
+      <p>点一条道路，地图会高亮。<br>长度和天数按常见走法，实际按体力和住宿调整。</p>
+    </div>
+    <div class="kw-route-list" id="kw-routes"></div>
+    <p class="kw-warn"><b>不要混：</b>中边路是熊野参诣道里最成熟的一条；小边路是高山线；大边路是海岸线；伊势路是长线；大峰奥驱道是修验道；高野山町石道是上高野山的石标古道。</p>
+  </section>
+
+  <section class="wh-section" id="plan">
+    <div class="kw-head">
+      <div><p class="kw-kicker">THE PLAN · 9 DAYS</p><h2>第一次看全三处灵场：9 天</h2></div>
+      <p>这是“看骨架”的走法，不是把六条古道全程走完。<br>全程走完六条，需要以周为单位。</p>
+    </div>
+    <div class="kw-plan" id="kw-plan"></div>
+    <a class="kw-kumano-link" href="kumano-kodo.html">走中边路：打开熊野古道实走页 ↗</a>
+  </section>
+
+  <section class="wh-section">
+    <h2>来源与说明</h2>
+    <ul class="kw-sources" id="kw-sources"></ul>
+    <p class="wh-note">本页是个人旅行整理，不是官方名录或向导。1142 的构成要素、范围和开放情况，以 UNESCO、文化厅和当地公告为准。</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>世界遗产 · 纪伊山地的灵场和参拜道</span>
+    <span>UNESCO 1142 · 2004</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+    <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="kii-wh-data.js"></script>
+<script src="assets/kii-wh.js"></script>
+</body>
+</html>

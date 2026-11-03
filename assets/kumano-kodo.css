@@ -128,3 +128,7 @@
   .kumano-dual-conditions li { flex-direction: column; gap: 2px; }
   .kumano-dual-conditions span { text-align: left; }
 }
+
+.kumano-kii-link { margin: 10px 0 0; padding: 8px 11px; border-left: 2px solid var(--line); font-size: 10.5px; line-height: 1.7; color: var(--ink-3); }
+.kumano-kii-link b { color: var(--ink-2); }
+.kumano-kii-link a { color: var(--red); }

@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-03",
     type: "世界遗产",
+    title: "纪伊山地 1142 专题",
+    note: "三处灵场 · 17 点位 · 6 条参拜道",
+    href: "kii-mountain-range.html"
+  },
+  {
+    date: "2026-11-03",
+    type: "世界遗产",
     title: "富士山 25 个构成资产专题",
     note: "UNESCO 1418 · 地图 · 6 天路线 · 登山链接",
     href: "fuji-world-heritage.html"
