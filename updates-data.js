@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-03",
+    type: "世界遗产",
+    title: "富士山 25 个构成资产专题",
+    note: "UNESCO 1418 · 地图 · 6 天路线 · 登山链接",
+    href: "fuji-world-heritage.html"
+  },
+  {
+    date: "2026-11-03",
     type: "计划",
     title: "富士山烧印对照与トモエ館预订",
     note: "2025 记录 · 18/36 枚口径 · 本八合目住宿",

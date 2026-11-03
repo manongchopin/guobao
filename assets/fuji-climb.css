@@ -119,3 +119,7 @@
   .fuji-hut-head { align-items: flex-start; flex-direction: column; gap: 5px; }
   .fuji-hut-grid { grid-template-columns: 1fr; }
 }
+
+.fuji-wh-link { margin: 0 0 18px; padding: 8px 11px; border-left: 2px solid var(--line); font-size: 10.5px; line-height: 1.7; color: var(--ink-3); }
+.fuji-wh-link b { color: var(--ink-2); }
+.fuji-wh-link a { color: var(--red); }
