@@ -104,3 +104,17 @@
 @media (max-width: 800px) {
   .ks-first3-grid { grid-template-columns: 1fr; }
 }
+
+.ks-best { border: 1px solid var(--ink); background: var(--paper-2); padding: 10px 13px; margin: 0 0 12px; }
+.ks-best span { display: block; font-family: var(--sans); font-size: 8px; letter-spacing: .12em; color: var(--red); }
+.ks-best b { display: block; margin: 2px 0 3px; font-family: var(--serif); font-size: 18px; }
+.ks-best p { margin: 0; font-size: 10.5px; line-height: 1.75; color: var(--ink-2); }
+
+.ks-progress-sub { font-size: 8px; color: var(--ink-3); text-align: right; margin-top: 2px; }
+.ks-thumb-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin: 5px 0; }
+.ks-thumb-pair .ks-thumb { height: 74px; position: relative; margin: 0; }
+.ks-thumb-label { position: absolute; left: 3px; top: 2px; z-index: 2; background: rgba(251,246,234,.88); padding: 0 2px; font-family: var(--sans); font-size: 7px; color: var(--red); }
+.ks-thumb-pair .ks-thumb > span:not(.ks-thumb-label) { font-size: 7px; }
+@media (max-width: 760px) {
+  .ks-thumb-pair .ks-thumb { height: 82px; }
+}

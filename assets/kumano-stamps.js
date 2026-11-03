@@ -123,11 +123,11 @@
     reader.onload = function () {
       var img = new Image();
       img.onload = function () {
-        var max = 560, scale = Math.min(1, max / Math.max(img.width, img.height));
+        var max = 480, scale = Math.min(1, max / Math.max(img.width, img.height));
         var c = document.createElement("canvas");
         c.width = Math.round(img.width * scale); c.height = Math.round(img.height * scale);
         c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
-        cb(c.toDataURL("image/jpeg", 0.72));
+        cb(c.toDataURL("image/jpeg", 0.68));
       };
       img.src = reader.result;
     };
@@ -135,17 +135,30 @@
   }
   function renderGrid() {
     var done = Object.keys(state.done).filter(function (k) { return state.done[k]; }).length;
+    var siteDone = 0;
+    D.points.forEach(function (p) {
+      var rec = state.images[p.no];
+      if (rec && typeof rec === "object" && rec.site) siteDone++;
+    });
     document.getElementById("ks-done").textContent = done;
+    var siteEl = document.getElementById("ks-site-done");
+    if (siteEl) siteEl.textContent = siteDone;
     document.getElementById("ks-grid").innerHTML = D.points.map(function (p) {
-      var img = state.images[p.no];
-      var on = !!state.done[p.no];
+      var rec = state.images[p.no];
+      var site = rec && typeof rec === "object" ? rec.site : "";
+      var stamp = rec && typeof rec === "object" ? rec.stamp : (typeof rec === "string" ? rec : "");
+      var on = !!state.done[p.no] || !!stamp;
       return '<div class="ks-slot' + (on ? " is-done" : "") + '" data-no="' + p.no + '">' +
         '<div class="ks-slot-head"><span>' + p.no + '</span><b>' + esc(p.name) + '</b></div>' +
-        '<div class="ks-thumb">' + (img ? '<img src="' + img + '" alt="' + esc(p.name) + ' 的押印照片">' : '<span>待上传</span>') + '</div>' +
+        '<div class="ks-thumb-pair">' +
+        '<div class="ks-thumb"><span class="ks-thumb-label">地点</span>' + (site ? '<img src="' + site + '" alt="' + esc(p.name) + ' 的地点照片">' : '<span>待上传</span>') + '</div>' +
+        '<div class="ks-thumb"><span class="ks-thumb-label">章</span>' + (stamp ? '<img src="' + stamp + '" alt="' + esc(p.name) + ' 的章面照片">' : '<span>待上传</span>') + '</div>' +
+        '</div>' +
         '<div class="ks-slot-actions">' +
-        '<label class="ks-upload">上传照片<input type="file" accept="image/*" data-upload="' + p.no + '"></label>' +
+        '<label class="ks-upload">地点<input type="file" accept="image/*" data-upload="' + p.no + '" data-kind="site"></label>' +
+        '<label class="ks-upload">章<input type="file" accept="image/*" data-upload="' + p.no + '" data-kind="stamp"></label>' +
         '<button type="button" class="' + (on ? "is-on" : "") + '" data-done="' + p.no + '">' + (on ? "✓ 已盖" : "标记已盖") + '</button>' +
-        (img ? '<button type="button" data-clear="' + p.no + '">清除</button>' : '') +
+        (site || stamp ? '<button type="button" data-clear="' + p.no + '">清除</button>' : '') +
         '</div></div>';
     }).join("");
   }
@@ -153,9 +166,14 @@
     var input = e.target.closest("input[data-upload]");
     if (!input || !input.files || !input.files[0]) return;
     var no = Number(input.getAttribute("data-upload"));
-    var p = D.points.filter(function (x) { return x.no === no; })[0];
+    var kind = input.getAttribute("data-kind");
+    var rec = state.images[no];
+    if (!rec || typeof rec !== "object") rec = { stamp: typeof rec === "string" ? rec : "" };
     compress(input.files[0], function (data) {
-      state.images[no] = data; state.done[no] = true; save(); renderGrid();
+      rec[kind] = data;
+      state.images[no] = rec;
+      if (kind === "stamp") state.done[no] = true;
+      save(); renderGrid();
     });
   });
   document.getElementById("ks-grid").addEventListener("click", function (e) {
