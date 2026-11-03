@@ -95,6 +95,14 @@
       }).join("");
     }).join("");
 
+  var approx = D.points.filter(function (p) { return p.approx; });
+  var approxEl = document.getElementById("ks-approx-note");
+  if (approxEl) {
+    approxEl.innerHTML = approx.length
+      ? '<b>仍有 ' + approx.length + ' 个点标 ≈：</b>' + approx.map(function (p) { return p.no + ' ' + esc(p.name); }).join("、") + '。这些多是山路、茶屋迹或没有公开精确节点的点，按官方 41 处示意图和邻近道路定位；到现场请以押印台/路标为准。'
+      : '41 个点均已用公开节点或官方图核对。';
+  }
+
   document.getElementById("ks-sources").innerHTML = [
     { name: "和歌山县世界遗产中心：中边路押印帐与完全踏破证明书", url: "https://www.sekaiisan-wakayama.jp/walk/ouinchou.html" },
     { name: "和歌山县官方观光：中边路 41 处押印点一覧（PDF）", url: "https://www.wakayama-kanko.or.jp/lsc/upfile/articleDetail/0000/2510/2510_d003_file.pdf" },
