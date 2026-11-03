@@ -2,8 +2,8 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-03",
     type: "足迹",
-    title: "我的行程：19 段飞行 + 4 段火车",
-    note: "24,776 km · 日期到月",
+    title: "我的行程：20 段飞行 + 4 段火车",
+    note: "25,847 km · 日期到月",
     href: "trips.html"
   },
   {

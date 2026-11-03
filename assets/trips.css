@@ -29,6 +29,7 @@
 }
 .tp-flights-head { border-bottom: 1px solid var(--ink); padding: 6px 4px; font-family: var(--sans); font-size: 9.5px; letter-spacing: .12em; color: var(--ink-3); }
 .tp-month { font-family: var(--mono); font-size: 10px; color: var(--red); }
+.tp-seq { font-style: normal; font-family: var(--sans); font-size: 9px; color: var(--ink-3); margin-left: 3px; }
 .tp-flight-no { font-family: var(--mono); font-size: 11px; color: var(--ink); }
 .tp-route { font-family: var(--serif); font-size: 13.5px; color: var(--ink); line-height: 1.5; }
 .tp-route i { font-family: var(--sans); font-style: normal; font-size: 9px; letter-spacing: .04em; color: var(--ink-3); }

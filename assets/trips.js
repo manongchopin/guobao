@@ -42,6 +42,14 @@
       (byYear[yearOf(x)] = byYear[yearOf(x)] || []).push(x);
     });
 
+    function keyOf(x) {
+      return [x.month, x.flight || x.train, x.from, x.to].join("|");
+    }
+    var counts = {};
+    list.forEach(function (x) { counts[keyOf(x)] = (counts[keyOf(x)] || 0) + 1; });
+    var seen = {};
+    var CIRC = "①②③④⑤⑥⑦⑧⑨⑩";
+
     box.innerHTML = Object.keys(byYear).sort().reverse().map(function (y) {
       var group = byYear[y];
       var head = '<div class="tp-year"><span>' + esc(y) + '</span><em>' +
@@ -54,8 +62,11 @@
           route = esc(x.from || "") + ' <i>' + esc(x.fromCode || "") + '</i> <b>→</b> ' +
             esc(x.to || "") + ' <i>' + esc(x.toCode || "") + '</i>';
         }
+        var k = keyOf(x);
+        var n = (seen[k] = (seen[k] || 0) + 1);
+        var mark = counts[k] > 1 ? '<i class="tp-seq">' + CIRC.charAt(n - 1) + '</i>' : '';
         return '<div class="tp-flight-row">' +
-          '<span class="tp-month">' + esc(String(x.month || "").slice(5)) + ' 月</span>' +
+          '<span class="tp-month">' + esc(String(x.month || "").slice(5)) + ' 月' + mark + '</span>' +
           '<span class="tp-flight-no">' + esc(x.flight || x.train || "") + '</span>' +
           '<span class="tp-route">' + route + '</span>' +
           '<span class="tp-km">' + fmt(Number(x.km) || 0) + ' km</span>' +
