@@ -19,7 +19,7 @@
 
    fetchedAt 是本地抓取时间；榜单"截至"时点写在各自 section.note 里。 */
 window.SPORTS_RANKINGS = {
-  "fetchedAt": "2026-11-03T11:41:35.105Z",
+  "fetchedAt": "2026-11-03T11:48:25.247Z",
   "panels": {
     "snooker": {
       "id": "snooker",
@@ -1205,9 +1205,9 @@ window.SPORTS_RANKINGS = {
               "c": "points"
             }
           ],
-          "source": "https://en.wikipedia.org/wiki/Li_Na",
-          "sourceLabel": "维基百科各球员页信息框",
-          "note": "生涯总奖金，含现役与退役球员。数字由维基编辑手动维护，可能略滞后于官方；晏紫、李婷无维基条目，未收入。",
+          "source": "https://wtafiles.wtatennis.com/pdf/rankings/All_Career_Prize_Money.pdf",
+          "sourceLabel": "WTA · All Career Prize Money（女子）+ 维基百科（男子）",
+          "note": "女子取自 WTA 官方生涯奖金全名单；男子因 ATP 无对应公开 PDF，取自维基百科球员页。含退役球员。",
           "rows": [
             {
               "rank": 1,
@@ -1217,7 +1217,7 @@ window.SPORTS_RANKINGS = {
             {
               "rank": 2,
               "name": "张帅",
-              "points": "$13,601,287"
+              "points": "$14,075,022"
             },
             {
               "rank": 3,
@@ -1237,7 +1237,7 @@ window.SPORTS_RANKINGS = {
             {
               "rank": 6,
               "name": "王欣瑜",
-              "points": "$5,975,457"
+              "points": "$6,077,567"
             },
             {
               "rank": 7,
@@ -1252,12 +1252,12 @@ window.SPORTS_RANKINGS = {
             {
               "rank": 9,
               "name": "朱琳",
-              "points": "$4,237,094"
+              "points": "$4,273,204"
             },
             {
               "rank": 10,
               "name": "徐一璠",
-              "points": "$4,212,700"
+              "points": "$4,228,100"
             }
           ]
         },

@@ -20,7 +20,8 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, "..");
 const DATA_FILE = join(ROOT, "sports-rankings-data.js");
 const NAMES_FILE = join(HERE, "sports-names.json");
-const PRIZE_JSON = process.env.WTA_PRIZE_JSON || "/tmp/wta-prize.json";
+const PRIZE_JSON = process.env.WTA_PRIZE_JSON || "/tmp/wta-ytd.json";
+const CAREER_JSON = process.env.WTA_CAREER_JSON || "/tmp/wta-career.json";
 
 const UA = "Mozilla/5.0 (compatible; guobao-site/1.0; +https://manongchopin.github.io/guobao/)";
 
@@ -350,19 +351,39 @@ function prizeOf(html) {
 }
 
 async function career() {
-  const out = [];
-  for (const p of names.career || []) {
+  const rows = [];
+
+  // 女子：WTA 官方生涯奖金 PDF（全名单，比维基新）
+  const women = JSON.parse(await readFile(CAREER_JSON, "utf8"));
+  const wmap = names.careerWomen || {};
+  const unmapped = [];
+  for (const w of women) {
+    const zh = wmap[w.name];
+    if (zh) rows.push({ zh, money: w.total });
+    else unmapped.push(w);
+  }
+
+  // 男子：没有 ATP 的对应 PDF，仍然走维基信息框
+  for (const p of names.careerMen || []) {
     try {
       const html = await get(`https://en.wikipedia.org/wiki/${p.wiki}`);
       const v = prizeOf(html);
-      if (v) out.push({ zh: p.zh, money: v });
+      if (v) rows.push({ zh: p.zh, money: v });
+      else console.warn(`  · ${p.zh} 维基未给出奖金`);
     } catch (e) {
       console.warn(`  · ${p.zh} 生涯奖金抓取失败：${e.message}`);
     }
   }
-  if (out.length < 10) throw new Error(`只拿到 ${out.length} 位球员`);
-  out.sort((a, b) => b.money - a.money);
-  return out.slice(0, 10).map((r, i) => ({ rank: i + 1, name: r.zh, points: money(r.money) }));
+
+  if (rows.length < 10) throw new Error(`只拿到 ${rows.length} 位球员`);
+  rows.sort((a, b) => b.money - a.money);
+  const top = rows.slice(0, 10);
+
+  // 只对"本来能进前 10、却因为没有中文名被漏掉"的人报警，否则几百个低排名球员会淹没日志
+  const cutoff = top[top.length - 1].money;
+  for (const u of unmapped) if (u.total >= cutoff) missingNames.add(u.name);
+
+  return top.map((r, i) => ({ rank: i + 1, name: r.zh, points: money(r.money) }));
 }
 
 /* 赛季奖金：读 Python 解析出来的 JSON */
@@ -460,8 +481,9 @@ const SPEC = [
 
   ["tennis", "chn-career", {
     title: "中国球员 · 生涯奖金", sub: "男女合并 · 前 10", wide: false, columns: COLS.prize,
-    source: "https://en.wikipedia.org/wiki/Li_Na", sourceLabel: "维基百科各球员页信息框",
-    note: "生涯总奖金，含现役与退役球员。数字由维基编辑手动维护，可能略滞后于官方；晏紫、李婷无维基条目，未收入。"
+    source: "https://wtafiles.wtatennis.com/pdf/rankings/All_Career_Prize_Money.pdf",
+    sourceLabel: "WTA · All Career Prize Money（女子）+ 维基百科（男子）",
+    note: "女子取自 WTA 官方生涯奖金全名单；男子因 ATP 无对应公开 PDF，取自维基百科球员页。含退役球员。"
   }, career],
 
   ["tennis", "chn-season", {

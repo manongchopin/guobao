@@ -26,18 +26,21 @@ jobs:
         run: pip install --quiet pypdf
 
       # 下载交给 curl，Python 只解析本地文件：各跑各的 TLS 链，互不影响
-      - name: Download WTA prize money PDF
+      - name: Download WTA prize money PDFs
         continue-on-error: true
         run: |
-          curl -sS -L -m 90 \
-            -A "Mozilla/5.0 (compatible; guobao-site/1.0; +https://manongchopin.github.io/guobao/)" \
-            -o /tmp/wta-prize.pdf \
+          UA="Mozilla/5.0 (compatible; guobao-site/1.0; +https://manongchopin.github.io/guobao/)"
+          curl -sS -L -m 120 -A "$UA" -o /tmp/wta-ytd.pdf \
             "https://wtafiles.wtatennis.com/pdf/rankings/All_YTD_Prize_Money.pdf"
-          ls -la /tmp/wta-prize.pdf
+          curl -sS -L -m 120 -A "$UA" -o /tmp/wta-career.pdf \
+            "https://wtafiles.wtatennis.com/pdf/rankings/All_Career_Prize_Money.pdf"
+          ls -la /tmp/wta-ytd.pdf /tmp/wta-career.pdf
 
       - name: Parse WTA prize money
         continue-on-error: true
-        run: python scripts/fetch-wta-prize.py /tmp/wta-prize.pdf
+        run: |
+          python scripts/fetch-wta-prize.py ytd    /tmp/wta-ytd.pdf
+          python scripts/fetch-wta-prize.py career /tmp/wta-career.pdf
 
       - name: Fetch and merge rankings
         run: node scripts/update-sports-rankings.mjs

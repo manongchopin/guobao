@@ -133,92 +133,6 @@
     "Zhang Anda": "Zhang_Anda",
     "Marco Fu": "Marco_Fu"
   },
-  "career": [
-    {
-      "zh": "李娜",
-      "wiki": "Li_Na"
-    },
-    {
-      "zh": "张帅",
-      "wiki": "Zhang_Shuai"
-    },
-    {
-      "zh": "郑钦文",
-      "wiki": "Zheng_Qinwen"
-    },
-    {
-      "zh": "彭帅",
-      "wiki": "Peng_Shuai"
-    },
-    {
-      "zh": "郑洁",
-      "wiki": "Zheng_Jie"
-    },
-    {
-      "zh": "王欣瑜",
-      "wiki": "Wang_Xinyu"
-    },
-    {
-      "zh": "王蔷",
-      "wiki": "Wang_Qiang_(tennis)"
-    },
-    {
-      "zh": "郑赛赛",
-      "wiki": "Zheng_Saisai"
-    },
-    {
-      "zh": "朱琳",
-      "wiki": "Zhu_Lin_(tennis)"
-    },
-    {
-      "zh": "徐一璠",
-      "wiki": "Xu_Yifan"
-    },
-    {
-      "zh": "张之臻",
-      "wiki": "Zhang_Zhizhen"
-    },
-    {
-      "zh": "王雅繁",
-      "wiki": "Wang_Yafan"
-    },
-    {
-      "zh": "王曦雨",
-      "wiki": "Wang_Xiyu"
-    },
-    {
-      "zh": "袁悦",
-      "wiki": "Yuan_Yue"
-    },
-    {
-      "zh": "商竣程",
-      "wiki": "Shang_Juncheng"
-    },
-    {
-      "zh": "吴易昺",
-      "wiki": "Wu_Yibing"
-    },
-    {
-      "zh": "段莹莹",
-      "wiki": "Duan_Yingying"
-    },
-    {
-      "zh": "布云朝克特",
-      "wiki": "Bu_Yunchaokete"
-    },
-    {
-      "zh": "张择",
-      "wiki": "Zhang_Ze"
-    },
-    {
-      "zh": "孙甜甜",
-      "wiki": "Sun_Tiantian"
-    },
-    {
-      "zh": "吴迪",
-      "wiki": "Wu_Di_(tennis)"
-    }
-  ],
   "season": {
     "ZHENG, QINWEN": "郑钦文",
     "ZHANG, SHUAI": "张帅",
@@ -238,5 +152,53 @@
     "YANG, ZHAOXUAN": "杨钊煊",
     "SHI, HAN": "Shi Han",
     "TANG, QIANHUI": "Tang Qianhui"
-  }
+  },
+  "careerWomen": {
+    "LI, NA": "李娜",
+    "ZHANG, SHUAI": "张帅",
+    "ZHENG, QINWEN": "郑钦文",
+    "PENG, SHUAI": "彭帅",
+    "ZHENG, JIE": "郑洁",
+    "WANG, XINYU": "王欣瑜",
+    "WANG, QIANG": "王蔷",
+    "ZHENG, SAISAI": "郑赛赛",
+    "ZHU, LIN": "朱琳",
+    "XU, YIFAN": "徐一璠",
+    "WANG, YAFAN": "王雅繁",
+    "WANG, XIYU": "王曦雨",
+    "YUAN, YUE": "袁悦",
+    "YANG, ZHAOXUAN": "杨钊煊",
+    "DUAN, YINGYING": "段莹莹",
+    "GUO, HANYU": "郭涵煜",
+    "HAN, XINYUN": "韩馨蕴",
+    "JIANG, XINYU": "蒋欣玗",
+    "SUN, TIANTIAN": "孙甜甜",
+    "BAI, ZHUOXUAN": "白卓璇"
+  },
+  "careerMen": [
+    {
+      "zh": "张之臻",
+      "wiki": "Zhang_Zhizhen"
+    },
+    {
+      "zh": "商竣程",
+      "wiki": "Shang_Juncheng"
+    },
+    {
+      "zh": "吴易昺",
+      "wiki": "Wu_Yibing"
+    },
+    {
+      "zh": "布云朝克特",
+      "wiki": "Bu_Yunchaokete"
+    },
+    {
+      "zh": "张择",
+      "wiki": "Zhang_Ze"
+    },
+    {
+      "zh": "吴迪",
+      "wiki": "Wu_Di_(tennis)"
+    }
+  ]
 }
