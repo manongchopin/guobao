@@ -1,81 +1,55 @@
+/* 我的行程 · 飞行记录 */
+
+.tp-first { margin-top: 10px; }
+
 .tp-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 20px; }
 .tp-stats div { padding: 12px 14px; border-right: 1px solid var(--line); }
 .tp-stats div:last-child { border-right: 0; }
-.tp-stats b { display: block; font-family: var(--serif); font-size: 26px; line-height: 1.1; }
+.tp-stats b { display: block; font-family: var(--serif); font-size: 26px; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .tp-stats span { display: block; margin-top: 3px; font-size: 10px; color: var(--ink-3); }
+
 .tp-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 12px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
 .tp-callout b { color: var(--ink); }
 .tp-intro { margin: 0; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
+
+/* 区块标题 */
 .tp-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; border-top: 1px solid var(--ink); padding-top: 14px; margin-bottom: 9px; }
 .tp-head h2 { margin: 0; }
 .tp-head > p { max-width: 330px; margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); text-align: right; }
 .tp-kicker { margin: 0 0 4px; font-family: var(--sans); font-size: 9px; letter-spacing: .14em; color: var(--red); }
-.tp-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
-.tp-filter { display: flex; flex-wrap: wrap; gap: 4px; }
-.tp-filter button { border: 1px solid var(--line); background: transparent; padding: 4px 7px; font-family: var(--sans); font-size: 9px; color: var(--ink-3); cursor: pointer; }
-.tp-filter button:hover, .tp-filter button.is-active { border-color: var(--ink); color: var(--ink); background: var(--paper-2); }
-.tp-count { margin: 0; font-size: 9px; color: var(--ink-3); }
-.tp-empty { border: 1px dashed var(--line); padding: 26px 20px; text-align: center; color: var(--ink-3); }
-.tp-empty p { margin: 3px 0; font-size: 11px; line-height: 1.7; }
-.tp-notes { margin: 0; padding-left: 18px; }
-.tp-notes li { margin: 0 0 6px; font-size: 11px; line-height: 1.75; color: var(--ink-2); }
-.tp-year { margin: 18px 0 6px; border-top: 1px solid var(--ink); padding-top: 6px; font-family: var(--serif); font-size: 20px; }
-.tp-card { display: grid; grid-template-columns: 110px 1fr auto; gap: 12px; align-items: baseline; border-bottom: 1px solid var(--line-soft); padding: 9px 0; }
-.tp-card-date { font-family: var(--mono); font-size: 9px; color: var(--red); }
-.tp-card h3 { margin: 0 0 3px; font-family: var(--serif); font-size: 17px; }
-.tp-card p { margin: 0; font-size: 9.5px; line-height: 1.55; color: var(--ink-3); }
-.tp-modes { font-size: 12px; white-space: nowrap; }
-.tp-card a { color: var(--ink); text-decoration: none; }
-@media (max-width: 760px) {
-  .tp-stats { grid-template-columns: 1fr 1fr; }
-  .tp-stats div:nth-child(2) { border-right: 0; }
-  .tp-stats div:nth-child(1), .tp-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
-  .tp-head { align-items: flex-start; flex-direction: column; gap: 5px; }
-  .tp-head > p { text-align: left; }
-  .tp-card { grid-template-columns: 1fr; gap: 4px; }
+
+/* 飞行表 */
+.tp-flights-head, .tp-flight-row {
+  display: grid;
+  grid-template-columns: 76px 92px minmax(0, 1fr) 96px;
+  gap: 12px;
+  align-items: baseline;
+  padding: 9px 4px;
+  border-bottom: 1px solid var(--line-soft);
 }
+.tp-flights-head { border-bottom: 1px solid var(--ink); padding: 6px 4px; font-family: var(--sans); font-size: 9.5px; letter-spacing: .12em; color: var(--ink-3); }
+.tp-month { font-family: var(--mono); font-size: 10px; color: var(--red); }
+.tp-flight-no { font-family: var(--mono); font-size: 11px; color: var(--ink); }
+.tp-route { font-family: var(--serif); font-size: 13.5px; color: var(--ink); line-height: 1.5; }
+.tp-route i { font-family: var(--sans); font-style: normal; font-size: 9px; letter-spacing: .04em; color: var(--ink-3); }
+.tp-route b { font-weight: 400; color: var(--ink-3); padding: 0 2px; }
+.tp-km { text-align: right; font-family: var(--mono); font-size: 10px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
 
-/* ---------- 三种线的画法 ---------- */
+.tp-year { display: flex; align-items: baseline; justify-content: space-between; margin: 22px 0 2px; border-top: 1px solid var(--ink); padding-top: 7px; }
+.tp-year span { font-family: var(--serif); font-size: 20px; letter-spacing: .04em; }
+.tp-year em { font-style: normal; font-family: var(--mono); font-size: 10px; color: var(--ink-3); }
+.tp-total { margin: 12px 0 0; text-align: right; font-family: var(--mono); font-size: 10px; color: var(--ink-3); }
 
-.tp-first { margin-top: 10px; }
+.tp-nothing { border: 1px dashed var(--line); padding: 26px 20px; text-align: center; color: var(--ink-3); font-size: 11px; }
 
-.tp-legend { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); }
-.tp-legend-item { padding: 16px 18px 14px; border-right: 1px solid var(--line-soft); }
-.tp-legend-item:last-child { border-right: 0; }
-.tp-legend-item svg { display: block; width: 100%; max-width: 168px; height: auto; }
-.tp-legend-item p { margin: 8px 0 0; }
-.tp-legend-item b { display: block; font-family: var(--serif); font-size: 15px; font-weight: 600; color: var(--ink); }
-.tp-legend-item span { display: block; margin-top: 2px; font-size: 10px; letter-spacing: 0.03em; color: var(--ink-3); }
+/* 待录入 */
+.tp-pending { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.tp-pending > div { border: 1px dashed var(--line); padding: 15px 18px; }
+.tp-pending h3 { margin: 0 0 6px; font-family: var(--serif); font-size: 17px; font-weight: 600; }
+.tp-pending p { margin: 0; font-size: 10.5px; line-height: 1.8; color: var(--ink-3); }
+.tp-pending code { font-family: var(--mono); font-size: 9.5px; color: var(--ink-2); background: var(--paper-2); padding: 1px 4px; }
 
-.tp-line { fill: none; stroke: var(--ink); stroke-width: 1.4; }
-.tp-line-flight { stroke-dasharray: 5 4; }
-.tp-line-rail, .tp-line-drive { stroke-linecap: round; stroke-linejoin: round; }
-.tp-tie { stroke: var(--ink); stroke-width: 1.1; opacity: 0.55; }
-.tp-dot { fill: var(--red); }
-
-/* ---------- 空状态 ---------- */
-
-.tp-empty { display: block; }
-.tp-empty[hidden] { display: none; }
-.tp-empty-mark { max-width: 250px; margin: 0 auto 14px; }
-.tp-empty-mark p { display: flex; align-items: center; gap: 10px; margin: 4px 0; }
-.tp-empty-mark span { flex: none; width: 22px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; color: var(--ink-3); }
-.tp-empty-mark i { flex: 1; height: 1px; background: var(--line); }
-.tp-empty-mark i.tp-empty-dash { background: repeating-linear-gradient(90deg, var(--line) 0 5px, transparent 5px 9px); }
-.tp-empty-title { margin: 0 0 4px; font-family: var(--serif); font-size: 18px; font-weight: 500; color: var(--ink-2); }
-.tp-empty-sub { margin: 0; font-size: 11px; line-height: 1.8; }
-
-/* ---------- 一条行程记什么 ---------- */
-
-.tp-record { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }
-.tp-record > div { padding: 16px 18px 18px 0; border-right: 1px solid var(--line-soft); }
-.tp-record > div:last-child { border-right: 0; }
-.tp-no { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; color: var(--red); }
-.tp-record h3 { margin: 6px 0 5px; font-family: var(--serif); font-size: 16px; font-weight: 600; }
-.tp-record p { margin: 0; font-size: 10.5px; line-height: 1.8; color: var(--ink-3); }
-
-/* ---------- 记录规则 ---------- */
-
+/* 规则 */
 .tp-rules { margin: 0 0 14px; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 26px; }
 .tp-rules li { border-top: 1px solid var(--line-soft); padding: 9px 0 9px 14px; position: relative; font-size: 11px; line-height: 1.8; color: var(--ink-2); }
 .tp-rules li::before { content: "—"; position: absolute; left: 0; color: var(--red); }
@@ -83,8 +57,15 @@
 .tp-footnote { margin: 0 !important; font-size: 10.5px !important; color: var(--ink-3) !important; line-height: 1.9 !important; }
 
 @media (max-width: 760px) {
-  .tp-legend, .tp-record, .tp-rules { grid-template-columns: 1fr; }
-  .tp-legend-item, .tp-record > div { border-right: 0; border-bottom: 1px solid var(--line-soft); }
-  .tp-legend-item:last-child, .tp-record > div:last-child { border-bottom: 0; }
+  .tp-stats { grid-template-columns: 1fr 1fr; }
+  .tp-stats div:nth-child(2) { border-right: 0; }
+  .tp-stats div:nth-child(1), .tp-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .tp-head { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .tp-head > p { text-align: left; }
+  .tp-flights-head { display: none; }
+  .tp-flight-row { grid-template-columns: 56px 1fr auto; row-gap: 2px; padding: 10px 4px; }
+  .tp-route { grid-column: 1 / -1; grid-row: 2; font-size: 12.5px; }
+  .tp-pending { grid-template-columns: 1fr; gap: 10px; }
+  .tp-rules { grid-template-columns: 1fr; }
   .tp-rules li:nth-child(2) { border-top: 1px solid var(--line-soft); }
 }

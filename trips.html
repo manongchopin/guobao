@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>我的行程 · 飞行、火车与自驾</title>
-<meta name="description" content="按年份记录实际走过的行程：飞行、火车和自驾。目前只有结构，没有录入任何真实行程。">
+<meta name="description" content="按年份记录实际走过的行程：飞行、火车和自驾。目前录入 2010–2013 年的 19 段飞行。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
@@ -18,7 +18,7 @@
   <h1>我的行程</h1>
   <p class="lede">
     实际走过的路，不是想去的计划。<br>
-    <span>飞行、火车、自驾，按年份归档。</span>
+    <span>先录飞行，火车和自驾再补。</span>
   </p>
   <div class="seal" aria-hidden="true">程</div>
 </header>
@@ -27,82 +27,38 @@
 
   <section class="wh-section tp-first">
     <div class="tp-stats">
-      <div><b id="tp-total">0</b><span>条行程</span></div>
-      <div><b id="tp-flight">0</b><span>段飞行</span></div>
-      <div><b id="tp-train">0</b><span>段火车</span></div>
-      <div><b id="tp-drive">0</b><span>段自驾</span></div>
+      <div><b id="tp-flights">0</b><span>段飞行</span></div>
+      <div><b id="tp-km">0</b><span>里程 · km</span></div>
+      <div><b id="tp-cities">0</b><span>到过城市</span></div>
+      <div><b id="tp-years">0</b><span>覆盖年份</span></div>
     </div>
-    <p class="tp-callout"><b>现在是空的。</b>页面已经就位，但还没有录入任何行程。这里只放结构，不编造日期、航班号或路线。</p>
-    <p class="tp-intro">一条行程 = 时间 + 交通段 + 每日路线。先按年份归档，再逐条补细节。日期默认只公开到月份，不写具体住宿。</p>
+    <p class="tp-callout"><b>19 段飞行，2010–2013。</b>数据来自飞常准「乘机行程」截图，OCR 识别后逐条校对。日期只公开到月份；距离为大圆距离估算；机型没有记录。</p>
+    <p class="tp-intro">后续年份、火车和自驾会陆续补进来。距离按城市机场坐标计算，与实际航迹有少量出入。</p>
   </section>
 
-  <section class="wh-section">
-    <div class="tp-legend">
-      <div class="tp-legend-item">
-        <svg viewBox="0 0 140 44" role="img" aria-label="飞行：虚线弧">
-          <path class="tp-line tp-line-flight" d="M10 36 Q70 -4 130 36"/>
-          <circle class="tp-dot" cx="10" cy="36" r="2.4"/>
-          <circle class="tp-dot" cx="130" cy="36" r="2.4"/>
-        </svg>
-        <p><b>飞行</b><span>虚线弧，不画直线</span></p>
-      </div>
-      <div class="tp-legend-item">
-        <svg viewBox="0 0 140 44" role="img" aria-label="火车：带枕木的实线">
-          <line class="tp-line tp-line-rail" x1="10" y1="32" x2="130" y2="32"/>
-          <line class="tp-tie" x1="24" y1="26" x2="24" y2="38"/>
-          <line class="tp-tie" x1="44" y1="26" x2="44" y2="38"/>
-          <line class="tp-tie" x1="64" y1="26" x2="64" y2="38"/>
-          <line class="tp-tie" x1="84" y1="26" x2="84" y2="38"/>
-          <line class="tp-tie" x1="104" y1="26" x2="104" y2="38"/>
-          <circle class="tp-dot" cx="10" cy="32" r="2.4"/>
-          <circle class="tp-dot" cx="130" cy="32" r="2.4"/>
-        </svg>
-        <p><b>火车</b><span>铁路实线，带枕木</span></p>
-      </div>
-      <div class="tp-legend-item">
-        <svg viewBox="0 0 140 44" role="img" aria-label="自驾：折线">
-          <path class="tp-line tp-line-drive" d="M10 34 L40 30 L58 16 L82 24 L106 12 L130 18"/>
-          <circle class="tp-dot" cx="10" cy="34" r="2.4"/>
-          <circle class="tp-dot" cx="130" cy="18" r="2.4"/>
-        </svg>
-        <p><b>自驾</b><span>沿道路折线，不取直</span></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wh-section" id="list">
+  <section class="wh-section" id="flights">
     <div class="tp-head">
-      <div><p class="tp-kicker">THE ARCHIVE · BY YEAR</p><h2>按年份看行程</h2></div>
-      <p>飞行 / 火车 / 自驾只是标签。<br>真正的路线和交通段在详情页。</p>
+      <div><p class="tp-kicker">FLIGHT LOG · BY YEAR</p><h2>飞行记录</h2></div>
+      <p>按年份倒序。月份 / 航班号 / 航线 / 距离。<br>机型未记录。</p>
     </div>
-    <div class="tp-toolbar">
-      <div class="tp-filter" id="tp-filter">
-        <button type="button" data-mode="all" class="is-active">全部</button>
-        <button type="button" data-mode="flight">✈️ 飞行</button>
-        <button type="button" data-mode="train">🚆 火车</button>
-        <button type="button" data-mode="drive">🚗 自驾</button>
-      </div>
-      <p class="tp-count" id="tp-count">0 条</p>
+    <div class="tp-flights-head">
+      <span>月份</span><span>航班</span><span>航线</span><span class="tp-km">距离</span>
     </div>
-    <div id="tp-list"></div>
-    <div class="tp-empty" id="tp-empty">
-      <div class="tp-empty-mark" aria-hidden="true">
-        <p><span>飞行</span><i class="tp-empty-dash"></i></p>
-        <p><span>火车</span><i></i></p>
-        <p><span>自驾</span><i></i></p>
-      </div>
-      <p class="tp-empty-title">还没有录入行程</p>
-      <p class="tp-empty-sub">这里按年份倒序归档，一条一行。<br>真实行程会在确认后逐条填进来。</p>
-    </div>
+    <div id="tp-flight-list"></div>
+    <p class="tp-total" id="tp-total-line"></p>
   </section>
 
   <section class="wh-section">
-    <h2>一条行程记什么</h2>
-    <div class="tp-record">
-      <div><span class="tp-no">01</span><h3>时间</h3><p>起止年月、共几天。日期只到月份。</p></div>
-      <div><span class="tp-no">02</span><h3>交通段</h3><p>每段飞机 / 火车 / 自驾，写清起终点。</p></div>
-      <div><span class="tp-no">03</span><h3>每日路线</h3><p>每天在哪、走了哪条线、住哪一带。</p></div>
-      <div><span class="tp-no">04</span><h3>相关</h3><p>涉及的世界遗产、省会、国家，链回对应页面。</p></div>
+    <h2>火车与自驾</h2>
+    <div class="tp-pending">
+      <div>
+        <h3>火车</h3>
+        <p>等 12306 和飞猪的订单截图。12306 只保留 30 天，越早截越好。</p>
+      </div>
+      <div>
+        <h3>自驾</h3>
+        <p>等你把起终点和途经点列进 <code>inbox/drives.md</code>，我再按路网重绘。</p>
+      </div>
     </div>
   </section>
 
@@ -111,10 +67,10 @@
     <ul class="tp-rules">
       <li>只记已经走完的行程，不记未来行程。</li>
       <li>日期默认只公开到月份，不写具体住宿。</li>
-      <li>航班号、车次默认省略，需要时再补。</li>
-      <li>不接航班 API，不做实时追踪，不自动定位。</li>
+      <li>距离为大圆距离估算，不是实际航迹。</li>
+      <li>机型暂不记录；不做实时追踪、不自动定位。</li>
     </ul>
-    <p class="tp-footnote">详情页和路线地图要等行程数据确认后再做；地图会用 Leaflet / OSM，并在页脚标注来源。</p>
+    <p class="tp-footnote">数据来源：飞常准「乘机行程」截图（2010–2013 最早一批）。后续截图补齐后继续加。</p>
   </section>
 
 </main>
@@ -122,7 +78,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <span>我的行程 · 飞行 / 火车 / 自驾</span>
-    <span>结构版 v0.1 · 0 条</span>
+    <span>v0.2 · 19 段飞行 · 更新 2026-11-03</span>
     <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
     <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
   </div>
