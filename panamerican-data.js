@@ -370,7 +370,7 @@ window.PANAMERICAN = {
       "dates": "8 月初过境",
       "km": "—",
       "route": [],
-      "routeText": "Chototeca（洪都拉斯）→ Liberia（哥斯达黎加），原文未单列停留",
+      "routeText": "Choluteca（洪都拉斯）→ Liberia（哥斯达黎加），原文未单列停留",
       "highlights": [],
       "tips": [
         "只过境，没有单独写景点；这段以边境手续和赶路为主"

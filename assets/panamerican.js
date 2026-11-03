@@ -8,7 +8,7 @@
     });
   }
   var colors = { us: "#8f3f31", mx: "#a85a3f", bz: "#8a6338", gt: "#6e6048", sv: "#7a6a3f", hn: "#5f6b4f", cr: "#3f6655", pa: "#2f5d55", co: "#4f5878", ec: "#5f5a7a", pe: "#7a4f5f", bo: "#8a6a4f" };
-  var map, layer, allMarkers = [], current = "all";
+  var map, layer, allMarkers = [], current = "all", maps = [];
 
   function addTiles(m) {
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -76,11 +76,27 @@
     var extracted = c.status === "extracted";
     return '<section class="pa-country-block" id="pa-' + c.id + '"><div class="pa-country-head"><h3>' + esc(c.name) + ' · ' + esc(c.en) + '</h3>' +
       '<span>' + esc(c.dates) + ' · ' + esc(c.km) + (extracted ? ' · <button class="pa-view-map" data-country="' + c.id + '">在地图看这段</button>' : ' · <em>待补</em>') + '</span></div>' +
-      (extracted ? '<div class="pa-country-body"><div><p class="pa-route-line"><b>路线：</b>' + esc(c.routeText) + '</p><div class="pa-highlights">' +
+      (extracted ? '<div class="pa-country-map" id="pa-mini-' + c.id + '"></div><div class="pa-country-body"><div><p class="pa-route-line"><b>路线：</b>' + esc(c.routeText) + '</p><div class="pa-highlights">' +
         c.highlights.map(function (h) { return '<div class="pa-highlight"><h4>' + esc(h.name) + '</h4><p>' + esc(h.note) + '</p></div>'; }).join("") + '</div></div>' +
         '<div class="pa-tips"><b>原文经验摘要</b><ul>' + c.tips.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join("") + '</ul></div></div>' :
         '<div class="pa-missing">' + esc(c.routeText) + '。这一国在 PDF 中没有对应章节，暂不填写景点和经验。</div>') + '</section>';
   }).join("");
+
+  D.countries.forEach(function (c) {
+    if (c.status !== "extracted") return;
+    var el = document.getElementById("pa-mini-" + c.id);
+    if (!el) return;
+    var mini = L.map(el, { scrollWheelZoom: false, attributionControl: false }).setView([c.route[0].lat, c.route[0].lng], 7);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18 }).addTo(mini);
+    var pts = c.route.map(function (p) { return [p.lat, p.lng]; });
+    if (pts.length > 1) L.polyline(pts, { color: colorOf(c), weight: 3, opacity: .9, lineCap: "round" }).addTo(mini);
+    c.route.forEach(function (p) {
+      L.circleMarker([p.lat, p.lng], { radius: 4, color: "#fff", weight: 1.3, fillColor: colorOf(c), fillOpacity: 1 })
+        .addTo(mini).bindTooltip(p.name);
+    });
+    if (pts.length > 1) mini.fitBounds(L.latLngBounds(pts), { padding: [15, 15], maxZoom: 8 });
+    maps.push(mini);
+  });
 
   document.getElementById("pa-filter").innerHTML = '<button type="button" data-country="all" class="is-active">总路线</button>' +
     D.countries.filter(function (c) { return c.status === "extracted"; }).map(function (c) {
@@ -103,5 +119,5 @@
   map = L.map("pa-map", { scrollWheelZoom: false }).setView([10, -75], 4);
   addTiles(map); layer = L.layerGroup().addTo(map);
   drawAll();
-  window.addEventListener("resize", function () { map.invalidateSize(); });
+  window.addEventListener("resize", function () { maps.forEach(function (m) { m.invalidateSize(); }); });
 })();

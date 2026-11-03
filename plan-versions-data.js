@@ -220,10 +220,10 @@ window.PLAN_VERSIONS = {
     },
     "panamerican": {
       "title": "泛美公路自驾",
-      "version": "0.2",
+      "version": "0.3",
       "status": "已提取全程",
       "date": "2026-11-03",
-      "note": "美国—巴塔哥尼亚路线、国家分章、景点与经验；实际止于 Puerto Williams",
+      "note": "美国—巴塔哥尼亚路线、每国小地图、景点与经验；实际止于 Puerto Williams",
       "history": [
         {
           "v": "0.1",
@@ -234,6 +234,11 @@ window.PLAN_VERSIONS = {
           "v": "0.2",
           "date": "2026-11-03",
           "note": "补齐 PDF3：玻利维亚、智利、巴塔哥尼亚；修正终点为 Puerto Williams"
+        },
+        {
+          "v": "0.3",
+          "date": "2026-11-03",
+          "note": "每国一张小路线图；明确 14 个停留国 + 尼加拉瓜过境"
         }
       ]
     }
