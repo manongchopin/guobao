@@ -67,7 +67,7 @@
       tooltip: { show: false },
       series: [{
         type: "map", map: "hf-china", roam: false, selectedMode: false,
-        layoutCenter: ["50%", "50%"], layoutSize: "104%",
+        layoutCenter: ["50%", "50%"], layoutSize: "88%",
         itemStyle: { areaColor: color.off, borderColor: color.border, borderWidth: .5 },
         label: { show: false }, data: chinaData()
       }]
