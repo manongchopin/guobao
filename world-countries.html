@@ -66,7 +66,7 @@
   <section class="wh-section" id="list">
     <div class="wc-head">
       <div><p class="wc-kicker">THE LIST · 193 ROWS</p><h2>193 个国家</h2></div>
-      <p>按大洲分组；点一行切换。<br>图瓦卢在底图中太小，只在表格里点。</p>
+      <p>按大洲分组；点一行切换。<br>图瓦卢、摩纳哥、马尔代夫、瑙鲁、圣马力诺、圣基茨和尼维斯、马绍尔群岛在底图里没有面，只在表格里点。</p>
     </div>
     <div class="wc-search"><input type="search" id="wc-search" placeholder="搜索国家 / English" aria-label="搜索国家"></div>
     <div id="wc-table"></div>
@@ -78,7 +78,7 @@
     <ul class="wc-notes">
       <li><b>国家标准：</b>联合国 193 个会员国；梵蒂冈、巴勒斯坦两个观察员国不计入。</li>
       <li><b>“到过”：</b>进入该国并实际停留至少 24 小时或过夜；仅转机不算。</li>
-      <li><b>地图：</b>底图为 world-atlas/Natural Earth 50m 边界，仅作个人足迹示意；小岛国可能很小，以表格为准。</li>
+      <li><b>地图：</b>底图为 ECharts 世界底图（已按 180° 经线切分），仅作个人足迹示意；微型国家可能没有面，以表格为准。</li>
       <li><b>隐私：</b>记录只存本机 <code>localStorage</code>；可用 JSON 导出/导入。</li>
     </ul>
   </section>
@@ -94,7 +94,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
 <script src="world-countries-data.js"></script>
 <script src="assets/world-countries.js"></script>
 </body>

@@ -294,7 +294,7 @@ window.WORLD_COUNTRIES = {
       "iso3": "PRK",
       "name": "朝鲜",
       "en": "North Korea",
-      "mapName": "North Korea",
+      "mapName": "Dem. Rep. Korea",
       "continent": "asia",
       "map": true
     },
@@ -374,7 +374,7 @@ window.WORLD_COUNTRIES = {
       "iso3": "LAO",
       "name": "老挝",
       "en": "Laos",
-      "mapName": "Laos",
+      "mapName": "Lao PDR",
       "continent": "asia",
       "map": true
     },
@@ -454,7 +454,7 @@ window.WORLD_COUNTRIES = {
       "iso3": "KOR",
       "name": "韩国",
       "en": "South Korea",
-      "mapName": "South Korea",
+      "mapName": "Korea",
       "continent": "asia",
       "map": true
     },
@@ -466,7 +466,7 @@ window.WORLD_COUNTRIES = {
       "en": "Maldives",
       "mapName": "Maldives",
       "continent": "asia",
-      "map": true
+      "map": false
     },
     {
       "id": "my",
@@ -596,7 +596,7 @@ window.WORLD_COUNTRIES = {
       "en": "San Marino",
       "mapName": "San Marino",
       "continent": "europe",
-      "map": true
+      "map": false
     },
     {
       "id": "rs",
@@ -694,7 +694,7 @@ window.WORLD_COUNTRIES = {
       "iso3": "CZE",
       "name": "捷克",
       "en": "Czechia",
-      "mapName": "Czechia",
+      "mapName": "Czech Rep.",
       "continent": "europe",
       "map": true
     },
@@ -716,7 +716,7 @@ window.WORLD_COUNTRIES = {
       "en": "Monaco",
       "mapName": "Monaco",
       "continent": "europe",
-      "map": true
+      "map": false
     },
     {
       "id": "sk",
@@ -964,7 +964,7 @@ window.WORLD_COUNTRIES = {
       "iso3": "CPV",
       "name": "佛得角",
       "en": "Cape Verde",
-      "mapName": "Cabo Verde",
+      "mapName": "Cape Verde",
       "continent": "africa",
       "map": true
     },
@@ -1264,7 +1264,7 @@ window.WORLD_COUNTRIES = {
       "iso3": "SWZ",
       "name": "斯威士兰",
       "en": "Eswatini",
-      "mapName": "eSwatini",
+      "mapName": "Swaziland",
       "continent": "africa",
       "map": true
     },
@@ -1534,9 +1534,9 @@ window.WORLD_COUNTRIES = {
       "iso3": "KNA",
       "name": "圣基茨和尼维斯",
       "en": "Saint Kitts and Nevis",
-      "mapName": "St. Kitts and Nevis",
+      "mapName": "Saint Kitts and Nevis",
       "continent": "north-america",
-      "map": true
+      "map": false
     },
     {
       "id": "vc",
@@ -1684,7 +1684,7 @@ window.WORLD_COUNTRIES = {
       "iso3": "USA",
       "name": "美国",
       "en": "United States",
-      "mapName": "United States of America",
+      "mapName": "United States",
       "continent": "north-america",
       "map": true
     },
@@ -1926,7 +1926,7 @@ window.WORLD_COUNTRIES = {
       "en": "Nauru",
       "mapName": "Nauru",
       "continent": "oceania",
-      "map": true
+      "map": false
     },
     {
       "id": "vu",
@@ -1954,9 +1954,9 @@ window.WORLD_COUNTRIES = {
       "iso3": "MHL",
       "name": "马绍尔群岛",
       "en": "Marshall Islands",
-      "mapName": "Marshall Is.",
+      "mapName": "Marshall Islands",
       "continent": "oceania",
-      "map": true
+      "map": false
     }
   ]
 };

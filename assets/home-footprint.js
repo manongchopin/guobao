@@ -33,7 +33,6 @@
   function ensureScripts() {
     var jobs = [];
     if (!window.echarts) jobs.push(loadScript("https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"));
-    if (!window.topojson) jobs.push(loadScript("https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"));
     if (!window.CHINA_CAPITALS) jobs.push(loadScript("province-capitals-data.js"));
     if (!window.WORLD_COUNTRIES) jobs.push(loadScript("world-countries-data.js"));
     return Promise.all(jobs);
@@ -102,12 +101,11 @@
     ensureScripts().then(function () {
       return Promise.all([
         fetch("data/china-provinces.geojson").then(function (r) { return r.json(); }),
-        fetch("data/world-50m.json").then(function (r) { return r.json(); })
+        fetch("data/world-echarts.json").then(function (r) { return r.json(); })
       ]);
     }).then(function (res) {
       chinaGeo = res[0];
-      var topo = res[1];
-      worldGeo = topojson.feature(topo, topo.objects.countries);
+      worldGeo = res[1];
       worldGeo.features = worldGeo.features.filter(function (f) { return f.properties.name !== "Antarctica"; });
       initChina(); initWorld();
       loaded = true; loading = false; updateCharts();

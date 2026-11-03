@@ -121,8 +121,7 @@
     visited = new Set(); save(); render();
   });
 
-  fetch("data/world-50m.json").then(function (r) { return r.json(); }).then(function (topo) {
-    var geo = topojson.feature(topo, topo.objects.countries);
+  fetch("data/world-echarts.json").then(function (r) { return r.json(); }).then(function (geo) {
     geo.features = geo.features.filter(function (f) { return f.properties.name !== "Antarctica"; });
     echarts.registerMap("world", geo);
     chart = echarts.init(document.getElementById("wc-map"), null, { renderer: "canvas" });
