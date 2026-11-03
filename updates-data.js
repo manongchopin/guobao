@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-03",
+    type: "名录",
+    title: "越南国家宝物 13 批 327 件",
+    note: "按批次列名单 · 越南文原表 · 搜索",
+    href: "vietnam-treasures.html"
+  },
+  {
+    date: "2026-11-03",
     type: "计划",
     title: "泛美公路：每国路线图",
     note: "14个停留国 + 尼加拉瓜过境 · 小地图与总图",
