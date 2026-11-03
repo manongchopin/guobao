@@ -7,10 +7,10 @@
 
 ## 总数
 
-- 资产组：64
+- 资产组：65
 - 高风险：11
 - 中风险：24
-- 低风险：29
+- 低风险：30
 
 ## 高风险：先处理
 
@@ -96,6 +96,12 @@
   - Sentinel：`Contains modified Copernicus Sentinel data 2025`
   - OSM：`© OpenStreetMap contributors`，ODbL
   - 只作位置/轮廓示意，不冒充高清遗址影像
+- 「发散的全世界」`world-ideas.html`：
+  - 页面结构、分组与筛选、卡片版式均为本站原创
+  - 不使用第三方图片、底图或地图；不使用文章/视频配图
+  - 公共数据文件 `world-ideas-data.js` 第一版为空，条目来源由用户逐条填写
+  - 本机草稿只存 `localStorage("world-ideas-v1")`，不随站点发布；公开前需人工转成公共数据并补来源
+  - 风险：低；若以后引入外部图片，须先单独登记来源与许可
 
 ## 建议的下一步
 
