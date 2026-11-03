@@ -70,3 +70,18 @@
   .tp-rules { grid-template-columns: 1fr; }
   .tp-rules li:nth-child(2) { border-top: 1px solid var(--line-soft); }
 }
+
+/* ---------- 徒步 ---------- */
+
+.tp-hike { border-top: 1px solid var(--ink); padding-top: 16px; margin-bottom: 30px; }
+.tp-hike-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 12px; }
+.tp-hike h3 { margin: 0; font-family: var(--serif); font-size: 22px; font-weight: 600; letter-spacing: .03em; }
+.tp-hike-meta { margin: 5px 0 0; font-family: var(--mono); font-size: 10px; color: var(--ink-3); }
+.tp-hike-points { margin: 0; font-family: var(--mono); font-size: 9px; color: var(--ink-3); white-space: nowrap; }
+.tp-hike-map { height: 420px; border: 1px solid var(--line); background: var(--paper-2); z-index: 0; }
+.tp-map-note { margin: 8px 0 0; font-size: 9.5px; color: var(--ink-3); }
+
+@media (max-width: 760px) {
+  .tp-hike-map { height: 320px; }
+  .tp-hike-head { flex-direction: column; gap: 4px; }
+}

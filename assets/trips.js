@@ -3,6 +3,7 @@
   var D = window.TRIPS || {};
   var flights = Array.isArray(D.flights) ? D.flights : [];
   var trains = Array.isArray(D.trains) ? D.trains : [];
+  var hikes = Array.isArray(D.hikes) ? D.hikes : [];
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
@@ -18,12 +19,11 @@
   function yearOf(x) { return String(x.month || "").slice(0, 4) || "未编年"; }
 
   function renderStats() {
-    var years = {};
-    flights.concat(trains).forEach(function (x) { years[yearOf(x)] = 1; });
+    var hikeKm = hikes.reduce(function (s, h) { return s + (Number(h.km) || 0); }, 0);
     document.getElementById("tp-flights").textContent = flights.length;
     document.getElementById("tp-trains").textContent = trains.length;
-    document.getElementById("tp-km").textContent = fmt(kmTotal(flights) + kmTotal(trains));
-    document.getElementById("tp-years").textContent = Object.keys(years).length;
+    document.getElementById("tp-hikes").textContent = hikes.length;
+    document.getElementById("tp-km").textContent = fmt(Math.round(kmTotal(flights) + kmTotal(trains) + hikeKm));
   }
 
   function renderLog(list, boxId, totalId, kind) {
@@ -78,7 +78,47 @@
     totalLine.textContent = "合计 " + list.length + " 段 · " + fmt(kmTotal(list)) + " km";
   }
 
+  function renderHikes() {
+    var box = document.getElementById("tp-hike-list");
+    if (!hikes.length) {
+      box.innerHTML = '<p class="tp-nothing">还没有徒步记录。</p>';
+      return;
+    }
+    box.innerHTML = hikes.map(function (h, i) {
+      return '<article class="tp-hike">' +
+        '<div class="tp-hike-head"><div>' +
+          '<h3>' + esc(h.name || "未命名线路") + '</h3>' +
+          '<p class="tp-hike-meta">' + esc(h.month || "") + ' · ' +
+            (h.km != null ? h.km + ' km' : "") +
+            (h.ascent != null ? ' · 爬升 ' + h.ascent + ' m' : "") +
+            (h.high != null ? ' · 最高 ' + h.high + ' m' : "") +
+          '</p>' +
+        '</div><p class="tp-hike-points">' + (h.points || (h.path || []).length) + ' 点</p></div>' +
+        '<div class="tp-hike-map" id="tp-hike-map-' + i + '"></div>' +
+        '<p class="tp-map-note">轨迹为 GPS 记录抽稀，非实时；底图 © OpenStreetMap contributors。</p>' +
+      '</article>';
+    }).join("");
+
+    hikes.forEach(function (h, i) {
+      var el = document.getElementById("tp-hike-map-" + i);
+      if (!el || !window.L || !h.path || h.path.length < 2) return;
+      var map = L.map(el, { scrollWheelZoom: false });
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
+      }).addTo(map);
+      var line = L.polyline(h.path, {
+        color: "#a8402f", weight: 3, opacity: 0.92, lineJoin: "round"
+      }).addTo(map);
+      L.circleMarker(h.path[0], {
+        radius: 4, color: "#a8402f", weight: 2, fillColor: "#fffdf7", fillOpacity: 1
+      }).addTo(map).bindTooltip("起终点");
+      map.fitBounds(line.getBounds(), { padding: [20, 20] });
+    });
+  }
+
   renderStats();
   renderLog(flights, "tp-flight-list", "tp-total-line", "flight");
   renderLog(trains, "tp-train-list", "tp-train-total", "train");
+  renderHikes();
 })();
