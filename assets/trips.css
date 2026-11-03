@@ -2,9 +2,10 @@
 
 .tp-first { margin-top: 10px; }
 
-.tp-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 20px; }
-.tp-stats div { padding: 12px 14px; border-right: 1px solid var(--line); }
-.tp-stats div:last-child { border-right: 0; }
+.tp-stats { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 20px; }
+.tp-stats div { padding: 12px 14px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.tp-stats div:nth-child(3n) { border-right: 0; }
+.tp-stats div:nth-child(n+4) { border-bottom: 0; }
 .tp-stats b { display: block; font-family: var(--serif); font-size: 26px; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .tp-stats span { display: block; margin-top: 3px; font-size: 10px; color: var(--ink-3); }
 
@@ -59,8 +60,10 @@
 
 @media (max-width: 760px) {
   .tp-stats { grid-template-columns: 1fr 1fr; }
-  .tp-stats div:nth-child(2) { border-right: 0; }
-  .tp-stats div:nth-child(1), .tp-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .tp-stats div { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .tp-stats div:nth-child(2n) { border-right: 0; }
+  .tp-stats div:nth-child(3), .tp-stats div:nth-child(4) { border-bottom: 1px solid var(--line); }
+  .tp-stats div:nth-child(n+5) { border-bottom: 0; }
   .tp-head { align-items: flex-start; flex-direction: column; gap: 5px; }
   .tp-head > p { text-align: left; }
   .tp-flights-head { display: none; }
@@ -102,4 +105,19 @@
   .tp-chart-world { height: 340px; }
   .tp-chart-region { height: 320px; }
   .tp-hike-head { flex-direction: column; gap: 4px; }
+}
+
+/* ---------- 旅行年表 ---------- */
+
+.tp-place-year { display: grid; grid-template-columns: 64px minmax(0, 1fr) 40px; gap: 12px; align-items: start; padding: 12px 4px; border-bottom: 1px solid var(--line-soft); }
+.tp-place-year:first-child { border-top: 1px solid var(--ink); }
+.tp-place-year > b { font-family: var(--serif); font-size: 18px; font-weight: 500; letter-spacing: .03em; }
+.tp-place-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.tp-place { border: 1px solid var(--line); padding: 2px 7px; font-size: 10.5px; line-height: 1.6; color: var(--ink-2); white-space: nowrap; }
+.tp-place.is-new::before { content: ""; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--red); margin-right: 5px; vertical-align: 1px; }
+.tp-place-count { text-align: right; font-family: var(--mono); font-size: 10px; color: var(--ink-3); }
+
+@media (max-width: 760px) {
+  .tp-place-year { grid-template-columns: 48px minmax(0, 1fr) 28px; gap: 8px; }
+  .tp-place-year > b { font-size: 15px; }
 }

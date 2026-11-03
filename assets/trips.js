@@ -4,6 +4,7 @@
   var flights = Array.isArray(D.flights) ? D.flights : [];
   var trains = Array.isArray(D.trains) ? D.trains : [];
   var hikes = Array.isArray(D.hikes) ? D.hikes : [];
+  var placesByYear = (D.placesByYear && typeof D.placesByYear === "object") ? D.placesByYear : {};
 
   var AIR = {
     YIW: [120.0320, 29.3447], CAN: [113.2988, 23.3924], SZX: [113.8107, 22.6393],
@@ -41,6 +42,8 @@
     document.getElementById("tp-trains").textContent = trains.length;
     document.getElementById("tp-hikes").textContent = hikes.length;
     document.getElementById("tp-km").textContent = fmt(Math.round(kmTotal(flights) + kmTotal(trains) + hikeKm));
+    document.getElementById("tp-years").textContent = placeYears().length;
+    document.getElementById("tp-places").textContent = uniquePlaces();
   }
 
   function renderLog(list, boxId, totalId, kind) {
@@ -147,6 +150,39 @@
         hikeFigure(h) +
       '</article>';
     }).join("");
+  }
+
+  function placeYears() { return Object.keys(placesByYear).sort(); }
+
+  function uniquePlaces() {
+    var seen = {}, n = 0;
+    placeYears().forEach(function (y) {
+      (placesByYear[y] || []).forEach(function (p) {
+        if (!seen[p]) { seen[p] = 1; n++; }
+      });
+    });
+    return n;
+  }
+
+  function renderPlaces() {
+    var box = document.getElementById("tp-places-list");
+    var years = placeYears().reverse();
+    var first = {};
+    placeYears().forEach(function (y) {
+      (placesByYear[y] || []).forEach(function (p) { if (!(p in first)) first[p] = y; });
+    });
+    var records = 0;
+    box.innerHTML = years.map(function (y) {
+      var list = placesByYear[y] || [];
+      records += list.length;
+      return '<div class="tp-place-year"><b>' + esc(y) + '</b>' +
+        '<div class="tp-place-chips">' + list.map(function (p) {
+          return '<span class="tp-place' + (first[p] === y ? ' is-new' : '') + '">' + esc(p) + '</span>';
+        }).join("") + '</div>' +
+        '<span class="tp-place-count">' + list.length + '</span></div>';
+    }).join("");
+    document.getElementById("tp-places-total").textContent =
+      years.length + " 个年份 · " + uniquePlaces() + " 个国家与地区 · " + records + " 条年度记录";
   }
 
   function flightYears() {
@@ -350,5 +386,6 @@
   renderLog(flights, "tp-flight-list", "tp-total-line", "flight");
   renderLog(trains, "tp-train-list", "tp-train-total", "train");
   renderHikes();
+  renderPlaces();
   initMaps();
 })();

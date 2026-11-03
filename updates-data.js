@@ -9,8 +9,8 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-03",
     type: "足迹",
-    title: "我的行程：20 飞 + 4 铁 + 西湖爱心线",
-    note: "ECharts 地图 · 25,868 km",
+    title: "我的行程：20 飞 + 4 铁 + 旅行年表",
+    note: "16 年 · 32 国 · 25,868 km",
     href: "trips.html"
   },
   {
