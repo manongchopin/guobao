@@ -99,7 +99,10 @@
       box.innerHTML = '<p class="tp-nothing">还没有徒步记录。</p>';
       return;
     }
-    box.innerHTML = hikes.map(function (h, i) {
+    var list = hikes.slice().sort(function (a, b) {
+      return String(b.month).localeCompare(String(a.month));
+    });
+    box.innerHTML = list.map(function (h, i) {
       return '<article class="tp-hike">' +
         '<div class="tp-hike-head"><div>' +
           '<h3>' + esc(h.name || "未命名线路") + '</h3>' +
@@ -108,6 +111,7 @@
             (h.ascent != null ? ' · 爬升 ' + h.ascent + ' m' : "") +
             (h.high != null ? ' · 最高 ' + h.high + ' m' : "") +
           '</p>' +
+          (h.note ? '<p class="tp-hike-note">' + esc(h.note) + '</p>' : '') +
         '</div><p class="tp-hike-points">' + (h.points || (h.path || []).length) + ' 点</p></div>' +
         '<div class="tp-hike-map" id="tp-hike-map-' + i + '"></div>' +
         '<p class="tp-map-note">GPS 抽稀轨迹 · 底图 © OpenStreetMap contributors</p>' +
@@ -115,7 +119,7 @@
     }).join("");
 
     if (!window.L) return;
-    hikes.forEach(function (h, i) {
+    list.forEach(function (h, i) {
       var el = document.getElementById("tp-hike-map-" + i);
       if (!el || !h.path || h.path.length < 2) return;
       var map = L.map(el, { scrollWheelZoom: false });
