@@ -60,12 +60,14 @@ window.SPORTS_RANKINGS = {
             {
               "rank": 1,
               "name": "赵心童",
+              "en": "Zhao Xintong",
               "country": "中国",
               "points": "1,265,550"
             },
             {
               "rank": 2,
               "name": "吴宜泽",
+              "en": "Wu Yize",
               "country": "中国",
               "points": "1,238,900"
             },
@@ -149,12 +151,14 @@ window.SPORTS_RANKINGS = {
             {
               "rank": 14,
               "name": "肖国栋",
+              "en": "Xiao Guodong",
               "country": "中国",
               "points": "503,900"
             },
             {
               "rank": 15,
               "name": "丁俊晖",
+              "en": "Ding Junhui",
               "country": "中国",
               "points": "479,850"
             },
@@ -238,6 +242,7 @@ window.SPORTS_RANKINGS = {
             {
               "rank": 8,
               "name": "丁俊晖",
+              "en": "Ding Junhui",
               "total": "736"
             },
             {
@@ -267,6 +272,7 @@ window.SPORTS_RANKINGS = {
             {
               "rank": 13,
               "name": "傅家俊",
+              "en": "Marco Fu",
               "total": "572"
             },
             {
@@ -360,6 +366,7 @@ window.SPORTS_RANKINGS = {
             {
               "rank": 8,
               "name": "丁俊晖",
+              "en": "Ding Junhui",
               "c147": 7
             },
             {
@@ -395,6 +402,7 @@ window.SPORTS_RANKINGS = {
             {
               "rank": 14,
               "name": "傅家俊",
+              "en": "Marco Fu",
               "c147": 5
             },
             {
@@ -406,6 +414,7 @@ window.SPORTS_RANKINGS = {
             {
               "rank": 16,
               "name": "张安达",
+              "en": "Zhang Anda",
               "c147": 5
             }
           ]
@@ -500,6 +509,7 @@ window.SPORTS_RANKINGS = {
             {
               "rank": 9,
               "name": "丁俊晖",
+              "en": "Ding Junhui",
               "span": "2005-2024",
               "wins": "15"
             },
