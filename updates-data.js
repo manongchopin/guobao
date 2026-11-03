@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-03",
+    type: "计划",
+    title: "旅行计划新增中亚与自驾新加坡",
+    note: "中亚五斯坦 · 自驾到新加坡",
+    href: "plans.html#plan-12"
+  },
+  {
+    date: "2026-11-03",
     type: "足迹",
     title: "193 国世界足迹地图",
     note: "联合国会员国 · 可填色 · 本机保存",
