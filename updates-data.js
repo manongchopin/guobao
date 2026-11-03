@@ -1,9 +1,16 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-03",
+    type: "页面",
+    title: "发散的全世界：旅行灵感收件箱",
+    note: "国内 / 国外两篇 · 空数据起步 · 本机草稿可导出",
+    href: "world-ideas.html"
+  },
+  {
+    date: "2026-11-03",
     type: "足迹",
     title: "我的行程：20 飞 + 4 铁 + 西湖爱心线",
-    note: "25,868 km · GPX 轨迹",
+    note: "ECharts 地图 · 25,868 km",
     href: "trips.html"
   },
   {
