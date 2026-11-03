@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的行程 · 飞行、火车与自驾</title>
+<meta name="description" content="按年份记录实际走过的行程：飞行、火车和自驾。先留结构，等待真实行程录入。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/trips.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="index.html">← 我走过的世界</a>
+  <p class="kicker">TRIPS · FLIGHT / RAIL / DRIVE</p>
+  <h1>我的行程</h1>
+  <p class="lede">
+    实际走过的路，不是想去的计划。<br>
+    <span>飞行、火车、自驾，按年份归档。</span>
+  </p>
+  <div class="seal" aria-hidden="true">程</div>
+</header>
+
+<main class="wh-detail">
+  <section class="wh-section">
+    <div class="tp-stats">
+      <div><b id="tp-total">0</b><span>条行程</span></div>
+      <div><b id="tp-flight">0</b><span>段飞行</span></div>
+      <div><b id="tp-train">0</b><span>段火车</span></div>
+      <div><b id="tp-drive">0</b><span>段自驾</span></div>
+    </div>
+    <p class="tp-callout"><b>这是骨架页：</b>行程数据还没有录入。这里只放结构，不编造日期、航班号或路线。</p>
+    <p class="tp-intro">下一步把已经完成的行程按年份录进来：每条行程写清时间、国家/城市、交通方式、每日路线和相关世界遗产。日期默认只公开到月份。</p>
+  </section>
+
+  <section class="wh-section" id="list">
+    <div class="tp-head">
+      <div><p class="tp-kicker">THE ARCHIVE · BY YEAR</p><h2>按年份看行程</h2></div>
+      <p>飞行 / 火车 / 自驾只是标签。<br>真正的路线和交通段在详情页。</p>
+    </div>
+    <div class="tp-toolbar">
+      <div class="tp-filter" id="tp-filter">
+        <button type="button" data-mode="all" class="is-active">全部</button>
+        <button type="button" data-mode="flight">✈️ 飞行</button>
+        <button type="button" data-mode="train">🚆 火车</button>
+        <button type="button" data-mode="drive">🚗 自驾</button>
+      </div>
+      <p class="tp-count" id="tp-count">0 条</p>
+    </div>
+    <div id="tp-list"></div>
+    <div class="tp-empty" id="tp-empty">
+      <p>还没有录入行程。</p>
+      <p>新会话的 agent 会先问你要哪几条已完成的行程，再按统一结构填进来。</p>
+    </div>
+  </section>
+
+  <section class="wh-section">
+    <h2>这条线准备怎么长</h2>
+    <ul class="tp-notes">
+      <li><b>总览：</b>按年份倒序，每条行程一张卡，显示时间、国家、城市、交通方式。</li>
+      <li><b>详情：</b>路线地图 + 交通段表 + 每日行程 + 相关世界遗产。</li>
+      <li><b>隐私：</b>日期默认只到月份；不写具体住宿、不写未来实时位置。</li>
+      <li><b>不做：</b>不接航班 API、不做实时追踪、不自动定位。</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>我的行程 · 飞行 / 火车 / 自驾</span>
+    <span>骨架 · 待录入</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+    <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
+  </div>
+</footer>
+
+<script src="trips-data.js"></script>
+<script src="assets/trips.js"></script>
+</body>
+</html>

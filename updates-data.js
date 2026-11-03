@@ -1,6 +1,20 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-03",
+    type: "足迹",
+    title: "我的行程骨架：飞行/火车/自驾",
+    note: "待录入 · 按年份归档",
+    href: "trips.html"
+  },
+  {
+    date: "2026-11-03",
+    type: "计划",
+    title: "马克思伦敦漫步：9 个点按区归档",
+    note: "v0.2 · 建筑现状四分类 · 开放时间与来源",
+    href: "marx-london.html"
+  },
+  {
+    date: "2026-11-03",
     type: "计划",
     title: "法国自驾：56 项世界遗产分区",
     note: "50 项本土地图 · 六次自驾 · 海外 6 项单列",
