@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-03",
     type: "计划",
+    title: "旅行计划新增法国自驾骨架",
+    note: "v0.1 · 路线/主题/季节待定",
+    href: "france-roadtrip.html"
+  },
+  {
+    date: "2026-11-03",
+    type: "计划",
     title: "泛美公路：路线修订",
     note: "Puerto Williams 改为航段 · 补 Puyuhuapi / El Calafate / Santa Cruz · 写明单次签原因",
     href: "panamerican.html"

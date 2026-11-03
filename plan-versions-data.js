@@ -251,6 +251,20 @@ window.PLAN_VERSIONS = {
           "note": "Puerto Williams 为卖车后航段；巴塔哥尼亚单列；补 Puyuhuapi、El Calafate、Santa Cruz、San Isidro；写明单次签导致未到乌斯怀亚"
         }
       ]
+    },
+    "france-roadtrip": {
+      "title": "法国自驾",
+      "version": "0.1",
+      "status": "骨架",
+      "date": "2026-11-03",
+      "note": "占位骨架：路线、主题、季节、进出城市待定",
+      "history": [
+        {
+          "v": "0.1",
+          "date": "2026-11-03",
+          "note": "建立占位页和计划入口"
+        }
+      ]
     }
   }
 };
