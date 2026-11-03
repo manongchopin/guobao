@@ -29,19 +29,6 @@
 .sr-tab:hover { color: var(--ink); }
 .sr-tab.is-active { color: var(--ink); border-bottom-color: var(--red); }
 
-/* 二级标签：ATP / WTA */
-.sr-subtabs {
-  display: flex; gap: 6px; margin-bottom: 18px;
-}
-.sr-subtab {
-  border: 1px solid var(--line); background: transparent; cursor: pointer;
-  padding: 6px 14px; font-family: inherit; font-size: 10.5px;
-  letter-spacing: 0.14em; color: var(--ink-2);
-  transition: border-color 0.18s ease, background 0.18s ease, color 0.18s ease;
-}
-.sr-subtab:hover { border-color: var(--ink); }
-.sr-subtab.is-active { border-color: var(--ink); background: var(--ink); color: var(--paper); }
-
 /* 主体 */
 .sr-main { max-width: 1120px; margin: 0 auto; padding: 26px 28px 84px; }
 

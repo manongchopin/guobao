@@ -2,7 +2,7 @@
    页面：sports-rankings.html
 
    一个 panel 下可以有多个 section，一个 section = 一张表。
-   section.wide = true 时占满整行，否则两表并排。
+   section.wide = true 时占满整行，否则两表并排（左 ATP / 右 WTA 就是这样排的）。
 
    section.columns 决定表头和列样式：
      c = "rank"    名次（窄，朱砂红衬线）
@@ -17,10 +17,9 @@
      titles  （仅中国球员）该球员的排名赛冠军列表，点击名字展开
      region  （仅中国香港）地区标注
 
-   panel.status = "pending" 时不显示表格，只显示 note。
    fetchedAt 是本地抓取时间；榜单"截至"时点写在各自 section.note 里。 */
 window.SPORTS_RANKINGS = {
-  "fetchedAt": "2026-11-03T19:12:00+08:00",
+  "fetchedAt": "2026-11-03T19:24:00+08:00",
   "panels": {
     "snooker": {
       "id": "snooker",
@@ -816,28 +815,122 @@ window.SPORTS_RANKINGS = {
         }
       ]
     },
-    "atp": {
-      "id": "atp",
-      "title": "ATP",
-      "sub": "单打排名 · 前 16",
-      "status": "pending",
-      "source": "https://www.atptour.com/en/rankings/singles",
-      "sourceLabel": "ATP 官方单打排名",
-      "note": "ATP 官网对抓取返回 403（Cloudflare 拦截），需要换源或改用手动快照。"
-    },
-    "wta": {
-      "id": "wta",
-      "title": "WTA",
+    "tennis": {
+      "id": "tennis",
+      "title": "网球",
       "status": "ok",
       "sections": [
         {
+          "key": "atp",
+          "title": "ATP 单打",
+          "sub": "前 10",
+          "wide": false,
+          "source": "https://www.tennisexplorer.com/ranking/atp-men/",
+          "sourceLabel": "tennisexplorer · ATP 排名",
+          "note": "ATP 官网对抓取返回 403，这里用 tennisexplorer 的排名镜像，积分口径与 ATP 一致。",
+          "columns": [
+            {
+              "k": "rank",
+              "label": "名次",
+              "c": "rank"
+            },
+            {
+              "k": "name",
+              "label": "球员",
+              "c": "player"
+            },
+            {
+              "k": "country",
+              "label": "国家",
+              "c": "country"
+            },
+            {
+              "k": "points",
+              "label": "积分",
+              "c": "points"
+            }
+          ],
+          "rows": [
+            {
+              "rank": 1,
+              "name": "亚历山大·兹维列夫",
+              "en": "Alexander Zverev",
+              "country": "德国",
+              "points": "9,550"
+            },
+            {
+              "rank": 2,
+              "name": "扬尼克·辛纳",
+              "en": "Jannik Sinner",
+              "country": "意大利",
+              "points": "9,450"
+            },
+            {
+              "rank": 3,
+              "name": "卡洛斯·阿尔卡拉斯",
+              "en": "Carlos Alcaraz",
+              "country": "西班牙",
+              "points": "6,100"
+            },
+            {
+              "rank": 4,
+              "name": "本·谢尔顿",
+              "en": "Ben Shelton",
+              "country": "美国",
+              "points": "4,530"
+            },
+            {
+              "rank": 5,
+              "name": "丹尼尔·梅德韦杰夫",
+              "en": "Daniil Medvedev",
+              "country": "俄罗斯",
+              "points": "3,860"
+            },
+            {
+              "rank": 6,
+              "name": "弗拉维奥·科博利",
+              "en": "Flavio Cobolli",
+              "country": "意大利",
+              "points": "3,690"
+            },
+            {
+              "rank": 7,
+              "name": "阿蒂尔·菲斯",
+              "en": "Arthur Fils",
+              "country": "法国",
+              "points": "3,525"
+            },
+            {
+              "rank": 8,
+              "name": "弗朗西斯·蒂亚福",
+              "en": "Frances Tiafoe",
+              "country": "美国",
+              "points": "3,430"
+            },
+            {
+              "rank": 9,
+              "name": "亚历克斯·德米纳尔",
+              "en": "Alex De Minaur",
+              "country": "澳大利亚",
+              "points": "3,410"
+            },
+            {
+              "rank": 10,
+              "name": "拉斐尔·霍达尔",
+              "en": "Rafael Jodar",
+              "country": "西班牙",
+              "points": "3,209"
+            }
+          ]
+        },
+        {
           "key": "wta",
           "title": "WTA 单打",
-          "sub": "前 16",
-          "wide": true,
+          "sub": "前 10",
+          "wide": false,
           "source": "https://www.wtatennis.com/rankings/singles",
           "sourceLabel": "WTA 官方单打排名",
-          "note": "中文译名为常用译法，个别球员暂无统一译名。",
+          "note": "直接取自 WTA 官网榜单。",
           "columns": [
             {
               "k": "rank",
@@ -930,48 +1023,6 @@ window.SPORTS_RANKINGS = {
               "en": "Marta Kostyuk",
               "country": "乌克兰",
               "points": "3,910"
-            },
-            {
-              "rank": "11",
-              "name": "施奈德",
-              "en": "Diana Shnaider",
-              "country": "俄罗斯",
-              "points": "3,238"
-            },
-            {
-              "rank": "12",
-              "name": "赫瓦林斯卡",
-              "en": "Maja Chwalinska",
-              "country": "波兰",
-              "points": "3,016"
-            },
-            {
-              "rank": "13",
-              "name": "约维奇",
-              "en": "Iva Jovic",
-              "country": "美国",
-              "points": "2,941"
-            },
-            {
-              "rank": "14",
-              "name": "梅尔滕斯",
-              "en": "Elise Mertens",
-              "country": "比利时",
-              "points": "2,540"
-            },
-            {
-              "rank": "15",
-              "name": "奇尔斯特亚",
-              "en": "Sorana Cirstea",
-              "country": "罗马尼亚",
-              "points": "2,386"
-            },
-            {
-              "rank": "16",
-              "name": "大坂直美",
-              "en": "Naomi Osaka",
-              "country": "日本",
-              "points": "2,315"
             }
           ]
         }

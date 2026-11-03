@@ -4,7 +4,6 @@
   var data = window.SPORTS_RANKINGS || { panels: {} };
   var panels = data.panels || {};
   var tabsEl = document.getElementById("sr-tabs");
-  var subEl = document.getElementById("sr-subtabs");
   var panelEl = document.getElementById("sr-panel");
   var updatedEl = document.getElementById("sr-updated");
 
@@ -12,12 +11,7 @@
     { id: "snooker", label: "斯诺克" },
     { id: "tennis", label: "网球" }
   ];
-  var TOURS = [
-    { id: "atp", label: "ATP" },
-    { id: "wta", label: "WTA" }
-  ];
-
-  var state = { sport: "snooker", tour: "wta" };
+  var state = { sport: "snooker" };
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
@@ -26,7 +20,7 @@
   }
 
   function currentPanelId() {
-    return state.sport === "tennis" ? state.tour : "snooker";
+    return state.sport;
   }
 
   function fmtStamp(iso) {
@@ -49,20 +43,6 @@
       var on = state.sport === s.id;
       return '<button type="button" role="tab" class="sr-tab' + (on ? " is-active" : "") +
         '" data-sport="' + esc(s.id) + '" aria-selected="' + on + '">' + esc(s.label) + "</button>";
-    }).join("");
-  }
-
-  function renderSubtabs() {
-    if (state.sport !== "tennis") {
-      subEl.hidden = true;
-      subEl.innerHTML = "";
-      return;
-    }
-    subEl.hidden = false;
-    subEl.innerHTML = TOURS.map(function (t) {
-      var on = state.tour === t.id;
-      return '<button type="button" role="tab" class="sr-subtab' + (on ? " is-active" : "") +
-        '" data-tour="' + esc(t.id) + '" aria-selected="' + on + '">' + esc(t.label) + "</button>";
     }).join("");
   }
 
@@ -155,7 +135,6 @@
     var stamp = fmtStamp(data.fetchedAt);
     updatedEl.textContent = stamp ? "数据更新于 " + stamp : "尚未抓取数据";
     renderTabs();
-    renderSubtabs();
     renderPanel();
     try { history.replaceState(null, "", "#" + currentPanelId()); } catch (e) {}
   }
@@ -179,21 +158,13 @@
     render();
   });
 
-  subEl.addEventListener("click", function (e) {
-    var btn = e.target.closest(".sr-subtab");
-    if (!btn) return;
-    state.tour = btn.getAttribute("data-tour");
-    render();
-  });
-
-  // 支持直接打开 #snooker / #atp / #wta
+  // 支持直接打开 #snooker / #tennis（#atp、#wta 也指向网球页）
   (function initFromHash() {
     var h = (location.hash || "").replace("#", "");
     if (h === "snooker") {
       state.sport = "snooker";
-    } else if (h === "atp" || h === "wta") {
+    } else if (h === "tennis" || h === "atp" || h === "wta") {
       state.sport = "tennis";
-      state.tour = h;
     }
   })();
 
