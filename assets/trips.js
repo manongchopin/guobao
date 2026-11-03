@@ -2,6 +2,7 @@
   "use strict";
   var D = window.TRIPS || {};
   var flights = Array.isArray(D.flights) ? D.flights : [];
+  var trains = Array.isArray(D.trains) ? D.trains : [];
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
@@ -12,59 +13,61 @@
     return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
   function kmTotal(list) {
-    return list.reduce(function (s, f) { return s + (Number(f.km) || 0); }, 0);
+    return list.reduce(function (s, x) { return s + (Number(x.km) || 0); }, 0);
   }
-  function yearOf(f) { return String(f.month || "").slice(0, 4) || "未编年"; }
+  function yearOf(x) { return String(x.month || "").slice(0, 4) || "未编年"; }
 
   function renderStats() {
-    var cities = {}, years = {};
-    flights.forEach(function (f) {
-      if (f.fromCode) cities[f.fromCode] = 1;
-      if (f.toCode) cities[f.toCode] = 1;
-      years[yearOf(f)] = 1;
-    });
+    var years = {};
+    flights.concat(trains).forEach(function (x) { years[yearOf(x)] = 1; });
     document.getElementById("tp-flights").textContent = flights.length;
-    document.getElementById("tp-km").textContent = fmt(kmTotal(flights));
-    document.getElementById("tp-cities").textContent = Object.keys(cities).length;
+    document.getElementById("tp-trains").textContent = trains.length;
+    document.getElementById("tp-km").textContent = fmt(kmTotal(flights) + kmTotal(trains));
     document.getElementById("tp-years").textContent = Object.keys(years).length;
   }
 
-  function render() {
-    var box = document.getElementById("tp-flight-list");
-    var totalLine = document.getElementById("tp-total-line");
-    if (!flights.length) {
-      box.innerHTML = '<p class="tp-nothing">还没有飞行记录。</p>';
+  function renderLog(list, boxId, totalId, kind) {
+    var box = document.getElementById(boxId);
+    var totalLine = document.getElementById(totalId);
+    if (!list.length) {
+      box.innerHTML = '<p class="tp-nothing">还没有' + (kind === "train" ? "铁路" : "飞行") + '记录。</p>';
       totalLine.textContent = "";
       return;
     }
 
     var byYear = {};
-    flights.slice().sort(function (a, b) {
+    list.slice().sort(function (a, b) {
       return String(b.month).localeCompare(String(a.month));
-    }).forEach(function (f) {
-      (byYear[yearOf(f)] = byYear[yearOf(f)] || []).push(f);
+    }).forEach(function (x) {
+      (byYear[yearOf(x)] = byYear[yearOf(x)] || []).push(x);
     });
 
     box.innerHTML = Object.keys(byYear).sort().reverse().map(function (y) {
-      var list = byYear[y];
+      var group = byYear[y];
       var head = '<div class="tp-year"><span>' + esc(y) + '</span><em>' +
-        list.length + ' 段 · ' + fmt(kmTotal(list)) + ' km</em></div>';
-      var rows = list.map(function (f) {
+        group.length + ' 段 · ' + fmt(kmTotal(group)) + ' km</em></div>';
+      var rows = group.map(function (x) {
+        var route;
+        if (kind === "train") {
+          route = esc(x.from || "") + ' <b>→</b> ' + esc(x.to || "");
+        } else {
+          route = esc(x.from || "") + ' <i>' + esc(x.fromCode || "") + '</i> <b>→</b> ' +
+            esc(x.to || "") + ' <i>' + esc(x.toCode || "") + '</i>';
+        }
         return '<div class="tp-flight-row">' +
-          '<span class="tp-month">' + esc(String(f.month || "").slice(5)) + ' 月</span>' +
-          '<span class="tp-flight-no">' + esc(f.flight || "") + '</span>' +
-          '<span class="tp-route">' + esc(f.from || "") +
-            ' <i>' + esc(f.fromCode || "") + '</i> <b>→</b> ' +
-            esc(f.to || "") + ' <i>' + esc(f.toCode || "") + '</i></span>' +
-          '<span class="tp-km">' + fmt(Number(f.km) || 0) + ' km</span>' +
+          '<span class="tp-month">' + esc(String(x.month || "").slice(5)) + ' 月</span>' +
+          '<span class="tp-flight-no">' + esc(x.flight || x.train || "") + '</span>' +
+          '<span class="tp-route">' + route + '</span>' +
+          '<span class="tp-km">' + fmt(Number(x.km) || 0) + ' km</span>' +
         '</div>';
       }).join("");
       return head + rows;
     }).join("");
 
-    totalLine.textContent = "合计 " + flights.length + " 段 · " + fmt(kmTotal(flights)) + " km";
+    totalLine.textContent = "合计 " + list.length + " 段 · " + fmt(kmTotal(list)) + " km";
   }
 
   renderStats();
-  render();
+  renderLog(flights, "tp-flight-list", "tp-total-line", "flight");
+  renderLog(trains, "tp-train-list", "tp-train-total", "train");
 })();

@@ -43,7 +43,7 @@
 .tp-nothing { border: 1px dashed var(--line); padding: 26px 20px; text-align: center; color: var(--ink-3); font-size: 11px; }
 
 /* 待录入 */
-.tp-pending { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.tp-pending { display: grid; grid-template-columns: 1fr; gap: 18px; }
 .tp-pending > div { border: 1px dashed var(--line); padding: 15px 18px; }
 .tp-pending h3 { margin: 0 0 6px; font-family: var(--serif); font-size: 17px; font-weight: 600; }
 .tp-pending p { margin: 0; font-size: 10.5px; line-height: 1.8; color: var(--ink-3); }
