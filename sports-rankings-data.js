@@ -1039,11 +1039,11 @@ window.SPORTS_RANKINGS = {
         {
           "key": "chn-atp",
           "title": "中国男子 · ATP 排名",
-          "sub": "世界排名前 16 位中国球员",
+          "sub": "世界排名前 10 位中国球员",
           "wide": false,
           "source": "https://www.tennisexplorer.com/ranking/atp-men/?country=china",
           "sourceLabel": "tennisexplorer · ATP 中国球员",
-          "note": "按世界排名取中国球员前 16 位。ATP 官网对抓取返回 403，此处用 tennisexplorer 镜像。",
+          "note": "按世界排名取中国球员前 10 位。ATP 官网对抓取返回 403，此处用 tennisexplorer 镜像。",
           "columns": [
             {
               "k": "rank",
@@ -1111,47 +1111,17 @@ window.SPORTS_RANKINGS = {
               "rank": 856,
               "name": "刘汉屹",
               "points": "30"
-            },
-            {
-              "rank": 910,
-              "name": "Sun Qian",
-              "points": "26"
-            },
-            {
-              "rank": 954,
-              "name": "曾耀杰",
-              "points": "23"
-            },
-            {
-              "rank": 991,
-              "name": "孟凡明",
-              "points": "20"
-            },
-            {
-              "rank": 1005,
-              "name": "莫业聪",
-              "points": "19"
-            },
-            {
-              "rank": 1054,
-              "name": "肖霖昂",
-              "points": "17"
-            },
-            {
-              "rank": 1091,
-              "name": "Zhao Zhao",
-              "points": "15"
             }
           ]
         },
         {
           "key": "chn-wta",
           "title": "中国女子 · WTA 排名",
-          "sub": "世界排名前 16 位中国球员",
+          "sub": "世界排名前 10 位中国球员",
           "wide": false,
           "source": "https://www.tennisexplorer.com/ranking/wta-women/?country=china",
           "sourceLabel": "tennisexplorer · WTA 中国球员",
-          "note": "按世界排名取中国球员前 16 位。部分低排名球员暂无可靠中文译名，暂用拼音。",
+          "note": "按世界排名取中国球员前 10 位。部分低排名球员暂无可靠中文译名，暂用拼音。",
           "columns": [
             {
               "k": "rank",
@@ -1219,43 +1189,13 @@ window.SPORTS_RANKINGS = {
               "rank": 229,
               "name": "白卓璇",
               "points": "333"
-            },
-            {
-              "rank": 231,
-              "name": "高馨妤",
-              "points": "330"
-            },
-            {
-              "rank": 257,
-              "name": "Yao Xinxin",
-              "points": "288"
-            },
-            {
-              "rank": 262,
-              "name": "朱琳",
-              "points": "283"
-            },
-            {
-              "rank": 269,
-              "name": "田方然",
-              "points": "268"
-            },
-            {
-              "rank": 285,
-              "name": "Ren Yufei",
-              "points": "244"
-            },
-            {
-              "rank": 303,
-              "name": "Sun Xinran",
-              "points": "228"
             }
           ]
         },
         {
           "key": "chn-career",
           "title": "中国球员 · 生涯奖金",
-          "sub": "男女合并 · 前 16",
+          "sub": "男女合并 · 前 10",
           "wide": false,
           "source": "https://en.wikipedia.org/wiki/Li_Na",
           "sourceLabel": "维基百科各球员页信息框",
@@ -1327,43 +1267,13 @@ window.SPORTS_RANKINGS = {
               "rank": 10,
               "name": "徐一璠",
               "points": "$4,212,700"
-            },
-            {
-              "rank": 11,
-              "name": "张之臻",
-              "points": "$3,799,682"
-            },
-            {
-              "rank": 12,
-              "name": "王雅繁",
-              "points": "$3,751,062"
-            },
-            {
-              "rank": 13,
-              "name": "王曦雨",
-              "points": "$3,552,737"
-            },
-            {
-              "rank": 14,
-              "name": "袁悦",
-              "points": "$2,868,135"
-            },
-            {
-              "rank": 15,
-              "name": "商竣程",
-              "points": "$2,865,686"
-            },
-            {
-              "rank": 16,
-              "name": "吴易昺",
-              "points": "$2,074,611"
             }
           ]
         },
         {
           "key": "chn-season",
           "title": "中国球员 · 赛季奖金",
-          "sub": "女子 · 2026 · 前 16",
+          "sub": "女子 · 2026 · 前 10",
           "wide": false,
           "source": "https://wtafiles.wtatennis.com/pdf/rankings/All_YTD_Prize_Money.pdf",
           "sourceLabel": "WTA · All YTD Prize Money",
@@ -1435,36 +1345,6 @@ window.SPORTS_RANKINGS = {
               "rank": 10,
               "name": "白卓璇",
               "points": "$235,159"
-            },
-            {
-              "rank": 11,
-              "name": "Tang Qianhui",
-              "points": "$221,342"
-            },
-            {
-              "rank": 12,
-              "name": "马烨欣",
-              "points": "$194,544"
-            },
-            {
-              "rank": 13,
-              "name": "尤晓迪",
-              "points": "$165,329"
-            },
-            {
-              "rank": 14,
-              "name": "高馨妤",
-              "points": "$135,573"
-            },
-            {
-              "rank": 15,
-              "name": "杨钊煊",
-              "points": "$121,579"
-            },
-            {
-              "rank": 16,
-              "name": "Shi Han",
-              "points": "$120,826"
             }
           ]
         }
