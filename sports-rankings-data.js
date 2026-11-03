@@ -1035,6 +1035,438 @@ window.SPORTS_RANKINGS = {
               "points": "3,910"
             }
           ]
+        },
+        {
+          "key": "chn-atp",
+          "title": "中国男子 · ATP 排名",
+          "sub": "世界排名前 16 位中国球员",
+          "wide": false,
+          "source": "https://www.tennisexplorer.com/ranking/atp-men/?country=china",
+          "sourceLabel": "tennisexplorer · ATP 中国球员",
+          "note": "按世界排名取中国球员前 16 位。ATP 官网对抓取返回 403，此处用 tennisexplorer 镜像。",
+          "columns": [
+            {
+              "k": "rank",
+              "label": "排名",
+              "c": "rank"
+            },
+            {
+              "k": "name",
+              "label": "球员",
+              "c": "player"
+            },
+            {
+              "k": "points",
+              "label": "积分",
+              "c": "points"
+            }
+          ],
+          "rows": [
+            {
+              "rank": 93,
+              "name": "布云朝克特",
+              "points": "646"
+            },
+            {
+              "rank": 105,
+              "name": "吴易昺",
+              "points": "571"
+            },
+            {
+              "rank": 162,
+              "name": "张之臻",
+              "points": "354"
+            },
+            {
+              "rank": 250,
+              "name": "商竣程",
+              "points": "220"
+            },
+            {
+              "rank": 281,
+              "name": "周意",
+              "points": "196"
+            },
+            {
+              "rank": 287,
+              "name": "孙发京",
+              "points": "193"
+            },
+            {
+              "rank": 367,
+              "name": "崔杰",
+              "points": "138"
+            },
+            {
+              "rank": 740,
+              "name": "特日格乐",
+              "points": "42"
+            },
+            {
+              "rank": 800,
+              "name": "张天汇",
+              "points": "35"
+            },
+            {
+              "rank": 856,
+              "name": "刘汉屹",
+              "points": "30"
+            },
+            {
+              "rank": 910,
+              "name": "Sun Qian",
+              "points": "26"
+            },
+            {
+              "rank": 954,
+              "name": "曾耀杰",
+              "points": "23"
+            },
+            {
+              "rank": 991,
+              "name": "孟凡明",
+              "points": "20"
+            },
+            {
+              "rank": 1005,
+              "name": "莫业聪",
+              "points": "19"
+            },
+            {
+              "rank": 1054,
+              "name": "肖霖昂",
+              "points": "17"
+            },
+            {
+              "rank": 1091,
+              "name": "Zhao Zhao",
+              "points": "15"
+            }
+          ]
+        },
+        {
+          "key": "chn-wta",
+          "title": "中国女子 · WTA 排名",
+          "sub": "世界排名前 16 位中国球员",
+          "wide": false,
+          "source": "https://www.tennisexplorer.com/ranking/wta-women/?country=china",
+          "sourceLabel": "tennisexplorer · WTA 中国球员",
+          "note": "按世界排名取中国球员前 16 位。部分低排名球员暂无可靠中文译名，暂用拼音。",
+          "columns": [
+            {
+              "k": "rank",
+              "label": "排名",
+              "c": "rank"
+            },
+            {
+              "k": "name",
+              "label": "球员",
+              "c": "player"
+            },
+            {
+              "k": "points",
+              "label": "积分",
+              "c": "points"
+            }
+          ],
+          "rows": [
+            {
+              "rank": 21,
+              "name": "郑钦文",
+              "points": "2017"
+            },
+            {
+              "rank": 38,
+              "name": "王欣瑜",
+              "points": "1288"
+            },
+            {
+              "rank": 80,
+              "name": "王曦雨",
+              "points": "868"
+            },
+            {
+              "rank": 95,
+              "name": "张帅",
+              "points": "802"
+            },
+            {
+              "rank": 148,
+              "name": "Shi Han",
+              "points": "503"
+            },
+            {
+              "rank": 168,
+              "name": "袁悦",
+              "points": "449"
+            },
+            {
+              "rank": 207,
+              "name": "马烨欣",
+              "points": "376"
+            },
+            {
+              "rank": 213,
+              "name": "郭涵煜",
+              "points": "361"
+            },
+            {
+              "rank": 215,
+              "name": "尤晓迪",
+              "points": "354"
+            },
+            {
+              "rank": 229,
+              "name": "白卓璇",
+              "points": "333"
+            },
+            {
+              "rank": 231,
+              "name": "高馨妤",
+              "points": "330"
+            },
+            {
+              "rank": 257,
+              "name": "Yao Xinxin",
+              "points": "288"
+            },
+            {
+              "rank": 262,
+              "name": "朱琳",
+              "points": "283"
+            },
+            {
+              "rank": 269,
+              "name": "田方然",
+              "points": "268"
+            },
+            {
+              "rank": 285,
+              "name": "Ren Yufei",
+              "points": "244"
+            },
+            {
+              "rank": 303,
+              "name": "Sun Xinran",
+              "points": "228"
+            }
+          ]
+        },
+        {
+          "key": "chn-career",
+          "title": "中国球员 · 生涯奖金",
+          "sub": "男女合并 · 前 16",
+          "wide": false,
+          "source": "https://en.wikipedia.org/wiki/Li_Na",
+          "sourceLabel": "维基百科各球员页信息框",
+          "note": "生涯总奖金，含现役与退役球员。数字由维基编辑手动维护，可能略滞后于官方；晏紫、李婷无维基条目，未收入。",
+          "columns": [
+            {
+              "k": "rank",
+              "label": "名次",
+              "c": "rank"
+            },
+            {
+              "k": "name",
+              "label": "球员",
+              "c": "player"
+            },
+            {
+              "k": "points",
+              "label": "奖金",
+              "c": "points"
+            }
+          ],
+          "rows": [
+            {
+              "rank": 1,
+              "name": "李娜",
+              "points": "$16,709,074"
+            },
+            {
+              "rank": 2,
+              "name": "张帅",
+              "points": "$13,601,287"
+            },
+            {
+              "rank": 3,
+              "name": "郑钦文",
+              "points": "$12,415,645"
+            },
+            {
+              "rank": 4,
+              "name": "彭帅",
+              "points": "$9,617,653"
+            },
+            {
+              "rank": 5,
+              "name": "郑洁",
+              "points": "$6,157,773"
+            },
+            {
+              "rank": 6,
+              "name": "王欣瑜",
+              "points": "$5,975,457"
+            },
+            {
+              "rank": 7,
+              "name": "王蔷",
+              "points": "$5,578,040"
+            },
+            {
+              "rank": 8,
+              "name": "郑赛赛",
+              "points": "$4,713,887"
+            },
+            {
+              "rank": 9,
+              "name": "朱琳",
+              "points": "$4,237,094"
+            },
+            {
+              "rank": 10,
+              "name": "徐一璠",
+              "points": "$4,212,700"
+            },
+            {
+              "rank": 11,
+              "name": "张之臻",
+              "points": "$3,799,682"
+            },
+            {
+              "rank": 12,
+              "name": "王雅繁",
+              "points": "$3,751,062"
+            },
+            {
+              "rank": 13,
+              "name": "王曦雨",
+              "points": "$3,552,737"
+            },
+            {
+              "rank": 14,
+              "name": "袁悦",
+              "points": "$2,868,135"
+            },
+            {
+              "rank": 15,
+              "name": "商竣程",
+              "points": "$2,865,686"
+            },
+            {
+              "rank": 16,
+              "name": "吴易昺",
+              "points": "$2,074,611"
+            }
+          ]
+        },
+        {
+          "key": "chn-season",
+          "title": "中国球员 · 赛季奖金",
+          "sub": "女子 · 2026 · 前 16",
+          "wide": false,
+          "source": "https://wtafiles.wtatennis.com/pdf/rankings/All_YTD_Prize_Money.pdf",
+          "sourceLabel": "WTA · All YTD Prize Money",
+          "note": "截至 2026-11-02 的赛季累计奖金，单打+双打+混双合计。男子部分因 ATP 官网封锁、无可用来源，本表只列女子。部分球员暂无可靠中文译名，暂用拼音。",
+          "columns": [
+            {
+              "k": "rank",
+              "label": "名次",
+              "c": "rank"
+            },
+            {
+              "k": "name",
+              "label": "球员",
+              "c": "player"
+            },
+            {
+              "k": "points",
+              "label": "奖金",
+              "c": "points"
+            }
+          ],
+          "rows": [
+            {
+              "rank": 1,
+              "name": "郑钦文",
+              "points": "$2,490,893"
+            },
+            {
+              "rank": 2,
+              "name": "张帅",
+              "points": "$2,171,355"
+            },
+            {
+              "rank": 3,
+              "name": "王欣瑜",
+              "points": "$1,422,764"
+            },
+            {
+              "rank": 4,
+              "name": "郭涵煜",
+              "points": "$1,039,751"
+            },
+            {
+              "rank": 5,
+              "name": "王曦雨",
+              "points": "$725,732"
+            },
+            {
+              "rank": 6,
+              "name": "蒋欣玗",
+              "points": "$450,455"
+            },
+            {
+              "rank": 7,
+              "name": "徐一璠",
+              "points": "$430,209"
+            },
+            {
+              "rank": 8,
+              "name": "袁悦",
+              "points": "$384,397"
+            },
+            {
+              "rank": 9,
+              "name": "朱琳",
+              "points": "$301,570"
+            },
+            {
+              "rank": 10,
+              "name": "白卓璇",
+              "points": "$235,159"
+            },
+            {
+              "rank": 11,
+              "name": "Tang Qianhui",
+              "points": "$221,342"
+            },
+            {
+              "rank": 12,
+              "name": "马烨欣",
+              "points": "$194,544"
+            },
+            {
+              "rank": 13,
+              "name": "尤晓迪",
+              "points": "$165,329"
+            },
+            {
+              "rank": 14,
+              "name": "高馨妤",
+              "points": "$135,573"
+            },
+            {
+              "rank": 15,
+              "name": "杨钊煊",
+              "points": "$121,579"
+            },
+            {
+              "rank": 16,
+              "name": "Shi Han",
+              "points": "$120,826"
+            }
+          ]
         }
       ]
     }
