@@ -3942,3 +3942,28 @@ a.plan-shelf:hover { background: var(--paper-2); }
   .home-footprint-grid { grid-template-columns: 1fr; }
   .hf-map { height: 280px; }
 }
+
+/* 旅行计划版本 */
+.plan-version-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; border-top: 1px solid var(--ink); padding-top: 14px; margin-bottom: 9px; }
+.plan-version-head h2 { margin: 0; }
+.plan-version-head > p { max-width: 330px; margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); text-align: right; }
+.plan-version-badge { display: inline-block; margin-left: auto; margin-right: 1px; padding: 1px 4px; border: 1px solid var(--line); font-family: var(--mono); font-size: 8px; color: var(--ink-3); vertical-align: 1px; white-space: nowrap; }
+.plan-version-footer { font-family: var(--mono); font-size: 8px; color: var(--ink-3); white-space: nowrap; }
+.plan-version-section { margin-top: 26px; }
+.plan-version-section h2 { margin: 0; }
+.plan-version-rule { max-width: 820px; margin: 6px 0 10px; font-size: 11px; line-height: 1.8; color: var(--ink-3); }
+.plan-version-row { border-top: 1px solid var(--line-soft); padding: 6px 0; }
+.plan-version-row summary { display: grid; grid-template-columns: 1.4fr 42px 78px 2fr; gap: 8px; align-items: baseline; cursor: pointer; list-style: none; }
+.plan-version-row summary::-webkit-details-marker { display: none; }
+.pvr-title { font-family: var(--serif); font-size: 14px; color: var(--ink); }
+.plan-version-row em { font-style: normal; font-family: var(--mono); font-size: 9px; color: var(--red); }
+.pvr-date { font-family: var(--mono); font-size: 8px; color: var(--ink-3); }
+.pvr-note { font-size: 9px; line-height: 1.5; color: var(--ink-3); }
+.plan-version-row ul { margin: 5px 0 2px 18px; padding: 0; }
+.plan-version-row li { margin: 2px 0; font-size: 9px; line-height: 1.6; color: var(--ink-3); }
+.plan-version-row li b { display: inline-block; width: 34px; font-family: var(--mono); font-weight: 400; color: var(--red); }
+.plan-version-row li span { display: inline-block; width: 76px; font-family: var(--mono); font-size: 8px; }
+@media (max-width: 760px) {
+  .plan-version-row summary { grid-template-columns: 1fr auto; }
+  .pvr-date, .pvr-note { display: none; }
+}

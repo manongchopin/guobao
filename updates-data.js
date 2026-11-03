@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-03",
+    type: "站点",
+    title: "旅行计划启用版本号",
+    note: "0.x 骨架 · 1.0 可执行 · 2.0 重构",
+    href: "plans.html#versions"
+  },
+  {
+    date: "2026-11-03",
     type: "计划",
     title: "自驾到新加坡路线与世界遗产",
     note: "磨憨出境 · 五国25项遗产 · 明朝回声",
