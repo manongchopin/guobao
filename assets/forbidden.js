@@ -2,11 +2,19 @@
   "use strict";
 
   var items = window.FORBIDDEN || [];
+  var photos = window.FORBIDDEN_PHOTOS || {};
   var listEl = document.getElementById("list");
   var indexEl = document.getElementById("index");
   var noteEl = document.getElementById("fx-note");
   var toolbarNote = document.getElementById("toolbar-note");
   var buttons = Array.prototype.slice.call(document.querySelectorAll(".switch button"));
+
+  var lightbox = document.getElementById("fb-lightbox");
+  var lightboxImg = document.getElementById("fb-lightbox-img");
+  var lightboxTitle = document.getElementById("fb-lightbox-title");
+  var lightboxMeta = document.getElementById("fb-lightbox-meta");
+  var lightboxClose = document.getElementById("fb-lightbox-close");
+  var lastFocus = null;
 
   var toolbarInner = document.querySelector(".toolbar-inner");
   var hubCount = document.getElementById("hub-count");
@@ -74,6 +82,49 @@
     return it.name.replace(/（[^）]*）$/, "");
   }
 
+  function esc(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/"/g, "&quot;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function photoMeta(it, p) {
+    var parts = [];
+    if (it.era) parts.push(it.era);
+    var museum = p.museum || it.museums.join(" / ");
+    if (museum) parts.push(museum);
+    if (p.date) parts.push(p.date);
+    if (p.note) parts.push(p.note);
+    return parts.join(" · ");
+  }
+
+  function openPhoto(fid, trigger) {
+    var p = photos[fid];
+    if (!p || !lightbox) return;
+    var it = null;
+    items.forEach(function (x) { if (x.fid === fid) it = x; });
+    if (!it) return;
+    lastFocus = trigger || document.activeElement;
+    lightboxImg.src = p.src;
+    lightboxImg.alt = it.name + "照片";
+    lightboxTitle.textContent = it.name;
+    lightboxMeta.textContent = photoMeta(it, p);
+    lightbox.hidden = false;
+    document.body.classList.add("fb-lightbox-open");
+    if (lightboxClose) lightboxClose.focus();
+  }
+
+  function closePhoto() {
+    if (!lightbox || lightbox.hidden) return;
+    lightbox.hidden = true;
+    lightboxImg.removeAttribute("src");
+    lightboxImg.alt = "";
+    document.body.classList.remove("fb-lightbox-open");
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
   function updateHub() {
     if (hubCount) hubCount.textContent = items.length;
     if (hubNote) hubNote.textContent = museumCount() + " 家收藏单位 · " + provinceCount() + " 个省级行政区";
@@ -119,8 +170,14 @@
       : it.places.map(function (p) { return p.museum; });
     var place = view === "province" ? batchOf(it.batch).label : it.provinces.join(" / ");
     var v = !!(window.FBVisited && FBVisited.has(it.fid));
+    var photo = photos[it.fid];
+    var thumb = photo
+      ? '<button type="button" class="fb-thumb" data-photo="' + it.fid + '" aria-label="查看' + esc(it.name) + '的照片" title="本人拍摄 · 点击看大图">' +
+          '<img src="' + esc(photo.thumb) + '" alt="" width="40" height="40" loading="lazy">' +
+        '</button>'
+      : "";
     return '<div class="fb-row' + (view === "province" ? " is-province" : "") + (v ? " is-visited" : "") + '">' +
-      '<span class="fb-n">' + it.name + '</span>' +
+      '<span class="fb-n">' + it.name + thumb + '</span>' +
       '<span class="fb-a">' + (it.era || "—") + '</span>' +
       '<span class="fb-b">' + museums.join(" / ") + '</span>' +
       '<span class="fb-c">' + place + '</span>' +
@@ -232,6 +289,11 @@
   });
 
   listEl.addEventListener("click", function (e) {
+    var thumb = e.target.closest(".fb-thumb");
+    if (thumb) {
+      openPhoto(thumb.getAttribute("data-photo"), thumb);
+      return;
+    }
     var btn = e.target.closest(".fb-visit");
     if (!btn) return;
     if (!window.FBVisited) return;
@@ -247,6 +309,21 @@
     });
     updateWalk();
   });
+
+  if (lightbox) {
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox || e.target === lightboxClose) closePhoto();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (lightbox.hidden) return;
+      if (e.key === "Escape") {
+        closePhoto();
+      } else if (e.key === "Tab") {
+        e.preventDefault();
+        if (lightboxClose) lightboxClose.focus();
+      }
+    });
+  }
 
   buttons.forEach(function (b) {
     b.addEventListener("click", function () {
