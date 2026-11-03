@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T01:27:36.007Z",
+  "updated": "2026-11-03T01:25:41.920Z",
   "source": "https://www.goratings.org/en/",
   "players": [
     {
@@ -13,7 +13,7 @@
       "rank": 2,
       "name": "Xu Jiayang",
       "country": "cn",
-      "elo": 3764,
+      "elo": 3765,
       "nameZh": "许嘉阳"
     },
     {
@@ -34,7 +34,7 @@
       "rank": 5,
       "name": "Ke Jie",
       "country": "cn",
-      "elo": 3705,
+      "elo": 3690,
       "nameZh": "柯洁"
     }
   ]
