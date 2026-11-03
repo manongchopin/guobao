@@ -43,3 +43,6 @@
   .vt-head { align-items: flex-start; flex-direction: column; gap: 5px; }
   .vt-head > p { text-align: left; }
 }
+
+.vt-table td.name b { display: block; font-weight: 500; }
+.vt-table td.name span { display: block; margin-top: 1px; font-family: var(--sans); font-size: 8px; color: var(--ink-3); }

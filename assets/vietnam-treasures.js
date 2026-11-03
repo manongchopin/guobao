@@ -22,10 +22,10 @@
     return '<section class="vt-batch" id="vt-batch-' + b.batch + '" data-batch="' + b.batch + '">' +
       '<div class="vt-batch-head"><h3>第 ' + b.batch + ' 批 · Bảo vật quốc gia</h3>' +
       '<span>签署 ' + b.date + ' · ' + b.count + ' 件（组）' + (b.decision ? ' · ' + esc(b.decision) : '') + '</span></div>' +
-      '<div class="vt-table-wrap"><table class="vt-table"><thead><tr><th>#</th><th>名称（越南文原表）</th><th>年代 / 文化</th><th>收藏 / 管理单位</th><th>所在地</th></tr></thead><tbody>' +
+      '<div class="vt-table-wrap"><table class="vt-table"><thead><tr><th>#</th><th>中文名 / 越南文原名</th><th>年代 / 文化</th><th>收藏 / 管理单位</th><th>所在地</th></tr></thead><tbody>' +
       b.items.map(function (it) {
-        return '<tr data-batch="' + b.batch + '" data-search="' + esc(norm([it.name, it.period, it.owner, it.location].join(" "))) + '">' +
-          '<td class="n">' + it.no + '</td><td class="name">' + esc(it.name) + '</td><td>' + dash(it.period) + '</td><td class="owner">' + dash(it.owner) + '</td><td class="loc">' + dash(it.location) + '</td></tr>';
+        return '<tr data-batch="' + b.batch + '" data-search="' + esc(norm([it.nameZh, it.name, it.period, it.owner, it.location].join(" "))) + '">' +
+          '<td class="n">' + it.no + '</td><td class="name"><b>' + esc(it.nameZh || '（中文名待补）') + '</b><span>' + esc(it.name) + '</span></td><td>' + dash(it.period) + '</td><td class="owner">' + dash(it.owner) + '</td><td class="loc">' + dash(it.location) + '</td></tr>';
       }).join("") + '</tbody></table></div></section>';
   }).join("");
 
@@ -53,6 +53,8 @@
   document.getElementById("vt-sources").innerHTML = [
     { name: "越南文维基：Bảo vật quốc gia (Việt Nam)（13 批表格，主数据）", url: "https://vi.wikipedia.org/wiki/B%E1%BA%A3o_v%E1%BA%ADt_qu%E1%BB%91c_gia_(Vi%E1%BB%87t_Nam)" },
     { name: "中文维基：國家寶物 (越南)（13 批、327 件）", url: "https://zh.wikipedia.org/wiki/%E5%9C%8B%E5%AE%B6%E5%AF%B6%E7%89%A9_(%E8%B6%8A%E5%8D%97)" },
+    { name: "知乎回答：越南 9→12 批国宝名录（中文名参考）", url: "https://www.zhihu.com/question/57187329/answer/1835805591" },
+    { name: "知乎专栏：第十三批越南国宝名录（2024.12.31）", url: "https://zhuanlan.zhihu.com/p/16288498513" },
     { name: "英文维基：National Treasure (Vietnam)（只到第 12 批 294 件，作辅助）", url: "https://en.wikipedia.org/wiki/National_Treasure_(Vietnam)" }
   ].map(function (s) { return '<li><a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.name) + '</a></li>'; }).join("");
 })();
