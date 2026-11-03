@@ -109,6 +109,17 @@
       ]);
     }).then(function (res) {
       chinaGeo = res[0];
+      // 首页只画 34 个省级行政区：去掉海南多边形中的南海远岛，避免大陆被顶偏
+      chinaGeo.features = chinaGeo.features.map(function (f) {
+        if (!f.properties || f.properties.name !== "海南省") return f;
+        var g = JSON.parse(JSON.stringify(f));
+        g.geometry.coordinates = g.geometry.coordinates.filter(function (poly) {
+          var minLat = Infinity;
+          poly.forEach(function (ring) { ring.forEach(function (pt) { if (pt[1] < minLat) minLat = pt[1]; }); });
+          return minLat >= 18;
+        });
+        return g;
+      });
       worldGeo = res[1];
       worldGeo.features = worldGeo.features.filter(function (f) { return f.properties.name !== "Antarctica"; });
       initChina(); initWorld();
