@@ -75,6 +75,32 @@
     "</div>";
   }
 
+  // 中国球员的夺冠明细，点名字展开
+  function titlesBlock(row, colspan) {
+    var items = row.titles.map(function (t) {
+      return '<li><span class="sr-title-year">' + esc(t.y) + "</span>" +
+        '<span class="sr-title-event">' + esc(t.e) + "</span></li>";
+    }).join("");
+    return '<tr class="sr-detail" hidden><td colspan="' + colspan + '">' +
+      '<ul class="sr-title-list">' + items + "</ul>" +
+    "</td></tr>";
+  }
+
+  function nameCell(row) {
+    var inner =
+      '<span class="sr-name">' + esc(row.name) +
+        (row.region ? '<span class="sr-region">' + esc(row.region) + "</span>" : "") +
+      "</span>" +
+      (row.en ? '<span class="sr-name-en">' + esc(row.en) + "</span>" : "") +
+      // 窄屏会把「国家」整列收起，这时把国家补到球员名下面
+      (row.country ? '<span class="sr-inline-country">' + esc(row.country) + "</span>" : "");
+
+    if (row.titles && row.titles.length) {
+      return '<button type="button" class="sr-name-btn" aria-expanded="false">' + inner + "</button>";
+    }
+    return '<span class="sr-name-plain">' + inner + "</span>";
+  }
+
   function sectionBlock(s) {
     var cols = s.columns || [];
 
@@ -83,18 +109,20 @@
     }).join("");
 
     var body = s.rows.map(function (row) {
-      return "<tr>" + cols.map(function (col) {
-        var v = row[col.k] == null ? "" : row[col.k];
-        var inner = esc(v);
-        // 窄屏会把「国家」整列收起，这时把国家补到球员名下面
-        if (col.k === "name" && row.country) {
-          inner += '<span class="sr-inline-country">' + esc(row.country) + "</span>";
+      var cells = cols.map(function (col) {
+        if (col.k === "name") {
+          return '<td class="sr-player">' + nameCell(row) + "</td>";
         }
-        return '<td class="sr-' + esc(col.c || "player") + '">' + inner + "</td>";
-      }).join("") + "</tr>";
+        var v = row[col.k] == null ? "" : row[col.k];
+        return '<td class="sr-' + esc(col.c || "player") + '">' + esc(v) + "</td>";
+      }).join("");
+
+      var out = "<tr>" + cells + "</tr>";
+      if (row.titles && row.titles.length) out += titlesBlock(row, cols.length);
+      return out;
     }).join("");
 
-    return '<section class="sr-section">' +
+    return '<section class="sr-section' + (s.wide ? " is-wide" : "") + '">' +
       '<div class="sr-head">' +
         '<h2 class="sr-title">' + esc(s.title) + "</h2>" +
         (s.sub ? '<span class="sr-sub">' + esc(s.sub) + "</span>" : "") +
@@ -118,7 +146,9 @@
       return;
     }
     var ok = p.status === "ok" && p.sections && p.sections.length;
-    panelEl.innerHTML = ok ? p.sections.map(sectionBlock).join("") : pendingBlock(p);
+    panelEl.innerHTML = ok
+      ? '<div class="sr-grid">' + p.sections.map(sectionBlock).join("") + "</div>"
+      : pendingBlock(p);
   }
 
   function render() {
@@ -129,6 +159,18 @@
     renderPanel();
     try { history.replaceState(null, "", "#" + currentPanelId()); } catch (e) {}
   }
+
+  // 展开 / 收起中国球员的夺冠明细
+  panelEl.addEventListener("click", function (e) {
+    var btn = e.target.closest(".sr-name-btn");
+    if (!btn) return;
+    var tr = btn.closest("tr");
+    var detail = tr && tr.nextElementSibling;
+    if (!detail || !detail.classList.contains("sr-detail")) return;
+    detail.hidden = !detail.hidden;
+    btn.setAttribute("aria-expanded", String(!detail.hidden));
+    btn.classList.toggle("is-open", !detail.hidden);
+  });
 
   tabsEl.addEventListener("click", function (e) {
     var btn = e.target.closest(".sr-tab");

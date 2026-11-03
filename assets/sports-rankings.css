@@ -45,40 +45,77 @@
 /* 主体 */
 .sr-main { max-width: 1120px; margin: 0 auto; padding: 26px 28px 84px; }
 
-/* 一个 section = 一张表 */
-.sr-section + .sr-section { margin-top: 52px; }
+/* 一个 section = 一张表；两表并排，is-wide 的占满整行 */
+.sr-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 46px 52px;
+  align-items: start;
+}
+.sr-section { min-width: 0; }
+.sr-section.is-wide { grid-column: 1 / -1; }
 
 .sr-head {
-  display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+  display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
   padding-bottom: 12px; border-bottom: 1px solid var(--ink);
 }
-.sr-title { margin: 0; font-family: var(--serif); font-size: 22px; font-weight: 600; letter-spacing: 0.04em; }
-.sr-sub { font-size: 11.5px; letter-spacing: 0.1em; color: var(--ink-3); }
-.sr-count { margin-left: auto; font-size: 10.5px; letter-spacing: 0.1em; color: var(--ink-4); }
+.sr-title { margin: 0; font-family: var(--serif); font-size: 20px; font-weight: 600; letter-spacing: 0.04em; }
+.sr-sub { font-size: 10.5px; letter-spacing: 0.08em; color: var(--ink-3); }
+.sr-count { margin-left: auto; font-size: 10px; letter-spacing: 0.08em; color: var(--ink-4); }
 
 /* 榜单表格 */
 .sr-table-wrap { overflow-x: auto; }
 .sr-table { width: 100%; border-collapse: collapse; margin-top: 2px; }
 .sr-table thead th {
   padding: 10px 8px; text-align: left; font-weight: 400;
-  font-size: 10px; letter-spacing: 0.16em; color: var(--ink-3);
+  font-size: 10px; letter-spacing: 0.14em; color: var(--ink-3);
   border-bottom: 1px solid var(--line);
 }
 .sr-table tbody td {
-  padding: 13px 8px; border-bottom: 1px solid var(--line-soft);
+  padding: 11px 8px; border-bottom: 1px solid var(--line-soft);
   font-size: 13.5px; vertical-align: baseline;
 }
 .sr-table tbody tr:hover { background: var(--paper-2); }
-.sr-rank { width: 58px; font-family: var(--serif); font-size: 15px; color: var(--red); font-variant-numeric: tabular-nums; }
+.sr-rank { width: 52px; font-family: var(--serif); font-size: 15px; color: var(--red); font-variant-numeric: tabular-nums; }
 .sr-table thead .sr-rank { color: var(--ink-3); font-size: 10px; }
-.sr-player { font-size: 14px; }
-.sr-name { color: var(--ink); }
-.sr-name-en { display: block; font-size: 10.5px; color: var(--ink-4); letter-spacing: 0.02em; }
+.sr-player { font-size: 13.5px; }
+.sr-name { display: inline-flex; align-items: baseline; gap: 6px; color: var(--ink); }
+.sr-name-plain { display: flex; flex-direction: column; gap: 1px; }
+.sr-name-en { display: block; font-size: 10px; color: var(--ink-4); letter-spacing: 0.02em; line-height: 1.3; }
+.sr-region {
+  font-size: 9.5px; letter-spacing: 0.04em; color: var(--ink-3);
+  border: 1px solid var(--line); padding: 0 4px; white-space: nowrap;
+}
 .sr-inline-country { display: none; }
-.sr-country { width: 170px; color: var(--ink-2); font-size: 12.5px; }
-.sr-span { width: 130px; color: var(--ink-3); font-size: 11.5px; font-variant-numeric: tabular-nums; }
-.sr-points { width: 110px; text-align: right; font-variant-numeric: tabular-nums; color: var(--ink); font-size: 13px; }
+.sr-country { width: 96px; color: var(--ink-2); font-size: 12px; }
+.sr-span { width: 108px; color: var(--ink-3); font-size: 11px; font-variant-numeric: tabular-nums; }
+.sr-points { width: 84px; text-align: right; font-variant-numeric: tabular-nums; color: var(--ink); font-size: 13px; }
 .sr-table thead .sr-points { text-align: right; }
+.sr-section.is-wide .sr-country { width: 130px; }
+.sr-section.is-wide .sr-span { width: 130px; }
+
+/* 点击展开：中国球员夺冠明细 */
+.sr-name-btn {
+  position: relative;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 1px;
+  padding: 0 15px 0 0; border: 0; background: none;
+  font: inherit; color: inherit; text-align: left; cursor: pointer; width: 100%;
+}
+.sr-name-btn::after {
+  content: "+"; position: absolute; right: 0; top: -2px;
+  font-size: 13px; line-height: 1.5; color: var(--red);
+}
+.sr-name-btn.is-open::after { content: "−"; }
+.sr-name-btn:hover { color: var(--red); }
+.sr-detail td { padding: 0 !important; border-bottom: 1px solid var(--line-soft); }
+.sr-title-list {
+  list-style: none; margin: 0; padding: 12px 14px 15px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 5px 20px; background: var(--paper-2);
+}
+.sr-title-list li { display: flex; gap: 9px; font-size: 11.5px; line-height: 1.6; }
+.sr-title-year { color: var(--red); font-variant-numeric: tabular-nums; min-width: 32px; }
+.sr-title-event { color: var(--ink-2); }
 
 /* 来源说明 */
 .sr-src { margin: 18px 0 0; font-size: 11px; color: var(--ink-3); letter-spacing: 0.02em; }
@@ -98,21 +135,27 @@
 .sr-pending-src a:hover { color: var(--red); }
 .sr-missing { margin: 24px 0; font-size: 13px; color: var(--ink-3); }
 
+@media (max-width: 860px) {
+  /* 双列 -> 单列 */
+  .sr-grid { grid-template-columns: minmax(0, 1fr); gap: 38px; }
+}
+
 @media (max-width: 720px) {
   .sr-meta-inner { padding: 11px 20px; }
   .sr-tabs { padding: 20px 20px 0; }
   .sr-tab { padding: 9px 16px 11px; font-size: 17px; }
   .sr-main { padding: 20px 20px 60px; }
-  .sr-title { font-size: 22px; }
-  .sr-table tbody td { padding: 11px 5px; font-size: 12.5px; }
+  .sr-title { font-size: 19px; }
+  .sr-table tbody td { padding: 10px 5px; font-size: 12.5px; }
   .sr-table { table-layout: fixed; }
-  .sr-table thead th { padding: 9px 5px; font-size: 9.5px; letter-spacing: 0.08em; white-space: nowrap; }
+  .sr-table thead th { padding: 9px 5px; font-size: 9.5px; letter-spacing: 0.06em; white-space: nowrap; }
   /* 窄屏：国家列整列收起，改在球员名下显示，把宽度让给积分 */
   .sr-country { display: none; }
-  .sr-inline-country { display: block; margin-top: 2px; font-size: 10.5px; color: var(--ink-3); letter-spacing: 0.02em; }
-  .sr-span { width: 92px; font-size: 10.5px; }
-  .sr-points { width: 74px; font-size: 12px; }
-  .sr-rank { width: 46px; font-size: 14px; }
-  .sr-section + .sr-section { margin-top: 38px; }
+  .sr-inline-country { display: block; margin-top: 2px; font-size: 10px; color: var(--ink-3); letter-spacing: 0.02em; }
+  .sr-span { width: 86px; font-size: 10px; }
+  .sr-points { width: 66px; font-size: 12px; }
+  .sr-rank { width: 40px; font-size: 13.5px; }
+  .sr-name-en { font-size: 9.5px; }
+  .sr-title-list { grid-template-columns: 1fr; padding: 10px 12px 12px; }
   .sr-pending { padding: 26px 20px; }
 }
