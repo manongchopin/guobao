@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>跟随马克思在伦敦漫步 · 旅行计划 16</title>
-<meta name="description" content="以马克思在伦敦的生活与写作地点为线索的城市漫步计划骨架：大英博物馆、Soho、马克思纪念图书馆、Highgate 墓园等候选点。">
+<meta name="description" content="以马克思在伦敦的生活与写作地点为线索的城市漫步：Soho、大英博物馆、Clerkenwell、北伦敦与 Highgate，逐点标注建筑现状、可看性与来源。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/marx-london.css">
 </head>
@@ -14,11 +15,11 @@
 
 <header class="hero">
   <a class="back" href="plans.html">← 旅行计划</a>
-  <p class="kicker">PLAN 16 · MARX IN LONDON · WALK · v0.1</p>
+  <p class="kicker">PLAN 16 · MARX IN LONDON · v0.2</p>
   <h1>跟随马克思<br>在伦敦漫步</h1>
   <p class="lede">
     不是朝圣，是把城市当档案读。<br>
-    <span>从大英博物馆的阅览室，到 Soho 的出租屋、Clerkenwell 的图书馆和 Highgate 的墓园。</span>
+    <span>9 个点，5 个区，从 Soho 的出租屋到 Highgate 的墓；每个点标清楚：建筑还在不在，能不能进去。</span>
   </p>
   <div class="seal" aria-hidden="true">马</div>
 </header>
@@ -26,49 +27,104 @@
 <main class="wh-detail">
   <section class="wh-section">
     <div class="ml-stats">
-      <div><b>伦敦</b><span>步行范围</span></div>
-      <div><b>6+</b><span>候选点</span></div>
-      <div><b>1 天</b><span>可拆成 1–2 天</span></div>
-      <div><b>v0.1</b><span>骨架版本</span></div>
+      <div><b>9</b><span>已核地点</span></div>
+      <div><b>5</b><span>区段</span></div>
+      <div><b>1</b><span>商业团（仅 Soho）</span></div>
+      <div><b>v0.2</b><span>资料版</span></div>
     </div>
-    <p class="ml-callout"><b>先说明：</b>下面只是候选点，不是最终路线。哪些点保留、按什么顺序走、要不要坐地铁，等新会话里再核地址、开放时间和历史准确性。</p>
-    <p class="ml-intro">这条线适合做成“城市史漫步”，而不是“名人打卡”。马克思在伦敦生活了三十多年，住处换过很多次；有些建筑还在，有些只剩 plaque 或地址。先把“可看的点”和“只剩地址的点”分开。</p>
+    <p class="ml-callout"><b>这一版是资料版，不是行程表。</b>9 个点按区归档，谁先走、走几天、要不要进图书馆和墓园，都还没定。三个待定项定了之后，才做 v0.3 的路线、时间和里程。</p>
+    <p class="ml-intro">起点是 Marx Walks 的周日团（marxwalks.com）。它把 Soho 段讲得很透，但只有 2.5 小时，范围不出 Piccadilly 一带——大英博物馆、Clerkenwell、北伦敦、Highgate 都不在团里。这一页把团内和团外合成一份可查的清单：每个点给地址、年份、现在是什么、能不能进去、依据哪条来源。</p>
   </section>
 
   <section class="wh-section">
-    <h2>候选点，不是最终路线</h2>
-    <div class="ml-grid">
-      <div><span>RESEARCH</span><b>大英博物馆 · 阅览室</b><p>马克思在这里查资料、写《资本论》。需要确认阅览室当前开放方式。</p></div>
-      <div><span>HOME</span><b>Soho · 28 Dean Street</b><p>1851–1856 年的住处，贫困与流亡的伦敦早期。现为餐馆/商铺，只能看外观。</p></div>
-      <div><span>HOME</span><b>Kentish Town · Grafton Terrace</b><p>1856 年后搬到北伦敦；具体门牌和现存状态要核。</p></div>
-      <div><span>HOME</span><b>Maitland Park 一带</b><p>马克思晚年的住处；有些建筑已拆，不能假装都能看到。</p></div>
-      <div><span>INSTITUTION</span><b>Marx Memorial Library</b><p>Clerkenwell Green；马克思曾在此相关建筑活动，现为图书馆/档案机构，开放时间要查。</p></div>
-      <div><span>GRAVE</span><b>Highgate Cemetery</b><p>马克思墓；需查开放时间、是否收费、墓区路线。</p></div>
+    <h2>9 个点在一张图上</h2>
+    <div class="ml-legend" id="ml-legend"></div>
+    <div class="ml-map-wrap"><div id="ml-map"></div></div>
+    <p class="ml-map-note">
+      点颜色按「建筑现状」分：绿＝原建筑还在，褐＝已拆只剩址，深灰＝墓园。标 <span class="ml-approx" style="font-size:10px">≈</span> 的是街道级坐标（OSM 地理编码到街段，不是门牌精度），只用来判断相对位置，不用于导航。
+      底图 &copy; OpenStreetMap contributors。
+    </p>
+  </section>
+
+  <section class="wh-section">
+    <h2>按区分段，顺序未定</h2>
+    <p class="ml-intro">下面只是把点按地理归拢，<b>不是建议路线</b>。Soho 与 Bloomsbury 可以步行相接；Clerkenwell 在东边，地铁两站；Kentish Town / Maitland Park 在北边；Highgate 再往北一点。怎么串取决于走一天还是两天。</p>
+    <div class="ml-areas" id="ml-areas"></div>
+  </section>
+
+  <section class="wh-section">
+    <h2>单点档案</h2>
+    <p class="ml-intro">每点四件事：地址、年份、有没有牌、能不能看。历史叙述只写有来源的，不确定的放进待核清单。</p>
+    <div class="ml-points" id="ml-points"></div>
+  </section>
+
+  <section class="wh-section">
+    <h2>跟团：Marx Walks</h2>
+    <div class="ml-tour">
+      <dl>
+        <dt>时间</dt><dd>每周日 11:00–13:30，约 2.5 小时</dd>
+        <dt>价格</dt><dd>£20；低收入优惠 £10（另加 Eventbrite 手续费，现金也可）</dd>
+        <dt>集合</dt><dd>Piccadilly Circus，Criterion Theatre / Eros 雕像前</dd>
+        <dt>第一站</dt><dd>Be At One 酒吧，20 Great Windmill Street W1D 7LA，约 11:30 离开</dd>
+        <dt>范围</dt><dd>Soho 与 Piccadilly 一带：马克思居住和工作的地方，加 1848 年革命与 1871 年巴黎公社的讲解。不含 Clerkenwell、北伦敦、Highgate。</dd>
+        <dt>另一条</dt><dd>「Marx and Engels in Camden」，一般每月第一个周六 11:00，Chalk Farm 站出口集合</dd>
+        <dt>向导</dt><dd>Heiko Khoo、Mark Bygrave；Heiko Khoo 参与撰写 2018 年《Karl Marx in London》指南</dd>
+      </dl>
+      <p class="ml-intro" style="margin:0">结论：这条团只覆盖本页第一段。其余四段要自己走；跟团的价值在讲解，不在覆盖范围。</p>
     </div>
   </section>
 
   <section class="wh-section">
-    <h2>这条线要先决定什么</h2>
-    <ol class="ml-questions">
-      <li>只做马克思，还是把恩格斯、工人运动、LSE 也串进来？</li>
-      <li>一天走完，还是拆成“Soho/大英博物馆”和“北伦敦/Highgate”两天？</li>
-      <li>重点是“能看到的建筑”，还是“只剩地址的城市史”？</li>
-      <li>要不要进马克思纪念图书馆、Highgate 墓园？需要预约/门票吗？</li>
-      <li>步行为主，还是地铁+步行？每天控制在几公里？</li>
-    </ol>
-    <p class="ml-note">这些确定后，再做地图、时间表、开放信息和阅读书目。</p>
+    <h2>进门信息</h2>
+    <p class="ml-intro">以下时间与票价截至 <b>2026-11-03</b>，取自各机构官网。出行前请再看一次官网。</p>
+    <div class="ml-table-wrap">
+      <table class="ml-table">
+        <thead><tr><th>地点</th><th>开放</th><th>票价 / 预约</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>马克思纪念图书馆<br><span class="dim">37a Clerkenwell Green</span></td>
+            <td>导览：周一 12:00、周四 16:00<br>阅览室：周二至周四 11:00–16:00<br>周五至周日闭馆</td>
+            <td>导览 £10 / £5<br>阅览室须邮件预约</td>
+          </tr>
+          <tr>
+            <td>Highgate Cemetery<br><span class="dim">Swain's Lane, N6 6PJ</span></td>
+            <td>3–10 月 10:00–17:00（16:30 停止入场）<br>11–2 月 10:00–16:00（15:30 停止入场）</td>
+            <td>门票含东西两侧，单票价待核<br>导览成人 £18（约 75 分钟）</td>
+          </tr>
+          <tr>
+            <td>大英博物馆 · 圆形阅览室<br><span class="dim">Great Russell Street</span></td>
+            <td>博物馆免费；阅览室 2024 年 7 月起对公众开放，时段待核</td>
+            <td>免费；是否需预约待核</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="wh-section">
+    <h2>待核清单</h2>
+    <p class="ml-intro">这些是还没查实、故意不写死的项。v0.3 之前逐条消掉。</p>
+    <ol class="ml-todo" id="ml-todo"></ol>
+  </section>
+
+  <section class="wh-section">
+    <h2>来源</h2>
+    <ul class="ml-sources" id="ml-sources"></ul>
+    <p class="ml-intro" style="margin-top:12px">坐标由 OpenStreetMap Nominatim 按地址地理编码，门牌级精度不足的标 ≈。本页不使用任何图片；史实叙述以英文来源为准，中文为本站整理。</p>
   </section>
 </main>
 
 <footer class="footer">
   <div class="footer-inner">
     <span>旅行计划 16 · 跟随马克思在伦敦漫步</span>
-    <span>v0.1 · 骨架</span>
     <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
     <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
   </div>
 </footer>
 
+<script src="marx-london-data.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/marx-london.js"></script>
 <script src="plan-versions-data.js"></script>
 <script src="assets/plan-version.js"></script>
 </body>

@@ -5,18 +5,86 @@
 .ml-stats span { display: block; margin-top: 3px; font-size: 10px; color: var(--ink-3); }
 .ml-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 12px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
 .ml-callout b { color: var(--ink); }
-.ml-intro { margin: 0; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
-.ml-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
-.ml-grid > div { background: var(--paper); padding: 10px 12px; }
-.ml-grid span { display: block; font-family: var(--sans); font-size: 8px; letter-spacing: .12em; color: var(--red); }
-.ml-grid b { display: block; margin: 3px 0; font-family: var(--serif); font-size: 16px; line-height: 1.4; }
-.ml-grid p { margin: 0; font-size: 9.5px; line-height: 1.65; color: var(--ink-3); }
-.ml-questions { margin: 0; padding-left: 20px; }
-.ml-questions li { margin: 0 0 6px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
-.ml-note { margin: 8px 0 0; font-size: 10px; color: var(--ink-3); }
+.ml-intro { margin: 0 0 12px; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
+
+/* 图例 */
+.ml-legend { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.ml-chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 1px solid var(--line); background: var(--paper); color: var(--ink-2); font-family: var(--sans); font-size: 10.5px; cursor: pointer; }
+.ml-chip b { font-weight: 400; color: var(--ink-3); }
+.ml-chip .ml-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--c, var(--ink)); }
+.ml-chip.on { border-color: var(--ink); background: var(--paper-2); color: var(--ink); }
+.ml-chip:hover { border-color: var(--ink-3); }
+
+/* 地图 */
+.ml-map-wrap { border: 1px solid var(--line); }
+#ml-map { height: 420px; background: var(--paper-2); }
+.ml-map-note { margin: 8px 0 0; font-size: 10.5px; line-height: 1.7; color: var(--ink-3); }
+.leaflet-popup-content { margin: 0; }
+.ml-pop { padding: 10px 12px; font-family: var(--sans); }
+.ml-pop-no { display: block; font-size: 8.5px; letter-spacing: .1em; color: var(--red); }
+.ml-pop b { display: block; margin: 3px 0 1px; font-family: var(--serif); font-size: 15px; line-height: 1.35; }
+.ml-pop em { display: block; font-style: normal; font-size: 10px; color: var(--ink-3); }
+.ml-pop-meta { display: block; margin-top: 4px; font-size: 9.5px; line-height: 1.5; color: var(--ink-2); }
+
+/* 分段 */
+.ml-areas { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.ml-area { background: var(--paper); padding: 12px 14px; }
+.ml-area-kicker { margin: 0; font-family: var(--sans); font-size: 8px; letter-spacing: .12em; color: var(--red); }
+.ml-area h3 { margin: 4px 0 6px; font-family: var(--serif); font-size: 16px; line-height: 1.4; }
+.ml-area-desc { margin: 0 0 8px; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
+.ml-area-list { margin: 0; padding: 0; list-style: none; }
+.ml-area-list li { display: flex; align-items: baseline; gap: 7px; padding: 5px 0; border-top: 1px solid var(--line); font-size: 11px; }
+.ml-area-list .n { font-family: var(--sans); font-size: 9px; color: var(--ink-3); }
+.ml-area-list .t { flex: 1; color: var(--ink-2); line-height: 1.5; }
+
+/* 状态徽标 */
+.ml-badge { display: inline-block; padding: 2px 7px; border: 1px solid var(--c); color: var(--c); font-family: var(--sans); font-size: 9px; white-space: nowrap; }
+
+/* 单点档案 */
+.ml-points { border-top: 1px solid var(--ink); }
+.ml-point { padding: 18px 0 16px; border-bottom: 1px solid var(--line); }
+.ml-point-head { display: flex; align-items: flex-start; gap: 10px; }
+.ml-point-n { font-family: var(--sans); font-size: 11px; color: var(--red); padding-top: 4px; }
+.ml-point-head > div { flex: 1; }
+.ml-point-head h3 { margin: 0; font-family: var(--serif); font-size: 17px; line-height: 1.4; }
+.ml-point-en { margin: 2px 0 0; font-size: 10px; color: var(--ink-3); }
+.ml-point-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; margin: 10px 0 8px; }
+.ml-point-facts dt { font-family: var(--sans); font-size: 8.5px; letter-spacing: .08em; color: var(--ink-3); }
+.ml-point-facts dd { margin: 2px 0 8px; font-size: 11.5px; line-height: 1.6; color: var(--ink-2); }
+.ml-approx { font-size: 9px; color: var(--red); }
+.ml-point-note { margin: 0 0 8px; font-size: 12px; line-height: 1.9; color: var(--ink-2); }
+.ml-point-visit { margin: 0 0 8px; padding: 7px 10px; background: var(--paper-2); font-size: 10.5px; line-height: 1.75; color: var(--ink-2); }
+.ml-point-visit b { color: var(--ink); }
+.ml-point-src { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 10px; }
+.ml-src { font-size: 9px; color: var(--ink-3); }
+.ml-src::before { content: "· "; }
+
+/* 表格 */
+.ml-table-wrap { overflow-x: auto; border-top: 1px solid var(--ink); }
+.ml-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+.ml-table th { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--ink); font-family: var(--sans); font-size: 9px; letter-spacing: .06em; font-weight: 400; color: var(--ink-3); white-space: nowrap; }
+.ml-table td { padding: 9px 10px; border-bottom: 1px solid var(--line); line-height: 1.7; color: var(--ink-2); vertical-align: top; }
+.ml-table td:first-child { color: var(--ink); min-width: 150px; }
+.ml-table .dim { display: inline-block; margin-top: 2px; font-size: 9.5px; color: var(--ink-3); }
+
+/* 跟团 / 待核 / 来源 */
+.ml-tour { border: 1px solid var(--line); padding: 12px 14px; background: var(--paper-2); }
+.ml-tour dl { display: grid; grid-template-columns: 86px 1fr; gap: 4px 10px; margin: 0 0 8px; }
+.ml-tour dt { font-family: var(--sans); font-size: 9px; letter-spacing: .06em; color: var(--ink-3); padding-top: 2px; }
+.ml-tour dd { margin: 0; font-size: 11px; line-height: 1.65; color: var(--ink-2); }
+.ml-todo { margin: 0; padding-left: 18px; }
+.ml-todo li { margin: 0 0 6px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+.ml-sources { margin: 0; padding-left: 18px; columns: 2; column-gap: 24px; }
+.ml-sources li { margin: 0 0 5px; font-size: 10.5px; line-height: 1.6; color: var(--ink-3); break-inside: avoid; }
+.ml-sources a { color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--line); }
+.ml-sources a:hover { border-color: var(--red); color: var(--red); }
+
 @media (max-width: 760px) {
   .ml-stats { grid-template-columns: 1fr 1fr; }
   .ml-stats div:nth-child(2) { border-right: 0; }
   .ml-stats div:nth-child(1), .ml-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
-  .ml-grid { grid-template-columns: 1fr; }
+  .ml-areas { grid-template-columns: 1fr; }
+  .ml-point-facts { grid-template-columns: 1fr; }
+  .ml-sources { columns: 1; }
+  #ml-map { height: 320px; }
 }

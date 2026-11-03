@@ -273,11 +273,16 @@ window.PLAN_VERSIONS = {
     },
     "marx-london": {
       "title": "跟随马克思在伦敦漫步",
-      "version": "0.1",
-      "status": "骨架",
+      "version": "0.2",
+      "status": "资料版",
       "date": "2026-11-03",
-      "note": "候选点与待确认问题；路线/开放时间待核",
+      "note": "9 个点按区归档 · 建筑现状四分类 · 进门信息与来源；路线未定",
       "history": [
+        {
+          "v": "0.2",
+          "date": "2026-11-03",
+          "note": "9 个点（Soho / Bloomsbury / Clerkenwell / 北伦敦 / Highgate）；地图按建筑现状着色；马克思纪念图书馆更正为「马克思未到过」；补开放时间、票价与来源；待核 8 条"
+        },
         {
           "v": "0.1",
           "date": "2026-11-03",
