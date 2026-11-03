@@ -37,6 +37,10 @@
     if (!window.WORLD_COUNTRIES) jobs.push(loadScript("world-countries-data.js"));
     return Promise.all(jobs);
   }
+  function layoutPct(el) {
+    var w = el.clientWidth, h = el.clientHeight, m = Math.min(w, h);
+    return (w / m * 96).toFixed(1) + "%";
+  }
   function chinaData() {
     if (!window.CHINA_CAPITALS) return [];
     var visited = read(CN_KEY);
@@ -63,7 +67,7 @@
       tooltip: { show: false },
       series: [{
         type: "map", map: "hf-china", roam: false, selectedMode: false,
-        layoutCenter: ["50%", "52%"], layoutSize: "96%",
+        layoutCenter: ["50%", "50%"], layoutSize: "104%",
         itemStyle: { areaColor: color.off, borderColor: color.border, borderWidth: .5 },
         label: { show: false }, data: chinaData()
       }]
@@ -81,7 +85,7 @@
       tooltip: { show: false },
       series: [{
         type: "map", map: "hf-world", roam: false, selectedMode: false,
-        layoutCenter: ["50%", "52%"], layoutSize: "96%",
+        layoutCenter: ["50%", "50%"], layoutSize: layoutPct(document.getElementById("hf-world-map")), aspectScale: 1,
         itemStyle: { areaColor: color.off, borderColor: color.border, borderWidth: .4 },
         label: { show: false },
         regions: others.map(function (n) { return { name: n, itemStyle: { areaColor: color.other } }; }),
@@ -111,7 +115,10 @@
       loaded = true; loading = false; updateCharts();
       window.addEventListener("resize", function () {
         if (chinaChart) chinaChart.resize();
-        if (worldChart) worldChart.resize();
+        if (worldChart) {
+          worldChart.resize();
+          worldChart.setOption({ series: [{ layoutSize: layoutPct(document.getElementById("hf-world-map")) }] });
+        }
       });
     }).catch(function (err) {
       loading = false;

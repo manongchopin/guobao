@@ -18,6 +18,10 @@
 
   var chart = null, mapReady = false, current = "all", query = "";
 
+  function layoutPct(el) {
+    var w = el.clientWidth, h = el.clientHeight, m = Math.min(w, h);
+    return (w / m * 96).toFixed(1) + "%";
+  }
   function mapData() {
     return D.countries.filter(function (c) { return c.map; }).map(function (c) {
       var on = visited.has(c.id);
@@ -133,7 +137,7 @@
       tooltip: { trigger: "item", formatter: tooltip },
       series: [{
         type: "map", map: "world", roam: true, scaleLimit: { min: 1, max: 8 },
-        selectedMode: false, layoutCenter: ["50%", "52%"], layoutSize: "96%",
+        selectedMode: false, layoutCenter: ["50%", "50%"], layoutSize: layoutPct(document.getElementById("wc-map")), aspectScale: 1,
         itemStyle: { areaColor: COLOR.off, borderColor: COLOR.border, borderWidth: .6 },
         label: { show: false },
         emphasis: { itemStyle: { areaColor: COLOR.hover }, label: { show: false } },
@@ -146,7 +150,7 @@
       if (c) toggle(c.id);
     });
     mapReady = true; updateMap();
-    window.addEventListener("resize", function () { chart.resize(); });
+    window.addEventListener("resize", function () { chart.resize(); chart.setOption({ series: [{ layoutSize: layoutPct(document.getElementById("wc-map")) }] }); });
   }).catch(function (err) {
     document.getElementById("wc-map").innerHTML = '<p style="padding:24px;font-size:12px;color:#6b6258">世界地图加载失败；193 国表格仍可使用。</p>';
     console.error(err);
