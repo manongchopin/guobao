@@ -1,0 +1,32 @@
+.ry-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 20px; }
+.ry-stats div { padding: 12px 14px; border-right: 1px solid var(--line); }
+.ry-stats div:last-child { border-right: 0; }
+.ry-stats b { display: block; font-family: var(--serif); font-size: 24px; line-height: 1.1; }
+.ry-stats span { display: block; margin-top: 3px; font-size: 10px; color: var(--ink-3); }
+.ry-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 12px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
+.ry-callout b { color: var(--ink); }
+.ry-intro { margin: 0; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
+.ry-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; border-top: 1px solid var(--ink); padding-top: 14px; margin-bottom: 9px; }
+.ry-head h2 { margin: 0; }
+.ry-head > p { max-width: 330px; margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); text-align: right; }
+.ry-kicker { margin: 0 0 4px; font-family: var(--sans); font-size: 9px; letter-spacing: .14em; color: var(--red); }
+.ry-band { display: grid; grid-template-columns: 44px 1fr 100px 28px; gap: 12px; align-items: center; border-top: 1px solid var(--ink); padding: 13px 0; color: var(--ink); text-decoration: none; }
+.ry-band:hover { background: var(--paper-2); }
+.ry-no { font-family: var(--mono); font-size: 9px; color: var(--red); }
+.ry-title { display: block; margin: 3px 0; font-family: var(--serif); font-size: 25px; }
+.ry-desc { display: block; font-size: 10px; line-height: 1.6; color: var(--ink-3); }
+.ry-side { font-size: 9px; line-height: 1.6; color: var(--ink-3); text-align: right; }
+.ry-arrow { font-size: 18px; color: var(--red); text-align: right; }
+.ry-note { margin: 0; font-size: 11px; line-height: 1.75; color: var(--ink-3); }
+.ry-questions { margin: 0; padding-left: 20px; }
+.ry-questions li { margin: 0 0 6px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+@media (max-width: 760px) {
+  .ry-stats { grid-template-columns: 1fr 1fr; }
+  .ry-stats div:nth-child(2) { border-right: 0; }
+  .ry-stats div:nth-child(1), .ry-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .ry-head { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .ry-head > p { text-align: left; }
+  .ry-band { grid-template-columns: 30px 1fr 24px; }
+  .ry-side { display: none; }
+  .ry-title { font-size: 21px; }
+}
