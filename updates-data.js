@@ -16,6 +16,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "釜山—对马—壹歧—福冈补住宿与史迹",
+    note: "v0.3 · 两家东横INN换宿 · 无车四方案 · 三张地图",
+    href: "busan-tsushima-iki-fukuoka.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "釜山—对马—壹歧—福冈接通四段船",
     note: "v0.2 · 对马→壹歧只从厳原开 · 10/12 天两版时间轴",
     href: "busan-tsushima-iki-fukuoka.html"

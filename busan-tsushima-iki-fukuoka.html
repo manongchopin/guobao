@@ -4,17 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>釜山—对马—壹歧—福冈 · 旅行计划 19</title>
-<meta name="description" content="釜山、对马、壹歧、福冈的跨韩日跳岛路线：四站船段、10–12 天时间轴、停航备选；船班据九州邮船与釜山港公社公开时刻表。">
+<meta name="description" content="釜山、对马、壹歧、福冈的跨韩日跳岛路线：四站船段、两家旅馆的换宿安排、无车交通、游戏圣地与元寇史迹地图。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="assets/busan-tsushima-iki.css">
 </head>
 <body>
 
 <header class="hero">
   <a class="back" href="plans.html">← 旅行计划</a>
-  <p class="kicker">PLAN 19 · BUSAN—TSUSHIMA—IKI—FUKUOKA · v0.2</p>
+  <p class="kicker">PLAN 19 · BUSAN—TSUSHIMA—IKI—FUKUOKA · v0.3</p>
   <h1>釜山—对马<br>—壹歧—福冈</h1>
   <p class="lede">
     从朝鲜半岛到九州，四站靠船连着走。<br>
@@ -29,7 +30,7 @@
       <div><b>4</b><span>站</span></div>
       <div><b>2</b><span>国家</span></div>
       <div><b>10–12</b><span>天</span></div>
-      <div><b>v0.2</b><span>交通骨架</span></div>
+      <div><b>v0.3</b><span>交通 + 住宿 + 史迹</span></div>
     </div>
     <p class="bf-callout"><b>先回答那个决定路线的问题：对马—壹歧有客船，但没有专线。</b>它是九州邮船「博多—壹歧—对马（厳原）」航路的中途段，同一艘船、不换乘，每天一到三班。所以四站顺序站得住，不用推翻重排；但闸门只有一个——<b>厳原</b>。</p>
     <p class="bf-intro">对马是长条形的岛，南边的厳原和对马北端的比田勝相距很远。釜山的船两个港都到，往壹歧的船却只从厳原开。换句话说：从比田勝上岸，就必须先横穿对马岛，才能接上下一段。这条约束比船班表本身更影响行程。</p>
@@ -93,47 +94,221 @@
     <p class="bf-note">所有时刻取自 2026 年 11 月—2027 年 3 月冬期时刻表与釜山港公社运航情报，仅用于判断「一天能不能接上」。<b>你这是 6—8 月出行，夏季时刻表必须重新核一遍</b>；票价本页不写。</p>
   </section>
 
+  <section class="wh-section" id="stay">
+    <div class="bf-head">
+      <div><p class="bf-kicker">TWO BASES · NORTH AND SOUTH</p><h2>住宿：比田勝一晚，厳原一晚</h2></div>
+      <p>两家东横INN，一头一尾。<br>中间那天就是换宿日。</p>
+    </div>
+    <div class="bf-table-wrap">
+      <table class="bf-table bf-table-wide">
+        <thead><tr><th>旅馆</th><th>位置</th><th>离港</th><th>在行程里</th></tr></thead>
+        <tbody>
+          <tr><td><b>東横INN 対馬比田勝</b></td><td>上対馬町西泊 1217-5<br><span class="bf-dim">817-1703</span></td><td>比田勝港<br>约 5 分车程</td><td>北侧落脚点。釜山下船当天住这里，第二天扫北对马。</td></tr>
+          <tr><td><b>東横INN 対馬厳原</b></td><td>厳原町今屋敷 771-1<br><span class="bf-dim">817-0021</span></td><td>厳原港<br>步行约 10 分</td><td>南侧落脚点。往壹歧开船那天从这里走到码头。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="bf-note">两家都是 check-in 15:00 / check-out 10:00，含早餐 6:30—9:00。厳原那家停车场 16 位、需预约、500 円/晚；比田勝那家免费 77 位、先到先得。你全程步行或包车，这两个数字只作备用。</p>
+    <p class="bf-callout" style="margin-top:14px"><b>换宿日是这条线上唯一需要认真排的一天。</b>比田勝到厳原是纵穿全岛，约 70 公里山路，直行巴士每天只有 3 班。把这一天单独拿出来规划，其余日子都轻松。</p>
+  </section>
+
+  <section class="wh-section" id="notcar">
+    <div class="bf-head">
+      <div><p class="bf-kicker">NO CAR · FOUR WAYS</p><h2>没有驾照，怎么走</h2></div>
+      <p>自行车只能补短。<br>跨岛靠巴士或包车。</p>
+    </div>
+    <div class="bf-table-wrap">
+      <table class="bf-table bf-table-wide">
+        <thead><tr><th>方式</th><th>能做什么</th><th>不能做什么</th><th>费用参考</th></tr></thead>
+        <tbody>
+          <tr><td><b>路线巴士</b><br>対馬交通</td><td>厳原⇔空港 约 29 分；空港⇔比田勝 约 2 时。纵贯线的骨架。</td><td>班次少，傍晚后基本没有；景点大多不在站牌旁。</td><td>厳原⇔空港 710 円<br>空港⇔比田勝 3,070 円</td></tr>
+          <tr><td><b>直行接驳巴士</b><br>Sunstar Line<br>（Miracle Link Pass）</td><td>厳原⇔比田勝 每天 3 班，途中停万関橋、烏帽子岳展望台等。</td><td>只在指定站停；发车跟着船班走，不是随到随走。</td><td>单程或环线票 15,000 韩元<br>环线+直行 25,000 韩元</td></tr>
+          <tr><td><b>观光出租车 / 包车</b></td><td>点对点、可中途停车等人，行李随车。</td><td>最贵；旺季要提前订，岛上车辆有限。</td><td>空港→比田勝 约 16,000 円<br>（2 时 20 分，官方参考价）</td></tr>
+          <tr><td><b>电动自行车</b></td><td>厳原镇内、比田勝镇内与近郊几公里。</td><td>绝对不适合跨岛：约 70 km 山路，还有隧道。</td><td>按日计，需向当地租车行确认</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="bf-note">路线巴士与直行接驳的价格来源不同（円／韩元），是各自的售卖口径，不是同一张票。包车价格请直接打空港页列的出租车公司电话询价。</p>
+    <p><b>我的排法：</b>换宿日包车半天，把「海神神社 → 和多都美神社 → 烏帽子岳 → 万関橋 → 金田城」串起来，行李放车上，一天走完；镇内用电动自行车或走路；厳原⇔空港这种固定段用路线巴士兜底。自行车当接驳工具，不当交通工具。</p>
+  </section>
+
   <section class="wh-section" id="days">
     <div class="bf-head">
-      <div><p class="bf-kicker">TWO SHAPES · 10 OR 12 DAYS</p><h2>10 天与 12 天，两种走法</h2></div>
-      <p>都全程坐船。<br>差别在对马走南边还是走全岛。</p>
+      <div><p class="bf-kicker">TWO SHAPES · 10 OR 12 DAYS</p><h2>10 天与 12 天，两版都按两家旅馆排</h2></div>
+      <p>都全程坐船。<br>差别在对马各住几晚。</p>
     </div>
 
     <div class="bf-plan">
-      <h3>A · 10 天：直落厳原</h3>
-      <p class="bf-plan-note">周一到周四从釜山出发，直航厳原，不碰横穿对马那一段。整条线最省心，也最依赖船班准点。</p>
+      <h3>A · 10 天：对马南北各两晚</h3>
+      <p class="bf-plan-note">最紧但成立。四段船 + 一次换宿，缓冲只有一天，误船就挤。</p>
       <div class="bf-days">
-        <div class="bf-day"><span class="bf-day-k">D1</span><span>釜山到着，港口周边休整。</span><span class="bf-day-s">住 釜山</span></div>
-        <div class="bf-day"><span class="bf-day-k">D2</span><span>釜山；确认次日船票与护照、船票实名信息。</span><span class="bf-day-s">住 釜山</span></div>
-        <div class="bf-day"><span class="bf-day-k">D3</span><span>釜山 08:40（팬스타）或 09:10（대아）→ 厳原，航程 2 时 10—20 分，约午前到。</span><span class="bf-day-s">住 厳原</span></div>
-        <div class="bf-day"><span class="bf-day-k">D4</span><span>厳原一带：金石城迹、朝鲜通信使相关遗迹、对马博物馆。</span><span class="bf-day-s">住 厳原</span></div>
-        <div class="bf-day"><span class="bf-day-k">D5</span><span>厳原 13:15 → 芦边 14:20；下午进壹歧。</span><span class="bf-day-s">住 壹歧</span></div>
-        <div class="bf-day"><span class="bf-day-k">D6</span><span>壹歧：一支国博物馆、原之辻遗迹、鬼的足迹。</span><span class="bf-day-s">住 壹歧</span></div>
-        <div class="bf-day"><span class="bf-day-k">D7</span><span>芦边 14:25 → 博多 15:30（或渡轮 11:15 → 13:25）。</span><span class="bf-day-s">住 福冈</span></div>
-        <div class="bf-day"><span class="bf-day-k">D8</span><span>福冈市内；如船班延误，这天就是缓冲。</span><span class="bf-day-s">住 福冈</span></div>
-        <div class="bf-day"><span class="bf-day-k">D9</span><span>福冈：博多旧市街、栉田神社、屋台。</span><span class="bf-day-s">住 福冈</span></div>
+        <div class="bf-day"><span class="bf-day-k">D1</span><span>釜山到着；确认次日船票与护照实名信息。</span><span class="bf-day-s">住 釜山</span></div>
+        <div class="bf-day"><span class="bf-day-k">D2</span><span>釜山 → 比田勝，约 1 时 10 分—1 时 40 分。下船步行或短驳到旅馆。</span><span class="bf-day-s">住 比田勝</span></div>
+        <div class="bf-day"><span class="bf-day-k">D3</span><span>北对马：韓国展望台、三宇田浜一带。巴士班次少，按时刻表倒排。</span><span class="bf-day-s">住 比田勝</span></div>
+        <div class="bf-day"><span class="bf-day-k">D4</span><span><b>换宿日</b>：包车横穿，海神神社 → 和多都美神社 → 烏帽子岳 → 万関橋 → 金田城。</span><span class="bf-day-s">住 厳原</span></div>
+        <div class="bf-day"><span class="bf-day-k">D5</span><span>厳原：金石城、万松院、対馬博物館、小茂田浜神社。</span><span class="bf-day-s">住 厳原</span></div>
+        <div class="bf-day"><span class="bf-day-k">D6</span><span>厳原 13:15 → 芦边 14:20。</span><span class="bf-day-s">住 壹歧</span></div>
+        <div class="bf-day"><span class="bf-day-k">D7</span><span>壹歧：一支国博物館、原之辻遗迹。</span><span class="bf-day-s">住 壹歧</span></div>
+        <div class="bf-day"><span class="bf-day-k">D8</span><span>芦边 14:25 → 博多 15:30（或渡轮 11:15 → 13:25）。</span><span class="bf-day-s">住 福冈</span></div>
+        <div class="bf-day"><span class="bf-day-k">D9</span><span>福冈：元寇史料館、筥崎宮、生の松原元寇防塁。</span><span class="bf-day-s">住 福冈</span></div>
         <div class="bf-day"><span class="bf-day-k">D10</span><span>福冈空港／博多港离境。</span><span class="bf-day-s">—</span></div>
       </div>
     </div>
 
     <div class="bf-plan">
-      <h3>B · 12 天：比田勝上岸，走完整条对马</h3>
-      <p class="bf-plan-note">每天都有釜山→比田勝的船，出发日不受星期限制。代价是要横穿对马岛，那段巴士必须先核。</p>
+      <h3>B · 12 天：南北各三晚，留得出停航缓冲</h3>
+      <p class="bf-plan-note">推荐的版本。多出的两天分别给对马南边和壹歧，遇到停航不必改行程。</p>
       <div class="bf-days">
         <div class="bf-day"><span class="bf-day-k">D1</span><span>釜山到着。</span><span class="bf-day-s">住 釜山</span></div>
-        <div class="bf-day"><span class="bf-day-k">D2</span><span>釜山 → 比田勝，约 1 时 10 分—1 时 40 分。</span><span class="bf-day-s">住 比田勝</span></div>
-        <div class="bf-day"><span class="bf-day-k">D3</span><span>对马北部：鰐浦、海神神社方向；巴士班次很少。</span><span class="bf-day-s">住 比田勝</span></div>
-        <div class="bf-day"><span class="bf-day-k">D4</span><span>比田勝 → 厳原，横穿对马岛（时刻待核）。</span><span class="bf-day-s">住 厳原</span></div>
-        <div class="bf-day"><span class="bf-day-k">D5</span><span>厳原一带；同样留一天给天气。</span><span class="bf-day-s">住 厳原</span></div>
-        <div class="bf-day"><span class="bf-day-k">D6</span><span>厳原 13:15 → 芦边 14:20。</span><span class="bf-day-s">住 壹歧</span></div>
-        <div class="bf-day"><span class="bf-day-k">D7</span><span>壹歧西部：胜本、黑崎炮台方向。</span><span class="bf-day-s">住 壹歧</span></div>
-        <div class="bf-day"><span class="bf-day-k">D8</span><span>壹歧东部：芦边、原之辻。</span><span class="bf-day-s">住 壹歧</span></div>
-        <div class="bf-day"><span class="bf-day-k">D9</span><span>芦边 14:25 → 博多 15:30。</span><span class="bf-day-s">住 福冈</span></div>
-        <div class="bf-day"><span class="bf-day-k">D10</span><span>福冈市内。</span><span class="bf-day-s">住 福冈</span></div>
-        <div class="bf-day"><span class="bf-day-k">D11</span><span>福冈缓冲日。</span><span class="bf-day-s">住 福冈</span></div>
+        <div class="bf-day"><span class="bf-day-k">D2</span><span>釜山：甘川、南浦一带；把对马两天要用的东西归到一个包里。</span><span class="bf-day-s">住 釜山</span></div>
+        <div class="bf-day"><span class="bf-day-k">D3</span><span>釜山 → 比田勝。</span><span class="bf-day-s">住 比田勝</span></div>
+        <div class="bf-day"><span class="bf-day-k">D4</span><span>北对马：韓国展望台、鰐浦、三宇田浜。</span><span class="bf-day-s">住 比田勝</span></div>
+        <div class="bf-day"><span class="bf-day-k">D5</span><span><b>换宿日</b>：包车横穿，夜宿厳原。</span><span class="bf-day-s">住 厳原</span></div>
+        <div class="bf-day"><span class="bf-day-k">D6</span><span>南对马：小茂田浜神社、豆酘崎方向，回厳原。</span><span class="bf-day-s">住 厳原</span></div>
+        <div class="bf-day"><span class="bf-day-k">D7</span><span>厳原 13:15 → 芦边 14:20。</span><span class="bf-day-s">住 壹歧</span></div>
+        <div class="bf-day"><span class="bf-day-k">D8</span><span>壹歧西部：胜本、黑崎炮台方向。</span><span class="bf-day-s">住 壹歧</span></div>
+        <div class="bf-day"><span class="bf-day-k">D9</span><span>壹歧东部：芦边、原之辻。</span><span class="bf-day-s">住 壹歧</span></div>
+        <div class="bf-day"><span class="bf-day-k">D10</span><span>芦边 14:25 → 博多 15:30。</span><span class="bf-day-s">住 福冈</span></div>
+        <div class="bf-day"><span class="bf-day-k">D11</span><span>福冈：元寇史料館、筥崎宮、防塁；晚上屋台。</span><span class="bf-day-s">住 福冈</span></div>
         <div class="bf-day"><span class="bf-day-k">D12</span><span>离境。</span><span class="bf-day-s">—</span></div>
       </div>
     </div>
+  </section>
+
+
+  <section class="wh-section" id="got">
+    <div class="bf-head">
+      <div><p class="bf-kicker">GHOST OF TSUSHIMA · ON THE ISLAND</p><h2>游戏里的对马，在哪</h2></div>
+      <p>官方点名四到五处。<br>其余多是玩家对照。</p>
+    </div>
+    <p>《Ghost of Tsushima》的舞台就是 1274 年的对马。长崎县与对马市都做过官方合作页，把几处真实地点和游戏对应起来；但开发商从未公布逐点取景清单。所以下面分两栏：<b>官方点名</b>的，和<b>玩家对照</b>的。</p>
+    <div class="bf-table-wrap">
+      <table class="bf-table bf-table-wide">
+        <thead><tr><th>地点</th><th>对应关系</th><th>现实是什么</th><th>怎么去</th></tr></thead>
+        <tbody>
+          <tr><td><b>金田城跡</b><br><span class="bf-tag ok">官方</span></td><td>游戏里的「金田城」</td><td>663 年白村江之战后筑的古代山城，石垣仍在，是日本最靠外的国防前线。</td><td>美津島町。包车最省事；登山往返约 120 分。</td></tr>
+          <tr><td><b>小茂田浜神社</b><br><span class="bf-tag ok">官方</span></td><td>开场战场</td><td>1274 年元军登陆处；宗助国率约 80 骑迎战战死，神社后有骑马像。</td><td>厳原町小茂田，自厳原市区约 20 分车。</td></tr>
+          <tr><td><b>万松院</b><br><span class="bf-tag ok">官方</span></td><td>「黄金寺」意象</td><td>宗家菩提寺，132 段石阶与石灯笼。游戏玩家普遍把这里称作圣地。</td><td>厳原町今屋敷，从厳原港步行可到。</td></tr>
+          <tr><td><b>和多都美神社</b><br><span class="bf-tag ok">官方</span></td><td>海上鸟居</td><td>海中鸟居很有名，但 <b>2025 年起限制参拜</b>，只接待崇敬者，不接待观光。</td><td>豊玉町仁位。建议只远观或直接跳过。</td></tr>
+          <tr><td><b>烏帽子岳展望台</b><br><span class="bf-tag">玩家</span></td><td>全岛视野</td><td>浅茅湾与南北纵贯线的制高点。</td><td>换宿日包车或直行巴士中途停。</td></tr>
+          <tr><td><b>鮎もどし自然公園</b><br><span class="bf-tag">玩家</span></td><td>溪谷与野径</td><td>内山盆地的花岗岩清流，国定公园特别保护区。</td><td>无公交，须包车。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="bf-hint">小屏可左右滑动表格查看全部列。</p>
+    <p class="bf-mapcap">対馬 TSUSHIMA · 住宿与圣地</p>
+    <div class="bf-map" id="btk-map-tsushima" role="img" aria-label="对马岛点位地图"></div>
+    <div class="bf-legend" id="btk-legend"></div>
+    <p class="bf-note">地图点位：<span class="bf-tag">≈</span> 标记的两家旅馆坐标按地址估算，未进店核对。和多都美神社的限制见 <a href="https://www.gamespark.jp/article/2025/03/24/150668.html" target="_blank" rel="noopener">GameSpark 2025-03-24</a>；官方合作页见 <a href="https://www.nagasaki-tabinet.com/ghost_of_tsushima/" target="_blank" rel="noopener">长崎县特设站</a>。</p>
+  </section>
+
+  <section class="wh-section" id="history">
+    <div class="bf-head">
+      <div><p class="bf-kicker">THE STRAIT · BOTH DIRECTIONS</p><h2>这条海峡，两边都走过</h2></div>
+      <p>先被打，再做跳板。<br>同一片海，两个方向。</p>
+    </div>
+    <div class="bf-table-wrap">
+      <table class="bf-table bf-table-wide">
+        <thead><tr><th>年份</th><th>事件</th><th>方向</th><th>和对马的关系</th></tr></thead>
+        <tbody>
+          <tr><td class="bf-t">1019</td><td><b>刀伊の入寇</b></td><td>大陆 → 日本</td><td>女真系海寇约 50 艘先袭对马、壹歧，再攻筑前。比对马人更早的一次记忆。</td></tr>
+          <tr><td class="bf-t">1274</td><td><b>文永の役</b></td><td>元 · 高丽 → 日本</td><td>约 3 万人在对马、壹歧登陆，宗助国战死小茂田浜；随后攻博多湾，当夜撤退，归途遇风。</td></tr>
+          <tr><td class="bf-t">1281</td><td><b>弘安の役</b></td><td>元 · 高丽 → 日本</td><td>东路、江南两军合计十余万；博多湾的石垒（元寇防塁）挡住登陆，舰队在海上被暴风摧毁。</td></tr>
+          <tr><td class="bf-t">1592<br>1597</td><td><b>文禄・慶長の役</b></td><td>日本 → 朝鲜</td><td>方向反过来。对马宗氏是丰臣秀吉的向导与前哨，厳原成为出兵基地，釜山是登陆点。</td></tr>
+          <tr><td class="bf-t">1905</td><td><b>日本海海戦</b></td><td>日本 ← 俄国</td><td>波罗的海舰队东来，在对马海峡被歼灭。海峡再次成为决战地点。</td></tr>
+          <tr><td class="bf-t">1910</td><td><b>韓国併合</b></td><td>日本 → 朝鲜</td><td>16 世纪的军事路线，20 世纪变成殖民制度。釜山是这条路线最重要的港口。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="bf-hint">小屏可左右滑动表格查看全部列。</p>
+    <p><b>为什么把这段历史放进这条路线：</b>你坐的每一段船，都是这些事件的现场。从釜山出发往北，先看到的是「被打的一方」——小茂田浜的 80 骑；到了福冈，看到的是「防守的一方」——博多湾的石垒和神风叙事。而 1592 年之后，同一个对马又变成「打出去的一方」的跳板。同一条海峡，两个方向，这条线一天之内就能走完。</p>
+    <p class="bf-note">对马不是背景板：它几乎每次都是第一个挨打的地方，也是日本对外用兵时第一个被征用的地方。这一点在岛上的遗迹分布里看得很清楚——南北两头各有一批。</p>
+  </section>
+
+  <section class="wh-section" id="sites">
+    <div class="bf-head">
+      <div><p class="bf-kicker">WHAT IS STILL THERE</p><h2>遗址还在吗，分别在哪</h2></div>
+      <p>对马、福冈、釜山。<br>各有一层，年份不同。</p>
+    </div>
+
+    <h3>对马：两头各一批</h3>
+    <div class="bf-table-wrap">
+      <table class="bf-table bf-table-wide">
+        <thead><tr><th>遗址</th><th>年代 / 事件</th><th>位置</th><th>看什么</th></tr></thead>
+        <tbody>
+          <tr><td><b>小茂田浜神社</b></td><td>1274 文永之役</td><td>厳原町小茂田</td><td>元军登陆地；宗助国战死处；骑马像。</td></tr>
+          <tr><td><b>金田城跡</b></td><td>663 白村江之后</td><td>美津島町</td><td>古代山城的石垣与土塁；国防最前线的实物。</td></tr>
+          <tr><td><b>清水山城跡</b></td><td>1591 出兵前夜</td><td>厳原（金石城背山）</td><td>丰臣秀吉命宗义智所筑的前线基地，国指定史迹。</td></tr>
+          <tr><td><b>金石城跡</b></td><td>宗氏居城</td><td>厳原町今屋敷</td><td>橹门与庭园；城门旁即博物馆。</td></tr>
+          <tr><td><b>万松院</b></td><td>宗家菩提寺</td><td>厳原町今屋敷</td><td>132 段石阶、宗家墓所，以及朝鲜国王赠物等藏品。</td></tr>
+          <tr><td><b>対馬博物館</b></td><td>综合</td><td>厳原町今屋敷</td><td>宗家文书、元寇与朝鲜通信使相关展示；雨天备选。</td></tr>
+          <tr><td><b>海神神社</b></td><td>古代</td><td>峰町木坂</td><td>对马一宫；古代对外交流的神社。纵贯线中途。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>福冈：防守的一方</h3>
+    <div class="bf-table-wrap">
+      <table class="bf-table bf-table-wide">
+        <thead><tr><th>遗址</th><th>年代 / 事件</th><th>位置</th><th>看什么</th></tr></thead>
+        <tbody>
+          <tr><td><b>元寇史料館</b></td><td>1274 / 1281</td><td>博多区东公园 7-11</td><td>元军武器、蒙古军船复原模型、相关绘卷。10:00—16:00，无休，300 円。</td></tr>
+          <tr><td><b>筥崎宮</b></td><td>1274 兵火</td><td>东区箱崎</td><td>文永之役中被烧；「敌国降伏」的由来。</td></tr>
+          <tr><td><b>元寇防塁（生の松原）</b></td><td>1281</td><td>西区今津</td><td>为防第二次来袭所筑的石垒，现存段可走近看。国指定史迹。</td></tr>
+          <tr><td><b>博多湾岸各处防塁</b></td><td>1281</td><td>今津—箱崎一线</td><td>石垒断续分布约 20 km，多数已埋入地下或街区。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>釜山：元寇几乎没有，但另有两层</h3>
+    <p>先说清楚一件事：<b>釜山市区基本没有元寇遗址。</b>1274 与 1281 两次东征的出发基地是合浦（今马山）与金州一带，不在今天的釜山市区。釜山留下的是更晚的两层：壬辰倭乱，和日本殖民统治。</p>
+    <div class="bf-table-wrap">
+      <table class="bf-table bf-table-wide">
+        <thead><tr><th>遗址</th><th>年代 / 事件</th><th>位置</th><th>看什么</th></tr></thead>
+        <tbody>
+          <tr><td><b>東莱邑城</b></td><td>1592 壬辰倭乱</td><td>东莱区</td><td>东莱府使宋象贤死守之城；城墙与将台遗迹。</td></tr>
+          <tr><td><b>子城台（釜山鎮城）</b></td><td>1592 / 倭城期</td><td>东区凡一洞</td><td>釜山鎮之战发生地；后曾作倭城，现存公园与碑。</td></tr>
+          <tr><td><b>忠烈祠</b></td><td>1592 之后</td><td>东莱区</td><td>供奉壬辰倭乱釜山战死者；釜山最直接的战争记忆场所。</td></tr>
+          <tr><td><b>釜山近代歴史館</b><br><span class="bf-dim">旧东洋拓殖釜山支店</span></td><td>1910 之后</td><td>中区</td><td>殖民时期的建筑本体就是展品。坐标未核，未画入地图。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="bf-mapcap">福岡 FUKUOKA · 元寇</p>
+    <div class="bf-map" id="btk-map-fukuoka" role="img" aria-label="福冈历史遗址地图"></div>
+    <p class="bf-mapcap">釜山 BUSAN · 壬辰倭乱与殖民期</p>
+    <div class="bf-map" id="btk-map-busan" role="img" aria-label="釜山历史遗址地图"></div>
+    <p class="bf-note">地图底图 © OpenStreetMap contributors（ODbL），Leaflet 1.9.4。点位坐标经 Nominatim 查询，个别按地址估算并标 ≈。</p>
+  </section>
+
+  <section class="wh-section" id="books">
+    <div class="bf-head">
+      <div><p class="bf-kicker">READING</p><h2>要看什么书</h2></div>
+      <p>四本入门 + 三种史料。<br>版本需自行确认。</p>
+    </div>
+    <p><b>日文</b></p>
+    <ul class="bf-src">
+      <li>網野善彦『蒙古襲来』（小学館 1974；后收入岩波書店『網野善彦著作集 第5巻』）——最通行的入口，把元寇放回日本中世社会里看。</li>
+      <li>相田二郎『蒙古襲来の研究』（吉川弘文館 1958）——实证研究的底本，考据细节从这里出发。</li>
+      <li>川添昭二『蒙古襲来研究史論』（雄山閣出版 1977）——研究史梳理，看学界怎么争论「神风」。</li>
+      <li>中野等『文禄・慶長の役』（吉川弘文館 2008）——反方向的战争，日本出兵朝鲜的军政结构。</li>
+      <li>村井章介『アジアの中の中世日本』（東京大学出版会 1988）——把对马、壹歧放进东亚海域交流里。</li>
+    </ul>
+    <p><b>英文</b></p>
+    <ul class="bf-src">
+      <li>Thomas D. Conlan, <i>In Little Need of Divine Intervention: Takezaki Suenaga's Scrolls of the Mongol Invasions of Japan</i>（Cornell East Asia Series, 2001）——竹崎季长绘卷的译本与解读，最直接的一手图像材料。</li>
+      <li>Kenneth M. Swope, <i>A Dragon's Head and a Serpent's Tail: Ming China and the First Great East Asian War, 1592–1598</i>（University of Oklahoma Press, 2009）——壬辰倭乱，从明朝一侧写。</li>
+      <li>Samuel Hawley, <i>The Imjin War</i>（2005）——通史叙述，适合先建立时间线。</li>
+    </ul>
+    <p><b>中文与史料</b></p>
+    <ul class="bf-src">
+      <li>《元史》卷二〇八·外夷一·日本——元朝一侧的官方叙述，注意它是胜利者的档案。</li>
+      <li>《高麗史》——高丽作为元朝属国参与东征的记录，补上「被征发者」的视角。</li>
+      <li>《朝鮮王朝実録》——壬辰倭乱的朝鲜侧记录，釜山一带的记载最细。</li>
+      <li>韩儒林《元朝史》（人民出版社 1986）——中文通史里的标准叙述。</li>
+      <li>対馬宗家文書（東京大学史料編纂所数据库）——宗家的外交与贸易档案，理解对马为什么总在中间。</li>
+    </ul>
+    <p class="bf-note">这是入门路径，不是完整书单。出版年份与是否绝版请自行确认；史料类建议配合上述研究著作读，单独读容易把它当事实。</p>
   </section>
 
   <section class="wh-section" id="risk">
@@ -211,6 +386,9 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="busan-tsushima-iki-data.js"></script>
+<script src="assets/busan-tsushima-iki-fukuoka.js"></script>
 <script src="plan-versions-data.js"></script>
 <script src="assets/plan-version.js"></script>
 </body>

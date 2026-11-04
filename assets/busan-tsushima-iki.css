@@ -43,6 +43,18 @@
 .bf-plan .bf-plan-note { margin: 0 0 10px; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
 .bf-src { margin: 0; padding-left: 18px; }
 .bf-hint { display: none; }
+
+/* v0.3 · 地图、图例、小节标题 */
+.bf-mapcap { margin: 18px 0 0; font-family: var(--sans); font-size: 9px; letter-spacing: .12em; color: var(--ink-3); }
+.bf-map { height: 360px; margin: 6px 0 8px; border: 1px solid var(--line); background: var(--paper-2); }
+.bf-map + .bf-map { margin-top: 10px; }
+.bf-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 4px; font-size: 10px; color: var(--ink-3); }
+.bf-lg { display: inline-flex; align-items: center; gap: 5px; }
+.bf-lg i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; }
+.wh-section h3 { margin: 26px 0 8px; font-family: var(--serif); font-size: 15px; font-weight: 500; color: var(--ink); }
+.wh-section h3:first-of-type { margin-top: 8px; }
+.leaflet-container { background: var(--paper-2); font-family: var(--sans); }
+.leaflet-popup-content { font-family: var(--sans); font-size: 12px; line-height: 1.6; }
 .bf-src li { margin: 0 0 5px; font-size: 10.5px; line-height: 1.7; color: var(--ink-3); }
 .bf-src a { color: var(--ink-2); }
 
