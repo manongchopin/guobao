@@ -20,6 +20,26 @@
 .ry-note { margin: 0; font-size: 11px; line-height: 1.75; color: var(--ink-3); }
 .ry-questions { margin: 0; padding-left: 20px; }
 .ry-questions li { margin: 0 0 6px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+
+.ry-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.ry-card { border-top: 1px solid var(--ink); padding-top: 10px; }
+.ry-card > p.ry-kicker { margin-bottom: 4px; }
+
+.ry-table-wrap { overflow-x: auto; margin: 0 0 14px; }
+.ry-table { width: 100%; border-collapse: collapse; font-size: 11.5px; line-height: 1.65; min-width: 560px; }
+.ry-table th { text-align: left; font-weight: 400; color: var(--ink-3); border-bottom: 1px solid var(--ink); padding: 7px 8px; white-space: nowrap; }
+.ry-table td { border-bottom: 1px solid var(--line-soft); padding: 8px; vertical-align: top; }
+.ry-table td.d { font-family: var(--mono); color: var(--red); white-space: nowrap; width: 46px; }
+.ry-table tr.mv td { background: var(--paper-2); }
+
+.ry-check { margin: 0; padding: 0; list-style: none; }
+.ry-check li { position: relative; border-bottom: 1px solid var(--line-soft); padding: 6px 0 6px 40px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+.ry-check li::before { content: "待核"; position: absolute; left: 0; top: 7px; width: 34px; font-family: var(--sans); font-size: 9px; color: var(--ink-3); }
+.ry-check-lock li { color: var(--ink); }
+.ry-check-lock li::before { content: "已定"; color: var(--red); }
+.ry-check-open li::before { content: "未定"; color: var(--ink-3); }
+.ry-check-adj li::before { content: "可选"; color: var(--ink-3); }
+
 @media (max-width: 760px) {
   .ry-stats { grid-template-columns: 1fr 1fr; }
   .ry-stats div:nth-child(2) { border-right: 0; }
@@ -29,4 +49,5 @@
   .ry-band { grid-template-columns: 30px 1fr 24px; }
   .ry-side { display: none; }
   .ry-title { font-size: 21px; }
+  .ry-cols { grid-template-columns: 1fr; gap: 18px; }
 }
