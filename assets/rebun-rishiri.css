@@ -1,15 +1,22 @@
+/* 本页样式。--mono 在 style.css 里没有定义，var(--mono) 会失效，
+   这里补一个，只在本页生效（本文件只被 rebun-rishiri.html 引入）。 */
+:root { --mono: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
 .rr-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 20px; }
 .rr-stats div { padding: 12px 14px; border-right: 1px solid var(--line); }
 .rr-stats div:last-child { border-right: 0; }
 .rr-stats b { display: block; font-family: var(--serif); font-size: 24px; line-height: 1.1; }
 .rr-stats span { display: block; margin-top: 3px; font-size: 10px; color: var(--ink-3); }
+
 .rr-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 12px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
 .rr-callout b { color: var(--ink); }
 .rr-intro { margin: 0; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
+
 .rr-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; border-top: 1px solid var(--ink); padding-top: 14px; margin-bottom: 9px; }
 .rr-head h2 { margin: 0; }
 .rr-head > p { max-width: 330px; margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); text-align: right; }
 .rr-kicker { margin: 0 0 4px; font-family: var(--sans); font-size: 9px; letter-spacing: .14em; color: var(--red); }
+
 .rr-band { display: grid; grid-template-columns: 44px 1fr 105px 28px; gap: 12px; align-items: center; border-top: 1px solid var(--ink); padding: 15px 0; color: var(--ink); text-decoration: none; }
 .rr-band:hover { background: var(--paper-2); }
 .rr-no { font-family: var(--mono); font-size: 9px; color: var(--red); }
@@ -17,9 +24,53 @@
 .rr-desc { display: block; font-size: 10px; line-height: 1.6; color: var(--ink-3); }
 .rr-side { font-size: 9px; line-height: 1.6; color: var(--ink-3); text-align: right; }
 .rr-arrow { font-size: 18px; color: var(--red); text-align: right; }
+/* 非链接的分段条：去掉右侧两栏 */
+.rr-band--plain { grid-template-columns: 44px 1fr 28px; }
+.rr-band--plain:hover { background: transparent; }
+.rr-title--sm { font-size: 20px; }
+
 .rr-note { margin: 0; font-size: 11px; line-height: 1.75; color: var(--ink-3); }
 .rr-questions { margin: 0; padding-left: 20px; }
 .rr-questions li { margin: 0 0 6px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+
+/* 正文 */
+.rr-lead { margin: 0 0 14px; font-size: 12.5px; line-height: 1.9; color: var(--ink-2); }
+.rr-lead b { color: var(--ink); }
+
+.rr-warn { border: 1px solid var(--red); border-left-width: 3px; background: #fbf3f0; padding: 11px 14px; margin: 0 0 14px; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
+.rr-warn b { color: var(--red); }
+
+.rr-sub { margin: 26px 0 8px; font-family: var(--serif); font-size: 17px; font-weight: 400; line-height: 1.4; }
+.rr-sub small { display: block; margin-top: 3px; font-family: var(--sans); font-size: 9px; letter-spacing: .12em; color: var(--red); }
+
+/* 表格：窄屏横向滚动，不撑破页面 */
+.rr-tbl-wrap { overflow-x: auto; margin: 0 0 14px; -webkit-overflow-scrolling: touch; }
+.rr-tbl { width: 100%; border-collapse: collapse; font-size: 11.5px; line-height: 1.65; min-width: 500px; }
+.rr-tbl th { text-align: left; font-weight: 400; color: var(--ink-3); border-bottom: 1px solid var(--ink); padding: 7px 8px; white-space: nowrap; font-size: 10px; }
+.rr-tbl td { border-bottom: 1px solid var(--line-soft); padding: 8px; vertical-align: top; color: var(--ink-2); }
+.rr-tbl td:first-child { color: var(--ink); white-space: nowrap; }
+.rr-tbl .t { font-family: var(--mono); font-size: 10.5px; color: var(--ink); white-space: nowrap; }
+.rr-tbl .r { color: var(--red); }
+.rr-tbl .n { font-family: var(--mono); font-size: 10.5px; text-align: right; }
+.rr-tbl caption { caption-side: bottom; text-align: left; padding-top: 7px; font-size: 9.5px; line-height: 1.6; color: var(--ink-3); }
+
+/* 日程 */
+.rr-day { border-top: 1px solid var(--line); padding: 13px 0 4px; }
+.rr-day:first-of-type { border-top: 1px solid var(--ink); }
+.rr-day-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 5px; }
+.rr-day-no { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; color: var(--red); }
+.rr-day-title { margin: 0; font-family: var(--serif); font-size: 19px; font-weight: 400; line-height: 1.3; }
+.rr-day-stay { margin-left: auto; font-size: 9.5px; color: var(--ink-3); }
+.rr-day p { margin: 0 0 8px; font-size: 11.5px; line-height: 1.85; color: var(--ink-2); }
+
+.rr-list { margin: 0 0 14px; padding-left: 18px; }
+.rr-list li { margin: 0 0 6px; font-size: 11.5px; line-height: 1.8; color: var(--ink-2); }
+.rr-list li b { color: var(--ink); }
+
+.rr-src { margin: 0; padding-left: 18px; }
+.rr-src li { margin: 0 0 5px; font-size: 10.5px; line-height: 1.7; color: var(--ink-3); }
+.rr-src a { color: var(--ink-2); }
+
 @media (max-width: 760px) {
   .rr-stats { grid-template-columns: 1fr 1fr; }
   .rr-stats div:nth-child(2) { border-right: 0; }
@@ -29,4 +80,6 @@
   .rr-band { grid-template-columns: 30px 1fr 24px; }
   .rr-side { display: none; }
   .rr-title { font-size: 22px; }
+  .rr-day-title { font-size: 17px; }
+  .rr-day-stay { margin-left: 0; width: 100%; }
 }

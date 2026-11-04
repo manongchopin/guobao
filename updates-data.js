@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-04",
+    type: "计划",
+    title: "礼文岛和利尻岛排成 5 天 4 晚",
+    note: "v0.2 · 稚内往返，礼文先、利尻后 · 直达船全年仅 1–2 班/天 · 两座山零缓冲",
+    href: "rebun-rishiri.html"
+  },
+  {
+    date: "2026-11-04",
     type: "页面",
     title: "发散的全世界：美国西部自驾 23 条",
     note: "五个区域归组 · 年票 / 无人机 / STOP 与里程换算",
