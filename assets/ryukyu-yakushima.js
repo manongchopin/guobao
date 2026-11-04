@@ -20,7 +20,8 @@
     "yonaguni": { fitPad: [30, 30], maxZoom: 14 },
     "yaeyama":  { fitPad: [30, 30], maxZoom: 10 },
     "ishigaki": { fitPad: [35, 35], maxZoom: 13 },
-    "amami":    { fitPad: [30, 30], maxZoom: 8 }
+    "amami":     { fitPad: [30, 30], maxZoom: 8 },
+    "yakushima": { fitPad: [30, 30], maxZoom: 10 }
   };
 
   var ROUTE_STYLE = {
@@ -126,7 +127,7 @@
     buildList(key, pts, map, markers);
   }
 
-  ["wh", "naha", "yanbaru", "yonaguni", "yaeyama", "ishigaki", "amami"].forEach(initMap);
+  ["wh", "naha", "yanbaru", "yonaguni", "yaeyama", "ishigaki", "amami", "yakushima"].forEach(initMap);
 
   // 世界遗产清单
   var whHost = document.getElementById("ry-wh-list");

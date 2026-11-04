@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "琉球屋久岛全线闭合到种子岛",
+    note: "v0.7 · 绳文杉整日 · 协办金与登山巴士 · 20 天初稿",
+    href: "ryukyu-yakushima.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "琉球屋久岛补上奄美与德之岛",
     note: "v0.6 · 金作原导游规则 · 天城岳松原步道 · 黑兔夜观 · 去屋久岛串联",
     href: "ryukyu-yakushima.html"
