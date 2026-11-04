@@ -19,7 +19,8 @@
     "yanbaru":  { fitPad: [35, 35], maxZoom: 12 },
     "yonaguni": { fitPad: [30, 30], maxZoom: 14 },
     "yaeyama":  { fitPad: [30, 30], maxZoom: 10 },
-    "ishigaki": { fitPad: [35, 35], maxZoom: 13 }
+    "ishigaki": { fitPad: [35, 35], maxZoom: 13 },
+    "amami":    { fitPad: [30, 30], maxZoom: 8 }
   };
 
   var ROUTE_STYLE = {
@@ -27,7 +28,8 @@
     rail: { color: "#4f5878", dashArray: "2 6", weight: 2.5 },
     road: { color: "#8a6338", dashArray: "6 5", weight: 2.5 },
     loop: { color: "#a8402f", dashArray: "9 6", weight: 3 },
-    sea:  { color: "#3f6c8f", dashArray: "2 7", weight: 3 }
+    sea:  { color: "#3f6c8f", dashArray: "2 7", weight: 3 },
+    air:  { color: "#6b5b95", dashArray: "1 7", weight: 3 }
   };
 
   function colorOf(p) {
@@ -124,7 +126,7 @@
     buildList(key, pts, map, markers);
   }
 
-  ["wh", "naha", "yanbaru", "yonaguni", "yaeyama", "ishigaki"].forEach(initMap);
+  ["wh", "naha", "yanbaru", "yonaguni", "yaeyama", "ishigaki", "amami"].forEach(initMap);
 
   // 世界遗产清单
   var whHost = document.getElementById("ry-wh-list");

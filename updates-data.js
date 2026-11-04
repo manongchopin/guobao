@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "琉球屋久岛补上奄美与德之岛",
+    note: "v0.6 · 金作原导游规则 · 天城岳松原步道 · 黑兔夜观 · 去屋久岛串联",
+    href: "ryukyu-yakushima.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "琉球屋久岛补上石垣跳岛段",
     note: "v0.5 · 七条航线 · 西表浦内川 · 子午线纪念碑 · 石垣牛",
     href: "ryukyu-yakushima.html"
