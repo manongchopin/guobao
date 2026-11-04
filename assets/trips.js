@@ -183,6 +183,7 @@
             (h.duration ? ' · 用时 ' + h.duration : "") +
           '</p>' +
           (h.gpsKm ? '<p class="tp-hike-note">GPS 记录 ' + h.gpsKm + ' km · Apple Watch</p>' : '') +
+          (h.pending ? '<p class="tp-hike-note">赛事待核实，名称稍后补</p>' : '') +
         '</div><p class="tp-hike-points">' + (h.points || (h.path || []).length) + ' 点</p></div>' +
         '<div class="tp-hike-map" id="tp-sport-map-' + i + '"></div>' +
         '<p class="tp-map-note">GPS 抽稀轨迹 · 底图 © OpenStreetMap contributors</p>' +

@@ -10,7 +10,7 @@ window.SITE_UPDATES = [
     date: "2026-11-03",
     type: "足迹",
     title: "我的行程：247 飞 + 6 铁 + 3 徒步",
-    note: "大阪马拉松 · Apple Watch",
+    note: "新增 6 场路跑 · 赛事待核",
     href: "trips.html"
   },
   {
