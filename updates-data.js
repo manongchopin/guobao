@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-04",
+    type: "页面",
+    title: "发散的全世界：挪威三块石头",
+    note: "布道石 / 奇迹石 / 恶魔之舌 · 距离、季节、交通与待核",
+    href: "ideas-norway.html"
+  },
+  {
+    date: "2026-11-04",
     type: "计划",
     title: "圣地巡礼拆成索引 + 三作品页",
     note: "v0.3 · 索引只留三个横栏，细节进各自作品页",

@@ -110,6 +110,7 @@
     var added = str(o.added);
     return {
       id: str(o.id) || newId(),
+      destinationId: str(o.destinationId),
       scope: scope,
       title: str(o.title),
       country: country,
@@ -137,6 +138,7 @@
       sourceTitle: o.sourceTitle, sourceUrl: o.sourceUrl, status: o.status,
       added: o.added, priority: o.priority
     };
+    if (o.destinationId) out.destinationId = o.destinationId;
     if (o.continent) out.continent = o.continent;
     return out;
   }
@@ -190,22 +192,6 @@
       map[k].push(it);
     });
     return order.map(function (k) { return { key: k, items: map[k] }; });
-  }
-
-  function groupByProvince(items) {
-    return groupBy(items, function (i) { return i.province || "省份未记"; });
-  }
-
-  function groupByWorld(items) {
-    var groups = groupBy(items, continentOf);
-    groups.sort(function (a, b) { return CONTINENT_ORDER.indexOf(a.key) - CONTINENT_ORDER.indexOf(b.key); });
-    return groups.map(function (g) {
-      return {
-        key: g.key,
-        items: g.items,
-        countries: groupBy(g.items, function (i) { return i.country || "国家待记"; })
-      };
-    });
   }
 
   function placeText(i) {
@@ -312,21 +298,12 @@
     return wrap;
   }
 
-  function groupNode(title, items, extra) {
-    var group = node("section", "wi-group" + (extra ? " " + extra : ""));
-    var head = node("div", "wi-group-head");
-    head.appendChild(node("h3", "", title));
-    head.appendChild(node("em", "", items.length + " 条"));
-    group.appendChild(head);
-    return group;
-  }
-
-  function chapterNode(title, kicker, items) {
+  function chapterNode(title, kicker, count) {
     var chapter = node("section", "wi-chapter");
     var head = node("div", "wi-chapter-head");
     head.appendChild(node("h2", "", title));
     head.appendChild(node("span", "", kicker));
-    head.appendChild(node("em", "", items.length + " 条"));
+    head.appendChild(node("em", "", count + " 条"));
     chapter.appendChild(head);
     return chapter;
   }
@@ -335,7 +312,7 @@
     var box = node("div", "wi-empty");
     box.appendChild(node("b", "", isGlobal ? "收件箱还空着" : "这个筛选下还没有条目"));
     box.appendChild(node("p", "", isGlobal
-      ? "公共数据文件 world-ideas-data.js 现在是空的，没有编造的条目。下面的「添加一条」可以先丢一条进来，只存在这台浏览器。"
+      ? "还没有能成页的目的地，也没有本机草稿。下面的「添加一条」可以先丢一条进来，只存在这台浏览器。"
       : "换个类型看看，或者切回「全部」。"));
     if (!isGlobal) {
       var reset = node("button", "wi-empty-reset", "重置筛选");
@@ -351,55 +328,168 @@
     return box;
   }
 
+  /* ---------- 渲染：目的地卡 ---------- */
+
+  function allDestinations() {
+    var src = (D && Array.isArray(D.destinations)) ? D.destinations : [];
+    return src.map(function (d) {
+      var scope = d.scope === "cn" ? "cn" : "world";
+      return {
+        id: str(d.id),
+        scope: scope,
+        title: str(d.title),
+        subtitle: str(d.subtitle),
+        country: str(d.country) || (scope === "cn" ? "中国" : ""),
+        province: str(d.province),
+        continent: str(d.continent),
+        summary: str(d.summary),
+        page: str(d.page),
+        status: STATUS[String(d.status)] ? String(d.status) : "checked",
+        items: []
+      };
+    }).filter(function (d) { return !!d.id && !!d.title; });
+  }
+
+  function typesOf(items) {
+    var order = [], map = {};
+    items.forEach(function (i) {
+      if (!map[i.type]) { map[i.type] = 0; order.push(i.type); }
+      map[i.type]++;
+    });
+    return order.map(function (t) { return { type: t, n: map[t] }; })
+      .sort(function (a, b) { return b.n - a.n; });
+  }
+
+  function destCard(d) {
+    var a = node("a", "wi-dest");
+    a.href = d.page || "#";
+    if (!d.page) a.removeAttribute("href");
+
+    var top = node("div", "wi-dest-top");
+    var where = [d.continent, d.country].filter(Boolean).join(" · ");
+    top.appendChild(node("span", "wi-dest-kicker", where));
+    top.appendChild(node("span", "wi-dest-count", d.items.length + " 条"));
+    a.appendChild(top);
+
+    a.appendChild(node("span", "wi-dest-title", d.title));
+    if (d.subtitle) a.appendChild(node("span", "wi-dest-sub", d.subtitle));
+    if (d.summary) a.appendChild(node("span", "wi-dest-sum", d.summary));
+
+    var foot = node("div", "wi-dest-foot");
+    typesOf(d.items).slice(0, 2).forEach(function (t) {
+      foot.appendChild(node("span", "wi-tag", t.type + " " + t.n));
+    });
+    var st = node("span", "wi-status", STATUS[d.status] || "查过");
+    st.setAttribute("data-s", d.status);
+    foot.appendChild(st);
+    if (d.page) foot.appendChild(node("span", "wi-dest-go", "进入 →"));
+    a.appendChild(foot);
+
+    return a;
+  }
+
+  function countOf(dests, loose) {
+    return dests.reduce(function (s, d) { return s + d.items.length; }, 0) + loose.length;
+  }
+
+  function appendGroups(chapter, dests, loose, destKey, looseKey, keyOrder) {
+    var order = [], map = {};
+    function slot(k) {
+      if (!map[k]) { map[k] = { dests: [], loose: [] }; order.push(k); }
+      return map[k];
+    }
+    groupBy(dests, destKey).forEach(function (g) { slot(g.key).dests = g.items; });
+    groupBy(loose, looseKey).forEach(function (g) { slot(g.key).loose = g.items; });
+
+    if (keyOrder) {
+      order.sort(function (a, b) {
+        var ia = keyOrder.indexOf(a), ib = keyOrder.indexOf(b);
+        return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+      });
+    }
+
+    order.forEach(function (k) {
+      var g = map[k];
+      var block = node("section", "wi-group");
+      var head = node("div", "wi-group-head");
+      head.appendChild(node("h3", "", k));
+      head.appendChild(node("em", "", countOf(g.dests, g.loose) + " 条"));
+      block.appendChild(head);
+
+      if (g.dests.length) {
+        var grid = node("div", "wi-dests");
+        g.dests.forEach(function (d) { grid.appendChild(destCard(d)); });
+        block.appendChild(grid);
+      }
+
+      if (g.loose.length) {
+        block.appendChild(node("p", "wi-loose-label", "散条 · 还没成页"));
+        block.appendChild(cardsNode(g.loose));
+      }
+
+      chapter.appendChild(block);
+    });
+  }
+
   /* ---------- 渲染：主流程 ---------- */
 
   function renderList(all) {
     var listEl = $("wi-list");
     listEl.textContent = "";
 
-    var shown = all.filter(function (i) {
+    var dests = allDestinations();
+    var destById = {};
+    dests.forEach(function (d) { destById[d.id] = d; });
+    all.forEach(function (i) {
+      if (i.destinationId && destById[i.destinationId]) destById[i.destinationId].items.push(i);
+    });
+
+    var loose = all.filter(function (i) {
+      return !i.destinationId || !destById[i.destinationId];
+    });
+
+    var shownDests = dests.filter(function (d) {
+      if (!d.items.length) return false;
+      if (state.scope !== "all" && d.scope !== state.scope) return false;
+      if (state.type !== "all" && !d.items.some(function (i) { return i.type === state.type; })) return false;
+      return true;
+    });
+
+    var shownLoose = loose.filter(function (i) {
       if (state.scope !== "all" && i.scope !== state.scope) return false;
       if (state.type !== "all" && i.type !== state.type) return false;
       return true;
     });
 
+    var shownCount = countOf(shownDests, shownLoose);
+
     $("wi-filter-note").textContent = all.length === 0
       ? "暂无条目"
-      : "显示 " + shown.length + " 条 / 共 " + all.length + " 条";
+      : "显示 " + shownCount + " 条 / 共 " + all.length + " 条";
 
     if (all.length === 0) { listEl.appendChild(emptyBlock(true)); return; }
-    if (shown.length === 0) { listEl.appendChild(emptyBlock(false)); return; }
+    if (shownCount === 0) { listEl.appendChild(emptyBlock(false)); return; }
 
     if (state.scope !== "world") {
-      var cnItems = shown.filter(function (i) { return i.scope === "cn"; });
-      if (cnItems.length) {
-        var cnChapter = chapterNode("国内篇", "CHINA · BY PROVINCE", cnItems);
-        groupByProvince(cnItems).forEach(function (g) {
-          var block = groupNode(g.key, g.items);
-          block.appendChild(cardsNode(g.items));
-          cnChapter.appendChild(block);
-        });
+      var cnDests = shownDests.filter(function (d) { return d.scope === "cn"; });
+      var cnLoose = shownLoose.filter(function (i) { return i.scope === "cn"; });
+      if (cnDests.length || cnLoose.length) {
+        var cnChapter = chapterNode("国内篇", "CHINA · BY PROVINCE", countOf(cnDests, cnLoose));
+        appendGroups(cnChapter, cnDests, cnLoose,
+          function (d) { return d.province || "省份未记"; },
+          function (i) { return i.province || "省份未记"; });
         listEl.appendChild(cnChapter);
       }
     }
 
     if (state.scope !== "cn") {
-      var worldItems = shown.filter(function (i) { return i.scope === "world"; });
-      if (worldItems.length) {
-        var wChapter = chapterNode("国外篇", "WORLD · BY CONTINENT", worldItems);
-        groupByWorld(worldItems).forEach(function (c) {
-          var block = groupNode(c.key, c.items);
-          c.countries.forEach(function (co) {
-            var country = node("div", "wi-country");
-            var chead = node("div", "wi-country-head");
-            chead.appendChild(node("b", "", co.key));
-            chead.appendChild(node("em", "", co.items.length + " 条"));
-            country.appendChild(chead);
-            country.appendChild(cardsNode(co.items));
-            block.appendChild(country);
-          });
-          wChapter.appendChild(block);
-        });
+      var wDests = shownDests.filter(function (d) { return d.scope === "world"; });
+      var wLoose = shownLoose.filter(function (i) { return i.scope === "world"; });
+      if (wDests.length || wLoose.length) {
+        var wChapter = chapterNode("国外篇", "WORLD · BY CONTINENT", countOf(wDests, wLoose));
+        appendGroups(wChapter, wDests, wLoose,
+          function (d) { return d.continent || CONTINENT[d.country] || "待归类"; },
+          continentOf, CONTINENT_ORDER);
         listEl.appendChild(wChapter);
       }
     }
