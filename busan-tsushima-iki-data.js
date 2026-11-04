@@ -32,7 +32,7 @@ window.BTK_DATA = {
     { map: "tsushima", kind: "museum", name: "対馬博物館", sub: "Tsushima Museum", lat: 34.2035, lng: 129.2880, note: "2022 年开馆；宗家文书、元寇与朝鲜通信使相关藏品" },
     { map: "tsushima", kind: "history", name: "清水山城跡", sub: "Shimizuyama Castle", lat: 34.2078, lng: 129.2890, approx: true, note: "1591 年丰臣秀吉下令筑，朝鲜出兵的前线基地；国指定史迹。在金石城背后山上" },
 
-    { map: "fukuoka", kind: "museum", name: "元寇史料館", sub: "Genko Historical Museum", lat: 33.6072, lng: 130.4204, note: "博多区东公园内；10:00—16:00，无休，300 円" },
+    { map: "fukuoka", kind: "museum", name: "元寇史料館", sub: "Genko Historical Museum", lat: 33.6072, lng: 130.4204, note: "博多区东公园内；10:00—16:00（入馆至 15:30），需事前预约，大人 500 円" },
     { map: "fukuoka", kind: "history", name: "筥崎宮", sub: "Hakozaki-gu", lat: 33.6175, lng: 130.4154, note: "文永之役中遭兵火；「敌国降伏」的由来之地" },
     { map: "fukuoka", kind: "history", name: "元寇防塁（生の松原）", sub: "Genko Borui", lat: 33.6101, lng: 130.2528, note: "1281 年为防再次来袭所筑的石垒，今津一带有现存段" },
     { map: "fukuoka", kind: "port", name: "博多港", sub: "Hakata Port", lat: 33.6283, lng: 130.3569, note: "壹歧、对马航线的福冈侧码头；离元寇史料館不远" },
