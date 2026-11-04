@@ -15,11 +15,11 @@
 
 <header class="hero">
   <a class="back" href="plans.html">← 旅行计划</a>
-  <p class="kicker">PLAN 20 · RYUKYU &amp; YAKUSHIMA · v0.4</p>
+  <p class="kicker">PLAN 20 · RYUKYU &amp; YAKUSHIMA · v0.5</p>
   <h1>琉球群岛<br>和屋久岛</h1>
   <p class="lede">
     三处世界遗产串起来的一条线。<br>
-    <span>那霸看城，名护看海，与那霸岳看林；与那国骑一圈，再看五岛医生。</span>
+    <span>那霸看城，名护看海，与那霸岳看林；与那国骑一圈；石垣跳岛。</span>
   </p>
   <div class="seal" aria-hidden="true">琉</div>
 </header>
@@ -29,10 +29,10 @@
     <div class="ry-stats">
       <div><b>3</b><span>世界遗产</span></div>
       <div><b>14</b><span>遗产点位</span></div>
-      <div><b>6</b><span>天（前两段）</span></div>
-      <div><b>v0.4</b><span>与那国段</span></div>
+      <div><b>7</b><span>离岛航线</span></div>
+      <div><b>v0.5</b><span>石垣段</span></div>
     </div>
-    <p class="ry-callout"><b>前两段已经写细。</b>第一段：那霸（D1）→ 名护·美ら海（D2）→ 与那霸岳（D3）→ 名护回那霸、飞与那国（D4）。第二段：与那国骑两天（D5–D6）→ 石垣。石垣之后仍是骨架。</p>
+    <p class="ry-callout"><b>前三段已经写细。</b>那霸（D1）→ 名护·美ら海（D2）→ 与那霸岳（D3）→ 飞与那国（D4）；与那国骑两天（D5–D6）；石垣跳岛（D7–）。剩下屋久岛那一段还是骨架。</p>
     <p class="ry-intro">三处世界遗产不是同一回事：972 是琉球王国的<b>文化</b>遗产，9 个点散在冲绳本岛；1574 是<b>自然</b>遗产，由奄美大岛、德之岛、冲绳岛北部、西表岛四个岛组成的系列资产；662 是屋久岛，单点。这一趟真正踩到的，是 972 的 9 个点里靠那霸的几处，加上 1574 的「冲绳岛北部」这一块。</p>
   </section>
 
@@ -555,9 +555,259 @@
   </section>
 
 
+  <!-- 石垣 -->
+  <section class="wh-section" id="ishigaki-seg">
+    <div class="ry-head">
+      <div><p class="ry-kicker">SEGMENT 3 · ISHIGAKI</p><h2>石垣：跳岛的基地</h2></div>
+      <p>七条航线，一个码头。<br>岛本身反而不是重点。</p>
+    </div>
+    <p class="ry-intro">你说得对——石垣最好玩的是跳岛。石垣岛本身有川平湾、有石垣牛、有两三个值得半天的点，但<b>它的真正价值是那个码头</b>：八重山所有能去的岛，船都从同一个候船厅出发。</p>
+
+    <div class="ry-table-wrap" style="margin-top:12px">
+      <table class="ry-table">
+        <thead><tr><th>航路</th><th>片道</th><th>所需</th><th>石垣发班次</th></tr></thead>
+        <tbody>
+          <tr><td>竹富岛</td><td>970 日元</td><td>约 15–20 分</td><td><b>18 便</b></td></tr>
+          <tr><td>小浜岛</td><td>1,720 日元</td><td>约 25–30 分</td><td>10 便</td></tr>
+          <tr><td>黑岛</td><td>1,850 日元</td><td>约 25–30 分</td><td>6 便</td></tr>
+          <tr><td>西表 · 大原港</td><td>2,520 日元</td><td>约 40–50 分</td><td>9 便</td></tr>
+          <tr><td>西表 · 上原港</td><td>3,290 日元</td><td>约 40–45 分</td><td>8 便</td></tr>
+          <tr><td>鸠间岛</td><td>3,290 日元</td><td>约 45–55 分</td><td>4 便</td></tr>
+          <tr><td>波照间岛</td><td>4,990 日元</td><td>约 60–90 分</td><td><b>3 便</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="ry-note">两家公司：安栄観光、八重山観光フェリー。除波照间外都有两家在跑，一家满了还能问另一家；<b>波照间只有安栄一家</b>，这是它最要命的地方。</p>
+
+    <div class="ry-head" style="margin-top:22px">
+      <div><p class="ry-kicker">MAP · YAEYAMA</p><h2 style="font-size:19px">八重山的岛</h2></div>
+      <p>航线为示意。<br>实际航路会绕。</p>
+    </div>
+    <div id="ry-map-yaeyama" class="ry-map"></div>
+    <div class="ry-map-legend">
+      <span><i style="background:#2f5d55"></i>1574 遗产点</span>
+      <span><i style="background:#5d6a63"></i>港 / 集落</span>
+      <span><i class="line"></i>航线 / 陆路（示意）</span>
+    </div>
+    <div id="ry-list-yaeyama" class="ry-map-list"></div>
+  </section>
+
+  <!-- Q2 西表 -->
+  <section class="wh-section" id="iriomote">
+    <div class="ry-head">
+      <div><p class="ry-kicker">IRIOMOTE · CORE FOREST</p><h2>西表岛：怎么进世界遗产核心区</h2></div>
+      <p>浦内川是唯一成熟的路。<br>但有两个坑。</p>
+    </div>
+
+    <p class="ry-intro">西表岛九成是丛林，环岛公路根本没有成环，所以「进核心区」这件事，在物理上就只剩几条路。<b>浦内川是其中最成熟、也最接近「一般人能走」的一条</b>：坐船进内陆，再沿步道走到瀑布。你看到的走法是对的。</p>
+
+    <div class="ry-table-wrap" style="margin-top:12px">
+      <table class="ry-table">
+        <thead><tr><th>段</th><th>方式</th><th>时间 / 费用</th></tr></thead>
+        <tbody>
+          <tr><td>石垣港 → 上原港</td><td>高速船</td><td>约 40–45 分 ／ 片道 3,290 日元</td></tr>
+          <tr><td>上原港 → 浦内川码头</td><td>游船公司的免费接送巴士，或路线巴士</td><td>约 15 分</td></tr>
+          <tr><td>浦内川 下流 → 上流（军舰岩）</td><td>丛林游船</td><td><b>约 30 分</b> ／ 大人 3,000、儿童 1,500 日元</td></tr>
+          <tr><td>军舰岩 → マリユドゥの滝 展望台</td><td>步道</td><td><b>单程约 30 分</b>（雨后 40 分）</td></tr>
+          <tr><td>再往里 → カンピレーの滝</td><td>步道</td><td>再走一段，路更原始</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="ry-callout"><b>不需要向导，也不需要预约游船。</b>买票上船、下船走路，全程是自己走的开放步道。这一点常被写成「必须参团」，其实不是。<b>但游船原则上要 4 人以上才开航</b>——如果你只有一两个人，得等拼船或提前问当天有没有团。</p>
+
+    <div class="ry-warn" style="margin-top:12px">
+      <p><b>最容易踩的坑：回程。</b>游船公司的免费接送巴士，<b>回上原港只有 13:30 这一班</b>。错过它，就只剩路线巴士「浦内川」站 15:41 的末班。也就是说，你必须在中午前后就离开瀑布——这不是弹性很大的行程。</p>
+    </div>
+
+    <div class="ry-cols" style="margin-top:14px">
+      <div class="ry-card">
+        <p class="ry-kicker">要不要报团</p>
+        <ul class="ry-check ry-check-adj">
+          <li><b>自己走</b>：船票 + 步道，最自由，但要盯着 13:30 那班车</li>
+          <li><b>浦内川観光的皮划艇团</b>：去程坐船、回程划艇顺流而下，含午餐，需预约，11 岁以下不可</li>
+          <li><b>旅行社的日归团</b>：石垣出发、含上原港接送，省心但时间被团带着走</li>
+        </ul>
+      </div>
+      <div class="ry-card">
+        <p class="ry-kicker">装备与提醒</p>
+        <ul class="ry-check ry-check-adj">
+          <li>游船码头可<b>免费借长靴</b></li>
+          <li>防蚂蟥：别穿短裤，减少皮肤暴露</li>
+          <li>山里没信号；午餐在石垣先买好，西表没时间买</li>
+          <li>マリユドゥの滝现在<b>只能从展望台看</b>，不能下到滝壶</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="ry-note" style="margin-top:12px"><b>关于「核心区」的边界：</b>浦内川这条线在世界遗产范围内，但是开放步道，个人可走。真正需要专门向导的是更深的地方（如マヤグスクの滝那种级别），一般要跟半天到一天的专门团。别把两者混为一谈。</p>
+  </section>
+
+  <!-- Q3 子午线 -->
+  <section class="wh-section" id="meridian">
+    <div class="ry-head">
+      <div><p class="ry-kicker">MERIDIAN · 123°45′6.789″</p><h2>子午线纪念碑</h2></div>
+      <p>能到。而且在西表岛。<br>不在与那国，也不在波照间。</p>
+    </div>
+
+    <p class="ry-intro">先说结论：<b>可以到达，位置在西表岛</b>。这个数字是 123 度 45 分 6.789 秒——把符号去掉读，正好是 1 到 9 顺序排下来。<b>日本全国只有这一处</b>，1997 年由国土地理院冲绳支所发现。</p>
+
+    <p class="ry-callout">它不是一个点，而是<b>两个</b>：子午线穿过西表岛，北边祖纳建了「子午線ふれあい館」，西岸白浜建了日晷纪念碑。两处都在同一条经线上——祖纳 24.3901、白浜 24.3603，经度都是 123.748。</p>
+
+    <div class="ry-cols" style="margin-top:14px">
+      <div class="ry-card">
+        <p class="ry-kicker">祖纳侧</p>
+        <ul class="ry-check ry-check-adj">
+          <li>「子午線ふれあい館」，竹富町西表 921-2</li>
+          <li>在祖纳集落里，巴士「祖纳」站步行可达</li>
+          <li>最容易到的一侧，可与集落补给一起做</li>
+        </ul>
+      </div>
+      <div class="ry-card">
+        <p class="ry-kicker">白浜侧</p>
+        <ul class="ry-check ry-check-adj">
+          <li>「日時計モニュメント」，西表岛西岸白浜</li>
+          <li>同一经度 123.748，与祖纳一线相连</li>
+          <li>巴士可到白浜集落，班次待核</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="ry-note" style="margin-top:12px">每晚会用激光把那条子午线照到夜空中。想看得住岛上——这也是「西表住一晚」比日归更值的一个理由。</p>
+  </section>
+
+  <!-- Q4 波照间 -->
+  <section class="wh-section" id="hateruma">
+    <div class="ry-head">
+      <div><p class="ry-kicker">HATERUMA · SOUTHERNMOST</p><h2>波照间岛</h2></div>
+      <p>日本最南端的有人岛。<br>也是一天只有三班船的地方。</p>
+    </div>
+
+    <div class="ry-table-wrap">
+      <table class="ry-table">
+        <thead><tr><th>项目</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>运营</td><td><b>只有安栄観光一家</b>（八重山観光フェリー不跑这条线）</td></tr>
+          <tr><td>石垣发</td><td>08:00 / 11:45 / 15:00（一天 3 班）</td></tr>
+          <tr><td>波照间发</td><td>09:50 / 13:00 / 16:50</td></tr>
+          <tr><td>所需</td><td>大型船「ぱいじま2」约 80–90 分；小型船约 60–70 分</td></tr>
+          <tr><td>票价</td><td>片道 4,990 日元 ／ 往返 9,670 日元</td></tr>
+          <tr><td>风险</td><td><b>七条航线里最容易被浪影响的一条</b>；一家公司，没有备选班次</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="ry-callout"><b>「日本最南端」要说准确：</b>碑立的是<b>日本最南端的有人岛</b>。真正的日本最南端是冲之鸟岛，但那是个没人住、也去不了的珊瑚礁。所以打卡打的是「有人岛的最南端」，不是地理极限。</p>
+
+    <p class="ry-note" style="margin-top:10px"><b>岛内怎么去最南端：</b>没有巴士到南端，通常租自行车或小型车过去，从港口到碑大约几公里。<b>具体距离与租赁点位置待核</b>——这一段我没核到可信的官方数字，不编。</p>
+
+    <div class="ry-warn" style="margin-top:12px">
+      <p><b>波照间的正确打法：</b>要么住一晚，要么接受「8:00 去、16:50 回」的整天。日归的话岛上净停留约 6 小时，刚好够骑到最南端、绕一圈、吃个饭。<b>不要把它塞进已经很满的一天</b>——一旦停航，第二天的安排会跟着塌。</p>
+    </div>
+  </section>
+
+  <!-- Q5 竹富 -->
+  <section class="wh-section" id="taketomi">
+    <div class="ry-head">
+      <div><p class="ry-kicker">TAKETOMI · HALF DAY</p><h2>竹富值不值得去？能不能和波照间一天走完</h2></div>
+      <p>值得，但半天够了。<br>一天两个岛，技术上可以。</p>
+    </div>
+
+    <p class="ry-intro"><b>竹富值得去。</b>红瓦集落、白砂小路、水牛车、コンドイ浜——它不是「顺便看看」的岛，是八重山最完整的一座琉球村落景观。但岛很小，骑自行车两小时能绕完，<b>半天足够</b>。</p>
+
+    <div class="ry-table-wrap" style="margin-top:12px">
+      <table class="ry-table">
+        <thead><tr><th>方案</th><th>时刻</th><th>评价</th></tr></thead>
+        <tbody>
+          <tr><td>竹富单独半天</td><td>石垣发 9:00 → 竹富，14:00 回</td><td><b>推荐</b>。上午走路、骑车，中午回石垣吃饭</td></tr>
+          <tr><td>波照间单独一天</td><td>08:00 去 → 16:50 回</td><td><b>推荐</b>。最南端 + 绕岛，不赶</td></tr>
+          <tr><td>两岛一天</td><td>08:00 波照间 → 13:00 回石垣（约 14:10 到）→ 14:30 竹富 → 17:50 回</td><td>可行，但每个岛都只是「看一眼」</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="ry-callout" style="margin-top:12px"><b>我的建议：不要合并。</b>技术上确实排得下——波照间 13:00 的船回石垣大约 14:10，接 14:30 去竹富的船，还能赶上 17:50 的末班。但这样波照间只剩 3 小时、竹富只剩 3 小时，而且<b>波照间一旦停航，竹富也跟着泡汤</b>。两个岛的性质完全不同：一个看「最远」，一个看「最完整」，挤在一起两边都吃不到。</p>
+
+    <p class="ry-note">竹富的一天 18 班船是这个方案能成立的前提——它是七条航线里唯一「错过一班还有下一班」的。反过来，波照间只有 3 班，没有容错空间。</p>
+  </section>
+
+  <!-- Q6 石垣市内 -->
+  <section class="wh-section" id="ishigaki-city">
+    <div class="ry-head">
+      <div><p class="ry-kicker">ISHIGAKI TOWN</p><h2>唐人墓与八重山博物馆</h2></div>
+      <p>都值得，但理由不同。<br>一个看事件，一个看结构。</p>
+    </div>
+
+    <div class="ry-opt">
+      <div class="ry-opt-head"><span class="ry-opt-no">A</span><span class="ry-opt-name">唐人墓</span><span class="ry-opt-flag">值得，20 分钟</span></div>
+      <p>1852 年，一艘从厦门开往美国的商船「罗伯・包恩号」上，被虐待的中国劳工暴动杀死船长，船到石垣岛后被留下；随后赶来处理的英国军队把他们杀害或俘虏。<b>这座墓就是那些人的。</b>1972 年以中式样式重建，外表格外艳丽——这正是它最刺人的地方。</p>
+      <dl>
+        <dt>位置</dt><dd>石垣市新川富崎</dd>
+        <dt>怎么去</dt><dd>巴士总站乘川平方向线路约 15 分钟，「唐人墓」站下车即到</dd>
+        <dt>值不值</dt><dd>20 分钟够。顺路去川平湾时停一下最合适</dd>
+      </dl>
+    </div>
+
+    <div class="ry-opt">
+      <div class="ry-opt-head"><span class="ry-opt-no">B</span><span class="ry-opt-name">石垣市立八重山博物馆</span><span class="ry-opt-flag">值得，1 小时</span></div>
+      <p>1972 年冲绳复归那年开馆。<b>人頭税时代的资料</b>是这里最重的一块——八重山在琉球王国时期被课以重税，人口长期停滞，这一段决定了今天八重山和冲绳本岛的关系。还有パナリ焼、旗頭、渔具农具。</p>
+      <dl>
+        <dt>位置</dt><dd>石垣市字登野城 4-1</dd>
+        <dt>时间</dt><dd>9:00–17:00（入馆到 16:30）；周一、祝日、年末年始休</dd>
+        <dt>票价</dt><dd>大人 200 日元，学生 100，小学生以下免费</dd>
+        <dt>值不值</dt><dd>200 日元看一小时，是理解八重山最快的入口；下雨天的标准备选</dd>
+      </dl>
+    </div>
+
+    <p class="ry-note" style="margin-top:10px">两个都不是「必去级」的景点，但都不是凑数的。<b>如果只有半天</b>：先去博物馆（理解结构），再去唐人墓（看具体的事），中间顺路川平湾。</p>
+  </section>
+
+  <!-- Q7 石垣牛 -->
+  <section class="wh-section" id="beef">
+    <div class="ry-head">
+      <div><p class="ry-kicker">ISHIGAKI BEEF</p><h2>石垣牛在哪吃</h2></div>
+      <p>两家可订，一家要抢。<br>价格没写，看当天。</p>
+    </div>
+
+    <div class="ry-opt">
+      <div class="ry-opt-head"><span class="ry-opt-no">A</span><span class="ry-opt-name">石垣岛きたうち牧场（牧场直营）</span><span class="ry-opt-flag">最稳</span></div>
+      <p>自家牧场直营，只用雌牛，长期肥育到 <b>36 个月以上</b>（「プレミアムビーフ」），还有 40 个月以上的级别。全国和牛平均出荷是 28 个月——这个差别就是它脂肪不腻的原因。岛内两家店。</p>
+      <dl>
+        <dt>浜崎本店</dt><dd>石垣市浜崎町 2-3-24 ／ 0980-83-7000 ／ 午 11:30–14:30、晚 16:30–22:00</dd>
+        <dt>真栄里店</dt><dd>石垣市字真栄里 387-6 ／ 0980-87-5029 ／ 11:30–22:30（L.O. 22:00）<b>无休</b></dd>
+        <dt>选哪家</dt><dd>真栄里店离机场近、无休、营业长；浜崎本店在市区，适合晚饭</dd>
+      </dl>
+    </div>
+
+    <div class="ry-opt">
+      <div class="ry-opt-head"><span class="ry-opt-no">B</span><span class="ry-opt-name">炭火焼肉 やまもと</span><span class="ry-opt-flag">最难订</span></div>
+      <p>石垣岛最有名的一家，也是最难订的。<b>只接受日语电话预约，用餐日两个月前开放</b>，没有在线订位。17:00 起 90 分钟制，周三休息。</p>
+      <dl>
+        <dt>电话</dt><dd>0980-83-5641（日语）</dd>
+        <dt>技巧</dt><dd>开店前 16–17 点最容易接通；工作日比周末好订</dd>
+        <dt>现实</dt><dd>订不到是常态，别把它排成必选项</dd>
+      </dl>
+    </div>
+
+    <p class="ry-note" style="margin-top:12px"><b>一句提醒：</b>「石垣牛」是地域品牌，各家店的认证与等级标注不完全一样。看菜单上的标注，不要只看店名。<b>两家的价格都没写</b>——石垣牛的市价波动大，写了也是过期的。</p>
+  </section>
+
+  <!-- 石垣岛内图 -->
+  <section class="wh-section" id="ishigaki-map">
+    <div class="ry-head">
+      <div><p class="ry-kicker">MAP · ISHIGAKI ISLAND</p><h2>石垣岛上的几个点</h2></div>
+      <p>岛内五个点。<br>半天能串完三个。</p>
+    </div>
+    <div id="ry-map-ishigaki" class="ry-map ry-map-sm"></div>
+    <div class="ry-map-legend">
+      <span><i style="background:#5d6a63"></i>机场 / 港 / 景点</span>
+    </div>
+    <div id="ry-list-ishigaki" class="ry-map-list"></div>
+  </section>
+
   <section class="wh-section" id="legs">
     <div class="ry-head">
-      <div><p class="ry-kicker">LEGS · CHECKED vs OPEN</p><h2>第一段交通</h2></div>
+      <div><p class="ry-kicker">LEGS · CHECKED vs OPEN</p><h2>三段交通</h2></div>
       <p>左边是已确认的方式，<br>右边是还没核的。</p>
     </div>
     <div class="ry-table-wrap">
@@ -576,6 +826,12 @@
           <tr><td>那霸 → 石垣 → 与那国</td><td>备选：石垣直飞 3 班/日（末班 17:40）</td><td><span class="ry-tag">已核</span></td></tr>
           <tr><td>与那国机场 → 住宿</td><td>町营巴士（免费，9 班/日）或接送</td><td><span class="ry-tag">已核</span></td></tr>
           <tr><td>与那国 → 石垣</td><td>RAC 3 班/日 30 分钟；或渡轮（周二·周五 10:00，约 4 小时）</td><td><span class="ry-tag">已核</span></td></tr>
+          <tr><td>石垣 → 竹富</td><td>高速船，15–20 分，18 班/日，970 日元</td><td><span class="ry-tag">已核</span></td></tr>
+          <tr><td>石垣 → 西表 上原</td><td>高速船，40–45 分，8 班/日，3,290 日元</td><td><span class="ry-tag">已核</span></td></tr>
+          <tr><td>石垣 → 西表 大原</td><td>高速船，40–50 分，9 班/日，2,520 日元</td><td><span class="ry-tag">已核</span></td></tr>
+          <tr><td>石垣 → 波照间</td><td>安栄観光独家，60–90 分，3 班/日，4,990 日元</td><td><span class="ry-tag">已核</span></td></tr>
+          <tr><td>上原港 → 浦内川</td><td>游船公司免费接送巴士，约 15 分（回程仅 13:30 一班）</td><td><span class="ry-tag">已核</span></td></tr>
+          <tr><td>浦内川 游船</td><td>约 30 分，大人 3,000 日元；<b>原则上 4 人以上开航</b></td><td><span class="ry-tag">已核</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -585,33 +841,32 @@
   <!-- 后续段 -->
   <section class="wh-section" id="rest">
     <div class="ry-head">
-      <div><p class="ry-kicker">NEXT SEGMENT · OPEN</p><h2>石垣之后</h2></div>
-      <p>前两段已定。<br>这里还是空的。</p>
+      <div><p class="ry-kicker">NEXT SEGMENT · OPEN</p><h2>屋久岛</h2></div>
+      <p>三段已定。<br>只剩最后一段。</p>
     </div>
-    <p class="ry-intro">与那国之后落到石垣。石垣是八重山的枢纽，也是这一段真正的分岔点：从这里可以往竹富、西表，也可以直接回那霸。<b>下一段怎么排，取决于你给的方向。</b></p>
+    <p class="ry-intro">石垣之后就是屋久岛——这是全线唯一还没写细节的一段，也是唯一在<b>鹿儿岛县</b>的一段。它与前三段的交通逻辑完全不同：从八重山回不到屋久岛，必须先回那霸或直接飞鹿儿岛。</p>
 
     <div class="ry-cols" style="margin-bottom:14px">
       <div class="ry-card">
-        <p class="ry-kicker">石垣能接的地方</p>
+        <p class="ry-kicker">已经想清楚的部分</p>
         <ul class="ry-check ry-check-adj">
-          <li>竹富：石垣港坐船，短程，当日往返</li>
-          <li>西表：石垣港坐船到大原或上原，岛内再转</li>
-          <li>那霸：石垣飞那霸，班次密</li>
-          <li>宫古：从石垣或那霸再飞一次</li>
+          <li>屋久岛段两条路线并列：绳文杉（整日）与白谷云水峡（半日）</li>
+          <li>进岛靠鹿儿岛：飞机或船</li>
+          <li>岛上 4 晚的骨架在 v0.2 时排过</li>
         </ul>
       </div>
       <div class="ry-card">
-        <p class="ry-kicker">还没决定的事</p>
+        <p class="ry-kicker">还没定的部分</p>
         <ul class="ry-check ry-check-open">
-          <li>石垣待几天、要不要住岛上</li>
-          <li>八重山去几个岛：竹富只一日，还是西表住两晚</li>
+          <li>从石垣怎么回：那霸转，还是直接飞鹿儿岛</li>
+          <li>屋久岛住宫之浦还是安房</li>
+          <li>绳文杉到底登不登（体力与天气窗口）</li>
           <li>宫古还留不留（v0.2 列过，这一版没排）</li>
-          <li>屋久岛放最后一段，还是单独一趟</li>
         </ul>
       </div>
     </div>
 
-    <p class="ry-note">v0.2 那版按「那霸 → 宫古 → 八重山 → 屋久岛」排的 17 天骨架已经不再适用：前两段改成了那霸 → 名护 → 与那国 → 石垣。等石垣的方向定了，再从石垣往回重排天数。</p>
+    <p class="ry-note">v0.2 那版「那霸 → 宫古 → 八重山 → 屋久岛」的 17 天骨架已不适用：前三段改成了那霸 → 名护 → 与那国 → 石垣。屋久岛那一段的细节（绳文杉、白谷、进岛交通）仍在，但前后衔接要等石垣段定稿后重排。</p>
   </section>
 
   <!-- 待核 -->
@@ -623,6 +878,10 @@
     <ul class="ry-check">
       <li>2027 年 3–5 月版时刻表——冲绳路线巴士每年 4 月与 10 月改点，本页用的是 2026 年 10 月版</li>
       <li>那霸—与那国、与那国—石垣的春季班期（本页时刻来自 2026–27 冬ダイヤ）</li>
+      <li>2027 年 3–5 月的离岛船班时刻（本页为 2026 年 8 月版）</li>
+      <li>波照间岛内到最南端之碑的交通与租赁点</li>
+      <li>西表岛 白浜侧的巴士班次</li>
+      <li>浦内川游船当天是否够 4 人成行（影响能否按计划走）</li>
       <li>名护包车到登山口的报价、能否在山上等待、国头村的车能否预约</li>
       <li>福州园、至圣庙、对马丸纪念馆、首里城的开放时间与休馆日</li>
       <li>美ら海水族馆闭馆时间（随季节变）</li>
@@ -659,6 +918,12 @@
       <li>むんぶリゾート：渡轮よなくに 现行班期（石垣发周一・周四 / 与那国发周二・周五）</li>
       <li>Real Sound 2026-03 报道：《Dr.コトー诊疗所》外景地现状与内部陈设</li>
       <li>与那国町观光协会《Dr.コトー》取景地清单（10 处）</li>
+      <li>安栄観光、八重山観光フェリー：七条航路的运赁、所要与班次（2026 年 8 月时点）</li>
+      <li>浦内川観光：游船运赁与所要；沖縄ラボ、八重山たび：游船 4 人成行、接送巴士 13:30 一班、步道单程约 30 分</li>
+      <li>いりおもて観光：西表岛巴士与子午线接触馆的位置说明</li>
+      <li>おきなわ物語：唐人墓、石垣市立八重山博物馆的地址、时间与票价</li>
+      <li>石垣岛きたうち牧场官方站：两家直营店的地址、电话、营业时间与肥育月龄</li>
+      <li>炭火焼肉 やまもと：仅电话预约、两月前开放、周三休（据 Tabelog 与订位日历整理）</li>
       <li>坐标：OpenStreetMap / Nominatim；底图 &copy; OpenStreetMap contributors（ODbL）</li>
       <li>地图库 Leaflet 1.9.4（BSD-2）</li>
     </ul>
@@ -669,7 +934,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <span>旅行计划 20 · 琉球群岛和屋久岛</span>
-    <span>v0.4 · 前两段</span>
+    <span>v0.5 · 前三段</span>
     <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
     <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
   </div>

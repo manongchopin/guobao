@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "琉球屋久岛补上石垣跳岛段",
+    note: "v0.5 · 七条航线 · 西表浦内川 · 子午线纪念碑 · 石垣牛",
+    href: "ryukyu-yakushima.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "琉球屋久岛补上与那国岛骑行段",
     note: "v0.4 · 环岛 27.5 km · 三家租车 · Dr.コトー 取景地 · 去石垣机船对比",
     href: "ryukyu-yakushima.html"
