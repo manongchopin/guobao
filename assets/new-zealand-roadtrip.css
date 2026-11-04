@@ -1,3 +1,5 @@
+/* ---- 计划 21 · 新西兰自驾 ---- */
+
 .nz-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 20px; }
 .nz-stats div { padding: 12px 14px; border-right: 1px solid var(--line); }
 .nz-stats div:last-child { border-right: 0; }
@@ -10,23 +12,84 @@
 .nz-head h2 { margin: 0; }
 .nz-head > p { max-width: 330px; margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); text-align: right; }
 .nz-kicker { margin: 0 0 4px; font-family: var(--sans); font-size: 9px; letter-spacing: .14em; color: var(--red); }
-.nz-band { display: grid; grid-template-columns: 44px 1fr 110px 28px; gap: 12px; align-items: center; border-top: 1px solid var(--ink); padding: 15px 0; color: var(--ink); text-decoration: none; }
-.nz-band:hover { background: var(--paper-2); }
-.nz-no { font-family: var(--mono); font-size: 9px; color: var(--red); }
-.nz-title { display: block; margin: 3px 0; font-family: var(--serif); font-size: 27px; }
-.nz-desc { display: block; font-size: 10px; line-height: 1.6; color: var(--ink-3); }
-.nz-side { font-size: 9px; line-height: 1.6; color: var(--ink-3); text-align: right; }
-.nz-arrow { font-size: 18px; color: var(--red); text-align: right; }
 .nz-note { margin: 0; font-size: 11px; line-height: 1.75; color: var(--ink-3); }
-.nz-questions { margin: 0; padding-left: 20px; }
-.nz-questions li { margin: 0 0 6px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+
+/* ---- 顶部三处待定 ---- */
+.nz-flags { border-top: 1px solid var(--line); }
+.nz-flag { display: grid; grid-template-columns: 30px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line-soft); }
+.nz-flag-no { font-family: var(--mono); font-size: 9px; color: var(--red); padding-top: 3px; }
+.nz-flag b { display: block; font-size: 12.5px; color: var(--ink); font-weight: 400; margin-bottom: 4px; }
+.nz-flag p { margin: 0; font-size: 11px; line-height: 1.8; color: var(--ink-3); }
+
+/* ---- 总览表 ---- */
+.nz-table-wrap { overflow-x: auto; margin: 0 0 14px; }
+.nz-table { width: 100%; border-collapse: collapse; font-size: 11.5px; line-height: 1.65; min-width: 620px; }
+.nz-table th { text-align: left; font-weight: 400; color: var(--ink-3); border-bottom: 1px solid var(--ink); padding: 7px 8px; white-space: nowrap; }
+.nz-table td { border-bottom: 1px solid var(--line-soft); padding: 8px; vertical-align: top; }
+.nz-table td.d { font-family: var(--mono); color: var(--red); white-space: nowrap; width: 40px; }
+.nz-table tr.mv td { background: var(--paper-2); font-size: 10px; letter-spacing: .08em; color: var(--ink-3); padding: 6px 8px; }
+.nz-table td:nth-child(3) { color: var(--ink-2); white-space: nowrap; }
+.nz-table td:last-child { color: var(--ink-3); }
+
+/* ---- 每日 ---- */
+.nz-day { margin: 24px 0 0; border-top: 1px solid var(--ink); padding-top: 12px; }
+.nz-day-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.nz-day-no { font-family: var(--mono); font-size: 10px; color: var(--red); letter-spacing: .1em; }
+.nz-day-title { font-family: var(--serif); font-size: 21px; line-height: 1.3; margin: 0; font-weight: 400; }
+.nz-day-km { font-family: var(--mono); font-size: 9.5px; color: var(--ink-3); border: 1px solid var(--line); padding: 1px 6px; }
+.nz-day-stay { margin-left: auto; font-size: 10px; color: var(--ink-3); }
+.nz-day-sum { margin: 6px 0 12px; font-size: 11.5px; line-height: 1.85; color: var(--ink-2); }
+.nz-stops { margin: 0; padding: 0; list-style: none; }
+.nz-stops li { display: grid; grid-template-columns: 54px 1fr; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line-soft); }
+.nz-stops li:first-child { border-top: 1px solid var(--line-soft); }
+.nz-when { font-family: var(--mono); font-size: 9px; color: var(--red); padding-top: 2px; }
+.nz-what strong { display: block; font-size: 12px; color: var(--ink); font-weight: 400; }
+.nz-what > span { display: block; margin-top: 2px; font-size: 10.5px; line-height: 1.7; color: var(--ink-3); }
+.nz-tag { display: inline-block; border: 1px solid var(--line); padding: 0 5px; font-size: 8.5px; line-height: 1.7; color: var(--ink-3); white-space: nowrap; vertical-align: 1px; }
+.nz-tag.book { border-color: var(--red); color: var(--red); }
+.nz-tag.warn { border-color: var(--red); color: var(--red); border-style: double; }
+.nz-tag.pend { border-style: dashed; }
+.nz-what .nz-tag { display: inline-block; margin-right: 5px; }
+.nz-what > span > .nz-tag { display: inline; margin-left: 4px; vertical-align: 0; }
+
+/* ---- 双栏 ---- */
+.nz-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.nz-card { border-top: 1px solid var(--ink); padding-top: 10px; }
+.nz-card > p.nz-kicker { margin-bottom: 6px; }
+
+/* ---- 清单 ---- */
+.nz-check { margin: 0 0 14px; padding: 0; list-style: none; }
+.nz-check li { position: relative; border-bottom: 1px solid var(--line-soft); padding: 7px 0 7px 42px; font-size: 11px; line-height: 1.75; color: var(--ink-2); }
+.nz-check li::before { content: "待核"; position: absolute; left: 0; top: 8px; width: 36px; font-family: var(--sans); font-size: 9px; color: var(--ink-3); }
+.nz-check b { color: var(--ink); font-weight: 400; }
+.nz-check-lock li::before { content: "已核"; color: var(--red); }
+.nz-check-open li::before { content: "待核"; color: var(--ink-3); }
+.nz-check-adj li::before { content: "待定"; color: var(--ink-3); }
+
+/* ---- 警告 ---- */
+.nz-warn { border: 1px solid var(--red); padding: 11px 14px; margin: 14px 0 0; font-size: 11px; line-height: 1.85; color: var(--ink-2); }
+.nz-warn b { color: var(--red); font-weight: 400; }
+
+/* ---- 工具表 ---- */
+.nz-tools td:first-child { white-space: nowrap; color: var(--ink-3); }
+.nz-tools td:nth-child(2) { color: var(--ink); white-space: nowrap; }
+
+/* ---- 来源 ---- */
+.nz-src { margin: 0 0 12px; padding-left: 18px; }
+.nz-src li { margin-bottom: 6px; font-size: 10px; line-height: 1.75; color: var(--ink-3); }
+.nz-src a { color: var(--red); text-decoration: none; border-bottom: 1px solid var(--line); }
+.nz-src a:hover { border-bottom-color: var(--red); }
+
 @media (max-width: 760px) {
   .nz-stats { grid-template-columns: 1fr 1fr; }
   .nz-stats div:nth-child(2) { border-right: 0; }
   .nz-stats div:nth-child(1), .nz-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
   .nz-head { align-items: flex-start; flex-direction: column; gap: 5px; }
   .nz-head > p { text-align: left; }
-  .nz-band { grid-template-columns: 30px 1fr 24px; }
-  .nz-side { display: none; }
-  .nz-title { font-size: 22px; }
+  .nz-day-head { gap: 8px; }
+  .nz-day-title { font-size: 19px; }
+  .nz-day-stay { margin-left: 0; width: 100%; }
+  .nz-stops li { grid-template-columns: 46px 1fr; }
+  .nz-cols { grid-template-columns: 1fr; gap: 18px; }
+  .nz-flag { grid-template-columns: 24px 1fr; gap: 9px; }
 }
