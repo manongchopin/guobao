@@ -81,8 +81,30 @@
     return '<span class="sr-name-plain">' + inner + "</span>";
   }
 
+  // 「较上次更新」的变动标记
+  function chgRank(row) {
+    var c = row.chg || {};
+    if (c.rank) {
+      var up = c.rank > 0;
+      return '<span class="sr-chg ' + (up ? "up" : "down") + '">' +
+        (up ? "▲" : "▼") + Math.abs(c.rank) + "</span>";
+    }
+    if (row.isNew) return '<span class="sr-chg new">新</span>';
+    return "";
+  }
+
+  function chgValue(row) {
+    var c = row.chg || {};
+    if (c.points == null) return "";
+    var up = c.points > 0;
+    return '<span class="sr-chg ' + (up ? "up" : "down") + '">' +
+      (up ? "+" : "−") + Math.abs(c.points).toLocaleString("en-US") + "</span>";
+  }
+
   function sectionBlock(s) {
     var cols = s.columns || [];
+    // 这张表里只要有一行带变动，就在积分列给所有行留出占位，避免行高参差
+    var hasChg = s.rows.some(function (r) { return r.chg || r.isNew; });
 
     var head = cols.map(function (col) {
       return '<th class="sr-' + esc(col.c || "player") + '">' + esc(col.label) + "</th>";
@@ -94,7 +116,12 @@
           return '<td class="sr-player">' + nameCell(row) + "</td>";
         }
         var v = row[col.k] == null ? "" : row[col.k];
-        return '<td class="sr-' + esc(col.c || "player") + '">' + esc(v) + "</td>";
+        var inner = esc(v);
+        if (col.k === "rank") inner += chgRank(row);
+        else if (col.k === "points") {
+          inner += chgValue(row) || (hasChg ? '<span class="sr-chg">&nbsp;</span>' : "");
+        }
+        return '<td class="sr-' + esc(col.c || "player") + '">' + inner + "</td>";
       }).join("");
 
       var out = "<tr>" + cells + "</tr>";

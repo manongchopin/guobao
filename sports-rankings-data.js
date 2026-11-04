@@ -19,7 +19,7 @@
 
    fetchedAt 是本地抓取时间；榜单"截至"时点写在各自 section.note 里。 */
 window.SPORTS_RANKINGS = {
-  "fetchedAt": "2026-11-03T11:48:25.247Z",
+  "fetchedAt": "2026-11-04T10:05:10.467Z",
   "panels": {
     "snooker": {
       "id": "snooker",
@@ -243,7 +243,7 @@ window.SPORTS_RANKINGS = {
               "rank": 8,
               "name": "丁俊晖",
               "en": "Ding Junhui",
-              "total": "736"
+              "total": "737"
             },
             {
               "rank": 9,
@@ -279,7 +279,7 @@ window.SPORTS_RANKINGS = {
               "rank": 14,
               "name": "斯蒂芬·马奎尔",
               "en": "Stephen Maguire",
-              "total": "549"
+              "total": "551"
             },
             {
               "rank": 15,

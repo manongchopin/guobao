@@ -82,6 +82,17 @@
 .sr-span { width: 108px; color: var(--ink-3); font-size: 11px; font-variant-numeric: tabular-nums; }
 .sr-points { width: 84px; text-align: right; font-variant-numeric: tabular-nums; color: var(--ink); font-size: 13px; }
 .sr-table thead .sr-points { text-align: right; }
+/* 「较上次更新」变动 */
+.sr-chg {
+  font-size: 9px; letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.sr-chg.up { color: var(--green); }
+.sr-chg.down { color: var(--red); }
+.sr-chg.new { color: var(--ink-3); }
+.sr-rank .sr-chg { margin-left: 6px; font-size: 8.5px; }
+.sr-points .sr-chg { display: block; font-size: 9.5px; margin-top: 1px; }
+
 .sr-section.is-wide .sr-country { width: 130px; }
 .sr-section.is-wide .sr-span { width: 130px; }
 

@@ -541,6 +541,45 @@ for (const f of failed) {
   if (old) fresh[f.panel].push({ ...old, stale: true });
 }
 
+/* 计算「较上次更新」的变动。
+   只算真正更新成功的表；stale 的表数据是旧的，算出来会是 0，会误导。
+   比较对象是上一次成功写盘的数据（也就是页面上去掉本次更新后你看到的那份）。 */
+function numOf(v) {
+  return Number(String(v == null ? "" : v).replace(/[^\d.-]/g, "")) || 0;
+}
+function keyOf(r) {
+  return r.en || r.name;
+}
+
+const prevByKey = new Map();
+for (const panel of ["snooker", "tennis"]) {
+  for (const s of prevData.panels?.[panel]?.sections || []) prevByKey.set(s.key, s);
+}
+
+let deltaCount = 0;
+for (const sec of [...fresh.snooker, ...fresh.tennis]) {
+  if (sec.stale) continue;
+  const prev = prevByKey.get(sec.key);
+  if (!prev || !prev.rows) continue;          // 第一次跑，没有基线
+  const old = new Map(prev.rows.map((r) => [keyOf(r), r]));
+  const hasPoints = (sec.columns || []).some((c) => c.k === "points");
+
+  for (const row of sec.rows) {
+    const p = old.get(keyOf(row));
+    if (!p) { row.isNew = true; continue; }   // 新进榜，没有可比的上期
+    const chg = {};
+    // 名次：正数代表排名上升（名次数字变小）
+    const dr = Number(p.rank) - Number(row.rank);
+    if (Number.isFinite(dr) && dr !== 0) chg.rank = dr;
+    // 积分 / 奖金：只有 k === "points" 的列才算；累计杆数、冠军数这类不算
+    if (hasPoints) {
+      const dp = numOf(row.points) - numOf(p.points);
+      if (Number.isFinite(dp) && dp !== 0) chg.points = dp;
+    }
+    if (Object.keys(chg).length) { row.chg = chg; deltaCount++; }
+  }
+}
+
 const order = SPEC.map(([p, k]) => `${p}:${k}`);
 for (const panel of ["snooker", "tennis"]) {
   fresh[panel].sort((a, b) => order.indexOf(`${panel}:${a.key}`) - order.indexOf(`${panel}:${b.key}`));
@@ -567,6 +606,8 @@ if (failed.length) {
 
 const ok = SPEC.length - failed.length;
 console.log(`\n完成：${ok}/${SPEC.length} 张表更新成功。`);
+if (deltaCount) console.log(`其中 ${deltaCount} 行有名次或积分/奖金变动。`);
+else console.log("本次没有检测到变动（或这是第一次抓取，尚无基线）。");
 if (ok === 0) {
   console.error("全部失败，退出码 1");
   process.exit(1);
