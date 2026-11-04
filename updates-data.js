@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "大溪地升到五段骨架",
+    note: "v0.2 · 本岛/Raiatea/Bora Bora/Hiva Oa/黑珍珠",
+    href: "tahiti.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "旅行计划新增大溪地占位",
     note: "v0.1 · 岛屿/天数/预算待定",
     href: "tahiti.html"

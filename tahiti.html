@@ -3,40 +3,116 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大溪地 · 旅行计划 17</title>
-<meta name="description" content="大溪地旅行计划占位页，等待后续设计。">
+<title>大溪地 · 五段行程：本岛、Raiatea、Bora Bora、Hiva Oa、黑珍珠</title>
+<meta name="description" content="大溪地五段行程骨架：Tahiti 本岛自驾环岛与华人史迹、Raiatea 的 Taputapuātea 世界遗产、Bora Bora 五天、Hiva Oa 的马克萨斯世界遗产与高更墓、回帕皮提买黑珍珠。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/tahiti.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
 
 <header class="hero">
   <a class="back" href="plans.html">← 旅行计划</a>
-  <p class="kicker">PLAN 17 · TAHITI · v0.1</p>
+  <p class="kicker">PLAN 17 · TAHITI · v0.2</p>
   <h1>大溪地</h1>
   <p class="lede">
-    先把位置留出来。<br>
-    <span>路线、岛屿、季节和预算都还没定。</span>
+    五段：本岛自驾、Raiatea 的世界遗产、Bora Bora 五天、Hiva Oa 的高更墓，最后回帕皮提买黑珍珠。<br>
+    <span>顺序与岛屿组合已定；航班、房价、每天落点还没落实，标「待核」的地方我没编。</span>
   </p>
   <div class="seal" aria-hidden="true">溪</div>
 </header>
 
-<main class="wh-detail">
-  <section class="wh-section">
-    <p class="wh-note"><b>占位页：</b>这里目前没有路线、地图、住宿或预算。等新会话里确认大溪地的岛屿组合、天数、季节和预算后，再开始设计。</p>
+<main class="wh-detail" id="tahiti">
+
+  <section class="wh-section" id="overview">
+    <div class="th-stats" id="th-stats"></div>
+    <p class="th-callout" id="th-callout"><b>这是 v0.2：</b>段落顺序、岛屿组合、住宿选择和两处世界遗产已经定下来，但每天几点去哪、航班号、房价、租车行都还没落实。标「待核」的地方我没有编，等下一版逐条查。</p>
+    <p class="th-intro" id="th-intro"></p>
   </section>
+
+  <section class="wh-section" id="map">
+    <div class="th-head">
+      <div><p class="th-kicker">THE FIVE LEGS · MAP</p><h2>五段总览</h2></div>
+      <p>虚线是国内航班，不是公路。<br>Tahiti 与 Raiatea 岛内自驾，图上是点不是线。</p>
+    </div>
+    <div class="th-maps">
+      <div class="th-map-wrap">
+        <p class="th-map-cap">社会群岛 · TAHITI / RAIATEA / BORA BORA</p>
+        <div id="th-map-society" class="th-map" aria-label="社会群岛段地图：本岛、Raiatea、Bora Bora"></div>
+      </div>
+      <div class="th-map-wrap">
+        <p class="th-map-cap">马克萨斯 · HIVA OA</p>
+        <div id="th-map-marquesas" class="th-map" aria-label="马克萨斯段地图：Hiva Oa"></div>
+      </div>
+    </div>
+    <div class="th-legend th-legend--bar">
+      <span><i class="th-dot th-dot--hub"></i>国际机场</span>
+      <span><i class="th-dot th-dot--town"></i>镇</span>
+      <span><i class="th-dot th-dot--wh"></i>世界遗产</span>
+      <span><i class="th-dot th-dot--sport"></i>奥运赛场</span>
+      <span><i class="th-line"></i>航班连接（示意）</span>
+    </div>
+    <div class="th-legstrip" id="th-legstrip"></div>
+    <p class="th-map-note">底图 © OpenStreetMap contributors（ODbL）。航线是示意，不是实际航路；机场坐标取近似值。两张图比例不同，不能对比面积。</p>
+  </section>
+
+  <section class="wh-section" id="legs">
+    <div class="th-head">
+      <div><p class="th-kicker">FIVE LEGS · IN ORDER</p><h2>逐段：为什么去、怎么到、住哪</h2></div>
+      <p>每段先写交通，再写点位。<br>顺序不能换：Raiatea 和 Bora Bora 都在社会群岛，Hiva Oa 要回帕皮提转机。</p>
+    </div>
+    <div id="th-legs"></div>
+  </section>
+
+  <section class="wh-section" id="unesco">
+    <div class="th-head">
+      <div><p class="th-kicker">TWO WORLD HERITAGE SITES</p><h2>两处世界遗产</h2></div>
+      <p>Raiatea 的文化遗产，马克萨斯的混合遗产。<br>编号、标准、面积都按 UNESCO 档案写。</p>
+    </div>
+    <div class="th-wh-grid" id="th-wh"></div>
+  </section>
+
+  <section class="wh-section" id="days">
+    <div class="th-head">
+      <div><p class="th-kicker">DAY BY DAY · DRAFT</p><h2>Bora Bora 五天 / Hiva Oa 三天</h2></div>
+      <p>草案，不是定稿。<br>两家酒店 2+3 还是 3+2，等你定。</p>
+    </div>
+    <div class="th-days" id="th-days"></div>
+  </section>
+
+  <section class="wh-section" id="pearl">
+    <div class="th-head">
+      <div><p class="th-kicker">BLACK PEARLS · LAST LEG</p><h2>最后一段：在帕皮提买黑珍珠</h2></div>
+      <p>不写价格区间。<br>写怎么不被坑。</p>
+    </div>
+    <div class="th-pearl" id="th-pearl"></div>
+  </section>
+
+  <section class="wh-section" id="todo">
+    <div class="th-head">
+      <div><p class="th-kicker">TO CONFIRM · SOURCES</p><h2>待核与来源</h2></div>
+      <p>这八条落实之前，不升 1.0。</p>
+    </div>
+    <ul class="th-todo" id="th-todo"></ul>
+    <ul class="th-sources" id="th-sources"></ul>
+  </section>
+
 </main>
 
 <footer class="footer">
   <div class="footer-inner">
     <span>旅行计划 17 · 大溪地</span>
-    <span>v0.1 · 占位</span>
+    <span>v0.2 五段骨架</span>
     <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
     <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="tahiti-data.js"></script>
+<script src="assets/tahiti.js"></script>
 <script src="plan-versions-data.js"></script>
 <script src="assets/plan-version.js"></script>
 </body>

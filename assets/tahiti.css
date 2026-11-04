@@ -1,0 +1,318 @@
+/* 大溪地 · v0.2
+   只做这一页的排版，不改 style.css 的全局变量与通用类。 */
+
+/* ---------- 概览 ---------- */
+
+.th-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  margin: 4px 0 20px;
+}
+.th-stats div { padding: 12px 14px; border-right: 1px solid var(--line); }
+.th-stats div:last-child { border-right: 0; }
+.th-stats b { display: block; font-family: var(--serif); font-size: 26px; line-height: 1.1; }
+.th-stats span { display: block; margin-top: 3px; font-size: 10px; line-height: 1.5; color: var(--ink-3); }
+
+#tahiti .th-callout {
+  border-left: 2px solid var(--red);
+  background: var(--paper-2);
+  padding: 11px 14px;
+  margin: 0 0 12px;
+  font-size: 12.5px;
+  line-height: 1.85;
+  color: var(--ink-2);
+}
+.th-callout b { color: var(--ink); }
+
+#tahiti .th-intro { margin: 0; font-size: 12px; line-height: 1.9; color: var(--ink-2); }
+
+/* ---------- 通用小标题 ---------- */
+
+.th-kicker {
+  margin: 0 0 4px;
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: .14em;
+  color: var(--red);
+}
+
+.th-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--ink);
+  padding-top: 14px;
+  margin-bottom: 12px;
+}
+.th-head h2 { margin: 0; padding-bottom: 0; border-bottom: 0; }
+.th-head > p {
+  max-width: 340px;
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.7;
+  color: var(--ink-3);
+  text-align: right;
+}
+
+/* ---------- 总图 ---------- */
+
+.th-maps { display: grid; grid-template-columns: 1.3fr 1fr; gap: 10px; }
+.th-map-wrap { position: relative; border: 1px solid var(--line); background: #e6eee9; }
+.th-map-cap {
+  margin: 0;
+  padding: 6px 9px;
+  font-family: var(--sans);
+  font-size: 8px;
+  letter-spacing: .1em;
+  color: var(--ink-3);
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--line);
+}
+.th-map { width: 100%; height: 380px; }
+
+.th-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: 8px;
+  color: var(--ink-3);
+}
+.th-legend--bar {
+  margin-top: 8px;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+}
+.th-legend span { display: inline-flex; align-items: center; gap: 4px; }
+.th-dot { width: 9px; height: 9px; display: inline-block; border-radius: 50%; }
+.th-dot--wh { background: var(--red); }
+.th-dot--town { background: var(--green); }
+.th-dot--hub { background: var(--ink); }
+.th-dot--sport { background: var(--amber); }
+.th-line { width: 18px; height: 0; border-top: 2px dashed #8a6338; display: inline-block; }
+
+#tahiti .th-map-note { margin: 6px 0 0; font-size: 9px; line-height: 1.6; color: var(--ink-3); }
+
+.th-legstrip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+  margin: 9px 0 0;
+  padding: 9px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 9px;
+  line-height: 1.6;
+  color: var(--ink-3);
+}
+.th-legstrip b { font-weight: 400; color: var(--ink-2); }
+.th-legstrip i { font-style: normal; color: var(--red); }
+
+/* ---------- 五段 ---------- */
+
+.th-leg {
+  border-top: 1px solid var(--ink);
+  padding-top: 12px;
+  margin-top: 26px;
+}
+.th-leg:first-child { margin-top: 0; }
+
+.th-leg-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.th-leg-no {
+  font-family: var(--serif);
+  font-size: 12px;
+  color: var(--red);
+  border: 1px solid var(--line);
+  padding: 1px 5px;
+}
+.th-leg-head h3 { margin: 0; font-family: var(--serif); font-size: 24px; line-height: 1.2; }
+.th-leg-head h3 em { font-style: normal; font-size: 13px; color: var(--ink-3); margin-left: 6px; }
+.th-leg-days { margin-left: auto; font-size: 10px; color: var(--red); }
+
+.th-leg-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 10px 0 12px;
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+.th-leg-meta div { padding: 7px 12px 7px 0; border-right: 1px solid var(--line-soft); }
+.th-leg-meta div:last-child { border-right: 0; }
+.th-leg-meta span { display: block; font-size: 8px; letter-spacing: .08em; color: var(--ink-3); }
+.th-leg-meta p { margin: 2px 0 0; font-size: 10px; line-height: 1.7; color: var(--ink-2); }
+
+.th-points { border-top: 1px solid var(--line-soft); }
+.th-point {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.th-point-t {
+  font-size: 8px;
+  line-height: 1.9;
+  color: var(--red);
+  letter-spacing: .05em;
+}
+#tahiti .th-point p { margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
+.th-point b { display: block; font-family: var(--serif); font-size: 13.5px; font-weight: 600; line-height: 1.5; color: var(--ink); }
+
+/* ---------- 世界遗产 ---------- */
+
+.th-wh-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
+
+.th-wh-card { border: 1px solid var(--line); background: var(--paper-2); padding: 14px 16px; }
+.th-wh-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 8px;
+  letter-spacing: .06em;
+  color: var(--ink-3);
+}
+.th-wh-top b { font-weight: 400; color: var(--red); }
+.th-wh-card h3 { margin: 4px 0 1px; font-family: var(--serif); font-size: 19px; line-height: 1.35; }
+.th-wh-card .where { margin: 0 0 7px; font-size: 9px; color: var(--red); }
+.th-wh-card .lede { margin: 0 0 8px; font-size: 11px; line-height: 1.85; color: var(--ink-2); }
+.th-wh-card ul { margin: 0 0 8px; padding-left: 16px; }
+.th-wh-card li { margin: 0 0 4px; font-size: 10px; line-height: 1.75; color: var(--ink-2); }
+
+.th-wh-comp { margin: 0 0 8px; border-top: 1px solid var(--line); }
+.th-comp-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 2.5px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 9px;
+  color: var(--ink-3);
+}
+.th-comp-row b { font-weight: 400; font-variant-numeric: tabular-nums; }
+.th-comp-head { border-bottom: 1px solid var(--line); color: var(--ink-3); font-size: 8px; letter-spacing: .06em; }
+.th-comp-row.is-here { color: var(--ink); background: rgba(168, 64, 47, .05); }
+.th-comp-row.is-here span { color: var(--red); }
+.th-wh-facts {
+  margin: 0 0 8px;
+  border-top: 1px solid var(--line-soft);
+}
+.th-wh-facts div {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 3px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 9px;
+  color: var(--ink-2);
+}
+.th-wh-facts span { color: var(--ink-3); }
+#tahiti .th-wh-todo {
+  margin: 0;
+  padding-top: 7px;
+  border-top: 1px dashed var(--line);
+  font-size: 8.5px;
+  line-height: 1.7;
+  color: var(--ink-3);
+}
+
+/* ---------- 日程 ---------- */
+
+.th-days { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.th-day-block { border-top: 1px solid var(--ink); padding-top: 10px; }
+.th-day-block h3 { margin: 0 0 3px; font-family: var(--serif); font-size: 18px; }
+#tahiti .th-day-block > p { margin: 0 0 8px; font-size: 9.5px; line-height: 1.75; color: var(--ink-3); }
+
+.th-day-row {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.th-day-row .d { font-family: var(--serif); font-size: 11px; color: var(--red); }
+.th-day-row b { display: block; font-size: 11px; font-weight: 600; color: var(--ink); line-height: 1.5; }
+.th-day-row p { margin: 1px 0 0; font-size: 9.5px; line-height: 1.7; color: var(--ink-3); }
+.th-day-row .tag {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 0 4px;
+  border: 1px solid var(--line);
+  font-size: 7.5px;
+  color: var(--ink-3);
+  vertical-align: 1px;
+}
+
+/* ---------- 黑珍珠 ---------- */
+
+.th-pearl { border-top: 1px solid var(--ink); padding-top: 12px; }
+#tahiti .th-pearl > p { max-width: 62em; margin: 0 0 10px; font-size: 11.5px; line-height: 1.9; color: var(--ink-2); }
+.th-pearl-row {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 12px;
+  padding: 7px 0;
+  border-top: 1px solid var(--line-soft);
+}
+.th-pearl-row b { font-size: 10px; font-weight: 600; color: var(--red); line-height: 1.8; }
+.th-pearl-row p { margin: 0; font-size: 10px; line-height: 1.8; color: var(--ink-2); }
+
+/* ---------- 待核与来源 ---------- */
+
+.th-todo { margin: 0 0 18px; padding-left: 18px; }
+.th-todo li { margin: 0 0 5px; font-size: 11px; line-height: 1.75; color: var(--ink-2); }
+
+.th-sources { margin: 0; padding-left: 18px; }
+.th-sources li { margin: 0 0 5px; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
+.th-sources a { color: var(--red); border-bottom: 1px solid var(--line); }
+
+/* ---------- 地图标记 ---------- */
+
+.th-pin-wrap { background: transparent; border: 0; }
+.th-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  background: var(--pin, #a8402f);
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .35);
+}
+.leaflet-popup-content { font: 11px/1.65 var(--sans); }
+.leaflet-popup-content b { font-family: var(--serif); font-size: 14px; }
+.th-pop-meta { color: #6b6258; font-size: 9px; margin: 2px 0 4px; }
+
+/* ---------- 响应式 ---------- */
+
+@media (max-width: 900px) {
+  .th-maps { grid-template-columns: 1fr; }
+  .th-wh-grid, .th-days { grid-template-columns: 1fr; }
+  .th-leg-meta { grid-template-columns: 1fr; }
+  .th-leg-meta div { border-right: 0; border-bottom: 1px solid var(--line-soft); padding: 6px 0; }
+  .th-leg-meta div:last-child { border-bottom: 0; }
+}
+
+@media (max-width: 760px) {
+  .th-stats { grid-template-columns: 1fr 1fr; }
+  .th-stats div:nth-child(2) { border-right: 0; }
+  .th-stats div:nth-child(1), .th-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .th-map { height: 300px; }
+  .th-head { display: block; }
+  .th-head > p { max-width: none; text-align: left; margin-top: 6px; }
+  .th-leg-head h3 { font-size: 20px; }
+  .th-leg-days { margin-left: 0; width: 100%; }
+  .th-pearl-row { grid-template-columns: 1fr; gap: 2px; }
+  .th-point { grid-template-columns: 1fr; gap: 2px; }
+  .th-point-t { line-height: 1.4; }
+}

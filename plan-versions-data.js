@@ -292,11 +292,16 @@ window.PLAN_VERSIONS = {
     },
     "tahiti": {
       "title": "大溪地",
-      "version": "0.1",
-      "status": "占位",
+      "version": "0.2",
+      "status": "五段骨架",
       "date": "2026-11-04",
-      "note": "只有占位页；岛屿、天数、季节、预算待定",
+      "note": "五段顺序与岛屿组合确定；两处世界遗产写实；Bora Bora 五天与 Hiva Oa 三天草案；8 条待核",
       "history": [
+        {
+          "v": "0.2",
+          "date": "2026-11-04",
+          "note": "五段骨架：Tahiti 本岛（自驾/博物馆/华人史迹/Teahupo'o）、Raiatea（Taputapuātea 1529）、Bora Bora 五天、Hiva Oa（Te Henua Enata 1707 + 高更/Brel 墓）、回帕皮提买黑珍珠；总图与逐段点位；列 8 条待核"
+        },
         {
           "v": "0.1",
           "date": "2026-11-04",
