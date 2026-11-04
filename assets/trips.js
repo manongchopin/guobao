@@ -17,7 +17,13 @@
     "南京南": [118.7970, 31.9680],
     "合肥南": [117.2980, 31.7960],
     "武汉": [114.4210, 30.6090],
-    "杭州东": [120.2140, 30.2900]
+    "杭州东": [120.2140, 30.2900],
+    "台北": [121.5170, 25.0478],
+    "板桥": [121.4590, 25.0140],
+    "桃园": [121.2140, 25.0130],
+    "新竹": [121.0400, 24.8080],
+    "苗栗": [120.8250, 24.6050],
+    "台中": [120.6150, 24.1125]
   };
 
   var worldChart = null, regionChart = null;
@@ -236,27 +242,34 @@
     };
   }
 
+  function railFit(lines) {
+    var lngs = [], lats = [];
+    lines.forEach(function (l) {
+      l.coords.forEach(function (c) { lngs.push(c[0]); lats.push(c[1]); });
+    });
+    var minLng = Math.min.apply(null, lngs), maxLng = Math.max.apply(null, lngs);
+    var minLat = Math.min.apply(null, lats), maxLat = Math.max.apply(null, lats);
+    var span = Math.max(maxLng - minLng, maxLat - minLat);
+    var zoom = span > 30 ? 2.2 : span > 18 ? 2.8 : span > 12 ? 3.6 : span > 8 ? 4.6 : span > 5 ? 5.8 : span > 3 ? 7 : 8.5;
+    return { zoom: zoom, center: [(minLng + maxLng) / 2, (minLat + maxLat) / 2] };
+  }
+
   function regionOption() {
     var lines = [
       { coords: [RAIL["上海虹桥"], RAIL["南京南"], RAIL["合肥南"], RAIL["武汉"]], value: "沪—宁—合—汉 铁路" },
-      { coords: [RAIL["上海虹桥"], RAIL["杭州东"]], value: "沪—杭 铁路" }
+      { coords: [RAIL["上海虹桥"], RAIL["杭州东"]], value: "沪—杭 铁路" },
+      { coords: [RAIL["台北"], RAIL["板桥"], RAIL["桃园"], RAIL["新竹"], RAIL["苗栗"], RAIL["台中"]], value: "台北—台中 高铁" }
     ];
-    var POS = { "上海虹桥": "right", "南京南": "top", "合肥南": "left", "武汉": "left", "杭州东": "top" };
-    var stations = ["上海虹桥", "南京南", "合肥南", "武汉", "杭州东"].map(function (n) {
+    var POS = { "上海虹桥": "right", "南京南": "top", "合肥南": "left", "武汉": "left", "杭州东": "top",
+                "台北": "right", "台中": "bottom" };
+    var stations = ["上海虹桥", "南京南", "合肥南", "武汉", "杭州东", "台北", "台中"].map(function (n) {
       return {
         name: n, value: RAIL[n],
         label: { show: true, position: POS[n] || "right", distance: 5, color: "#8a938c", fontSize: 9,
                  formatter: function (p) { return p.name; } }
       };
     });
-    var hikeDots = hikes.map(function (h) {
-      var p = (h.path || [])[0] || [0, 0];
-      return {
-        name: h.name, value: [p[1], p[0]],
-        label: { show: true, position: "right", distance: 6, color: "#4a6b52",
-                 fontSize: 9, formatter: function () { return h.name; } }
-      };
-    });
+
 
     return {
       backgroundColor: "#f5f1e8",
@@ -271,7 +284,7 @@
         }
       },
       geo: {
-        map: "trips-china", roam: true, zoom: 7.2, center: [118.2, 31.0],
+        map: "trips-china", roam: true, zoom: railFit(lines).zoom, center: railFit(lines).center,
         itemStyle: { areaColor: "#efe8da", borderColor: "#d9cfbd", borderWidth: 0.5 },
         emphasis: { disabled: true }, select: { disabled: true },
         scaleLimit: { min: 1, max: 14 }
@@ -287,11 +300,7 @@
           lineStyle: { color: "#1d2622", width: 1.8, opacity: 0.8 },
           data: lines
         },
-        {
-          type: "scatter", coordinateSystem: "geo", symbolSize: 7,
-          itemStyle: { color: "#4a6b52" },
-          data: hikeDots
-        }
+
       ]
     };
   }

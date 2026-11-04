@@ -9,8 +9,8 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-03",
     type: "足迹",
-    title: "我的行程：20 飞 + 4 铁 + 3 徒步",
-    note: "上海滩20公里 · 虞山雄鹰线",
+    title: "我的行程：20 飞 + 6 铁 + 3 徒步",
+    note: "台湾高铁 · 铁路图自适应",
     href: "trips.html"
   },
   {

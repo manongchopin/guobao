@@ -33,7 +33,9 @@ window.TRIPS = {
     { month: "2026-10", train: "G456", from: "上海虹桥", to: "武汉", km: 661 },
     { month: "2026-10", train: "G1792", from: "武汉", to: "合肥南", km: 304 },
     { month: "2026-10", train: "G7388", from: "合肥南", to: "上海虹桥", km: 387 },
-    { month: "2026-10", train: "G201", from: "上海虹桥", to: "杭州东", km: 146 }
+    { month: "2026-10", train: "G201", from: "上海虹桥", to: "杭州东", km: 146 },
+    { month: "2026-11", train: "141", from: "台北", to: "台中", km: 138 },
+    { month: "2026-11", train: "136", from: "台中", to: "台北", km: 138 }
   ],
   "hikes": [
     {
