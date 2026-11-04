@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-04",
+    type: "计划",
+    title: "秒速五厘米补点位与交通细节",
+    note: "v0.4 · 9→12 点 · i-Shop / 通学路 / S 弯 / 船班",
+    href: "seichi-byousoku.html"
+  },
+  {
+    date: "2026-11-04",
     type: "页面",
     title: "发散的全世界：挪威三块石头",
     note: "布道石 / 奇迹石 / 恶魔之舌 · 距离、季节、交通与待核",
