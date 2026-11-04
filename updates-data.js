@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "琉球屋久岛补上与那国岛骑行段",
+    note: "v0.4 · 环岛 27.5 km · 三家租车 · Dr.コトー 取景地 · 去石垣机船对比",
+    href: "ryukyu-yakushima.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "琉球屋久岛标出三处世遗全部点位",
     note: "v0.3 · 972/1574/662 · 第一段 D1–D4 · 与那霸岳交通三方案",
     href: "ryukyu-yakushima.html"

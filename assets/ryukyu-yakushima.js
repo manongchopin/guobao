@@ -14,15 +14,17 @@
   D.wh.forEach(function (w) { whById[w.id] = w; });
 
   var MAP_CFG = {
-    "wh":      { fitPad: [30, 30], maxZoom: 9 },
-    "naha":    { fitPad: [35, 35], maxZoom: 15 },
-    "yanbaru": { fitPad: [35, 35], maxZoom: 12 }
+    "wh":       { fitPad: [30, 30], maxZoom: 9 },
+    "naha":     { fitPad: [35, 35], maxZoom: 15 },
+    "yanbaru":  { fitPad: [35, 35], maxZoom: 12 },
+    "yonaguni": { fitPad: [30, 30], maxZoom: 14 }
   };
 
   var ROUTE_STYLE = {
     walk: { color: "#a8402f", dashArray: "4 5", weight: 2.5 },
     rail: { color: "#4f5878", dashArray: "2 6", weight: 2.5 },
-    road: { color: "#8a6338", dashArray: "6 5", weight: 2.5 }
+    road: { color: "#8a6338", dashArray: "6 5", weight: 2.5 },
+    loop: { color: "#a8402f", dashArray: "9 6", weight: 3 }
   };
 
   function colorOf(p) {
@@ -119,7 +121,7 @@
     buildList(key, pts, map, markers);
   }
 
-  ["wh", "naha", "yanbaru"].forEach(initMap);
+  ["wh", "naha", "yanbaru", "yonaguni"].forEach(initMap);
 
   // 世界遗产清单
   var whHost = document.getElementById("ry-wh-list");
