@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "琉球屋久岛标出三处世遗全部点位",
+    note: "v0.3 · 972/1574/662 · 第一段 D1–D4 · 与那霸岳交通三方案",
+    href: "ryukyu-yakushima.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "琉球群岛和屋久岛定为一次走完",
     note: "v0.2 · 那霸进鹿儿岛出 · 17 天骨架 · 交通待核",
     href: "ryukyu-yakushima.html"

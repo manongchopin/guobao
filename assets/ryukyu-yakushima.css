@@ -40,6 +40,103 @@
 .ry-check-open li::before { content: "未定"; color: var(--ink-3); }
 .ry-check-adj li::before { content: "可选"; color: var(--ink-3); }
 
+/* ---- 世界遗产清单 ---- */
+.ry-wh-card { border-top: 1px solid var(--ink); padding: 12px 0 14px; }
+.ry-wh-head { display: grid; grid-template-columns: 54px 1fr auto; gap: 12px; align-items: baseline; }
+.ry-wh-no { font-family: var(--mono); font-size: 10px; color: var(--c); letter-spacing: .04em; }
+.ry-wh-name { display: block; font-family: var(--serif); font-size: 19px; line-height: 1.35; color: var(--ink); }
+.ry-wh-jp { display: block; margin-top: 2px; font-size: 9.5px; color: var(--ink-3); }
+.ry-wh-kind { font-size: 9.5px; color: var(--ink-3); white-space: nowrap; text-align: right; }
+.ry-wh-note { margin: 8px 0 10px; font-size: 11px; line-height: 1.8; color: var(--ink-2); }
+.ry-wh-comps { display: flex; flex-wrap: wrap; gap: 5px 6px; }
+.ry-comp { display: inline-flex; align-items: baseline; gap: 4px; border: 1px solid var(--line); padding: 2px 7px; font-size: 10px; color: var(--ink-2); background: var(--paper-2); }
+.ry-comp b { font-family: var(--mono); font-size: 8.5px; color: var(--c); }
+.ry-comp em { font-style: normal; font-size: 8.5px; color: var(--ink-3); }
+
+/* ---- 地图 ---- */
+.ry-map { height: 380px; border: 1px solid var(--line); background: var(--paper-2); }
+.ry-map-sm { height: 320px; }
+.ry-pin-wrap { background: none; border: 0; }
+.ry-pin {
+  display: flex; align-items: center; justify-content: center;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--pin); color: #fffdf7;
+  font-family: var(--sans); font-size: 9px; line-height: 1;
+  border: 1.5px solid #fffdf7; box-shadow: 0 0 0 1px rgba(29,38,34,.25);
+}
+.ry-pop { font-family: var(--sans); }
+.ry-pop b { font-family: var(--serif); font-size: 14px; }
+.ry-pop-meta { margin: 3px 0 1px; font-size: 9px; color: var(--ink-3); }
+.ry-pop-jp { margin-bottom: 5px; font-size: 9px; color: var(--ink-3); }
+.ry-pop p { margin: 0 0 5px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+.ry-pop-access { color: var(--ink-2); border-top: 1px solid var(--line-soft); padding-top: 5px; }
+.leaflet-popup-content { margin: 12px 14px; }
+
+.ry-map-legend { display: flex; flex-wrap: wrap; gap: 10px 16px; margin: 8px 0 0; font-size: 9.5px; color: var(--ink-3); }
+.ry-map-legend span { display: inline-flex; align-items: center; gap: 5px; }
+.ry-map-legend i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.ry-map-legend i.line { width: 16px; height: 0; border-radius: 0; border-top: 2px dashed var(--ink-3); }
+
+/* ---- 地图下方列表 ---- */
+.ry-map-list { margin-top: 10px; border-top: 1px solid var(--line); max-height: 260px; overflow-y: auto; }
+.ry-item { display: grid; grid-template-columns: 26px 1fr auto; gap: 8px; align-items: baseline; width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line-soft); padding: 6px 2px; cursor: pointer; font-family: var(--sans); }
+.ry-item:hover { background: var(--paper-2); }
+.ry-item-no { font-family: var(--mono); font-size: 9px; }
+.ry-item-name { display: block; font-size: 11.5px; color: var(--ink); }
+.ry-item-meta { display: block; font-size: 9px; color: var(--ink-3); margin-top: 1px; }
+.ry-item-day { font-family: var(--mono); font-size: 8.5px; color: var(--ink-3); white-space: nowrap; }
+
+/* ---- 日程 ---- */
+.ry-day { margin: 26px 0 0; border-top: 1px solid var(--ink); padding-top: 12px; }
+.ry-day-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.ry-day-no { font-family: var(--mono); font-size: 10px; color: var(--red); letter-spacing: .1em; }
+.ry-day-title { font-family: var(--serif); font-size: 22px; line-height: 1.3; margin: 0; }
+.ry-day-stay { margin-left: auto; font-size: 10px; color: var(--ink-3); }
+.ry-day-sum { margin: 6px 0 12px; font-size: 11.5px; line-height: 1.85; color: var(--ink-2); }
+.ry-stops { margin: 0; padding: 0; list-style: none; }
+.ry-stops li { display: grid; grid-template-columns: 62px 1fr; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line-soft); }
+.ry-stops li:first-child { border-top: 1px solid var(--line-soft); }
+.ry-when { font-family: var(--mono); font-size: 9px; color: var(--red); padding-top: 2px; }
+.ry-what strong { display: block; font-size: 12px; color: var(--ink); font-weight: 400; }
+.ry-what span { display: block; margin-top: 2px; font-size: 10.5px; line-height: 1.7; color: var(--ink-3); }
+.ry-what .ry-tag { display: inline-block; margin-right: 5px; border: 1px solid var(--line); padding: 0 5px; font-size: 8.5px; color: var(--ink-3); }
+.ry-what .ry-tag.wh { border-color: var(--red); color: var(--red); }
+.ry-what .ry-tag.pend { border-style: dashed; }
+
+/* ---- 方案对照 ---- */
+.ry-opt { border-top: 1px solid var(--ink); padding: 12px 0 12px; }
+.ry-opt-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 5px; }
+.ry-opt-no { font-family: var(--mono); font-size: 9px; color: var(--red); }
+.ry-opt-name { font-family: var(--serif); font-size: 16px; }
+.ry-opt-flag { margin-left: auto; font-size: 9px; color: var(--ink-3); }
+.ry-opt p { margin: 0 0 5px; font-size: 11px; line-height: 1.8; color: var(--ink-2); }
+.ry-opt dl { margin: 6px 0 0; display: grid; grid-template-columns: 74px 1fr; gap: 3px 10px; font-size: 10.5px; line-height: 1.7; }
+.ry-opt dt { color: var(--ink-3); }
+.ry-opt dd { margin: 0; color: var(--ink-2); }
+
+/* ---- 历史小注 ---- */
+.ry-hist { border-left: 2px solid var(--red); background: var(--paper-2); padding: 12px 15px; margin: 0 0 12px; }
+.ry-hist p { margin: 0 0 9px; font-size: 11.5px; line-height: 1.95; color: var(--ink-2); }
+.ry-hist p:last-child { margin-bottom: 0; }
+.ry-hist b { color: var(--ink); }
+.ry-hist .ry-hist-h { font-family: var(--serif); font-size: 13px; color: var(--ink); margin-bottom: 7px; display: block; }
+
+.ry-src { margin: 0; padding-left: 18px; }
+.ry-src li { margin-bottom: 5px; font-size: 10px; line-height: 1.7; color: var(--ink-3); word-break: break-all; }
+
+.ry-warn { border: 1px solid var(--red); padding: 11px 14px; margin: 0 0 12px; }
+.ry-warn p { margin: 0; font-size: 11px; line-height: 1.8; color: var(--ink-2); }
+.ry-warn b { color: var(--red); }
+
+@media (max-width: 760px) {
+  .ry-wh-head { grid-template-columns: 40px 1fr; }
+  .ry-wh-kind { grid-column: 2; text-align: left; margin-top: 3px; }
+  .ry-map { height: 300px; }
+  .ry-stops li { grid-template-columns: 52px 1fr; }
+  .ry-day-stay { margin-left: 0; width: 100%; }
+  .ry-opt dl { grid-template-columns: 62px 1fr; }
+}
+
 @media (max-width: 760px) {
   .ry-stats { grid-template-columns: 1fr 1fr; }
   .ry-stats div:nth-child(2) { border-right: 0; }
