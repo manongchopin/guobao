@@ -99,9 +99,10 @@
 .ry-when { font-family: var(--mono); font-size: 9px; color: var(--red); padding-top: 2px; }
 .ry-what strong { display: block; font-size: 12px; color: var(--ink); font-weight: 400; }
 .ry-what span { display: block; margin-top: 2px; font-size: 10.5px; line-height: 1.7; color: var(--ink-3); }
-.ry-what .ry-tag { display: inline-block; margin-right: 5px; border: 1px solid var(--line); padding: 0 5px; font-size: 8.5px; color: var(--ink-3); }
-.ry-what .ry-tag.wh { border-color: var(--red); color: var(--red); }
-.ry-what .ry-tag.pend { border-style: dashed; }
+.ry-tag { display: inline-block; border: 1px solid var(--line); padding: 0 5px; font-size: 8.5px; line-height: 1.7; color: var(--ink-3); white-space: nowrap; vertical-align: 1px; }
+.ry-tag.wh { border-color: var(--red); color: var(--red); }
+.ry-tag.pend { border-style: dashed; }
+.ry-what .ry-tag { margin-right: 5px; }
 
 /* ---- 方案对照 ---- */
 .ry-opt { border-top: 1px solid var(--ink); padding: 12px 0 12px; }
