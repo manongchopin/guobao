@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "琉球屋久岛补核种子岛与屋久岛交通",
+    note: "v0.8 · 绳文杉回程硬截止 15:00 · 种子岛两段接驳 · 排除宫古",
+    href: "ryukyu-yakushima.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "琉球屋久岛全线闭合到种子岛",
     note: "v0.7 · 绳文杉整日 · 协办金与登山巴士 · 20 天初稿",
     href: "ryukyu-yakushima.html"
