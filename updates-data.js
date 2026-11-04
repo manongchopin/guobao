@@ -24,7 +24,7 @@ window.SITE_UPDATES = [
     date: "2026-11-03",
     type: "足迹",
     title: "我的行程：247 飞 + 6 铁 + 3 徒步",
-    note: "新增 6 场路跑 · 赛事待核",
+    note: "飞猪火车票 · 新增 50 段",
     href: "trips.html"
   },
   {

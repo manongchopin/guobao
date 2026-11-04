@@ -39,6 +39,30 @@
     "合肥南": [117.2980, 31.7960],
     "武汉": [114.4210, 30.6090],
     "杭州东": [120.2140, 30.2900],
+    "上海南": [121.4300, 31.1550],
+    "上海": [121.4620, 31.2490],
+    "义乌": [120.0750, 29.3060],
+    "金华": [119.6470, 29.0790],
+    "金华南": [119.7000, 29.1000],
+    "苏州": [120.5850, 31.2990],
+    "苏州北": [120.6420, 31.4210],
+    "苏州南": [120.7900, 31.0700],
+    "昆山南": [120.9500, 31.3600],
+    "昆山": [120.9660, 31.3860],
+    "无锡": [120.3030, 31.5870],
+    "常州": [119.9740, 31.7860],
+    "嘉兴南": [120.7900, 30.7200],
+    "福州": [119.3180, 26.1160],
+    "南平市": [118.1800, 26.6400],
+    "莆田": [119.0100, 25.4300],
+    "惠州南": [114.4400, 22.7900],
+    "犀浦": [103.9700, 30.7500],
+    "离堆公园": [103.6100, 30.9900],
+    "珠海": [113.5800, 22.2700],
+    "广州南": [113.2700, 22.9900],
+    "南宁东": [108.4000, 22.8500],
+    "石家庄": [114.4800, 38.0500],
+    "绩溪北": [118.5900, 30.0700],
     "台北": [121.5170, 25.0478],
     "板桥": [121.4590, 25.0140],
     "桃园": [121.2140, 25.0130],
@@ -365,17 +389,22 @@
   }
 
   function regionOption() {
-    var lines = [
-      { coords: [RAIL["上海虹桥"], RAIL["南京南"], RAIL["合肥南"], RAIL["武汉"]], value: "沪—宁—合—汉 铁路" },
-      { coords: [RAIL["上海虹桥"], RAIL["杭州东"]], value: "沪—杭 铁路" },
-      { coords: [RAIL["台北"], RAIL["板桥"], RAIL["桃园"], RAIL["新竹"], RAIL["苗栗"], RAIL["台中"]], value: "台北—台中 高铁" }
-    ];
-    var POS = { "上海虹桥": "right", "南京南": "top", "合肥南": "left", "武汉": "left", "杭州东": "top",
-                "台北": "right", "台中": "bottom" };
-    var stations = ["上海虹桥", "南京南", "合肥南", "武汉", "杭州东", "台北", "台中"].map(function (n) {
+    var lines = [], seenRoute = {};
+    trains.forEach(function (t) {
+      var a = RAIL[t.from], b = RAIL[t.to];
+      if (!a || !b) return;
+      var k = [t.from, t.to].sort().join("|");
+      if (seenRoute[k]) return;
+      seenRoute[k] = 1;
+      lines.push({ coords: [a, b], value: t.from + " → " + t.to });
+    });
+    var POS = { "上海虹桥": "right", "杭州东": "top", "义乌": "right", "金华": "left",
+                "石家庄": "left", "福州": "right", "南宁东": "left", "广州南": "right",
+                "珠海": "bottom", "台北": "right", "台中": "bottom" };
+    var stations = Object.keys(POS).filter(function (n) { return RAIL[n]; }).map(function (n) {
       return {
         name: n, value: RAIL[n],
-        label: { show: true, position: POS[n] || "right", distance: 5, color: "#8a938c", fontSize: 9,
+        label: { show: true, position: POS[n], distance: 5, color: "#8a938c", fontSize: 9,
                  formatter: function (p) { return p.name; } }
       };
     });
