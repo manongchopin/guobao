@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "灌篮高手补官方交通与拍摄规则",
+    note: "v0.5 · 江之电一日券 · 镰仓高校禁入校 · 七里滨降级",
+    href: "seichi-slamdunk.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "秒速五厘米补点位与交通细节",
     note: "v0.4 · 9→12 点 · i-Shop / 通学路 / S 弯 / 船班",
     href: "seichi-byousoku.html"
