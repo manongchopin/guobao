@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>看过的展览 · 我走过的世界</title>
+<meta name="description" content="看展时拿到的免费导览册封面，按看展时间排列；只收封面，不转载内页。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/exhibitions.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="index.html">← 我走过的世界</a>
+  <p class="kicker">EXHIBITIONS · SEEN</p>
+  <h1>看过的展览</h1>
+  <p class="lede">
+    看展时拿到的免费导览册。<br>
+    <span>只收封面，不转载内页；按展期倒序。</span>
+  </p>
+  <div class="seal" aria-hidden="true">展</div>
+</header>
+
+<div class="hub-progress">
+  <div class="hub-progress-inner">
+    <span class="hp-label">展览</span>
+    <span class="hp-num" id="exh-count">1</span><span class="hp-total">场</span>
+    <span class="hp-note" id="exh-note">封面 1 张 · 免费导览册</span>
+  </div>
+</div>
+
+<main class="wh-detail exh-main">
+  <section class="exh-section">
+    <div class="exh-head">
+      <div>
+        <p class="exh-kicker">THE WALL · COVERS</p>
+        <h2>导览册封面</h2>
+      </div>
+      <p>点封面看大图。<br>只收免费导览册封面，内页不转载。</p>
+    </div>
+    <div class="exh-grid" id="exh-grid"></div>
+    <p class="exh-foot">
+      封面按展期倒序；还有几场展览的封面正在整理。相关文物还在逐场补，
+      补好后会在 <a href="forbidden.html">禁止出境文物</a> 页互相链接。
+    </p>
+  </section>
+
+  <section class="exh-section">
+    <h2>说明</h2>
+    <ul class="exh-notes">
+      <li><b>只收封面：</b>免费导览册的封面，用于个人看展记录；内页、图录和长段文字不转载。</li>
+      <li><b>版权：</b>封面设计权利归博物馆或原作者；本站只做小尺寸、非商业、可下架的记录。详见 <a href="rights.html">来源与权利</a>。</li>
+      <li><b>相关文物：</b>展览里出现的 195 件禁止出境文物，之后会按 fid 关联；现在先留空，不猜。</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>看过的展览</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+  </div>
+</footer>
+
+<div class="exh-modal" id="exh-modal" role="dialog" aria-modal="true" aria-labelledby="exh-modal-title" hidden>
+  <div class="exh-modal-panel">
+    <button type="button" class="exh-modal-close" id="exh-modal-close" aria-label="关闭">×</button>
+    <img class="exh-modal-cover" id="exh-modal-cover" src="" alt="">
+    <div class="exh-modal-body">
+      <p class="exh-kicker" id="exh-modal-kicker">EXHIBITION</p>
+      <h2 class="exh-modal-title" id="exh-modal-title"></h2>
+      <p class="exh-modal-meta" id="exh-modal-meta"></p>
+      <p class="exh-modal-date" id="exh-modal-date"></p>
+      <p class="exh-modal-note" id="exh-modal-note"></p>
+      <a class="exh-modal-link" href="forbidden.html">去「禁止出境文物」页 →</a>
+    </div>
+  </div>
+</div>
+
+<script src="exhibitions-data.js"></script>
+<script src="assets/exhibitions.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>
