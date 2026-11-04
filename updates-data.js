@@ -16,6 +16,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "釜山—对马—壹歧—福冈接通四段船",
+    note: "v0.2 · 对马→壹歧只从厳原开 · 10/12 天两版时间轴",
+    href: "busan-tsushima-iki-fukuoka.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "旅行计划新增釜山—对马—壹歧—福冈",
     note: "v0.1 · 四站骨架 · 船班待核",
     href: "busan-tsushima-iki-fukuoka.html"

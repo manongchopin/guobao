@@ -21,7 +21,39 @@
 .bf-questions { margin: 0; padding-left: 20px; }
 .bf-questions li { margin: 0 0 6px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
 .bf-note { margin: 8px 0 0; font-size: 10px; color: var(--ink-3); }
+
+/* v0.2 · 船段表 / 时间轴 / 标签 */
+.bf-table-wrap { overflow-x: auto; margin-top: 6px; }
+.bf-table { width: 100%; border-collapse: collapse; border-top: 1px solid var(--ink); font-size: 11.5px; }
+.bf-table th { padding: 8px 10px; text-align: left; font-family: var(--sans); font-size: 9px; font-weight: 500; letter-spacing: .1em; color: var(--ink-3); border-bottom: 1px solid var(--line); white-space: nowrap; }
+.bf-table td { padding: 10px; vertical-align: top; line-height: 1.7; color: var(--ink-2); border-bottom: 1px solid var(--line-soft); }
+.bf-table tr:last-child td { border-bottom: 0; }
+.bf-table td b { color: var(--ink); font-weight: 600; }
+.bf-table .bf-t { font-family: var(--sans); font-size: 11px; color: var(--ink); white-space: nowrap; }
+.bf-table .bf-dim { color: var(--ink-3); }
+.bf-tag { display: inline-block; margin: 0 5px 0 0; padding: 1px 5px; border: 1px solid var(--line); font-family: var(--sans); font-size: 8px; letter-spacing: .05em; color: var(--ink-3); vertical-align: 1px; }
+.bf-tag.ok { color: var(--red); border-color: var(--red); }
+.bf-days { border-top: 1px solid var(--ink); }
+.bf-day { display: grid; grid-template-columns: 54px 1fr 118px; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line-soft); font-size: 11.5px; line-height: 1.75; color: var(--ink-2); }
+.bf-day:last-child { border-bottom: 0; }
+.bf-day-k { font-family: var(--sans); font-size: 9px; letter-spacing: .08em; color: var(--red); }
+.bf-day-s { font-size: 10px; color: var(--ink-3); text-align: right; }
+.bf-plan { margin-top: 26px; }
+.bf-plan h3 { margin: 0 0 4px; font-family: var(--serif); font-size: 17px; font-weight: 500; }
+.bf-plan .bf-plan-note { margin: 0 0 10px; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
+.bf-src { margin: 0; padding-left: 18px; }
+.bf-hint { display: none; }
+.bf-src li { margin: 0 0 5px; font-size: 10.5px; line-height: 1.7; color: var(--ink-3); }
+.bf-src a { color: var(--ink-2); }
+
 @media (max-width: 760px) {
+  .bf-table { min-width: 520px; font-size: 11px; }
+  .bf-table.bf-table-wide { min-width: 690px; }
+  .bf-table th, .bf-table td { padding: 8px 9px; }
+  .bf-table-wrap { -webkit-overflow-scrolling: touch; }
+  .bf-hint { display: block; margin: 6px 0 0; font-size: 9.5px; line-height: 1.6; color: var(--ink-3); }
+  .bf-day { grid-template-columns: 1fr; gap: 2px; padding: 12px 0; }
+  .bf-day-s { text-align: left; }
   .bf-stats { grid-template-columns: 1fr 1fr; }
   .bf-stats div:nth-child(2) { border-right: 0; }
   .bf-stats div:nth-child(1), .bf-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
