@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "你的名字补东京三处与图书馆规则",
+    note: "v0.6 · 10→13 点 · 新宿警察署 / 信浓町 / 涩谷 TSUTAYA",
+    href: "seichi-kimi.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "灌篮高手补官方交通与拍摄规则",
     note: "v0.5 · 江之电一日券 · 镰仓高校禁入校 · 七里滨降级",
     href: "seichi-slamdunk.html"

@@ -1,10 +1,10 @@
-/* 圣地巡礼 · 三个作品（v0.5）
-   版本：0.5（2026-11-04）
+/* 圣地巡礼 · 三个作品（v0.6）
+   版本：0.6（2026-11-04）
    说明：只写能指出来源的地点。坐标尽量取 OSM / 官方地址；不能确认的标 approx 或「待核」。
    图片：本版不使用动画截图、实景对比图；「拍摄对比」一栏写的是构图/机位文字。
 */
 window.SEICHI = {
-  version: "0.5",
+  version: "0.6",
   updated: "2026-11-04",
 
   intro:
@@ -15,8 +15,8 @@ window.SEICHI = {
     "目前 26 个点全在日本；数据结构保留了 country 字段，以后加中国或欧洲的作品不用重做。",
 
   callout:
-    "这是 v0.5 取景地清单，不是行程。29 个点位里，22 个有公开来源支持“作品明确出现”，" +
-    "5 个是粉丝比对出的原型，2 个只是氛围/视角相似。" +
+    "这是 v0.6 取景地清单，不是行程。32 个点位里，24 个有公开来源支持“作品明确出现”，" +
+    "6 个是粉丝比对出的原型，2 个只是氛围/视角相似。" +
     "没查到的开放时间、巴士班次、店内规则，统一写「待核」，没有编。",
 
   categories: [
@@ -119,26 +119,30 @@ window.SEICHI = {
       days: "3–5 天",
       shape: "跨县线",
       summary:
-        "故事横跨东京、飞驒古川和诹访湖。东京是瀧的日常与结局（新宿南口—千駄ヶ谷—须贺神社），" +
-        "飞驒古川是糸守町的现实取景（车站、气多若宫神社、市图书馆、落合巴士站），" +
-        "诹访湖是糸守湖的参考。三地不在一条线上，3–5 天是合理下限。",
+        "故事横跨东京、飞驒古川和诹访湖。东京不只是结局：新宿警察署后路口、信浓町天桥、" +
+        "涩谷 TSUTAYA、国立新美术馆都在片中出现；飞驒古川是糸守町的现实取景（车站、气多若宫神社、" +
+        "市图书馆、落合巴士站）；诹访湖是糸守湖的参考。三地不在一条线上，3–5 天是合理下限。",
       travel: [
         "东京—飞驒古川：北陆新干线到富山，或特急到高山，再转 JR 高山本线。",
         "飞驒古川—诹访湖：经高山—松本—盐尻—上诹访，跨县，车程长；不要排成一日往返。",
         "东京—上诹访：JR 中央线特急梓号直达。",
-        "东京市区：新宿—千駄ヶ谷—四谷之间用 JR/地铁；须贺神社从四谷站步行。"
+        "东京市区：新宿—信浓町—千駄谷—四谷—涩谷之间用 JR/地铁；须贺神社从四谷站步行约 8–10 分钟。",
+        "飞驒古川站前：车站—图书馆约 6 分钟，车站—气多若宫神社约 10 分钟，都在步行范围。"
       ],
       etiquette: [
         "气多若宫神社是现役神社：参拜礼仪、手水、不要大声；鸟居和台阶上不要长时间占位。",
-        "飞驒市图书馆是现役图书馆：不要拍读者，不要用快门声，先问柜台能不能拍建筑。",
+        "飞驒市图书馆是现役图书馆：拍照前先到柜台取得许可，不要拍读者、不要用快门声；不要妨碍市民。",
         "落合巴士站是现役巴士站：不要挡住等车的人。",
-        "须贺神社前的台阶在住宅区：排队、让路，不要堵住车道和住户出入口。"
+        "须贺神社前的台阶在住宅区：排队、让路，不要堵住车道和住户出入口。",
+        "新宿警察署后路口、信浓町天桥都是现役道路/人行设施：不要站到车道或楼梯口，通勤时段尤其要让路。",
+        "涩谷 TSUTAYA 的星巴克是营业店铺：先消费再坐下，能不能拍、能不能久坐以店铺规则为准。"
       ],
       cautions: [
-        "飞驒市图书馆开馆时间：官网抓取失败，出发前再查（待核）。",
+        "飞驒市图书馆：平日 9:00–20:00、周末/假日 9:00–17:00、周一休（据 FunTime 2026-08 更新；以官网/馆内公告为准）。",
         "落合巴士站坐标是约值（≈），现场以巴士站牌为准。",
         "诹访湖不是“取景地”，是糸守湖的参考；立石公园是俯瞰视角，不是剧中场景。",
-        "国立新美术馆周二休馆，展览另收费。"
+        "国立新美术馆周二休馆，展览另收费。",
+        "广岛市立基町高校被部分粉丝比对为瀧的高中，但离东京/飞驒/诹访太远，本页不列入本线。"
       ]
     }
   ],
@@ -485,13 +489,14 @@ window.SEICHI = {
       sceneShort: "结局：两人在台阶上重逢",
       scene:
         "结尾，瀧和三葉在四谷的须贺神社前台阶上擦肩，然后同时回头问出“你的名字”。这段台阶是全片最后一镜。",
-      access: "JR/地铁 四谷站步行约 8–10 分钟；新宿站南口步行约 38 分钟（柳田理科雄的推算）。",
+      access: "JR/地铁 四谷站步行约 8–10 分钟；新宿站南口步行约 38 分钟（柳田理科雄的推算）。四谷站也是瀧与奥寺前辈约会的碰面点。",
       hours: "境内自由；社务所时间以现场为准。",
       photo: "台阶下向上仰拍，或从台阶上向下拍；动画里两人是错身而过的机位。",
       note: "住宅区，台阶窄；排队时不要堵住参道和住户出入口。",
       src: [
         { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] },
-        { t: "Wikipedia · 須賀神社 (新宿区)", u: "https://ja.wikipedia.org/wiki/%E9%A0%88%E8%B3%80%E7%A5%9E%E7%A4%BE_(%E6%96%B0%E5%AE%BF%E5%8C%BA)" }
+        { t: "Wikipedia · 須賀神社 (新宿区)", u: "https://ja.wikipedia.org/wiki/%E9%A0%88%E8%B3%80%E7%A5%9E%E7%A4%BE_(%E6%96%B0%E5%AE%BF%E5%8C%BA)" },
+        { t: "FunTime · 你的名字取景場地（2026-08 更新）", u: "https://www.funtime.com.tw/blog/funtime/your-name-anime-filming-locations", works: ["kimi"] }
       ]
     },
     {
@@ -527,7 +532,56 @@ window.SEICHI = {
       ]
     },
     {
-      id: "kimi-nact", work: "kimi", no: "04",
+      id: "kimi-shinjuku-police", work: "kimi", no: "04",
+      name: "新宿警察署后路口", ja: "新宿警察署裏交差点",
+      cat: "confirmed", country: "JP", pref: "东京都", city: "新宿区",
+      lat: 35.6934966, lng: 139.6944843,
+      sceneShort: "片中一闪而过：环形信号灯与高楼",
+      scene:
+        "作品中一闪而过的路口：高楼之间，信号灯连成一圈的街景。FunTime 把它列为新宿的取景地；粉丝常说的机位在警察署后侧路口。",
+      access: "JR 新宿站西口方向（19/20/N3/N4 出口）步行约 10 分钟；不要站到路口中央。",
+      hours: "公共道路全天；早晚高峰车多。",
+      photo: "从人行道仰拍信号灯与楼群；不要为了复刻走到马路中间。",
+      note: "办公区路口，不是景点；拍完就走，不要堵人行道。",
+      src: [
+        { t: "FunTime · 你的名字取景場地（2026-08 更新）", u: "https://www.funtime.com.tw/blog/funtime/your-name-anime-filming-locations", works: ["kimi"] },
+        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] }
+      ]
+    },
+    {
+      id: "kimi-shinanomachi", work: "kimi", no: "05",
+      name: "信浓町站前天桥", ja: "信濃町駅前歩道橋",
+      cat: "confirmed", country: "JP", pref: "东京都", city: "新宿区",
+      lat: 35.6800236, lng: 139.7204947,
+      sceneShort: "瀧与奥寺分别、打电话的天桥",
+      scene:
+        "瀧和奥寺前辈约会结束后分别的地方；也是瀧在这里打电话却打不通的场景。傍晚的天色和天桥构图最容易对上。",
+      access: "JR 信濃町站出站，往神宫球场方向；天桥就在站前。",
+      hours: "天桥全天；通勤时段人多。",
+      photo: "从天桥向站前/球场方向取景；不要堵住楼梯和通行。",
+      note: "现役人行天桥；不要为了等黄昏站在楼梯口。",
+      src: [
+        { t: "FunTime · 你的名字取景場地（2026-08 更新）", u: "https://www.funtime.com.tw/blog/funtime/your-name-anime-filming-locations", works: ["kimi"] }
+      ]
+    },
+    {
+      id: "kimi-qfront", work: "kimi", no: "06",
+      name: "涩谷 TSUTAYA（QFRONT）", ja: "渋谷TSUTAYA・QFRONT",
+      cat: "fan", country: "JP", pref: "东京都", city: "涩谷区",
+      lat: 35.6598341, lng: 139.7003798,
+      sceneShort: "瀧与奥寺在二楼星巴克小约会",
+      scene:
+        "瀧和奥寺前辈在涩谷 TSUTAYA 大楼二楼的星巴克喝咖啡；窗外就是涩谷十字路口。",
+      access: "涩谷站 6-2 出口直达，或八公口出站穿过十字路口。",
+      hours: "星巴克营业时间以店铺为准；靠窗座位常满。",
+      photo: "店内能不能拍、能不能长时间占座，以店铺规则为准；先消费再坐下。",
+      note: "粉丝比对/指南记录，非官方认定；不要为了窗边机位影响其他客人。",
+      src: [
+        { t: "FunTime · 你的名字取景場地（2026-08 更新）", u: "https://www.funtime.com.tw/blog/funtime/your-name-anime-filming-locations", works: ["kimi"] }
+      ]
+    },
+    {
+      id: "kimi-nact", work: "kimi", no: "07",
       name: "国立新美术馆", ja: "国立新美術館",
       cat: "confirmed", country: "JP", pref: "东京都", city: "港区",
       lat: 35.66534, lng: 139.72644,
@@ -544,7 +598,7 @@ window.SEICHI = {
       ]
     },
     {
-      id: "kimi-furukawa", work: "kimi", no: "05",
+      id: "kimi-furukawa", work: "kimi", no: "08",
       name: "飞驒古川站", ja: "飛騨古川駅",
       cat: "confirmed", country: "JP", pref: "岐阜县", city: "飞驒市",
       lat: 36.23673, lng: 137.18961,
@@ -557,44 +611,46 @@ window.SEICHI = {
       note: "现役车站；站前有观光案内，可以先拿地图。",
       src: [
         { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] },
-        { t: "飛騨市図書館", u: "https://www.hida-lib.jp/", works: ["kimi"] }
+        { t: "FunTime · 你的名字取景場地（2026-08 更新）", u: "https://www.funtime.com.tw/blog/funtime/your-name-anime-filming-locations", works: ["kimi"] }
       ]
     },
     {
-      id: "kimi-keta", work: "kimi", no: "06",
+      id: "kimi-keta", work: "kimi", no: "09",
       name: "气多若宫神社", ja: "気多若宮神社",
       cat: "confirmed", country: "JP", pref: "岐阜县", city: "飞驒市",
       lat: 36.23925, lng: 137.19763,
       sceneShort: "飞驒古川站后站的神社与台阶",
       scene:
         "从飞驒古川站后站过去的气多若宫神社，是瀧一行人在镇上找线索时经过的地方；紫色鸟居和石阶是粉丝最常拍的一处。",
-      access: "飞驒古川站步行约 10 分钟，站后侧。",
+      access: "飞驒古川站步行约 10 分钟，站后侧。地址：古川町上気多 1297。",
       hours: "境内自由；社务所时间以现场为准。",
       photo: "石阶下向上拍鸟居；不要站到马路中央，也不要在台阶上久坐。",
-      note: "现役神社；参拜前先在手水舍净手。",
+      note: "现役神社；参拜前先在手水舍净手。宫水神社还有“飞驒山王宫日枝神社”一说（鸟居样式较近，但位于高山市城山），本页不单列。",
       src: [
-        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] }
+        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] },
+        { t: "FunTime · 你的名字取景場地（2026-08 更新）", u: "https://www.funtime.com.tw/blog/funtime/your-name-anime-filming-locations", works: ["kimi"] }
       ]
     },
     {
-      id: "kimi-library", work: "kimi", no: "07",
+      id: "kimi-library", work: "kimi", no: "10",
       name: "飞驒市图书馆", ja: "飛騨市図書館",
       cat: "confirmed", country: "JP", pref: "岐阜县", city: "飞驒市",
       lat: 36.23812, lng: 137.18547,
       sceneShort: "飞驒古川站前站的图书馆",
       scene:
         "飞驒古川站前站的市立图书馆，是瀧一行人查糸守町资料的地方；建筑和阶梯在片中很清楚。",
-      access: "飞驒古川站步行约 5 分钟（约 400 米）。",
-      hours: "开馆时间待核（官网抓取失败）；出发前查官网或电话确认。",
-      photo: "建筑外观和公共阶梯可以拍；馆内不要拍读者，先问柜台。",
-      note: "现役图书馆，安静优先；不要为了复刻镜头在馆内走动拍摄。",
+      access: "飞驒古川站步行约 6 分钟。地址：古川町本町 2-22。",
+      hours: "平日 9:00–20:00、周末/假日 9:00–17:00、周一休（据 FunTime 2026-08 更新；以官网/馆内公告为准）。",
+      photo: "拍照前先到柜台取得许可；不要拍读者，不要用快门声。",
+      note: "现役图书馆：不要妨碍市民，不要为了复刻镜头在馆内走动拍摄。发社媒可加 #飛騨市図書館きたよ。",
       src: [
         { t: "飛騨市図書館", u: "https://www.hida-lib.jp/", works: ["kimi"] },
+        { t: "FunTime · 你的名字取景場地（2026-08 更新）", u: "https://www.funtime.com.tw/blog/funtime/your-name-anime-filming-locations", works: ["kimi"] },
         { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] }
       ]
     },
     {
-      id: "kimi-ochiai", work: "kimi", no: "08",
+      id: "kimi-ochiai", work: "kimi", no: "11",
       name: "落合巴士站", ja: "落合バス停",
       cat: "confirmed", country: "JP", pref: "岐阜县", city: "飞驒市",
       lat: 36.30930, lng: 137.11940, approx: true,
@@ -610,7 +666,7 @@ window.SEICHI = {
       ]
     },
     {
-      id: "kimi-suwa", work: "kimi", no: "09",
+      id: "kimi-suwa", work: "kimi", no: "12",
       name: "诹访湖", ja: "諏訪湖",
       cat: "fan", country: "JP", pref: "长野县", city: "诹访市",
       lat: 36.04795, lng: 138.08328,
@@ -622,11 +678,12 @@ window.SEICHI = {
       photo: "从湖岸拍湖面与四周山；不要把“参考”写成“取景地”。",
       note: "粉丝/设定参考，不是片中实拍地点。",
       src: [
-        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] }
+        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] },
+        { t: "FunTime · 你的名字取景場地（2026-08 更新）", u: "https://www.funtime.com.tw/blog/funtime/your-name-anime-filming-locations", works: ["kimi"] }
       ]
     },
     {
-      id: "kimi-tateishi", work: "kimi", no: "10",
+      id: "kimi-tateishi", work: "kimi", no: "13",
       name: "立石公园", ja: "立石公園",
       cat: "mood", country: "JP", pref: "长野县", city: "诹访市",
       lat: 36.05338, lng: 138.12250,
@@ -643,12 +700,12 @@ window.SEICHI = {
     }
   ],
 
-  /* 仍需逐条核实的项目 */
   pending: [
     { work: "byousoku", text: "鹿儿岛—种子岛渡轮/高速船/航班的班次、耗时与旺季订位规则。" },
     { work: "byousoku", text: "种子岛岛内巴士路线与班次；没有租车时的替代方案。" },
     { work: "byousoku", text: "旧种子岛机场外可拍摄的具体位置，以及火箭发射日的道路管制范围。" },
-    { work: "kimi", text: "飞驒市图书馆开馆时间与馆内拍摄规则（官网抓取失败）。" },
+    { work: "kimi", text: "飞驒市图书馆时间与拍摄规则仍以官网复核（当前采用 FunTime 2026-08 的数据）。" },
+    { work: "kimi", text: "广岛市立基町高校被部分粉丝比对为瀧的高中，但不在本线，未列入；需更多来源再定。" },
     { work: "kimi", text: "落合巴士站的确切站牌位置与巴士班次（坐标目前是约值）。" },
     { work: "slamdunk", text: "平塚综合体育馆的开放时间、周一休馆与入口展示是否可参观。" },
     { work: "slamdunk", text: "镰仓 2025-09 拍照点试办结束后的长期规则。" },
@@ -678,6 +735,7 @@ window.SEICHI = {
     { t: "江之电 · 一日券「のりおりくん」（¥800/¥400）", u: "https://www.enoden.co.jp/tourism/ticket/noriorikun/", works: ["slamdunk"] },
     { t: "神奈川县立镰仓高校 · 致观光客（禁入校/禁无人机）", u: "https://pen-kanagawa.ed.jp/kamakura-h/forsightseer.html", works: ["slamdunk"] },
     { t: "镰仓市 · 观光混杂与拍摄点信息", u: "https://kamakura-live.jp/", works: ["slamdunk"] },
+    { t: "FunTime · 你的名字取景場地大公開（2026-08 更新）", u: "https://www.funtime.com.tw/blog/funtime/your-name-anime-filming-locations", works: ["kimi"] },
     { t: "OpenStreetMap（底图与部分坐标核对）", u: "https://www.openstreetmap.org/copyright", works: ["all"] }
   ]
 };
