@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "旅行计划新增圣地巡礼骨架",
+    note: "v0.1 · 三个作品横栏 · 取景地待核",
+    href: "seichi-junrei.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "大溪地升到五段骨架",
     note: "v0.2 · 本岛/Raiatea/Bora Bora/Hiva Oa/黑珍珠",
     href: "tahiti.html"
