@@ -4,6 +4,7 @@
   var flights = Array.isArray(D.flights) ? D.flights : [];
   var trains = Array.isArray(D.trains) ? D.trains : [];
   var hikes = Array.isArray(D.hikes) ? D.hikes : [];
+  var sports = Array.isArray(D.sports) ? D.sports : [];
   var placesByYear = (D.placesByYear && typeof D.placesByYear === "object") ? D.placesByYear : {};
 
   var AIR = {
@@ -64,11 +65,12 @@
 
   function renderStats() {
     var hikeKm = hikes.reduce(function (s, h) { return s + (Number(h.km) || 0); }, 0);
+    var sportKm = sports.reduce(function (s, h) { return s + (Number(h.km) || 0); }, 0);
     document.getElementById("tp-flights").textContent = flights.length;
     document.getElementById("tp-trains").textContent = trains.length;
     document.getElementById("tp-hikes").textContent = hikes.length;
-    document.getElementById("tp-km").textContent = fmt(Math.round(kmTotal(flights) + kmTotal(trains) + hikeKm));
-    document.getElementById("tp-years").textContent = placeYears().length;
+    document.getElementById("tp-sports").textContent = sports.length;
+    document.getElementById("tp-km").textContent = fmt(Math.round(kmTotal(flights) + kmTotal(trains) + hikeKm + sportKm));
     document.getElementById("tp-places").textContent = uniquePlaces();
   }
 
@@ -119,6 +121,18 @@
     totalLine.textContent = "合计 " + list.length + " 段 · " + fmt(kmTotal(list)) + " km";
   }
 
+  function activityMap(el, path, color) {
+    var map = L.map(el, { scrollWheelZoom: false });
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    var line = L.polyline(path, { color: color, weight: 3, opacity: 0.95, lineJoin: "round" }).addTo(map);
+    L.circleMarker(path[0], { radius: 4, color: "#a8402f", weight: 2, fillColor: "#fffdf7", fillOpacity: 1 }).addTo(map).bindTooltip("起点");
+    map.fitBounds(line.getBounds(), { padding: [24, 24] });
+    L.control.scale({ imperial: false, position: "bottomleft" }).addTo(map);
+  }
+
   function renderHikes() {
     var box = document.getElementById("tp-hike-list");
     if (!hikes.length) {
@@ -148,15 +162,37 @@
     list.forEach(function (h, i) {
       var el = document.getElementById("tp-hike-map-" + i);
       if (!el || !h.path || h.path.length < 2) return;
-      var map = L.map(el, { scrollWheelZoom: false });
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
-      }).addTo(map);
-      var line = L.polyline(h.path, { color: "#4a6b52", weight: 3, opacity: 0.95, lineJoin: "round" }).addTo(map);
-      L.circleMarker(h.path[0], { radius: 4, color: "#a8402f", weight: 2, fillColor: "#fffdf7", fillOpacity: 1 }).addTo(map).bindTooltip("起终点");
-      map.fitBounds(line.getBounds(), { padding: [24, 24] });
-      L.control.scale({ imperial: false, position: "bottomleft" }).addTo(map);
+      activityMap(el, h.path, "#4a6b52");
+    });
+  }
+
+  function renderSports() {
+    var box = document.getElementById("tp-sport-list");
+    if (!box) return;
+    if (!sports.length) {
+      box.innerHTML = '<p class="tp-nothing">还没有运动记录。</p>';
+      return;
+    }
+    box.innerHTML = sports.map(function (h, i) {
+      return '<article class="tp-hike tp-sport">' +
+        '<div class="tp-hike-head"><div>' +
+          '<h3>' + esc(h.name || "未命名运动") + '</h3>' +
+          '<p class="tp-hike-meta">' + esc(h.month || "") + ' · ' +
+            (h.km != null ? h.km + ' km' : "") +
+            (h.ascent != null ? ' · 爬升 ' + h.ascent + ' m' : "") +
+            (h.duration ? ' · 用时 ' + h.duration : "") +
+          '</p>' +
+          (h.gpsKm ? '<p class="tp-hike-note">GPS 记录 ' + h.gpsKm + ' km · Apple Watch</p>' : '') +
+        '</div><p class="tp-hike-points">' + (h.points || (h.path || []).length) + ' 点</p></div>' +
+        '<div class="tp-hike-map" id="tp-sport-map-' + i + '"></div>' +
+        '<p class="tp-map-note">GPS 抽稀轨迹 · 底图 © OpenStreetMap contributors</p>' +
+      '</article>';
+    }).join("");
+    if (!window.L) return;
+    sports.forEach(function (h, i) {
+      var el = document.getElementById("tp-sport-map-" + i);
+      if (!el || !h.path || h.path.length < 2) return;
+      activityMap(el, h.path, "#a8402f");
     });
   }
 
@@ -456,6 +492,7 @@
   renderLog(flights, "tp-flight-list", "tp-total-line", "flight");
   renderLog(trains, "tp-train-list", "tp-train-total", "train");
   renderHikes();
+  renderSports();
   renderPlaces();
   initMaps();
 })();
