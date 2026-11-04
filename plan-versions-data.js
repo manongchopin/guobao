@@ -311,11 +311,16 @@ window.PLAN_VERSIONS = {
     },
     "seichi-junrei": {
       "title": "圣地巡礼",
-      "version": "0.2",
-      "status": "取景地清单",
+      "version": "0.3",
+      "status": "索引 + 分作品页",
       "date": "2026-11-04",
-      "note": "三作品 26 个点位；核实等级、交通、开放时间、场景对照表、总览地图；路线与班次待 v0.3",
+      "note": "索引页只留三个作品横栏；每个作品单独一页，含点位、地图、对照表、交通与礼仪",
       "history": [
+        {
+          "v": "0.3",
+          "date": "2026-11-04",
+          "note": "结构拆分：seichi-junrei.html 改为三作品索引；新增 seichi-byousoku / seichi-slamdunk / seichi-kimi 三张作品页；点位与核实内容不变；新增 assets/seichi-work.js"
+        },
         {
           "v": "0.2",
           "date": "2026-11-04",

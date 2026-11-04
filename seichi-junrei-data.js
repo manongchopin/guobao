@@ -1,10 +1,10 @@
-/* 圣地巡礼 · 三个作品（v0.2）
-   版本：0.2（2026-11-04）
+/* 圣地巡礼 · 三个作品（v0.3）
+   版本：0.3（2026-11-04）
    说明：只写能指出来源的地点。坐标尽量取 OSM / 官方地址；不能确认的标 approx 或「待核」。
    图片：本版不使用动画截图、实景对比图；「拍摄对比」一栏写的是构图/机位文字。
 */
 window.SEICHI = {
-  version: "0.2",
+  version: "0.3",
   updated: "2026-11-04",
 
   intro:
@@ -15,7 +15,7 @@ window.SEICHI = {
     "目前 26 个点全在日本；数据结构保留了 country 字段，以后加中国或欧洲的作品不用重做。",
 
   callout:
-    "这是 v0.2 取景地清单，不是行程。26 个点位里，20 个有公开来源支持“作品明确出现”，" +
+    "这是 v0.3 取景地清单，不是行程。26 个点位里，20 个有公开来源支持“作品明确出现”，" +
     "5 个是粉丝比对出的原型，1 个只是“能看到同一片湖”的视角。" +
     "没查到的开放时间、巴士班次、店内规则，统一写「待核」，没有编。",
 
@@ -37,6 +37,7 @@ window.SEICHI = {
       ja: "秒速5センチメートル",
       en: "5 CENTIMETERS PER SECOND",
       short: "东京的雪夜列车、种子岛的火箭与海岸；离岛线，至少住两晚。",
+      page: "seichi-byousoku.html",
       direction: "东京 · 种子岛",
       days: "种子岛 2–3 天 + 东京半天",
       shape: "离岛线",
@@ -71,6 +72,7 @@ window.SEICHI = {
       ja: "SLAM DUNK",
       en: "SLAM DUNK · KAMAKURA / SHONAN",
       short: "踏切只是入口；镰仓—江之岛—湘南海岸，再加平塚与武藏野的原型。",
+      page: "seichi-slamdunk.html",
       direction: "镰仓 · 江之岛 · 湘南",
       days: "1 天（镰仓—湘南）+ 可选半天",
       shape: "城市线",
@@ -104,6 +106,7 @@ window.SEICHI = {
       ja: "君の名は。",
       en: "YOUR NAME · HIDA / TOKYO / SUWA",
       short: "东京结局、飞驒古川取景、诹访湖参考；跨县，3–5 天。",
+      page: "seichi-kimi.html",
       direction: "东京 · 飞驒古川 · 诹访湖",
       days: "3–5 天",
       shape: "跨县线",
@@ -147,7 +150,7 @@ window.SEICHI = {
       photo: "站台向踏切方向取景，冬天傍晚的逆光和积雪最难复刻；不要站在轨道上等车。",
       note: "住宅区，站前道路窄；拍完就走，不要架三脚架堵路。雪夜候车室在岩舟站，本页暂未单列。",
       src: [
-        { t: "とある大人の備忘録 · 参宮橋・豪徳寺・代々木編", u: "https://deep-adultweet.blog.jp/archives/6414372.html" }
+        { t: "とある大人の備忘録 · 参宮橋・豪徳寺・代々木編", u: "https://deep-adultweet.blog.jp/archives/6414372.html", works: ["byousoku"] }
       ]
     },
     {
@@ -179,8 +182,8 @@ window.SEICHI = {
       photo: "从校门外道路取景即可；不要拍学生，不要翻墙。",
       note: "现役县立高中。学校地址：中种子町野间 4258-1。",
       src: [
-        { t: "鹿児島県立種子島中央高等学校", u: "http://www.edu.pref.kagoshima.jp/sh/tanechuo/" },
-        { t: "とある大人の備忘録 · 中種子・西之表編", u: "https://deep-adultweet.blog.jp/archives/29390035.html" }
+        { t: "鹿児島県立種子島中央高等学校", u: "http://www.edu.pref.kagoshima.jp/sh/tanechuo/", works: ["byousoku"] },
+        { t: "とある大人の備忘録 · 中種子・西之表編", u: "https://deep-adultweet.blog.jp/archives/29390035.html", works: ["byousoku"] }
       ]
     },
     {
@@ -213,7 +216,7 @@ window.SEICHI = {
       photo: "只有入住才能拍窗景；不要为了拍照向前台要求参观房间。",
       note: "粉丝比对，非官方认定。酒店仍在营业，预订前先确认房型。",
       src: [
-        { t: "とある大人の備忘録 · 中種子・西之表編", u: "https://deep-adultweet.blog.jp/archives/29390035.html" }
+        { t: "とある大人の備忘録 · 中種子・西之表編", u: "https://deep-adultweet.blog.jp/archives/29390035.html", works: ["byousoku"] }
       ]
     },
     {
@@ -229,7 +232,7 @@ window.SEICHI = {
       photo: "在超市对面人行道取景；不要站在国道 58 号车道上。",
       note: "现役超市，拍外观就好，不要影响顾客进出。",
       src: [
-        { t: "とある大人の備忘録 · 中種子・西之表編", u: "https://deep-adultweet.blog.jp/archives/29390035.html" }
+        { t: "とある大人の備忘録 · 中種子・西之表編", u: "https://deep-adultweet.blog.jp/archives/29390035.html", works: ["byousoku"] }
       ]
     },
     {
@@ -245,7 +248,7 @@ window.SEICHI = {
       photo: "围栏外长焦拍建筑；不要翻越围栏，也不要走进跑道。",
       note: "旧航站楼仍在，但已封闭管理；以现场标识为准。",
       src: [
-        { t: "とある大人の備忘録 · 中種子・西之表編", u: "https://deep-adultweet.blog.jp/archives/29390035.html" }
+        { t: "とある大人の備忘録 · 中種子・西之表編", u: "https://deep-adultweet.blog.jp/archives/29390035.html", works: ["byousoku"] }
       ]
     },
     {
@@ -261,7 +264,7 @@ window.SEICHI = {
       photo: "从道路对面拍外观；不要堵住邮局门口和停车位。",
       note: "现役简易邮局，窗口时间短；拍外观不需要进去。",
       src: [
-        { t: "とある大人の備忘録 · 中種子・西之表編", u: "https://deep-adultweet.blog.jp/archives/29390035.html" }
+        { t: "とある大人の備忘録 · 中種子・西之表編", u: "https://deep-adultweet.blog.jp/archives/29390035.html", works: ["byousoku"] }
       ]
     },
     {
@@ -277,7 +280,7 @@ window.SEICHI = {
       photo: "从宇宙ヶ丘公园或展望点看发射场；发射日道路管制，普通游客不能靠近。",
       note: "发射场不是随时能进；见学范围、巴士团和发射日规则都以 JAXA 公告为准。",
       src: [
-        { t: "JAXA · 種子島宇宙センター", u: "https://fanfun.jaxa.jp/visit/tanegashima/" }
+        { t: "JAXA · 種子島宇宙センター", u: "https://fanfun.jaxa.jp/visit/tanegashima/", works: ["byousoku"] }
       ]
     },
 
@@ -295,8 +298,8 @@ window.SEICHI = {
       photo: "从车站东侧平交道口向海侧取景，江之岛在右后方；动画是低机位广角。现在只能站在指定拍照区/人行道，不要复刻马路中央机位。",
       note: "2025-09-13 起，镰仓市在踏切旁公园设临时拍照点并派员引导；严禁进入轨道，禁止在公园外停留拍摄。",
       src: [
-        { t: "圣地地图 · 灌篮高手", u: "https://screenpilgrimage.com/zh-Hans/title/slam-dunk/" },
-        { t: "ETtoday 2025-09-15 · 镰仓市设拍照区", u: "https://www.ettoday.net/news/20250915/3033834.htm" },
+        { t: "圣地地图 · 灌篮高手", u: "https://screenpilgrimage.com/zh-Hans/title/slam-dunk/", works: ["slamdunk"] },
+        { t: "ETtoday 2025-09-15 · 镰仓市设拍照区", u: "https://www.ettoday.net/news/20250915/3033834.htm", works: ["slamdunk"] },
         { t: "Wikipedia · 鎌倉高校前駅", u: "https://ja.wikipedia.org/wiki/%E9%8E%8C%E5%80%89%E9%AB%98%E6%A0%A1%E5%89%8D%E9%A7%85" }
       ]
     },
@@ -313,7 +316,7 @@ window.SEICHI = {
       photo: "从坡下道路仰拍校舍与海；不要拍学生，不要进入校园或私人用地。",
       note: "现役县立高中。粉丝推测，非官方认定。",
       src: [
-        { t: "圣地地图 · 灌篮高手", u: "https://screenpilgrimage.com/zh-Hans/title/slam-dunk/" },
+        { t: "圣地地图 · 灌篮高手", u: "https://screenpilgrimage.com/zh-Hans/title/slam-dunk/", works: ["slamdunk"] },
         { t: "Wikipedia · 神奈川県立鎌倉高等学校", u: "https://ja.wikipedia.org/wiki/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%AB%8B%E9%8E%8C%E5%80%89%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1" }
       ]
     },
@@ -330,7 +333,7 @@ window.SEICHI = {
       photo: "从沙滩或人行道拍江之电与海；不要站在 134 号国道车道上。",
       note: "海滩是公共空间，但夏季人多；不要为了拍照挡住通道。",
       src: [
-        { t: "圣地地图 · 灌篮高手", u: "https://screenpilgrimage.com/zh-Hans/title/slam-dunk/" }
+        { t: "圣地地图 · 灌篮高手", u: "https://screenpilgrimage.com/zh-Hans/title/slam-dunk/", works: ["slamdunk"] }
       ]
     },
     {
@@ -362,7 +365,7 @@ window.SEICHI = {
       photo: "从沙滩向江之岛方向取景；不要把动画截图和现实硬拼成“同一机位”。",
       note: "与踏切相距约 3 公里，安排在同一天时注意脚程。",
       src: [
-        { t: "圣地地图 · 灌篮高手", u: "https://screenpilgrimage.com/zh-Hans/title/slam-dunk/" },
+        { t: "圣地地图 · 灌篮高手", u: "https://screenpilgrimage.com/zh-Hans/title/slam-dunk/", works: ["slamdunk"] },
         { t: "Wikipedia · 鵠沼海岸", u: "https://ja.wikipedia.org/wiki/%E9%B5%A0%E6%B2%BC%E6%B5%B7%E5%B2%B8" }
       ]
     },
@@ -379,7 +382,7 @@ window.SEICHI = {
       photo: "入口与体育馆外观；馆内是否可拍以现场为准。",
       note: "现役市立体育馆。粉丝比对，非官方认定；free 参观范围以现场为准。",
       src: [
-        { t: "圣地地图 · 灌篮高手", u: "https://screenpilgrimage.com/zh-Hans/title/slam-dunk/" },
+        { t: "圣地地图 · 灌篮高手", u: "https://screenpilgrimage.com/zh-Hans/title/slam-dunk/", works: ["slamdunk"] },
         { t: "Wikipedia · 平塚総合体育館", u: "https://ja.wikipedia.org/wiki/%E5%B9%B3%E5%A1%9A%E7%B7%8F%E5%90%88%E4%BD%93%E8%82%B2%E9%A4%A8" }
       ]
     },
@@ -396,7 +399,7 @@ window.SEICHI = {
       photo: "从校外道路拍校门与校舍；不要拍学生，不要进入校园。",
       note: "现役都立高中，住宅区包围；安静看完就走。",
       src: [
-        { t: "圣地地图 · 灌篮高手", u: "https://screenpilgrimage.com/zh-Hans/title/slam-dunk/" },
+        { t: "圣地地图 · 灌篮高手", u: "https://screenpilgrimage.com/zh-Hans/title/slam-dunk/", works: ["slamdunk"] },
         { t: "Wikipedia · 東京都立武蔵野北高等学校", u: "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%AB%8B%E6%AD%A6%E8%94%B5%E9%87%8E%E5%8C%97%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1" }
       ]
     },
@@ -415,7 +418,7 @@ window.SEICHI = {
       photo: "台阶下向上仰拍，或从台阶上向下拍；动画里两人是错身而过的机位。",
       note: "住宅区，台阶窄；排队时不要堵住参道和住户出入口。",
       src: [
-        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82" },
+        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] },
         { t: "Wikipedia · 須賀神社 (新宿区)", u: "https://ja.wikipedia.org/wiki/%E9%A0%88%E8%B3%80%E7%A5%9E%E7%A4%BE_(%E6%96%B0%E5%AE%BF%E5%8C%BA)" }
       ]
     },
@@ -432,7 +435,7 @@ window.SEICHI = {
       photo: "南口站前的人流与楼群；动画里是跑动镜头，现实里不要在马路上跑。",
       note: "站前极拥挤；拍摄时靠边，不要挡住通勤人流。",
       src: [
-        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82" }
+        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] }
       ]
     },
     {
@@ -448,7 +451,7 @@ window.SEICHI = {
       photo: "站前街道；动画里的跑动路线经过住宅与办公楼之间。",
       note: "与须贺神社之间是上坡和住宅区，按人行道走。",
       src: [
-        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82" }
+        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] }
       ]
     },
     {
@@ -464,8 +467,8 @@ window.SEICHI = {
       photo: "馆内展览通常禁止拍摄，以现场标识为准；建筑外观和公共区域可以拍。",
       note: "现役美术馆，不是“免费景点”；看展要买票。",
       src: [
-        { t: "国立新美術館", u: "https://www.nact.jp/" },
-        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82" }
+        { t: "国立新美術館", u: "https://www.nact.jp/", works: ["kimi"] },
+        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] }
       ]
     },
     {
@@ -481,8 +484,8 @@ window.SEICHI = {
       photo: "站台与站舍；动画里是雪后的站台，现实里冬天才有那种光线。",
       note: "现役车站；站前有观光案内，可以先拿地图。",
       src: [
-        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82" },
-        { t: "飛騨市図書館", u: "https://www.hida-lib.jp/" }
+        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] },
+        { t: "飛騨市図書館", u: "https://www.hida-lib.jp/", works: ["kimi"] }
       ]
     },
     {
@@ -498,7 +501,7 @@ window.SEICHI = {
       photo: "石阶下向上拍鸟居；不要站到马路中央，也不要在台阶上久坐。",
       note: "现役神社；参拜前先在手水舍净手。",
       src: [
-        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82" }
+        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] }
       ]
     },
     {
@@ -514,8 +517,8 @@ window.SEICHI = {
       photo: "建筑外观和公共阶梯可以拍；馆内不要拍读者，先问柜台。",
       note: "现役图书馆，安静优先；不要为了复刻镜头在馆内走动拍摄。",
       src: [
-        { t: "飛騨市図書館", u: "https://www.hida-lib.jp/" },
-        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82" }
+        { t: "飛騨市図書館", u: "https://www.hida-lib.jp/", works: ["kimi"] },
+        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] }
       ]
     },
     {
@@ -531,7 +534,7 @@ window.SEICHI = {
       photo: "从道路内侧拍站牌与山景；不要站到车道上等车。",
       note: "坐标是约值（≈）；现场以巴士站牌和当地地图为准。",
       src: [
-        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82" }
+        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] }
       ]
     },
     {
@@ -547,7 +550,7 @@ window.SEICHI = {
       photo: "从湖岸拍湖面与四周山；不要把“参考”写成“取景地”。",
       note: "粉丝/设定参考，不是片中实拍地点。",
       src: [
-        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82" }
+        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] }
       ]
     },
     {
@@ -563,34 +566,35 @@ window.SEICHI = {
       photo: "傍晚到入夜的湖面最好；冬天路面可能结冰，自驾注意。",
       note: "氛围/视角相似，不是取景地；不要把它写成“糸守湖原型”。",
       src: [
-        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82" }
+        { t: "Wikipedia · 你的名字。", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] }
       ]
     }
   ],
 
   /* 仍需逐条核实的项目 */
   pending: [
-    "鹿儿岛—种子岛渡轮/高速船/航班的班次、耗时与旺季订位规则。",
-    "种子岛岛内巴士路线与班次；没有租车时的替代方案。",
-    "飞驒市图书馆开馆时间与馆内拍摄规则（官网抓取失败）。",
-    "落合巴士站的确切站牌位置与巴士班次（坐标目前是约值）。",
-    "平塚综合体育馆的开放时间、周一休馆与入口展示是否可参观。",
-    "镰仓 2025-09 拍照点试办结束后的长期规则。",
-    "各神社/寺院的参拜时间与禁止拍摄区域。",
-    "每个点位的“拍摄对比”仍需现场核对机位，本版只写文字提示，不用截图。"
+    { work: "byousoku", text: "鹿儿岛—种子岛渡轮/高速船/航班的班次、耗时与旺季订位规则。" },
+    { work: "byousoku", text: "种子岛岛内巴士路线与班次；没有租车时的替代方案。" },
+    { work: "byousoku", text: "旧种子岛机场外可拍摄的具体位置，以及火箭发射日的道路管制范围。" },
+    { work: "kimi", text: "飞驒市图书馆开馆时间与馆内拍摄规则（官网抓取失败）。" },
+    { work: "kimi", text: "落合巴士站的确切站牌位置与巴士班次（坐标目前是约值）。" },
+    { work: "slamdunk", text: "平塚综合体育馆的开放时间、周一休馆与入口展示是否可参观。" },
+    { work: "slamdunk", text: "镰仓 2025-09 拍照点试办结束后的长期规则。" },
+    { work: "kimi", text: "气多若宫神社、须贺神社的参拜时间与禁止拍摄区域。" },
+    { work: "all", text: "每个点位的“拍摄对比”仍需现场核对机位，本版只写文字提示，不用截图。" }
   ],
 
   /* 页面级来源 */
   sources: [
-    { t: "圣地地图 · 灌篮高手（8 处，含坐标与礼仪）", u: "https://screenpilgrimage.com/zh-Hans/title/slam-dunk/" },
-    { t: "ETtoday 2025-09-15 · 镰仓市在踏切旁设拍照区", u: "https://www.ettoday.net/news/20250915/3033834.htm" },
-    { t: "とある大人の備忘録 · 秒速5センチメートル 中種子・西之表編", u: "https://deep-adultweet.blog.jp/archives/29390035.html" },
-    { t: "とある大人の備忘録 · 参宮橋・豪徳寺・代々木編", u: "https://deep-adultweet.blog.jp/archives/6414372.html" },
-    { t: "JAXA · 種子島宇宙センター（开馆时间/休馆日）", u: "https://fanfun.jaxa.jp/visit/tanegashima/" },
-    { t: "鹿児島県立種子島中央高等学校（地址）", u: "http://www.edu.pref.kagoshima.jp/sh/tanechuo/" },
-    { t: "Wikipedia · 你的名字。（取景与设定参考）", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82" },
-    { t: "国立新美術館（开馆时间/休馆日）", u: "https://www.nact.jp/" },
-    { t: "飛騨市図書館（官网，开馆时间待核）", u: "https://www.hida-lib.jp/" },
-    { t: "OpenStreetMap（底图与部分坐标核对）", u: "https://www.openstreetmap.org/copyright" }
+    { t: "圣地地图 · 灌篮高手（8 处，含坐标与礼仪）", u: "https://screenpilgrimage.com/zh-Hans/title/slam-dunk/", works: ["slamdunk"] },
+    { t: "ETtoday 2025-09-15 · 镰仓市在踏切旁设拍照区", u: "https://www.ettoday.net/news/20250915/3033834.htm", works: ["slamdunk"] },
+    { t: "とある大人の備忘録 · 秒速5センチメートル 中種子・西之表編", u: "https://deep-adultweet.blog.jp/archives/29390035.html", works: ["byousoku"] },
+    { t: "とある大人の備忘録 · 参宮橋・豪徳寺・代々木編", u: "https://deep-adultweet.blog.jp/archives/6414372.html", works: ["byousoku"] },
+    { t: "JAXA · 種子島宇宙センター（开馆时间/休馆日）", u: "https://fanfun.jaxa.jp/visit/tanegashima/", works: ["byousoku"] },
+    { t: "鹿児島県立種子島中央高等学校（地址）", u: "http://www.edu.pref.kagoshima.jp/sh/tanechuo/", works: ["byousoku"] },
+    { t: "Wikipedia · 你的名字。（取景与设定参考）", u: "https://zh.wikipedia.org/wiki/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82", works: ["kimi"] },
+    { t: "国立新美術館（开馆时间/休馆日）", u: "https://www.nact.jp/", works: ["kimi"] },
+    { t: "飛騨市図書館（官网，开馆时间待核）", u: "https://www.hida-lib.jp/", works: ["kimi"] },
+    { t: "OpenStreetMap（底图与部分坐标核对）", u: "https://www.openstreetmap.org/copyright", works: ["all"] }
   ]
 };

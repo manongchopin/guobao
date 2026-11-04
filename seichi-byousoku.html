@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>秒速五厘米 · 种子岛取景地（圣地巡礼 01）</title>
+<meta name="description" content="秒速五厘米取景地：参宫桥、新宿、种子岛中央高校、中山海岸、宇宙中心等 9 个点位；含核实等级、交通、开放时间与礼仪。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/seichi-junrei.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body data-work="byousoku">
+
+<header class="hero">
+  <a class="back" href="seichi-junrei.html">← 圣地巡礼</a>
+  <p class="kicker">PLAN 18 · 01 · 5 CENTIMETERS PER SECOND · v0.3</p>
+  <h1>秒速五厘米 · 种子岛</h1>
+  <p class="lede">
+    东京的雪夜列车、种子岛的火箭与海岸。<br>
+    <span>离岛线，至少住两晚；种子岛 2–3 天 + 东京半天。</span>
+  </p>
+  <div class="seal" aria-hidden="true">秒</div>
+</header>
+
+<main class="wh-detail">
+
+  <section class="wh-section" id="overview">
+    <div class="sj-stats" id="sj-stats"></div>
+    <p class="sj-callout"><b>本页只做取景地清单与核实，不排行程。</b>种子岛是离岛：船/航班、岛内巴士、火箭发射日的住宿与管制都还没落实，标「待核」的地方没有编。</p>
+    <p class="sj-intro" id="sj-summary"></p>
+    <div class="sj-work-grid">
+      <div>
+        <h3 class="sj-sub">进出交通</h3>
+        <ul class="sj-list" id="sj-travel"></ul>
+      </div>
+      <div>
+        <h3 class="sj-sub">礼仪 / 风险</h3>
+        <ul class="sj-list sj-list--warn" id="sj-etiquette"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="wh-section" id="map">
+    <div class="sj-head">
+      <div><p class="sj-kicker">SPOTS · MAP</p><h2>本作点位地图</h2></div>
+      <p>按点位坐标画点，不是路线。<br>虚线圆点 = ≈ 约值。</p>
+    </div>
+    <div class="sj-map-shell">
+      <div class="sj-map-top">
+        <div class="sj-map-legend" id="sj-map-legend"></div>
+        <span class="sj-map-count" id="sj-map-count"></span>
+      </div>
+      <div id="sj-map" aria-label="秒速五厘米 · 种子岛点位地图"></div>
+    </div>
+    <p class="sj-map-note">底图 © OpenStreetMap contributors（ODbL）。坐标来自 OSM Nominatim、国土地理院地址检索或公开来源；地图不表示路线或交通方式。</p>
+  </section>
+
+  <section class="wh-section" id="matrix">
+    <div class="sj-head">
+      <div><p class="sj-kicker">SCENE → REAL PLACE</p><h2>“作品场景 → 现实地点”对照表</h2></div>
+      <p>只收本作点位。<br>没有来源的，不放进「已确认」。</p>
+    </div>
+    <div class="sj-table-top">
+      <div class="sj-table-filter" id="sj-table-cat"></div>
+      <span class="sj-table-count" id="sj-table-count"></span>
+    </div>
+    <p class="sj-map-note">表格可横向滑动；手机上看不全时左右拖动。</p>
+    <div class="sj-table-wrap">
+      <table class="sj-table">
+        <thead>
+          <tr>
+            <th>场景（剧透）</th>
+            <th>现实地点</th>
+            <th>核实</th>
+            <th>怎么去</th>
+            <th>时间 / 限制</th>
+          </tr>
+        </thead>
+        <tbody id="sj-table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="wh-section" id="spots">
+    <div class="sj-head">
+      <div><p class="sj-kicker">ONE BY ONE</p><h2>逐点：场景、怎么去、注意什么</h2></div>
+      <p><span id="sj-work-count"></span><br>拍摄对比只用文字，不用截图。</p>
+    </div>
+    <div class="sj-cards" id="sj-cards"></div>
+  </section>
+
+  <section class="wh-section" id="pending">
+    <div class="sj-head">
+      <div><p class="sj-kicker">STILL UNVERIFIED</p><h2>这条线还没核实完的</h2></div>
+      <p>不是“忘了写”，是还没查到可靠来源。<br>补齐前不升路线版。</p>
+    </div>
+    <ul class="sj-pending" id="sj-pending"></ul>
+  </section>
+
+  <section class="wh-section" id="sources">
+    <div class="sj-head">
+      <div><p class="sj-kicker">SOURCES</p><h2>来源</h2></div>
+      <p>页面只做文字与坐标整理；<br>图片、截图、影片素材均未使用。</p>
+    </div>
+    <ul class="sj-sources" id="sj-sources"></ul>
+    <p class="sj-versionline">数据版本 v<span id="sj-version">0.3</span> · 更新 <span id="sj-updated">2026-11-04</span> · 本页为“取景地清单”，不是可执行行程。</p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>旅行计划 18 · 圣地巡礼 01</span>
+    <span>v0.3 · 作品页</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+    <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
+  </div>
+</footer>
+
+<script src="seichi-junrei-data.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/seichi-work.js"></script>
+</body>
+</html>

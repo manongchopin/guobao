@@ -45,6 +45,7 @@
 .sj-map-filter button.is-active, .sj-table-filter button.is-active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 .sj-map-count { font-size: 10px; color: var(--ink-3); }
 .sj-map-legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 9px 0 0; font-size: 10px; color: var(--ink-3); }
+.sj-map-top .sj-map-legend { margin: 0; }
 .sj-map-legend span { display: inline-flex; align-items: center; gap: 5px; }
 .sj-dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
 .sj-dot--byousoku { color: #a8402f; }
