@@ -33,6 +33,27 @@ window.WORLD_IDEAS = {
       page: "ideas-norway.html",
       added: "2026-11-03",
       status: "checked"
+    },
+    {
+      id: "usa-west",
+      scope: "world",
+      title: "美国西部",
+      subtitle: "USA · WESTERN LOOP",
+      country: "美国",
+      countryEn: "United States",
+      continent: "北美洲",
+      summary: "洛杉矶落地，66 号公路进亚利桑那，大峡谷、纪念碑谷，北上百万美元公路，最后到黄石。五个州（路上会穿过犹他），一条走完至少三周。",
+      page: "ideas-usa-west.html",
+      layout: "grid",
+      regions: [
+        { id: "ca", title: "加州", subtitle: "CALIFORNIA · 海岸、沙漠与边境" },
+        { id: "nv", title: "内华达", subtitle: "NEVADA · 拉斯维加斯与胡佛水坝" },
+        { id: "az", title: "亚利桑那 / 犹他", subtitle: "ARIZONA · 66 号公路、大峡谷、纪念碑谷" },
+        { id: "co", title: "科罗拉多", subtitle: "COLORADO · 百万美元公路" },
+        { id: "wy", title: "怀俄明", subtitle: "WYOMING · 黄石" }
+      ],
+      added: "2026-11-04",
+      status: "seed"
     }
   ],
 
@@ -157,6 +178,185 @@ window.WORLD_IDEAS = {
         { title: "Trolltunga 官网 · 徒步信息（距离/用时/季节/排队）", url: "https://www.trolltunga.com/en/plan-your-hike/the-hike-to-trolltunga" },
         { title: "Wikipedia · Trolltunga（海拔/停车/救援）", url: "https://en.wikipedia.org/wiki/Trolltunga" }
       ]
+    },
+
+    /* ---------- 美国西部 · 加州 ---------- */
+    {
+      id: "us-ca-santa-monica", destinationId: "usa-west", regionId: "ca",
+      scope: "world", country: "美国", province: "加州", city: "洛杉矶 · 圣莫尼卡",
+      place: "Santa Monica, CA", title: "圣莫尼卡海滩 · 66 号公路终点", titleEn: "Santa Monica Pier",
+      type: "其他", why: "66 号公路的西端终点，从东往西开到这里算收尾。",
+      status: "seed", added: "2026-11-04", priority: 1
+    },
+    {
+      id: "us-ca-hollywood-walk", destinationId: "usa-west", regionId: "ca",
+      scope: "world", country: "美国", province: "加州", city: "洛杉矶 · 好莱坞",
+      place: "Hollywood, Los Angeles", title: "好莱坞星光大道", titleEn: "Hollywood Walk of Fame",
+      type: "其他", why: "落地洛杉矶第一晚顺路走一遍，不长留。",
+      status: "seed", added: "2026-11-04", priority: 2
+    },
+    {
+      id: "us-ca-hollywood-sign", destinationId: "usa-west", regionId: "ca",
+      scope: "world", country: "美国", province: "加州", city: "洛杉矶 · 好莱坞山",
+      place: "Hollywood Hills", title: "好莱坞山 · 标志牌", titleEn: "Hollywood Sign",
+      type: "其他", why: "想找个能拍到标志牌全景的观景点，不一定非要爬山。",
+      status: "seed", added: "2026-11-04", priority: 3
+    },
+    {
+      id: "us-ca-griffith", destinationId: "usa-west", regionId: "ca",
+      scope: "world", country: "美国", province: "加州", city: "洛杉矶 · 格里菲斯公园",
+      place: "Griffith Park", title: "格里菲斯天文台", titleEn: "Griffith Observatory",
+      type: "博物馆", why: "免费开放，能看洛杉矶天际线，也能顺带看展。",
+      status: "seed", added: "2026-11-04", priority: 4
+    },
+    {
+      id: "us-ca-highway-1", destinationId: "usa-west", regionId: "ca",
+      scope: "world", country: "美国", province: "加州", city: "大苏尔 · 1 号公路",
+      place: "Big Sur, CA", title: "加州 1 号公路", titleEn: "Highway 1 / Big Sur",
+      type: "自驾", why: "海岸线那一段，想慢慢开，不想赶。",
+      status: "seed", added: "2026-11-04", priority: 5
+    },
+    {
+      id: "us-ca-midway", destinationId: "usa-west", regionId: "ca",
+      scope: "world", country: "美国", province: "加州", city: "圣地亚哥 · 港区",
+      place: "San Diego Bay", title: "中途岛号航空母舰博物馆", titleEn: "USS Midway Museum",
+      type: "博物馆", why: "停在港边的航母，上去看甲板和机库。",
+      status: "seed", added: "2026-11-04", priority: 6
+    },
+    {
+      id: "us-ca-border-field", destinationId: "usa-west", regionId: "ca",
+      scope: "world", country: "美国", province: "加州", city: "圣地亚哥 · 边境",
+      place: "Border Field State Park", title: "边境线公园（美墨边境）", titleEn: "Border Field State Park",
+      type: "其他", why: "美国本土最西南角，铁丝网那边就是墨西哥。",
+      status: "seed", added: "2026-11-04", priority: 7
+    },
+    {
+      id: "us-ca-mojave", destinationId: "usa-west", regionId: "ca",
+      scope: "world", country: "美国", province: "加州", city: "莫哈维",
+      place: "Mojave National Preserve", title: "莫哈维国家保护区", titleEn: "Mojave National Preserve",
+      type: "国家公园", why: "洛杉矶到 66 号公路之间的大片荒漠，顺路穿过去。",
+      status: "seed", added: "2026-11-04", priority: 8
+    },
+    {
+      id: "us-ca-salvation-mountain", destinationId: "usa-west", regionId: "ca",
+      scope: "world", country: "美国", province: "加州", city: "尼兰",
+      place: "Niland, CA", title: "救赎山（彩虹山）", titleEn: "Salvation Mountain",
+      type: "其他", why: "一个人用颜料堆出来的山，照片很扎眼。",
+      status: "seed", added: "2026-11-04", priority: 9
+    },
+    {
+      id: "us-ca-slab-city", destinationId: "usa-west", regionId: "ca",
+      scope: "world", country: "美国", province: "加州", city: "尼兰",
+      place: "Niland, CA", title: "Slab City", titleEn: "Slab City",
+      type: "其他", why: "废弃军营变成的聚居地，和救赎山挨着，可以一起看。",
+      status: "seed", added: "2026-11-04", priority: 10
+    },
+
+    /* ---------- 内华达 ---------- */
+    {
+      id: "us-nv-las-vegas", destinationId: "usa-west", regionId: "nv",
+      scope: "world", country: "美国", province: "内华达", city: "拉斯维加斯",
+      place: "Las Vegas, NV", title: "拉斯维加斯", titleEn: "Las Vegas",
+      type: "其他", why: "路线中间歇脚，也是补给点。",
+      status: "seed", added: "2026-11-04", priority: 11
+    },
+    {
+      id: "us-nv-hoover-dam", destinationId: "usa-west", regionId: "nv",
+      scope: "world", country: "美国", province: "内华达", city: "胡佛水坝",
+      place: "Hoover Dam, NV/AZ", title: "胡佛水坝", titleEn: "Hoover Dam",
+      type: "其他", why: "拉斯维加斯往东南半小时，顺路看一眼。",
+      note: "1936 年建成，坝顶就是内华达与亚利桑那的州界。",
+      status: "seed", added: "2026-11-04", priority: 12
+    },
+
+    /* ---------- 亚利桑那 / 犹他 ---------- */
+    {
+      id: "us-az-route66", destinationId: "usa-west", regionId: "az",
+      scope: "world", country: "美国", province: "亚利桑那", city: "金曼 → 塞利格曼",
+      place: "Kingman–Seligman, AZ", title: "66 号公路（金曼—塞利格曼段）", titleEn: "Route 66",
+      type: "自驾", why: "想开一段还在的老 66，而不是只在博物馆里看。",
+      note: "66 号公路 1926 年通车、1985 年撤销国道编号；金曼到塞利格曼这段常被当作自驾段。",
+      status: "checked", added: "2026-11-04", priority: 13
+    },
+    {
+      id: "us-az-kingman", destinationId: "usa-west", regionId: "az",
+      scope: "world", country: "美国", province: "亚利桑那", city: "金曼",
+      place: "Kingman, AZ", title: "金曼 66 号公路博物馆", titleEn: "Route 66 Museum, Kingman",
+      type: "博物馆", why: "开 66 之前先看一遍背景，半小时到一小时。",
+      status: "seed", added: "2026-11-04", priority: 14
+    },
+    {
+      id: "us-az-grand-canyon-south", destinationId: "usa-west", regionId: "az",
+      scope: "world", country: "美国", province: "亚利桑那", city: "大峡谷 · 南缘",
+      place: "Grand Canyon South Rim, AZ", title: "大峡谷南缘", titleEn: "Grand Canyon South Rim",
+      type: "世界遗产", why: "整条线最主要的一站，南缘全年开放、设施最全。",
+      note: "大峡谷 1979 年列入世界遗产；南缘海拔约 2,100 m，比谷底凉得多。",
+      status: "checked", added: "2026-11-04", priority: 15
+    },
+    {
+      id: "us-az-yavapai", destinationId: "usa-west", regionId: "az",
+      scope: "world", country: "美国", province: "亚利桑那", city: "大峡谷 · 南缘",
+      place: "Yavapai Point, AZ", title: "亚瓦帕伊观景点", titleEn: "Yavapai Point",
+      type: "其他", why: "南缘看峡谷最开阔的几个点之一，旁边有地质博物馆。",
+      status: "seed", added: "2026-11-04", priority: 16
+    },
+    {
+      id: "us-az-helicopter", destinationId: "usa-west", regionId: "az",
+      scope: "world", country: "美国", province: "亚利桑那", city: "大峡谷 · 图萨扬",
+      place: "Tusayan, AZ", title: "大峡谷直升机", titleEn: "Grand Canyon Helicopter",
+      type: "其他", why: "从空中看一次峡谷，起飞点在图萨扬一带。",
+      note: "运营商和价格待核；旺季要提前订。",
+      status: "seed", added: "2026-11-04", priority: 17
+    },
+    {
+      id: "us-az-monument-valley", destinationId: "usa-west", regionId: "az",
+      scope: "world", country: "美国", province: "亚利桑那", city: "纪念碑谷",
+      place: "Monument Valley, AZ/UT", title: "纪念碑谷", titleEn: "Monument Valley",
+      type: "其他", why: "纳瓦霍保留地里的红岩台地，有一条园内自驾环线。",
+      note: "属纳瓦霍部落公园，不是国家公园；America the Beautiful 年票在这里不通用。门票待核。",
+      status: "checked", added: "2026-11-04", priority: 18
+    },
+    {
+      id: "us-az-forrest-gump", destinationId: "usa-west", regionId: "az",
+      scope: "world", country: "美国", province: "亚利桑那", city: "US-163 · 13 英里处",
+      place: "US-163, Monument Valley", title: "阿甘点", titleEn: "Forrest Gump Point",
+      type: "其他", why: "《阿甘正传》跑步那段的取景位置，路边就能停。",
+      status: "seed", added: "2026-11-04", priority: 19
+    },
+    {
+      id: "us-az-algodones", destinationId: "usa-west", regionId: "az",
+      scope: "world", country: "美国", province: "亚利桑那", city: "尤马 · 边境",
+      place: "Los Algodones, Baja California", title: "阿尔戈多内斯", titleEn: "Los Algodones",
+      type: "其他", why: "从 Andrade 口岸过境的小镇，可以当天往返。",
+      note: "要带护照；回程排队时间待核。",
+      status: "seed", added: "2026-11-04", priority: 20
+    },
+
+    /* ---------- 科罗拉多 ---------- */
+    {
+      id: "us-co-million-dollar", destinationId: "usa-west", regionId: "co",
+      scope: "world", country: "美国", province: "科罗拉多", city: "奥雷 → 西尔弗顿",
+      place: "US-550, Ouray–Silverton", title: "百万美元公路", titleEn: "Million Dollar Highway",
+      type: "自驾", why: "US-550 最险的一段，山崖一侧基本没有护栏。",
+      note: "奥雷到西尔弗顿约 40 km，弯多坡陡，冬天会封路。",
+      status: "checked", added: "2026-11-04", priority: 21
+    },
+
+    /* ---------- 怀俄明 ---------- */
+    {
+      id: "us-wy-yellowstone", destinationId: "usa-west", regionId: "wy",
+      scope: "world", country: "美国", province: "怀俄明", city: "黄石",
+      place: "Yellowstone, WY", title: "黄石国家公园", titleEn: "Yellowstone National Park",
+      type: "世界遗产", why: "整条线的北端，园区大到要住两三晚才走得完。",
+      note: "1872 年设立，是世界第一个国家公园；1978 年列入世界遗产。",
+      status: "checked", added: "2026-11-04", priority: 22
+    },
+    {
+      id: "us-wy-mammoth", destinationId: "usa-west", regionId: "wy",
+      scope: "world", country: "美国", province: "怀俄明", city: "黄石 · 猛犸",
+      place: "Mammoth Hot Springs, WY", title: "猛犸温泉", titleEn: "Mammoth Hot Springs",
+      type: "其他", why: "层层叠叠的钙华台地，从北门进园最先遇到。",
+      status: "seed", added: "2026-11-04", priority: 23
     }
   ]
 };

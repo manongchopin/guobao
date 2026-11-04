@@ -15,6 +15,7 @@
   var ideas = (D.ideas || []).filter(function (i) { return i.destinationId === destId; });
 
   var STATUS = { seed: "种子", checked: "查过", want: "想去", executable: "可执行" };
+  var layout = (dest && dest.layout === "grid") ? "grid" : "sections";
 
   function node(tag, cls, text) {
     var el = document.createElement(tag);
@@ -36,9 +37,77 @@
     var c = document.getElementById("wp-count");
     var k = document.getElementById("wp-km");
     var a = document.getElementById("wp-ascent");
+    var s = document.getElementById("wp-states");
     if (c) c.textContent = ideas.length;
     if (k) k.textContent = "约 " + num(km);
     if (a) a.textContent = "约 " + num(Math.round(ascent / 100) * 100);
+    if (s) {
+      var set = {};
+      ideas.forEach(function (i) { if (i.province) set[i.province] = 1; });
+      s.textContent = Object.keys(set).length;
+    }
+  }
+
+  /* 紧凑模式：按区域分块，每块一张卡片网格（条目多时用） */
+
+  var seq = { n: 0 };
+
+  function byPriority(a, b) { return (a.priority || 0) - (b.priority || 0); }
+
+  function itemNode(idea) {
+    seq.n++;
+    var art = node("article", "wp-item");
+    art.id = idea.id;
+    art.setAttribute("data-s", idea.status || "seed");
+
+    var top = node("div", "wp-item-top");
+    top.appendChild(node("span", "wp-item-no", String(seq.n).padStart(2, "0")));
+    top.appendChild(node("span", "wp-item-type", idea.type || "其他"));
+    top.appendChild(node("span", "wp-item-state", STATUS[idea.status] || "种子"));
+    art.appendChild(top);
+
+    var h = node("h4", "wp-item-title", idea.title || "");
+    if (idea.titleEn) {
+      h.appendChild(document.createTextNode(" "));
+      h.appendChild(node("em", "", idea.titleEn));
+    }
+    art.appendChild(h);
+
+    var meta = [idea.province, idea.city].filter(Boolean).join(" · ");
+    if (meta) art.appendChild(node("p", "wp-item-meta", meta));
+    if (idea.why) art.appendChild(node("p", "wp-item-why", idea.why));
+    if (idea.note) art.appendChild(node("p", "wp-item-note", idea.note));
+
+    return art;
+  }
+
+  function regionBlock(title, subtitle, list) {
+    var sec = node("section", "wp-region");
+    var head = node("div", "wp-region-head");
+    var left = node("div");
+    if (subtitle) left.appendChild(node("p", "wp-region-kicker", subtitle));
+    left.appendChild(node("h3", "", title));
+    head.appendChild(left);
+    head.appendChild(node("span", "wp-region-count", list.length + " 条"));
+    sec.appendChild(head);
+
+    var grid = node("div", "wp-items");
+    list.forEach(function (i) { grid.appendChild(itemNode(i)); });
+    sec.appendChild(grid);
+    return sec;
+  }
+
+  function renderGrid() {
+    var regions = (dest && Array.isArray(dest.regions)) ? dest.regions : [];
+    var used = {};
+    regions.forEach(function (r) {
+      var list = ideas.filter(function (i) { return i.regionId === r.id; }).sort(byPriority);
+      if (!list.length) return;
+      list.forEach(function (i) { used[i.id] = 1; });
+      root.appendChild(regionBlock(r.title, r.subtitle, list));
+    });
+    var rest = ideas.filter(function (i) { return !used[i.id]; }).sort(byPriority);
+    if (rest.length) root.appendChild(regionBlock("其他", "还没归入区域", rest));
   }
 
   function renderStones() {
@@ -49,6 +118,8 @@
       root.appendChild(empty);
       return;
     }
+
+    if (layout === "grid") { renderGrid(); return; }
 
     ideas.slice().sort(function (a, b) { return (a.priority || 0) - (b.priority || 0); }).forEach(function (idea, idx) {
       var art = node("article", "wp-stone");

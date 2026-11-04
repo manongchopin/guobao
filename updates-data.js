@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-04",
+    type: "页面",
+    title: "发散的全世界：美国西部自驾 23 条",
+    note: "五个区域归组 · 年票 / 无人机 / STOP 与里程换算",
+    href: "ideas-usa-west.html"
+  },
+  {
+    date: "2026-11-04",
     type: "计划",
     title: "旅行计划新增礼文岛和利尻岛",
     note: "v0.1 · 两岛+稚内门户 · 船班待核",
