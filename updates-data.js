@@ -9,8 +9,8 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-03",
     type: "足迹",
-    title: "我的行程：203 飞 + 6 铁 + 3 徒步",
-    note: "剔除澳门同行行程",
+    title: "我的行程：247 飞 + 6 铁 + 3 徒步",
+    note: "2025–2026 飞行 · 44 段",
     href: "trips.html"
   },
   {
