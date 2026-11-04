@@ -7,7 +7,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const SOURCE = "https://www.goratings.org/en/";
 const OUT = new URL("../data/go-ratings-top5.json", import.meta.url);
-const UA = "Mozilla/5.0 (compatible; guobao-site/1.0; +https://manongchopin.github.io/guobao/)";
+const UA = "Mozilla/5.0 (compatible; guobao-site/1.0; +https://chopinfisher.com/world/)";
 
 const res = await fetch(SOURCE, { headers: { "User-Agent": UA } });
 if (!res.ok) throw new Error(`Go Ratings HTTP ${res.status}`);

@@ -8,7 +8,7 @@ import { readFile, writeFile } from "node:fs/promises";
 const PAGE = "List of national parks of the United States";
 const API = "https://en.wikipedia.org/w/api.php?action=parse&prop=text&format=json&formatversion=2&page=" + encodeURIComponent(PAGE);
 const OUT = new URL("../data/usa-parks-visitors.json", import.meta.url);
-const UA = "Mozilla/5.0 (compatible; guobao-site/1.0; +https://manongchopin.github.io/guobao/)";
+const UA = "Mozilla/5.0 (compatible; guobao-site/1.0; +https://chopinfisher.com/world/)";
 
 const res = await fetch(API, { headers: { "User-Agent": UA } });
 if (!res.ok) throw new Error(`Wikipedia HTTP ${res.status}`);

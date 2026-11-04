@@ -23,7 +23,7 @@ const NAMES_FILE = join(HERE, "sports-names.json");
 const PRIZE_JSON = process.env.WTA_PRIZE_JSON || "/tmp/wta-ytd.json";
 const CAREER_JSON = process.env.WTA_CAREER_JSON || "/tmp/wta-career.json";
 
-const UA = "Mozilla/5.0 (compatible; guobao-site/1.0; +https://manongchopin.github.io/guobao/)";
+const UA = "Mozilla/5.0 (compatible; guobao-site/1.0; +https://chopinfisher.com/world/)";
 
 /* ---------------- 通用 ---------------- */
 

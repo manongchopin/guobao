@@ -29,7 +29,7 @@ jobs:
       - name: Download WTA prize money PDFs
         continue-on-error: true
         run: |
-          UA="Mozilla/5.0 (compatible; guobao-site/1.0; +https://manongchopin.github.io/guobao/)"
+          UA="Mozilla/5.0 (compatible; guobao-site/1.0; +https://chopinfisher.com/world/)"
           curl -sS -L -m 120 -A "$UA" -o /tmp/wta-ytd.pdf \
             "https://wtafiles.wtatennis.com/pdf/rankings/All_YTD_Prize_Money.pdf"
           curl -sS -L -m 120 -A "$UA" -o /tmp/wta-career.pdf \
