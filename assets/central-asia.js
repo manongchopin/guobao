@@ -112,6 +112,21 @@
     return '<article class="ca-zh-card"><span>ZH-003 · ' + esc(x.country) + '</span><h3>' + esc(x.name) + '</h3><p>' + esc(x.note) + '</p></article>';
   }).join("");
 
+  // 人物节
+  var P = D.person;
+  if (P && document.getElementById("ca-xian-timeline")) {
+    document.getElementById("ca-xian-kicker").innerHTML = esc(P.kicker);
+    document.getElementById("ca-xian-title").textContent = P.title;
+    document.getElementById("ca-xian-side").innerHTML = P.side || "";
+    document.getElementById("ca-xian-lede").textContent = P.lede;
+    document.getElementById("ca-xian-timeline").innerHTML = P.timeline.map(function (t) {
+      return '<li><time>' + esc(t.date) + '</time><p>' + esc(t.text) + '</p></li>';
+    }).join("");
+    document.getElementById("ca-xian-note").textContent = P.note;
+    document.getElementById("ca-xian-note2").textContent = P.note2;
+    document.getElementById("ca-xian-source").textContent = P.source;
+  }
+
   document.getElementById("ca-sources").innerHTML = D.sources.map(function (s) {
     return '<li><a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.name) + '</a></li>';
   }).join("");
