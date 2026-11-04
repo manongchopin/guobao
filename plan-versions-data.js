@@ -347,6 +347,20 @@ window.PLAN_VERSIONS = {
           "note": "建立三个横栏和计划入口"
         }
       ]
+    },
+    "busan-tsushima-iki-fukuoka": {
+      "title": "釜山—对马—壹歧—福冈",
+      "version": "0.1",
+      "status": "骨架",
+      "date": "2026-11-04",
+      "note": "四站顺序；渡轮、签证、停留时间待核",
+      "history": [
+        {
+          "v": "0.1",
+          "date": "2026-11-04",
+          "note": "建立四站骨架和计划入口"
+        }
+      ]
     }
   }
 };
