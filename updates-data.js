@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "旅行计划新增礼文岛和利尻岛",
+    note: "v0.1 · 两岛+稚内门户 · 船班待核",
+    href: "rebun-rishiri.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "新西兰自驾按 20 天行程稿排全线",
     note: "v0.2 · 基督城进奥克兰出 · 南岛 13 天 + 渡轮 + 北岛 7 天 · Roys Peak 封山已核",
     href: "new-zealand-roadtrip.html"
