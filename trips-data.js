@@ -49,7 +49,17 @@ window.TRIPS = {
     { month: "2015-08", flight: "CZ3795", from: "广州", fromCode: "CAN", to: "义乌", toCode: "YIW", km: 942 },
     { month: "2015-09", flight: "HX253", from: "台北桃园", fromCode: "TPE", to: "香港", toCode: "HKG", km: 806 },
     { month: "2015-09", flight: "HX264", from: "香港", fromCode: "HKG", to: "台北桃园", toCode: "TPE", km: 806 },
-    { month: "2015-09", flight: "CA191", from: "上海浦东", fromCode: "PVG", to: "台北桃园", toCode: "TPE", km: 677 }
+    { month: "2015-09", flight: "CA191", from: "上海浦东", fromCode: "PVG", to: "台北桃园", toCode: "TPE", km: 677 },
+    { month: "2016-01", flight: "CA150", from: "台北桃园", fromCode: "TPE", to: "杭州", toCode: "HGH", km: 578 },
+    { month: "2016-02", flight: "CI202", from: "上海虹桥", fromCode: "SHA", to: "台北松山", toCode: "TSA", km: 682 },
+    { month: "2016-07", flight: "CZ604", from: "台北桃园", fromCode: "TPE", to: "义乌", toCode: "YIW", km: 489 },
+    { month: "2016-07", flight: "CZ603", from: "义乌", fromCode: "YIW", to: "台北桃园", toCode: "TPE", km: 489 },
+    { month: "2016-08", flight: "MM22", from: "台北桃园", fromCode: "TPE", to: "大阪", toCode: "KIX", km: 1703 },
+    { month: "2016-08", flight: "MM27", from: "大阪", fromCode: "KIX", to: "台北桃园", toCode: "TPE", km: 1703 },
+    { month: "2016-08", flight: "CZ604", from: "台北桃园", fromCode: "TPE", to: "义乌", toCode: "YIW", km: 489 },
+    { month: "2016-09", flight: "CZ603", from: "义乌", fromCode: "YIW", to: "台北桃园", toCode: "TPE", km: 489 },
+    { month: "2016-09", flight: "CX495", from: "台北桃园", fromCode: "TPE", to: "香港", toCode: "HKG", km: 806 },
+    { month: "2016-09", flight: "CX402", from: "香港", fromCode: "HKG", to: "台北桃园", toCode: "TPE", km: 806 }
   ],
   "trains": [
     { month: "2026-10", train: "G456", from: "上海虹桥", to: "武汉", km: 661 },
