@@ -624,6 +624,17 @@ window.CENTRAL_ASIA = {
       "where": "吉尔吉斯斯坦 · 卡拉科尔",
       "why": "1907—1910 年由迁居当地的东干人（华人穆斯林）建造，木构中国式清真寺，不用钉子。",
       "access": "伊塞克湖东岸；从比什凯克绕湖支线。"
+    },
+    {
+      "id": "xianxinghai",
+      "name": "冼星海纪念碑",
+      "en": "Monument to Xian Xinghai",
+      "lat": 43.2158,
+      "lng": 76.8983,
+      "level": "D",
+      "where": "哈萨克斯坦 · 阿拉木图",
+      "why": "1940 年 5 月，冼星海赴苏联为纪录片《延安与八路军》配乐；苏德战争爆发、制作停顿，他滞留阿拉木图，与哈萨克作曲家拜卡达莫夫结识，并在此完成《民族解放交响曲》《神圣之战》与交响诗《阿曼盖尔达》。1945 年因肺结核病逝于莫斯科，1983 年骨灰回国，葬于广州星海园。",
+      "access": "Бостандык 区，原弗拉基米尔大街（1998 年改名冼星海街）与谢尔克巴耶夫大街路口。纪念碑 1999 年立，2017 年列入阿拉木图市国家历史文化遗产名录；2025 年 4—6 月修缮，广场作莲花形，三块花岗岩象征哈萨克斯坦、中国、俄罗斯，铭文用哈/中/俄三种文字，方尖碑刻《阿曼盖尔达》首句旋律。坐标为按地址推定，误差约 100 米。"
     }
   ],
   "levels": [
@@ -641,6 +652,11 @@ window.CENTRAL_ASIA = {
       "id": "C",
       "name": "C · 华人移民遗迹",
       "color": "#8a6338"
+    },
+    {
+      "id": "D",
+      "name": "D · 近代人物与事件",
+      "color": "#4d5a6a"
     }
   ],
   "sources": [
@@ -659,6 +675,18 @@ window.CENTRAL_ASIA = {
     {
       "name": "UNESCO：Silk Roads: Zarafshan-Karakum Corridor",
       "url": "https://whc.unesco.org/en/list/1675/"
+    },
+    {
+      "name": "新华网：阿拉木图冼星海纪念设施修缮后重新开放（2025-06-27）",
+      "url": "https://www2.xinhuanet.com/20250627/2abf16da8332445ab48ac3702aad14b3/c.html"
+    },
+    {
+      "name": "Tengrinews：阿拉木图冼星海纪念碑与广场修缮开放（2025-06-27，俄文）",
+      "url": "https://tengrinews.kz/curious/pamyat-o-drujbe-v-almatyi-obnovili-monument-si-sinhayu-574026/"
+    },
+    {
+      "name": "李莎《我的中国缘分：李立三夫人李莎回忆录》（外研社 2009）· 书目页",
+      "url": "https://book.douban.com/subject/3601827/"
     }
   ],
   "zh003": [
