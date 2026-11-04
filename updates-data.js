@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "礼文岛和利尻岛扩成 6 天 5 晚",
+    note: "v0.3 · 加礼文西海岸 8 小时纵走 · 礼文 3 晚 · 敦盛草花期与 6 月中旬错位已标",
+    href: "rebun-rishiri.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "礼文岛和利尻岛排成 5 天 4 晚",
     note: "v0.2 · 稚内往返，礼文先、利尻后 · 直达船全年仅 1–2 班/天 · 两座山零缓冲",
     href: "rebun-rishiri.html"
