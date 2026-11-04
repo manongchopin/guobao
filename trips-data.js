@@ -27,7 +27,17 @@ window.TRIPS = {
     { month: "2013-07", flight: "SC4697", from: "西安", fromCode: "XIY", to: "西宁", toCode: "XNN", km: 650 },
     { month: "2013-08", flight: "CZ3797", from: "深圳", fromCode: "SZX", to: "杭州", toCode: "HGH", km: 1071 },
     { month: "2013-08", flight: "CZ5901", from: "杭州", fromCode: "HGH", to: "深圳", toCode: "SZX", km: 1071 },
-    { month: "2013-09", flight: "CZ6397", from: "义乌", fromCode: "YIW", to: "深圳", toCode: "SZX", km: 970 }
+    { month: "2013-09", flight: "CZ6397", from: "义乌", fromCode: "YIW", to: "深圳", toCode: "SZX", km: 970 },
+    { month: "2014-01", flight: "CZ3501", from: "广州", fromCode: "CAN", to: "杭州", toCode: "HGH", km: 1038 },
+    { month: "2014-02", flight: "CZ3875", from: "义乌", fromCode: "YIW", to: "厦门", toCode: "XMN", km: 566 },
+    { month: "2014-02", flight: "CZ6273", from: "杭州", fromCode: "HGH", to: "深圳", toCode: "SZX", km: 1071 },
+    { month: "2014-03", flight: "MU722", from: "香港", fromCode: "HKG", to: "上海虹桥", toCode: "SHA", km: 1232 },
+    { month: "2014-03", flight: "MU723", from: "上海浦东", fromCode: "PVG", to: "香港", toCode: "HKG", km: 1256 },
+    { month: "2014-07", flight: "HX126", from: "香港", fromCode: "HKG", to: "杭州", toCode: "HGH", km: 1094 },
+    { month: "2014-07", flight: "HX127", from: "杭州", fromCode: "HGH", to: "香港", toCode: "HKG", km: 1094 },
+    { month: "2014-08", flight: "CZ6485", from: "深圳", fromCode: "SZX", to: "义乌", toCode: "YIW", km: 970 },
+    { month: "2014-08", flight: "CA149", from: "杭州", fromCode: "HGH", to: "台北桃园", toCode: "TPE", km: 578 },
+    { month: "2014-10", flight: "ZH9812", from: "上海浦东", fromCode: "PVG", to: "深圳", toCode: "SZX", km: 1233 }
   ],
   "trains": [
     { month: "2026-10", train: "G456", from: "上海虹桥", to: "武汉", km: 661 },

@@ -9,8 +9,8 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-03",
     type: "足迹",
-    title: "我的行程：20 飞 + 6 铁 + 3 徒步",
-    note: "台湾高铁 · 铁路图自适应",
+    title: "我的行程：30 飞 + 6 铁 + 3 徒步",
+    note: "2014 飞行 · 10 段",
     href: "trips.html"
   },
   {

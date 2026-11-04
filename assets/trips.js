@@ -10,7 +10,9 @@
     YIW: [120.0320, 29.3447], CAN: [113.2988, 23.3924], SZX: [113.8107, 22.6393],
     HGH: [120.4344, 30.2295], TSA: [121.5519, 25.0694], HKG: [113.9185, 22.3080],
     XIY: [108.7516, 34.4471], XNN: [102.0430, 36.5275], KTM: [85.3591, 27.6966],
-    KUL: [101.7099, 2.7456]
+    KUL: [101.7099, 2.7456],
+    PVG: [121.8083, 31.1443], SHA: [121.3363, 31.1979],
+    TPE: [121.2328, 25.0777], XMN: [118.1277, 24.5440]
   };
   var RAIL = {
     "上海虹桥": [121.3200, 31.1940],
@@ -202,6 +204,16 @@
       };
     });
     var LABELED = { KTM: 1, KUL: 1, XNN: 1, XIY: 1, HKG: 1, TSA: 1 };
+    var lngs = [], lats = [];
+    Object.keys(airports).forEach(function (code) {
+      lngs.push(airports[code][0]); lats.push(airports[code][1]);
+    });
+    var minLng = Math.min.apply(null, lngs), maxLng = Math.max.apply(null, lngs);
+    var minLat = Math.min.apply(null, lats), maxLat = Math.max.apply(null, lats);
+    var padLng = Math.max((maxLng - minLng) * 0.18, 1.2);
+    var padLat = Math.max((maxLat - minLat) * 0.18, 1.2);
+    var bounds = [[minLng - padLng, maxLat + padLat], [maxLng + padLng, minLat - padLat]];
+
     var dots = Object.keys(airports).map(function (code) {
       return {
         name: code, value: airports[code],
@@ -222,10 +234,10 @@
         formatter: function (p) { return p.data && p.data.value ? p.data.value : ""; }
       },
       geo: {
-        map: "trips-world", roam: true, zoom: 4.4, center: [103, 22],
+        map: "trips-world", roam: true, boundingCoords: bounds,
         itemStyle: { areaColor: "#efe8da", borderColor: "#d9cfbd", borderWidth: 0.6 },
         emphasis: { disabled: true }, select: { disabled: true },
-        scaleLimit: { min: 1, max: 12 }
+        scaleLimit: { min: 1, max: 30 }
       },
       series: [
         {
