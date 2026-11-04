@@ -2415,6 +2415,97 @@ a.sh-row:hover .sh-n { color: var(--red); }
   .sh-visit { grid-area: v; align-self: end; }
 }
 
+/* ---------- 禁止出境文物 · 相关展览条 ---------- */
+
+.fb-exh-wrap {
+  max-width: 1120px;
+  margin: 10px auto 0;
+  padding: 0 28px;
+}
+
+.fb-exh-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--red);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.fb-exh-banner:hover {
+  border-color: var(--red);
+  background: #fffdf8;
+  box-shadow: 0 6px 16px rgba(29, 38, 34, 0.07);
+}
+
+.fb-exh-banner:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
+.fb-exh-cover {
+  display: block;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 60px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+}
+
+.fb-exh-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.fb-exh-kicker {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--red);
+}
+
+.fb-exh-title {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.fb-exh-meta {
+  font-size: 10.5px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+.fb-exh-arrow {
+  margin-left: auto;
+  flex: 0 0 auto;
+  font-size: 11px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.fb-exh-arrow i {
+  font-style: normal;
+  margin-left: 6px;
+  color: var(--red);
+}
+
+@media (max-width: 720px) {
+  .fb-exh-wrap { padding: 0 20px; }
+  .fb-exh-banner { gap: 10px; padding: 9px 10px; }
+  .fb-exh-cover { width: 34px; height: 54px; }
+  .fb-exh-title { font-size: 14.5px; }
+  .fb-exh-meta { font-size: 9.5px; }
+  .fb-exh-arrow { display: none; }
+}
+
 /* ---------- 禁止出境文物 · 表格 ---------- */
 
 .fb-table { border-top: 1px solid var(--ink); }
