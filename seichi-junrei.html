@@ -3,89 +3,117 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>圣地巡礼 · 旅行计划 18</title>
-<meta name="description" content="动画圣地巡礼计划骨架：秒速五厘米·种子岛、灌篮高手、你的名字。">
+<title>圣地巡礼 · 三个作品 26 个取景地（v0.2）</title>
+<meta name="description" content="动画圣地巡礼 v0.2：秒速五厘米·种子岛、灌篮高手·镰仓湘南、你的名字·飞驒东京诹访。26 个点位的核实等级、交通、开放时间与拍摄提示。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/seichi-junrei.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
 
 <header class="hero">
   <a class="back" href="plans.html">← 旅行计划</a>
-  <p class="kicker">PLAN 18 · ANIME PILGRIMAGE · v0.1</p>
+  <p class="kicker">PLAN 18 · ANIME PILGRIMAGE · v0.2</p>
   <h1>圣地巡礼</h1>
   <p class="lede">
-    把动画里的背景，放回现实的地图上。<br>
-    <span>三个作品，先各留一条横栏；具体地点和路线等新会话再核。</span>
+    三个作品，26 个点位：种子岛的离岛线、镰仓—湘南的城市线、东京—飞驒—诹访的跨县线。<br>
+    <span>这一版只做“取景地清单 + 核实等级”，不做可执行行程；路线、班次、住宿留到 v0.3。</span>
   </p>
   <div class="seal" aria-hidden="true">巡</div>
 </header>
 
 <main class="wh-detail">
-  <section class="wh-section">
-    <p class="sj-callout"><b>这是骨架页：</b>下面三个横栏只标作品和大致方向，不是已经核实的取景地清单。具体地点、交通、开放情况和版权，都要再查。</p>
-    <p class="sj-intro">“圣地巡礼”最容易被写成一张网红打卡表。这里先按作品分三条线，之后再决定每条线是“城市漫步”“离岛路线”还是“跨县长途”。</p>
+
+  <section class="wh-section" id="overview">
+    <div class="sj-stats" id="sj-stats"></div>
+    <p class="sj-callout" id="sj-callout"><b>这是 v0.2：</b>每个点位都标了“作品明确出现 / 粉丝公认的原型 / 只是氛围相似”，并尽量给出交通、开放时间和来源。没查到的时间、班次、规则写“待核”，没有编。</p>
+    <p class="sj-intro" id="sj-intro"></p>
+    <p class="sj-intro"><b>剧透：</b>本页直接写场景与剧情，不折叠。图片版权未清，本版不使用动画截图，也不做截图与实景拼图；“拍摄对比”只写构图和机位文字。</p>
   </section>
 
   <section class="wh-section" id="works">
     <div class="sj-head">
       <div><p class="sj-kicker">THREE WORKS · THREE ROUTES</p><h2>三个作品，三条线</h2></div>
-      <p>横栏先占位。<br>点进去之前，先确认要做什么深度。</p>
+      <p>点横栏跳到对应段落。<br>每条线的天数按地理定，不硬凑成同一形态。</p>
     </div>
-
-    <a class="sj-band" href="#work-1">
-      <span class="sj-no">01</span>
-      <span class="sj-band-main"><span class="sj-band-kicker">5 CENTIMETERS PER SECOND · TANEGASHIMA</span><span class="sj-band-title">秒速五厘米 · 种子岛</span><span class="sj-band-desc">鹿儿岛县种子岛：火箭、海岸、学校与信号灯。离岛路线，交通和住宿要先排。</span></span>
-      <span class="sj-band-side">种子岛<br>离岛线</span>
-      <span class="sj-band-arrow">→</span>
-    </a>
-
-    <a class="sj-band" href="#work-2">
-      <span class="sj-no">02</span>
-      <span class="sj-band-main"><span class="sj-band-kicker">SLAM DUNK · KAMAKURA / SHONAN</span><span class="sj-band-title">灌篮高手</span><span class="sj-band-desc">镰仓、江之电、湘南海岸。经典路口只是入口，不要把整条线缩成一个打卡点。</span></span>
-      <span class="sj-band-side">镰仓<br>湘南线</span>
-      <span class="sj-band-arrow">→</span>
-    </a>
-
-    <a class="sj-band" href="#work-3">
-      <span class="sj-no">03</span>
-      <span class="sj-band-main"><span class="sj-band-kicker">YOUR NAME · HIDA / TOKYO / SUWA</span><span class="sj-band-title">你的名字</span><span class="sj-band-desc">飞驒古川、东京、诹访湖。跨地域，最适合做成“东京 + 中部”的组合线。</span></span>
-      <span class="sj-band-side">东京<br>中部线</span>
-      <span class="sj-band-arrow">→</span>
-    </a>
+    <div id="sj-works"></div>
   </section>
 
-  <section class="wh-section" id="work-1">
-    <h2>01 秒速五厘米 · 种子岛</h2>
-    <p class="sj-note">待整理：种子岛内的具体取景地、租车/巴士、渡轮或飞机进出、住宿点。先不要把“种子岛”写成“一天能打完”。</p>
-  </section>
-  <section class="wh-section" id="work-2">
-    <h2>02 灌篮高手</h2>
-    <p class="sj-note">待整理：镰仓—江之电—湘南海岸的实际点位、人流与拍摄礼仪；路口不是唯一目的地。</p>
-  </section>
-  <section class="wh-section" id="work-3">
-    <h2>03 你的名字</h2>
-    <p class="sj-note">待整理：飞驒古川、东京、诹访湖之间的交通；跨县路线需要先定“从东京进出还是中部进出”。</p>
+  <section class="wh-section" id="map">
+    <div class="sj-head">
+      <div><p class="sj-kicker">ALL SPOTS · MAP</p><h2>26 个点位总览</h2></div>
+      <p>按作品筛选；虚线圆点是坐标约值。<br>点位是点，不是路线。</p>
+    </div>
+    <div class="sj-map-shell">
+      <div class="sj-map-top">
+        <div class="sj-map-filter" id="sj-map-filter"></div>
+        <span class="sj-map-count" id="sj-map-count"></span>
+      </div>
+      <div id="sj-map" aria-label="圣地巡礼点位地图"></div>
+    </div>
+    <div class="sj-map-legend">
+      <span><i class="sj-dot sj-dot--byousoku"></i>01 秒速五厘米</span>
+      <span><i class="sj-dot sj-dot--slamdunk"></i>02 灌篮高手</span>
+      <span><i class="sj-dot sj-dot--kimi"></i>03 你的名字</span>
+      <span>实线圆点 = 已核对坐标；虚线圆点 = ≈ 约值</span>
+    </div>
+    <p class="sj-map-note">底图 © OpenStreetMap contributors（ODbL）。点位坐标来自 OSM Nominatim、国土地理院地址检索或公开来源，个别点位（落合巴士站）只到约值。地图不表示路线或交通方式。</p>
   </section>
 
-  <section class="wh-section">
-    <h2>下一步要先定</h2>
-    <ol class="sj-questions">
-      <li>三个作品都做，还是先做其中一个？</li>
-      <li>只列现实取景地，还是要做可执行路线？</li>
-      <li>需要地图、交通、拍摄对比和开放时间吗？</li>
-      <li>是否接受作品剧透/场景说明？</li>
-      <li>只做日本境内，还是以后扩展？</li>
-    </ol>
+  <section class="wh-section" id="matrix">
+    <div class="sj-head">
+      <div><p class="sj-kicker">SCENE → REAL PLACE</p><h2>“作品场景 → 现实地点”对照表</h2></div>
+      <p>按作品和核实等级筛。<br>没有核实来源的，不放进“已确认”。</p>
+    </div>
+    <div class="sj-table-top">
+      <div class="sj-table-filter" id="sj-table-work"></div>
+      <div class="sj-table-filter" id="sj-table-cat"></div>
+      <span class="sj-table-count" id="sj-table-count"></span>
+    </div>
+    <p class="sj-map-note">表格可横向滑动；手机上看不全时左右拖动。</p>
+    <div class="sj-table-wrap">
+      <table class="sj-table">
+        <thead>
+          <tr>
+            <th>作品</th>
+            <th>场景（剧透）</th>
+            <th>现实地点</th>
+            <th>核实</th>
+            <th>怎么去</th>
+            <th>时间 / 限制</th>
+          </tr>
+        </thead>
+        <tbody id="sj-table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <div id="sj-work-sections"></div>
+
+  <section class="wh-section" id="pending">
+    <div class="sj-head">
+      <div><p class="sj-kicker">STILL UNVERIFIED</p><h2>还没核实完的</h2></div>
+      <p>这些不是“忘了写”，是还没查到可靠来源。<br>v0.3 之前逐条补齐。</p>
+    </div>
+    <ul class="sj-pending" id="sj-pending"></ul>
+  </section>
+
+  <section class="wh-section" id="sources">
+    <div class="sj-head">
+      <div><p class="sj-kicker">SOURCES</p><h2>来源</h2></div>
+      <p>页面只做文字与坐标整理；<br>图片、截图、影片素材均未使用。</p>
+    </div>
+    <ul class="sj-sources" id="sj-sources"></ul>
+    <p class="sj-versionline">数据版本 v<span id="sj-version">0.2</span> · 更新 <span id="sj-updated">2026-11-04</span> · 本页为“取景地清单”，不是可执行行程。</p>
   </section>
 </main>
 
 <footer class="footer">
   <div class="footer-inner">
     <span>旅行计划 18 · 圣地巡礼</span>
-    <span>v0.1 · 骨架</span>
+    <span>v0.2 · 取景地清单</span>
     <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
     <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
   </div>
@@ -93,5 +121,8 @@
 
 <script src="plan-versions-data.js"></script>
 <script src="assets/plan-version.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="seichi-junrei-data.js"></script>
+<script src="assets/seichi-junrei.js"></script>
 </body>
 </html>

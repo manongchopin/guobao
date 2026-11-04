@@ -1,25 +1,145 @@
+/* 圣地巡礼 · 页面样式
+   v0.2：三条横栏、总览地图、对照表、逐条卡片
+*/
 .sj-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 12px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
 .sj-callout b { color: var(--ink); }
-.sj-intro { margin: 0; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
+.sj-intro { margin: 0 0 14px; font-size: 12.5px; line-height: 1.9; color: var(--ink-2); }
+
+/* ---------- 统计 ---------- */
+.sj-stats { display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); margin: 0 0 14px; }
+.sj-stat { flex: 1 1 110px; padding: 10px 14px 10px 0; border-right: 1px solid var(--line-soft); }
+.sj-stat:last-child { border-right: 0; }
+.sj-stat b { display: block; font-family: var(--serif); font-size: 26px; line-height: 1.2; }
+.sj-stat span { font-size: 9px; letter-spacing: .12em; color: var(--ink-3); }
+
+/* ---------- 标题 ---------- */
 .sj-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; border-top: 1px solid var(--ink); padding-top: 14px; margin-bottom: 9px; }
 .sj-head h2 { margin: 0; }
-.sj-head > p { max-width: 330px; margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); text-align: right; }
+.sj-head > p { max-width: 340px; margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); text-align: right; }
 .sj-kicker { margin: 0 0 4px; font-family: var(--sans); font-size: 9px; letter-spacing: .14em; color: var(--red); }
-.sj-band { display: grid; grid-template-columns: 44px 1fr 100px 28px; gap: 12px; align-items: center; border-top: 1px solid var(--ink); padding: 13px 0; color: var(--ink); text-decoration: none; }
+.sj-ja { font-size: 10px; color: var(--ink-3); letter-spacing: .02em; }
+.sj-sub { margin: 0 0 6px; font-family: var(--serif); font-size: 15px; }
+
+/* ---------- 三条横栏 ---------- */
+.sj-band { display: grid; grid-template-columns: 44px 1fr 130px 28px; gap: 12px; align-items: center; border-top: 1px solid var(--ink); padding: 13px 0; color: var(--ink); text-decoration: none; }
 .sj-band:hover { background: var(--paper-2); }
 .sj-no { font-family: var(--mono); font-size: 9px; color: var(--red); }
 .sj-band-kicker { display: block; font-family: var(--sans); font-size: 8px; letter-spacing: .1em; color: var(--ink-3); }
-.sj-band-title { display: block; margin: 3px 0; font-family: var(--serif); font-size: 26px; }
+.sj-band-title { display: block; margin: 3px 0; font-family: var(--serif); font-size: 25px; }
+.sj-band-title::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 8px; background: var(--work, var(--red)); vertical-align: 4px; }
 .sj-band-desc { display: block; font-size: 10px; line-height: 1.6; color: var(--ink-3); }
-.sj-band-side { font-size: 9px; line-height: 1.6; color: var(--ink-3); text-align: right; }
+.sj-band-side { font-size: 9px; line-height: 1.7; color: var(--ink-3); text-align: right; }
 .sj-band-arrow { font-size: 18px; color: var(--red); text-align: right; }
-.sj-note { margin: 0; font-size: 11px; line-height: 1.75; color: var(--ink-3); }
-.sj-questions { margin: 0; padding-left: 20px; }
-.sj-questions li { margin: 0 0 6px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+
+/* ---------- 地图 ---------- */
+.sj-map-shell { border: 1px solid var(--line); background: var(--paper-2); padding: 10px; }
+#sj-map { height: 440px; background: #e8e4d8; }
+.sj-map-fallback { margin: 0; padding: 30px 18px; font-size: 12px; color: var(--ink-2); }
+.sj-map-top { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.sj-map-filter, .sj-table-filter { display: flex; flex-wrap: wrap; gap: 6px; }
+.sj-map-filter button, .sj-table-filter button {
+  border: 1px solid var(--line); background: transparent; color: var(--ink-2);
+  font-family: var(--sans); font-size: 10px; padding: 5px 9px; cursor: pointer;
+}
+.sj-map-filter button:hover, .sj-table-filter button:hover { border-color: var(--ink-3); color: var(--ink); }
+.sj-map-filter button.is-active, .sj-table-filter button.is-active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.sj-map-count { font-size: 10px; color: var(--ink-3); }
+.sj-map-legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 9px 0 0; font-size: 10px; color: var(--ink-3); }
+.sj-map-legend span { display: inline-flex; align-items: center; gap: 5px; }
+.sj-dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.sj-dot--byousoku { color: #a8402f; }
+.sj-dot--slamdunk { color: #2f5d50; }
+.sj-dot--kimi { color: #557486; }
+.sj-map-note { margin: 8px 0 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
+
+/* 地图 pin */
+.sj-pin-wrap { background: transparent; border: 0; }
+.sj-pin {
+  display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--pin, var(--red)); color: #fffdf7; font-family: var(--mono); font-size: 9px;
+  border: 2px solid #fffdf7; box-shadow: 0 1px 4px rgba(0,0,0,.35);
+}
+.sj-pin.is-approx { border-style: dashed; }
+.sj-pop { font-size: 11px; line-height: 1.6; color: var(--ink); }
+.sj-pop p { margin: 4px 0; }
+.sj-pop b { font-family: var(--serif); font-size: 14px; }
+.sj-pop-kicker { font-size: 9px; letter-spacing: .08em; color: var(--ink-3); }
+.sj-pop-ja { font-size: 10px; color: var(--ink-3); }
+.sj-pop-meta { color: var(--ink-2); }
+.sj-pop-link { color: var(--red); text-decoration: none; }
+.sj-approx { font-family: var(--mono); font-size: 9px; color: var(--amber); }
+
+/* ---------- 对照表 ---------- */
+.sj-table-top { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin: 0 0 8px; }
+.sj-table-count { font-size: 10px; color: var(--ink-3); }
+.sj-table-wrap { overflow-x: auto; border-top: 1px solid var(--ink); }
+.sj-table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 11px; }
+.sj-table th { white-space: nowrap; text-align: left; font-family: var(--sans); font-size: 9px; letter-spacing: .1em; color: var(--ink-3); font-weight: 500; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line); vertical-align: bottom; }
+.sj-table td:first-child { white-space: nowrap; }
+.sj-table td { padding: 9px 10px 9px 0; border-bottom: 1px solid var(--line-soft); vertical-align: top; line-height: 1.6; color: var(--ink-2); }
+.sj-table td b { color: var(--ink); font-weight: 600; }
+.sj-table tr:target { background: var(--paper-2); }
+.sj-work-dot { display: inline-block; width: 7px; height: 7px; margin-right: 5px; background: var(--work, var(--red)); }
+.sj-badge { display: inline-block; padding: 1px 6px; border: 1px solid currentColor; font-size: 9px; line-height: 1.6; white-space: nowrap; }
+.sj-badge--confirmed { color: var(--green); }
+.sj-badge--fan { color: var(--amber); }
+.sj-badge--mood { color: var(--blue); }
+
+/* ---------- 作品段 ---------- */
+.sj-work-summary { margin: 0 0 14px; font-size: 12px; line-height: 1.9; color: var(--ink-2); }
+.sj-work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 0 0 18px; }
+.sj-list { margin: 0; padding-left: 18px; }
+.sj-list li { margin: 0 0 5px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+.sj-list--warn li::marker { color: var(--red); }
+.sj-cards { display: grid; gap: 0; }
+.sj-card { border-top: 1px solid var(--line); padding: 14px 0; scroll-margin-top: 20px; }
+.sj-card:target { background: var(--paper-2); }
+.sj-card-head { display: grid; grid-template-columns: 34px 1fr auto; gap: 10px; align-items: start; margin-bottom: 8px; }
+.sj-card-no { font-family: var(--mono); font-size: 10px; color: var(--work, var(--red)); padding-top: 4px; }
+.sj-card h3 { margin: 0; font-family: var(--serif); font-size: 19px; line-height: 1.35; }
+.sj-card h3 + .sj-ja { margin: 2px 0 0; }
+.sj-card-scene { margin: 0 0 9px; font-size: 11.5px; line-height: 1.8; color: var(--ink-2); }
+.sj-card-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 7px 18px; margin: 0 0 9px; }
+.sj-card-meta > div { margin: 0; }
+.sj-card-meta dt { font-size: 9px; letter-spacing: .08em; color: var(--ink-3); margin-bottom: 2px; }
+.sj-card-meta dd { margin: 0; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+.sj-card-foot { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+.sj-card-src { font-size: 9px; color: var(--ink-3); line-height: 1.7; }
+.sj-card-src a { color: var(--ink-3); text-decoration-color: var(--line); }
+.sj-card-src a:hover { color: var(--red); }
+.sj-fly { border: 1px solid var(--line); background: transparent; color: var(--ink-2); font-family: var(--sans); font-size: 9px; padding: 4px 8px; cursor: pointer; }
+.sj-fly:hover { border-color: var(--red); color: var(--red); }
+
+.sj-note-box { border-left: 2px solid var(--amber); background: var(--paper-2); padding: 9px 12px; margin: 14px 0 0; font-size: 10.5px; line-height: 1.8; color: var(--ink-2); }
+.sj-note-box b { color: var(--ink); }
+
+/* ---------- 待核 / 来源 ---------- */
+.sj-pending { margin: 0; padding: 0; list-style: none; }
+.sj-pending li { display: grid; grid-template-columns: 24px 1fr; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--line-soft); font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+.sj-pending li span { font-family: var(--mono); font-size: 9px; color: var(--amber); padding-top: 2px; }
+.sj-sources { margin: 0; padding-left: 18px; }
+.sj-sources li { margin: 0 0 5px; font-size: 10.5px; line-height: 1.7; color: var(--ink-2); }
+.sj-sources a { color: var(--ink-2); text-decoration-color: var(--line); }
+.sj-sources a:hover { color: var(--red); }
+.sj-versionline { font-size: 10px; color: var(--ink-3); }
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 860px) {
+  .sj-work-grid, .sj-card-meta { grid-template-columns: 1fr; }
+}
 @media (max-width: 760px) {
   .sj-head { align-items: flex-start; flex-direction: column; gap: 5px; }
   .sj-head > p { text-align: left; }
   .sj-band { grid-template-columns: 30px 1fr 24px; }
   .sj-band-side { display: none; }
   .sj-band-title { font-size: 21px; }
+  .sj-band-desc { font-size: 9.5px; }
+  #sj-map { height: 330px; }
+  .sj-card-head { grid-template-columns: 26px 1fr; }
+  .sj-card-head > div:last-child { grid-column: 2; }
+  .sj-stats { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .sj-stat { padding: 8px 10px 8px 0; border-right: 1px solid var(--line-soft); }
+  .sj-stat:nth-child(3n) { border-right: 0; }
+  .sj-stat b { font-size: 22px; }
+  .sj-table { min-width: 680px; }
 }

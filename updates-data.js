@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "圣地巡礼升到取景地清单",
+    note: "v0.2 · 三作品 26 点 · 核实等级 + 对照表 + 地图",
+    href: "seichi-junrei.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "旅行计划新增圣地巡礼骨架",
     note: "v0.1 · 三个作品横栏 · 取景地待核",
     href: "seichi-junrei.html"
