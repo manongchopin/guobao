@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-04",
     type: "计划",
+    title: "旅行计划新增新西兰自驾骨架",
+    note: "v0.1 · 南北岛两条骨架 · 路线待定",
+    href: "new-zealand-roadtrip.html"
+  },
+  {
+    date: "2026-11-04",
+    type: "计划",
     title: "琉球屋久岛补核种子岛与屋久岛交通",
     note: "v0.8 · 绳文杉回程硬截止 15:00 · 种子岛两段接驳 · 排除宫古",
     href: "ryukyu-yakushima.html"

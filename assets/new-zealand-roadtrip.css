@@ -1,0 +1,32 @@
+.nz-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 20px; }
+.nz-stats div { padding: 12px 14px; border-right: 1px solid var(--line); }
+.nz-stats div:last-child { border-right: 0; }
+.nz-stats b { display: block; font-family: var(--serif); font-size: 24px; line-height: 1.1; }
+.nz-stats span { display: block; margin-top: 3px; font-size: 10px; color: var(--ink-3); }
+.nz-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 12px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
+.nz-callout b { color: var(--ink); }
+.nz-intro { margin: 0; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
+.nz-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; border-top: 1px solid var(--ink); padding-top: 14px; margin-bottom: 9px; }
+.nz-head h2 { margin: 0; }
+.nz-head > p { max-width: 330px; margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); text-align: right; }
+.nz-kicker { margin: 0 0 4px; font-family: var(--sans); font-size: 9px; letter-spacing: .14em; color: var(--red); }
+.nz-band { display: grid; grid-template-columns: 44px 1fr 110px 28px; gap: 12px; align-items: center; border-top: 1px solid var(--ink); padding: 15px 0; color: var(--ink); text-decoration: none; }
+.nz-band:hover { background: var(--paper-2); }
+.nz-no { font-family: var(--mono); font-size: 9px; color: var(--red); }
+.nz-title { display: block; margin: 3px 0; font-family: var(--serif); font-size: 27px; }
+.nz-desc { display: block; font-size: 10px; line-height: 1.6; color: var(--ink-3); }
+.nz-side { font-size: 9px; line-height: 1.6; color: var(--ink-3); text-align: right; }
+.nz-arrow { font-size: 18px; color: var(--red); text-align: right; }
+.nz-note { margin: 0; font-size: 11px; line-height: 1.75; color: var(--ink-3); }
+.nz-questions { margin: 0; padding-left: 20px; }
+.nz-questions li { margin: 0 0 6px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+@media (max-width: 760px) {
+  .nz-stats { grid-template-columns: 1fr 1fr; }
+  .nz-stats div:nth-child(2) { border-right: 0; }
+  .nz-stats div:nth-child(1), .nz-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .nz-head { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .nz-head > p { text-align: left; }
+  .nz-band { grid-template-columns: 30px 1fr 24px; }
+  .nz-side { display: none; }
+  .nz-title { font-size: 22px; }
+}

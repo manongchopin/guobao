@@ -420,6 +420,20 @@ window.PLAN_VERSIONS = {
           "note": "建立区域骨架和计划入口"
         }
       ]
+    },
+    "new-zealand-roadtrip": {
+      "title": "新西兰自驾",
+      "version": "0.1",
+      "status": "骨架",
+      "date": "2026-11-04",
+      "note": "南北岛两条骨架；路线、天数、季节待定",
+      "history": [
+        {
+          "v": "0.1",
+          "date": "2026-11-04",
+          "note": "建立南北岛骨架和计划入口"
+        }
+      ]
     }
   }
 };
