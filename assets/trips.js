@@ -208,6 +208,46 @@
     return (y === "all" ? "全部 " : y + " 年 · ") + list.length + " 段 · " + fmt(kmTotal(list)) + " km";
   }
 
+  function shiftGeom(geom, d) {
+    function walk(c) {
+      if (typeof c[0] === "number") return [c[0] + d, c[1]];
+      return c.map(walk);
+    }
+    return { type: geom.type, coordinates: walk(geom.coordinates) };
+  }
+
+  function gcPath(a, b) {
+    var R = Math.PI / 180, D = 180 / Math.PI;
+    var f1 = a[1] * R, l1 = a[0] * R, f2 = b[1] * R, l2 = b[0] * R;
+    var df = f2 - f1, dl = l2 - l1;
+    var hav = Math.sin(df / 2) * Math.sin(df / 2) +
+      Math.cos(f1) * Math.cos(f2) * Math.sin(dl / 2) * Math.sin(dl / 2);
+    var d = 2 * Math.asin(Math.sqrt(Math.max(0, Math.min(1, hav))));
+    if (!isFinite(d) || d < 1e-9) return [[a[0], a[1]], [b[0], b[1]]];
+    var n = Math.max(8, Math.min(64, Math.round(d * D / 3)));
+    var pts = [];
+    for (var i = 0; i <= n; i++) {
+      var f = i / n;
+      var A = Math.sin((1 - f) * d) / Math.sin(d), B = Math.sin(f * d) / Math.sin(d);
+      var x = A * Math.cos(f1) * Math.cos(l1) + B * Math.cos(f2) * Math.cos(l2);
+      var y = A * Math.cos(f1) * Math.sin(l1) + B * Math.cos(f2) * Math.sin(l2);
+      var z = A * Math.sin(f1) + B * Math.sin(f2);
+      pts.push([Math.atan2(y, x) * D, Math.atan2(z, Math.sqrt(x * x + y * y)) * D]);
+    }
+    for (var j = 1; j < pts.length; j++) {
+      while (pts[j][0] - pts[j - 1][0] > 180) pts[j][0] -= 360;
+      while (pts[j][0] - pts[j - 1][0] < -180) pts[j][0] += 360;
+    }
+    var mean = pts.reduce(function (s, p) { return s + p[0]; }, 0) / pts.length;
+    var off = 0;
+    while (mean + off < 0) off += 360;
+    while (mean + off >= 360) off -= 360;
+    pts.forEach(function (p) { p[0] += off; });
+    return pts;
+  }
+
+  function to0(lon) { var x = lon % 360; return x < 0 ? x + 360 : x; }
+
   function worldOption() {
     var list = yearData(currentYear);
     var airports = {};
@@ -217,24 +257,27 @@
     });
     var arcs = list.map(function (f) {
       return {
-        coords: [AIR[f.fromCode], AIR[f.toCode]],
+        coords: gcPath(AIR[f.fromCode], AIR[f.toCode]),
         value: f.flight + "  " + f.from + " → " + f.to + "  " + fmt(f.km) + " km"
       };
     });
-    var LABELED = { KTM: 1, KUL: 1, XNN: 1, XIY: 1, HKG: 1, TSA: 1 };
+    var LABELED = { KTM: 1, KUL: 1, XNN: 1, XIY: 1, HKG: 1, TSA: 1, HNL: 1, SYD: 1 };
     var lngs = [], lats = [];
-    Object.keys(airports).forEach(function (code) {
-      lngs.push(airports[code][0]); lats.push(airports[code][1]);
+    arcs.forEach(function (a) {
+      a.coords.forEach(function (c) { lngs.push(c[0]); lats.push(c[1]); });
     });
     var minLng = Math.min.apply(null, lngs), maxLng = Math.max.apply(null, lngs);
     var minLat = Math.min.apply(null, lats), maxLat = Math.max.apply(null, lats);
+    if (!isFinite(minLng) || !isFinite(maxLng)) {
+      minLng = -20; maxLng = 200; minLat = -10; maxLat = 60;
+    }
     var padLng = Math.max((maxLng - minLng) * 0.18, 1.2);
     var padLat = Math.max((maxLat - minLat) * 0.18, 1.2);
     var bounds = [[minLng - padLng, maxLat + padLat], [maxLng + padLng, minLat - padLat]];
 
     var dots = Object.keys(airports).map(function (code) {
       return {
-        name: code, value: airports[code],
+        name: code, value: [to0(airports[code][0]), airports[code][1]],
         label: { show: !!LABELED[code], position: "right", distance: 3, color: "#8a938c", fontSize: 9, formatter: function (p) { return p.name; } }
       };
     });
@@ -263,8 +306,8 @@
           itemStyle: { color: "#a8402f", opacity: 0.8 }, data: dots
         },
         {
-          type: "lines", coordinateSystem: "geo", polyline: false,
-          lineStyle: { color: "#a8402f", width: 1.15, opacity: 0.62, curveness: 0.18, type: "dashed" },
+          type: "lines", coordinateSystem: "geo", polyline: true,
+          lineStyle: { color: "#a8402f", width: 1.15, opacity: 0.62, type: "dashed" },
           emphasis: { lineStyle: { opacity: 1, width: 1.8 } },
           data: arcs
         }
@@ -365,7 +408,13 @@
       fetch("data/world-echarts.json").then(function (r) { return r.json(); }),
       fetch("data/china-provinces.geojson").then(function (r) { return r.json(); })
     ]).then(function (res) {
-      echarts.registerMap("trips-world", res[0]);
+      var base = res[0], feats = [];
+      [-360, 0, 360].forEach(function (d) {
+        base.features.forEach(function (f) {
+          feats.push({ type: "Feature", properties: f.properties, geometry: shiftGeom(f.geometry, d) });
+        });
+      });
+      echarts.registerMap("trips-world", { type: "FeatureCollection", features: feats });
       var china = res[1];
       echarts.registerMap("trips-china", {
         type: "FeatureCollection",
