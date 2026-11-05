@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-05",
     type: "足迹",
+    title: "川西自驾：三星堆—色达—稻城亚丁—康定",
+    note: "2,391 km · OSRM 重绘",
+    href: "drives.html"
+  },
+  {
+    date: "2026-11-05",
+    type: "足迹",
     title: "青甘大环线自驾：兰州—青海湖—敦煌—张掖",
     note: "2,856 km · OSRM 重绘",
     href: "drives.html"
