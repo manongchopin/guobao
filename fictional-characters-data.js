@@ -721,6 +721,268 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-025-yiling.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-026",
+      universeId: "abin-1985",
+      name: "卫兵甲",
+      aliases: [],
+      age: "二十上下",
+      gender: "男",
+      role: "海防部队卫兵",
+      affiliation: "垦丁万里桐附近的小营舍",
+      tags: ["第 20 章", "卫兵", "一次性人物"],
+      summary: "第 20 章出现的两名卫兵之一。",
+      appearance: "二十上下，圆脸、眉毛浓，脸和手臂晒得红黑，体格壮实；草绿短袖汗衫扎进军裤，军绿胶鞋。",
+      personality: "原文把这两个人写成「呆头鹅」；他更壮也更拘谨，见了连长立刻立正。",
+      bio: "海防部队的卫兵，驻在垦丁万里桐附近的小营舍。第 20 章与另一名卫兵一起出场。",
+      relationships: [
+        { targetId: "char-034", type: "士兵与连长", note: "", directed: true },
+        { targetId: "char-027", type: "同袍", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 20 章", event: "在营舍门口站哨" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-026-wei-bing-jia.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-027",
+      universeId: "abin-1985",
+      name: "卫兵乙",
+      aliases: ["阿兵哥"],
+      age: "二十出头",
+      gender: "男",
+      role: "海防部队卫兵",
+      affiliation: "垦丁万里桐附近的小营舍",
+      tags: ["第 20 章", "卫兵", "一次性人物"],
+      summary: "第 20 章出现的两名卫兵之一。",
+      appearance: "二十出头，瘦、个子中等；长脸、单眼皮，表情有点呆。穿草绿背心，胳膊上有短袖晒出来的那一圈晒痕，军裤、胶鞋。",
+      personality: "被叫「阿兵哥」的时候，会下意识立正。",
+      bio: "海防部队的卫兵，驻在垦丁万里桐附近的小营舍。第 20 章与另一名卫兵一起出场。",
+      relationships: [
+        { targetId: "char-034", type: "士兵与连长", note: "", directed: true },
+        { targetId: "char-026", type: "同袍", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 20 章", event: "在营舍门口站哨" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-027-wei-bing-yi.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-028",
+      universeId: "abin-1985",
+      name: "农妇",
+      aliases: ["胖黑农妇"],
+      age: "四十上下",
+      gender: "女",
+      role: "果园边的农妇",
+      affiliation: "",
+      tags: ["第 13 章", "一次性人物"],
+      summary: "第 13 章果园边出现的农妇，只负责骂人。",
+      appearance: "四十上下，胖、黑、结实；方脸，眉毛粗，手臂粗，手上是干活晒出来的斑。花布巾包头，碎花上衣、深色长裤、黑色雨鞋。",
+      personality: "嗓门大；站着骂了十几分钟，一步也没敢往前走。",
+      bio: "第 13 章果园边的农妇。她是这一章里唯一一个「看见了一切、什么也做不了」的人。",
+      relationships: [],
+      timeline: [
+        { date: "第 13 章", event: "在果园边骂了十几分钟" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-028-nong-fu.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-029",
+      universeId: "abin-1985",
+      name: "女侍",
+      aliases: ["西餐馆女侍"],
+      age: "二十出头",
+      gender: "女",
+      role: "西餐馆女侍",
+      affiliation: "西餐馆",
+      tags: ["第 17 章", "一次性人物"],
+      summary: "第 17 章西餐馆的女侍。",
+      appearance: "二十出头，圆脸，眉毛画得有点重，嘴唇薄；低马尾，额前用发夹别住碎发。深色背心配白衬衫，围裙浆过、硬挺，胸牌别在左胸。",
+      personality: "笑起来很有职业感，眼睛不太参与；端盘子的时候脚步很轻，跑开时是踮着脚的。",
+      bio: "第 17 章西餐馆的女侍。原文写她长相只算普通，被吻之后脸红，后来还鞠躬说「欢迎再来」。",
+      relationships: [],
+      timeline: [
+        { date: "第 17 章", event: "在西餐馆当班" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-029-nv-shi.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-030",
+      universeId: "abin-1985",
+      name: "追求者高",
+      aliases: ["琇美的追求者（高的）"],
+      age: "二十二",
+      gender: "男",
+      role: "琇美的同学",
+      affiliation: "",
+      tags: ["第 17 章", "追求者", "一次性人物"],
+      summary: "琇美两个追求者里高的那个。",
+      appearance: "二十二岁，瘦高、肩膀窄，站直了比门框还高半头，但总驼着；长脸、下巴有点尖，戴黑框眼镜。头发偏软、三七分，总有一撮翘着压不平。格子衬衫塞进卡其裤，皮带扣得高。",
+      personality: "说话时眉毛动得比嘴多；手里一直捏着一束纸包的花，纸都被他捏皱了。",
+      bio: "琇美的追求者之一，和胖的那位是同学。第 17 章知道琇美要毕业，两人来她房里「道别」。",
+      relationships: [
+        { targetId: "char-003", type: "追求者", note: "", directed: true },
+        { targetId: "char-031", type: "同学", note: "一起来道别", directed: false }
+      ],
+      timeline: [
+        { date: "第 17 章", event: "来琇美房里道别" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-030-zhui-qiu-zhe-gao.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-031",
+      universeId: "abin-1985",
+      name: "追求者胖",
+      aliases: ["琇美的追求者（胖的）"],
+      age: "二十二",
+      gender: "男",
+      role: "琇美的同学",
+      affiliation: "",
+      tags: ["第 17 章", "追求者", "一次性人物"],
+      summary: "琇美两个追求者里胖的那个。",
+      appearance: "二十二岁，胖、脖子短；圆脸，笑起来眼睛挤成两条缝，脸上有一点油光；平头。polo 衫扣子扣到最上面一颗，绷着。",
+      personality: "一进门就把带来的水果放在桌上，然后不知道手该放哪儿。",
+      bio: "琇美的追求者之一，和高的那位是同学。第 17 章两人一起来琇美房里「道别」。",
+      relationships: [
+        { targetId: "char-003", type: "追求者", note: "", directed: true },
+        { targetId: "char-030", type: "同学", note: "一起来道别", directed: false }
+      ],
+      timeline: [
+        { date: "第 17 章", event: "来琇美房里道别" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-031-zhui-qiu-zhe-pang.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-032",
+      universeId: "abin-1985",
+      name: "新婚丈夫",
+      aliases: [],
+      age: "二十七八",
+      gender: "男",
+      role: "从台北来垦丁度假的新婚丈夫",
+      affiliation: "",
+      tags: ["第 19 章", "一次性人物"],
+      summary: "第 19 章从台北来垦丁度假的新婚丈夫。",
+      appearance: "二十七八，中等偏高，有一点当兵留下的架子；方脸、眉毛浓，笑起来牙齿很白。短发抹了发油，梳得很整齐。白衬衫袖子卷到小臂，深色西装裤、皮鞋——来度假还是穿得像上班。",
+      personality: "会在陌生场合说「Nice to Meet You」，说完自己先笑。",
+      bio: "第 19 章与妻子来垦丁度假，走错房间。原文写这一对是全书少见的「正常夫妻」——正因为正常，那晚才显得特别荒唐。",
+      relationships: [
+        { targetId: "char-033", type: "夫妻", note: "新婚", directed: false }
+      ],
+      timeline: [
+        { date: "第 19 章", event: "在垦丁走错房间" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-032-xin-hun-zhangfu.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-033",
+      universeId: "abin-1985",
+      name: "新婚妻子",
+      aliases: [],
+      age: "二十五",
+      gender: "女",
+      role: "新婚妻子",
+      affiliation: "",
+      tags: ["第 19 章", "一次性人物"],
+      summary: "第 19 章与丈夫来垦丁度假的新婚妻子。",
+      appearance: "二十五岁，个子矮、骨架小、肩窄；容貌端庄——不惊艳，但端正、耐看，皮肤白，眉毛细，只涂了一点口红。及肩发用发夹别在一侧，浅色连衣裙，布料软。",
+      personality: "害羞、不肯出声；从头到尾都是被动的。",
+      bio: "第 19 章与丈夫来垦丁度假。原文写她容貌端庄、身量矮，全书少见的「正常夫妻」里的那一位。",
+      relationships: [
+        { targetId: "char-032", type: "夫妻", note: "新婚", directed: false }
+      ],
+      timeline: [
+        { date: "第 19 章", event: "在垦丁度假" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-033-xin-hun-qizi.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-034",
+      universeId: "abin-1985",
+      name: "陈明宪",
+      aliases: ["连长"],
+      age: "",
+      gender: "男",
+      role: "海防部队连长",
+      affiliation: "垦丁万里桐附近的小营舍",
+      tags: ["第 20 章", "连长"],
+      summary: "海防部队连长，驻在垦丁万里桐附近的小营舍。",
+      appearance: "体格壮硕魁梧，晒得黑，短发；上身只穿汗衫，军裤、军靴，站着有军人的直。",
+      personality: "有分寸、会应对：先把好说话的带走，再对付脾气大的；精于看人下菜。",
+      bio: "陈明宪，海防部队连长。第 20 章后半，淑华与 Cindy 来借浴室，他一句「你先带这位小姐去后面浴室」，把两个人分开处理。",
+      relationships: [
+        { targetId: "char-026", type: "连长与士兵", note: "", directed: false },
+        { targetId: "char-027", type: "连长与士兵", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 20 章", event: "在小营舍接待来借浴室的两个人" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-034-lianzhang.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-035",
+      universeId: "abin-1985",
+      name: "潘瑞珠",
+      aliases: ["小珠"],
+      age: "",
+      gender: "女",
+      role: "与阿宾同校的学生",
+      affiliation: "",
+      tags: ["第 18 章", "短发", "细框眼镜"],
+      summary: "自称「小珠」的学生，与阿宾同校。",
+      appearance: "瘦瘦高高，腿细；短发俏丽、菱角嘴，秀挺的鼻子上架着细框眼镜；额头圆润、月眉细弯、长睫毛。穿白衬衫、深色长裤。",
+      personality: "外表冷、脸上一直没什么表情，怕丢脸；熟了之后笑得很开——她的冷是壳。",
+      bio: "潘瑞珠，自称「小珠」，与阿宾同校。第 18 章初见时骄傲、冷。男朋友是郭文强（第 19 章揭晓）。",
+      relationships: [
+        { targetId: "char-023", type: "情侣", note: "第 19 章揭晓", directed: false },
+        { targetId: "char-001", type: "同校", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 18 章", event: "第一次见面，自报姓名「小珠，潘瑞珠」" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-035-xiaozhu.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };
