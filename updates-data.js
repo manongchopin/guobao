@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-05",
     type: "足迹",
+    title: "青甘大环线自驾：兰州—青海湖—敦煌—张掖",
+    note: "2,856 km · OSRM 重绘",
+    href: "drives.html"
+  },
+  {
+    date: "2026-11-05",
+    type: "足迹",
     title: "山西自驾游：上海—晋东南—晋北—晋南",
     note: "3,768 km · OSRM 重绘",
     href: "drives.html"
