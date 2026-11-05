@@ -444,6 +444,88 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-015-xiaowen.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-016",
+      universeId: "abin-1985",
+      name: "公公",
+      aliases: ["阿莉的公公"],
+      age: "五十来岁",
+      gender: "男",
+      role: "阿莉的公公",
+      affiliation: "",
+      tags: ["第 8 章", "公婆", "理发店"],
+      summary: "阿莉的公公，五十来岁，矮矮胖胖、秃头。",
+      appearance: "五十来岁，矮矮胖胖、秃头；白短袖衬衫塞进深色长裤，系皮带，黑皮鞋。",
+      personality: "好色、不老实，原文骂他「老不修」；爱去进香、看游览车，身上带钱。",
+      bio: "阿莉的公公，与妻子、媳妇同住；儿子在金门当兵。第 8 章只出现在隔墙偷看那一段。",
+      relationships: [
+        { targetId: "char-018", type: "媳妇与公公", note: "", directed: true },
+        { targetId: "char-017", type: "夫妻", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 8 章", event: "隔墙偷看那一段" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-016-gonggong.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-017",
+      universeId: "abin-1985",
+      name: "婆婆",
+      aliases: ["阿莉的婆婆"],
+      age: "四十来岁",
+      gender: "女",
+      role: "阿莉的婆婆",
+      affiliation: "",
+      tags: ["第 8 章", "公婆", "理发店"],
+      summary: "阿莉的婆婆，四十来岁，珠光宝气。",
+      appearance: "四十来岁，烫卷发；珠光宝气、打扮艳丽——金色项链、红色耳环，白色亮面高叉长裙，裸色高跟鞋。",
+      personality: "欲求不满、主动，精于男女之事，会「教」年轻人。",
+      bio: "阿莉的婆婆，与丈夫、媳妇同住。第 8 章只出现在隔墙偷看那一段。",
+      relationships: [
+        { targetId: "char-018", type: "媳妇与婆婆", note: "", directed: true },
+        { targetId: "char-016", type: "夫妻", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 8 章", event: "隔墙偷看那一段" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-017-popo.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-018",
+      universeId: "abin-1985",
+      name: "阿莉",
+      aliases: [],
+      age: "二十岁出头",
+      gender: "女",
+      role: "家庭理发店老板娘",
+      affiliation: "家庭理发店",
+      tags: ["第 8 章", "理发店", "嘉义"],
+      summary: "家庭理发店的老板娘，二十岁出头，从嘉义嫁到台北。",
+      appearance: "白白净净、清秀，唇薄；身量小巧，产后腰略粗。穿一件又宽又大的厚衬衫，袖子撂到臂弯，下身一条简单的白短裙，被衬衫下摆遮去大半；家常打扮，脚上是白色拖鞋。",
+      personality: "客气、爱笑、会招呼人，先给人三分好感；怕羞，被看会用手遮；不敢拒绝，只会小声说「不要这样」。",
+      bio: "嘉义海边人，最近嫁到台北，和丈夫家人同住。丈夫 21 岁，在金门当兵；有一个四个月大的婴儿。第 8 章阿宾上门理发。",
+      relationships: [
+        { targetId: "char-001", type: "老板娘与客人", note: "第 8 章上门理发", directed: false },
+        { targetId: "char-016", type: "媳妇与公公", note: "", directed: false },
+        { targetId: "char-017", type: "媳妇与婆婆", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 8 章", event: "在理发店招呼阿宾「请稍坐」" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-018-ali.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };

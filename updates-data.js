@@ -2,8 +2,8 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-05",
     type: "档案",
-    title: "虚构人物档案：15 人",
-    note: "15 人物 · 15 张定妆照 · 点小图看大图",
+    title: "虚构人物档案：18 人",
+    note: "18 人物 · 18 张定妆照 · 点小图看大图",
     href: "fictional-characters.html"
   },
   {
