@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-05",
+    type: "档案",
+    title: "虚构人物档案骨架",
+    note: "0 人物 · 待确认字段与上传方式",
+    href: "fictional-characters.html"
+  },
+  {
+    date: "2026-11-05",
     type: "足迹",
     title: "新疆自驾：伊犁—赛里木湖环线",
     note: "1,642 km · 自驾总图上线",

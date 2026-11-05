@@ -1,0 +1,22 @@
+.fc-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 4px 0 20px; }
+.fc-stats div { padding: 12px 14px; border-right: 1px solid var(--line); }
+.fc-stats div:last-child { border-right: 0; }
+.fc-stats b { display: block; font-family: var(--serif); font-size: 24px; line-height: 1.1; }
+.fc-stats span { display: block; margin-top: 3px; font-size: 10px; color: var(--ink-3); }
+.fc-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 12px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
+.fc-callout b { color: var(--ink); }
+.fc-intro { margin: 0; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
+.fc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.fc-grid > div { background: var(--paper); padding: 11px 13px; }
+.fc-grid span { display: block; font-family: var(--sans); font-size: 8px; letter-spacing: .12em; color: var(--red); }
+.fc-grid b { display: block; margin: 3px 0; font-family: var(--serif); font-size: 17px; }
+.fc-grid p { margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
+.fc-note { margin: 0; font-size: 11px; line-height: 1.8; color: var(--ink-2); }
+.fc-questions { margin: 0; padding-left: 20px; }
+.fc-questions li { margin: 0 0 6px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+@media (max-width: 760px) {
+  .fc-stats { grid-template-columns: 1fr 1fr; }
+  .fc-stats div:nth-child(2) { border-right: 0; }
+  .fc-stats div:nth-child(1), .fc-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .fc-grid { grid-template-columns: 1fr; }
+}
