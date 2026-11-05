@@ -817,7 +817,8 @@ window.TRIPS = {
       [31.68173,120.6971],
       [31.6819,120.69684]
       ]
-    }
+    },
+
   ],
   "placesByYear": {
     "2002": ["韩国"],
@@ -1630,6 +1631,78 @@ window.TRIPS = {
       [35.70021,139.7971],
       [35.69928,139.7973]
       ]
+    },
+    {
+      id: "sport-auto-1",
+      month: "2023-09",
+      type: "ride",
+      name: "骑行",
+      km: 24.07,
+      duration: "1:43:06",
+      note: "Apple Watch 自动记录，无 GPS 轨迹"
+    },
+    {
+      id: "sport-auto-2",
+      month: "2023-10",
+      type: "hike",
+      name: "徒步",
+      km: 23.82,
+      duration: "7:03:30",
+      note: "Apple Watch 自动记录，无 GPS 轨迹"
+    },
+    {
+      id: "sport-auto-3",
+      month: "2023-12",
+      type: "hike",
+      name: "徒步",
+      km: 16.06,
+      duration: "3:36:30",
+      note: "Apple Watch 自动记录，无 GPS 轨迹"
+    },
+    {
+      id: "sport-auto-4",
+      month: "2023-12",
+      type: "ride",
+      name: "骑行",
+      km: 39.34,
+      duration: "2:18:24",
+      note: "Apple Watch 自动记录，无 GPS 轨迹"
+    },
+    {
+      id: "sport-auto-5",
+      month: "2023-12",
+      type: "hike",
+      name: "徒步",
+      km: 20.41,
+      duration: "6:17:36",
+      note: "Apple Watch 自动记录，无 GPS 轨迹"
+    },
+    {
+      id: "sport-auto-6",
+      month: "2024-06",
+      type: "walk",
+      name: "步行",
+      km: 18.03,
+      duration: "5:12:18",
+      note: "Apple Watch 自动记录，无 GPS 轨迹"
+    },
+    {
+      id: "sport-auto-7",
+      month: "2024-11",
+      type: "run",
+      name: "跑步",
+      km: 17.61,
+      duration: "2:48:42",
+      note: "Apple Watch 自动记录，无 GPS 轨迹"
+    },
+    {
+      id: "sport-auto-8",
+      month: "2025-01",
+      type: "ride",
+      name: "骑行",
+      km: 73.93,
+      duration: "5:10:12",
+      note: "Apple Watch 自动记录，无 GPS 轨迹"
     }
   ],
   "trips": []

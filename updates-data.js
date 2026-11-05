@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-05",
     type: "足迹",
+    title: "Apple Health 长距离运动：>15 km 共 8 条",
+    note: "骑行 3 · 徒步 3 · 步行 1 · 跑步 1",
+    href: "outdoors.html"
+  },
+  {
+    date: "2026-11-05",
+    type: "足迹",
     title: "我的行程：记录分页，可按年、按站查",
     note: "飞行与铁路分开 · 机场/车站搜索",
     href: "trips.html"

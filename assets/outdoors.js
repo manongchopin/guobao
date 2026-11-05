@@ -22,19 +22,26 @@
     L.control.scale({ imperial: false, position: "bottomleft" }).addTo(map);
   }
 
+  var TYPE = { run: "跑步", ride: "骑行", hike: "徒步", walk: "步行" };
+
   function card(h, i, prefix, color, extra) {
+    var hasPath = !!(h.path && h.path.length > 1);
+    var map = hasPath
+      ? '<div class="tp-hike-map" id="' + prefix + '-map-' + i + '"></div>' +
+        '<p class="tp-map-note">GPS 抽稀轨迹 · 底图 © OpenStreetMap contributors</p>'
+      : '<p class="tp-map-note">无 GPS 轨迹，仅记录距离与用时。</p>';
+    var type = h.type && TYPE[h.type] ? TYPE[h.type] + ' · ' : '';
     return '<article class="tp-hike">' +
       '<div class="tp-hike-head"><div>' +
         '<h3>' + esc(h.name || "未命名") + '</h3>' +
-        '<p class="tp-hike-meta">' + esc(h.month || "") + ' · ' +
+        '<p class="tp-hike-meta">' + type + esc(h.month || "") + ' · ' +
           (h.km != null ? h.km + ' km' : "") +
           (h.ascent != null ? ' · 爬升 ' + h.ascent + ' m' : "") +
           (h.duration ? ' · 用时 ' + h.duration : "") +
         '</p>' +
         (extra || '') +
-      '</div><p class="tp-hike-points">' + (h.points || (h.path || []).length) + ' 点</p></div>' +
-      '<div class="tp-hike-map" id="' + prefix + '-map-' + i + '"></div>' +
-      '<p class="tp-map-note">GPS 抽稀轨迹 · 底图 © OpenStreetMap contributors</p>' +
+      '</div><p class="tp-hike-points">' + (hasPath ? (h.points || h.path.length) + ' 点' : '') + '</p></div>' +
+      map +
     '</article>';
   }
 
