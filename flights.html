@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>飞行记录 · 我的行程</title>
+<meta name="description" content="按年份查看全部飞行记录，可按机场或城市搜索出港、进港航班。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/trips.css">
+<link rel="stylesheet" href="assets/records.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="trips.html">← 我的行程</a>
+  <p class="kicker">FLIGHT LOG · 2010–2026</p>
+  <h1>飞行记录</h1>
+  <p class="lede">
+    按年份归档，按机场查。<br>
+    <span>搜索三字码或城市名，出港和进港分开列。</span>
+  </p>
+  <div class="seal" aria-hidden="true">飞</div>
+</header>
+
+<main class="wh-detail">
+
+  <section class="wh-section tp-first">
+    <div class="lg-stats">
+      <div><b id="lg-count">0</b><span>段飞行</span></div>
+      <div><b id="lg-km">0</b><span>公里</span></div>
+      <div><b id="lg-airports">0</b><span>机场</span></div>
+      <div><b id="lg-span">—</b><span>年份跨度</span></div>
+    </div>
+    <p class="tp-intro">距离为大圆距离估算；日期只到月份。搜索例：<b>PVG</b>、<b>上海</b>、<b>香港</b>、<b>KIX</b>。</p>
+  </section>
+
+  <section class="wh-section">
+    <div class="lg-toolbar">
+      <div class="tp-year-tabs" id="lg-years"></div>
+      <input id="lg-search" class="lg-search" type="search" autocomplete="off"
+             placeholder="搜索机场 / 城市，如 PVG、上海">
+    </div>
+    <p class="lg-summary" id="lg-summary"></p>
+    <div id="lg-all"></div>
+    <div id="lg-split"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>飞行记录 · 我的行程</span>
+    <span>大圆距离 · 日期到月</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+    <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
+  </div>
+</footer>
+
+<script src="trips-data.js"></script>
+<script src="assets/flights.js"></script>
+</body>
+</html>

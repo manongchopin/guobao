@@ -1,5 +1,12 @@
 window.SITE_UPDATES = [
   {
+    date: "2026-11-05",
+    type: "足迹",
+    title: "我的行程：记录分页，可按年、按站查",
+    note: "飞行与铁路分开 · 机场/车站搜索",
+    href: "trips.html"
+  },
+  {
     date: "2026-11-04",
     type: "计划",
     title: "礼文岛和利尻岛扩成 7 天 6 晚",

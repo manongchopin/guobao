@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>我的行程 · 飞行、火车与徒步</title>
-<meta name="description" content="按年份记录实际走过的路：飞行、火车、徒步，以及 2002–2024 年的旅行年表。">
+<title>我的行程 · 飞行、火车、徒步</title>
+<meta name="description" content="按年份记录实际走过的路：飞行、火车、徒步、路跑。具体记录分页查看。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/trips.css">
+<link rel="stylesheet" href="assets/records.css">
 </head>
 <body>
 
@@ -31,14 +31,13 @@
       <div><b id="tp-flights">0</b><span>段飞行</span></div>
       <div><b id="tp-trains">0</b><span>段火车</span></div>
       <div><b id="tp-hikes">0</b><span>条徒步</span></div>
-      <div><b id="tp-km">0</b><span>总里程 · km</span></div>
       <div><b id="tp-sports">0</b><span>项运动</span></div>
+      <div><b id="tp-km">0</b><span>总里程 · km</span></div>
       <div><b id="tp-places">0</b><span>国家与地区</span></div>
     </div>
-    <p class="tp-callout"><b>247 段飞行 · 56 段火车 · 3 条徒步 · 7 场路跑。</b>飞行来自飞常准「乘机行程」截图，火车来自 12306「本人车票」截图，徒步来自两步路 GPX。均经本地解析或 OCR 后逐条校对；日期只公开到月份，机型没有记录。</p>
-    <p class="tp-intro">距离按机场/车站坐标做直线估算：飞行是大圆距离，火车是站点直线距离，都比实际轨迹短。后续年份和自驾会陆续补进来。</p>
+    <p class="tp-callout"><b>247 段飞行 · 56 段火车 · 3 条徒步 · 7 场路跑。</b>飞行来自飞常准截图，火车来自 12306 与飞猪，徒步和路跑来自两步路 / HealthFit。日期只公开到月份。</p>
+    <p class="tp-intro">具体记录在下面几个入口里，按年份筛选，也能按机场或车站搜索。</p>
   </section>
-
 
   <section class="wh-section" id="places">
     <div class="tp-head">
@@ -60,61 +59,35 @@
     <p class="tp-map-note" id="tp-map-caption"></p>
   </section>
 
-  <section class="wh-section" id="flights">
+  <section class="wh-section" id="records">
     <div class="tp-head">
-      <div><p class="tp-kicker">FLIGHT LOG · BY YEAR</p><h2>飞行记录</h2></div>
-      <p>按年份倒序。月份 / 航班号 / 航线 / 距离。<br>同月同航班标 ①②；机型未记录。</p>
+      <div><p class="tp-kicker">RECORDS · BY MODE</p><h2>记录入口</h2></div>
+      <p>飞机和火车分开，各自按年份、按站点查。</p>
     </div>
-    <div class="tp-flights-head">
-      <span>月份</span><span>航班</span><span>航线</span><span class="tp-km">距离</span>
-    </div>
-    <div id="tp-flight-list"></div>
-    <p class="tp-total" id="tp-total-line"></p>
-  </section>
-
-  <section class="wh-section" id="trains">
-    <div class="tp-head">
-      <div><p class="tp-kicker">RAIL LOG · BY YEAR</p><h2>铁路记录</h2></div>
-      <p>按年份倒序。月份 / 车次 / 区间 / 距离。<br>距离为站点直线距离，不是铁路里程。</p>
-    </div>
-    <div class="tp-flights-head tp-trains-head">
-      <span>月份</span><span>车次</span><span>区间</span><span class="tp-km">距离</span>
-    </div>
-    <div id="tp-train-list"></div>
-    <p class="tp-total" id="tp-train-total"></p>
-  </section>
-
-  <section class="wh-section" id="hikes">
-    <div class="tp-head">
-      <div><p class="tp-kicker">HIKE LOG · GPX</p><h2>徒步记录</h2></div>
-      <p>轨迹来自两步路 GPX，抽稀后绘在浅色底图上。<br>可缩放。</p>
-    </div>
-    <div id="tp-hike-list"></div>
-  </section>
-
-
-  <section class="wh-section" id="sports">
-    <div class="tp-head">
-      <div><p class="tp-kicker">SPORTS · APPLE WATCH</p><h2>运动记录</h2></div>
-      <p>跑步 / 越野 / 骑行，HealthFit 导出。<br>GPS 轨迹，可缩放。</p>
-    </div>
-    <div id="tp-sport-list"></div>
-  </section>
-
-  <section class="wh-section" id="region">
-    <div class="tp-head">
-      <div><p class="tp-kicker">RAIL MAP · AUTO FIT</p><h2>铁路地图</h2></div>
-      <p>全部车次按站点连线，范围随数据自动调整。<br>境外段同样处理。</p>
-    </div>
-    <div id="tp-map-region" class="tp-chart tp-chart-region"></div>
-    <p class="tp-map-note">铁路为按经由站连出的示意线，不是精确轨道；境外段同样处理。徒步轨迹见上一节。</p>
-  </section>
-
-  <section class="wh-section">
-    <h2>自驾</h2>
-    <div class="tp-pending">
-      <div>
-        <p>等你把起终点和途经点列进 <code>inbox/drives.md</code>，我按路网重绘路线、估算里程。</p>
+    <div class="tp-entries">
+      <a class="tp-entry" href="flights.html">
+        <span class="tp-entry-kicker">FLIGHT · 2010–2026</span>
+        <b class="tp-entry-num" id="card-flights">0</b>
+        <span class="tp-entry-label">段飞行 · <span id="card-flights-km">0</span> km</span>
+        <span class="tp-entry-go">查看飞行记录 →</span>
+      </a>
+      <a class="tp-entry" href="rails.html">
+        <span class="tp-entry-kicker">RAIL · 2023–2026</span>
+        <b class="tp-entry-num" id="card-rails">0</b>
+        <span class="tp-entry-label">段火车 · <span id="card-rails-km">0</span> km</span>
+        <span class="tp-entry-go">查看铁路记录 →</span>
+      </a>
+      <a class="tp-entry" href="outdoors.html">
+        <span class="tp-entry-kicker">HIKE &amp; RUN</span>
+        <b class="tp-entry-num" id="card-outdoors">0</b>
+        <span class="tp-entry-label">条徒步 · <span id="card-sports">0</span> 场路跑</span>
+        <span class="tp-entry-go">查看轨迹 →</span>
+      </a>
+      <div class="tp-entry is-muted">
+        <span class="tp-entry-kicker">DRIVE</span>
+        <b class="tp-entry-num">—</b>
+        <span class="tp-entry-label">自驾待录入</span>
+        <span class="tp-entry-go">等起终点和途经点</span>
       </div>
     </div>
   </section>
@@ -127,7 +100,7 @@
       <li>距离为直线估算：飞行大圆、火车站点直线，都不是实际轨迹。</li>
       <li>机型暂不记录；徒步轨迹去掉时间戳，只留月份。</li>
     </ul>
-    <p class="tp-footnote">数据来源：飞常准「乘机行程」截图（2010–2026；接送机标记的已剔除）、12306「本人车票」截图（2026-10）、台湾高铁搭乘记录、两步路 GPX（3 条）。后续补齐后继续加。</p>
+    <p class="tp-footnote">数据来源：飞常准截图、12306 / 飞猪车票、台湾高铁记录、两步路 GPX、HealthFit 导出。</p>
   </section>
 
 </main>
@@ -135,13 +108,12 @@
 <footer class="footer">
   <div class="footer-inner">
     <span>我的行程 · 飞行 / 火车 / 徒步</span>
-    <span>v0.18 · 247 飞 · 56 铁 · 3 徒步 · 7 跑 · 更新 2026-11-04</span>
+    <span>v0.19 · 247 飞 · 56 铁 · 10 户外 · 更新 2026-11-05</span>
     <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
     <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
   </div>
 </footer>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
 <script src="trips-data.js"></script>
 <script src="assets/trips.js"></script>
