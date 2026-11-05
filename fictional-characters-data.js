@@ -526,6 +526,194 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-018-ali.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-019",
+      universeId: "abin-1985",
+      name: "阿宾的母亲",
+      aliases: ["阿姨"],
+      age: "四十余岁",
+      gender: "女",
+      role: "阿宾的母亲；寡居",
+      affiliation: "",
+      tags: ["第 12 章", "家庭", "寡居"],
+      summary: "阿宾的母亲，四十余岁，丈夫过世后独居。",
+      appearance: "四十余岁，保养得体、居家但不邋遢，笑起来温暖；比房东太太更有底气一些。",
+      personality: "热情、爱笑、会招呼人；对儿子宠溺。",
+      bio: "阿宾的母亲。丈夫过世后独居，家境富裕，家里有客房附卫浴，厨房宽敞。第 12 章与钰慧一见如故，一个晚上就把「阿姨」叫成了「妈」。原文没有给她名字。",
+      relationships: [
+        { targetId: "char-001", type: "母子", note: "", directed: true }
+      ],
+      timeline: [
+        { date: "第 12 章", event: "与钰慧一见如故，被叫成了「妈」" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-019-abin-mother.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-020",
+      universeId: "abin-1985",
+      name: "胡先生",
+      aliases: ["房东先生"],
+      age: "30 岁出头",
+      gender: "男",
+      role: "上班族；房东",
+      affiliation: "",
+      tags: ["第 1 章", "房东", "上班族"],
+      summary: "房东先生，胡太太的丈夫，两个幼儿的父亲。",
+      appearance: "普通上班族；白衬衫、深色西裤、黑皮鞋，短发整齐。第 1 章几乎没写他的外形。",
+      personality: "",
+      bio: "房东夫妇姓胡，住六楼，夫妇俩都上班。第 1 章只有一句提及；主线里出场极少，主要作为「丈夫」这个位置存在。",
+      relationships: [
+        { targetId: "char-004", type: "夫妻", note: "胡太太是他太太", directed: false },
+        { targetId: "char-022", type: "兄妹", note: "佩如是他妹妹", directed: true },
+        { targetId: "char-001", type: "房东与房客", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 1 章", event: "与太太、两个幼儿同住六楼" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-020-hu-xiansheng.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-021",
+      universeId: "abin-1985",
+      name: "李莲莲",
+      aliases: ["莲莲", "学姐"],
+      age: "",
+      gender: "女",
+      role: "大三学生",
+      affiliation: "住六楼顶加盖层、楼梯转角的小房间",
+      tags: ["第 9 章", "学姐", "商用统计重修"],
+      summary: "住楼梯转角小房间的三年级学姐。",
+      appearance: "身高约 155 公分；圆脸、大眼睛、戴眼镜，嘴唇稍大而厚；皮肤不白但很细腻。穿宽松家居服仍然前凸后翘，中间比较没有腰。",
+      personality: "说话小声、怯生生，自卑；不会说不要。她的胖不是天生的，是用来防人的。",
+      bio: "大三学生，住六楼顶加盖层、楼梯上来转角处那个小房间，房间不到两坪。商用统计学重修，期末考前两个礼拜开始准备，会煮曼特宁咖啡。",
+      relationships: [
+        { targetId: "char-001", type: "同栋楼的学姐", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 9 章", event: "期末考前两个礼拜开始准备重修" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-021-li-lianlian.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-022",
+      universeId: "abin-1985",
+      name: "佩如",
+      aliases: [],
+      age: "廿五六岁",
+      gender: "女",
+      role: "胡先生的妹妹、胡太太的小姑",
+      affiliation: "已婚，丈夫建成",
+      tags: ["第 10 章", "小姑", "已婚"],
+      summary: "胡先生的妹妹，胡太太的小姑，已婚。",
+      appearance: "廿五六岁，面貌可爱；爱笑，穿得略贴身——一件稍为贴身的上衣配一片裙。",
+      personality: "活泼、爱玩、爱唱歌；机灵而狠，出了事会立刻想办法拖别人下水。",
+      bio: "胡先生的妹妹、胡太太的小姑，丈夫是建成。第 10 章胡家过年那场戏的引子：新买的卡拉 OK、啤酒、小菜。",
+      relationships: [
+        { targetId: "char-020", type: "兄妹", note: "胡先生是她哥哥", directed: false },
+        { targetId: "char-004", type: "姑嫂", note: "胡太太是她嫂子", directed: false },
+        { targetId: "char-001", type: "认识", note: "由胡太太介绍", directed: false }
+      ],
+      timeline: [
+        { date: "第 10 章", event: "胡家过年，卡拉 OK 与小菜" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-022-peiru.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-023",
+      universeId: "abin-1985",
+      name: "郭文强",
+      aliases: ["文强"],
+      age: "",
+      gender: "男",
+      role: "阿宾的同学",
+      affiliation: "自己在外租房间",
+      tags: ["第 14 章", "南部", "有女友"],
+      summary: "阿宾的同学，南部来的，自己在外租房。",
+      appearance: "南部来的学生，朴实里带点机灵；原文几乎没写外形，只按「不必帅，但要让人放松」定妆。",
+      personality: "会说话、会挑地方（特意选有高档椅背的「雅座」），懂讨人欢心。",
+      bio: "郭文强，阿宾的同学，南部人，自己租房间在外；有女朋友，常吵架。第 14 章与钰慧是南部同乡。",
+      relationships: [
+        { targetId: "char-001", type: "同学", note: "", directed: false },
+        { targetId: "char-002", type: "同乡", note: "都是南部来的", directed: false }
+      ],
+      timeline: [
+        { date: "第 14 章", event: "约钰慧到有雅座的店里" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-023-wenqiang.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-024",
+      universeId: "abin-1985",
+      name: "辛蒂",
+      aliases: ["Cindy", "丽芳"],
+      age: "",
+      gender: "女",
+      role: "钰慧、淑华的同学",
+      affiliation: "自己在校外租房",
+      tags: ["第 16 章", "同学", "校外租房"],
+      summary: "钰慧、淑华的同学，英文名 Cindy，原文也叫她「丽芳」。",
+      appearance: "长得并不娇美，却是刚健婀娜的那一型；会刻意打扮，唇彩与唇线画得清晰明白。",
+      personality: "老练、爱出主意、嘴上占先；遇事会自我欺骗。",
+      bio: "丽芳，英文名 Cindy，被叫「Cindy 姐」。钰慧与淑华的同学，自己在校外租房。第 16 章的「美人计」是她的主意——要让钰慧看清男人的真面目，结果自己被卷进去。",
+      relationships: [
+        { targetId: "char-002", type: "同学", note: "", directed: false },
+        { targetId: "char-012", type: "同学", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 16 章", event: "出了「美人计」的主意" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-024-xindi.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-025",
+      universeId: "abin-1985",
+      name: "廖依姈",
+      aliases: ["依姈"],
+      age: "",
+      gender: "女",
+      role: "阿宾的同班同学",
+      affiliation: "",
+      tags: ["第 13 章", "时髦", "同班"],
+      summary: "阿宾的同班同学，说话嗲声嗲气。",
+      appearance: "穿着很时髦：有松紧效果的贴身裤，短发扎起，妆容明艳；手小小嫩嫩的。",
+      personality: "主动、爱玩、不怕占便宜，甚至以「讨回来」为乐；被骂「小骚包」也不恼，一副自得其乐的样子。",
+      bio: "廖依姈，阿宾的同班同学。第 13 章抽车钥匙抽到阿宾的车。她是全书里心理负担最少的一个：想要就伸手，不解释，也不后悔。",
+      relationships: [
+        { targetId: "char-001", type: "同班同学", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 13 章", event: "抽车钥匙抽到阿宾的车" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-025-yiling.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };
