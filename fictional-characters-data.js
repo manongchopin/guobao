@@ -360,6 +360,90 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-05",
       portrait: "images/fictional-characters/char-012-shuhua.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-013",
+      universeId: "abin-1985",
+      name: "超商店长",
+      aliases: ["灭绝师太"],
+      age: "廿七八岁",
+      gender: "女",
+      role: "便利商店店长",
+      affiliation: "便利商店",
+      tags: ["第 7 章", "灭绝师太", "排班"],
+      summary: "便利商店的店长，员工背后叫她「灭绝师太」。",
+      appearance: "顶多廿七八岁，个头小小；头发整天绑在脑后，两个眼睛老是瞪得很凶。穿店长制服：白衬衫塞进深色长裤，胸前有名牌。",
+      personality: "排班不讲理，爱怎么排就怎么排，骂人很凶。但凶是壳——胆子极小，被发现就跑。原文点破：因为没人对她好，所以先对人凶。",
+      bio: "便利商店店长，原文没有名字，只有绰号「灭绝师太」。第 7 章在店里排班、骂盘点。她和第 6 章服饰卖场那位男店长不是同一人。",
+      relationships: [
+        { targetId: "char-015", type: "店长与店员", note: "", directed: true },
+        { targetId: "char-014", type: "店长与店员", note: "新来的工读生", directed: true }
+      ],
+      timeline: [
+        { date: "第 7 章", event: "店里排班，员工背后叫她「灭绝师太」" }
+      ],
+      status: "published",
+      created: "2026-11-05",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-013-chaoshang-dianzhang.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-014",
+      universeId: "abin-1985",
+      name: "小萍",
+      aliases: [],
+      age: "",
+      gender: "女",
+      role: "便利商店新来的工读生",
+      affiliation: "便利商店",
+      tags: ["第 7 章", "工读生"],
+      summary: "便利商店新来的工读生，机灵、爱打听。",
+      appearance: "比小雯小，学生打工的样子；圆圆的小脸，笑起来没心机，眼神里带点狡黠。制服白衬衫、深色长裤、运动鞋。",
+      personality: "机灵、爱打听，笑嘻嘻地试探。看出来了也不揭发，拿这个当把柄。",
+      bio: "便利商店新来的工读生，原文起初「不知道什么名字」，后来由门外一声「小雯姐！」点出名字。第 7 章她是这一章的收尾：所有人都以为瞒过去了，只有她看出来了。",
+      relationships: [
+        { targetId: "char-015", type: "同事", note: "叫她「小雯姐」", directed: false },
+        { targetId: "char-013", type: "工读生与店长", note: "", directed: false },
+        { targetId: "char-001", type: "工读生与顾客", note: "第 7 章在店里的收尾", directed: false }
+      ],
+      timeline: [
+        { date: "第 7 章", event: "在门外喊「小雯姐！」" },
+        { date: "第 7 章", event: "笑嘻嘻地试探阿宾" }
+      ],
+      status: "published",
+      created: "2026-11-05",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-014-xiaoping.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-015",
+      universeId: "abin-1985",
+      name: "小雯",
+      aliases: [],
+      age: "",
+      gender: "女",
+      role: "便利商店正式职员",
+      affiliation: "便利商店",
+      tags: ["第 7 章", "正式职员"],
+      summary: "便利商店的正式职员，可爱、娇小。",
+      appearance: "可爱的女生，娇小、娇弱、没什么体力；白衬衫配绿色工作围裙（围裙上有橘色横条），深色长裤、平底鞋。",
+      personality: "亲近、爱说话、会打闹；和阿宾很熟，会骂「要死了」「不要脸」。嘴上拒绝，态度却软。关键时刻还能想起外面有人，比钰慧清醒一点。",
+      bio: "便利商店正式职员，有男朋友。第 7 章阿宾到店里时她和工读生小萍一起当班。",
+      relationships: [
+        { targetId: "char-013", type: "店员与店长", note: "", directed: false },
+        { targetId: "char-014", type: "同事", note: "小萍喊她「小雯姐」", directed: false },
+        { targetId: "char-001", type: "店员与熟客", note: "第 7 章当班", directed: false }
+      ],
+      timeline: [
+        { date: "第 7 章", event: "在便利商店当班，与阿宾打闹" }
+      ],
+      status: "published",
+      created: "2026-11-05",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-015-xiaowen.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };
