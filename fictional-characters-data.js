@@ -1037,6 +1037,166 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-037-li-mingjian.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-038",
+      universeId: "abin-1985",
+      name: "列车长",
+      aliases: [],
+      age: "四十上下",
+      gender: "男",
+      role: "复兴号列车长",
+      affiliation: "复兴号",
+      tags: ["第 18 章", "列车", "查票"],
+      summary: "第 18 章半夜在车厢里查票的列车长。",
+      appearance: "四十上下，深色制服、大盘帽、肩章；手上一把剪票钳；脸上是常年夜班的疲惫，站着略驼，眼神平。",
+      personality: "公事公办，见得多，懒得管；他看出来了，但没有说破。",
+      bio: "复兴号列车长。第 18 章半夜来查票：剪票、再看他们一眼、摇摇头走了——那一个「摇头」，是全书里最轻的一次判决。",
+      relationships: [
+        { targetId: "char-001", type: "乘客与列车长", note: "", directed: false },
+        { targetId: "char-035", type: "乘客与列车长", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 18 章", event: "半夜到车厢查票" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-038-liecheshang.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-039",
+      universeId: "abin-1985",
+      name: "女服务生",
+      aliases: ["西餐厅服务生"],
+      age: "二十上下",
+      gender: "女",
+      role: "西餐厅服务生",
+      affiliation: "西餐厅（雅座）",
+      tags: ["第 14 章", "一次性人物"],
+      summary: "第 14 章那家「雅座」西餐厅的服务生。",
+      appearance: "二十上下，年轻、手脚利落；白衬衫、黑裙、围裙，头发扎起；端着一个托盘。",
+      personality: "麻利、不卑不亢；她什么也没发现。",
+      bio: "第 14 章端红茶上来。她一走近，文强立刻收手坐好。她是那个「打断者」——不是道德的力量，只是有人来了。",
+      relationships: [
+        { targetId: "char-023", type: "顾客与服务生", note: "", directed: false },
+        { targetId: "char-002", type: "顾客与服务生", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 14 章", event: "端红茶上来，打断了一桌人" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-039-nv-fuwusheng.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-040",
+      universeId: "abin-1985",
+      name: "卖场柜员",
+      aliases: ["泳装部柜员"],
+      age: "二十出头",
+      gender: "女",
+      role: "百货服饰卖场专柜小姐（泳装部）",
+      affiliation: "百货服饰卖场",
+      tags: ["第 6 章", "柜员"],
+      summary: "第 6 章泳装部的女柜员。",
+      appearance: "二十出头，浅色制服配及膝裙、胸牌，盘发，化淡妆；站得笔直，手交叠在身前——像随时准备说「欢迎光临」。",
+      personality: "职业、客气，眼睛很尖；会招呼、懂分寸。",
+      bio: "第 6 章泳装部的女柜员。一句「都是今年流行的款式」把钰慧招呼进泳装部；后来替她包装泳衣时，她什么都知道，什么也不说。",
+      relationships: [
+        { targetId: "char-002", type: "顾客与柜员", note: "", directed: false },
+        { targetId: "char-011", type: "同一卖场的同事", note: "她知道泳衣是店长送的", directed: false }
+      ],
+      timeline: [
+        { date: "第 6 章", event: "招呼钰慧看泳装" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-040-guiyuan.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-041",
+      universeId: "abin-1985",
+      name: "邮差",
+      aliases: [],
+      age: "三十上下",
+      gender: "男",
+      role: "邮差",
+      affiliation: "邮局",
+      tags: ["第 1 章", "邮差"],
+      summary: "第 1 章在公寓门口送包裹的邮差。",
+      appearance: "三十上下，草绿色邮差制服、大盘帽，挎帆布邮袋；晒得黑。手里拿着签收单与印章盒。",
+      personality: "话不多，公事公办，见惯了住户。",
+      bio: "第 1 章开着邮车送来胡家的包裹。因为他在楼下等胡太太上楼取印章，才有了阿宾替她搬包裹那一段——全书第一场戏，是靠一个送货的人推开的。",
+      relationships: [
+        { targetId: "char-004", type: "送件与收件", note: "胡家的包裹", directed: true },
+        { targetId: "char-001", type: "送件与代收", note: "由阿宾代收", directed: true }
+      ],
+      timeline: [
+        { date: "第 1 章", event: "在公寓门口送包裹等印章" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-041-youchai.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-042",
+      universeId: "abin-1985",
+      name: "姑丈",
+      aliases: ["阿宾的姑丈"],
+      age: "四十五上下",
+      gender: "男",
+      role: "上班族；孟卉的父亲",
+      affiliation: "住板桥",
+      tags: ["第 11 章", "姑丈", "板桥"],
+      summary: "阿宾的姑丈，住板桥，孟卉的父亲。",
+      appearance: "四十五上下，普通中年上班族，头发有点稀；在家就穿白色背心、短裤，脚踩拖鞋。",
+      personality: "话不多、随和。",
+      bio: "阿宾的姑丈，白天上班不在家，晚上回来和妻子在客厅看电视。原文写他肯花钱，给国中的女儿新买了一部任天堂。在一本到处是越界的书里，他的正常本身就是对照。",
+      relationships: [
+        { targetId: "char-001", type: "姑丈与侄子", note: "", directed: true }
+      ],
+      timeline: [
+        { date: "第 11 章", event: "晚上回家，在客厅看电视" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-042-guzhang.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-043",
+      universeId: "abin-1985",
+      name: "师丈",
+      aliases: ["林素茵的丈夫"],
+      age: "四十上下",
+      gender: "男",
+      role: "上班族；林素茵的丈夫",
+      affiliation: "",
+      tags: ["第 24 章", "师丈", "已婚"],
+      summary: "林素茵的丈夫，结婚近十年。",
+      appearance: "四十上下，微胖，发线后退；白衬衫总是有点皱着，深色西裤、黑皮鞋，手提公事包。",
+      personality: "猴急；嘴上会试探、会开玩笑，对妻子没辄。他不是坏人，只是忙。",
+      bio: "林素茵的丈夫，结婚近十年，上班族，常不在家吃饭。第 24 章他问对了问题，却没等答案。",
+      relationships: [
+        { targetId: "char-036", type: "夫妻", note: "结婚近十年", directed: false }
+      ],
+      timeline: [
+        { date: "第 24 章", event: "提前回家，换过衣服又赶着出门" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-043-shizhang.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };
