@@ -983,6 +983,60 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-035-xiaozhu.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-036",
+      universeId: "abin-1985",
+      name: "林素茵",
+      aliases: ["茵姐", "老师"],
+      age: "接近四十岁",
+      gender: "女",
+      role: "阿宾的班导师",
+      affiliation: "学校",
+      tags: ["第 24 章", "班导师", "已婚"],
+      summary: "阿宾的班导师，接近四十岁，保养得极好。",
+      appearance: "接近四十岁，面貌姣美可人、皮肤白白净净，保养得极好；烫得蓬蓬松松的头发。穿毛绒绒的长袖套衫、紧身牛仔裤，米色高跟鞋。",
+      personality: "声音非常娇媚；主动，声音与姿态都在「招呼」；说谎很熟练，但说漏嘴会脸红。年轻时学过舞蹈。",
+      bio: "林素茵，阿宾的班导师。学生叫她「老师」，私下叫「茵姐」。已婚近十年，丈夫是师丈，女儿是小美。第 24 章叫阿宾去家里送资料。",
+      relationships: [
+        { targetId: "char-001", type: "师生", note: "班导师与学生", directed: true },
+        { targetId: "char-025", type: "认识", note: "阿宾的事是依姈告诉她的", directed: false }
+      ],
+      timeline: [
+        { date: "第 24 章", event: "叫阿宾到家里送资料" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-036-lin-suyin.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-037",
+      universeId: "abin-1985",
+      name: "李明健",
+      aliases: ["明健"],
+      age: "19",
+      gender: "男",
+      role: "淑华的直属学弟，大一新生",
+      affiliation: "与阿宾同栋公寓，从前是莲莲那间小房",
+      tags: ["第 23 章", "学弟", "书呆子"],
+      summary: "淑华的直属学弟，大一新生，戴着眼镜的书呆子。",
+      appearance: "十九岁，瘦，戴眼镜，头发有点乱；白衬衫扣得整齐，深色长裤、布鞋。显得笨拙但干净，原文用「一脸蠢样」形容。",
+      personality: "老实、认真、有礼貌，说话像在念稿，会害羞；房间整理得比女生还干净。他是全书唯一一个想「负责」的男人。",
+      bio: "李明健，淑华的直属学弟，大一新生，租阿宾同栋公寓、从前是莲莲那间小房。第 23 章淑华生日时被介绍给她。",
+      relationships: [
+        { targetId: "char-012", type: "直属学弟与学姐", note: "淑华生日时配对", directed: true },
+        { targetId: "char-001", type: "同栋公寓邻居", note: "由阿宾介绍给淑华", directed: false }
+      ],
+      timeline: [
+        { date: "第 23 章", event: "淑华生日，被介绍给淑华" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-037-li-mingjian.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };
