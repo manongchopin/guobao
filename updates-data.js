@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-05",
     type: "足迹",
+    title: "山东自驾游：上海—苏北—胶东环线",
+    note: "2,033 km · OSRM 重绘",
+    href: "drives.html"
+  },
+  {
+    date: "2026-11-05",
+    type: "足迹",
     title: "Apple Health 长距离运动：>15 km 共 8 条",
     note: "含轨迹 · 骑行 3 / 徒步 3 / 步行 1 / 跑步 1",
     href: "outdoors.html"

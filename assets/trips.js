@@ -5,6 +5,7 @@
   var trains = Array.isArray(D.trains) ? D.trains : [];
   var hikes = Array.isArray(D.hikes) ? D.hikes : [];
   var sports = Array.isArray(D.sports) ? D.sports : [];
+  var drives = Array.isArray(D.drives) ? D.drives : [];
   var placesByYear = (D.placesByYear && typeof D.placesByYear === "object") ? D.placesByYear : {};
 
   var AIR = {
@@ -62,7 +63,7 @@
     document.getElementById("tp-trains").textContent = trains.length;
     document.getElementById("tp-hikes").textContent = hikes.length;
     document.getElementById("tp-sports").textContent = sports.length;
-    document.getElementById("tp-km").textContent = fmt(Math.round(kmTotal(flights) + kmTotal(trains) + hikeKm + sportKm));
+    document.getElementById("tp-km").textContent = fmt(Math.round(kmTotal(flights) + kmTotal(trains) + hikeKm + sportKm + kmTotal(drives)));
     document.getElementById("tp-places").textContent = uniquePlaces();
 
     document.getElementById("card-flights").textContent = flights.length;
@@ -70,6 +71,8 @@
     document.getElementById("card-rails").textContent = trains.length;
     document.getElementById("card-rails-km").textContent = fmt(kmTotal(trains));
     document.getElementById("card-outdoors").textContent = hikes.length + sports.length;
+    document.getElementById("card-drives").textContent = drives.length;
+    document.getElementById("card-drives-km").textContent = fmt(kmTotal(drives));
   }
 
   function renderPlaces() {

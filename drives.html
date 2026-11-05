@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自驾记录 · 我的行程</title>
+<meta name="description" content="自驾路线：山东环线，上海—连云港—潍坊—烟台—威海—青岛—盐城—上海。">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/trips.css">
+<link rel="stylesheet" href="assets/records.css">
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="trips.html">← 我的行程</a>
+  <p class="kicker">DRIVE · ROAD TRIP</p>
+  <h1>自驾记录</h1>
+  <p class="lede">
+    按公路路径重绘的环线。<br>
+    <span>不是实际 GPS 轨迹，按途经城市估算。</span>
+  </p>
+  <div class="seal" aria-hidden="true">驾</div>
+</header>
+
+<main class="wh-detail">
+
+  <section class="wh-section tp-first">
+    <div class="lg-stats">
+      <div><b id="lg-count">0</b><span>条自驾</span></div>
+      <div><b id="lg-km">0</b><span>公里</span></div>
+      <div><b id="lg-cities">0</b><span>途经城市</span></div>
+      <div><b>OSRM</b><span>路径来源</span></div>
+    </div>
+    <p class="tp-intro">路线按途经城市用 OSRM（OpenStreetMap 路网）计算，只保留约 150 米精度的折线。实际开的路、停靠点和服务区没有记录。</p>
+  </section>
+
+  <section class="wh-section" id="drives">
+    <div class="tp-head">
+      <div><p class="tp-kicker">DRIVE LOG</p><h2>自驾</h2></div>
+      <p>按时间倒序。<br>可缩放。</p>
+    </div>
+    <div id="tp-drive-list"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>自驾记录 · 我的行程</span>
+    <span>OSRM 路径 · 非实际轨迹</span>
+    <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
+    <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="trips-data.js"></script>
+<script src="assets/drives.js"></script>
+</body>
+</html>
