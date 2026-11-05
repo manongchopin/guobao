@@ -69,8 +69,7 @@
     document.getElementById("card-flights-km").textContent = fmt(kmTotal(flights));
     document.getElementById("card-rails").textContent = trains.length;
     document.getElementById("card-rails-km").textContent = fmt(kmTotal(trains));
-    document.getElementById("card-outdoors").textContent = hikes.length;
-    document.getElementById("card-sports").textContent = sports.length;
+    document.getElementById("card-outdoors").textContent = hikes.length + sports.length;
   }
 
   function renderPlaces() {

@@ -22,60 +22,54 @@
     L.control.scale({ imperial: false, position: "bottomleft" }).addTo(map);
   }
 
-  var TYPE = { run: "跑步", ride: "骑行", hike: "徒步", walk: "步行" };
+  function sortDesc(list) {
+    return list.slice().sort(function (a, b) { return String(b.month).localeCompare(String(a.month)); });
+  }
 
-  function card(h, i, prefix, color, extra) {
+  function card(h, i, prefix) {
     var hasPath = !!(h.path && h.path.length > 1);
+    var extra = "";
+    if (h.gpsKm) extra += '<p class="tp-hike-note">GPS 记录 ' + h.gpsKm + ' km · Apple Watch</p>';
+    if (h.note) extra += '<p class="tp-hike-note">' + esc(h.note) + '</p>';
+    if (h.pending) extra += '<p class="tp-hike-note">赛事待核实，名称稍后补</p>';
     var map = hasPath
       ? '<div class="tp-hike-map" id="' + prefix + '-map-' + i + '"></div>' +
         '<p class="tp-map-note">GPS 抽稀轨迹 · 底图 © OpenStreetMap contributors</p>'
       : '<p class="tp-map-note">无 GPS 轨迹，仅记录距离与用时。</p>';
-    var type = h.type && TYPE[h.type] ? TYPE[h.type] + ' · ' : '';
     return '<article class="tp-hike">' +
       '<div class="tp-hike-head"><div>' +
         '<h3>' + esc(h.name || "未命名") + '</h3>' +
-        '<p class="tp-hike-meta">' + type + esc(h.month || "") + ' · ' +
+        '<p class="tp-hike-meta">' + esc(h.month || "") + ' · ' +
           (h.km != null ? h.km + ' km' : "") +
           (h.ascent != null ? ' · 爬升 ' + h.ascent + ' m' : "") +
           (h.duration ? ' · 用时 ' + h.duration : "") +
-        '</p>' +
-        (extra || '') +
+        '</p>' + extra +
       '</div><p class="tp-hike-points">' + (hasPath ? (h.points || h.path.length) + ' 点' : '') + '</p></div>' +
       map +
     '</article>';
   }
 
-  function renderHikes() {
-    var box = document.getElementById("tp-hike-list");
+  function renderGroup(list, boxId, prefix, color) {
+    var box = document.getElementById(boxId);
     if (!box) return;
-    if (!hikes.length) { box.innerHTML = '<p class="tp-nothing">还没有徒步记录。</p>'; return; }
-    var list = hikes.slice().sort(function (a, b) { return String(b.month).localeCompare(String(a.month)); });
-    box.innerHTML = list.map(function (h, i) {
-      return card(h, i, "tp-hike", "#4a6b52", h.note ? '<p class="tp-hike-note">' + esc(h.note) + '</p>' : '');
-    }).join("");
+    if (!list.length) { box.innerHTML = '<p class="tp-nothing">还没有记录。</p>'; return; }
+    var sorted = sortDesc(list);
+    box.innerHTML = sorted.map(function (h, i) { return card(h, i, prefix); }).join("");
     if (!window.L) return;
-    list.forEach(function (h, i) {
-      var el = document.getElementById("tp-hike-map-" + i);
-      if (el && h.path && h.path.length > 1) activityMap(el, h.path, "#4a6b52");
+    sorted.forEach(function (h, i) {
+      var el = document.getElementById(prefix + "-map-" + i);
+      if (el && h.path && h.path.length > 1) activityMap(el, h.path, color);
     });
   }
 
-  function renderSports() {
-    var box = document.getElementById("tp-sport-list");
-    if (!box) return;
-    if (!sports.length) { box.innerHTML = '<p class="tp-nothing">还没有运动记录。</p>'; return; }
-    box.innerHTML = sports.map(function (h, i) {
-      var extra = (h.gpsKm ? '<p class="tp-hike-note">GPS 记录 ' + h.gpsKm + ' km · Apple Watch</p>' : '') +
-        (h.pending ? '<p class="tp-hike-note">赛事待核实，名称稍后补</p>' : '');
-      return card(h, i, "tp-sport", "#a8402f", extra);
-    }).join("");
-    if (!window.L) return;
-    sports.forEach(function (h, i) {
-      var el = document.getElementById("tp-sport-map-" + i);
-      if (el && h.path && h.path.length > 1) activityMap(el, h.path, "#a8402f");
-    });
-  }
+  var run = sports.filter(function (h) { return h.type === "run"; });
+  var ride = sports.filter(function (h) { return h.type === "ride"; });
+  var hike = hikes.map(function (h) { return Object.assign({ type: "hike" }, h); })
+    .concat(sports.filter(function (h) { return h.type === "hike"; }));
+  var walk = sports.filter(function (h) { return h.type === "walk"; });
 
-  renderHikes();
-  renderSports();
+  renderGroup(run, "tp-run-list", "run", "#a8402f");
+  renderGroup(ride, "tp-ride-list", "ride", "#1d2622");
+  renderGroup(hike, "tp-hike-list", "hike", "#4a6b52");
+  renderGroup(walk, "tp-walk-list", "walk", "#8a938c");
 })();
