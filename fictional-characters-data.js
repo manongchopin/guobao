@@ -224,6 +224,61 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-05",
       portrait: "images/fictional-characters/char-007-yanjingzai.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-008",
+      universeId: "abin-1985",
+      name: "老邱",
+      aliases: [],
+      age: "五十多岁",
+      gender: "男",
+      role: "学校校工",
+      affiliation: "学校（负责清扫）",
+      tags: ["校工", "藏书间", "丧妻"],
+      summary: "学校里五十多岁的校工，一个人负责清扫。",
+      appearance: "干瘦、干扁，背略驼；穿旧工作服，手上有老茧。原文写他「外表干扁惹厌」——不讨喜，但不凶。",
+      personality: "精明、会等、会拿捏把柄，嘴上占便宜；不吵不闹，坐在办公室里等人回来。他不是一时冲动，是算准了对方不敢声张。",
+      bio: "学校校工，五十多岁，负责清扫。妻子过世后独居。第 5 章在藏书间清扫时，遇见到图书馆来的吴姐。",
+      relationships: [
+        { targetId: "char-009", type: "同校同事", note: "他在藏书间撞见她", directed: false }
+      ],
+      timeline: [
+        { date: "第 5 章", event: "在藏书间清扫，撞见吴姐" },
+        { date: "第 5 章", event: "事情没结束：他留在办公室等人回来" }
+      ],
+      status: "published",
+      created: "2026-11-05",
+      updated: "2026-11-05",
+      portrait: "images/fictional-characters/char-008-laoqiu.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-009",
+      universeId: "abin-1985",
+      name: "吴幸如",
+      aliases: ["吴姐"],
+      age: "三十余岁",
+      gender: "女",
+      role: "学校图书馆职员",
+      affiliation: "学校图书馆",
+      tags: ["图书馆", "文员", "已婚"],
+      summary: "图书馆的女职员，大家都叫她「吴姐」。",
+      appearance: "圆圆润润、有点福态，削薄的短发，脸蛋白净、淡施脂粉，厚唇；没有腰身，小腹圆突。衣着十分保守：圆领白衬衫、女西装外套、及膝淑女裙。",
+      personality: "和蔼可亲、笑容可掬，声音柔细；性子软、怕事，被推到哪里就到哪里——不敢拒绝，也不敢声张。",
+      bio: "学校图书馆职员，大家叫她「吴姐」。已婚、没有生育，婚后身材略为发福；丈夫对她兴趣缺缺。第 5 章在图书馆帮阿宾分类、倒水，之后带他到藏书间。",
+      relationships: [
+        { targetId: "char-001", type: "图书馆职员与学生", note: "帮他分类、倒水", directed: false },
+        { targetId: "char-008", type: "同校同事", note: "在藏书间被他撞见", directed: false }
+      ],
+      timeline: [
+        { date: "第 5 章", event: "在图书馆帮阿宾分类图书、倒水给他喝" },
+        { date: "第 5 章", event: "带他到藏书间" }
+      ],
+      status: "published",
+      created: "2026-11-05",
+      updated: "2026-11-05",
+      portrait: "images/fictional-characters/char-009-wu-xingru.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };
