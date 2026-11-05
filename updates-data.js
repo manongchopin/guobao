@@ -3,7 +3,7 @@ window.SITE_UPDATES = [
     date: "2026-11-05",
     type: "档案",
     title: "虚构人物档案：25 人",
-    note: "25 人物 · 25 张定妆照 · 点小图看大图",
+    note: "25 人物 · 26 张定妆照 · 点小图看大图",
     href: "fictional-characters.html"
   },
   {

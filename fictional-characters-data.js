@@ -82,7 +82,14 @@ window.FICTIONAL_CHARACTERS = {
       created: "2026-11-05",
       updated: "2026-11-05",
       portrait: "images/fictional-characters/char-002-he-yuhui.jpg",
-      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+      portraitCredit: "AI 生成 · 虚构形象 · 2026",
+      portraitVariants: [
+        {
+          file: "images/fictional-characters/char-002b-he-yuhui-curly.jpg",
+          label: "卷发版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        }
+      ]
     },
     {
       id: "char-003",

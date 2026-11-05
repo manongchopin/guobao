@@ -36,6 +36,28 @@
     D.universes.forEach(function (u) { universes[u.id] = u; });
   }
 
+  /* 一张卡片 = 一张定妆照；同一人物的额外定妆照（portraitVariants）
+     紧跟在本人主照后面，共用同一份人物资料。 */
+  var entries = [];
+  list.forEach(function (c) {
+    entries.push({
+      char: c,
+      src: c.portrait || "",
+      label: "",
+      alt: c.name + " 定妆照（虚构人物）"
+    });
+    if (Object.prototype.toString.call(c.portraitVariants) === "[object Array]") {
+      c.portraitVariants.forEach(function (v) {
+        entries.push({
+          char: c,
+          src: v.file || "",
+          label: v.label || "另一版",
+          alt: c.name + " " + (v.label || "") + " 定妆照（虚构人物）"
+        });
+      });
+    }
+  });
+
   function text(el, value) {
     if (!el) return;
     el.textContent = value === undefined || value === null ? "" : String(value);
@@ -71,24 +93,27 @@
   text(document.getElementById("fc-stat-universes"), Object.keys(universes).length);
   text(document.getElementById("fc-stat-relations"), relationCount());
   text(document.getElementById("fc-stat-version"), D && D.version ? D.version : "0.2");
-  text(document.getElementById("fc-count"), list.length ? list.length + " 人" : "");
+  text(document.getElementById("fc-count"), list.length ? list.length + " 人 · " + entries.length + " 张" : "");
   text(document.getElementById("fc-foot-count"), list.length);
 
   /* ---------- 卡片墙 ---------- */
   var frag = document.createDocumentFragment();
 
-  list.forEach(function (c, i) {
+  entries.forEach(function (entry, i) {
+    var c = entry.char;
+
     var card = document.createElement("button");
     card.type = "button";
-    card.className = "fc-card";
-    card.setAttribute("aria-label", "查看 " + c.name + " 的定妆照");
+    card.className = entry.label ? "fc-card fc-card--variant" : "fc-card";
+    card.setAttribute("aria-label", "查看 " + c.name + (entry.label ? " " + entry.label : "") + " 的定妆照");
 
     var media = document.createElement("span");
     media.className = "fc-card-media";
+    if (entry.label) media.setAttribute("data-label", entry.label);
 
     var img = document.createElement("img");
-    img.src = c.portrait || "";
-    img.alt = c.name + " 定妆照（虚构人物）";
+    img.src = entry.src;
+    img.alt = entry.alt;
     img.width = 1024;
     img.height = 1792;
     img.loading = "lazy";
@@ -100,10 +125,12 @@
 
     var name = document.createElement("b");
     name.textContent = c.name;
-    var role = document.createElement("span");
-    role.textContent = c.role || universeTitle(c.universeId);
+
+    var sub = document.createElement("span");
+    sub.textContent = entry.label ? entry.label + " · " + (c.role || "") : (c.role || universeTitle(c.universeId));
+
     body.appendChild(name);
-    body.appendChild(role);
+    body.appendChild(sub);
 
     card.appendChild(media);
     card.appendChild(body);
@@ -126,8 +153,8 @@
   var preloaded = {};
 
   function preload(i) {
-    if (i < 0 || i >= list.length) return;
-    var src = list[i].portrait;
+    if (i < 0 || i >= entries.length) return;
+    var src = entries[i].src;
     if (!src || preloaded[src]) return;
     preloaded[src] = true;
     var im = new Image();
@@ -143,7 +170,7 @@
     return { dt: dt, dd: dd };
   }
 
-  function renderFacts(c) {
+  function renderFacts(c, entry) {
     if (!lbFacts) return;
     lbFacts.textContent = "";
 
@@ -158,6 +185,7 @@
       factRow("身份", c.role),
       factRow("所属", c.affiliation || universeTitle(c.universeId)),
       factRow("别名", (c.aliases || []).join("、")),
+      factRow("版本", entry && entry.label ? entry.label : ""),
       factRow("关系", rels.join("；")),
       factRow("标签", (c.tags || []).join(" · ")),
       factRow("定妆照", c.portraitCredit)
@@ -171,22 +199,23 @@
   }
 
   function show(i) {
-    if (!lb || i < 0 || i >= list.length) return;
+    if (!lb || i < 0 || i >= entries.length) return;
     current = i;
-    var c = list[i];
+    var entry = entries[i];
+    var c = entry.char;
 
     if (lbImg) {
-      lbImg.src = c.portrait || "";
-      lbImg.alt = c.name + " 定妆照（虚构人物）";
+      lbImg.src = entry.src;
+      lbImg.alt = entry.alt;
     }
 
     text(lbKicker, (c.status === "published" ? "PUBLISHED" : "DRAFT") +
       (universeTitle(c.universeId) ? " · " + universeTitle(c.universeId) : ""));
     text(lbName, c.name);
-    text(lbRole, c.role || "");
+    text(lbRole, entry.label ? entry.label + (c.role ? " · " + c.role : "") : (c.role || ""));
     text(lbSummary, c.summary || "");
-    text(lbIndex, (i + 1) + " / " + list.length);
-    renderFacts(c);
+    text(lbIndex, (i + 1) + " / " + entries.length);
+    renderFacts(c, entry);
 
     preload(i + 1);
     preload(i - 1);
@@ -217,8 +246,8 @@
   function step(delta) {
     if (lb.hidden || current < 0) return;
     var next = current + delta;
-    if (next < 0) next = list.length - 1;
-    if (next >= list.length) next = 0;
+    if (next < 0) next = entries.length - 1;
+    if (next >= entries.length) next = 0;
     show(next);
   }
 

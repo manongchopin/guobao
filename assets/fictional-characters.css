@@ -52,6 +52,23 @@
 .fc-card-body b { display: block; font-family: var(--serif); font-size: 16px; font-weight: 600; letter-spacing: .02em; }
 .fc-card-body span { display: block; margin-top: 3px; font-size: 10px; line-height: 1.6; color: var(--ink-3); }
 
+/* 同一人物的另一版定妆照：紧跟主照，左上角挂一个版本标签 */
+.fc-card--variant .fc-card-media { position: relative; }
+.fc-card--variant .fc-card-media::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 6px;
+  background: rgba(245, 241, 232, .94);
+  border: 1px solid var(--red);
+  color: var(--red);
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: .08em;
+}
+.fc-card--variant .fc-card-body span { color: var(--red); }
+
 /* 页内灯箱 · 点小图浮起大图，不跳转、不新开标签页 */
 body.fc-lb-open { overflow: hidden; }
 
