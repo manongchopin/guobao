@@ -41,3 +41,7 @@
   .lg-stats div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .lg-search { max-width: none; }
 }
+
+.lg-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 10px 0 2px; font-family: var(--sans); font-size: 10.5px; color: var(--ink-2); }
+.lg-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.lg-legend i { width: 16px; height: 2px; display: inline-block; }

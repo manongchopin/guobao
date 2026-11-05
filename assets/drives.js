@@ -10,13 +10,15 @@
   }
   function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
 
-  function activityMap(el, path) {
+  var COLORS = ["#a8402f", "#8a5a2b", "#556b7a", "#4a6b52", "#7a5a7a"];
+
+  function activityMap(el, path, color) {
     var map = L.map(el, { scrollWheelZoom: false });
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
     }).addTo(map);
-    var line = L.polyline(path, { color: "#1d2622", weight: 2.6, opacity: 0.9, lineJoin: "round" }).addTo(map);
+    var line = L.polyline(path, { color: color || "#1d2622", weight: 2.6, opacity: 0.9, lineJoin: "round" }).addTo(map);
     L.circleMarker(path[0], { radius: 4, color: "#a8402f", weight: 2, fillColor: "#fffdf7", fillOpacity: 1 }).addTo(map).bindTooltip("起终点");
     map.fitBounds(line.getBounds(), { padding: [24, 24] });
     L.control.scale({ imperial: false, position: "bottomleft" }).addTo(map);
@@ -33,6 +35,31 @@
     document.getElementById("lg-count").textContent = drives.length;
     document.getElementById("lg-km").textContent = fmt(Math.round(km));
     document.getElementById("lg-cities").textContent = Object.keys(cities).length;
+  }
+
+  function renderOverview() {
+    var el = document.getElementById("tp-drive-overview");
+    var legend = document.getElementById("tp-drive-legend");
+    if (!el || !window.L || !drives.length) return;
+    var map = L.map(el, { scrollWheelZoom: false });
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    var bounds = L.latLngBounds([]);
+    drives.forEach(function (d, i) {
+      if (!d.path || d.path.length < 2) return;
+      var color = COLORS[i % COLORS.length];
+      var line = L.polyline(d.path, { color: color, weight: 2.4, opacity: 0.85, lineJoin: "round" }).addTo(map);
+      line.bindTooltip(d.name + " · " + fmt(d.km) + " km");
+      bounds.extend(line.getBounds());
+    });
+    if (bounds.isValid()) map.fitBounds(bounds, { padding: [24, 24] });
+    L.control.scale({ imperial: false, position: "bottomleft" }).addTo(map);
+    legend.innerHTML = drives.map(function (d, i) {
+      return '<span><i style="background:' + COLORS[i % COLORS.length] + '"></i>' +
+        esc(d.name) + ' · ' + fmt(d.km) + ' km</span>';
+    }).join("");
   }
 
   function render() {
@@ -56,10 +83,11 @@
     if (!window.L) return;
     drives.forEach(function (d, i) {
       var el = document.getElementById("tp-drive-map-" + i);
-      if (el && d.path && d.path.length > 1) activityMap(el, d.path);
+      if (el && d.path && d.path.length > 1) activityMap(el, d.path, COLORS[i % COLORS.length]);
     });
   }
 
   renderStats();
+  renderOverview();
   render();
 })();

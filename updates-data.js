@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-05",
     type: "足迹",
+    title: "新疆自驾：伊犁—赛里木湖环线",
+    note: "1,642 km · 自驾总图上线",
+    href: "drives.html"
+  },
+  {
+    date: "2026-11-05",
+    type: "足迹",
     title: "川西自驾：三星堆—色达—稻城亚丁—康定",
     note: "2,391 km · OSRM 重绘",
     href: "drives.html"

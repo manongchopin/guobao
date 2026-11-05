@@ -27,7 +27,17 @@
 
 <main class="wh-detail">
 
-  <section class="wh-section tp-first">
+  <section class="wh-section tp-first" id="overview">
+    <div class="tp-head">
+      <div><p class="tp-kicker">ALL DRIVES · OVERVIEW</p><h2>自驾总图</h2></div>
+      <p>五条路线叠加。<br>颜色对应下方记录。</p>
+    </div>
+    <div id="tp-drive-overview" class="tp-chart" style="height:520px"></div>
+    <div class="lg-legend" id="tp-drive-legend"></div>
+    <p class="tp-map-note">全部按 OSRM 公路路径重绘，不是实际 GPS 轨迹。</p>
+  </section>
+
+  <section class="wh-section">
     <div class="lg-stats">
       <div><b id="lg-count">0</b><span>条自驾</span></div>
       <div><b id="lg-km">0</b><span>公里</span></div>
