@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-05",
     type: "足迹",
+    title: "山西自驾游：上海—晋东南—晋北—晋南",
+    note: "3,768 km · OSRM 重绘",
+    href: "drives.html"
+  },
+  {
+    date: "2026-11-05",
+    type: "足迹",
     title: "山东自驾游：上海—苏北—胶东环线",
     note: "2,033 km · OSRM 重绘",
     href: "drives.html"
