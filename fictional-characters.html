@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>虚构人物档案 · Fictional Characters</title>
-<meta name="description" content="虚构人物档案骨架：人物卡、关系、时间线与设定，不是真人资料。">
+<meta name="description" content="虚构人物档案：7 位虚构人物的定妆照与人物卡，点小图看大图。不是真人资料。">
 <meta name="theme-color" content="#f5f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
@@ -14,11 +14,11 @@
 
 <header class="hero">
   <a class="back" href="index.html">← 我走过的世界</a>
-  <p class="kicker">FICTIONAL CHARACTERS · ARCHIVE · SKELETON</p>
+  <p class="kicker">FICTIONAL CHARACTERS · ARCHIVE</p>
   <h1>虚构人物档案</h1>
   <p class="lede">
     我写的人物，不是真人资料。<br>
-    <span>人物卡、关系、时间线；先留一个空档案柜。</span>
+    <span>一人一卡，定妆照是 AI 生成的虚构形象。</span>
   </p>
   <div class="seal" aria-hidden="true">人</div>
 </header>
@@ -26,51 +26,58 @@
 <main class="wh-detail">
   <section class="wh-section">
     <div class="fc-stats">
-      <div><b>0</b><span>人物</span></div>
-      <div><b>0</b><span>世界观 / 作品</span></div>
-      <div><b>0</b><span>关系</span></div>
-      <div><b>骨架</b><span>当前状态</span></div>
+      <div><b id="fc-stat-characters">0</b><span>人物</span></div>
+      <div><b id="fc-stat-universes">0</b><span>世界观 / 作品</span></div>
+      <div><b id="fc-stat-relations">0</b><span>关系</span></div>
+      <div><b id="fc-stat-version">0.2</b><span>当前版本</span></div>
     </div>
-    <p class="fc-callout"><b>这是骨架页。</b>目前没有任何人物、关系或时间线；等新会话确认字段和“上传”方式后再录入。</p>
-    <p class="fc-intro">这不是真人档案，也不对应现实中的任何个人。所有人物、组织、事件都按虚构设定处理；如果出现与真实人物相似的名字，应明确标注为虚构。</p>
+    <p class="fc-callout"><b>这是虚构人物档案。</b>所有人物、组织、事件都按虚构设定处理，不对应现实中的任何个人；定妆照为 AI 生成的虚构形象，不是真人照片。</p>
+    <p class="fc-intro">点任意一张定妆照，会在本页浮起大图，不跳转、不新开标签页。Esc 关闭，← → 看上一位 / 下一位。</p>
   </section>
 
   <section class="wh-section">
-    <h2>这个档案柜准备放什么</h2>
-    <div class="fc-grid">
-      <div><span>PERSON</span><b>人物卡</b><p>姓名、别名、年龄、身份、所属作品/世界观、外貌、性格、简介。</p></div>
-      <div><span>RELATION</span><b>关系</b><p>亲属、朋友、敌人、上下级、师徒；关系可以是有向的，也可以有时间和状态。</p></div>
-      <div><span>TIMELINE</span><b>时间线</b><p>人物经历的关键事件；按作品内时间，不按现实日期。</p></div>
-      <div><span>UPLOAD</span><b>导入 / 导出</b><p>静态站没有后端；“上传”先按 JSON 导入、本机草稿和导出处理，不假装能自动发布。</p></div>
-    </div>
+    <h2>人物 <span class="fc-count" id="fc-count"></span></h2>
+    <div class="fc-wall" id="fc-wall"></div>
+    <p class="fc-empty" id="fc-empty" hidden>这个档案柜还是空的。</p>
   </section>
 
   <section class="wh-section">
-    <h2>先说明“上传”</h2>
-    <p class="fc-note">这个站是静态站。浏览器里选择文件，只能读进本机；不会自动出现在公开页面。公开条目仍要写进数据文件并部署。图片也一样，不能靠一个上传按钮直接发布。</p>
-  </section>
-
-  <section class="wh-section">
-    <h2>下一步要先定</h2>
-    <ol class="fc-questions">
-      <li>这是一个世界观，还是多个作品/多个世界？</li>
-      <li>档案公开，还是只存本机草稿？</li>
-      <li>“上传”是导入 JSON、填表单，还是也要传图片？</li>
-      <li>人物卡需要哪些字段？</li>
-      <li>关系图和时间线第一版就要，还是先做人物列表？</li>
-    </ol>
+    <h2>关于这批定妆照</h2>
+    <p class="fc-note">同一场景、同一景别、同一光位，人物站直、正面、全身入镜，方便横向比较身形与衣着。文字只取人物小传里可用的外形、性格与经历；原文里涉及身体细节的描写不进档案页。公开条目写在本目录的 <code>fictional-characters-data.js</code> 里，随站点一起发布——静态站没有后台上传，页面上也不会出现「上传」按钮。</p>
   </section>
 </main>
 
 <footer class="footer">
   <div class="footer-inner">
-    <span>虚构人物档案 · 骨架</span>
+    <span>虚构人物档案 · <span id="fc-foot-count">7</span> 人</span>
     <span>不是真人资料</span>
     <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
     <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
   </div>
 </footer>
 
+<div class="fc-lb" id="fc-lb" role="dialog" aria-modal="true" aria-labelledby="fc-lb-name" hidden>
+  <div class="fc-lb-panel">
+    <button type="button" class="fc-lb-close" id="fc-lb-close" aria-label="关闭大图">×</button>
+    <figure class="fc-lb-figure">
+      <img id="fc-lb-img" src="" alt="">
+    </figure>
+    <div class="fc-lb-info">
+      <p class="fc-lb-kicker" id="fc-lb-kicker"></p>
+      <h2 class="fc-lb-name" id="fc-lb-name"></h2>
+      <p class="fc-lb-role" id="fc-lb-role"></p>
+      <p class="fc-lb-summary" id="fc-lb-summary"></p>
+      <dl class="fc-lb-facts" id="fc-lb-facts"></dl>
+      <p class="fc-lb-nav">
+        <button type="button" id="fc-lb-prev">← 上一位</button>
+        <span id="fc-lb-index"></span>
+        <button type="button" id="fc-lb-next">下一位 →</button>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script src="fictional-characters-data.js"></script>
 <script src="assets/fictional-characters.js"></script>
 </body>
 </html>

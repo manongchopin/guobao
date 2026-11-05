@@ -1,12 +1,267 @@
-/* 虚构人物档案 · 骨架
- * 目前没有人物数据。后续由新会话决定：
- * - 公共数据：fictional-characters-data.js
- * - 本机草稿：localStorage
- * - 导入/导出：JSON
- * 不从 URL 或用户输入直接 innerHTML。
+/* 虚构人物档案 · 卡片墙 + 页内灯箱
+ * - 数据来自 fictional-characters-data.js（window.FICTIONAL_CHARACTERS）
+ * - 点小图在本页浮起大图，不跳转、不新开标签页
+ * - Esc 关闭，← → 切上一位 / 下一位，点背景关闭
+ * - 所有文字一律 textContent，不用 innerHTML
  */
 (function () {
   "use strict";
+
   var D = window.FICTIONAL_CHARACTERS;
-  if (!D) return;
+  var wall = document.getElementById("fc-wall");
+  if (!wall) return;
+
+  var lb = document.getElementById("fc-lb");
+  var lbImg = document.getElementById("fc-lb-img");
+  var lbKicker = document.getElementById("fc-lb-kicker");
+  var lbName = document.getElementById("fc-lb-name");
+  var lbRole = document.getElementById("fc-lb-role");
+  var lbSummary = document.getElementById("fc-lb-summary");
+  var lbFacts = document.getElementById("fc-lb-facts");
+  var lbIndex = document.getElementById("fc-lb-index");
+  var lbPrev = document.getElementById("fc-lb-prev");
+  var lbNext = document.getElementById("fc-lb-next");
+  var lbClose = document.getElementById("fc-lb-close");
+  var emptyEl = document.getElementById("fc-empty");
+
+  var list = [];
+  if (D && Object.prototype.toString.call(D.characters) === "[object Array]") {
+    list = D.characters.slice().sort(function (a, b) {
+      return String(a.id) < String(b.id) ? -1 : 1;
+    });
+  }
+
+  var universes = {};
+  if (D && Object.prototype.toString.call(D.universes) === "[object Array]") {
+    D.universes.forEach(function (u) { universes[u.id] = u; });
+  }
+
+  function text(el, value) {
+    if (!el) return;
+    el.textContent = value === undefined || value === null ? "" : String(value);
+  }
+
+  function universeTitle(id) {
+    return universes[id] ? universes[id].title : "";
+  }
+
+  function charName(id) {
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].id === id) return list[i].name;
+    }
+    return "";
+  }
+
+  function relationCount() {
+    var seen = {};
+    var n = 0;
+    list.forEach(function (c) {
+      (c.relationships || []).forEach(function (r) {
+        var a = String(c.id);
+        var b = String(r.targetId);
+        var key = a < b ? a + "|" + b : b + "|" + a;
+        if (!seen[key]) { seen[key] = true; n++; }
+      });
+    });
+    return n;
+  }
+
+  /* ---------- 统计 ---------- */
+  text(document.getElementById("fc-stat-characters"), list.length);
+  text(document.getElementById("fc-stat-universes"), Object.keys(universes).length);
+  text(document.getElementById("fc-stat-relations"), relationCount());
+  text(document.getElementById("fc-stat-version"), D && D.version ? D.version : "0.2");
+  text(document.getElementById("fc-count"), list.length ? list.length + " 人" : "");
+  text(document.getElementById("fc-foot-count"), list.length);
+
+  /* ---------- 卡片墙 ---------- */
+  var frag = document.createDocumentFragment();
+
+  list.forEach(function (c, i) {
+    var card = document.createElement("button");
+    card.type = "button";
+    card.className = "fc-card";
+    card.setAttribute("aria-label", "查看 " + c.name + " 的定妆照");
+
+    var media = document.createElement("span");
+    media.className = "fc-card-media";
+
+    var img = document.createElement("img");
+    img.src = c.portrait || "";
+    img.alt = c.name + " 定妆照（虚构人物）";
+    img.width = 1024;
+    img.height = 1792;
+    img.loading = "lazy";
+    img.decoding = "async";
+    media.appendChild(img);
+
+    var body = document.createElement("span");
+    body.className = "fc-card-body";
+
+    var name = document.createElement("b");
+    name.textContent = c.name;
+    var role = document.createElement("span");
+    role.textContent = c.role || universeTitle(c.universeId);
+    body.appendChild(name);
+    body.appendChild(role);
+
+    card.appendChild(media);
+    card.appendChild(body);
+
+    card.addEventListener("click", function () { openAt(i); });
+    frag.appendChild(card);
+  });
+
+  wall.appendChild(frag);
+
+  if (!list.length) {
+    if (emptyEl) emptyEl.hidden = false;
+    wall.hidden = true;
+    return;
+  }
+
+  /* ---------- 灯箱 ---------- */
+  var current = -1;
+  var lastFocus = null;
+  var preloaded = {};
+
+  function preload(i) {
+    if (i < 0 || i >= list.length) return;
+    var src = list[i].portrait;
+    if (!src || preloaded[src]) return;
+    preloaded[src] = true;
+    var im = new Image();
+    im.src = src;
+  }
+
+  function factRow(label, value) {
+    if (!value) return null;
+    var dt = document.createElement("dt");
+    dt.textContent = label;
+    var dd = document.createElement("dd");
+    dd.textContent = value;
+    return { dt: dt, dd: dd };
+  }
+
+  function renderFacts(c) {
+    if (!lbFacts) return;
+    lbFacts.textContent = "";
+
+    var rels = (c.relationships || []).map(function (r) {
+      var who = charName(r.targetId) || r.targetId;
+      return r.type ? who + " · " + r.type : who;
+    }).filter(function (s) { return s; });
+
+    var rows = [
+      factRow("年龄", c.age),
+      factRow("性别", c.gender),
+      factRow("身份", c.role),
+      factRow("所属", c.affiliation || universeTitle(c.universeId)),
+      factRow("别名", (c.aliases || []).join("、")),
+      factRow("关系", rels.join("；")),
+      factRow("标签", (c.tags || []).join(" · ")),
+      factRow("定妆照", c.portraitCredit)
+    ];
+
+    rows.forEach(function (row) {
+      if (!row) return;
+      lbFacts.appendChild(row.dt);
+      lbFacts.appendChild(row.dd);
+    });
+  }
+
+  function show(i) {
+    if (!lb || i < 0 || i >= list.length) return;
+    current = i;
+    var c = list[i];
+
+    if (lbImg) {
+      lbImg.src = c.portrait || "";
+      lbImg.alt = c.name + " 定妆照（虚构人物）";
+    }
+
+    text(lbKicker, (c.status === "published" ? "PUBLISHED" : "DRAFT") +
+      (universeTitle(c.universeId) ? " · " + universeTitle(c.universeId) : ""));
+    text(lbName, c.name);
+    text(lbRole, c.role || "");
+    text(lbSummary, c.summary || "");
+    text(lbIndex, (i + 1) + " / " + list.length);
+    renderFacts(c);
+
+    preload(i + 1);
+    preload(i - 1);
+  }
+
+  function openAt(i) {
+    if (!lb) return;
+    lastFocus = document.activeElement;
+    show(i);
+    lb.hidden = false;
+    document.body.classList.add("fc-lb-open");
+    if (lbClose) lbClose.focus();
+  }
+
+  function close() {
+    if (!lb || lb.hidden) return;
+    lb.hidden = true;
+    document.body.classList.remove("fc-lb-open");
+    if (lbImg) {
+      lbImg.removeAttribute("src");
+      lbImg.alt = "";
+    }
+    if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
+    lastFocus = null;
+    current = -1;
+  }
+
+  function step(delta) {
+    if (lb.hidden || current < 0) return;
+    var next = current + delta;
+    if (next < 0) next = list.length - 1;
+    if (next >= list.length) next = 0;
+    show(next);
+  }
+
+  if (lbClose) lbClose.addEventListener("click", close);
+  if (lbPrev) lbPrev.addEventListener("click", function () { step(-1); });
+  if (lbNext) lbNext.addEventListener("click", function () { step(1); });
+
+  if (lb) {
+    lb.addEventListener("click", function (e) {
+      if (e.target === lb) close();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (lb.hidden) return;
+
+      if (e.key === "Escape") {
+        e.preventDefault();
+        close();
+        return;
+      }
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        step(-1);
+        return;
+      }
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        step(1);
+        return;
+      }
+      if (e.key === "Tab") {
+        var focusables = [lbClose, lbPrev, lbNext].filter(Boolean);
+        if (!focusables.length) return;
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    });
+  }
 })();

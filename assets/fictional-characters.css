@@ -6,17 +6,166 @@
 .fc-callout { border-left: 2px solid var(--red); background: var(--paper-2); padding: 11px 14px; margin: 0 0 12px; font-size: 12.5px; line-height: 1.85; color: var(--ink-2); }
 .fc-callout b { color: var(--ink); }
 .fc-intro { margin: 0; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
-.fc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
-.fc-grid > div { background: var(--paper); padding: 11px 13px; }
-.fc-grid span { display: block; font-family: var(--sans); font-size: 8px; letter-spacing: .12em; color: var(--red); }
-.fc-grid b { display: block; margin: 3px 0; font-family: var(--serif); font-size: 17px; }
-.fc-grid p { margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
 .fc-note { margin: 0; font-size: 11px; line-height: 1.8; color: var(--ink-2); }
-.fc-questions { margin: 0; padding-left: 20px; }
-.fc-questions li { margin: 0 0 6px; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+.fc-note code { font-size: 10.5px; background: var(--paper-2); padding: 1px 4px; }
+.fc-count { font-family: var(--sans); font-size: 12px; font-weight: 400; color: var(--ink-3); margin-left: 8px; letter-spacing: .04em; }
+.fc-empty { margin: 0; font-size: 12px; color: var(--ink-3); }
+
+/* 人物卡片墙 · 每格一张竖版定妆照（1024×1792，正好 4:7） */
+.fc-wall {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 22px 16px;
+  margin-top: 6px;
+}
+.fc-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: zoom-in;
+  -webkit-tap-highlight-color: transparent;
+}
+.fc-card-media {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  transition: border-color .2s ease;
+}
+.fc-card-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 7;
+  object-fit: cover;
+  transition: transform .45s ease;
+}
+.fc-card:hover .fc-card-media { border-color: var(--red); }
+.fc-card:hover .fc-card-media img { transform: scale(1.025); }
+.fc-card:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+.fc-card-body { display: block; padding: 9px 1px 0; }
+.fc-card-body b { display: block; font-family: var(--serif); font-size: 16px; font-weight: 600; letter-spacing: .02em; }
+.fc-card-body span { display: block; margin-top: 3px; font-size: 10px; line-height: 1.6; color: var(--ink-3); }
+
+/* 页内灯箱 · 点小图浮起大图，不跳转、不新开标签页 */
+body.fc-lb-open { overflow: hidden; }
+
+.fc-lb {
+  position: fixed;
+  inset: 0;
+  z-index: 130;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(24, 30, 27, .88);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+.fc-lb[hidden] { display: none; }
+
+.fc-lb-panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  min-width: 0;
+  max-width: min(1060px, 100%);
+  max-height: calc(100vh - 48px);
+}
+
+.fc-lb-figure { margin: 0; flex: 0 1 auto; min-width: 0; display: flex; justify-content: center; }
+.fc-lb-figure img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 48px);
+  border: 1px solid rgba(255, 255, 255, .12);
+  background: var(--paper-2);
+}
+
+.fc-lb-info {
+  flex: 0 0 288px;
+  min-width: 0;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  color: var(--paper);
+  padding-right: 2px;
+}
+.fc-lb-kicker { margin: 0 0 7px; font-family: var(--sans); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: rgba(245, 241, 232, .55); }
+.fc-lb-name { margin: 0 0 7px; font-family: var(--serif); font-size: 30px; font-weight: 600; line-height: 1.2; letter-spacing: .05em; color: #f7f3ea; }
+.fc-lb-role { margin: 0 0 15px; font-size: 12px; line-height: 1.7; color: rgba(245, 241, 232, .68); }
+.fc-lb-summary { margin: 0 0 16px; font-size: 13px; line-height: 1.85; color: rgba(245, 241, 232, .9); }
+.fc-lb-facts {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 7px 14px;
+  margin: 0 0 18px;
+  padding: 14px 0 0;
+  border-top: 1px solid rgba(245, 241, 232, .18);
+  font-size: 11.5px;
+  line-height: 1.7;
+}
+.fc-lb-facts dt { color: rgba(245, 241, 232, .48); white-space: nowrap; }
+.fc-lb-facts dd { margin: 0; color: rgba(245, 241, 232, .88); overflow-wrap: anywhere; }
+
+.fc-lb-nav { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0; font-size: 11px; color: rgba(245, 241, 232, .55); }
+.fc-lb-nav button {
+  padding: 6px 11px;
+  border: 1px solid rgba(245, 241, 232, .28);
+  border-radius: 2px;
+  background: transparent;
+  color: #f7f3ea;
+  font-family: inherit;
+  font-size: 11px;
+  letter-spacing: .02em;
+  cursor: pointer;
+}
+.fc-lb-nav button:hover { border-color: var(--red); color: #fff; }
+
+.fc-lb-close {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid rgba(245, 241, 232, .35);
+  border-radius: 50%;
+  background: rgba(24, 30, 27, .92);
+  color: #f7f3ea;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.fc-lb-close:hover { border-color: var(--red); color: #fff; }
+.fc-lb-nav button:focus-visible,
+.fc-lb-close:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+
 @media (max-width: 760px) {
   .fc-stats { grid-template-columns: 1fr 1fr; }
   .fc-stats div:nth-child(2) { border-right: 0; }
   .fc-stats div:nth-child(1), .fc-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
-  .fc-grid { grid-template-columns: 1fr; }
+
+  .fc-wall { grid-template-columns: repeat(auto-fill, minmax(138px, 1fr)); gap: 18px 10px; }
+  .fc-card-body b { font-size: 15px; }
+
+  .fc-lb { padding: 12px; }
+  .fc-lb-panel { flex-direction: column; align-items: stretch; gap: 14px; max-height: calc(100vh - 24px); }
+  .fc-lb-figure img { max-height: 52vh; }
+  .fc-lb-info { flex: 1 1 auto; min-height: 0; max-height: none; overflow-y: auto; }
+  .fc-lb-name { font-size: 23px; }
+  .fc-lb-summary { font-size: 12.5px; }
+  .fc-lb-close { top: 10px; right: 10px; width: 32px; height: 32px; }
 }
