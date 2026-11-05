@@ -279,6 +279,87 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-05",
       portrait: "images/fictional-characters/char-009-wu-xingru.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-010",
+      universeId: "abin-1985",
+      name: "阿辉",
+      aliases: [],
+      age: "二十出头",
+      gender: "男",
+      role: "刚服完兵役",
+      affiliation: "",
+      tags: ["第 6 章", "退伍", "淑华的男友"],
+      summary: "淑华的男朋友，刚服完兵役，口才很好。",
+      appearance: "二十出头，精神、普通帅，笑起来有点痞；短发利落，白 T 恤、牛仔裤、球鞋。原文未写外形，按「与阿宾的正派形成对比」定妆。",
+      personality: "口才好、一直说笑话，很容易让人放松；轻浮、手快、机会主义，当面一套背后一套。",
+      bio: "刚服完兵役，与淑华认识后感情发展迅速。第 6 章由淑华介绍给钰慧。他和阿宾的区别：阿宾会绕一个弯，阿辉直接伸手。",
+      relationships: [
+        { targetId: "char-012", type: "情侣", note: "淑华的男朋友", directed: false },
+        { targetId: "char-002", type: "认识", note: "由淑华介绍给钰慧", directed: false }
+      ],
+      timeline: [
+        { date: "第 6 章", event: "由淑华介绍给钰慧，一路说笑话" }
+      ],
+      status: "published",
+      created: "2026-11-05",
+      updated: "2026-11-05",
+      portrait: "images/fictional-characters/char-010-ahui.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-011",
+      universeId: "abin-1985",
+      name: "店长",
+      aliases: ["服饰卖场店长"],
+      age: "约三十岁",
+      gender: "男",
+      role: "服饰大卖场店长",
+      affiliation: "服饰大卖场",
+      tags: ["第 6 章", "细边眼镜", "制服"],
+      summary: "服饰大卖场的店长，斯文、英俊、高高瘦瘦。",
+      appearance: "约三十岁，斯文英俊、高高瘦瘦；架一副细边眼镜，穿制服，胸前有名牌。看着像个体面的上班族。",
+      personality: "极会说话，老练、耐心，从不硬来，只让对方自己走进来——全靠「公司规定」和礼貌。",
+      bio: "服饰大卖场的店长，原文未给名字，就叫「店长」。第 6 章在卖场里遇到两个女学生。他和第 7 章便利商店那位女店长不是同一人。",
+      relationships: [
+        { targetId: "char-002", type: "卖场店长与顾客", note: "第 6 章在卖场遇到", directed: false },
+        { targetId: "char-012", type: "卖场店长与顾客", note: "第 6 章在卖场遇到", directed: false }
+      ],
+      timeline: [
+        { date: "第 6 章", event: "在卖场叫住两位女学生，请她们到办公室" }
+      ],
+      status: "published",
+      created: "2026-11-05",
+      updated: "2026-11-05",
+      portrait: "images/fictional-characters/char-011-dianzhang.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-012",
+      universeId: "abin-1985",
+      name: "淑华",
+      aliases: [],
+      age: "",
+      gender: "女",
+      role: "钰慧的室友，同校学生",
+      affiliation: "与钰慧同校",
+      tags: ["第 6 章", "室友", "阿辉的女友"],
+      summary: "钰慧的室友，爱穿短薄衣裙，走路一扭一扭。",
+      appearance: "苗条、腰身纤细，胸脯饱满结实，屁股小巧圆翘；长相俏丽，嘴唇薄薄小小、线条明显，不施唇彩也明艳。日常爱穿短薄衣裙、贴身衫。",
+      personality: "大胆、主动、爱炫耀、不吃醋；对男人的目光来者不拒。想做什么就做，不遮掩，享受的是被渴望，不是被独占。",
+      bio: "钰慧的室友，同校学生。男友阿辉刚退伍，两人感情打得火热。她是书里第一个「主动」的女性。与钰慧的对照：钰慧不敢拒绝，淑华从不拒绝、也不觉得需要拒绝。",
+      relationships: [
+        { targetId: "char-002", type: "室友", note: "同校同住", directed: false },
+        { targetId: "char-010", type: "情侣", note: "男友阿辉", directed: false }
+      ],
+      timeline: [
+        { date: "第 6 章", event: "把男友阿辉介绍给室友钰慧" }
+      ],
+      status: "published",
+      created: "2026-11-05",
+      updated: "2026-11-05",
+      portrait: "images/fictional-characters/char-012-shuhua.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };
