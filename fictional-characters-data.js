@@ -90,6 +90,11 @@ window.FICTIONAL_CHARACTERS = {
           file: "images/fictional-characters/char-002b-he-yuhui-curly.jpg",
           label: "卷发版",
           credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-002c-he-yuhui-uniform.jpg",
+          label: "制服版",
+          credit: "AI 生成 · 虚构形象 · 2026"
         }
       ]
     },
@@ -1799,6 +1804,148 @@ window.FICTIONAL_CHARACTERS = {
       created: "2026-11-06",
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-063-lixiang.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-064",
+      universeId: "abin-1985",
+      firstChapter: 33,
+      name: "张宏铭",
+      aliases: ["宏铭"],
+      age: "二十上下",
+      gender: "男",
+      role: "KTV 员工",
+      affiliation: "KTV",
+      tags: ["第 33 章", "KTV", "同学"],
+      summary: "KTV 员工，正熹的同学，老实规矩。",
+      appearance: "二十上下，中分短发；KTV 制服：白衬衫外搭桃红色背心、深色长裤、黑皮鞋；站得拘谨。",
+      personality: "老实、规矩、说话结巴，不懂讨人喜欢；笨拙、认真、不知道怎么办。",
+      bio: "KTV 员工，正熹的同学。原文写他「老老实实规规矩矩」，所以反而不如他们兄弟讨女孩子喜欢。",
+      relationships: [
+        { targetId: "char-065", type: "同学", note: "一起上班", directed: false },
+        { targetId: "char-066", type: "组长与员工", note: "", directed: false },
+        { targetId: "char-002", type: "同事", note: "同一家 KTV", directed: false }
+      ],
+      timeline: [
+        { date: "第 33 章", event: "在 KTV 上班" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-064-zhang-hongming.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-065",
+      universeId: "abin-1985",
+      firstChapter: 33,
+      name: "正熹",
+      aliases: [],
+      age: "二十上下",
+      gender: "男",
+      role: "KTV 员工",
+      affiliation: "KTV",
+      tags: ["第 33 章", "KTV"],
+      summary: "KTV 员工，罗正凯的弟弟，和翠凤是店里公开的一对。",
+      appearance: "二十上下，头发略翘；KTV 制服：白衬衫外搭桃红色背心、深色长裤、黑皮鞋；笑起来机灵。",
+      personality: "手法熟练、嘴上不饶人，会哄、会教人「绝招」。",
+      bio: "KTV 员工，罗正凯的弟弟，与张宏铭是同学。店里和翠凤是公开的一对，在学校另有女朋友。",
+      relationships: [
+        { targetId: "char-066", type: "兄弟", note: "正凯是他哥哥", directed: false },
+        { targetId: "char-067", type: "情侣", note: "店里公开的一对", directed: false },
+        { targetId: "char-064", type: "同学", note: "一起上班", directed: false },
+        { targetId: "char-002", type: "同事", note: "同一家 KTV", directed: false }
+      ],
+      timeline: [
+        { date: "第 33 章", event: "在 KTV 上班" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-065-zhengxi.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-066",
+      universeId: "abin-1985",
+      firstChapter: 33,
+      name: "罗正凯",
+      aliases: ["正凯"],
+      age: "廿五六岁",
+      gender: "男",
+      role: "KTV 外场组长",
+      affiliation: "KTV",
+      tags: ["第 33 章", "KTV", "组长"],
+      summary: "KTV 外场组长，原文写他「长得邪里邪气」。",
+      appearance: "廿五六岁，头发梳得油亮；KTV 制服：白衬衫外搭桃红色背心、深色长裤、黑皮鞋；站得松，眉眼有股轻佻。",
+      personality: "会看人、会安排、会给主意；自己不亲自动手，只负责把人凑到一处。",
+      bio: "KTV 外场组长，正熹的哥哥。原文说他「长得邪里邪气」，廿五六岁。",
+      relationships: [
+        { targetId: "char-065", type: "兄弟", note: "正熹是他弟弟", directed: true },
+        { targetId: "char-064", type: "组长与员工", note: "", directed: true }
+      ],
+      timeline: [
+        { date: "第 33 章", event: "在 KTV 当外场组长，安排谁和谁排一区" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-066-luo-zhengkai.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-067",
+      universeId: "abin-1985",
+      firstChapter: 33,
+      name: "翠凤",
+      aliases: [],
+      age: "十八上下",
+      gender: "女",
+      role: "KTV 工读生；家商学生",
+      affiliation: "KTV",
+      tags: ["第 33 章", "KTV", "工读生"],
+      summary: "KTV 的工读生，家商的学生。",
+      appearance: "十八上下，身材娇小；上班穿桃红色背心外套、白衬衫配小红蝴蝶结、桃红窄裙与平底鞋。平时是牛仔裤、白球鞋，俏皮可爱，像个小男生。",
+      personality: "直、嫩、藏不住事；心思全写在脸上。",
+      bio: "KTV 工读生，家商的学生。第 33 章在厨房切柳丁花。和正熹是店里公开的一对。",
+      relationships: [
+        { targetId: "char-065", type: "情侣", note: "店里公开的一对", directed: false },
+        { targetId: "char-002", type: "同事", note: "同一家 KTV", directed: false }
+      ],
+      timeline: [
+        { date: "第 33 章", event: "在厨房切柳丁花" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-067-cuifeng.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-068",
+      universeId: "abin-1985",
+      firstChapter: 33,
+      name: "Diana",
+      aliases: ["戴小姐"],
+      age: "三十上下（推断）",
+      gender: "女",
+      role: "KTV 经理",
+      affiliation: "KTV",
+      tags: ["第 33 章", "KTV", "经理"],
+      summary: "KTV 的经理，姓戴，要人叫她 Diana。",
+      appearance: "三十上下，盘发；深色西装外套配白衬衫、深色及膝裙、黑色高跟鞋，手上拿着文件夹；妆淡而整。",
+      personality: "职业、会做人、也懂分寸；被盯着看时会羞、会娇嗔。",
+      bio: "KTV 的经理，姓戴。原文里她说「叫我 Diana 好了」，说话中英夹杂；对下属说话带勉励。",
+      relationships: [
+        { targetId: "char-002", type: "经理与工读生", note: "", directed: true }
+      ],
+      timeline: [
+        { date: "第 33 章", event: "在 KTV 带人、安排班表" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-068-diana.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
