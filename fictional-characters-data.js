@@ -95,6 +95,66 @@ window.FICTIONAL_CHARACTERS = {
           file: "images/fictional-characters/char-002c-he-yuhui-uniform.jpg",
           label: "制服版",
           credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-002d-he-yuhui-bath.jpg",
+          label: "浴后版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-002e-he-yuhui-birthday.jpg",
+          label: "生日版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-002f-he-yuhui-xinkujiang.jpg",
+          label: "新堀江版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-002g-he-yuhui-nightmarket.jpg",
+          label: "夜市版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-002h-he-yuhui-hometown.jpg",
+          label: "老家版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-002i-he-yuhui-kenting.jpg",
+          label: "垦丁版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-002j-he-yuhui-farewell.jpg",
+          label: "饯别版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-002k-he-yuhui-dinner.jpg",
+          label: "约饭版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-002l-he-yuhui-abin-home.jpg",
+          label: "阿宾家版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-002m-he-yuhui-shopping.jpg",
+          label: "逛街版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-002n-he-yuhui-dance.jpg",
+          label: "舞会版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-002o-he-yuhui-first-meet.jpg",
+          label: "初遇版",
+          credit: "AI 生成 · 虚构形象 · 2026"
         }
       ]
     },
