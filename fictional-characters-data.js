@@ -1749,7 +1749,24 @@ window.FICTIONAL_CHARACTERS = {
       created: "2026-11-06",
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-061-yiru.jpg",
-      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+      portraitCredit: "AI 生成 · 虚构形象 · 2026",
+      portraitVariants: [
+        {
+          file: "images/fictional-characters/char-061b-yiru-swim.jpg",
+          label: "泳装版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-061c-yiru-dress.jpg",
+          label: "连身裙版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-061d-yiru-casual.jpg",
+          label: "休闲版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        }
+      ]
     },
     {
       id: "char-062",
