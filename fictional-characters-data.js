@@ -1467,6 +1467,33 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-051-ali-baby.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-052",
+      universeId: "abin-1985",
+      firstChapter: 8,
+      name: "阿青",
+      aliases: [],
+      age: "十七八岁",
+      gender: "男",
+      role: "隔壁邻居，高中生",
+      affiliation: "",
+      tags: ["第 8 章", "高中生", "邻居"],
+      summary: "住隔壁的高中生。",
+      appearance: "十七八岁的高中生，穿学校制服：白衬衫、卡其长裤、皮带、黑皮鞋；短发，正面站立，表情平常。体型：发育中。",
+      personality: "鬼鬼祟祟；被发现后手足无措，讷讷说不出话。",
+      bio: "住阿宾隔壁的高中生。第 8 章他趁人不备溜进别人房间，被发现后手足无措。按作者 2026-11-06 的修订：只做人物、不做情节，未成年角色不做性化描绘。",
+      relationships: [
+        { targetId: "char-018", type: "邻居", note: "第 8 章从墙洞看过去", directed: false }
+      ],
+      timeline: [
+        { date: "第 8 章", event: "溜进隔壁房间，被发现后手足无措" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-052-aqing.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };
