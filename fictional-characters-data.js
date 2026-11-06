@@ -383,7 +383,34 @@ window.FICTIONAL_CHARACTERS = {
       created: "2026-11-05",
       updated: "2026-11-05",
       portrait: "images/fictional-characters/char-012-shuhua.jpg",
-      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+      portraitCredit: "AI 生成 · 虚构形象 · 2026",
+      portraitVariants: [
+        {
+          file: "images/fictional-characters/char-012b-shuhua-dress.jpg",
+          label: "洋装版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-012c-shuhua-swim.jpg",
+          label: "泳装版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-012d-shuhua-summer.jpg",
+          label: "夏装版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-012e-shuhua-tank.jpg",
+          label: "背心版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        },
+        {
+          file: "images/fictional-characters/char-012f-shuhua-daily.jpg",
+          label: "日常版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        }
+      ]
     },
     {
       id: "char-013",

@@ -24,8 +24,8 @@
   var lbClose = document.getElementById("fc-lb-close");
   var emptyEl = document.getElementById("fc-empty");
 
-  /* 排序：阿宾、钰慧固定前两位，其余按「首次出场的章节」升序，同章再按 id。 */
-  var PINNED = ["char-001", "char-002"];
+  /* 排序：阿宾、钰慧、淑华固定前三组，其余按「首次出场的章节」升序，同章再按 id。 */
+  var PINNED = ["char-001", "char-002", "char-012"];
 
   var list = [];
   if (D && Object.prototype.toString.call(D.characters) === "[object Array]") {
