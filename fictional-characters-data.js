@@ -2082,6 +2082,195 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-073-jiancheng.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-074",
+      universeId: "abin-1985",
+      firstChapter: 44,
+      name: "肥猪",
+      aliases: [],
+      age: "",
+      gender: "男",
+      role: "同学",
+      affiliation: "",
+      tags: ["第 44 章", "绰号"],
+      summary: "同学，平时大家都叫他「肥猪」。",
+      appearance: "胖、四肢短、圆脸，笑起来眼睛挤成缝；黑色 T 恤、黑色短裤、拖鞋。原文只写他「大胖子、四肢短」。",
+      personality: "眼明手快；被说破就脸红、会道歉——知道羞，但下次还会。他不是坏人，只是分寸差。",
+      bio: "原文没给本名，平时大家都叫他「肥猪」，叫惯了他也不介意。第 44 章在 Cindy 的生日会上。",
+      relationships: [
+        { targetId: "char-024", type: "认识", note: "Cindy 生日会上", directed: false }
+      ],
+      timeline: [
+        { date: "第 44 章", event: "在 Cindy 的生日会上" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-074-feizhu.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-075",
+      universeId: "abin-1985",
+      firstChapter: 43,
+      name: "阿梅",
+      aliases: ["周太太"],
+      age: "不超过三十岁",
+      gender: "女",
+      role: "游泳池的常客、泳客",
+      affiliation: "",
+      tags: ["第 43 章", "游泳池"],
+      summary: "游泳池的常客，救生员都认得她。",
+      appearance: "不超过三十岁，体形不高；黑泳镜架在头上，棕榈色连身泳装（U 形低领、背后开一个大椭圆），平底拖鞋。",
+      personality: "直接（开口就说「你的动作完全错了」），有气质、客气（「你别嫌我多嘴」）。",
+      bio: "游泳池的常客，救生员都认得她，偶尔也教人。第 43 章在泳池纠正阿宾的动作。",
+      relationships: [
+        { targetId: "char-001", type: "认识", note: "游泳池", directed: false }
+      ],
+      timeline: [
+        { date: "第 43 章", event: "在游泳池教阿宾动作" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-075-amei.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-076",
+      universeId: "abin-1985",
+      firstChapter: 41,
+      name: "志贤",
+      aliases: [],
+      age: "三十出头",
+      gender: "男",
+      role: "姑丈的同事、他带入行的后辈",
+      affiliation: "",
+      tags: ["第 41 章", "同事", "后辈"],
+      summary: "姑丈的同事，他带入行的后辈。",
+      appearance: "三十出头，短发；白衬衫配深色斜纹领带、深色西装裤、黑皮鞋。原文没有写他的长相。",
+      personality: "拘谨、讲礼：进门先问「大哥在吗」，眼睛不敢乱看。",
+      bio: "姑丈的同事，也是他带入行的后辈，去年结婚，常到姑姑家走动，称姑姑为「嫂子」。第 41 章在场。",
+      relationships: [
+        { targetId: "char-042", type: "同事", note: "姑丈带他入行", directed: true },
+        { targetId: "char-077", type: "认识", note: "称她「嫂子」", directed: false }
+      ],
+      timeline: [
+        { date: "第 41 章", event: "到姑姑家走动" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-076-zhixian.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-077",
+      universeId: "abin-1985",
+      firstChapter: 11,
+      name: "姑姑",
+      aliases: ["阿宾的姑姑"],
+      age: "四十五上下（推断）",
+      gender: "女",
+      role: "阿宾的姑姑；孟卉的母亲；住板桥",
+      affiliation: "",
+      tags: ["第 11 章", "姑姑", "板桥"],
+      summary: "阿宾的姑姑，孟卉的母亲，住在板桥。",
+      appearance: "四十五上下，脂粉未施、脸形俊美，略带双下巴。家常打扮：素色衣着配米白围裙，头发挽起。原文写她在家自己抹地板、忙着做午饭。",
+      personality: "爽利、直、声音亮；手不停、嘴不客套、心不糊涂。她是这本书里最会过日子的一个大人。",
+      bio: "阿宾的姑姑，孟卉的母亲，住板桥。第 11 章阿宾送年货过去，她一句话就把人留下来吃饭。丈夫是姑丈，常出差。",
+      relationships: [
+        { targetId: "char-001", type: "姑姑与侄子", note: "", directed: true },
+        { targetId: "char-042", type: "夫妻", note: "姑丈是她丈夫", directed: false }
+      ],
+      timeline: [
+        { date: "第 11 章", event: "在板桥家里招呼阿宾吃饭" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-077-gugu.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-078",
+      universeId: "abin-1985",
+      firstChapter: 40,
+      name: "小夏",
+      aliases: [],
+      age: "",
+      gender: "男",
+      role: "小高的合伙人（高雄金饰店）",
+      affiliation: "高雄金饰店",
+      tags: ["第 40 章", "合伙人"],
+      summary: "小高的合伙人，做高雄的金饰店生意。",
+      appearance: "二三十岁，短发；白色短袖衬衫配深色西装裤、黑皮鞋，胸前口袋插一支笔。原文未写他的外形。",
+      personality: "会看眼色、反应快，一个眨眼就懂；声音亮。",
+      bio: "小高的合伙人。第 40 章由小高介绍给钰慧。合伙做小生意的那种人：不用多问，一个眼神就接得住。",
+      relationships: [],
+      timeline: [
+        { date: "第 40 章", event: "由小高介绍给钰慧" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-078-xiaoxia.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-079",
+      universeId: "abin-1985",
+      firstChapter: 39,
+      name: "邹雪梅",
+      aliases: [],
+      age: "二十上下（同班）",
+      gender: "女",
+      role: "阿宾的同班同学",
+      affiliation: "",
+      tags: ["第 39 章", "同班同学"],
+      summary: "阿宾的同班同学，傲气又爱面子。",
+      appearance: "身量适中、面貌姣好：笑起来眼睛弯成月芽儿，小小挺挺的鼻子、红润丰厚的嘴唇、尖下巴。辫子盘成两圈在头角上，露出白净的后颈；白毛衣圆领翻荷叶、红格子短裙、乳色及膝毛袜、黑亮圆头鞋。",
+      personality: "傲气、爱被看又不承认；明明知道自己好看，偏要装作不在意。",
+      bio: "阿宾的同班同学。第 39 章出场。作者说明她后文还会出现，届时再核对造型。",
+      relationships: [
+        { targetId: "char-001", type: "同班同学", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 39 章", event: "出场" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-079-zou-xuemei.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-080",
+      universeId: "abin-1985",
+      firstChapter: 36,
+      name: "甘丹",
+      aliases: [],
+      age: "二十上下（与忆如同龄）",
+      gender: "男",
+      role: "王忆如的男朋友（台中）",
+      affiliation: "",
+      tags: ["第 36 章", "情侣"],
+      summary: "忆如的男朋友，从台中来的那一位。",
+      appearance: "二十上下，短发；白短袖衬衫、深色长裤、运动鞋；站得有点僵。原文没有写他的长相。",
+      personality: "忠厚、木讷；老实到有点笨，在大庭广众下也会脸红。",
+      bio: "忆如的男朋友，在台中。第 36 章被忆如带来台北。原文写他「忠厚木讷有余」。作者说明他后文还会出现。",
+      relationships: [
+        { targetId: "char-061", type: "情侣", note: "忆如是他女朋友", directed: false }
+      ],
+      timeline: [
+        { date: "第 36 章", event: "被忆如带来台北" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-080-gandan.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };
