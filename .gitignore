@@ -1,3 +1,7 @@
 .DS_Store
 
 .pylibs/
+
+# private fictional archive — never commit
+fictional-characters-data.js
+images/fictional-characters/

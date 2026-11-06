@@ -1,13 +1,6 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-05",
-    type: "档案",
-    title: "虚构人物档案：80 人",
-    note: "80 人物 · 105 张定妆照 · 按首次出场章节排列",
-    href: "fictional-characters.html"
-  },
-  {
-    date: "2026-11-05",
     type: "足迹",
     title: "新疆自驾：伊犁—赛里木湖环线",
     note: "1,642 km · 自驾总图上线",
