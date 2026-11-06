@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T01:27:55.026Z",
+  "updated": "2026-11-06T01:29:47.906Z",
   "source": "https://www.goratings.org/en/",
   "players": [
     {
@@ -32,10 +32,10 @@
     },
     {
       "rank": 5,
-      "name": "Ke Jie",
+      "name": "Li Weiqing",
       "country": "cn",
-      "elo": 3690,
-      "nameZh": "柯洁"
+      "elo": 3689,
+      "nameZh": "Li Weiqing"
     }
   ]
 }
