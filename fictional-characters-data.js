@@ -1632,6 +1632,174 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-057-chehang-laoban.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-058",
+      universeId: "abin-1985",
+      firstChapter: 24,
+      name: "小美",
+      aliases: [],
+      age: "十岁上下",
+      gender: "女",
+      role: "林素茵的女儿",
+      affiliation: "",
+      tags: ["第 24 章", "小学生"],
+      summary: "林素茵的女儿，放学回家喊一声「妈」就上楼。",
+      appearance: "十岁上下，短发；一身校服：白衬衫、深蓝百褶裙、白袜、黑皮鞋。正面站立，表情平常。",
+      personality: "活泼、见人不怯。",
+      bio: "林素茵的女儿。第 24 章开门回来，喊了一声「妈」，被介绍给阿宾，就上楼去了。按作者 2026-11-06 的修订：只做人物、不做情节，未成年角色不做性化描绘。",
+      relationships: [
+        { targetId: "char-036", type: "母女", note: "", directed: true },
+        { targetId: "char-059", type: "学生与钢琴老师", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 24 章", event: "放学回家，被介绍给阿宾" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-058-xiaomei.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-059",
+      universeId: "abin-1985",
+      firstChapter: 25,
+      name: "庆泉",
+      aliases: [],
+      age: "",
+      gender: "男",
+      role: "钢琴老师",
+      affiliation: "",
+      tags: ["第 25 章", "钢琴老师"],
+      summary: "小美的钢琴老师，素茵大学同学的丈夫。",
+      appearance: "四十上下，戴细框眼镜，头发稀疏；白短袖衬衫配深蓝长裤、黑皮鞋。原文没有写他的外形。",
+      personality: "畏缩、犹豫，不太敢越线；在素茵嘴里是「没用的男人」。",
+      bio: "小美的钢琴老师，素茵大学同学的丈夫，两家人相熟。按作者 2026-11-06 的修订：只做人物、不做情节，档案里不写与他相关的情节细节。",
+      relationships: [
+        { targetId: "char-063", type: "夫妻", note: "丽香是他太太", directed: false },
+        { targetId: "char-036", type: "朋友", note: "素茵大学同学的丈夫", directed: false },
+        { targetId: "char-058", type: "钢琴老师与学生", note: "教小美弹琴", directed: false }
+      ],
+      timeline: [
+        { date: "第 25 章", event: "在素茵家" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-059-qingquan.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-060",
+      universeId: "abin-1985",
+      firstChapter: 22,
+      name: "柳敏霓",
+      aliases: ["敏霓", "柳月娥"],
+      age: "19（比阿宾大两个月）",
+      gender: "女",
+      role: "阿宾的国小同班同学；重考一年后成为他的大学学妹",
+      affiliation: "",
+      tags: ["第 22 章", "国小同学", "学妹"],
+      summary: "阿宾的国小同班同学，重考一年后成了他的学妹。",
+      appearance: "笑盈盈，牙齿洁白可爱；长发，长相是「女大十八变」之后的样子。原文写她常穿白色丝质衬衫与白裙。",
+      personality: "大方、爱笑、会调侃；有自己的底线，记仇也记得清楚。",
+      bio: "柳敏霓，原名柳月娥（觉得俗气改了名）。阿宾国小同班同学，比阿宾大两个月，重考一年后成为他的大学学妹。第 22 章在麦当劳门口重逢。",
+      relationships: [
+        { targetId: "char-001", type: "国小同班同学", note: "后来成了大学学妹", directed: false },
+        { targetId: "char-061", type: "国小同学", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 22 章", event: "在麦当劳门口与阿宾重逢" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-060-minni.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-061",
+      universeId: "abin-1985",
+      firstChapter: 22,
+      name: "王忆如",
+      aliases: ["忆如"],
+      age: "19（与阿宾同级）",
+      gender: "女",
+      role: "阿宾、敏霓的国小同学",
+      affiliation: "",
+      tags: ["第 22 章", "国小同学", "移民"],
+      summary: "阿宾的国小同学，全家移民，只留她一个人在台湾。",
+      appearance: "人够高，长发梳得又直又亮，前额在眉前剪齐；皮肤细嫩，像日本的古典娃娃。衣着时髦，会摆「专业 Model」的姿势。",
+      personality: "爽快、爱闹、主动，嘴上不让人。",
+      bio: "王忆如，阿宾与敏霓的国小同学。全家移民，留她一个在台湾读补习班，一个人住一栋大房子。第 22 章重逢时，路上即使见面也认不出来。",
+      relationships: [
+        { targetId: "char-001", type: "国小同学", note: "", directed: false },
+        { targetId: "char-060", type: "国小同学", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 22 章", event: "与阿宾重逢" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-061-yiru.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-062",
+      universeId: "abin-1985",
+      firstChapter: 31,
+      name: "陈嘉佩",
+      aliases: ["嘉佩", "香香"],
+      age: "二十出头",
+      gender: "女",
+      role: "",
+      affiliation: "",
+      tags: ["第 31 章", "认识"],
+      summary: "二十出头的女郎，另有一个名字叫「香香」。",
+      appearance: "二十出头，圆脸、下巴尖削可爱；黑瀑般的直发垂到背上，只在最末端烫成卷。苗条、个子高；低胸细肩带紫红丝质上衣、米色长窄裙、高跟凉鞋，指甲涂银红色。",
+      personality: "大方、主动、干脆；有一种「见过世面」的从容——不慌、不装。",
+      bio: "陈嘉佩，原文说她本该自我介绍叫「香香」。第 31 章与阿宾相识；身份证地址在台东。",
+      relationships: [
+        { targetId: "char-001", type: "认识", note: "第 31 章", directed: false }
+      ],
+      timeline: [
+        { date: "第 31 章", event: "与阿宾相识" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-062-jiapei.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-063",
+      universeId: "abin-1985",
+      firstChapter: 29,
+      name: "丽香",
+      aliases: [],
+      age: "三十七八（与素茵同年）",
+      gender: "女",
+      role: "庆泉的妻子；素茵的大学同学",
+      affiliation: "",
+      tags: ["第 29 章", "主妇", "大学同学"],
+      summary: "庆泉的妻子，素茵的大学同学。",
+      appearance: "三十七八岁，卷发；米色针织上衣配同色及膝裙、裸色高跟鞋。皮肤保持得十分幼细；身材没有素茵那样凹凸。",
+      personality: "容易被带动、事后羞窘；嘴硬心软，不太会说不要，也不太会说好。",
+      bio: "丽香，庆泉的妻子、素茵的大学同学，和素茵同年，在家当着主妇。第 29 章与素茵往来。",
+      relationships: [
+        { targetId: "char-059", type: "夫妻", note: "庆泉是她丈夫", directed: false },
+        { targetId: "char-036", type: "大学同学", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 29 章", event: "与素茵往来" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-063-lixiang.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };
