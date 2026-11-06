@@ -1040,7 +1040,7 @@ window.FICTIONAL_CHARACTERS = {
       summary: "阿宾的班导师，接近四十岁，保养得极好。",
       appearance: "接近四十岁，面貌姣美可人、皮肤白白净净，保养得极好；烫得蓬蓬松松的头发。穿毛绒绒的长袖套衫、紧身牛仔裤，米色高跟鞋。",
       personality: "声音非常娇媚；主动，声音与姿态都在「招呼」；说谎很熟练，但说漏嘴会脸红。年轻时学过舞蹈。",
-      bio: "林素茵，阿宾的班导师。学生叫她「老师」，私下叫「茵姐」。已婚近十年，丈夫是师丈，女儿是小美。第 24 章叫阿宾去家里送资料。",
+      bio: "林素茵，阿宾的班导师。学生叫她「老师」，私下叫「茵姐」。已婚近十年，丈夫是俊国（师丈），女儿是小美。第 24 章叫阿宾去家里送资料。",
       relationships: [
         { targetId: "char-001", type: "师生", note: "班导师与学生", directed: true },
         { targetId: "char-025", type: "认识", note: "阿宾的事是依姈告诉她的", directed: false }
@@ -1225,8 +1225,8 @@ window.FICTIONAL_CHARACTERS = {
       id: "char-043",
       universeId: "abin-1985",
       firstChapter: 24,
-      name: "师丈",
-      aliases: ["林素茵的丈夫"],
+      name: "俊国",
+      aliases: ["师丈", "林素茵的丈夫"],
       age: "四十上下",
       gender: "男",
       role: "上班族；林素茵的丈夫",
@@ -1235,7 +1235,7 @@ window.FICTIONAL_CHARACTERS = {
       summary: "林素茵的丈夫，结婚近十年。",
       appearance: "四十上下，微胖，发线后退；白衬衫总是有点皱着，深色西裤、黑皮鞋，手提公事包。",
       personality: "猴急；嘴上会试探、会开玩笑，对妻子没辄。他不是坏人，只是忙。",
-      bio: "林素茵的丈夫，结婚近十年，上班族，常不在家吃饭。第 24 章他问对了问题，却没等答案。",
+      bio: "俊国，林素茵的丈夫，结婚近十年，上班族，常不在家吃饭。学生／旁人称他「师丈」，名字到第 29 章才出现。第 24 章他问对了问题，却没等答案。",
       relationships: [
         { targetId: "char-036", type: "夫妻", note: "结婚近十年", directed: false }
       ],
