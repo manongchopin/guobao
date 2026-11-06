@@ -2028,6 +2028,60 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-071-fandian-laoban.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-072",
+      universeId: "abin-1985",
+      firstChapter: 36,
+      name: "建丰",
+      aliases: [],
+      age: "",
+      gender: "男",
+      role: "与敏霓同来园游会的人",
+      affiliation: "",
+      tags: ["第 36 章", "园游会"],
+      summary: "第 36 章与敏霓一起来园游会的人。",
+      appearance: "二十出头，中长发；米白长袖针织衫、灰绿长裤、白色运动鞋。原文一字未写他的外形。",
+      personality: "原文没有一句台词、没有一个动作，性格也留白。",
+      bio: "第 36 章与敏霓在会场遇到朋友。原文只把他放进一个句子里：「敏霓和建丰在会场遇到朋友」——有名字、有位置、有一句动作，然后就没了。",
+      relationships: [
+        { targetId: "char-060", type: "同行", note: "原文未明说关系", directed: false }
+      ],
+      timeline: [
+        { date: "第 36 章", event: "和敏霓在园游会遇到朋友" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-072-jianfeng.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-073",
+      universeId: "abin-1985",
+      firstChapter: 10,
+      name: "建成",
+      aliases: [],
+      age: "",
+      gender: "男",
+      role: "佩如的丈夫；胡先生那边的亲戚（妹婿）",
+      affiliation: "",
+      tags: ["第 10 章", "妹婿"],
+      summary: "佩如的丈夫，胡先生那边的妹婿。",
+      appearance: "三十上下，短发；白衬衫塞进深色西裤、系皮带、黑皮鞋；笑起来很开。原文几乎没写他的外形。",
+      personality: "胆大、会顺势、不避讳。",
+      bio: "建成，佩如的丈夫，胡先生那边的妹婿，住得不远，会来胡家接小孩、拿钥匙。第 10 章在胡家出现。",
+      relationships: [
+        { targetId: "char-022", type: "夫妻", note: "佩如是他太太", directed: false }
+      ],
+      timeline: [
+        { date: "第 10 章", event: "到胡家来接小孩、拿钥匙" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-073-jiancheng.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };
