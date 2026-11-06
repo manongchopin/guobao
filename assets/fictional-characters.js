@@ -56,7 +56,7 @@
       char: c,
       src: c.portrait || "",
       label: "",
-      alt: c.name + " 定妆照（虚构人物）"
+      alt: c.altText || (c.name + " 定妆照（虚构人物）")
     });
     if (Object.prototype.toString.call(c.portraitVariants) === "[object Array]") {
       c.portraitVariants.forEach(function (v) {

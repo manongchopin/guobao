@@ -1439,6 +1439,34 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-050-yuhui-father.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-051",
+      universeId: "abin-1985",
+      firstChapter: 8,
+      name: "阿莉的婴儿",
+      altText: "阿莉的婴儿 生活照（虚构人物）",
+      aliases: [],
+      age: "四个月",
+      gender: "",
+      role: "阿莉的孩子",
+      affiliation: "",
+      tags: ["第 8 章", "婴儿"],
+      summary: "阿莉的孩子，四个多月大，睡在娃娃车里。",
+      appearance: "",
+      personality: "",
+      bio: "阿莉的孩子，四个月大，与阿莉、公婆同住。原文一句外貌描写都没有——这张图的唯一意义，是证明阿莉是个母亲。性别原文未写。",
+      relationships: [
+        { targetId: "char-018", type: "母亲与孩子", note: "", directed: true }
+      ],
+      timeline: [
+        { date: "第 8 章", event: "睡在理发店旁的娃娃车里" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-051-ali-baby.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };
