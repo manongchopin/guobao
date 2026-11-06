@@ -1947,6 +1947,87 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-068-diana.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-069",
+      universeId: "abin-1985",
+      firstChapter: 26,
+      name: "安安",
+      aliases: ["学姐"],
+      age: "比依姈高一级（学姐）",
+      gender: "女",
+      role: "依姈的室友、同校学姐",
+      affiliation: "",
+      tags: ["第 26 章", "室友", "学姐"],
+      summary: "依姈的室友，同校学姐；第 36 章才揭晓她叫安安。",
+      appearance: "不高，腰身有一点肉但不肥；圆圆的脸、甜甜的笑容，鼻梁上架一支小眼镜，眼睛眯眯的，额发卷成波浪、有时遮住一半。穿宽宽松松的大针织衫配侧开的短裙、黑色平底鞋。",
+      personality: "一半怕羞，一半识趣：怕羞时整个人躲进棉被里，该走的时候又会自己走开。",
+      bio: "依姈的室友、同校学姐，两人合租一间套房。第 26 章只称「学姐」，第 36 章才揭晓名字叫安安。有男朋友，是个大醋缸子。",
+      relationships: [
+        { targetId: "char-025", type: "室友", note: "合租一间套房", directed: false },
+        { targetId: "char-070", type: "情侣", note: "男朋友是个大醋缸子", directed: false }
+      ],
+      timeline: [
+        { date: "第 26 章", event: "以「学姐」的身份出场" },
+        { date: "第 36 章", event: "揭晓名字，男朋友来接她" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-069-anan.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-070",
+      universeId: "abin-1985",
+      firstChapter: 36,
+      name: "安安的男友",
+      aliases: [],
+      age: "",
+      gender: "男",
+      role: "安安的男朋友",
+      affiliation: "",
+      tags: ["第 36 章", "情侣"],
+      summary: "安安的男朋友，是个大醋缸子。",
+      appearance: "二十多岁，短袖白衬衫、灰绿色长裤、白球鞋；笑起来很和气。原文一字未写他的外形。",
+      personality: "会埋怨、会怕她、会陪笑，用「姑奶奶」称呼她——「怕女朋友」的那一种。",
+      bio: "安安的男朋友。第 26 章只被提到「是个大醋缸子」，第 36 章正式出场，在外面等她、喊「依，看到安安吗？」。",
+      relationships: [
+        { targetId: "char-069", type: "情侣", note: "他喊她「姑奶奶」", directed: false }
+      ],
+      timeline: [
+        { date: "第 36 章", event: "在帐外等安安，等到埋怨一句又陪笑" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-070-anan-boyfriend.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-071",
+      universeId: "abin-1985",
+      firstChapter: 35,
+      name: "饭店老板",
+      aliases: ["温泉饭店老板"],
+      age: "四十五到五十（推断）",
+      gender: "男",
+      role: "北投某温泉饭店的老板",
+      affiliation: "北投温泉饭店",
+      tags: ["第 35 章", "温泉", "饭店"],
+      summary: "北投某温泉饭店的老板，中年男人。",
+      appearance: "中年，微胖，和气脸；花白短发，白短袖衬衫、深色西装裤、布鞋。原文没有写他的外形。",
+      personality: "会演、会等、有耐心，不躁进；指压功夫「一流」。",
+      bio: "北投某温泉饭店的老板，中年男人。原文写他按摩的指压功夫一流，人也很会演、很有耐心。第 35 章在饭店里。",
+      relationships: [],
+      timeline: [
+        { date: "第 35 章", event: "在温泉饭店里" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-071-fandian-laoban.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };
