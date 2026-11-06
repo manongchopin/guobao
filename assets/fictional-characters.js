@@ -24,9 +24,21 @@
   var lbClose = document.getElementById("fc-lb-close");
   var emptyEl = document.getElementById("fc-empty");
 
+  /* 排序：阿宾、钰慧固定前两位，其余按「首次出场的章节」升序，同章再按 id。 */
+  var PINNED = ["char-001", "char-002"];
+
   var list = [];
   if (D && Object.prototype.toString.call(D.characters) === "[object Array]") {
     list = D.characters.slice().sort(function (a, b) {
+      var pa = PINNED.indexOf(String(a.id));
+      var pb = PINNED.indexOf(String(b.id));
+      if (pa !== -1 || pb !== -1) {
+        if (pa !== -1 && pb !== -1) return pa - pb;
+        return pa !== -1 ? -1 : 1;
+      }
+      var ca = Number(a.firstChapter) || 999;
+      var cb = Number(b.firstChapter) || 999;
+      if (ca !== cb) return ca - cb;
       return String(a.id) < String(b.id) ? -1 : 1;
     });
   }

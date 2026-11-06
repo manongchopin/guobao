@@ -21,6 +21,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-001",
       universeId: "abin-1985",
+      firstChapter: 1,
       name: "阿宾",
       aliases: [],
       age: "19",
@@ -55,6 +56,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-002",
       universeId: "abin-1985",
+      firstChapter: 3,
       name: "何钰慧",
       aliases: ["钰慧"],
       age: "19",
@@ -94,6 +96,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-003",
       universeId: "abin-1985",
+      firstChapter: 2,
       name: "琇美",
       aliases: ["学姐"],
       age: "",
@@ -124,6 +127,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-004",
       universeId: "abin-1985",
+      firstChapter: 1,
       name: "房东太太",
       aliases: ["胡太太"],
       age: "30 岁出头",
@@ -152,6 +156,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-005",
       universeId: "abin-1985",
+      firstChapter: 4,
       name: "阿吉",
       aliases: [],
       age: "约 19",
@@ -179,6 +184,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-006",
       universeId: "abin-1985",
+      firstChapter: 2,
       name: "学长",
       aliases: [],
       age: "",
@@ -208,6 +214,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-007",
       universeId: "abin-1985",
+      firstChapter: 4,
       name: "眼镜仔",
       aliases: [],
       age: "19",
@@ -235,6 +242,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-008",
       universeId: "abin-1985",
+      firstChapter: 5,
       name: "老邱",
       aliases: [],
       age: "五十多岁",
@@ -262,6 +270,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-009",
       universeId: "abin-1985",
+      firstChapter: 5,
       name: "吴幸如",
       aliases: ["吴姐"],
       age: "三十余岁",
@@ -290,6 +299,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-010",
       universeId: "abin-1985",
+      firstChapter: 6,
       name: "阿辉",
       aliases: [],
       age: "二十出头",
@@ -317,6 +327,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-011",
       universeId: "abin-1985",
+      firstChapter: 6,
       name: "店长",
       aliases: ["服饰卖场店长"],
       age: "约三十岁",
@@ -344,6 +355,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-012",
       universeId: "abin-1985",
+      firstChapter: 6,
       name: "淑华",
       aliases: [],
       age: "",
@@ -371,6 +383,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-013",
       universeId: "abin-1985",
+      firstChapter: 7,
       name: "超商店长",
       aliases: ["灭绝师太"],
       age: "廿七八岁",
@@ -398,6 +411,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-014",
       universeId: "abin-1985",
+      firstChapter: 7,
       name: "小萍",
       aliases: [],
       age: "",
@@ -427,6 +441,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-015",
       universeId: "abin-1985",
+      firstChapter: 7,
       name: "小雯",
       aliases: [],
       age: "",
@@ -455,6 +470,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-016",
       universeId: "abin-1985",
+      firstChapter: 8,
       name: "公公",
       aliases: ["阿莉的公公"],
       age: "五十来岁",
@@ -482,6 +498,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-017",
       universeId: "abin-1985",
+      firstChapter: 8,
       name: "婆婆",
       aliases: ["阿莉的婆婆"],
       age: "四十来岁",
@@ -509,6 +526,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-018",
       universeId: "abin-1985",
+      firstChapter: 8,
       name: "阿莉",
       aliases: [],
       age: "二十岁出头",
@@ -537,6 +555,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-019",
       universeId: "abin-1985",
+      firstChapter: 12,
       name: "阿宾的母亲",
       aliases: ["阿姨"],
       age: "四十余岁",
@@ -563,6 +582,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-020",
       universeId: "abin-1985",
+      firstChapter: 1,
       name: "胡先生",
       aliases: ["房东先生"],
       age: "30 岁出头",
@@ -591,6 +611,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-021",
       universeId: "abin-1985",
+      firstChapter: 9,
       name: "李莲莲",
       aliases: ["莲莲", "学姐"],
       age: "",
@@ -617,6 +638,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-022",
       universeId: "abin-1985",
+      firstChapter: 10,
       name: "佩如",
       aliases: [],
       age: "廿五六岁",
@@ -645,6 +667,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-023",
       universeId: "abin-1985",
+      firstChapter: 14,
       name: "郭文强",
       aliases: ["文强"],
       age: "",
@@ -672,6 +695,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-024",
       universeId: "abin-1985",
+      firstChapter: 16,
       name: "辛蒂",
       aliases: ["Cindy", "丽芳"],
       age: "",
@@ -699,6 +723,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-025",
       universeId: "abin-1985",
+      firstChapter: 13,
       name: "廖依姈",
       aliases: ["依姈"],
       age: "",
@@ -720,11 +745,19 @@ window.FICTIONAL_CHARACTERS = {
       created: "2026-11-06",
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-025-yiling.jpg",
-      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+      portraitCredit: "AI 生成 · 虚构形象 · 2026",
+      portraitVariants: [
+        {
+          file: "images/fictional-characters/char-025b-yiling-straight.jpg",
+          label: "直发版",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        }
+      ]
     },
     {
       id: "char-026",
       universeId: "abin-1985",
+      firstChapter: 20,
       name: "卫兵甲",
       aliases: [],
       age: "二十上下",
@@ -752,6 +785,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-027",
       universeId: "abin-1985",
+      firstChapter: 20,
       name: "卫兵乙",
       aliases: ["阿兵哥"],
       age: "二十出头",
@@ -779,6 +813,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-028",
       universeId: "abin-1985",
+      firstChapter: 13,
       name: "农妇",
       aliases: ["胖黑农妇"],
       age: "四十上下",
@@ -803,6 +838,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-029",
       universeId: "abin-1985",
+      firstChapter: 17,
       name: "女侍",
       aliases: ["西餐馆女侍"],
       age: "二十出头",
@@ -827,6 +863,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-030",
       universeId: "abin-1985",
+      firstChapter: 17,
       name: "追求者高",
       aliases: ["琇美的追求者（高的）"],
       age: "二十二",
@@ -854,6 +891,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-031",
       universeId: "abin-1985",
+      firstChapter: 17,
       name: "追求者胖",
       aliases: ["琇美的追求者（胖的）"],
       age: "二十二",
@@ -881,6 +919,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-032",
       universeId: "abin-1985",
+      firstChapter: 19,
       name: "新婚丈夫",
       aliases: [],
       age: "二十七八",
@@ -907,6 +946,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-033",
       universeId: "abin-1985",
+      firstChapter: 19,
       name: "新婚妻子",
       aliases: [],
       age: "二十五",
@@ -933,6 +973,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-034",
       universeId: "abin-1985",
+      firstChapter: 20,
       name: "陈明宪",
       aliases: ["连长"],
       age: "",
@@ -960,6 +1001,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-035",
       universeId: "abin-1985",
+      firstChapter: 18,
       name: "潘瑞珠",
       aliases: ["小珠"],
       age: "",
@@ -987,6 +1029,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-036",
       universeId: "abin-1985",
+      firstChapter: 24,
       name: "林素茵",
       aliases: ["茵姐", "老师"],
       age: "接近四十岁",
@@ -1014,6 +1057,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-037",
       universeId: "abin-1985",
+      firstChapter: 23,
       name: "李明健",
       aliases: ["明健"],
       age: "19",
@@ -1041,6 +1085,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-038",
       universeId: "abin-1985",
+      firstChapter: 18,
       name: "列车长",
       aliases: [],
       age: "四十上下",
@@ -1068,6 +1113,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-039",
       universeId: "abin-1985",
+      firstChapter: 14,
       name: "女服务生",
       aliases: ["西餐厅服务生"],
       age: "二十上下",
@@ -1095,6 +1141,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-040",
       universeId: "abin-1985",
+      firstChapter: 6,
       name: "卖场柜员",
       aliases: ["泳装部柜员"],
       age: "二十出头",
@@ -1122,6 +1169,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-041",
       universeId: "abin-1985",
+      firstChapter: 1,
       name: "邮差",
       aliases: [],
       age: "三十上下",
@@ -1149,6 +1197,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-042",
       universeId: "abin-1985",
+      firstChapter: 11,
       name: "姑丈",
       aliases: ["阿宾的姑丈"],
       age: "四十五上下",
@@ -1175,6 +1224,7 @@ window.FICTIONAL_CHARACTERS = {
     {
       id: "char-043",
       universeId: "abin-1985",
+      firstChapter: 24,
       name: "师丈",
       aliases: ["林素茵的丈夫"],
       age: "四十上下",
@@ -1196,6 +1246,198 @@ window.FICTIONAL_CHARACTERS = {
       created: "2026-11-06",
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-043-shizhang.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-044",
+      universeId: "abin-1985",
+      firstChapter: 27,
+      name: "副总经理秘书",
+      aliases: ["秘书"],
+      age: "二十七八（推断）",
+      gender: "女",
+      role: "副总经理的秘书",
+      affiliation: "",
+      tags: ["第 27 章", "喜宴", "秘书"],
+      summary: "副总经理的秘书，喜宴同桌。",
+      appearance: "二十七八，office lady 打扮：深色套装、白衬衫、盘发、妆容精致，手上一本文件夹。原文没有写她的长相。",
+      personality: "主动、不怕人知道，也不怕人看见；在这一桌人里，她是唯一没有犹豫过的一个。",
+      bio: "第 27 章喜宴上出现。原文只交代了她的身份是「副总经理的秘书」，其余留白。",
+      relationships: [
+        { targetId: "char-048", type: "同公司", note: "同一场喜宴", directed: false },
+        { targetId: "char-045", type: "同公司", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 27 章", event: "参加喜宴，坐在同一桌" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-044-mishu.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-045",
+      universeId: "abin-1985",
+      firstChapter: 27,
+      name: "经理",
+      aliases: [],
+      age: "四十到五十（推断）",
+      gender: "男",
+      role: "钰志的经理",
+      affiliation: "",
+      tags: ["第 27 章", "喜宴", "上司"],
+      summary: "钰志的经理，喜宴上一直愁眉苦脸。",
+      appearance: "中年，深色西装、白衬衫、深色领带，发线后移；笑起来像领导。原文只给了「道貌岸然」「一直愁眉苦脸」。",
+      personality: "道貌岸然，表面一套、背后一套，而且并不掩饰得太好，只是没人揭穿。",
+      bio: "第 27 章喜宴上，同桌那个一直愁眉苦脸的中年人，听说就是钰志的经理。",
+      relationships: [
+        { targetId: "char-048", type: "经理与下属", note: "钰志的上司", directed: true },
+        { targetId: "char-047", type: "同一家公司", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 27 章", event: "喜宴上一直愁眉苦脸" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-045-jingli.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-046",
+      universeId: "abin-1985",
+      firstChapter: 27,
+      name: "年轻妻子",
+      aliases: [],
+      age: "二十五到三十（推断）",
+      gender: "女",
+      role: "喜宴同桌的年轻妻子；课长的妻子",
+      affiliation: "",
+      tags: ["第 27 章", "喜宴", "已婚"],
+      summary: "喜宴同桌那对年轻夫妻里的妻子。",
+      appearance: "二十五六到三十岁，会打扮；连身半露肩洋装、涂口红、黑色高跟鞋。",
+      personality: "一步一步退让的人——不是被逼，是每次都说服自己「再一点点就好」。",
+      bio: "第 27 章喜宴同桌，丈夫在另一个部门当课长。原文用她大量内心独白来写，一句一句地跟自己讨价还价。",
+      relationships: [
+        { targetId: "char-047", type: "夫妻", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 27 章", event: "喜宴同桌" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-046-nianqing-qizi.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-047",
+      universeId: "abin-1985",
+      firstChapter: 27,
+      name: "课长",
+      aliases: ["秃头"],
+      age: "二十七八到三十出头（推断）",
+      gender: "男",
+      role: "同一公司另一部门的课长",
+      affiliation: "",
+      tags: ["第 27 章", "喜宴", "秃头"],
+      summary: "喜宴上那对年轻夫妻里的丈夫，另一个部门的课长。",
+      appearance: "年纪不大，头顶却已经秃成一圈窟窿；相貌猥亵。喜宴上穿正装、服装整齐。",
+      personality: "不是凶，也不苦——是让人看了不舒服的那种油滑。",
+      bio: "第 27 章喜宴上，正对面那对年轻夫妻的丈夫，在另一个部门当课长。原文特别强调他「年纪不大」，这是这个人的要害。",
+      relationships: [
+        { targetId: "char-046", type: "夫妻", note: "", directed: false },
+        { targetId: "char-048", type: "同一家公司", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 27 章", event: "喜宴上夹菜给隔壁女郎" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-047-kezhang.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-048",
+      universeId: "abin-1985",
+      firstChapter: 27,
+      name: "钰志",
+      aliases: [],
+      age: "二十七八（推断）",
+      gender: "男",
+      role: "钰慧的大哥；上班族",
+      affiliation: "",
+      tags: ["第 27 章", "大哥", "新郎"],
+      summary: "钰慧的大哥，第 27 章结婚。",
+      appearance: "二十七八，体面的长子、比阿宾成熟；黑色西装、白衬衫、深色领带。原文一字未写他的外形。",
+      personality: "稳重、按部就班，把婚事办得体面。原文没有一句他的台词、没有一个动作描写。",
+      bio: "钰慧的大哥，上班族。第 27 章结婚，喜宴在自家门口办；新娘据说是他的公司同事，近水楼台。",
+      relationships: [
+        { targetId: "char-002", type: "兄妹", note: "钰慧是他妹妹", directed: true }
+      ],
+      timeline: [
+        { date: "第 27 章", event: "在自家门口办喜宴" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-048-yuzhi.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-049",
+      universeId: "abin-1985",
+      firstChapter: 27,
+      name: "钰慧的母亲",
+      aliases: [],
+      age: "四十五到五十（推断）",
+      gender: "女",
+      role: "钰慧的母亲；高雄人",
+      affiliation: "",
+      tags: ["第 27 章", "母亲", "高雄"],
+      summary: "钰慧的母亲，高雄人。",
+      appearance: "四十五到五十岁，温和、会张罗、家常而不邋遢；米白针织外套配灰色连衣裙。原文没有写她的长相。",
+      personality: "温和、话多；母亲管日常。",
+      bio: "钰慧的母亲，高雄人，家里是三层楼房的体面人家。第 27 章在楼梯口叫女儿，钰慧说要跟妈一起睡。",
+      relationships: [
+        { targetId: "char-002", type: "母女", note: "", directed: true }
+      ],
+      timeline: [
+        { date: "第 27 章", event: "在楼梯口叫女儿" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-049-yuhui-mother.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-050",
+      universeId: "abin-1985",
+      firstChapter: 27,
+      name: "钰慧的父亲",
+      aliases: [],
+      age: "五十上下（推断）",
+      gender: "男",
+      role: "钰慧的父亲；高雄人",
+      affiliation: "",
+      tags: ["第 27 章", "父亲", "高雄"],
+      summary: "钰慧的父亲，地方上的体面人家。",
+      appearance: "五十上下，正装、话少，坐着比站着有威；白衬衫配深色西裤、黑皮鞋。原文没有写他的长相。",
+      personality: "说话短、稳，一开口就是规矩；他不是反对，是划线。",
+      bio: "钰慧的父亲，高雄人，住三层楼房。第 27 章阿宾到家里，他开口审问，说「不反对，但是……」。",
+      relationships: [
+        { targetId: "char-002", type: "父女", note: "", directed: true }
+      ],
+      timeline: [
+        { date: "第 27 章", event: "开口审问阿宾" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-050-yuhui-father.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
