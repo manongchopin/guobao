@@ -64,7 +64,8 @@
           char: c,
           src: v.file || "",
           label: v.label || "另一版",
-          alt: c.name + " " + (v.label || "") + " 定妆照（虚构人物）"
+          title: v.title || "",
+          alt: (v.title || c.name) + " " + (v.label || "") + "（虚构人物）"
         });
       });
     }
@@ -117,7 +118,7 @@
     var card = document.createElement("button");
     card.type = "button";
     card.className = entry.label ? "fc-card fc-card--variant" : "fc-card";
-    card.setAttribute("aria-label", "查看 " + c.name + (entry.label ? " " + entry.label : "") + " 的定妆照");
+    card.setAttribute("aria-label", "查看 " + (entry.title || c.name) + (entry.label ? " " + entry.label : "") + " 的照片");
     card.setAttribute("data-chapter", String(c.firstChapter || ""));
     card.setAttribute("data-search", [
       c.name,
@@ -145,7 +146,7 @@
     body.className = "fc-card-body";
 
     var name = document.createElement("b");
-    name.textContent = c.name;
+    name.textContent = entry.title || c.name;
 
     var sub = document.createElement("span");
     sub.textContent = entry.label ? entry.label + " · " + (c.role || "") : (c.role || universeTitle(c.universeId));
@@ -298,7 +299,7 @@
 
     text(lbKicker, (c.status === "published" ? "PUBLISHED" : "DRAFT") +
       (universeTitle(c.universeId) ? " · " + universeTitle(c.universeId) : ""));
-    text(lbName, c.name);
+    text(lbName, entry.title || c.name);
     text(lbRole, entry.label ? entry.label + (c.role ? " · " + c.role : "") : (c.role || ""));
     text(lbSummary, c.summary || "");
     text(lbIndex, (i + 1) + " / " + entries.length);

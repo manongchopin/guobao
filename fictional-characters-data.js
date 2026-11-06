@@ -642,7 +642,15 @@ window.FICTIONAL_CHARACTERS = {
       created: "2026-11-06",
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-018-ali.jpg",
-      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+      portraitCredit: "AI 生成 · 虚构形象 · 2026",
+      portraitVariants: [
+        {
+          file: "images/fictional-characters/char-018b-ali-baby.jpg",
+          label: "合影",
+          title: "阿莉与婴儿",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        }
+      ]
     },
     {
       id: "char-019",
@@ -1060,7 +1068,15 @@ window.FICTIONAL_CHARACTERS = {
       created: "2026-11-06",
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-033-xin-hun-qizi.jpg",
-      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+      portraitCredit: "AI 生成 · 虚构形象 · 2026",
+      portraitVariants: [
+        {
+          file: "images/fictional-characters/char-033b-xinhun-couple.jpg",
+          label: "合影",
+          title: "新婚夫妻",
+          credit: "AI 生成 · 虚构形象 · 2026"
+        }
+      ]
     },
     {
       id: "char-034",
