@@ -118,6 +118,15 @@
     card.type = "button";
     card.className = entry.label ? "fc-card fc-card--variant" : "fc-card";
     card.setAttribute("aria-label", "查看 " + c.name + (entry.label ? " " + entry.label : "") + " 的定妆照");
+    card.setAttribute("data-chapter", String(c.firstChapter || ""));
+    card.setAttribute("data-search", [
+      c.name,
+      (c.aliases || []).join(" "),
+      (c.tags || []).join(" "),
+      entry.label || "",
+      c.firstChapter ? "第" + c.firstChapter + "章 第" + c.firstChapter + " 章" : ""
+    ].join(" ").toLowerCase());
+    entry.el = card;
 
     var media = document.createElement("span");
     media.className = "fc-card-media";
@@ -158,6 +167,72 @@
     wall.hidden = true;
     return;
   }
+
+  /* ---------- 章节跳转 ---------- */
+  var chipsEl = document.getElementById("fc-chips");
+  var chapterFirst = {};
+  var chapterChips = {};
+
+  if (chipsEl) {
+    var seen = {};
+    var order = [];
+    entries.forEach(function (entry) {
+      var ch = Number(entry.char.firstChapter);
+      if (!ch || seen[ch]) return;
+      seen[ch] = true;
+      order.push(ch);
+      chapterFirst[ch] = entry.el;
+    });
+    order.sort(function (a, b) { return a - b; });
+
+    var navFrag = document.createDocumentFragment();
+    order.forEach(function (ch) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "fc-chip";
+      btn.textContent = "第 " + ch + " 章";
+      btn.setAttribute("data-chapter", String(ch));
+      btn.addEventListener("click", function () {
+        var target = chapterFirst[ch];
+        if (!target || target.hidden) return;
+        target.scrollIntoView({ block: "start" });
+      });
+      chapterChips[ch] = btn;
+      navFrag.appendChild(btn);
+    });
+    chipsEl.appendChild(navFrag);
+  }
+
+  /* ---------- 筛选 ---------- */
+  var searchEl = document.getElementById("fc-search");
+  var shownEl = document.getElementById("fc-shown");
+
+  function applyFilter() {
+    var q = searchEl ? searchEl.value.trim().toLowerCase() : "";
+    var shown = 0;
+    var perChapter = {};
+
+    entries.forEach(function (entry) {
+      var hay = entry.el ? entry.el.getAttribute("data-search") || "" : "";
+      var hit = !q || hay.indexOf(q) !== -1;
+      if (entry.el) entry.el.hidden = !hit;
+      if (hit) {
+        shown++;
+        var ch = Number(entry.char.firstChapter);
+        if (ch) perChapter[ch] = (perChapter[ch] || 0) + 1;
+      }
+    });
+
+    Object.keys(chapterChips).forEach(function (ch) {
+      chapterChips[ch].classList.toggle("is-off", !perChapter[ch]);
+    });
+
+    if (shownEl) {
+      shownEl.textContent = q ? "显示 " + shown + " / " + entries.length + " 张" : "";
+    }
+  }
+
+  if (searchEl) searchEl.addEventListener("input", applyFilter);
 
   /* ---------- 灯箱 ---------- */
   var current = -1;

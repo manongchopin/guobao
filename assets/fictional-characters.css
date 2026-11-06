@@ -11,6 +11,39 @@
 .fc-count { font-family: var(--sans); font-size: 12px; font-weight: 400; color: var(--ink-3); margin-left: 8px; letter-spacing: .04em; }
 .fc-empty { margin: 0; font-size: 12px; color: var(--ink-3); }
 
+/* 筛选与章节跳转：人数多时用来定位，不占用图片区域 */
+.fc-tools { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin: 4px 0 10px; }
+.fc-search { display: flex; align-items: center; gap: 8px; padding: 5px 2px; border-bottom: 1px solid var(--line); }
+.fc-search:focus-within { border-color: var(--red); }
+.fc-search-label { font-family: var(--sans); font-size: 9px; letter-spacing: .14em; color: var(--ink-3); }
+.fc-search input {
+  width: 190px;
+  padding: 2px 0;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--ink);
+  outline: none;
+}
+.fc-search input::placeholder { color: var(--ink-3); }
+.fc-shown { font-size: 10px; color: var(--ink-3); letter-spacing: .02em; }
+.fc-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 22px; }
+.fc-chip {
+  padding: 3px 9px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 10px;
+  letter-spacing: .02em;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.fc-chip:hover { border-color: var(--red); color: var(--red); }
+.fc-chip:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.fc-chip.is-off { opacity: .35; pointer-events: none; }
+
 /* 人物卡片墙 · 每格一张竖版定妆照（1024×1792，正好 4:7） */
 .fc-wall {
   display: grid;

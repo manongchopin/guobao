@@ -32,11 +32,23 @@
       <div><b id="fc-stat-version">0.2</b><span>当前版本</span></div>
     </div>
     <p class="fc-callout"><b>这是虚构人物档案。</b>所有人物、组织、事件都按虚构设定处理，不对应现实中的任何个人；定妆照为 AI 生成的虚构形象，不是真人照片。</p>
-    <p class="fc-intro">点任意一张定妆照，会在本页浮起大图，不跳转、不新开标签页。Esc 关闭，← → 看上一位 / 下一位。<br>人物按第一次出场的章节排列；阿宾和钰慧固定在最前面。</p>
+    <p class="fc-intro">点任意一张定妆照，会在本页浮起大图，不跳转、不新开标签页。Esc 关闭，← → 看上一位 / 下一位。<br>
+    人物按第一次出场的章节排列；阿宾和钰慧固定在最前面。人数多了以后，用上面的筛选框找名字，或用章节跳转条直接翻到某一章。</p>
   </section>
 
   <section class="wh-section">
     <h2>人物 <span class="fc-count" id="fc-count"></span></h2>
+
+    <div class="fc-tools">
+      <label class="fc-search">
+        <span class="fc-search-label">筛选</span>
+        <input type="search" id="fc-search" placeholder="姓名 / 别名 / 标签" autocomplete="off" spellcheck="false">
+      </label>
+      <span class="fc-shown" id="fc-shown" aria-live="polite"></span>
+    </div>
+
+    <nav class="fc-chips" id="fc-chips" aria-label="按章节跳转"></nav>
+
     <div class="fc-wall" id="fc-wall"></div>
     <p class="fc-empty" id="fc-empty" hidden>这个档案柜还是空的。</p>
   </section>
