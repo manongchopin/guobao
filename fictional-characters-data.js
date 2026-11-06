@@ -1494,6 +1494,144 @@ window.FICTIONAL_CHARACTERS = {
       updated: "2026-11-06",
       portrait: "images/fictional-characters/char-052-aqing.jpg",
       portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-053",
+      universeId: "abin-1985",
+      firstChapter: 32,
+      name: "勇哥",
+      aliases: [],
+      age: "",
+      gender: "男",
+      role: "机车行的朋友",
+      affiliation: "",
+      tags: ["第 32 章", "机车行"],
+      summary: "机车行门口那一群人里的一个，原文只出现名字。",
+      appearance: "三十上下，短发、留短须；灰白背心、深色工装裤、拖鞋。原文没有写他的外形。",
+      personality: "不急、稳（推断）。",
+      bio: "第 32 章在机车行门口喝酒的那一群里出场。原文只给了他名字和这一场，其余全部留白。",
+      relationships: [
+        { targetId: "char-057", type: "朋友", note: "店门口喝酒那一群", directed: false }
+      ],
+      timeline: [
+        { date: "第 32 章", event: "在机车行门口喝酒" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-053-yongge.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-054",
+      universeId: "abin-1985",
+      firstChapter: 32,
+      name: "国良",
+      aliases: [],
+      age: "",
+      gender: "男",
+      role: "机车行的人（伙计或常来的朋友）",
+      affiliation: "机车行",
+      tags: ["第 32 章", "机车行"],
+      summary: "机车行的人，早就存了心，只是没敢动。",
+      appearance: "普通、年轻，中长发；浅灰短袖衬衫、牛仔裤、运动鞋。原文没有写他的外形。",
+      personality: "等机会的人：机会一来，动作比谁都快。",
+      bio: "第 32 章在机车行出现。原文只说他是「你们和我那死鬼」那一群常来往的人，具体是伙计还是朋友没交代。",
+      relationships: [
+        { targetId: "char-057", type: "伙计与老板", note: "", directed: true }
+      ],
+      timeline: [
+        { date: "第 32 章", event: "在机车行出现" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-054-guoliang.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-055",
+      universeId: "abin-1985",
+      firstChapter: 32,
+      name: "雄仔",
+      aliases: [],
+      age: "十八九（高中刚毕业，还没当兵）",
+      gender: "男",
+      role: "机车行伙计、学徒",
+      affiliation: "机车行",
+      tags: ["第 32 章", "学徒", "机车行"],
+      summary: "机车行的伙计、学徒，高中刚毕业还没当兵。",
+      appearance: "十八九到二十，短而乱的头发；灰色工作服，手上、衣服上都是油污，深色旧球鞋。",
+      personality: "年轻气盛：年轻、胆大、手脚快，知道什么时候该走。",
+      bio: "机车行的伙计、学徒。原文写他「高中才毕业，还没当兵」；按作者 2026-11-06 的说明，这个年纪在当时算成年、等当兵，因此按成年人标准出图。",
+      relationships: [
+        { targetId: "char-057", type: "伙计与老板", note: "", directed: true },
+        { targetId: "char-056", type: "伙计与老板娘", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 32 章", event: "在机车行后间" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-055-xiongzai.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-056",
+      universeId: "abin-1985",
+      firstChapter: 32,
+      name: "老板娘",
+      aliases: ["机车行老板娘"],
+      age: "不到三十",
+      gender: "女",
+      role: "机车行老板娘；兼做小说漫画出租",
+      affiliation: "机车行",
+      tags: ["第 32 章", "老板娘", "租书店"],
+      summary: "机车行的老板娘，兼做小说漫画出租。",
+      appearance: "不到三十岁，不漂亮但笑起来甜美，一口白牙最显眼；深色半透明上衣、黑色长裤、人字拖。原文写她生过两个小孩。",
+      personality: "嗓门轻、手脚勤、见惯人。原文评价两个字：俗气——不是难看，是不懂得收。",
+      bio: "机车行的老板娘，兼做小说漫画出租，生过两个小孩。第 32 章在店里洗衣服，手里还拿着一本漫画。",
+      relationships: [
+        { targetId: "char-057", type: "夫妻", note: "", directed: false },
+        { targetId: "char-055", type: "老板娘与伙计", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 32 章", event: "在店里洗衣服" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-056-laobanniang.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
+    },
+    {
+      id: "char-057",
+      universeId: "abin-1985",
+      firstChapter: 32,
+      name: "车行老板",
+      aliases: ["机车行老板"],
+      age: "三十岁不到",
+      gender: "男",
+      role: "机车行老板",
+      affiliation: "机车行（店面是自己的房子）",
+      tags: ["第 32 章", "机车行", "老板"],
+      summary: "机车行老板，三十岁不到，整天咬槟榔。",
+      appearance: "三十岁不到，头发短而乱、留胡渣；黑色旧 T 恤、深色工装裤，手上有油污，脚上旧球鞋。原文只说体型之外的部分没写。",
+      personality: "豪爽、粗、不爱管事——喝酒划拳比什么都重要。说话粗声粗气。",
+      bio: "机车行老板，店面是自己的房子，大部分面积当工作间和展示新车。第 32 章晚上和几个朋友在店门口的小矮桌喝茶喝酒。",
+      relationships: [
+        { targetId: "char-056", type: "夫妻", note: "", directed: false },
+        { targetId: "char-055", type: "老板与伙计", note: "", directed: false }
+      ],
+      timeline: [
+        { date: "第 32 章", event: "在店门口和朋友们喝酒划拳" }
+      ],
+      status: "published",
+      created: "2026-11-06",
+      updated: "2026-11-06",
+      portrait: "images/fictional-characters/char-057-chehang-laoban.jpg",
+      portraitCredit: "AI 生成 · 虚构形象 · 2026"
     }
   ]
 };
