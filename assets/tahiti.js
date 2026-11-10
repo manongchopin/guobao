@@ -122,6 +122,45 @@
     }).join("");
   }
 
+  /* ---------- 驾照与取车 ---------- */
+
+  var lic = D.licence;
+  if (lic) {
+    var setText = function (id, txt) {
+      var el = document.getElementById(id);
+      if (el && txt) el.textContent = txt;
+    };
+    setText("th-lic-kicker", lic.kicker);
+    setText("th-lic-title", lic.title);
+
+    var verdictEl = document.getElementById("th-lic-verdict");
+    if (verdictEl) verdictEl.innerHTML = "<b>结论：</b>" + esc(lic.verdict);
+
+    var licFacts = document.getElementById("th-lic-facts");
+    if (licFacts) {
+      licFacts.innerHTML = lic.facts.map(function (f) {
+        return '<div class="th-lic-fact"><span>' + esc(f.t) + "</span><p>" + esc(f.b) + "</p></div>";
+      }).join("");
+    }
+
+    var licIsl = document.getElementById("th-lic-islands");
+    if (licIsl) {
+      licIsl.innerHTML = lic.islands.map(function (i) {
+        return '<div class="th-lic-island">' +
+          "<b>" + esc(i.name) + "</b>" +
+          '<em class="risk' + (i.risk === "高" ? " risk--high" : i.risk === "中" ? " risk--mid" : "") + '">' + esc(i.risk) + "</em>" +
+          "<p>" + esc(i.note) + "</p></div>";
+      }).join("");
+    }
+
+    var licCheck = document.getElementById("th-lic-check");
+    if (licCheck) {
+      licCheck.innerHTML = lic.checklist.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("");
+    }
+
+    setText("th-lic-warn", lic.warn);
+  }
+
   /* ---------- 世界遗产 ---------- */
 
   var whEl = document.getElementById("th-wh");

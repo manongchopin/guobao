@@ -200,6 +200,53 @@
   color: var(--ink-3);
 }
 
+/* ---------- 驾照与取车 ---------- */
+
+.th-lic-facts { border-top: 1px solid var(--ink); margin: 16px 0 0; }
+.th-lic-fact {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.th-lic-fact > span { font-size: 9px; letter-spacing: .04em; color: var(--red); line-height: 2; }
+#tahiti .th-lic-fact p { margin: 0; font-size: 10px; line-height: 1.75; color: var(--ink-2); }
+
+.th-lic-islands {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--line);
+}
+.th-lic-island { padding: 9px 14px 10px 0; border-right: 1px solid var(--line-soft); }
+.th-lic-island:last-child { border-right: 0; }
+.th-lic-island b { font-family: var(--serif); font-size: 14px; font-weight: 600; }
+.th-lic-island .risk {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 4px;
+  border: 1px solid var(--line);
+  font-style: normal;
+  font-size: 7.5px;
+  color: var(--ink-3);
+}
+.th-lic-island .risk--mid { color: var(--amber); border-color: var(--amber); }
+.th-lic-island .risk--high { color: var(--red); border-color: var(--red); }
+#tahiti .th-lic-island p { margin: 3px 0 0; font-size: 9.5px; line-height: 1.7; color: var(--ink-3); }
+
+.th-lic-check { margin: 12px 0 0; padding-left: 18px; }
+.th-lic-check li { margin: 0 0 4px; font-size: 10px; line-height: 1.7; color: var(--ink-2); }
+
+#tahiti .th-lic-warn {
+  margin: 12px 0 0;
+  padding: 9px 12px;
+  border-left: 2px solid var(--red);
+  background: var(--paper-2);
+  font-size: 9.5px;
+  line-height: 1.75;
+  color: var(--ink-2);
+}
+
 /* ---------- 世界遗产 ---------- */
 
 .th-wh-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
@@ -361,4 +408,8 @@
   .th-pearl-row { grid-template-columns: 1fr; gap: 2px; }
   .th-point { grid-template-columns: 1fr; gap: 2px; }
   .th-point-t { line-height: 1.4; }
+  .th-lic-islands { grid-template-columns: 1fr; }
+  .th-lic-island { border-right: 0; border-bottom: 1px solid var(--line-soft); padding: 8px 0; }
+  .th-lic-island:last-child { border-bottom: 0; }
+  .th-lic-fact { grid-template-columns: 1fr; gap: 2px; }
 }

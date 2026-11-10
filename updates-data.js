@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-10",
     type: "计划",
+    title: "大溪地查清驾照与取车",
+    note: "v0.4 · 中国驾照可用范围 + Hiva Oa 包车预案",
+    href: "tahiti.html"
+  },
+  {
+    date: "2026-11-10",
+    type: "计划",
     title: "大溪地补入现场参考",
     note: "v0.3 · 馆藏/库克点/马克萨斯神话/书单",
     href: "tahiti.html"

@@ -1,12 +1,12 @@
 /* 大溪地 · 五段行程数据
-   版本：v0.3（2026-11-10）
+   版本：v0.4（2026-11-10）
    说明：
    1. 事实性条目尽量给来源；不能确认的写「待核」，不要改成肯定语气。
    2. 带 src 字段的条目，来自微博用户「黛西杨」2025-11/12 的法属波利尼西亚记录；
       该记录为二手转述，本页只改写事实并署名，不转载原文。
 */
 window.TAHITI = {
-  version: "0.3",
+  version: "0.4",
   updated: "2026-11-10",
 
   stats: [
@@ -205,7 +205,7 @@ window.TAHITI = {
       transport: "Air Tahiti：帕皮提 → Hiva Oa（HIX / Atuona），约 3.5 小时，常经停（待核）",
       drive: "Atuona 取车；Atuona → Puamau 约 45 公里山路，单程约 2.5 小时",
       stay: "待定（Atuona 一带，岛上住宿很少）",
-      caveat: "同一份外部记录在 Hiva Oa 只写了高更与 Brel，没有去 Puamau 和 Ta'aoa。所以本段的遗址点位仍然缺第一手印证，别把页面上的描述当成现场确认。",
+      caveat: "同一份外部记录在 Hiva Oa 只写了高更与 Brel，没有去 Puamau 和 Ta'aoa。所以本段的遗址点位仍然缺第一手印证，别把页面上的描述当成现场确认。另外这里车最少，取车被拒时没有替代——按包车预案留时间。",
       points: [
         {
           t: "世界遗产",
@@ -253,6 +253,11 @@ window.TAHITI = {
           name: "Centre Culturel Paul Gauguin",
           note: "Atuona。只展复制品，但藏有他与妻子的往返书信，信里反复商量怎么卖画换钱——比画本身更能说明他在马克萨斯的日子。",
           src: "现场记录 2025-11"
+        },
+        {
+          t: "预案",
+          name: "租不到车就包车",
+          note: "Atuona 有当地司机可包车去 Puamau，单程约 2.5 小时山路。价格、是否含等待与回程，出发前问清；这一条是 Hiva Oa 的兜底方案，不要留到落地才想。"
         }
       ]
     },
@@ -280,6 +285,42 @@ window.TAHITI = {
       ]
     }
   ],
+
+  /* 驾照与取车（2026-11-10 查证） */
+  licence: {
+    kicker: "DRIVING LICENCE · CHECKED 2026-11-10",
+    title: "驾照与取车：中国驾照能用到什么程度",
+    verdict:
+      "中国驾照在法属波利尼西亚不能当国际驾照用。国际连锁车行明文要求「非拉丁文字驾照 + 国际驾照」，而大陆驾照持有人办不出合法国际驾照。" +
+      "本次只剩两条路：找接受「驾照原件 + 法语宣誓翻译」的本地车行，或者改用包车。",
+    facts: [
+      {
+        t: "车行条款",
+        b: "Avis Tahiti 官网 FAQ 写明：任何非拉丁文字的驾照，都必须附国际驾照，国际驾照单独出示无效。中国驾照按这一条会被要求出示国际驾照。"
+      },
+      {
+        t: "国际驾照",
+        b: "国际驾照（IDP）由 1949 年日内瓦公约缔约国签发。中国大陆不是该公约成员，办不出合法 IDP；平台卖的「国际驾照认证件」是翻译件，不是 IDP，法律地位不同。"
+      },
+      {
+        t: "香港路线",
+        b: "内地驾照可免试换香港正式驾照（附表 4 含内地），但申请 IDP 必须持香港身份证——永久、非永久或临时证皆可。没有香港身份证这条路就走不通，本次不适用。"
+      }
+    ],
+    islands: [
+      { name: "Tahiti 本岛", risk: "低", note: "机场一圈车行，国际连锁和本地行都有；这家不认就换一家。" },
+      { name: "Raiatea", risk: "中", note: "车行少，基本只有本地行可选，先问再订机票。" },
+      { name: "Hiva Oa", risk: "高", note: "车最少，被拒几乎没有替代。必须准备包车预案，不要指望现场租。" }
+    ],
+    checklist: [
+      "驾照原件（Avis 明确不接受复印件、照片、电子驾照）",
+      "法语宣誓翻译件（traduction assermentée）；国内做的公证翻译是否被承认，要问车行",
+      "本人名下的信用卡（押金通常只能信用卡）",
+      "出发前邮件确认三问：接受中国驾照吗？需要 IDP 吗？需要宣誓翻译吗？——把回复留着"
+    ],
+    warn:
+      "能租到车不等于合法。路上被查或被保险认定驾照无效时，出事可能拒赔，所以「柜台松」不能当作依据。"
+  },
 
   /* 世界遗产专段 */
   wh: [
@@ -420,7 +461,7 @@ window.TAHITI = {
   },
 
   todos: [
-    "中国驾照在法属波利尼西亚能否直接租车、是否需要国际驾照 —— 待核",
+    "本地车行（如 Tahiti Easy Car）是否接受「中国驾照原件 + 法语宣誓翻译」—— 需逐一邮件确认，口头承诺不算",
     "Tahiti 环岛里程与各段实际车程 —— 待核",
     "Point Vénus / Matavai 湾的具体位置、开放与停车 —— 待核",
     "Espace Gauguin（Papeari）开馆时间与是否已开放 —— 待核",
@@ -430,7 +471,7 @@ window.TAHITI = {
     "Bora Bora 两家酒店之间以及机场的船只接驳班次 —— 待核",
     "帕皮提 → Hiva Oa 航班是否经停、经停哪座岛 —— 待核",
     "Bora Bora 气旋史与酒店受损情况为导游口述，需另找来源核实 —— 待核",
-    "黑珍珠店铺的具体退换与证书政策 —— 待核"
+    "Hiva Oa 包车：司机联系方式、Puamau 往返价格与等待时间 —— 待核"
   ],
 
   sources: [
@@ -438,6 +479,9 @@ window.TAHITI = {
     { label: "UNESCO 1707 · Te Henua Enata – Les îles Marquises", url: "https://whc.unesco.org/en/list/1707/" },
     { label: "Tahiti Tourisme · 官方旅游机构", url: "https://www.tahititourisme.com/" },
     { label: "Air Tahiti · 国内航班", url: "https://www.airtahiti.com/" },
+    { label: "Avis Tahiti · 取车所需证件（含国际驾照条款）", url: "https://www.avis-tahiti.com/f-a-q-2/" },
+    { label: "香港运输署 1823 · 免试签发香港正式驾照", url: "https://www.1823.gov.hk/tc/faq/i-have-a-driving-licence-issued-by-mainland-other-countries-can-i-apply-for-direct-issue-of-hong-kong-full-driving-licence-without-taking-a-driving-test" },
+    { label: "香港运输署 1823 · 国际驾驶许可证申请资格", url: "https://www.1823.gov.hk/tc/faq/how-to-apply-for-an-international-driving-permit-idp" },
     { label: "维基百科 · Taputapuatea", url: "https://en.wikipedia.org/wiki/Taputapuatea" },
     { label: "维基百科 · Hiva Oa", url: "https://en.wikipedia.org/wiki/Hiva_Oa" },
     { label: "维基百科 · Bora Bora", url: "https://en.wikipedia.org/wiki/Bora_Bora" },
