@@ -1,5 +1,12 @@
 window.SITE_UPDATES = [
   {
+    date: "2026-11-10",
+    type: "计划",
+    title: "马克思伦敦漫步：两天路线",
+    note: "v0.3 · 11 个点 · 每天步行 4 公里",
+    href: "marx-london.html"
+  },
+  {
     date: "2026-11-05",
     type: "足迹",
     title: "新疆自驾：伊犁—赛里木湖环线",

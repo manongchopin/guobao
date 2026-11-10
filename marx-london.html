@@ -15,11 +15,11 @@
 
 <header class="hero">
   <a class="back" href="plans.html">← 旅行计划</a>
-  <p class="kicker">PLAN 16 · MARX IN LONDON · v0.2</p>
+  <p class="kicker">PLAN 16 · MARX IN LONDON · v0.3</p>
   <h1>跟随马克思<br>在伦敦漫步</h1>
   <p class="lede">
     不是朝圣，是把城市当档案读。<br>
-    <span>9 个点，5 个区，从 Soho 的出租屋到 Highgate 的墓；每个点标清楚：建筑还在不在，能不能进去。</span>
+    <span>11 个点，两天：第一天 Soho 与大英博物馆，第二天北伦敦与 Highgate。每天街面步行 2–4 公里。</span>
   </p>
   <div class="seal" aria-hidden="true">马</div>
 </header>
@@ -27,17 +27,23 @@
 <main class="wh-detail">
   <section class="wh-section">
     <div class="ml-stats">
-      <div><b>9</b><span>已核地点</span></div>
-      <div><b>5</b><span>区段</span></div>
-      <div><b>1</b><span>商业团（仅 Soho）</span></div>
-      <div><b>v0.2</b><span>资料版</span></div>
+      <div><b>11</b><span>地点</span></div>
+      <div><b>2</b><span>天</span></div>
+      <div><b>7</b><span>区段</span></div>
+      <div><b>v0.3</b><span>路线版</span></div>
     </div>
-    <p class="ml-callout"><b>这一版是资料版，不是行程表。</b>9 个点按区归档，谁先走、走几天、要不要进图书馆和墓园，都还没定。三个待定项定了之后，才做 v0.3 的路线、时间和里程。</p>
-    <p class="ml-intro">起点是 Marx Walks 的周日团（marxwalks.com）。它把 Soho 段讲得很透，但只有 2.5 小时，范围不出 Piccadilly 一带——大英博物馆、Clerkenwell、北伦敦、Highgate 都不在团里。这一页把团内和团外合成一份可查的清单：每个点给地址、年份、现在是什么、能不能进去、依据哪条来源。</p>
+    <p class="ml-callout"><b>这一版排了路线：两天，由南往北。</b>第一天中心区（Soho、大英博物馆、Clerkenwell），第二天北伦敦（Kentish Town、Maitland Park）和 Highgate。街面距离是坐标直线乘 1.35 的估算，走过一次再修。进馆、门票仍以官网为准。</p>
+    <p class="ml-intro">起点是 Marx Walks 的周日团（marxwalks.com）。它把 Soho 段讲得很透，但只有 2.5 小时，范围不出 Piccadilly 一带——大英博物馆、Clerkenwell、北伦敦、Highgate 都不在团里。这一页把团内和团外接成两天：每个点给地址、年份、现在是什么、能不能进去、依据哪条来源；每段给时间和步行距离。</p>
   </section>
 
   <section class="wh-section">
-    <h2>9 个点在一张图上</h2>
+    <h2>两天怎么走</h2>
+    <p class="ml-intro">两天，由南往北。第一天在中心区走完 Soho、大英博物馆和 Clerkenwell；第二天坐两站地铁，把北伦敦的三处住处和 Highgate 墓园走掉。第一天街面约 4 公里、第二天约 2 公里，留够吃饭和进馆的时间。</p>
+    <div class="ml-route" id="ml-route"></div>
+  </section>
+
+  <section class="wh-section">
+    <h2>11 个点在一张图上</h2>
     <div class="ml-legend" id="ml-legend"></div>
     <div class="ml-map-wrap"><div id="ml-map"></div></div>
     <p class="ml-map-note">
@@ -51,15 +57,16 @@
     <figure class="ml-figure">
       <img src="images/marx-london/walk-map.jpg" alt="Marx's London 示意图：手绘地图上标出 1 到 10 号地点，从切尔西的 4 Anderson Street 到 Highgate 墓园" width="1200" height="1200" loading="lazy">
       <figcaption>
-        一张 Marx's London 示意图，把 10 个点标在同一张手绘地图上。和本页的 9 个点比，它多两处：<b>4 Anderson Street</b>（切尔西，马克思 1849 年到伦敦后的第一处住处）和 <b>Spirit of Soho 壁画</b>（Carnaby Street 与 Broadwick Street 转角）；少一处恩格斯住处。图里的 3、4 号都在本页范围内，只是本页按街道地址写作 28 Dean Street。
+        这张示意图把 10 个点标在一张手绘地图上，出自 Penguin 2018 年的文章《Take a tour of Karl Marx's London》，版权属 Penguin Random House，这里只作参考并保留出处。
+        它的 1 号 <b>4 Anderson Street</b>（切尔西）和 3 号 <b>Spirit of Soho 壁画</b> 已补进本页；编号顺序和本页不同——本页按两天路线重排，把壁画放在红狮和 Dean Street 之间。
       </figcaption>
     </figure>
-    <p class="ml-map-note">这张图只标位置，不含年份、开放时间和建筑现状；具体信息仍以下面的单点档案为准。图片由用户提供，原始出处待确认，暂作参考图。</p>
+    <p class="ml-map-note">这张图只标位置，不含年份、开放时间和建筑现状；具体信息以下面的单点档案为准。若 Penguin 方面要求撤下，改用本页的 Leaflet 地图即可。</p>
   </section>
 
   <section class="wh-section">
-    <h2>按区分段，顺序未定</h2>
-    <p class="ml-intro">下面只是把点按地理归拢，<b>不是建议路线</b>。Soho 与 Bloomsbury 可以步行相接；Clerkenwell 在东边，地铁两站；Kentish Town / Maitland Park 在北边；Highgate 再往北一点。怎么串取决于走一天还是两天。</p>
+    <h2>按区分段</h2>
+    <p class="ml-intro">路线已按两天排好，下面再把点按地理归拢一次，方便替换：某段不想去，整段拿掉不影响其余。Soho 与 Bloomsbury 步行相接；Clerkenwell 在东边；Kentish Town / Maitland Park 在北边；Highgate 再往北一点。</p>
     <div class="ml-areas" id="ml-areas"></div>
   </section>
 
@@ -81,13 +88,13 @@
         <dt>另一条</dt><dd>「Marx and Engels in Camden」，一般每月第一个周六 11:00，Chalk Farm 站出口集合</dd>
         <dt>向导</dt><dd>Heiko Khoo、Mark Bygrave；Heiko Khoo 参与撰写 2018 年《Karl Marx in London》指南</dd>
       </dl>
-      <p class="ml-intro" style="margin:0">结论：这条团只覆盖本页第一段。其余四段要自己走；跟团的价值在讲解，不在覆盖范围。</p>
+      <p class="ml-intro" style="margin:0">结论：这条团只覆盖第一天上午。第二天完全自己走；跟团的价值在讲解，不在覆盖范围。</p>
     </div>
   </section>
 
   <section class="wh-section">
     <h2>进门信息</h2>
-    <p class="ml-intro">以下时间与票价截至 <b>2026-11-03</b>，取自各机构官网。出行前请再看一次官网。</p>
+    <p class="ml-intro">以下时间与票价截至 <b>2026-11-10</b>，取自各机构官网。出行前请再看一次官网。</p>
     <div class="ml-table-wrap">
       <table class="ml-table">
         <thead><tr><th>地点</th><th>开放</th><th>票价 / 预约</th></tr></thead>

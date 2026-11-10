@@ -273,11 +273,16 @@ window.PLAN_VERSIONS = {
     },
     "marx-london": {
       "title": "跟随马克思在伦敦漫步",
-      "version": "0.2",
-      "status": "资料版",
-      "date": "2026-11-03",
-      "note": "9 个点按区归档 · 建筑现状四分类 · 进门信息与来源；路线未定",
+      "version": "0.3",
+      "status": "路线版",
+      "date": "2026-11-10",
+      "note": "11 个点 · 两天路线 · 每天街面 4 公里上下",
       "history": [
+        {
+          "v": "0.3",
+          "date": "2026-11-10",
+          "note": "排两天路线（D1 Soho + 大英博物馆 + Clerkenwell；D2 Kentish Town + Maitland Park + Highgate）；补 4 Anderson Street、Spirit of Soho 壁画，共 11 点；28 Dean Street 加 Quo Vadis 别名；补 Penguin 参考图并注明版权"
+        },
         {
           "v": "0.2",
           "date": "2026-11-03",

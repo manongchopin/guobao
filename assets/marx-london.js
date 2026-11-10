@@ -157,6 +157,53 @@
     box.innerHTML = html;
   }
 
+  /* ---------- 两天路线 ---------- */
+  function pointById(id) {
+    for (var i = 0; i < D.points.length; i++) {
+      if (D.points[i].id === id) return D.points[i];
+    }
+    return null;
+  }
+
+  function renderRoute() {
+    var box = document.getElementById("ml-route");
+    if (!box || !D.route) return;
+    var html = "";
+    D.route.days.forEach(function (day) {
+      var rows = "";
+      day.stops.forEach(function (s) {
+        var p = s.pid ? pointById(s.pid) : null;
+        var label = p
+          ? '<a href="#p-' + p.id + '">' + esc(p.zh) + "</a>"
+          : "<b>" + esc(s.at) + "</b>";
+        rows += '<li class="' + (p ? "" : "plain") + '">' +
+          '<span class="t">' + esc(s.t) + "</span>" +
+          '<span class="c">' + label + (s.note ? '<em>' + esc(s.note) + "</em>" : "") + "</span>" +
+          "</li>";
+      });
+      html += '<article class="ml-day">' +
+        '<header class="ml-day-head">' +
+        '<span class="ml-day-no">' + esc(day.no) + "</span>" +
+        "<h3>" + esc(day.title) + "</h3>" +
+        '<p class="ml-day-meta">' + esc(day.span) + " · " + esc(day.km) + "</p>" +
+        "</header>" +
+        '<ol class="ml-timeline">' + rows + "</ol>" +
+        (day.note ? '<p class="ml-day-note">' + esc(day.note) + "</p>" : "") +
+        "</article>";
+    });
+    if (D.route.optional && D.route.optional.length) {
+      html += '<div class="ml-opt"><p class="ml-opt-title">可选加段</p>';
+      D.route.optional.forEach(function (o) {
+        var p = pointById(o.pid);
+        html += '<div class="ml-opt-item"><b>' + esc(o.title) + "</b>" +
+          (p ? '<a href="#p-' + p.id + '">' + esc(p.zh) + "</a>" : "") +
+          "<span>" + esc(o.note) + "</span></div>";
+      });
+      html += "</div>";
+    }
+    box.innerHTML = html;
+  }
+
   /* ---------- 待核 ---------- */
   function renderTodo() {
     var box = document.getElementById("ml-todo");
@@ -182,6 +229,7 @@
   ready(function () {
     renderLegend();
     renderAreas();
+    renderRoute();
     renderPoints();
     renderTodo();
     renderSources();

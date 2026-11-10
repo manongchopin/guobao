@@ -27,8 +27,8 @@
 .ml-pop-meta { display: block; margin-top: 4px; font-size: 9.5px; line-height: 1.5; color: var(--ink-2); }
 
 /* 分段 */
-.ml-areas { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
-.ml-area { background: var(--paper); padding: 12px 14px; }
+.ml-areas { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--paper); border: solid var(--line); border-width: 1px 0 0 1px; }
+.ml-area { background: var(--paper); padding: 12px 14px; border: solid var(--line); border-width: 0 1px 1px 0; }
 .ml-area-kicker { margin: 0; font-family: var(--sans); font-size: 8px; letter-spacing: .12em; color: var(--red); }
 .ml-area h3 { margin: 4px 0 6px; font-family: var(--serif); font-size: 16px; line-height: 1.4; }
 .ml-area-desc { margin: 0 0 8px; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
@@ -66,6 +66,31 @@
 .ml-table td { padding: 9px 10px; border-bottom: 1px solid var(--line); line-height: 1.7; color: var(--ink-2); vertical-align: top; }
 .ml-table td:first-child { color: var(--ink); min-width: 150px; }
 .ml-table .dim { display: inline-block; margin-top: 2px; font-size: 9.5px; color: var(--ink-3); }
+
+/* 两天路线 */
+.ml-route { display: grid; gap: 14px; }
+.ml-day { border: 1px solid var(--line); background: var(--paper); }
+.ml-day-head { padding: 12px 14px 10px; border-bottom: 1px solid var(--line); background: var(--paper-2); }
+.ml-day-no { font-family: var(--sans); font-size: 9px; letter-spacing: .1em; color: var(--red); }
+.ml-day-head h3 { margin: 4px 0 3px; font-family: var(--serif); font-size: 17px; line-height: 1.4; }
+.ml-day-meta { margin: 0; font-size: 10px; color: var(--ink-3); }
+.ml-timeline { margin: 0; padding: 6px 14px 4px; list-style: none; }
+.ml-timeline li { display: flex; gap: 10px; padding: 7px 0; border-top: 1px solid var(--line-soft); font-size: 11.5px; }
+.ml-timeline li:first-child { border-top: 0; }
+.ml-timeline .t { flex: 0 0 42px; font-family: var(--sans); font-size: 10px; color: var(--ink-3); padding-top: 1px; }
+.ml-timeline .c { flex: 1; line-height: 1.6; }
+.ml-timeline .c a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+.ml-timeline .c a:hover { border-color: var(--red); color: var(--red); }
+.ml-timeline .c em { display: block; margin-top: 1px; font-style: normal; font-size: 9.5px; color: var(--ink-3); }
+.ml-timeline li.plain .c b { font-weight: 400; color: var(--ink-2); }
+.ml-day-note { margin: 0; padding: 9px 14px 12px; border-top: 1px solid var(--line); background: var(--paper-2); font-size: 10px; line-height: 1.75; color: var(--ink-3); }
+.ml-opt { border: 1px dashed var(--line); padding: 10px 14px 12px; }
+.ml-opt-title { margin: 0 0 6px; font-family: var(--sans); font-size: 9px; letter-spacing: .1em; color: var(--ink-3); }
+.ml-opt-item { padding: 6px 0; border-top: 1px solid var(--line-soft); font-size: 10.5px; line-height: 1.7; color: var(--ink-2); }
+.ml-opt-item:first-of-type { border-top: 0; }
+.ml-opt-item b { margin-right: 6px; font-weight: 400; color: var(--ink); }
+.ml-opt-item a { color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--line); }
+.ml-opt-item span { display: block; margin-top: 2px; color: var(--ink-3); }
 
 /* 参考图 */
 .ml-figure { margin: 0; }
