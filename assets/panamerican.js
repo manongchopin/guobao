@@ -7,6 +7,7 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
     });
   }
+  function setText(id, v) { var el = document.getElementById(id); if (el) el.textContent = v || ""; }
   var colors = { us: "#8f3f31", mx: "#a85a3f", bz: "#8a6338", gt: "#6e6048", sv: "#7a6a3f", hn: "#5f6b4f", cr: "#3f6655", pa: "#2f5d55", co: "#4f5878", ec: "#5f5a7a", pe: "#7a4f5f", bo: "#8a6a4f", cl: "#3e5f63", ar: "#7b5b6b", pat: "#5d5f8a" };
   var map, layer, allMarkers = [], current = "all", maps = [];
 
@@ -112,9 +113,49 @@
     }).join("");
   }
 
+  function legsHtml(legs) {
+    return (legs || []).map(function (l) {
+      return '<tr><td><b>' + esc(l.from) + '</b> → ' + esc(l.to) + '</td><td>' + esc(l.km) + '</td><td>' + esc(l.time) + '</td><td>' + esc(l.note) + '</td></tr>';
+    }).join("");
+  }
+
+  if (D.north && D.north.route) {
+    var NR = D.north.route;
+    setText("pa-route-lead", NR.lead);
+    setText("pa-route-total", NR.total);
+    setText("pa-route-note", NR.note);
+    setText("pa-route-mapnote", NR.mapNote);
+    var rLegs = document.getElementById("pa-route-legs");
+    if (rLegs) rLegs.innerHTML = legsHtml(NR.legs);
+    var rStops = document.getElementById("pa-route-stops");
+    if (rStops) rStops.innerHTML = (NR.stops || []).map(function (s) {
+      return '<div class="pa-stop"><h4>' + esc(s.name) + '</h4><p>' + esc(s.note) + '</p></div>';
+    }).join("");
+    var rCamp = document.getElementById("pa-route-camp");
+    if (rCamp) rCamp.innerHTML = (NR.camp || []).map(function (t) { return '<li>' + esc(t) + '</li>'; }).join("");
+    var rEl = document.getElementById("pa-route-map");
+    if (rEl && window.L && NR.points && NR.points.length) {
+      var rm = L.map(rEl, { scrollWheelZoom: false }).setView([NR.points[0].lat, NR.points[0].lng], 4);
+      if (typeof GB_BASEMAP === "function") GB_BASEMAP(rm);
+      else L.tileLayer("https://tile.openstreetmap.de/{z}/{x}/{y}.png", { maxZoom: 17 }).addTo(rm);
+      var rPts = NR.points.map(function (p) { return [p.lat, p.lng]; });
+      L.polyline(rPts, { color: "#8f3f31", weight: 3, opacity: .9, lineCap: "round" }).addTo(rm);
+      NR.points.forEach(function (p) {
+        L.circleMarker([p.lat, p.lng], { radius: 5, color: "#fff", weight: 1.5, fillColor: "#8f3f31", fillOpacity: 1 })
+          .addTo(rm).bindTooltip(p.name);
+      });
+      (NR.side || []).forEach(function (p) {
+        L.circleMarker([p.lat, p.lng], { radius: 5, color: "#8f3f31", weight: 1.5, fillColor: "#fff", fillOpacity: 1 })
+          .addTo(rm).bindTooltip(p.name + "（支线）");
+      });
+      var allPts = rPts.concat((NR.side || []).map(function (p) { return [p.lat, p.lng]; }));
+      rm.fitBounds(L.latLngBounds(allPts), { padding: [24, 24] });
+      maps.push(rm);
+    }
+  }
+
   if (D.north && D.north.dempster) {
     var DM = D.north.dempster;
-    function setText(id, v) { var el = document.getElementById(id); if (el) el.textContent = v || ""; }
     setText("pa-dempster-lead", DM.lead);
     setText("pa-dempster-total", DM.total);
     setText("pa-dempster-note", DM.note);

@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-10",
     type: "计划",
+    title: "泛美公路：温哥华 → 北冰洋路线",
+    note: "Prince George · K'san / Gitwangak · Watson Lake · Whitehorse · Kluane · Dawson · Dempster · 营地与水源",
+    href: "panamerican.html"
+  },
+  {
+    date: "2026-11-10",
+    type: "计划",
     title: "泛美公路：Dempster Highway 专段",
     note: "Dawson City → Tuktoyaktuk · 880 km 分段走法 · 渡口与补给 · 冰路已成历史",
     href: "panamerican.html"

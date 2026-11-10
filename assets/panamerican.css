@@ -114,3 +114,9 @@
 .pa-facts { margin: 0; padding-left: 16px; }
 .pa-facts li { font-size: 9.5px; line-height: 1.65; color: var(--ink-3); margin: 3px 0; }
 @media (max-width: 760px) { .pa-dempster-two { grid-template-columns: 1fr; } .pa-map-north { height: 360px; } }
+
+.pa-stops { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.pa-stop { border: 1px solid var(--line); background: var(--paper); padding: 8px 10px; }
+.pa-stop h4 { margin: 0 0 2px; font-family: var(--serif); font-size: 13px; font-weight: 600; }
+.pa-stop p { margin: 0; font-size: 8.5px; line-height: 1.55; color: var(--ink-3); }
+@media (max-width: 760px) { .pa-stops { grid-template-columns: 1fr; } }

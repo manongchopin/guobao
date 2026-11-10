@@ -54,6 +54,9 @@ window.PANAMERICAN = {
         { "name": "Inuvik", "lat": 68.361, "lng": -133.723 },
         { "name": "Tuktoyaktuk", "lat": 69.445, "lng": -133.03 }
       ],
+      "side": [
+        { "name": "Kluane（Haines Junction）", "lat": 60.75, "lng": -137.51 }
+      ],
       "legs": [
         { "from": "Dawson City", "to": "Dempster Corner", "km": "≈ 40", "time": "0.5 h", "note": "Klondike Highway，柏油；这里加满油再进。" },
         { "from": "Dempster Corner", "to": "Eagle Plains", "km": "≈ 370", "time": "6–7 h", "note": "全程碎石；中途过北极圈标志（里程待核）。Eagle Plains 有油、住宿、餐厅。" },
@@ -61,7 +64,7 @@ window.PANAMERICAN = {
         { "from": "Fort McPherson", "to": "Inuvik", "km": "≈ 200", "time": "3–4 h", "note": "Mackenzie River 渡口（Tsiigehtchic 附近）；Inuvik 有油、住宿、机场。" },
         { "from": "Inuvik", "to": "Tuktoyaktuk", "km": "≈ 140", "time": "2.5–3 h", "note": "2017 年通车的全年碎石路，尽头是北冰洋。" }
       ],
-      "total": "从 Dempster Corner 起算约 880 km，与参考图一致；从 Dawson City 起算约 920 km。单程建议留 3 天，回程 2 天。",
+      "total": "Dempster 本体到 Inuvik 约 740 km；再加 Inuvik → Tuktoyaktuk 约 140 km，从 Dempster Corner 到北冰洋约 880 km（与参考图一致）；从 Dawson City 起算约 920 km。单程建议留 3 天，回程 2 天。",
       "facilities": [
         "加油：Dawson City、Eagle Plains、Fort McPherson、Inuvik；Eagle Plains 到 Fort McPherson 之间没有油（待核）。",
         "住宿：Eagle Plains、Fort McPherson、Inuvik、Tuktoyaktuk，旺季要提前订。",
@@ -82,6 +85,56 @@ window.PANAMERICAN = {
         { "name": "Spectacular NWT：Dempster Highway to the Arctic Ocean", "url": "https://spectacularnwt.com/what-to-do/road-trips/dempster-highway-to-the-arctic-ocean/" },
         { "name": "CBC：New Arctic coast highway opens up remote Tuktoyaktuk（2017）", "url": "https://www.cbc.ca/lite/story/1.4363029" }
       ]
+    },
+    "route": {
+      "title": "温哥华 → 北冰洋：进北极的走法",
+      "lead": "这是规划，还没跑过，和样本 #1 的实录分开看。主线从温哥华出发，经 BC 北部进育空，在 Dawson City 做最后一次大采购，再上 Dempster；Dawson 之后跨进西北地区（NWT），直到北冰洋。里程都是估算，出发前按官方里程与路况核。",
+      "mapNote": "温哥华 → Tuktoyaktuk · 示意（坐标近似）",
+      "points": [
+        { "name": "Vancouver", "lat": 49.283, "lng": -123.121 },
+        { "name": "Prince George", "lat": 53.917, "lng": -122.75 },
+        { "name": "Kitwanga（Gitwangak）", "lat": 55.1, "lng": -128.07 },
+        { "name": "K'san / Hazelton", "lat": 55.25, "lng": -127.6 },
+        { "name": "Watson Lake", "lat": 60.063, "lng": -128.706 },
+        { "name": "Whitehorse", "lat": 60.721, "lng": -135.057 },
+        { "name": "Dawson City", "lat": 64.06, "lng": -139.433 },
+        { "name": "Eagle Plains", "lat": 66.372, "lng": -136.725 },
+        { "name": "Arctic Circle", "lat": 66.56, "lng": -136.32 },
+        { "name": "Inuvik", "lat": 68.361, "lng": -133.723 },
+        { "name": "Tuktoyaktuk", "lat": 69.445, "lng": -133.03 }
+      ],
+      "legs": [
+        { "from": "Vancouver", "to": "Prince George", "km": "≈ 780", "time": "9 h", "note": "Hwy 97 北上；Kamloops、Quesnel 可停。" },
+        { "from": "Prince George", "to": "Kitwanga", "km": "≈ 440", "time": "5 h", "note": "Hwy 16；Gitwangak Battle Hill 就在 Kitwanga。" },
+        { "from": "Kitwanga", "to": "K'san（Hazelton）", "km": "≈ 40", "time": "0.5 h", "note": "看 K'san 原住民遗址；之后要折回 Kitwanga 上 Hwy 37。" },
+        { "from": "K'san", "to": "Watson Lake", "km": "≈ 700", "time": "9–10 h", "note": "Hwy 37（Stewart-Cassiar）；Dease Lake 可住一晚，别硬撑。" },
+        { "from": "Watson Lake", "to": "Whitehorse", "km": "≈ 440", "time": "5 h", "note": "Alaska Highway；Watson Lake 有 Sign Post Forest。" },
+        { "from": "Whitehorse", "to": "Kluane", "km": "≈ 160", "time": "2 h", "note": "Haines Junction 方向；Kluane 是支线，往返再算。" },
+        { "from": "Whitehorse", "to": "Dawson City", "km": "≈ 530", "time": "6 h", "note": "Klondike Highway；Dawson 是进北极前最后一个大镇。" },
+        { "from": "Dawson City", "to": "Eagle Plains", "km": "≈ 410", "time": "7 h", "note": "40 km Klondike + Dempster 前段；Tombstone 在 Dempster 约 km 71。" },
+        { "from": "Eagle Plains", "to": "Inuvik", "km": "≈ 380", "time": "7 h", "note": "过北极圈标志、Peel River 与 Mackenzie River 两个渡口。" },
+        { "from": "Inuvik", "to": "Tuktoyaktuk", "km": "≈ 140", "time": "3 h", "note": "2017 年通车的全年碎石路，到北冰洋。" }
+      ],
+      "total": "单程约 4,000 km（温哥华 → Tuktoyaktuk）。Kluane 是支线，往返另加约 320 km。",
+      "stops": [
+        { "name": "Gitwangak Battle Hill", "note": "Kitwanga 附近的原住民山寨遗址（国家历史遗址），Hwy 16 边上，顺路停。" },
+        { "name": "K'san Historical Village", "note": "Hazelton 的 Gitxsan 文化村；你写的“ksan”应该是这里，待核。" },
+        { "name": "Watson Lake Sign Post Forest", "note": "上万块路牌钉成的“路牌森林”，育空必停点。" },
+        { "name": "Whitehorse", "note": "育空补给中心；有 Tim Hortons，进山前最后一次“正常城市”。" },
+        { "name": "Kluane 国家公园", "note": "Kathleen Lake 一带徒步 + 露营；Haines Junction 有游客中心。" },
+        { "name": "Dawson City", "note": "进北极前最后一个大镇：超市把蔬菜水果买够；The Drunken Goat 吃烤羊排、烤猪排。" },
+        { "name": "Tombstone Territorial Park", "note": "Dempster 约 km 71，徒步和秋色都值；营地要自己打水。" },
+        { "name": "Eagle Plains Hotel", "note": "Dempster 中段唯一的加油+住宿+餐厅，别错过。" },
+        { "name": "Arctic Circle 标志", "note": "Dempster 上跨北极圈，停车拍照；之后手机基本没信号。" },
+        { "name": "Tuktoyaktuk", "note": "路到头，北冰洋岸；不是“美洲大陆尽头”，别和乌斯怀亚搞混。" }
+      ],
+      "camp": [
+        "加拿大营地基本要预订：BC Parks、Yukon、NWT、Parks Canada 是不同系统，分别查。",
+        "Dempster 沿途营地水源有限：在 Dawson 或前一晚营地打满水，Eagle Plains 也能补。",
+        "营地多为旱厕 + 熊箱，食物和垃圾要收好；部分营地只收现金。",
+        "没有信号，出发前把营地位置和到达时间告诉住宿方或朋友。"
+      ],
+      "note": "本段是规划稿：路线与停留点来自你的笔记，里程为估算，未经官方核对；签证/租车/营地预订另算。"
     }
   },
   "stats": {
