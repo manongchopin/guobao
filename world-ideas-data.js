@@ -54,6 +54,23 @@ window.WORLD_IDEAS = {
       ],
       added: "2026-11-04",
       status: "seed"
+    },
+    {
+      id: "austria",
+      scope: "world",
+      title: "奥地利",
+      subtitle: "ÖSTERREICH · 目前只有萨尔茨堡",
+      country: "奥地利",
+      countryEn: "Österreich",
+      continent: "欧洲",
+      summary: "莫扎特的两处故居、一条能通到德国的盐矿坑道，还有下雪后安静下来的老城。目前只记了萨尔茨堡一个城市。",
+      page: "ideas-austria.html",
+      layout: "grid",
+      regions: [
+        { id: "salzburg", title: "萨尔茨堡", subtitle: "莫扎特与盐 · 一条坑道通到德国" }
+      ],
+      added: "2026-11-10",
+      status: "checked"
     }
   ],
 
@@ -357,6 +374,63 @@ window.WORLD_IDEAS = {
       place: "Mammoth Hot Springs, WY", title: "猛犸温泉", titleEn: "Mammoth Hot Springs",
       type: "其他", why: "层层叠叠的钙华台地，从北门进园最先遇到。",
       status: "seed", added: "2026-11-04", priority: 23
+    },
+
+    /* ---------- 奥地利 · 萨尔茨堡 ---------- */
+    {
+      id: "at-mozart-birthplace", destinationId: "austria", regionId: "salzburg",
+      scope: "world", country: "奥地利", province: "萨尔茨堡", city: "老城 · Getreidegasse",
+      place: "Getreidegasse 9, Salzburg", title: "莫扎特出生地", titleEn: "Mozarts Geburtshaus",
+      type: "博物馆", why: "莫扎特就生在这栋楼里，就在老城步行街上，顺路就能进。",
+      note: "2026 年每天 9:00–17:30（7–8 月 8:30–19:00），关门前 30 分钟停止入场；和故居的联票当地价 €23（5–6 月）/ €25（7–12 月）。",
+      sourceType: "friend", sourceTitle: "朋友的一段话",
+      status: "checked", added: "2026-11-10", priority: 1,
+      sources: [
+        { title: "Mozarteum · Mozarts Geburtshaus", url: "https://mozarteum.at/en/mozart-museums/mozarts-birthplace" },
+        { title: "ÖBB Plus · Mozart Museums（2026 开放时间与联票）", url: "https://www.oebb.at/en/tickets-kundenkarten/freizeit-urlaub/oebb-plus/salzburg/mozart-museen.html" }
+      ]
+    },
+    {
+      id: "at-mozart-residence", destinationId: "austria", regionId: "salzburg",
+      scope: "world", country: "奥地利", province: "萨尔茨堡", city: "Makartplatz",
+      place: "Makartplatz 8, Salzburg", title: "莫扎特故居", titleEn: "Mozart-Wohnhaus",
+      type: "博物馆", why: "和出生地一张联票，过河就到；院子里还有那座「魔笛小屋」。",
+      note: "和出生地同一张联票；个别日期会提前闭馆，行前查一眼官网。",
+      sourceType: "friend", sourceTitle: "朋友的一段话",
+      status: "checked", added: "2026-11-10", priority: 2,
+      sources: [
+        { title: "ÖBB Plus · Mozart Museums（两馆联票）", url: "https://www.oebb.at/en/tickets-kundenkarten/freizeit-urlaub/oebb-plus/salzburg/mozart-museen.html" }
+      ]
+    },
+    {
+      id: "at-salzburg-salt-mine", destinationId: "austria", regionId: "salzburg",
+      scope: "world", country: "奥地利", province: "萨尔茨堡", city: "巴德迪恩贝格 · 哈莱因",
+      place: "Ramsaustrasse 3, Bad Dürrnberg", title: "萨尔茨堡盐矿", titleEn: "Salzwelten Salzburg",
+      type: "其他", why: "坑道在地下越过奥地利边界，一直伸进德国巴伐利亚——这点你记对了，是盐矿不是煤矿。",
+      note: "萨尔茨堡以南约 18 km，坐缆车上山；游览约 90 分钟，含 400 m 矿车、两段 42 m 木滑梯、地下盐湖坐船。矿道跨国境这事有据：两国 1829 年为此签过使用协议。开放时间与票价待核。",
+      sourceType: "friend", sourceTitle: "朋友的一段话",
+      status: "checked", added: "2026-11-10", priority: 3,
+      sources: [
+        { title: "ERIH · Salzbergwerk Hallein（跨国境、1829 年协议、坑道设施）", url: "https://www.erih.de/da-will-ich-hin/site/salzbergwerk-hallein" }
+      ]
+    },
+    {
+      id: "at-salzburg-snow-night", destinationId: "austria", regionId: "salzburg",
+      scope: "world", country: "奥地利", province: "萨尔茨堡", city: "老城",
+      place: "Altstadt, Salzburg", title: "老城雪夜", titleEn: "Altstadt im Schnee",
+      type: "其他", why: "朋友说下大雪之后街上完全安静，暗黄路灯下，不浪漫的人也会想恋爱。",
+      note: "12–2 月下雪的晚上，老城 Getreidegasse、Residenzplatz 一带。这不是单一景点，只做街区级记录，不给精确坐标。",
+      sourceType: "friend", sourceTitle: "朋友的一段话",
+      status: "seed", added: "2026-11-10", priority: 4
+    },
+    {
+      id: "at-mozartkugel-workshop", destinationId: "austria", regionId: "salzburg",
+      scope: "world", country: "奥地利", province: "萨尔茨堡", city: "",
+      place: "Salzburg", title: "莫扎特巧克力工作坊", titleEn: "Mozartkugel-Workshop",
+      type: "美食", why: "白天可以去做莫扎特球，朋友说做成了还能领一张证书。",
+      note: "确实有这类手工课，但「发证书」这点没查到官方说明，看到的都是第三方售卖页。店家、价格、是否要预约、证书，全部待核。",
+      sourceType: "friend", sourceTitle: "朋友的一段话",
+      status: "seed", added: "2026-11-10", priority: 5
     }
   ]
 };

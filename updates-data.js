@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-10",
+    type: "页面",
+    title: "发散的全世界：萨尔茨堡 5 条",
+    note: "奥地利 · 莫扎特两馆 / 盐矿通德国 / 雪夜老城 / 巧克力",
+    href: "ideas-austria.html"
+  },
+  {
+    date: "2026-11-10",
     type: "计划",
     title: "马克思伦敦漫步：两天路线",
     note: "v0.3 · 11 个点 · 每天步行 4 公里",
