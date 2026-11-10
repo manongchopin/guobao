@@ -129,6 +129,33 @@
 .wp-stop-kind { font-size: 9px; letter-spacing: .06em; color: var(--ink-3); border: 1px solid var(--line); padding: 0 5px; }
 .wp-stop-note { margin: 3px 0 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
 
+/* 路线图（内联 SVG，无外部底图） */
+.wp-map-wrap { display: grid; grid-template-columns: minmax(0, 480px) minmax(0, 1fr); gap: 24px; align-items: start; margin-bottom: 10px; }
+.wp-map { border: 1px solid var(--line); background: var(--paper-2); }
+.wp-map-side { padding-top: 4px; }
+.wp-map-kicker { margin: 0 0 9px; font-size: 9px; letter-spacing: .14em; color: var(--red); }
+.wp-map-legend { list-style: none; margin: 0 0 16px; padding: 0; }
+.wp-map-legend li { display: flex; align-items: center; gap: 8px; font-size: 10.5px; line-height: 1.95; color: var(--ink-2); }
+.lg-dot, .lg-start { flex: none; width: 12px; height: 12px; border-radius: 50%; border: 1px solid var(--red); }
+.lg-start { background: var(--red); }
+.lg-line { flex: none; width: 22px; height: 0; border-top: 2px solid var(--red); }
+.lg-lake { flex: none; width: 14px; height: 12px; background: #e9eee6; border: 1px solid #d5ddd3; }
+.wp-map-fact { margin: 0 0 5px; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
+@media (max-width: 860px) { .wp-map-wrap { grid-template-columns: 1fr; gap: 14px; } }
+.wp-map-svg { display: block; width: 100%; height: auto; }
+.wp-map-lake { fill: #e9eee6; stroke: #d5ddd3; stroke-width: 1; }
+.wp-map-route { fill: none; stroke: var(--red); stroke-width: 2.2; stroke-linejoin: round; opacity: .9; }
+.wp-map-arrow { fill: var(--red); opacity: .9; }
+.wp-map-stop circle { fill: var(--paper-2); stroke: var(--red); stroke-width: 1.2; }
+.wp-map-stop text { font-family: var(--mono); font-size: 10px; fill: var(--red); }
+.wp-map-stop.is-start circle { fill: var(--red); }
+.wp-map-stop.is-start text { fill: #fdf8ef; }
+.wp-map-lakename { font-family: var(--serif); font-size: 22px; letter-spacing: .4em; fill: #97a698; text-anchor: middle; }
+.wp-map-north path { fill: var(--ink-3); }
+.wp-map-north text { font-family: var(--sans); font-size: 10px; fill: var(--ink-3); }
+.wp-map-scale line { stroke: var(--ink-3); stroke-width: 1; }
+.wp-map-scale text { font-family: var(--sans); font-size: 9px; fill: var(--ink-3); }
+
 @media (max-width: 860px) {
   .wp-route { grid-template-columns: 1fr; }
   .wp-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }

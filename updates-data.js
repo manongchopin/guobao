@@ -17,7 +17,7 @@ window.SITE_UPDATES = [
     date: "2026-11-10",
     type: "页面",
     title: "发散的全世界：大理洱海环湖 18 站",
-    note: "云南 · 顺时针一条线 · 分段编号 · 两个地名已校正",
+    note: "云南 · 顺时针一条线 · 路线图 + 分段编号 · 地名已校正",
     href: "ideas-yunnan.html"
   },
   {

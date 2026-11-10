@@ -299,8 +299,132 @@
     }
   }
 
+  /* 路线图：用条目自带的经纬度在页面内画 SVG，不依赖外部底图 */
+
+  function routeStops() {
+    var out = [];
+    if (!route) return out;
+    route.segments.forEach(function (seg) {
+      (seg.stops || []).forEach(function (st) { out.push(st); });
+    });
+    return out;
+  }
+
+  function svgEl(tag, attrs) {
+    var el = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    Object.keys(attrs || {}).forEach(function (k) { el.setAttribute(k, attrs[k]); });
+    return el;
+  }
+
+  function renderMap() {
+    var host = document.getElementById("wp-map");
+    if (!host || !route) return;
+
+    var stops = routeStops();
+    var pts = stops.filter(function (s) {
+      return typeof s.lat === "number" && typeof s.lon === "number";
+    });
+    if (pts.length < 3) return;
+
+    var H = 760, padX = 88, padY = 44, Wmax = 560;
+    var lats = pts.map(function (p) { return p.lat; });
+    var lons = pts.map(function (p) { return p.lon; });
+    var minLat = Math.min.apply(null, lats), maxLat = Math.max.apply(null, lats);
+    var minLon = Math.min.apply(null, lons), maxLon = Math.max.apply(null, lons);
+    var midLat = (minLat + maxLat) / 2;
+    var kx = Math.cos(midLat * Math.PI / 180);
+
+    var spanX = (maxLon - minLon) * kx || 0.0001;
+    var spanY = (maxLat - minLat) || 0.0001;
+    var scale = Math.min((Wmax - padX * 2) / spanX, (H - padY * 2) / spanY);
+    var W = Math.round(spanX * scale + padX * 2);
+    var cx = (minLon + maxLon) / 2, cy = midLat;
+
+    function xy(p) {
+      return [
+        W / 2 + (p.lon - cx) * kx * scale,
+        H / 2 - (p.lat - cy) * scale
+      ];
+    }
+
+    var svg = svgEl("svg", {
+      viewBox: "0 0 " + W + " " + H,
+      role: "img",
+      "aria-label": "洱海环湖路线示意图，共 " + pts.length + " 个定位点"
+    });
+    svg.setAttribute("class", "wp-map-svg");
+
+    var ring = pts.map(function (p) {
+      var c = xy(p);
+      return c[0].toFixed(1) + "," + c[1].toFixed(1);
+    }).join(" ");
+
+    /* 环线围合出的近似湖面 */
+    svg.appendChild(svgEl("polygon", { points: ring, class: "wp-map-lake" }));
+
+    /* 顺时针方向箭头：在几段上各放一个小三角 */
+    [2, 6, 10, 14].forEach(function (i) {
+      var a = xy(pts[i]), b = xy(pts[(i + 1) % pts.length]);
+      var mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2;
+      var ang = Math.atan2(b[1] - a[1], b[0] - a[0]) * 180 / Math.PI;
+      svg.appendChild(svgEl("path", {
+        d: "M -6 -5 L 6 0 L -6 5 Z",
+        class: "wp-map-arrow",
+        transform: "translate(" + mx.toFixed(1) + "," + my.toFixed(1) + ") rotate(" + ang.toFixed(1) + ")"
+      }));
+    });
+
+    svg.appendChild(svgEl("polyline", { points: ring + " " + ring.split(" ")[0], class: "wp-map-route" }));
+
+    /* 湖名 */
+    var center = xy({ lat: midLat, lon: (minLon + maxLon) / 2 });
+    var lakeName = svgEl("text", { x: center[0], y: center[1] + 6, class: "wp-map-lakename" });
+    lakeName.textContent = "洱 海";
+    svg.appendChild(lakeName);
+
+    pts.forEach(function (s) {
+      var idx = stops.indexOf(s) + 1;
+      var c = xy(s);
+      var g = svgEl("g", { class: "wp-map-stop" + (idx === 1 ? " is-start" : "") });
+      g.appendChild(svgEl("circle", { cx: c[0], cy: c[1], r: 10.5 }));
+      var t = svgEl("text", { x: c[0], y: c[1] + 3.2, "text-anchor": "middle" });
+      t.textContent = String(idx);
+      g.appendChild(t);
+      var title = svgEl("title");
+      title.textContent = idx + " " + s.name + (s.kind ? " · " + s.kind : "");
+      g.appendChild(title);
+      svg.appendChild(g);
+    });
+
+    /* 北箭头 */
+    var n = svgEl("g", { class: "wp-map-north", transform: "translate(" + (W - 34) + ",40)" });
+    n.appendChild(svgEl("path", { d: "M0,-16 L7,8 L0,2 L-7,8 Z" }));
+    var nt = svgEl("text", { x: 0, y: 24, "text-anchor": "middle" });
+    nt.textContent = "N";
+    n.appendChild(nt);
+    svg.appendChild(n);
+
+    /* 比例尺：按纬度换算，1° ≈ 111 km */
+    var kmPerPx = 111 / scale;
+    var barKm = 10;
+    var barPx = barKm / kmPerPx;
+    var sx = 46, sy = H - 34;
+    var sb = svgEl("g", { class: "wp-map-scale" });
+    sb.appendChild(svgEl("line", { x1: sx, y1: sy, x2: sx + barPx, y2: sy }));
+    sb.appendChild(svgEl("line", { x1: sx, y1: sy - 5, x2: sx, y2: sy + 5 }));
+    sb.appendChild(svgEl("line", { x1: sx + barPx, y1: sy - 5, x2: sx + barPx, y2: sy + 5 }));
+    var st = svgEl("text", { x: sx + barPx / 2, y: sy - 9, "text-anchor": "middle" });
+    st.textContent = barKm + " km（≈）";
+    sb.appendChild(st);
+    svg.appendChild(sb);
+
+    host.textContent = "";
+    host.appendChild(svg);
+  }
+
   renderStats();
   renderStones();
   renderSources();
   renderMeta();
+  renderMap();
 })();
