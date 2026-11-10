@@ -28,6 +28,16 @@
 
 #tahiti .th-intro { margin: 0; font-size: 12px; line-height: 1.9; color: var(--ink-2); }
 
+#tahiti .th-ref {
+  margin: 14px 0 0;
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 10px;
+  line-height: 1.85;
+  color: var(--ink-3);
+}
+
 /* ---------- 通用小标题 ---------- */
 
 .th-kicker {
@@ -94,6 +104,7 @@
 .th-dot--town { background: var(--green); }
 .th-dot--hub { background: var(--ink); }
 .th-dot--sport { background: var(--amber); }
+.th-dot--hist { background: #8a6338; }
 .th-line { width: 18px; height: 0; border-top: 2px dashed #8a6338; display: inline-block; }
 
 #tahiti .th-map-note { margin: 6px 0 0; font-size: 9px; line-height: 1.6; color: var(--ink-3); }
@@ -164,6 +175,30 @@
 }
 #tahiti .th-point p { margin: 0; font-size: 10px; line-height: 1.7; color: var(--ink-3); }
 .th-point b { display: block; font-family: var(--serif); font-size: 13.5px; font-weight: 600; line-height: 1.5; color: var(--ink); }
+
+.th-src {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 4px;
+  border: 1px solid var(--line);
+  font-family: var(--sans);
+  font-size: 7.5px;
+  font-weight: 400;
+  letter-spacing: .03em;
+  color: var(--ink-3);
+  vertical-align: 2px;
+  white-space: nowrap;
+}
+
+#tahiti .th-leg-caveat {
+  margin: 10px 0 0;
+  padding: 8px 12px;
+  border-left: 2px solid var(--line);
+  background: var(--paper-2);
+  font-size: 9.5px;
+  line-height: 1.8;
+  color: var(--ink-3);
+}
 
 /* ---------- 世界遗产 ---------- */
 
@@ -263,6 +298,16 @@
 .th-pearl-row b { font-size: 10px; font-weight: 600; color: var(--red); line-height: 1.8; }
 .th-pearl-row p { margin: 0; font-size: 10px; line-height: 1.8; color: var(--ink-2); }
 
+/* ---------- 行前读物 ---------- */
+
+.th-books { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+.th-book { border-top: 1px solid var(--line-soft); padding: 9px 0 11px; }
+.th-book-leg { display: inline-block; font-size: 7.5px; letter-spacing: .06em; color: var(--red); }
+.th-book h3 { margin: 2px 0 0; font-family: var(--serif); font-size: 14.5px; font-weight: 600; line-height: 1.45; }
+#tahiti .th-book-a { margin: 1px 0 4px; font-size: 8.5px; line-height: 1.5; color: var(--ink-3); }
+#tahiti .th-book p { margin: 0; font-size: 10px; line-height: 1.75; color: var(--ink-2); }
+#tahiti .th-books-note { margin: 12px 0 0; font-size: 9px; line-height: 1.7; color: var(--ink-3); }
+
 /* ---------- 待核与来源 ---------- */
 
 .th-todo { margin: 0 0 18px; padding-left: 18px; }
@@ -298,6 +343,7 @@
 @media (max-width: 900px) {
   .th-maps { grid-template-columns: 1fr; }
   .th-wh-grid, .th-days { grid-template-columns: 1fr; }
+  .th-books { grid-template-columns: 1fr; }
   .th-leg-meta { grid-template-columns: 1fr; }
   .th-leg-meta div { border-right: 0; border-bottom: 1px solid var(--line-soft); padding: 6px 0; }
   .th-leg-meta div:last-child { border-bottom: 0; }

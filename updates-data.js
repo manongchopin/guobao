@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-10",
+    type: "计划",
+    title: "大溪地补入现场参考",
+    note: "v0.3 · 馆藏/库克点/马克萨斯神话/书单",
+    href: "tahiti.html"
+  },
+  {
+    date: "2026-11-10",
     type: "足迹",
     title: "新增一段飞行：台北—上海",
     note: "MU5008 · 2026-11",

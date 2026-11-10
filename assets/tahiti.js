@@ -20,15 +20,18 @@
   }
 
   var calloutEl = document.getElementById("th-callout");
-  if (calloutEl && D.callout) calloutEl.innerHTML = "<b>这是 v0.2：</b>" + esc(D.callout);
+  if (calloutEl && D.callout) calloutEl.innerHTML = "<b>这是 v" + esc(D.version) + "：</b>" + esc(D.callout);
 
   var introEl = document.getElementById("th-intro");
   if (introEl && D.intro) introEl.textContent = D.intro;
 
+  var refEl = document.getElementById("th-ref");
+  if (refEl && D.ref) refEl.textContent = D.ref;
+
   /* ---------- 总图 ---------- */
 
-  var KIND = { wh: "#a8402f", town: "#2f5d50", hub: "#1d2622", sport: "#b0812c", resort: "#557486" };
-  var GLYPH = { wh: "遗", town: "镇", hub: "机", sport: "浪", resort: "宿" };
+  var KIND = { wh: "#a8402f", town: "#2f5d50", hub: "#1d2622", sport: "#b0812c", resort: "#557486", hist: "#8a6338" };
+  var GLYPH = { wh: "遗", town: "镇", hub: "机", sport: "浪", resort: "宿", hist: "史" };
 
   function pin(color, glyph) {
     return L.divIcon({
@@ -97,7 +100,9 @@
       var points = (l.points || []).map(function (p) {
         return '<div class="th-point">' +
           '<span class="th-point-t">' + esc(p.t) + "</span>" +
-          "<div><b>" + esc(p.name) + "</b><p>" + esc(p.note) + "</p></div>" +
+          "<div><b>" + esc(p.name) +
+          (p.src ? '<span class="th-src">' + esc(p.src) + "</span>" : "") +
+          "</b><p>" + esc(p.note) + "</p></div>" +
           "</div>";
       }).join("");
       return '<article class="th-leg">' +
@@ -112,6 +117,7 @@
         "<div><span>住 / 车</span><p>" + esc(l.stay) + "<br>" + esc(l.drive) + "</p></div>" +
         "</div>" +
         '<div class="th-points">' + points + "</div>" +
+        (l.caveat ? '<p class="th-leg-caveat">' + esc(l.caveat) + "</p>" : "") +
         "</article>";
     }).join("");
   }
@@ -176,7 +182,24 @@
       '<p style="margin:0 0 10px;font-size:11.5px;line-height:1.9;color:var(--ink-2)">' + esc(D.pearl.lede) + "</p>" + rows;
   }
 
+  /* ---------- 行前读物 ---------- */
+
+  var booksEl = document.getElementById("th-books");
+  if (booksEl && D.books) {
+    booksEl.innerHTML = D.books.map(function (b) {
+      return '<article class="th-book">' +
+        '<span class="th-book-leg">' + esc(b.leg) + "</span>" +
+        "<h3>" + esc(b.t) + "</h3>" +
+        '<p class="th-book-a">' + esc(b.a) + "</p>" +
+        "<p>" + esc(b.why) + "</p>" +
+        "</article>";
+    }).join("");
+  }
+
   /* ---------- 待核与来源 ---------- */
+
+  var todoN = document.getElementById("th-todo-n");
+  if (todoN) todoN.textContent = String(D.todos.length);
 
   var todoEl = document.getElementById("th-todo");
   if (todoEl) {
