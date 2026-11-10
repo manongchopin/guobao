@@ -71,6 +71,22 @@ window.WORLD_IDEAS = {
       ],
       added: "2026-11-10",
       status: "checked"
+    },
+    {
+      id: "yunnan",
+      scope: "cn",
+      title: "云南",
+      subtitle: "YUNNAN · 目前只有大理",
+      country: "中国",
+      province: "云南",
+      summary: "朋友给的一条洱海环湖路线：住大理古城，从古城出发顺时针绕一圈，18 个点，一天走完。",
+      page: "ideas-yunnan.html",
+      layout: "route",
+      regions: [
+        { id: "dali", title: "大理", subtitle: "DALI · 洱海环湖" }
+      ],
+      added: "2026-11-10",
+      status: "seed"
     }
   ],
 
@@ -431,6 +447,64 @@ window.WORLD_IDEAS = {
       note: "确实有这类手工课，但「发证书」这点没查到官方说明，看到的都是第三方售卖页。店家、价格、是否要预约、证书，全部待核。",
       sourceType: "friend", sourceTitle: "朋友的一段话",
       status: "seed", added: "2026-11-10", priority: 5
+    },
+
+    /* ---------- 云南 · 大理 ---------- */
+    {
+      id: "yn-erhai-loop", destinationId: "yunnan", regionId: "dali",
+      scope: "cn", country: "中国", province: "云南", city: "大理",
+      place: "洱海环湖", title: "洱海环湖 · 顺时针", titleEn: "Erhai Loop",
+      type: "自驾", why: "朋友给的一条现成路线：住大理古城，从古城出发顺时针绕一圈，顺序不用自己排。",
+      note: "一圈约 130 km（待核）。18 个点分四段；「环海路」「滨海大道」是路段，并进段落说明，不单独编号。原文建议住古城、以古城为起点；一天走完要早出发。",
+      sourceType: "friend", sourceTitle: "朋友的一段话",
+      status: "seed", added: "2026-11-10", priority: 1,
+      km: 130,
+      route: {
+        direction: "顺时针",
+        base: "大理古城",
+        distanceKm: 130,
+        days: 1,
+        segments: [
+          {
+            id: "west", title: "第 1 段 · 西岸", note: "古城出发，沿西岸一路向北",
+            stops: [
+              { name: "大理古城", kind: "起点 · 住宿", note: "原文建议住这里" },
+              { name: "才村", kind: "湖滨" },
+              { name: "喜洲古镇", kind: "古镇" },
+              { name: "海舌公园", kind: "湿地", note: "原文写作「海舍公园」，已校正" },
+              { name: "周城", kind: "村寨 · 扎染" },
+              { name: "蝴蝶泉", kind: "景点" },
+              { name: "桃源码头", kind: "码头", note: "原文写作「桃园码头」，已校正" },
+              { name: "上关镇", kind: "镇" }
+            ]
+          },
+          {
+            id: "north", title: "第 2 段 · 北岸", note: "过江尾，走环海路到双廊",
+            stops: [
+              { name: "江尾", kind: "村" },
+              { name: "双廊", kind: "古镇" },
+              { name: "南诏风情岛", kind: "岛" }
+            ]
+          },
+          {
+            id: "east", title: "第 3 段 · 东岸", note: "沿东岸南下，经挖色到海东",
+            stops: [
+              { name: "挖色", kind: "镇" },
+              { name: "小普陀", kind: "岛" },
+              { name: "海东", kind: "镇" },
+              { name: "天镜阁", kind: "景点" },
+              { name: "银梭岛", kind: "岛", note: "位置待核" }
+            ]
+          },
+          {
+            id: "south", title: "第 4 段 · 南岸", note: "走滨海大道，回到古城",
+            stops: [
+              { name: "海心亭", kind: "湖滨" },
+              { name: "洱海月湿地公园", kind: "湿地" }
+            ]
+          }
+        ]
+      }
     }
   ]
 };

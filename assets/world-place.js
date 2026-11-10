@@ -15,7 +15,12 @@
   var ideas = (D.ideas || []).filter(function (i) { return i.destinationId === destId; });
 
   var STATUS = { seed: "种子", checked: "查过", want: "想去", executable: "可执行" };
-  var layout = (dest && dest.layout === "grid") ? "grid" : "sections";
+  var layout = "sections";
+  if (dest && dest.layout === "grid") layout = "grid";
+  if (dest && dest.layout === "route") layout = "route";
+
+  var route = null;
+  ideas.forEach(function (i) { if (i.route && i.route.segments) route = i.route; });
 
   function node(tag, cls, text) {
     var el = document.createElement(tag);
@@ -45,6 +50,15 @@
       var set = {};
       ideas.forEach(function (i) { if (i.province) set[i.province] = 1; });
       s.textContent = Object.keys(set).length;
+    }
+
+    var stopsEl = document.getElementById("wp-stops");
+    var segsEl = document.getElementById("wp-segments");
+    if (route && (stopsEl || segsEl)) {
+      var total = 0;
+      route.segments.forEach(function (seg) { total += (seg.stops || []).length; });
+      if (stopsEl) stopsEl.textContent = total;
+      if (segsEl) segsEl.textContent = route.segments.length;
     }
   }
 
@@ -110,6 +124,58 @@
     if (rest.length) root.appendChild(regionBlock("其他", "还没归入区域", rest));
   }
 
+  /* 路线模式：按段落列有序点位 */
+
+  function statChip(text, cls) {
+    var el = node("span", cls || "", text);
+    return el;
+  }
+
+  function renderRoute() {
+    if (!route) {
+      var none = node("div", "wp-callout");
+      none.appendChild(node("b", "", "这一页还没有路线数据。"));
+      root.appendChild(none);
+      return;
+    }
+
+    var meta = node("div", "wp-route-meta");
+    if (route.direction) meta.appendChild(statChip(route.direction, "wp-route-dir"));
+    if (route.base) meta.appendChild(statChip("起点 " + route.base));
+    if (route.distanceKm) meta.appendChild(statChip("一圈约 " + route.distanceKm + " km（待核）"));
+    if (route.days) meta.appendChild(statChip(route.days + " 天"));
+    root.appendChild(meta);
+
+    var n = 0;
+    route.segments.forEach(function (seg) {
+      var sec = node("section", "wp-seg");
+      var head = node("div", "wp-seg-head");
+      head.appendChild(node("h3", "", seg.title || ""));
+      head.appendChild(node("span", "", (seg.stops || []).length + " 站"));
+      sec.appendChild(head);
+      if (seg.note) sec.appendChild(node("p", "wp-seg-note", seg.note));
+
+      var ol = node("ol", "wp-stops");
+      (seg.stops || []).forEach(function (stop) {
+        n++;
+        var li = node("li", "wp-stop");
+        li.appendChild(node("span", "wp-stop-no", String(n).padStart(2, "0")));
+
+        var body = node("div", "wp-stop-body");
+        var line = node("p", "wp-stop-line");
+        line.appendChild(node("b", "", stop.name || ""));
+        if (stop.kind) line.appendChild(node("span", "wp-stop-kind", stop.kind));
+        body.appendChild(line);
+        if (stop.note) body.appendChild(node("p", "wp-stop-note", stop.note));
+        li.appendChild(body);
+
+        ol.appendChild(li);
+      });
+      sec.appendChild(ol);
+      root.appendChild(sec);
+    });
+  }
+
   function renderStones() {
     if (!ideas.length) {
       var empty = node("div", "wp-callout");
@@ -120,6 +186,7 @@
     }
 
     if (layout === "grid") { renderGrid(); return; }
+    if (layout === "route") { renderRoute(); return; }
 
     ideas.slice().sort(function (a, b) { return (a.priority || 0) - (b.priority || 0); }).forEach(function (idea, idx) {
       var art = node("article", "wp-stone");

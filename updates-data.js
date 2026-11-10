@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-10",
+    type: "页面",
+    title: "发散的全世界：大理洱海环湖 18 站",
+    note: "云南 · 顺时针一条线 · 分段编号 · 两个地名已校正",
+    href: "ideas-yunnan.html"
+  },
+  {
+    date: "2026-11-10",
     type: "计划",
     title: "大溪地本岛拆两天，加 Raiatea 环岛",
     note: "v0.6 · 71 + 83 公里 / 97 公里环线",
