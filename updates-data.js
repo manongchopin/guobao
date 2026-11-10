@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-10",
     type: "计划",
+    title: "泛美公路：Dempster Highway 专段",
+    note: "Dawson City → Tuktoyaktuk · 880 km 分段走法 · 渡口与补给 · 冰路已成历史",
+    href: "panamerican.html"
+  },
+  {
+    date: "2026-11-10",
+    type: "计划",
     title: "泛美公路：改成「公路 + 样本」两层",
     note: "新增概览与北段占位（Dalton / Dempster / Alaska Hwy）· 原内容改为样本 #1 · 北段待补",
     href: "panamerican.html"

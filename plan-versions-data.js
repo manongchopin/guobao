@@ -225,10 +225,10 @@ window.PLAN_VERSIONS = {
     },
     "panamerican": {
       "title": "泛美公路自驾",
-      "version": "0.5",
-      "status": "结构改造 · 公路本体 + 旅行样本",
+      "version": "0.6",
+      "status": "结构改造 · 北段整理中",
       "date": "2026-11-10",
-      "note": "拆成公路本体与样本 #1；新增概览与北段（Dalton / Dempster / Alaska Hwy）占位，北段待补",
+      "note": "拆成公路本体与样本 #1；Dempster 专段（880 km 走法、补给、渡口、季节），Dalton / Alaska Hwy 仍待补",
       "history": [
         {
           "v": "0.1",
@@ -254,6 +254,11 @@ window.PLAN_VERSIONS = {
           "v": "0.5",
           "date": "2026-11-10",
           "note": "结构改造：公路概览、北段（Dalton / Dempster / Alaska Highway）占位，现有内容改为样本 #1；地图只画已核实路段"
+        },
+        {
+          "v": "0.6",
+          "date": "2026-11-10",
+          "note": "Dempster 专段：Dawson City → Tuktoyaktuk 分段里程、渡口、补给、季节与注意事项；说明 2017 年前后冰路与全年公路的区别"
         }
       ]
     },

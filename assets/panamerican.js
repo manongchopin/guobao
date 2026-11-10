@@ -112,6 +112,37 @@
     }).join("");
   }
 
+  if (D.north && D.north.dempster) {
+    var DM = D.north.dempster;
+    function setText(id, v) { var el = document.getElementById(id); if (el) el.textContent = v || ""; }
+    setText("pa-dempster-lead", DM.lead);
+    setText("pa-dempster-total", DM.total);
+    setText("pa-dempster-note", DM.note);
+    setText("pa-dempster-mapnote", DM.mapNote);
+    var legsEl = document.getElementById("pa-dempster-legs");
+    if (legsEl) legsEl.innerHTML = (DM.legs || []).map(function (l) {
+      return '<tr><td><b>' + esc(l.from) + '</b> → ' + esc(l.to) + '</td><td>' + esc(l.km) + '</td><td>' + esc(l.time) + '</td><td>' + esc(l.note) + '</td></tr>';
+    }).join("");
+    var dFacts = document.getElementById("pa-dempster-facts");
+    if (dFacts) dFacts.innerHTML = (DM.facilities || []).map(function (t) { return '<li>' + esc(t) + '</li>'; }).join("");
+    var dCaut = document.getElementById("pa-dempster-cautions");
+    if (dCaut) dCaut.innerHTML = (DM.cautions || []).map(function (t) { return '<li>' + esc(t) + '</li>'; }).join("");
+    var dEl = document.getElementById("pa-dempster-map");
+    if (dEl && window.L && DM.points && DM.points.length) {
+      var dm = L.map(dEl, { scrollWheelZoom: false }).setView([DM.points[0].lat, DM.points[0].lng], 5);
+      if (typeof GB_BASEMAP === "function") GB_BASEMAP(dm);
+      else L.tileLayer("https://tile.openstreetmap.de/{z}/{x}/{y}.png", { maxZoom: 17 }).addTo(dm);
+      var dPts = DM.points.map(function (p) { return [p.lat, p.lng]; });
+      L.polyline(dPts, { color: "#8f3f31", weight: 3, opacity: .9, lineCap: "round" }).addTo(dm);
+      DM.points.forEach(function (p) {
+        L.circleMarker([p.lat, p.lng], { radius: 5, color: "#fff", weight: 1.5, fillColor: "#8f3f31", fillOpacity: 1 })
+          .addTo(dm).bindTooltip(p.name);
+      });
+      dm.fitBounds(L.latLngBounds(dPts), { padding: [24, 24] });
+      maps.push(dm);
+    }
+  }
+
   document.getElementById("pa-stages").innerHTML = D.stages.map(function (s) {
     return '<div class="pa-stage"><div class="pa-stage-top"><span>' + esc(s.days) + '</span><b>' + esc(s.km) + '</b></div><h3>' + esc(s.name) + '</h3><p>' + esc(s.text) + '</p></div>';
   }).join("");

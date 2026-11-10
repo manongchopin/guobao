@@ -30,8 +30,8 @@ window.PANAMERICAN = {
         "name": "Dempster Highway",
         "where": "加拿大 · 育空 / 西北地区",
         "route": "Dawson City（Dempster Corner）→ Eagle Plains → Inuvik → Tuktoyaktuk",
-        "status": "待补",
-        "note": "2017 年延伸段通到北冰洋；轮渡与桥梁、加油点、冬季通行、租车限制待核。"
+        "status": "已整理",
+        "note": "约 880 km 碎石路到北冰洋（从 Dempster Corner 起算）；2017 年后 Inuvik → Tuktoyaktuk 已是全年公路。详见下面专段。"
       },
       {
         "id": "alcan",
@@ -41,7 +41,48 @@ window.PANAMERICAN = {
         "status": "待补",
         "note": "把北段接回美国本土的主干；沿途里程、住宿与季节限制待补。"
       }
-    ]
+    ],
+    "dempster": {
+      "title": "Dempster Highway：从 Klondike 公路到北冰洋",
+      "lead": "两张参考图正好是这条路的前后两个时代：一张把 Inuvik → Tuktoyaktuk 画成虚线冰路，那是 2017 年以前；现在这段已经是全年通行的碎石公路。所以下面的走法按“全年可走”写，冬季另有冰路玩法。",
+      "mapNote": "Dempster Highway · 示意（坐标近似）",
+      "points": [
+        { "name": "Dawson City", "lat": 64.06, "lng": -139.433 },
+        { "name": "Dempster Corner", "lat": 64.1, "lng": -139.55 },
+        { "name": "Eagle Plains", "lat": 66.372, "lng": -136.725 },
+        { "name": "Fort McPherson", "lat": 67.438, "lng": -134.885 },
+        { "name": "Inuvik", "lat": 68.361, "lng": -133.723 },
+        { "name": "Tuktoyaktuk", "lat": 69.445, "lng": -133.03 }
+      ],
+      "legs": [
+        { "from": "Dawson City", "to": "Dempster Corner", "km": "≈ 40", "time": "0.5 h", "note": "Klondike Highway，柏油；这里加满油再进。" },
+        { "from": "Dempster Corner", "to": "Eagle Plains", "km": "≈ 370", "time": "6–7 h", "note": "全程碎石；中途过北极圈标志（里程待核）。Eagle Plains 有油、住宿、餐厅。" },
+        { "from": "Eagle Plains", "to": "Fort McPherson", "km": "≈ 180", "time": "3–4 h", "note": "Peel River 渡口（夏季轮渡、冬季冰桥）；Fort McPherson 有油，营业时间有限。" },
+        { "from": "Fort McPherson", "to": "Inuvik", "km": "≈ 200", "time": "3–4 h", "note": "Mackenzie River 渡口（Tsiigehtchic 附近）；Inuvik 有油、住宿、机场。" },
+        { "from": "Inuvik", "to": "Tuktoyaktuk", "km": "≈ 140", "time": "2.5–3 h", "note": "2017 年通车的全年碎石路，尽头是北冰洋。" }
+      ],
+      "total": "从 Dempster Corner 起算约 880 km，与参考图一致；从 Dawson City 起算约 920 km。单程建议留 3 天，回程 2 天。",
+      "facilities": [
+        "加油：Dawson City、Eagle Plains、Fort McPherson、Inuvik；Eagle Plains 到 Fort McPherson 之间没有油（待核）。",
+        "住宿：Eagle Plains、Fort McPherson、Inuvik、Tuktoyaktuk，旺季要提前订。",
+        "渡口：Peel River、Mackenzie River；夏季轮渡、冬季冰桥，春融和秋冻会停渡（时间待核）。",
+        "路况：出发前查 NWT 511 / Yukon 511；手机信号大部分路段没有。"
+      ],
+      "cautions": [
+        "碎石路会车：放慢、靠右、拉开车距，前车石子容易打裂挡风玻璃。",
+        "建议两条备胎 + 补胎工具；油量按“下一站再加”倒推，别赌。",
+        "多数租车公司禁止把车开上碎石路，出发前确认条款（待核）。",
+        "野生动物（驼鹿、熊）和油罐车都要让；弯道不要停车拍照。",
+        "天气说变就变，任何季节都可能遇到低温或降雪；把行程告诉住宿方。",
+        "蚊虫极多，停下休息和露营都要防蚊。"
+      ],
+      "note": "里程、设施与季节来自公开资料的常见说法，本次未能逐条核对官方页面；出发前以 NWT / Yukon 官方路况与租车条款为准。",
+      "sources": [
+        { "name": "NWT Infrastructure：Inuvik Tuktoyaktuk Highway", "url": "https://www.inf.gov.nt.ca/en/ITH" },
+        { "name": "Spectacular NWT：Dempster Highway to the Arctic Ocean", "url": "https://spectacularnwt.com/what-to-do/road-trips/dempster-highway-to-the-arctic-ocean/" },
+        { "name": "CBC：New Arctic coast highway opens up remote Tuktoyaktuk（2017）", "url": "https://www.cbc.ca/lite/story/1.4363029" }
+      ]
+    }
   },
   "stats": {
     "days": 165,

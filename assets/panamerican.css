@@ -103,3 +103,14 @@
 @media (max-width: 760px) {
   .pa-overview, .pa-north { grid-template-columns: 1fr; }
 }
+
+.pa-map-north { height: 440px; }
+.pa-mini-h { margin: 16px 0 5px; font-family: var(--serif); font-size: 16px; font-weight: 600; }
+.pa-legs { width: 100%; border-collapse: collapse; font-size: 10px; line-height: 1.6; }
+.pa-legs th { text-align: left; font-family: var(--sans); font-size: 8px; letter-spacing: .06em; color: var(--ink-3); border-bottom: 1px solid var(--ink); padding: 5px 6px; font-weight: 400; }
+.pa-legs td { border-bottom: 1px solid var(--line); padding: 6px; vertical-align: top; color: var(--ink-2); }
+.pa-legs td b { color: var(--ink); font-weight: 600; }
+.pa-dempster-two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.pa-facts { margin: 0; padding-left: 16px; }
+.pa-facts li { font-size: 9.5px; line-height: 1.65; color: var(--ink-3); margin: 3px 0; }
+@media (max-width: 760px) { .pa-dempster-two { grid-template-columns: 1fr; } .pa-map-north { height: 360px; } }
