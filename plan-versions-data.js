@@ -225,10 +225,10 @@ window.PLAN_VERSIONS = {
     },
     "panamerican": {
       "title": "泛美公路自驾",
-      "version": "0.7",
+      "version": "0.8",
       "status": "结构改造 · 北段整理中",
       "date": "2026-11-10",
-      "note": "Dempster 专段；新增温哥华 → 北冰洋路线（规划稿：BC 北部—育空—Dawson—Dempster），Dalton / Alaska Hwy 仍待补",
+      "note": "Dempster 专段；温哥华 → 北冰洋路线；新增自制「2017 前冰路 / 后全年公路」对照图",
       "history": [
         {
           "v": "0.1",
@@ -264,6 +264,11 @@ window.PLAN_VERSIONS = {
           "v": "0.7",
           "date": "2026-11-10",
           "note": "温哥华 → 北冰洋路线：Prince George / K'san / Gitwangak / Watson Lake / Whitehorse / Kluane / Dawson / Dempster；营地与水源、停留点"
+        },
+        {
+          "v": "0.8",
+          "date": "2026-11-10",
+          "note": "自制两代对照图：2017 年前 Inuvik → Tuktoyaktuk 为冬季冰路，2017 年后为全年碎石路；不转载参考图"
         }
       ]
     },

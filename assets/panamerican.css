@@ -120,3 +120,10 @@
 .pa-stop h4 { margin: 0 0 2px; font-family: var(--serif); font-size: 13px; font-weight: 600; }
 .pa-stop p { margin: 0; font-size: 8.5px; line-height: 1.55; color: var(--ink-3); }
 @media (max-width: 760px) { .pa-stops { grid-template-columns: 1fr; } }
+
+.pa-era { margin: 12px 0 6px; }
+.pa-era-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.pa-era figure { margin: 0; border: 1px solid var(--line); background: var(--paper); padding: 8px; }
+.pa-era img { display: block; width: 100%; height: auto; }
+.pa-era figcaption { margin-top: 6px; font-size: 9.5px; line-height: 1.6; color: var(--ink-3); }
+@media (max-width: 760px) { .pa-era-grid { grid-template-columns: 1fr; } }

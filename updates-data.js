@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-10",
     type: "计划",
+    title: "泛美公路：Dempster 两代对照图",
+    note: "自制示意图 · 2017 年前冰路 vs 2017 年后全年公路 · 不转载参考图",
+    href: "panamerican.html"
+  },
+  {
+    date: "2026-11-10",
+    type: "计划",
     title: "泛美公路：温哥华 → 北冰洋路线",
     note: "Prince George · K'san / Gitwangak · Watson Lake · Whitehorse · Kluane · Dawson · Dempster · 营地与水源",
     href: "panamerican.html"
