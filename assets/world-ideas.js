@@ -388,6 +388,50 @@
     return a;
   }
 
+  function allProjects() {
+    var src = (D && Array.isArray(D.projects)) ? D.projects : [];
+    return src.map(function (p) {
+      var groups = Array.isArray(p.groups) ? p.groups : [];
+      var count = 0;
+      groups.forEach(function (g) { count += (g.items || []).length; });
+      return {
+        id: str(p.id),
+        title: str(p.title),
+        subtitle: str(p.subtitle),
+        summary: str(p.summary),
+        page: str(p.page),
+        status: STATUS[String(p.status)] ? String(p.status) : "seed",
+        groupCount: groups.length,
+        count: count
+      };
+    }).filter(function (p) { return !!p.id && !!p.title; });
+  }
+
+  function projectCard(p) {
+    var a = node("a", "wi-dest wi-proj");
+    a.href = p.page || "#";
+    if (!p.page) a.removeAttribute("href");
+
+    var top = node("div", "wi-dest-top");
+    top.appendChild(node("span", "wi-dest-kicker", "PROJECT · 长线"));
+    top.appendChild(node("span", "wi-dest-count", p.count + " 条清单"));
+    a.appendChild(top);
+
+    a.appendChild(node("span", "wi-dest-title", p.title));
+    if (p.subtitle) a.appendChild(node("span", "wi-dest-sub", p.subtitle));
+    if (p.summary) a.appendChild(node("span", "wi-dest-sum", p.summary));
+
+    var foot = node("div", "wi-dest-foot");
+    foot.appendChild(node("span", "wi-tag", p.groupCount + " 组"));
+    var st = node("span", "wi-status", STATUS[p.status] || "种子");
+    st.setAttribute("data-s", p.status);
+    foot.appendChild(st);
+    if (p.page) foot.appendChild(node("span", "wi-dest-go", "进入 →"));
+    a.appendChild(foot);
+
+    return a;
+  }
+
   function countOf(dests, loose) {
     return dests.reduce(function (s, d) { return s + d.items.length; }, 0) + loose.length;
   }
@@ -469,6 +513,20 @@
 
     if (all.length === 0) { listEl.appendChild(emptyBlock(true)); return; }
     if (shownCount === 0) { listEl.appendChild(emptyBlock(false)); return; }
+
+    var projects = allProjects();
+    if (projects.length && state.scope === "all" && state.type === "all") {
+      var pChapter = node("section", "wi-chapter");
+      var pHead = node("div", "wi-chapter-head");
+      pHead.appendChild(node("h2", "", "企划"));
+      pHead.appendChild(node("span", "", "PROJECTS · LONG GAME"));
+      pHead.appendChild(node("em", "", projects.length + " 个"));
+      pChapter.appendChild(pHead);
+      var pGrid = node("div", "wi-dests");
+      projects.forEach(function (p) { pGrid.appendChild(projectCard(p)); });
+      pChapter.appendChild(pGrid);
+      listEl.appendChild(pChapter);
+    }
 
     if (state.scope !== "world") {
       var cnDests = shownDests.filter(function (d) { return d.scope === "cn"; });

@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-10",
+    type: "页面",
+    title: "发散的全世界：新增「企划」自驾环游世界",
+    note: "34 条清单 · 手续/本事/家伙/路/场/仪式 · 补两条",
+    href: "ideas-world-drive.html"
+  },
+  {
+    date: "2026-11-10",
     type: "计划",
     title: "泛美公路：Dempster 两代对照图",
     note: "自制示意图 · 2017 年前冰路 vs 2017 年后全年公路 · 不转载参考图",

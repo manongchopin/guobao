@@ -506,5 +506,90 @@ window.WORLD_IDEAS = {
         ]
       }
     }
+  ],
+
+  /* 企划：不是目的地，是一份长期准备清单 */
+  projects: [
+    {
+      id: "world-drive",
+      title: "自驾环游世界",
+      subtitle: "ROUND THE WORLD BY CAR",
+      summary: "手续、本事、家伙、路、场、仪式。34 条准备事项，还没有日期——先当清单，不当行程。",
+      page: "ideas-world-drive.html",
+      added: "2026-11-10",
+      status: "seed",
+      note: "路这一组只列必开的路段，没有排全球环线；等有出发年份再排。",
+      groups: [
+        {
+          id: "docs", title: "手续", lead: "门槛，办不下来就走不成。",
+          items: [
+            { text: "济州岛考驾照 + IDP", note: "原文：4–5 天考完，有效期 10 年。政策会变，待核。" },
+            { text: "签证：十年美签、十年加签、五年申根、巴西、澳大利亚、新西兰", note: "逐国核有效期和申请地限制，待核。" },
+            { text: "Carnet de Passage（车辆出境单证册）", note: "补的一条：车要「护照」，很多国家入境要看；押金/保费按车值算。", tag: "补" },
+            { text: "车辆保险与救援（跨洲）", note: "补的一条：洲际拖车、第三方责任险；iOverlander 上有各国的经验帖。", tag: "补" }
+          ]
+        },
+        {
+          id: "skills", title: "本事", lead: "能自己搞定一半，路就长一倍。",
+          items: [
+            { text: "换轮胎", tag: "必须" },
+            { text: "基本汽修", tag: "必须" },
+            { text: "游泳", tag: "必须" },
+            { text: "汽车机械知识" },
+            { text: "潜水：OW / AOW / 自由潜" },
+            { text: "摄影" },
+            { text: "剪辑" },
+            { text: "研究 BGM 配乐" },
+            { text: "西班牙语 + 法语" },
+            { text: "简单俄语 + 德语" },
+            { text: "拍星轨" }
+          ]
+        },
+        {
+          id: "gear", title: "家伙", lead: "车、拍摄、钓鱼、安全。",
+          items: [
+            { text: "汽油添加剂 + 备用油桶", note: "为乌兹别克斯坦那种补给稀的路段准备。" },
+            { text: "辛烷值增强剂" },
+            { text: "反光背心", note: "车上必备，欧洲多国强制。" },
+            { text: "钓鱼工具", note: "在美国钓鱼要先查各州执照。" },
+            { text: "无人机" },
+            { text: "GoPro 或 DJI Action" }
+          ]
+        },
+        {
+          id: "roads", title: "路", lead: "只列必开的路段，不排全球环线。",
+          items: [
+            { text: "乌兹别克斯坦", note: "缺油、补给稀，和油桶/添加剂是一套。" },
+            { text: "加拿大方向进北冰洋" },
+            { text: "阿拉斯加 · 道顿公路", note: "Dalton Highway；多数租车公司禁行，季节也要挑。" },
+            { text: "美国大陆最南端 · Key West", note: "迈阿密往南，一路到 1 号公路零英里。" },
+            { text: "泛美公路", note: "阿拉斯加 → 巴塔哥尼亚；站里已有单独的计划页。", href: "panamerican.html" }
+          ]
+        },
+        {
+          id: "venues", title: "场", lead: "值得专程去看一场比赛、下一次水。",
+          items: [
+            { text: "NBA" },
+            { text: "足球：巴萨、皇马、拜仁（安联）、曼联（老特拉福德）、切尔西（斯坦福桥）" },
+            { text: "伯利兹蓝洞", note: "潜水；资质要求和船宿安排待核。" }
+          ]
+        },
+        {
+          id: "rituals", title: "仪式", lead: "路上的小规矩，让这趟车有点自己的样子。",
+          items: [
+            { text: "啤酒瓶盖：开瓶时垫一枚硬币，盖就不翘；用厚一点的磁铁吸住收纳。" },
+            { text: "每个国家配一首 BGM + 一位文学家的一句诗" },
+            { text: "每个国家的国旗贴纸" }
+          ]
+        },
+        {
+          id: "tools", title: "工具", lead: "查路、算单位、找补给。",
+          items: [
+            { text: "英里–公里换算表" },
+            { text: "iOverlander", note: "营地、边境、修车点的众包地图。", href: "https://ioverlander.com" }
+          ]
+        }
+      ]
+    }
   ]
 };

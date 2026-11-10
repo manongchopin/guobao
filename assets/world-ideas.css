@@ -51,6 +51,7 @@
 .wi-dest-sum { margin-top: 2px; font-size: 11.5px; line-height: 1.85; color: var(--ink-2); overflow-wrap: anywhere; }
 .wi-dest-foot { margin-top: auto; padding-top: 11px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .wi-dest-go { margin-left: auto; font-size: 10px; letter-spacing: .06em; color: var(--red); }
+.wi-proj .wi-dest-title { font-size: 28px; }
 .wi-loose-label { margin: 16px 0 8px; font-size: 9px; letter-spacing: .14em; color: var(--ink-3); }
 
 /* 卡片 */
