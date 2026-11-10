@@ -89,6 +89,19 @@
 .wp-item-why { margin: 2px 0 0; font-size: 11.5px; line-height: 1.8; color: #2a332e; overflow-wrap: anywhere; }
 .wp-item-note { margin: 0; padding-top: 6px; border-top: 1px solid var(--line-soft); font-size: 10px; line-height: 1.75; color: var(--ink-3); }
 
+/* 环城跑示意图 */
+.wp-run-figure { margin: 0 0 14px; }
+.wp-run-figure svg { display: block; width: 100%; height: auto; }
+.wp-run-wall { fill: #eef0ea; stroke: #cfd6cb; stroke-width: 1; }
+.wp-run-line { fill: none; stroke: var(--red); stroke-width: 2.4; stroke-linejoin: round; opacity: .9; }
+.wp-run-stop circle { fill: var(--paper-2); stroke: var(--red); stroke-width: 1.2; }
+.wp-run-stop text { font-family: var(--mono); font-size: 10px; fill: var(--red); }
+.wp-run-stop.is-start circle { fill: var(--red); }
+.wp-run-stop.is-start text { fill: #fdf8ef; }
+.wp-run-arrow { fill: var(--red); opacity: .9; }
+.wp-run-label { font-family: var(--sans); font-size: 10px; fill: var(--ink-3); }
+.wp-run-city { font-family: var(--serif); font-size: 17px; letter-spacing: .35em; fill: #9aa89b; }
+
 /* 企划清单页 */
 .wp-proj-group { margin-bottom: 30px; }
 .wp-proj-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; border-bottom: 1px solid var(--ink); padding-bottom: 6px; margin-bottom: 6px; }

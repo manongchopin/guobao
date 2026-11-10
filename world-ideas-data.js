@@ -537,6 +537,22 @@ window.WORLD_IDEAS = {
         { title: "Vatican Museums · Vatican by train（2022 恢复公告）", url: "https://www.museivaticani.va/content/museivaticani/en/eventi-e-novita/notizie/2022/ville-pontificie-castel-gandolfo-in-treno.html" },
         { title: "kath.ch · 2023 年乘车实录（时刻与票价）", url: "https://www.kath.ch/newsd/mit-dem-zug-vom-vatikan-zur-sommerresidenz-der-paepste/" }
       ]
+    },
+
+    {
+      id: "it-vatican-run", destinationId: "italy", regionId: "rome",
+      scope: "world", country: "意大利", province: "拉齐奥", city: "罗马 · 梵蒂冈",
+      place: "沿梵蒂冈城墙外一圈",
+      title: "绕梵蒂冈跑一圈", titleEn: "Giro delle Mura Vaticane",
+      type: "徒步",
+      why: "一圈 3.4 公里，就能说自己绕着一个国家跑了一圈。",
+      note: "走的是墙外街道，进不了梵蒂冈。Pacer 记录 3.4 km、爬升约 60 m、难度简单；实际有几段不好走：Porta Cavalleggeri 车多、人行道窄；Via della Stazione Vaticana 是死胡同，要原路退回；跨铁路那处要下一段楼梯再上一段。",
+      sourceType: "article", sourceTitle: "Pacer 路线记录 + 罗马本地导游的环墙游记",
+      status: "checked", added: "2026-11-10", priority: 2,
+      sources: [
+        { title: "Pacer · 环绕梵蒂冈城（3.4 km / 60 m 爬升）", url: "https://www.mypacer.com/zh-hans/routes/75147/%E7%8E%AF%E7%BB%95%E6%A2%B5%E8%92%82%E5%86%88%E5%9F%8E-%E5%81%A5%E8%B5%B0-%E5%B0%8F%E8%B7%AF-%E7%BD%97%E9%A9%AC-%E5%9C%A3%E5%BA%A7" },
+        { title: "Turismo Emozionale Roma · Il giro della Città del Vaticano（沿墙路线与路况）", url: "https://turismoemozionaleroma.altervista.org/il-giro-della-citt%c3%a0-del-vaticano-intorno-alle-sue-poderose-mura.html" }
+      ]
     }
   ],
 

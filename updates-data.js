@@ -2,8 +2,8 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-10",
     type: "页面",
-    title: "发散的全世界：意大利 · 梵蒂冈小火车",
-    note: "周六一班 · 3–11 月 · 2026 季状态待核",
+    title: "发散的全世界：意大利 · 梵蒂冈两件事",
+    note: "周六小火车 + 绕城跑一圈 3.4 km · 附路线示意图",
     href: "ideas-italy.html"
   },
   {
