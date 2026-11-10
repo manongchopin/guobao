@@ -254,7 +254,8 @@ window.TRIPS = {
     { month: "2026-09", flight: "MU5008", from: "台北桃园", fromCode: "TPE", to: "上海浦东", toCode: "PVG", km: 677 },
     { month: "2026-10", flight: "CZ3884", from: "义乌", fromCode: "YIW", to: "广州", toCode: "CAN", km: 942 },
     { month: "2026-10", flight: "GJ8053", from: "杭州", fromCode: "HGH", to: "香港", toCode: "HKG", km: 1094 },
-    { month: "2026-10", flight: "UO114", from: "香港", fromCode: "HKG", to: "台北桃园", toCode: "TPE", km: 806 }
+    { month: "2026-10", flight: "UO114", from: "香港", fromCode: "HKG", to: "台北桃园", toCode: "TPE", km: 806 },
+    { month: "2026-11", flight: "MU5008", from: "台北桃园", fromCode: "TPE", to: "上海浦东", toCode: "PVG", km: 677 }
   ],
   "trains": [
     { month: "2026-10", train: "G456", from: "上海虹桥", to: "武汉", km: 661 },
