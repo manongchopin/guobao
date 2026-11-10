@@ -125,6 +125,67 @@
 .th-legstrip b { font-weight: 400; color: var(--ink-2); }
 .th-legstrip i { font-style: normal; color: var(--red); }
 
+/* ---------- 本岛环岛图 ---------- */
+
+.th-drive-wrap { border: 1px solid var(--line); background: #e6eee9; }
+.th-drive-map { width: 100%; height: 560px; }
+
+#tahiti .th-drive-sum { margin: 10px 0 0; font-size: 10px; line-height: 1.75; color: var(--ink-3); }
+
+.th-drive-stops {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+  border-top: 1px solid var(--line);
+}
+.th-stop {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.th-stop-n {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  font-family: var(--serif);
+  font-size: 11px;
+  line-height: 1;
+  color: var(--red);
+}
+.th-stop b { font-size: 11.5px; font-weight: 600; color: var(--ink); line-height: 1.5; }
+.th-stop em {
+  font-style: normal;
+  margin-left: 6px;
+  padding: 0 3px;
+  border: 1px solid var(--line);
+  font-size: 7.5px;
+  color: var(--ink-3);
+  vertical-align: 1px;
+}
+#tahiti .th-stop p { margin: 2px 0 0; font-size: 9.5px; line-height: 1.65; color: var(--ink-3); }
+
+.th-num-wrap { background: transparent; border: 0; }
+.th-num {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #a8402f;
+  color: #fdf8ef;
+  border: 1.5px solid #fff;
+  font-family: var(--serif);
+  font-size: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
 /* ---------- 五段 ---------- */
 
 .th-leg {
@@ -401,6 +462,8 @@
   .th-stats div:nth-child(2) { border-right: 0; }
   .th-stats div:nth-child(1), .th-stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
   .th-map { height: 300px; }
+  .th-drive-map { height: 380px; }
+  .th-drive-stops { grid-template-columns: 1fr; gap: 0; }
   .th-head { display: block; }
   .th-head > p { max-width: none; text-align: left; margin-top: 6px; }
   .th-leg-head h3 { font-size: 20px; }

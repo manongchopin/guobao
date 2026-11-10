@@ -84,6 +84,60 @@
   buildMap(mapEl, "society", D.routeSociety);
   buildMap(mapEl2, "marquesas", D.routeMarquesas);
 
+  /* ---------- 本岛环岛图 ---------- */
+
+  var driveEl = document.getElementById("th-map-drive");
+  if (driveEl && window.L && D.drive && D.driveRoute) {
+    var dmap = L.map(driveEl, { scrollWheelZoom: false });
+    GB_BASEMAP(dmap);
+
+    var line = L.polyline(D.driveRoute, {
+      color: "#a8402f",
+      weight: 3,
+      opacity: .85,
+      lineCap: "round",
+      lineJoin: "round"
+    }).addTo(dmap);
+
+    var dbounds = [];
+    D.drive.stops.forEach(function (s) {
+      var icon = L.divIcon({
+        className: "th-num-wrap",
+        html: '<span class="th-num">' + s.n + "</span>",
+        iconSize: [22, 22],
+        iconAnchor: [11, 11]
+      });
+      L.marker([s.lat, s.lng], { icon: icon }).addTo(dmap)
+        .bindPopup("<b>" + esc(s.n) + ". " + esc(s.name) + "</b>" +
+          '<div class="th-pop-meta">' + esc(s.tag) + "</div><p>" + esc(s.note) + "</p>",
+          { maxWidth: 260 });
+      dbounds.push([s.lat, s.lng]);
+    });
+
+    function fitDrive() {
+      dmap.invalidateSize();
+      dmap.fitBounds(line.getBounds(), { padding: [16, 16] });
+    }
+    fitDrive();
+    window.addEventListener("load", fitDrive);
+    setTimeout(fitDrive, 600);
+
+    var sumEl = document.getElementById("th-drive-sum");
+    if (sumEl) {
+      sumEl.textContent = "全程约 " + D.drive.km + " 公里，" + D.drive.hours + "。停靠点按顺时针编号：机场 → 帕皮提 → 北岸 → 东岸 → Taravao → Teahupo'o → 西岸 → 回机场。";
+    }
+
+    var stopsEl = document.getElementById("th-drive-stops");
+    if (stopsEl) {
+      stopsEl.innerHTML = D.drive.stops.map(function (s) {
+        return '<li class="th-stop">' +
+          '<span class="th-stop-n">' + s.n + "</span>" +
+          "<div><b>" + esc(s.name) + '<em>' + esc(s.tag) + "</em></b>" +
+          "<p>" + esc(s.note) + "</p></div></li>";
+      }).join("");
+    }
+  }
+
   /* ---------- 五段 ---------- */
 
   var stripEl = document.getElementById("th-legstrip");

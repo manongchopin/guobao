@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-10",
     type: "计划",
+    title: "大溪地做出本岛环岛图",
+    note: "v0.5 · 155 公里路线 + 13 个停靠点",
+    href: "tahiti.html"
+  },
+  {
+    date: "2026-11-10",
+    type: "计划",
     title: "大溪地查清驾照与取车",
     note: "v0.4 · 中国驾照可用范围 + Hiva Oa 包车预案",
     href: "tahiti.html"

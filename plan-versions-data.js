@@ -297,11 +297,16 @@ window.PLAN_VERSIONS = {
     },
     "tahiti": {
       "title": "大溪地",
-      "version": "0.4",
-      "status": "取车方案",
+      "version": "0.5",
+      "status": "环岛路线",
       "date": "2026-11-10",
-      "note": "新增「驾照与取车」专节：Avis 要求非拉丁文字驾照配 IDP、大陆办不出 IDP、香港身份证是死结；Hiva Oa 加包车预案；待核 11 条",
+      "note": "新增本岛自驾环岛图：OSRM 实算 155 公里路线 + 13 个停靠点，按顺时针编号",
       "history": [
+        {
+          "v": "0.5",
+          "date": "2026-11-10",
+          "note": "新增「本岛自驾环岛」节：用 OSRM 按 OpenStreetMap 道路数据算出 155 公里、约 2 小时 50 分的环岛线（含 Teahupo'o 往返），配 13 个停靠点（机场、洲际、市场、唐人街、JNH 故居、Point Vénus、Trou du Souffleur、Faarumai 瀑布、Taravao、Teahupo'o、植物园、Marae Arahurahu、博物馆），编号与列表对应"
+        },
         {
           "v": "0.4",
           "date": "2026-11-10",
