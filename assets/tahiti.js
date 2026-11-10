@@ -47,10 +47,7 @@
   function buildMap(el, group, routeIds) {
     if (!el || !window.L) return;
     var map = L.map(el, { scrollWheelZoom: false });
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 18,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
-    }).addTo(map);
+    GB_BASEMAP(map);
 
     var pts = (routeIds || []).map(function (id) {
       var p = byId[id];

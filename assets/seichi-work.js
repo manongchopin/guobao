@@ -118,10 +118,7 @@
       return;
     }
     map = L.map(el, { scrollWheelZoom: false, zoomControl: true });
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
-    }).addTo(map);
+    GB_BASEMAP(map);
     layer = L.layerGroup().addTo(map);
     map.setView([35.4, 136.2], 5);
     renderMap();

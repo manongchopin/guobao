@@ -30,10 +30,7 @@
     return L.divIcon({ className: "ca-pin-wrap", html: '<span class="ca-star">★</span>', iconSize: [22, 22], iconAnchor: [11, 11] });
   }
   function addTiles(map) {
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 18,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
-    }).addTo(map);
+    GB_BASEMAP(map);
   }
   function routeLine(map, weight, opacity) {
     var pts = D.route.map(function (p) { return [p.lat, p.lng]; });

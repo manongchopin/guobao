@@ -65,25 +65,7 @@
     var el = document.getElementById("ml-map");
     if (!el || typeof L === "undefined") return;
     map = L.map(el, { scrollWheelZoom: false }).setView([51.530, -0.140], 13);
-    // OSM 官方瓦片在国内网络常年不可达，主用 Esri 浅灰，失败 6 块后回退 OSM.de
-    var ATT_ESRI = '&copy; <a href="https://www.esri.com/" target="_blank" rel="noopener">Esri</a> — Esri, HERE, Garmin, &copy; OpenStreetMap contributors';
-    var ATT_OSM = '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors';
-    var base = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
-      maxZoom: 16,
-      attribution: ATT_ESRI
-    }).addTo(map);
-    var errs = 0, swapped = false;
-    base.on("tileerror", function () {
-      errs += 1;
-      if (errs === 6 && !swapped) {
-        swapped = true;
-        map.removeLayer(base);
-        L.tileLayer("https://tile.openstreetmap.de/{z}/{x}/{y}.png", {
-          maxZoom: 17,
-          attribution: ATT_OSM
-        }).addTo(map);
-      }
-    });
+    GB_BASEMAP(map);
     routeLayer = L.layerGroup().addTo(map);
     layer = L.layerGroup().addTo(map);
     L.control.scale({ imperial: false, position: "bottomleft" }).addTo(map);

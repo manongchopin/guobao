@@ -192,10 +192,7 @@
 
   if (window.L) {
     map = L.map("ks-map", { scrollWheelZoom: false }).setView([33.75, 135.75], 10);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 18,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
-    }).addTo(map);
+    GB_BASEMAP(map);
     layer = L.layerGroup().addTo(map);
     L.control.scale({ imperial: false, position: "bottomleft" }).addTo(map);
     setTimeout(function () { map.invalidateSize(); renderMap(); }, 220);

@@ -12,10 +12,7 @@
 
   function activityMap(el, path, color) {
     var map = L.map(el, { scrollWheelZoom: false });
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
-    }).addTo(map);
+    GB_BASEMAP(map);
     var line = L.polyline(path, { color: color, weight: 3, opacity: 0.95, lineJoin: "round" }).addTo(map);
     L.circleMarker(path[0], { radius: 4, color: "#a8402f", weight: 2, fillColor: "#fffdf7", fillOpacity: 1 }).addTo(map).bindTooltip("起点");
     map.fitBounds(line.getBounds(), { padding: [24, 24] });

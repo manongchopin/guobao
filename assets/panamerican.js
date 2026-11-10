@@ -11,10 +11,7 @@
   var map, layer, allMarkers = [], current = "all", maps = [];
 
   function addTiles(m) {
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 18,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
-    }).addTo(m);
+    GB_BASEMAP(m);
   }
   function colorOf(c) { return colors[c.id] || "#8f3f31"; }
   function popup(p, c) {
@@ -115,7 +112,7 @@
     var el = document.getElementById("pa-mini-" + c.id);
     if (!el) return;
     var mini = L.map(el, { scrollWheelZoom: false, attributionControl: false }).setView([c.route[0].lat, c.route[0].lng], 7);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18 }).addTo(mini);
+    GB_BASEMAP(mini);
     var pts = c.route.map(function (p) { return [p.lat, p.lng]; });
     drawRoutes(mini, c, 3, .9);
     c.route.forEach(function (p) {

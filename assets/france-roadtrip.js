@@ -47,10 +47,7 @@
     var el = document.getElementById("fr-map");
     if (!el || typeof L === "undefined") return;
     map = L.map(el, { scrollWheelZoom: false }).setView([46.7, 2.4], 5);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 18,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
-    }).addTo(map);
+    GB_BASEMAP(map);
     layer = L.layerGroup().addTo(map);
     L.control.scale({ imperial: false, position: "bottomleft" }).addTo(map);
     drawMarkers();

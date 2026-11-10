@@ -5,8 +5,6 @@
   var D = window.BTK_DATA;
   if (!D) return;
 
-  var OSM = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-  var ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors';
   var maps = {};
 
   function esc(s) {
@@ -28,7 +26,7 @@
       var cfg = D.maps[key];
       var map = L.map(host, { scrollWheelZoom: false, attributionControl: true })
         .setView(cfg.center, cfg.zoom);
-      L.tileLayer(OSM, { maxZoom: 18, attribution: ATTR }).addTo(map);
+      GB_BASEMAP(map);
       L.control.scale({ imperial: false, position: "bottomleft" }).addTo(map);
 
       var group = D.spots.filter(function (s) { return s.map === key; });

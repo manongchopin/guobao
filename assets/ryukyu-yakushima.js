@@ -85,10 +85,7 @@
     var cfg = MAP_CFG[key] || {};
     var map = L.map(el.id, { scrollWheelZoom: false });
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 18,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+    GB_BASEMAP(map);
 
     var pts = D.points.filter(function (p) { return p.maps && p.maps.indexOf(key) >= 0; });
     var markers = {};
