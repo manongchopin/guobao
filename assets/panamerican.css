@@ -7,6 +7,22 @@
 .pa-callout b { color: var(--ink); }
 .pa-ending-note { display: block; margin-top: 4px; font-size: 10px; color: var(--ink-3); }
 .pa-intro { margin: 0; font-size: 12px; line-height: 1.85; color: var(--ink-2); }
+.pa-overview { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 10px 0 0; }
+.pa-overview > div { background: var(--paper); padding: 10px 12px; }
+.pa-overview span { display: block; font-family: var(--sans); font-size: 8px; letter-spacing: .06em; color: var(--red); }
+.pa-overview b { display: block; margin: 3px 0 2px; font-family: var(--serif); font-size: 16px; font-weight: 600; line-height: 1.35; }
+.pa-overview em { font-style: normal; font-size: 9px; line-height: 1.55; color: var(--ink-3); }
+.pa-overview > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.pa-north { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 10px 0 0; }
+.pa-north-card { background: var(--paper); padding: 11px 12px; }
+.pa-north-top { display: flex; justify-content: space-between; gap: 6px; font-family: var(--sans); font-size: 8px; color: var(--ink-3); }
+.pa-north-top b { color: var(--red); font-weight: 400; }
+.pa-north-card h3 { margin: 4px 0 3px; font-family: var(--serif); font-size: 16px; }
+.pa-north-route { margin: 0 0 4px; font-size: 9.5px; line-height: 1.6; color: var(--ink-2); }
+.pa-north-note { margin: 0; font-size: 9px; line-height: 1.6; color: var(--ink-3); }
+.pa-subhead { display: flex; align-items: baseline; gap: 9px; border-top: 1px solid var(--line); margin: 18px 0 4px; padding-top: 10px; }
+.pa-subhead span { font-family: var(--sans); font-size: 8px; letter-spacing: .14em; color: var(--red); }
+.pa-subhead b { font-family: var(--serif); font-size: 17px; font-weight: 600; }
 .pa-kicker { margin: 0 0 4px; font-family: var(--sans); font-size: 9px; letter-spacing: .14em; color: var(--red); }
 .pa-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; border-top: 1px solid var(--ink); padding-top: 14px; margin-bottom: 9px; }
 .pa-head h2 { margin: 0; }
@@ -83,3 +99,7 @@
 
 .pa-country-map { height: 180px; border: 1px solid var(--line); background: #dfe8e5; margin-bottom: 8px; z-index: 0; }
 @media (max-width: 760px) { .pa-country-map { height: 160px; } }
+
+@media (max-width: 760px) {
+  .pa-overview, .pa-north { grid-template-columns: 1fr; }
+}

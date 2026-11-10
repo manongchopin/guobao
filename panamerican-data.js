@@ -1,8 +1,48 @@
 window.PANAMERICAN = {
-  "updated": "2026-11-03",
-  "title": "泛美公路自驾",
-  "subtitle": "洛杉矶 → 巴塔哥尼亚（实际止于 Puerto Williams）",
-  "source": "穷游帖子《泛美公路自驾行（洛杉矶 - 乌斯怀亚，1 辆车，2 个人，14 个国家，165 天，28852 公里）》；三个 PDF，共 295 页",
+  "updated": "2026-11-10",
+  "title": "泛美公路",
+  "subtitle": "从北冰洋到火地岛",
+  "source": "公路本体：常见资料（待核）；样本 #1：穷游帖子《泛美公路自驾行（洛杉矶 - 乌斯怀亚，1 辆车，2 个人，14 个国家，165 天，28852 公里）》",
+  "overview": {
+    "lead": "泛美公路（Pan-American Highway）不是一个正式的单一路名，而是一组公路的统称：从阿拉斯加往南，经加拿大、美国、墨西哥、中美洲、南美洲，一直到火地岛。中间在巴拿马与哥伦比亚之间断开，就是 Darién Gap。",
+    "facts": [
+      { "k": "北端（常见口径）", "v": "阿拉斯加 Prudhoe Bay / Deadhorse", "note": "走 Dalton Highway 到 Fairbanks，再接阿拉斯加公路；待核" },
+      { "k": "另一条进北极的路", "v": "加拿大 Dempster Highway → Inuvik → Tuktoyaktuk", "note": "2017 年延伸到北冰洋；待核" },
+      { "k": "南端", "v": "阿根廷乌斯怀亚", "note": "火地岛；要过智利/阿根廷边境" },
+      { "k": "全长（常见口径）", "v": "约 3 万公里", "note": "不同来源差异大，含 Darién Gap 断点；待核" },
+      { "k": "断点", "v": "Darién Gap（无路）；北段季节性通行限制", "note": "待核" }
+    ],
+    "note": "以上是常见说法，本站尚未逐条核实；拿到可靠来源后会逐条替换，并标明访问日期。"
+  },
+  "north": {
+    "intro": "现有内容只整理了 2018–19 那一趟（洛杉矶往南）。北段还没吃到资料，先列三个占位，标清待补。",
+    "segments": [
+      {
+        "id": "dalton",
+        "name": "Dalton Highway",
+        "where": "美国 · 阿拉斯加",
+        "route": "Fairbanks → Coldfoot → Deadhorse / Prudhoe Bay",
+        "status": "待补",
+        "note": "通往北冰洋的碎石干线，油罐车多、补给点少。里程、加油间隔、租车公司限制待核。"
+      },
+      {
+        "id": "dempster",
+        "name": "Dempster Highway",
+        "where": "加拿大 · 育空 / 西北地区",
+        "route": "Dawson City（Dempster Corner）→ Eagle Plains → Inuvik → Tuktoyaktuk",
+        "status": "待补",
+        "note": "2017 年延伸段通到北冰洋；轮渡与桥梁、加油点、冬季通行、租车限制待核。"
+      },
+      {
+        "id": "alcan",
+        "name": "Alaska Highway",
+        "where": "加拿大 / 美国",
+        "route": "Dawson Creek → Whitehorse → Tok → Fairbanks",
+        "status": "待补",
+        "note": "把北段接回美国本土的主干；沿途里程、住宿与季节限制待补。"
+      }
+    ]
+  },
   "stats": {
     "days": 165,
     "km": 28852,

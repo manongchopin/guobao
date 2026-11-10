@@ -65,7 +65,7 @@
       }).addTo(layer).bindTooltip("Darién Gap：海运，不是公路");
     }
     if (bounds.length) map.fitBounds(L.latLngBounds(bounds), { padding: [30, 30] });
-    document.getElementById("pa-map-note").textContent = "总路线 · 洛杉矶 → Puerto Williams（虚线为航段）";
+    document.getElementById("pa-map-note").textContent = "已核实路段 · 洛杉矶 → Puerto Williams（虚线为航段）";
   }
   function drawCountry(c) {
     layer.clearLayers();
@@ -85,6 +85,31 @@
       var c = D.countries.filter(function (x) { return x.id === id; })[0];
       if (c) drawCountry(c);
     }
+  }
+
+  if (D.overview) {
+    var leadEl = document.getElementById("pa-overview-lead");
+    if (leadEl) leadEl.textContent = D.overview.lead || "";
+    var ovEl = document.getElementById("pa-overview");
+    if (ovEl) ovEl.innerHTML = (D.overview.facts || []).map(function (f) {
+      return '<div><span>' + esc(f.k) + '</span><b>' + esc(f.v) + '</b>' +
+        (f.note ? '<em>' + esc(f.note) + '</em>' : '') + '</div>';
+    }).join("");
+    var ovNote = document.getElementById("pa-overview-note");
+    if (ovNote) ovNote.textContent = D.overview.note || "";
+  }
+
+  if (D.north) {
+    var nIntro = document.getElementById("pa-north-intro");
+    if (nIntro) nIntro.textContent = D.north.intro || "";
+    var nEl = document.getElementById("pa-north");
+    if (nEl) nEl.innerHTML = (D.north.segments || []).map(function (s) {
+      return '<article class="pa-north-card" id="pa-north-' + esc(s.id) + '">' +
+        '<div class="pa-north-top"><span>' + esc(s.where) + '</span><b>' + esc(s.status) + '</b></div>' +
+        '<h3>' + esc(s.name) + '</h3>' +
+        '<p class="pa-north-route">' + esc(s.route) + '</p>' +
+        '<p class="pa-north-note">' + esc(s.note) + '</p></article>';
+    }).join("");
   }
 
   document.getElementById("pa-stages").innerHTML = D.stages.map(function (s) {

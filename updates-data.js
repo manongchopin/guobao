@@ -1,6 +1,13 @@
 window.SITE_UPDATES = [
   {
     date: "2026-11-10",
+    type: "计划",
+    title: "泛美公路：改成「公路 + 样本」两层",
+    note: "新增概览与北段占位（Dalton / Dempster / Alaska Hwy）· 原内容改为样本 #1 · 北段待补",
+    href: "panamerican.html"
+  },
+  {
+    date: "2026-11-10",
     type: "页面",
     title: "发散的全世界：大理洱海环湖 18 站",
     note: "云南 · 顺时针一条线 · 分段编号 · 两个地名已校正",

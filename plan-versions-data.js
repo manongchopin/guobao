@@ -225,10 +225,10 @@ window.PLAN_VERSIONS = {
     },
     "panamerican": {
       "title": "泛美公路自驾",
-      "version": "0.4",
-      "status": "已提取全程 · 路线修订",
-      "date": "2026-11-03",
-      "note": "Puerto Williams 改为航段；补 Puyuhuapi、El Calafate、Santa Cruz 与单次签原因",
+      "version": "0.5",
+      "status": "结构改造 · 公路本体 + 旅行样本",
+      "date": "2026-11-10",
+      "note": "拆成公路本体与样本 #1；新增概览与北段（Dalton / Dempster / Alaska Hwy）占位，北段待补",
       "history": [
         {
           "v": "0.1",
@@ -249,6 +249,11 @@ window.PLAN_VERSIONS = {
           "v": "0.4",
           "date": "2026-11-03",
           "note": "Puerto Williams 为卖车后航段；巴塔哥尼亚单列；补 Puyuhuapi、El Calafate、Santa Cruz、San Isidro；写明单次签导致未到乌斯怀亚"
+        },
+        {
+          "v": "0.5",
+          "date": "2026-11-10",
+          "note": "结构改造：公路概览、北段（Dalton / Dempster / Alaska Highway）占位，现有内容改为样本 #1；地图只画已核实路段"
         }
       ]
     },
