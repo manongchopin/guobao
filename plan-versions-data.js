@@ -297,11 +297,16 @@ window.PLAN_VERSIONS = {
     },
     "tahiti": {
       "title": "大溪地",
-      "version": "0.5",
-      "status": "环岛路线",
+      "version": "0.6",
+      "status": "两岛环岛",
       "date": "2026-11-10",
-      "note": "新增本岛自驾环岛图：OSRM 实算 155 公里路线 + 13 个停靠点，按顺时针编号",
+      "note": "本岛拆成两天（71 + 83 公里），说明 Tahiti Iti 是死路；新增 Raiatea 环岛图（97 公里 + 5 个停靠点）",
       "history": [
+        {
+          "v": "0.6",
+          "date": "2026-11-10",
+          "note": "本岛自驾拆两天：第一天北岸东岸 71 公里到 Taravao 过夜，第二天南岸西岸 83 公里回机场；地图用红/棕两色区分两天。核实 Tahiti Iti 不是环线（Te Pari 一带 OSM 无公路），页面写明只能原路返回。新增 Raiatea 环岛节：OSRM 实算 97 公里完整环线 + 5 个停靠点（Uturoa、Faaroa 湾、Taputapuātea、南端、Tevaitoa）"
+        },
         {
           "v": "0.5",
           "date": "2026-11-10",

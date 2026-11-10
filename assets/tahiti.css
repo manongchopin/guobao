@@ -130,7 +130,20 @@
 .th-drive-wrap { border: 1px solid var(--line); background: #e6eee9; }
 .th-drive-map { width: 100%; height: 560px; }
 
-#tahiti .th-drive-sum { margin: 10px 0 0; font-size: 10px; line-height: 1.75; color: var(--ink-3); }
+#tahiti .th-drive-note { margin: 10px 0 0; font-size: 10px; line-height: 1.8; color: var(--ink-2); }
+
+.th-drive-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 8px 0 0; font-size: 9px; color: var(--ink-3); }
+.th-day-dot { display: inline-block; width: 16px; height: 0; margin-right: 5px; border-top: 3px solid; vertical-align: middle; }
+.th-day-dot--1 { border-color: #a8402f; }
+.th-day-dot--2 { border-color: #8a6338; }
+
+#th-drive-days .th-day-block { margin-top: 20px; padding-top: 10px; border-top: 1px solid var(--ink); }
+.th-day-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.th-day-head h3 { margin: 0; }
+.th-day-chip { padding: 1px 5px; border: 1px solid var(--line); font-size: 8px; color: var(--ink-3); }
+.th-day-chip--1 { color: #a8402f; border-color: #a8402f; }
+.th-day-chip--2 { color: #8a6338; border-color: #8a6338; }
+.th-day-km { margin-left: auto; font-size: 9px; color: var(--ink-3); }
 
 .th-drive-stops {
   list-style: none;

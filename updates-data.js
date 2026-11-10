@@ -2,6 +2,13 @@ window.SITE_UPDATES = [
   {
     date: "2026-11-10",
     type: "计划",
+    title: "大溪地本岛拆两天，加 Raiatea 环岛",
+    note: "v0.6 · 71 + 83 公里 / 97 公里环线",
+    href: "tahiti.html"
+  },
+  {
+    date: "2026-11-10",
+    type: "计划",
     title: "大溪地做出本岛环岛图",
     note: "v0.5 · 155 公里路线 + 13 个停靠点",
     href: "tahiti.html"

@@ -84,58 +84,125 @@
   buildMap(mapEl, "society", D.routeSociety);
   buildMap(mapEl2, "marquesas", D.routeMarquesas);
 
-  /* ---------- 本岛环岛图 ---------- */
+  /* ---------- 本岛环岛图（两天） ---------- */
+
+  var DAY_COLOR = { 1: "#a8402f", 2: "#8a6338" };
+
+  function renderStopList(el, stops) {
+    if (!el) return;
+    el.innerHTML = stops.map(function (s) {
+      return '<li class="th-stop">' +
+        '<span class="th-stop-n">' + s.n + "</span>" +
+        "<div><b>" + esc(s.name) + "<em>" + esc(s.tag) + "</em></b>" +
+        "<p>" + esc(s.note) + "</p></div></li>";
+    }).join("");
+  }
 
   var driveEl = document.getElementById("th-map-drive");
-  if (driveEl && window.L && D.drive && D.driveRoute) {
+  if (driveEl && window.L && D.drive) {
     var dmap = L.map(driveEl, { scrollWheelZoom: false });
     GB_BASEMAP(dmap);
 
-    var line = L.polyline(D.driveRoute, {
+    var dayLines = [];
+    D.drive.days.forEach(function (day) {
+      var line = L.polyline(day.route, {
+        color: DAY_COLOR[day.n] || "#a8402f",
+        weight: 3,
+        opacity: .85,
+        lineCap: "round",
+        lineJoin: "round"
+      }).addTo(dmap);
+      dayLines.push(line);
+
+      day.stops.forEach(function (s) {
+        var icon = L.divIcon({
+          className: "th-num-wrap",
+          html: '<span class="th-num" style="background:' + (DAY_COLOR[day.n] || "#a8402f") + '">' + s.n + "</span>",
+          iconSize: [22, 22],
+          iconAnchor: [11, 11]
+        });
+        L.marker([s.lat, s.lng], { icon: icon }).addTo(dmap)
+          .bindPopup("<b>" + s.n + ". " + esc(s.name) + "</b>" +
+            '<div class="th-pop-meta">第 ' + day.n + " 天 · " + esc(s.tag) + "</div><p>" + esc(s.note) + "</p>",
+            { maxWidth: 260 });
+      });
+    });
+
+    var dbounds = L.featureGroup(dayLines).getBounds();
+
+    function fitDrive() {
+      dmap.invalidateSize();
+      dmap.fitBounds(dbounds, { padding: [16, 16] });
+    }
+    fitDrive();
+    window.addEventListener("load", fitDrive);
+    setTimeout(fitDrive, 600);
+
+    var driveNote = document.getElementById("th-drive-note");
+    if (driveNote) driveNote.textContent = D.drive.note + " " + D.drive.total + "。";
+
+    var daysEl = document.getElementById("th-drive-days");
+    if (daysEl) {
+      daysEl.innerHTML = D.drive.days.map(function (day) {
+        return '<section class="th-day-block">' +
+          '<div class="th-day-head">' +
+          '<span class="th-day-chip th-day-chip--' + day.n + '">第 ' + day.n + " 天</span>" +
+          "<h3>" + esc(day.title) + "</h3>" +
+          '<span class="th-day-km">约 ' + day.km + " 公里 · " + esc(day.hours) + "</span>" +
+          "</div></section>";
+      }).join("");
+      // 停靠点列表插到每个 day-block 里
+      var blocks = daysEl.querySelectorAll(".th-day-block");
+      D.drive.days.forEach(function (day, i) {
+        if (!blocks[i]) return;
+        var ol = document.createElement("ol");
+        ol.className = "th-drive-stops";
+        blocks[i].appendChild(ol);
+        renderStopList(ol, day.stops);
+      });
+    }
+  }
+
+  /* ---------- Raiatea 环岛图 ---------- */
+
+  var raiEl = document.getElementById("th-map-raiatea");
+  if (raiEl && window.L && D.raiatea) {
+    var rmap = L.map(raiEl, { scrollWheelZoom: false });
+    GB_BASEMAP(rmap);
+
+    var rline = L.polyline(D.raiatea.route, {
       color: "#a8402f",
       weight: 3,
       opacity: .85,
       lineCap: "round",
       lineJoin: "round"
-    }).addTo(dmap);
+    }).addTo(rmap);
 
-    var dbounds = [];
-    D.drive.stops.forEach(function (s) {
+    D.raiatea.stops.forEach(function (s) {
       var icon = L.divIcon({
         className: "th-num-wrap",
         html: '<span class="th-num">' + s.n + "</span>",
         iconSize: [22, 22],
         iconAnchor: [11, 11]
       });
-      L.marker([s.lat, s.lng], { icon: icon }).addTo(dmap)
-        .bindPopup("<b>" + esc(s.n) + ". " + esc(s.name) + "</b>" +
+      L.marker([s.lat, s.lng], { icon: icon }).addTo(rmap)
+        .bindPopup("<b>" + s.n + ". " + esc(s.name) + "</b>" +
           '<div class="th-pop-meta">' + esc(s.tag) + "</div><p>" + esc(s.note) + "</p>",
           { maxWidth: 260 });
-      dbounds.push([s.lat, s.lng]);
     });
 
-    function fitDrive() {
-      dmap.invalidateSize();
-      dmap.fitBounds(line.getBounds(), { padding: [16, 16] });
+    function fitRai() {
+      rmap.invalidateSize();
+      rmap.fitBounds(rline.getBounds(), { padding: [18, 18] });
     }
-    fitDrive();
-    window.addEventListener("load", fitDrive);
-    setTimeout(fitDrive, 600);
+    fitRai();
+    window.addEventListener("load", fitRai);
+    setTimeout(fitRai, 600);
 
-    var sumEl = document.getElementById("th-drive-sum");
-    if (sumEl) {
-      sumEl.textContent = "全程约 " + D.drive.km + " 公里，" + D.drive.hours + "。停靠点按顺时针编号：机场 → 帕皮提 → 北岸 → 东岸 → Taravao → Teahupo'o → 西岸 → 回机场。";
-    }
+    var raiNote = document.getElementById("th-raiatea-note");
+    if (raiNote) raiNote.textContent = "全程约 " + D.raiatea.km + " 公里，" + D.raiatea.hours + "。";
 
-    var stopsEl = document.getElementById("th-drive-stops");
-    if (stopsEl) {
-      stopsEl.innerHTML = D.drive.stops.map(function (s) {
-        return '<li class="th-stop">' +
-          '<span class="th-stop-n">' + s.n + "</span>" +
-          "<div><b>" + esc(s.name) + '<em>' + esc(s.tag) + "</em></b>" +
-          "<p>" + esc(s.note) + "</p></div></li>";
-      }).join("");
-    }
+    renderStopList(document.getElementById("th-raiatea-stops"), D.raiatea.stops);
   }
 
   /* ---------- 五段 ---------- */

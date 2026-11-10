@@ -15,11 +15,11 @@
 
 <header class="hero">
   <a class="back" href="plans.html">← 旅行计划</a>
-  <p class="kicker">PLAN 17 · TAHITI · v0.5</p>
+  <p class="kicker">PLAN 17 · TAHITI · v0.6</p>
   <h1>大溪地</h1>
   <p class="lede">
     五段：本岛自驾、Raiatea 的世界遗产、Bora Bora 五天、Hiva Oa 的高更墓，最后回帕皮提买黑珍珠。<br>
-    <span>顺序与岛屿组合已定；v0.5 做出本岛环岛图，v0.4 查清驾照与取车。</span>
+    <span>顺序与岛屿组合已定；v0.6 本岛拆两天、并做出 Raiatea 环岛图。</span>
   </p>
   <div class="seal" aria-hidden="true">溪</div>
 </header>
@@ -62,15 +62,32 @@
 
   <section class="wh-section" id="drive">
     <div class="th-head">
-      <div><p class="th-kicker">THE RING ROAD · TAHITI NUI + ITI</p><h2>本岛自驾环岛</h2></div>
-      <p>一圈约 155 公里，纯驾驶约 2 小时 50 分。<br>不含停留，实际要一整天，或拆成两天。</p>
+      <div><p class="th-kicker">THE RING ROAD · TWO DAYS</p><h2>本岛自驾：分两天</h2></div>
+      <p>两天合计约 154 公里。<br>上面那个圈能绕整圈，下面那个圈是死路。</p>
     </div>
     <div class="th-drive-wrap">
-      <div id="th-map-drive" class="th-drive-map" aria-label="大溪地本岛自驾环岛路线图：环岛公路与 13 个停靠点"></div>
+      <div id="th-map-drive" class="th-drive-map" aria-label="大溪地本岛两天自驾路线图：第一天北岸东岸，第二天南岸西岸，共 13 个停靠点"></div>
     </div>
-    <p class="th-drive-sum" id="th-drive-sum"></p>
-    <ol class="th-drive-stops" id="th-drive-stops"></ol>
-    <p class="th-map-note">路线由 OSRM 按 OpenStreetMap 道路数据计算，是示意线，不是 GPS 轨迹；实际路况、单行与停车以现场为准。</p>
+    <div class="th-drive-legend">
+      <span><i class="th-day-dot th-day-dot--1"></i>第一天 · 北岸与东岸</span>
+      <span><i class="th-day-dot th-day-dot--2"></i>第二天 · 南岸与西岸</span>
+    </div>
+    <p class="th-drive-note" id="th-drive-note"></p>
+    <div id="th-drive-days"></div>
+    <p class="th-map-note">路线由 OSRM 按 OpenStreetMap 道路数据计算，是示意线，不是 GPS 轨迹；实际路况、单行与停车以现场为准。Tahiti Iti 东侧 Te Pari 一带没有公路，这一点按 OSM 数据核对过。</p>
+  </section>
+
+  <section class="wh-section" id="raiatea-drive">
+    <div class="th-head">
+      <div><p class="th-kicker">RAIATEA · FULL RING ROAD</p><h2>Raiatea 环岛</h2></div>
+      <p>一圈约 97 公里，纯驾驶约 2 小时 15 分。<br>这是完整环线，可以一圈走完。</p>
+    </div>
+    <div class="th-drive-wrap">
+      <div id="th-map-raiatea" class="th-drive-map" aria-label="Raiatea 环岛自驾路线图：环岛公路与 5 个停靠点"></div>
+    </div>
+    <p class="th-drive-note" id="th-raiatea-note"></p>
+    <ol class="th-drive-stops" id="th-raiatea-stops"></ol>
+    <p class="th-map-note">路线由 OSRM 按 OpenStreetMap 道路数据计算；停靠点坐标为 OSM 数据，误差百米级。</p>
   </section>
 
   <section class="wh-section" id="legs">
@@ -140,7 +157,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <span>旅行计划 17 · 大溪地</span>
-    <span>v0.5 环岛路线</span>
+    <span>v0.6 两岛环岛</span>
     <span>作者 <a href="https://manongchopin.github.io/personal-website/" target="_blank" rel="noopener">余俊鋒 · 个人主页</a></span>
     <span class="footer-rights"><a href="rights.html">来源与权利</a></span>
   </div>
