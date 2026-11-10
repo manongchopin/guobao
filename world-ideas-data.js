@@ -87,6 +87,23 @@ window.WORLD_IDEAS = {
       ],
       added: "2026-11-10",
       status: "seed"
+    },
+    {
+      id: "italy",
+      scope: "world",
+      title: "意大利",
+      subtitle: "ITALIA · 目前只有梵蒂冈小火车",
+      country: "意大利",
+      countryEn: "Italia",
+      continent: "欧洲",
+      summary: "梵蒂冈自己的火车站，一周只发一班周六车，开往教宗夏宫 Castel Gandolfo。季节是 3 月底到 11 月初。",
+      page: "ideas-italy.html",
+      layout: "grid",
+      regions: [
+        { id: "rome", title: "罗马 · 梵蒂冈", subtitle: "ROMA · 一条周六专列" }
+      ],
+      added: "2026-11-10",
+      status: "seed"
     }
   ],
 
@@ -505,6 +522,21 @@ window.WORLD_IDEAS = {
           }
         ]
       }
+    },
+    {
+      id: "it-vatican-train", destinationId: "italy", regionId: "rome",
+      scope: "world", country: "意大利", province: "拉齐奥", city: "罗马 · 梵蒂冈",
+      place: "Stazione Vaticana → Castel Gandolfo",
+      title: "梵蒂冈小火车", titleEn: "Treno delle Ville Pontificie",
+      type: "铁路",
+      why: "从梵蒂冈自己的火车站发车，一周只有周六一班，终点是教宗夏宫。",
+      note: "季节约 3 月底–11 月初。2022、2023 年都开行过；2026 季是否开行未确认，官网当前没有这个产品。票价历年 43–55 欧（含博物馆与花园），不可退，出行前 72 小时可改期。",
+      sourceType: "article", sourceTitle: "梵蒂冈博物馆公告 + kath.ch 实地报道",
+      status: "seed", added: "2026-11-10", priority: 1,
+      sources: [
+        { title: "Vatican Museums · Vatican by train（2022 恢复公告）", url: "https://www.museivaticani.va/content/museivaticani/en/eventi-e-novita/notizie/2022/ville-pontificie-castel-gandolfo-in-treno.html" },
+        { title: "kath.ch · 2023 年乘车实录（时刻与票价）", url: "https://www.kath.ch/newsd/mit-dem-zug-vom-vatikan-zur-sommerresidenz-der-paepste/" }
+      ]
     }
   ],
 
