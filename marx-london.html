@@ -19,7 +19,7 @@
   <h1>跟随马克思<br>在伦敦漫步</h1>
   <p class="lede">
     不是朝圣，是把城市当档案读。<br>
-    <span>11 个点，两天：第一天 Soho 与大英博物馆，第二天北伦敦与 Highgate。每天街面步行 2–4 公里。</span>
+    <span>11 个点，两天：第一天 Soho 与大英博物馆，第二天北伦敦与 Highgate。每天街面步行 4 公里上下，路线已画在地图上。</span>
   </p>
   <div class="seal" aria-hidden="true">马</div>
 </header>
@@ -38,17 +38,29 @@
 
   <section class="wh-section">
     <h2>两天怎么走</h2>
-    <p class="ml-intro">两天，由南往北。第一天在中心区走完 Soho、大英博物馆和 Clerkenwell；第二天坐两站地铁，把北伦敦的三处住处和 Highgate 墓园走掉。第一天街面约 4 公里、第二天约 2 公里，留够吃饭和进馆的时间。</p>
+    <p class="ml-intro">两天，由南往北。第一天在中心区走完 Soho、大英博物馆和 Clerkenwell；第二天坐两站地铁，把北伦敦的三处住处和 Highgate 墓园走掉。第一天街面 3.8 公里、第二天 3.7 公里（中间两站地铁），留够吃饭和进馆的时间。</p>
     <div class="ml-route" id="ml-route"></div>
   </section>
 
   <section class="wh-section">
     <h2>11 个点在一张图上</h2>
     <div class="ml-legend" id="ml-legend"></div>
+    <div class="ml-view" id="ml-view">
+      <button type="button" class="on" data-view="all">全部</button>
+      <button type="button" data-view="d1">第一天</button>
+      <button type="button" data-view="d2">第二天</button>
+    </div>
+    <div class="ml-mapline">
+      <span><i class="ml-line" style="--c:#a8402f"></i>第一天 · 3.8 km</span>
+      <span><i class="ml-line" style="--c:#1d2622"></i>第二天 · 3.7 km</span>
+      <span><i class="ml-gap"></i>地铁两站</span>
+    </div>
     <div class="ml-map-wrap"><div id="ml-map"></div></div>
     <p class="ml-map-note">
-      点颜色按「建筑现状」分：绿＝原建筑还在，褐＝已拆只剩址，深灰＝墓园。标 <span class="ml-approx" style="font-size:10px">≈</span> 的是街道级坐标（OSM 地理编码到街段，不是门牌精度），只用来判断相对位置，不用于导航。
-      底图 &copy; OpenStreetMap contributors。
+      点颜色按「建筑现状」分：绿＝原建筑还在，褐＝已拆只剩址，朱砂＝纪念物，深灰＝墓园与待考。
+      两条线是步行路由实测（OSRM foot），不是示意直线；第一天朱砂实线，第二天墨色实线，中间两站地铁画成点线。
+      标 <span class="ml-approx" style="font-size:10px">≈</span> 的是街道级坐标，只用来判断相对位置，不用于导航。
+      底图 <a href="https://www.esri.com/" target="_blank" rel="noopener">Esri</a> World Light Gray（OSM 官方瓦片在部分网络下不可达，故换源；取不到时自动回退 OSM.de）。
     </p>
   </section>
 

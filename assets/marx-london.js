@@ -3,7 +3,7 @@
   var D = window.MARX_LONDON;
   if (!D) return;
 
-  var map = null, layer = null, active = "all";
+  var map = null, layer = null, routeLayer = null, active = "all";
   var statusById = {};
   D.statuses.forEach(function (s) { statusById[s.id] = s; });
 
@@ -64,14 +64,108 @@
   function initMap() {
     var el = document.getElementById("ml-map");
     if (!el || typeof L === "undefined") return;
-    map = L.map(el, { scrollWheelZoom: false }).setView([51.527, -0.140], 13);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 18,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
+    map = L.map(el, { scrollWheelZoom: false }).setView([51.530, -0.140], 13);
+    // OSM 官方瓦片在国内网络常年不可达，主用 Esri 浅灰，失败 6 块后回退 OSM.de
+    var ATT_ESRI = '&copy; <a href="https://www.esri.com/" target="_blank" rel="noopener">Esri</a> — Esri, HERE, Garmin, &copy; OpenStreetMap contributors';
+    var ATT_OSM = '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors';
+    var base = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
+      maxZoom: 16,
+      attribution: ATT_ESRI
     }).addTo(map);
+    var errs = 0, swapped = false;
+    base.on("tileerror", function () {
+      errs += 1;
+      if (errs === 6 && !swapped) {
+        swapped = true;
+        map.removeLayer(base);
+        L.tileLayer("https://tile.openstreetmap.de/{z}/{x}/{y}.png", {
+          maxZoom: 17,
+          attribution: ATT_OSM
+        }).addTo(map);
+      }
+    });
+    routeLayer = L.layerGroup().addTo(map);
     layer = L.layerGroup().addTo(map);
     L.control.scale({ imperial: false, position: "bottomleft" }).addTo(map);
+    drawRoutes();
     drawMarkers();
+    bindView();
+    showView("all");
+  }
+
+  function dayPoints(dayId) {
+    if (!D.route) return [];
+    var day = null;
+    D.route.days.forEach(function (d) { if (d.id === dayId) day = d; });
+    if (!day) return [];
+    var ids = [];
+    day.stops.forEach(function (s) { if (s.pid) ids.push(s.pid); });
+    var pts = [];
+    D.points.forEach(function (p) {
+      if (ids.indexOf(p.id) >= 0) pts.push([p.lat, p.lng]);
+    });
+    (day.lines || []).forEach(function (line) {
+      line.forEach(function (c) { pts.push(c); });
+    });
+    if (day.gap) day.gap.forEach(function (c) { pts.push(c); });
+    return pts;
+  }
+
+  function showView(v) {
+    if (!map) return;
+    var pts = [];
+    if (v === "all") {
+      D.points.forEach(function (p) { pts.push([p.lat, p.lng]); });
+      D.route.days.forEach(function (day) {
+        (day.lines || []).forEach(function (line) {
+          line.forEach(function (c) { pts.push(c); });
+        });
+      });
+    } else {
+      pts = dayPoints(v);
+    }
+    if (pts.length) map.fitBounds(pts, { padding: [30, 30], maxZoom: 15 });
+    var box = document.getElementById("ml-view");
+    if (box) {
+      var btns = box.querySelectorAll("button");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].classList.toggle("on", btns[i].getAttribute("data-view") === v);
+      }
+    }
+  }
+
+  function bindView() {
+    var box = document.getElementById("ml-view");
+    if (!box) return;
+    box.onclick = function (e) {
+      var b = e.target.closest("button");
+      if (!b) return;
+      showView(b.getAttribute("data-view"));
+    };
+  }
+
+  function drawRoutes() {
+    if (!routeLayer || !D.route) return;
+    routeLayer.clearLayers();
+    D.route.days.forEach(function (day) {
+      (day.lines || []).forEach(function (line) {
+        L.polyline(line, {
+          color: day.color || "#a8402f",
+          weight: 4,
+          opacity: 0.85,
+          lineJoin: "round",
+          lineCap: "round"
+        }).addTo(routeLayer);
+      });
+      if (day.gap) {
+        L.polyline(day.gap, {
+          color: "#8a938c",
+          weight: 2,
+          opacity: 0.75,
+          dashArray: "2 8"
+        }).addTo(routeLayer);
+      }
+    });
   }
 
   function drawMarkers() {
@@ -92,7 +186,7 @@
       m.bindTooltip((p.n < 10 ? "0" : "") + p.n + " · " + p.zh, { direction: "top", offset: [0, -4] });
       pts.push([p.lat, p.lng]);
     });
-    if (pts.length) map.fitBounds(pts, { padding: [40, 40], maxZoom: 15 });
+    return pts;
   }
 
   /* ---------- 分段 ---------- */

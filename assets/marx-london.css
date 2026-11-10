@@ -15,6 +15,16 @@
 .ml-chip.on { border-color: var(--ink); background: var(--paper-2); color: var(--ink); }
 .ml-chip:hover { border-color: var(--ink-3); }
 
+.ml-mapline { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0 0 10px; font-family: var(--sans); font-size: 10px; color: var(--ink-3); }
+.ml-mapline span { display: inline-flex; align-items: center; gap: 6px; }
+.ml-line { display: inline-block; width: 26px; height: 0; border-top: 3px solid var(--c); }
+.ml-gap { display: inline-block; width: 26px; height: 0; border-top: 2px dotted var(--ink-3); }
+
+.ml-view { display: flex; gap: 6px; margin: 0 0 8px; }
+.ml-view button { padding: 4px 12px; border: 1px solid var(--line); background: var(--paper); color: var(--ink-2); font-family: var(--sans); font-size: 10.5px; cursor: pointer; }
+.ml-view button.on { border-color: var(--ink); background: var(--paper-2); color: var(--ink); }
+.ml-view button:hover { border-color: var(--ink-3); }
+
 /* 地图 */
 .ml-map-wrap { border: 1px solid var(--line); }
 #ml-map { height: 420px; background: var(--paper-2); }
