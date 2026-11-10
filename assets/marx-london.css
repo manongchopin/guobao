@@ -67,6 +67,12 @@
 .ml-table td:first-child { color: var(--ink); min-width: 150px; }
 .ml-table .dim { display: inline-block; margin-top: 2px; font-size: 9.5px; color: var(--ink-3); }
 
+/* 参考图 */
+.ml-figure { margin: 0; }
+.ml-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+.ml-figure figcaption { margin-top: 9px; font-size: 10.5px; line-height: 1.8; color: var(--ink-3); }
+.ml-figure figcaption b { color: var(--ink-2); font-weight: 400; }
+
 /* 跟团 / 待核 / 来源 */
 .ml-tour { border: 1px solid var(--line); padding: 12px 14px; background: var(--paper-2); }
 .ml-tour dl { display: grid; grid-template-columns: 86px 1fr; gap: 4px 10px; margin: 0 0 8px; }
