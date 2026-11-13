@@ -19,7 +19,7 @@
 
    fetchedAt 是本地抓取时间；榜单"截至"时点写在各自 section.note 里。 */
 window.SPORTS_RANKINGS = {
-  "fetchedAt": "2026-11-04T10:05:10.467Z",
+  "fetchedAt": "2026-11-09T00:37:21.814Z",
   "panels": {
     "snooker": {
       "id": "snooker",
@@ -62,7 +62,10 @@ window.SPORTS_RANKINGS = {
               "name": "赵心童",
               "en": "Zhao Xintong",
               "country": "中国",
-              "points": "1,265,550"
+              "points": "1,287,550",
+              "chg": {
+                "points": 22000
+              }
             },
             {
               "rank": 2,
@@ -83,91 +86,131 @@ window.SPORTS_RANKINGS = {
               "name": "马克·塞尔比",
               "en": "Mark Selby",
               "country": "英格兰",
-              "points": "1,070,500"
+              "points": "1,065,500",
+              "chg": {
+                "points": -5000
+              }
             },
             {
               "rank": 5,
               "name": "贾德·特鲁姆普",
               "en": "Judd Trump",
               "country": "英格兰",
-              "points": "1,069,050"
+              "points": "1,060,050",
+              "chg": {
+                "points": -9000
+              }
             },
             {
               "rank": 6,
               "name": "约翰·希金斯",
               "en": "John Higgins",
               "country": "苏格兰",
-              "points": "905,000"
+              "points": "958,000",
+              "chg": {
+                "points": 53000
+              }
             },
             {
               "rank": 7,
               "name": "肖恩·墨菲",
               "en": "Shaun Murphy",
               "country": "英格兰",
-              "points": "884,150"
+              "points": "880,150",
+              "chg": {
+                "points": -4000
+              }
             },
             {
               "rank": 8,
-              "name": "马克·威廉姆斯",
-              "en": "Mark J Williams",
-              "country": "威尔士",
-              "points": "755,200"
-            },
-            {
-              "rank": 9,
               "name": "凯伦·威尔逊",
               "en": "Kyren Wilson",
               "country": "英格兰",
-              "points": "716,800"
+              "points": "869,800",
+              "chg": {
+                "rank": 1,
+                "points": 153000
+              }
+            },
+            {
+              "rank": 9,
+              "name": "马克·威廉姆斯",
+              "en": "Mark J Williams",
+              "country": "威尔士",
+              "points": "755,200",
+              "chg": {
+                "rank": -1
+              }
             },
             {
               "rank": 10,
               "name": "巴里·霍金斯",
               "en": "Barry Hawkins",
               "country": "英格兰",
-              "points": "661,050"
+              "points": "652,050",
+              "chg": {
+                "points": -9000
+              }
             },
             {
               "rank": 11,
-              "name": "克里斯·沃克林",
-              "en": "Chris Wakelin",
-              "country": "英格兰",
-              "points": "571,150"
-            },
-            {
-              "rank": 12,
               "name": "马克·艾伦",
               "en": "Mark Allen",
               "country": "北爱尔兰",
-              "points": "530,650"
+              "points": "521,650",
+              "chg": {
+                "rank": 1,
+                "points": -9000
+              }
+            },
+            {
+              "rank": 12,
+              "name": "克里斯·沃克林",
+              "en": "Chris Wakelin",
+              "country": "英格兰",
+              "points": "505,150",
+              "chg": {
+                "rank": -1,
+                "points": -66000
+              }
             },
             {
               "rank": 13,
               "name": "罗尼·奥沙利文",
               "en": "Ronnie O'Sullivan",
               "country": "英格兰",
-              "points": "513,750"
+              "points": "504,750",
+              "chg": {
+                "points": -9000
+              }
             },
             {
               "rank": 14,
               "name": "肖国栋",
               "en": "Xiao Guodong",
               "country": "中国",
-              "points": "503,900"
+              "points": "470,900",
+              "chg": {
+                "points": -33000
+              }
             },
             {
               "rank": 15,
-              "name": "丁俊晖",
-              "en": "Ding Junhui",
-              "country": "中国",
-              "points": "479,850"
-            },
-            {
-              "rank": 16,
               "name": "阿里·卡特",
               "en": "Ali Carter",
               "country": "英格兰",
-              "points": "414,400"
+              "points": "405,400",
+              "chg": {
+                "rank": 1,
+                "points": -9000
+              }
+            },
+            {
+              "rank": 16,
+              "name": "Chang Bingyu",
+              "country": "中国",
+              "points": "383,200",
+              "isNew": true
             }
           ]
         },
@@ -213,7 +256,7 @@ window.SPORTS_RANKINGS = {
               "rank": 3,
               "name": "约翰·希金斯",
               "en": "John Higgins",
-              "total": "1,073"
+              "total": "1,077"
             },
             {
               "rank": 4,
@@ -243,7 +286,7 @@ window.SPORTS_RANKINGS = {
               "rank": 8,
               "name": "丁俊晖",
               "en": "Ding Junhui",
-              "total": "737"
+              "total": "738"
             },
             {
               "rank": 9,
@@ -267,7 +310,7 @@ window.SPORTS_RANKINGS = {
               "rank": 12,
               "name": "凯伦·威尔逊",
               "en": "Kyren Wilson",
-              "total": "579"
+              "total": "583"
             },
             {
               "rank": 13,
@@ -532,7 +575,7 @@ window.SPORTS_RANKINGS = {
               "name": "凯伦·威尔逊",
               "en": "Kyren Wilson",
               "span": "2015-2026",
-              "wins": 11
+              "wins": 12
             },
             {
               "rank": 13,
